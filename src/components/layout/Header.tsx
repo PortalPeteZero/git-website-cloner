@@ -23,12 +23,16 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-canary-navy sticky top-0 z-50">
+    <header className="bg-canary-navy sticky top-0 z-50 border-b border-canary-white/10 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Canary Detect - The Leaky Finders" className="h-10 md:h-12 w-auto" />
+            <img
+              src={logo}
+              alt="Canary Detect - The Leaky Finders"
+              className="h-12 md:h-14 lg:h-16 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
