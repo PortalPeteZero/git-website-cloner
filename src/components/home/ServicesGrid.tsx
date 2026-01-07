@@ -68,7 +68,7 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section className="py-16 md:py-24 bg-muted">
+    <section className="py-16 md:py-24 bg-canary-navy">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -76,11 +76,11 @@ const ServicesGrid = () => {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-12"
         >
-          <span className="text-primary font-medium">What We Do</span>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">
+          <span className="text-primary font-semibold uppercase tracking-wide text-sm">What We Do</span>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-white">
             Our Services
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-white/70">
             We offer a comprehensive range of leak detection and repair services 
             across the Canary Islands, using the latest technology and equipment.
           </p>
