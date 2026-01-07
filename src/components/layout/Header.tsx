@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import logo from "@/assets/logo.png";
 
 const services = [
   { name: "Drain Detection", href: "/services/drain-detection" },
@@ -27,15 +28,7 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="flex items-center gap-2">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-heading font-bold text-lg">CD</span>
-              </div>
-              <div>
-                <span className="font-heading font-bold text-xl text-canary-dark">Canary</span>
-                <span className="font-heading font-bold text-xl text-primary"> Detect</span>
-              </div>
-            </div>
+            <img src={logo} alt="Canary Detect - Locate, Detect, Repair" className="h-10 md:h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
