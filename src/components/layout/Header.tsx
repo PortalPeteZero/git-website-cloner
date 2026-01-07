@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/logo-dark-bg.png";
+import logo from "@/assets/logo-light-bg.png";
 
 const services = [
   { name: "Drain Detection", href: "/services/drain-detection" },
@@ -23,7 +23,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-canary-navy sticky top-0 z-50 border-b border-canary-white/10 shadow-sm">
+    <header className="bg-white sticky top-0 z-50 border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
@@ -31,29 +31,29 @@ const Header = () => {
             <img
               src={logo}
               alt="Canary Detect - The Leaky Finders"
-              className="h-16 md:h-20 lg:h-24 w-auto"
+              className="h-14 md:h-16 lg:h-20 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            <Link to="/services" className="text-canary-white font-medium hover:text-primary transition-colors">
+            <Link to="/services" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Services
             </Link>
-            <Link to="/about" className="text-canary-white font-medium hover:text-primary transition-colors">
+            <Link to="/about" className="text-canary-navy font-medium hover:text-primary transition-colors">
               About Us
             </Link>
-            <Link to="/case-studies" className="text-canary-white font-medium hover:text-primary transition-colors">
+            <Link to="/case-studies" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Technology
             </Link>
-            <Link to="/contact" className="text-canary-white font-medium hover:text-primary transition-colors">
+            <Link to="/contact" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Contact
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-canary-white"
+            className="lg:hidden p-2 text-canary-navy"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -63,32 +63,32 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="lg:hidden pb-4 border-t border-canary-white/20 pt-4 animate-fade-in">
+          <nav className="lg:hidden pb-4 border-t border-gray-200 pt-4 animate-fade-in">
             <div className="flex flex-col gap-4">
               <Link 
                 to="/services" 
-                className="text-canary-white font-medium hover:text-primary transition-colors"
+                className="text-canary-navy font-medium hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link 
                 to="/about" 
-                className="text-canary-white font-medium hover:text-primary transition-colors"
+                className="text-canary-navy font-medium hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About Us
               </Link>
               <Link 
                 to="/case-studies" 
-                className="text-canary-white font-medium hover:text-primary transition-colors"
+                className="text-canary-navy font-medium hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Technology
               </Link>
               <Link 
                 to="/contact" 
-                className="text-canary-white font-medium hover:text-primary transition-colors"
+                className="text-canary-navy font-medium hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
