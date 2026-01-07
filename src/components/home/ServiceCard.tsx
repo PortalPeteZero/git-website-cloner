@@ -34,7 +34,7 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
     >
       <Link 
         to={href}
-        className="group block bg-card rounded-lg border border-border hover:border-primary hover:shadow-lg transition-all duration-300 overflow-hidden"
+        className="group block bg-white rounded-lg border-0 hover:shadow-2xl transition-all duration-300 overflow-hidden"
       >
         {images.length > 0 && (
           <div className="aspect-[16/10] overflow-hidden relative">
@@ -58,7 +58,7 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
                   <span
                     key={idx}
                     className={`w-2 h-2 rounded-full transition-colors ${
-                      idx === currentImageIndex ? "bg-primary" : "bg-background/60"
+                      idx === currentImageIndex ? "bg-primary" : "bg-white/60"
                     }`}
                   />
                 ))}
@@ -68,15 +68,15 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
         )}
         <div className="p-6">
           <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
-            <Icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors" />
+            <Icon className="h-7 w-7 text-primary group-hover:text-white transition-colors" />
           </div>
-          <h3 className="font-heading font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+          <h3 className="font-heading font-bold text-lg mb-2 text-canary-navy group-hover:text-primary transition-colors">
             {title}
           </h3>
-          <p className="text-muted-foreground text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             {description}
           </p>
-          <span className="inline-flex items-center mt-4 text-primary font-medium text-sm group-hover:underline">
+          <span className="inline-flex items-center mt-4 text-primary font-semibold text-sm group-hover:underline">
             Learn More →
           </span>
         </div>

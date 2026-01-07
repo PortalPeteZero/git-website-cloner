@@ -35,7 +35,7 @@ const caseStudies = [
 
 const CaseStudiesPreview = () => {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,11 +43,11 @@ const CaseStudiesPreview = () => {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-12"
         >
-          <span className="text-primary font-medium">Our Work</span>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">
+          <span className="text-primary font-semibold uppercase tracking-wide text-sm">Our Work</span>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-canary-navy">
             Recent Case Studies
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-gray-600">
             See examples of our leak detection work across the Canary Islands.
           </p>
         </motion.div>
@@ -60,7 +60,7 @@ const CaseStudiesPreview = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
+              className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
             >
               <div className="aspect-video overflow-hidden">
                 <img
@@ -71,20 +71,20 @@ const CaseStudiesPreview = () => {
                 />
               </div>
               <div className="p-6">
-                <span className="text-xs text-primary font-medium uppercase tracking-wide">
+                <span className="text-xs text-primary font-semibold uppercase tracking-wide">
                   {study.location}
                 </span>
-                <h3 className="font-heading font-bold text-lg mt-1 mb-2 group-hover:text-primary transition-colors">
+                <h3 className="font-heading font-bold text-lg mt-1 mb-2 text-canary-navy group-hover:text-primary transition-colors">
                   {study.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">{study.description}</p>
+                <p className="text-gray-600 text-sm">{study.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
         <div className="text-center">
-          <Button variant="outline" asChild>
+          <Button className="bg-canary-navy hover:bg-canary-navy/90 text-white font-semibold" asChild>
             <Link to="/case-studies" className="inline-flex items-center gap-2">
               View All Case Studies
               <ArrowRight className="h-4 w-4" />
@@ -97,4 +97,3 @@ const CaseStudiesPreview = () => {
 };
 
 export default CaseStudiesPreview;
-
