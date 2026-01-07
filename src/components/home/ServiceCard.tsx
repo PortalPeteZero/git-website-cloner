@@ -1,17 +1,30 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { LucideIcon } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ServiceCardProps {
   title: string;
   description: string;
   icon: LucideIcon;
   href: string;
-  image?: string;
+  images?: string[];
   index?: number;
 }
 
-const ServiceCard = ({ title, description, icon: Icon, href, image, index = 0 }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, icon: Icon, href, images = [], index = 0 }: ServiceCardProps) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    
+    return () => clearInterval(timer);
+  }, [images.length]);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -23,13 +36,34 @@ const ServiceCard = ({ title, description, icon: Icon, href, image, index = 0 }:
         to={href}
         className="group block bg-card rounded-lg border border-border hover:border-primary hover:shadow-lg transition-all duration-300 overflow-hidden"
       >
-        {image && (
-          <div className="aspect-[16/10] overflow-hidden">
-            <img 
-              src={image} 
-              alt={title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
+        {images.length > 0 && (
+          <div className="aspect-[16/10] overflow-hidden relative">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentImageIndex}
+                src={images[currentImageIndex]}
+                alt={`${title} ${currentImageIndex + 1}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+              />
+            </AnimatePresence>
+            
+            {/* Image indicators */}
+            {images.length > 1 && (
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                {images.map((_, idx) => (
+                  <span
+                    key={idx}
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      idx === currentImageIndex ? "bg-primary" : "bg-white/50"
+                    }`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         )}
         <div className="p-6">
