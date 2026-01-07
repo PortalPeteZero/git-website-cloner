@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-light-bg.png";
 
 const services = [
   { name: "Drain Detection", href: "/services/drain-detection" },

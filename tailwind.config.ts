@@ -50,6 +50,7 @@ export default {
         canary: {
           orange: "hsl(var(--canary-orange))",
           cyan: "hsl(var(--canary-cyan))",
+          navy: "hsl(var(--canary-navy))",
           dark: "hsl(var(--canary-dark))",
           white: "hsl(var(--canary-white))",
         },
