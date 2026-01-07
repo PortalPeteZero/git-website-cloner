@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-dark-bg.png";
 const Footer = () => {
   return (
     <footer className="bg-canary-dark text-canary-white">
@@ -46,7 +46,7 @@ const Footer = () => {
             {/* Logo & About */}
             <div>
               <div className="mb-4">
-                <img src={logo} alt="Canary Detect" className="h-10 w-auto brightness-0 invert" />
+                <img src={logo} alt="Canary Detect - The Leaky Finders" className="h-12 w-auto" />
               </div>
               <p className="text-canary-white/80 text-sm leading-relaxed">
                 Professional leak detection services across the Canary Islands. 

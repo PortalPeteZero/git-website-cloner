@@ -42,7 +42,8 @@
     /* Custom Canary Detect tokens */
     --canary-orange: 33 93% 54%;
     --canary-cyan: 197 100% 47%;
-    --canary-dark: 0 0% 10%;
+    --canary-navy: 222 36% 20%;
+    --canary-dark: 222 36% 20%;
     --canary-white: 0 0% 100%;
 
     --sidebar-background: 0 0% 98%;
@@ -86,7 +87,8 @@
 
     --canary-orange: 33 93% 54%;
     --canary-cyan: 197 100% 47%;
-    --canary-dark: 0 0% 10%;
+    --canary-navy: 222 36% 20%;
+    --canary-dark: 222 36% 20%;
     --canary-white: 0 0% 100%;
 
     --sidebar-background: 0 0% 10%;
