@@ -5,12 +5,33 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle, Droplets, Search, Cable, Waves, CircleDot, Wrench, LucideIcon } from "lucide-react";
 
+// Import service hero images
+import drainDetectionImg from "@/assets/services/drain-detection.jpg";
+import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg";
+import undergroundDetectionImg from "@/assets/services/underground-detection.jpg";
+import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg";
+import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg";
+import leakRepairImg from "@/assets/services/leak-repair.jpg";
+
+// Import gallery images
+import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
+import drainDetection3 from "@/assets/services/gallery/drain-detection-3.jpg";
+import pipeInspection2 from "@/assets/services/gallery/pipe-inspection-2.jpg";
+import pipeInspection3 from "@/assets/services/gallery/pipe-inspection-3.jpg";
+import poolLeak2 from "@/assets/services/gallery/pool-leak-2.jpg";
+import poolLeak3 from "@/assets/services/gallery/pool-leak-3.jpg";
+import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
+import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
+import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
+
 interface ServiceData {
   title: string;
   description: string;
   icon: LucideIcon;
   features: string[];
   content: string;
+  heroImage: string;
+  galleryImages: string[];
 }
 
 const servicesData: Record<string, ServiceData> = {
@@ -18,6 +39,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Drain Detection",
     description: "Professional drain tracing and detection services using the latest camera and electronic tracing technology.",
     icon: Search,
+    heroImage: drainDetectionImg,
+    galleryImages: [drainDetection2, drainDetection3],
     features: [
       "CCTV drain surveys",
       "Drain tracing with sonde",
@@ -32,6 +55,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Pipe Inspection",
     description: "Comprehensive CCTV pipe inspection to assess condition and identify problems before they become costly repairs.",
     icon: CircleDot,
+    heroImage: pipeInspectionImg,
+    galleryImages: [pipeInspection2, pipeInspection3],
     features: [
       "High-definition camera inspection",
       "Pipe condition assessment",
@@ -46,6 +71,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Underground Pipe & Cable Detection",
     description: "Locate buried utilities, pipes, and cables before you dig using ground-penetrating radar and electromagnetic locators.",
     icon: Cable,
+    heroImage: undergroundDetectionImg,
+    galleryImages: [undergroundDetection6],
     features: [
       "Ground-penetrating radar (GPR)",
       "Electromagnetic pipe locators",
@@ -60,6 +87,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Water Pipe Leak Detection",
     description: "Find hidden water leaks without destructive investigation using acoustic and thermal imaging technology.",
     icon: Droplets,
+    heroImage: waterLeakDetectionImg,
+    galleryImages: [waterLeak1, waterLeak2],
     features: [
       "Acoustic leak detection",
       "Thermal imaging cameras",
@@ -74,6 +103,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Pool Leak Detection",
     description: "Specialist swimming pool and spa leak detection to stop water loss and reduce chemical and heating costs.",
     icon: Waves,
+    heroImage: poolLeakDetectionImg,
+    galleryImages: [poolLeak2, poolLeak3],
     features: [
       "Pressure testing",
       "Dye testing",
@@ -88,6 +119,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Leak Repair",
     description: "Professional leak repair services to fix the problems we find, providing a complete solution from detection to repair.",
     icon: Wrench,
+    heroImage: leakRepairImg,
+    galleryImages: [],
     features: [
       "Pipe repairs",
       "Pool repairs",
@@ -122,9 +155,17 @@ const ServiceDetail = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="bg-canary-dark py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Image */}
+      <section className="relative bg-canary-dark py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={service.heroImage} 
+            alt={service.title}
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/90 to-canary-dark/70" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -161,6 +202,43 @@ const ServiceDetail = () => {
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   {service.content}
                 </p>
+
+                {/* Image Gallery */}
+                {service.galleryImages.length > 0 && (
+                  <div className="mb-8">
+                    <h3 className="font-heading text-xl font-bold mb-4">Gallery</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="aspect-[4/3] rounded-lg overflow-hidden"
+                      >
+                        <img 
+                          src={service.heroImage} 
+                          alt={`${service.title} 1`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </motion.div>
+                      {service.galleryImages.map((img, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: (index + 1) * 0.1 }}
+                          className="aspect-[4/3] rounded-lg overflow-hidden"
+                        >
+                          <img 
+                            src={img} 
+                            alt={`${service.title} ${index + 2}`}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          />
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 <h3 className="font-heading text-xl font-bold mb-4">What's Included</h3>
                 <div className="grid sm:grid-cols-2 gap-3">

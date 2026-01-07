@@ -3,51 +3,74 @@ import Layout from "@/components/layout/Layout";
 import { Droplets, Search, Cable, Waves, CircleDot, Wrench } from "lucide-react";
 import ServiceCard from "@/components/home/ServiceCard";
 
+// Import service images
+import drainDetectionImg from "@/assets/services/drain-detection.jpg";
+import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg";
+import undergroundDetectionImg from "@/assets/services/underground-detection.jpg";
+import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg";
+import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg";
+import leakRepairImg from "@/assets/services/leak-repair.jpg";
+import titleBg from "@/assets/title-bg.jpg";
+
 const services = [
   {
     title: "Drain Detection",
     description: "Locate and identify drainage issues using advanced camera inspection and tracing technology. We can find blockages, breaks, and root intrusions.",
     icon: Search,
     href: "/services/drain-detection",
+    image: drainDetectionImg,
   },
   {
     title: "Pipe Inspection",
     description: "CCTV pipe inspection to assess the condition of your pipes and identify blockages, damage, or deterioration before they become major problems.",
     icon: CircleDot,
     href: "/services/pipe-inspection",
+    image: pipeInspectionImg,
   },
   {
     title: "Underground Detection",
     description: "Locate underground pipes, cables, and utilities using ground-penetrating radar and electromagnetic pipe locators. Essential for construction and renovation projects.",
     icon: Cable,
     href: "/services/underground-detection",
+    image: undergroundDetectionImg,
   },
   {
     title: "Water Leak Detection",
     description: "Find hidden water leaks in walls, floors, and ceilings using acoustic listening devices and thermal imaging cameras. Non-invasive and accurate.",
     icon: Droplets,
     href: "/services/water-leak-detection",
+    image: waterLeakDetectionImg,
   },
   {
     title: "Pool Leak Detection",
     description: "Specialist pool and spa leak detection to stop water loss and reduce chemical costs. We use pressure testing and dye testing techniques.",
     icon: Waves,
     href: "/services/pool-leak-detection",
+    image: poolLeakDetectionImg,
   },
   {
     title: "Leak Repair",
     description: "Professional leak repair services once we've located the problem. We offer complete solutions from detection to repair.",
     icon: Wrench,
     href: "/services/leak-repair",
+    image: leakRepairImg,
   },
 ];
 
 const Services = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="bg-canary-dark py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background Image */}
+      <section className="relative bg-canary-dark py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={titleBg} 
+            alt=""
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/90 to-canary-dark/70" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

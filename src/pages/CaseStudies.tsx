@@ -3,6 +3,17 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
+// Import case study images
+import drainDetection1 from "@/assets/case-studies/drain-detection-1.jpg";
+import poolLeak1 from "@/assets/case-studies/pool-leak-1.jpg";
+import pipeInspection1 from "@/assets/case-studies/pipe-inspection-1.jpg";
+import titleBg from "@/assets/title-bg.jpg";
+
+// Import gallery photos for variety
+import photo1 from "@/assets/gallery/photo-1.jpg";
+import photo2 from "@/assets/gallery/photo-2.jpg";
+import photo3 from "@/assets/gallery/photo-3.jpg";
+
 const caseStudies = [
   {
     id: 1,
@@ -11,6 +22,7 @@ const caseStudies = [
     description: "Located a significant leak in a hotel pool that was causing water loss of 5,000 liters per day.",
     fullDescription: "A large hotel in Gran Canaria contacted us about their swimming pool which was losing approximately 5,000 liters of water per day. Using our specialist pool leak detection equipment, we were able to identify a crack in the pool shell caused by ground movement. The hotel was able to arrange repairs and significantly reduce their water and chemical costs.",
     result: "Leak found and repaired within 48 hours",
+    image: poolLeak1,
   },
   {
     id: 2,
@@ -19,6 +31,7 @@ const caseStudies = [
     description: "Successfully mapped underground utility pipes for a new construction project.",
     fullDescription: "A construction company in Tenerife needed to know the exact location of all underground utilities before beginning excavation work on a new development. Our team used ground-penetrating radar and electromagnetic locating equipment to map all buried pipes and cables, providing detailed drawings for the construction team.",
     result: "Complete utility map delivered in 1 day",
+    image: photo1,
   },
   {
     id: 3,
@@ -27,6 +40,7 @@ const caseStudies = [
     description: "Found and repaired a hidden leak in a villa that had been causing damp problems for months.",
     fullDescription: "The owners of a villa in Lanzarote had been experiencing persistent damp on their walls for several months. Previous attempts to find the source had been unsuccessful. Using thermal imaging and acoustic leak detection, we were able to pinpoint a leak in a hot water pipe running under the floor slab. The repair was completed with minimal disruption.",
     result: "Problem solved after months of searching",
+    image: photo2,
   },
   {
     id: 4,
@@ -35,6 +49,7 @@ const caseStudies = [
     description: "Pre-purchase drainage survey for a commercial property revealed significant issues.",
     fullDescription: "A client considering purchasing a commercial property in Fuerteventura asked us to conduct a comprehensive drainage survey before completing the purchase. Our CCTV inspection revealed significant root intrusion and collapsed sections in the main sewer line. This information allowed the buyer to negotiate a significant reduction in the purchase price.",
     result: "Saved client €15,000 in negotiations",
+    image: drainDetection1,
   },
   {
     id: 5,
@@ -43,6 +58,7 @@ const caseStudies = [
     description: "Traced a leak affecting multiple apartments to a single source in the main riser.",
     fullDescription: "An apartment complex in Las Palmas was experiencing water damage in three different apartments on different floors. Building management suspected multiple leaks but our investigation revealed a single leak in the main water riser that was tracking through the building. One repair solved all the problems.",
     result: "Single leak causing multiple problems identified",
+    image: pipeInspection1,
   },
   {
     id: 6,
@@ -51,6 +67,7 @@ const caseStudies = [
     description: "Complete leak detection survey of spa facilities including pools, hot tubs, and pipework.",
     fullDescription: "A luxury spa resort in Tenerife commissioned a complete leak detection survey of their water facilities. We tested all pools, hot tubs, fountains, and associated pipework. Several small leaks were identified and repaired, resulting in significant water and energy savings for the resort.",
     result: "Annual water savings of €8,000+",
+    image: photo3,
   },
 ];
 
@@ -58,8 +75,16 @@ const CaseStudies = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-canary-dark py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-canary-dark py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={titleBg} 
+            alt=""
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/90 to-canary-dark/70" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -90,10 +115,12 @@ const CaseStudies = () => {
                 transition={{ delay: index * 0.1 }}
                 className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
               >
-                <div className="aspect-video bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center">
-                  <span className="text-6xl font-heading font-bold text-primary/30">
-                    {study.id}
-                  </span>
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={study.image} 
+                    alt={study.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
                 <div className="p-6">
                   <span className="text-xs text-primary font-medium uppercase tracking-wide">

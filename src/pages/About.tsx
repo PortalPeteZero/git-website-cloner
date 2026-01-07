@@ -2,13 +2,19 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import welcomeImg from "@/assets/welcome.jpg";
+import titleBg from "@/assets/title-bg.jpg";
 
 const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-canary-dark py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-canary-dark py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={titleBg} alt="" className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/90 to-canary-dark/70" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -62,12 +68,10 @@ const About = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-primary-foreground font-heading font-bold text-4xl">CD</span>
-                  </div>
-                  <p className="text-muted-foreground font-heading text-xl">Since 2014</p>
+              <div className="aspect-square rounded-lg overflow-hidden relative">
+                <img src={welcomeImg} alt="Canary Detect team at work" className="w-full h-full object-cover" />
+                <div className="absolute bottom-4 left-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg">
+                  <p className="font-heading font-bold text-lg">Since 2014</p>
                 </div>
               </div>
             </motion.div>
