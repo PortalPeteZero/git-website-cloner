@@ -31,7 +31,7 @@ const Header = () => {
             <img
               src={logo}
               alt="Canary Detect - The Leaky Finders"
-              className="h-14 md:h-16 lg:h-20 w-auto"
+              className="h-20 md:h-24 lg:h-28 w-auto"
             />
           </Link>
 
