@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import welcomeImg from "@/assets/welcome.jpg";
 
 const features = [
   "Non-invasive detection methods",
@@ -69,14 +70,11 @@ const WelcomeSection = () => {
             className="relative"
           >
             <div className="aspect-[4/3] bg-muted rounded-lg overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-primary-foreground font-heading font-bold text-3xl">CD</span>
-                  </div>
-                  <p className="text-muted-foreground">Professional Leak Detection</p>
-                </div>
-              </div>
+              <img 
+                src={welcomeImg} 
+                alt="Professional leak detection equipment and technician" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-xl">
               <div className="text-3xl font-heading font-bold">10+</div>

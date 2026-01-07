@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import heroBanner from "@/assets/hero/hero-banner.jpg";
 
 const slides = [
   {
@@ -51,9 +52,10 @@ const HeroSlider = () => {
 
   return (
     <section className="relative h-[500px] md:h-[600px] lg:h-[700px] bg-canary-dark overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img src={heroBanner} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-canary-dark/70" />
       </div>
 
       <AnimatePresence mode="wait">
