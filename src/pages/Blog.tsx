@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
+import blogPlaceholder from "@/assets/blog-placeholder.png";
 
 const blogPosts = [
   {
@@ -96,10 +97,13 @@ const Blog = () => {
                 transition={{ delay: index * 0.1 }}
                 className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
               >
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                  <span className="text-4xl font-heading font-bold text-primary/30">
-                    {post.category}
-                  </span>
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={blogPlaceholder}
+                    alt={`${post.title} cover`}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">

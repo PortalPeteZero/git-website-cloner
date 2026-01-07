@@ -58,7 +58,7 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
                   <span
                     key={idx}
                     className={`w-2 h-2 rounded-full transition-colors ${
-                      idx === currentImageIndex ? "bg-primary" : "bg-white/50"
+                      idx === currentImageIndex ? "bg-primary" : "bg-background/60"
                     }`}
                   />
                 ))}

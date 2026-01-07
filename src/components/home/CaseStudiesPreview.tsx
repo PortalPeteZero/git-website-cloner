@@ -3,24 +3,33 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
+import poolLeak1 from "@/assets/case-studies/pool-leak-1.jpg";
+import photo1 from "@/assets/gallery/photo-1.jpg";
+import photo2 from "@/assets/gallery/photo-2.jpg";
+
 const caseStudies = [
   {
     id: 1,
     title: "Hotel Pool Leak Detection",
     location: "Gran Canaria",
-    description: "Located a significant leak in a hotel pool that was causing water loss of 5,000 liters per day.",
+    description:
+      "Located a significant leak in a hotel pool that was causing water loss of 5,000 liters per day.",
+    image: poolLeak1,
   },
   {
     id: 2,
     title: "Underground Pipe Location",
     location: "Tenerife",
     description: "Successfully mapped underground utility pipes for a new construction project.",
+    image: photo1,
   },
   {
     id: 3,
     title: "Residential Water Leak",
     location: "Lanzarote",
-    description: "Found and repaired a hidden leak in a villa that had been causing damp problems for months.",
+    description:
+      "Found and repaired a hidden leak in a villa that had been causing damp problems for months.",
+    image: photo2,
   },
 ];
 
@@ -53,10 +62,13 @@ const CaseStudiesPreview = () => {
               transition={{ delay: index * 0.1 }}
               className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
             >
-              <div className="aspect-video bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center">
-                <span className="text-6xl font-heading font-bold text-primary/20">
-                  {study.id}
-                </span>
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={study.image}
+                  alt={study.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <div className="p-6">
                 <span className="text-xs text-primary font-medium uppercase tracking-wide">
@@ -65,9 +77,7 @@ const CaseStudiesPreview = () => {
                 <h3 className="font-heading font-bold text-lg mt-1 mb-2 group-hover:text-primary transition-colors">
                   {study.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">
-                  {study.description}
-                </p>
+                <p className="text-muted-foreground text-sm">{study.description}</p>
               </div>
             </motion.div>
           ))}
@@ -87,3 +97,4 @@ const CaseStudiesPreview = () => {
 };
 
 export default CaseStudiesPreview;
+
