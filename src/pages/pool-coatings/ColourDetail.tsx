@@ -5,6 +5,49 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import finishData from "@/data/finishes.json";
 
+// Import all available pool coating images
+import blueLagoon from "@/assets/pool-coatings/blue-lagoon.jpg";
+import blueLagoon2 from "@/assets/pool-coatings/blue-lagoon-2.jpg";
+import mediterraneanBlue from "@/assets/pool-coatings/mediterranean-blue.jpg";
+import frenchGrey from "@/assets/pool-coatings/french-grey.jpg";
+import galleryGreySteps from "@/assets/pool-coatings/gallery-grey-steps.jpg";
+import sandyBeach from "@/assets/pool-coatings/sandy-beach.jpg";
+import sandyBeach2 from "@/assets/pool-coatings/sandy-beach-2.jpg";
+import gallerySandyBeach from "@/assets/pool-coatings/gallery-sandy-beach.jpg";
+import santorini from "@/assets/pool-coatings/santorini.jpg";
+import pacificBlue from "@/assets/pool-coatings/pacific-blue.jpg";
+import konaCoast from "@/assets/pool-coatings/kona-coast.jpg";
+import tropicalTeal from "@/assets/pool-coatings/tropical-teal.jpg";
+import tropicalTeal2 from "@/assets/pool-coatings/tropical-teal-2.jpg";
+import midnightBlue from "@/assets/pool-coatings/midnight-blue.jpg";
+import midnightBlue2 from "@/assets/pool-coatings/midnight-blue-2.jpg";
+
+// Map finish IDs to imported images
+const finishImages: Record<string, string> = {
+  "blue-lagoon": blueLagoon,
+  "mediterranean-blue": mediterraneanBlue,
+  "french-grey": frenchGrey,
+  "sandy-beach": sandyBeach,
+  "santorini": santorini,
+  "pacific-blue": pacificBlue,
+  "kona-coast": konaCoast,
+  "tropical-teal": tropicalTeal,
+  "midnight-blue": midnightBlue,
+};
+
+// Gallery images for each finish
+const finishGalleries: Record<string, string[]> = {
+  "blue-lagoon": [blueLagoon, blueLagoon2],
+  "mediterranean-blue": [mediterraneanBlue],
+  "french-grey": [frenchGrey, galleryGreySteps],
+  "sandy-beach": [sandyBeach, sandyBeach2, gallerySandyBeach],
+  "santorini": [santorini],
+  "pacific-blue": [pacificBlue],
+  "kona-coast": [konaCoast],
+  "tropical-teal": [tropicalTeal, tropicalTeal2],
+  "midnight-blue": [midnightBlue, midnightBlue2],
+};
+
 export default function ColourDetail() {
   const { colourId } = useParams<{ colourId: string }>();
   const finish = finishData.finishes.find((f) => f.id === colourId);
@@ -35,6 +78,9 @@ export default function ColourDetail() {
     "Non-slip texture available",
   ];
 
+  const mainImage = finishImages[finish.id];
+  const galleryImages = finishGalleries[finish.id] || [];
+
   return (
     <Layout>
       {/* Hero with colour display */}
@@ -49,19 +95,51 @@ export default function ColourDetail() {
           </Link>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Colour Swatch */}
+            {/* Colour Swatch / Image */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="relative"
             >
-              <div
-                className="aspect-square rounded-2xl shadow-xl"
-                style={{ backgroundColor: finish.swatchColor }}
-              />
-              <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
+              {mainImage ? (
+                <div className="rounded-2xl shadow-xl overflow-hidden">
+                  <img
+                    src={mainImage}
+                    alt={`${finish.finishName} pool finish`}
+                    className="w-full aspect-square object-cover"
+                  />
+                </div>
+              ) : (
+                <div
+                  className="aspect-square rounded-2xl shadow-xl"
+                  style={{ backgroundColor: finish.swatchColor }}
+                />
+              )}
+              <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
+                <div
+                  className="w-4 h-4 rounded-full border border-border/50"
+                  style={{ backgroundColor: finish.swatchColor }}
+                />
                 {finish.productLine}
               </div>
+
+              {/* Gallery thumbnails */}
+              {galleryImages.length > 1 && (
+                <div className="flex gap-3 mt-4">
+                  {galleryImages.map((img, idx) => (
+                    <div
+                      key={idx}
+                      className="w-20 h-20 rounded-lg overflow-hidden shadow-sm border-2 border-transparent hover:border-primary transition-colors cursor-pointer"
+                    >
+                      <img
+                        src={img}
+                        alt={`${finish.finishName} gallery ${idx + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </motion.div>
 
             {/* Details */}
@@ -132,21 +210,34 @@ export default function ColourDetail() {
             {finishData.finishes
               .filter((f) => f.id !== finish.id)
               .slice(0, 6)
-              .map((otherFinish) => (
-                <Link
-                  key={otherFinish.id}
-                  to={`/pool-coatings/colours/${otherFinish.id}`}
-                  className="group"
-                >
-                  <div
-                    className="aspect-square rounded-lg shadow-sm group-hover:shadow-md transition-shadow"
-                    style={{ backgroundColor: otherFinish.swatchColor }}
-                  />
-                  <p className="text-xs font-medium text-center mt-2 group-hover:text-primary transition-colors">
-                    {otherFinish.finishName}
-                  </p>
-                </Link>
-              ))}
+              .map((otherFinish) => {
+                const otherImage = finishImages[otherFinish.id];
+                return (
+                  <Link
+                    key={otherFinish.id}
+                    to={`/pool-coatings/colours/${otherFinish.id}`}
+                    className="group"
+                  >
+                    {otherImage ? (
+                      <div className="aspect-square rounded-lg shadow-sm group-hover:shadow-md transition-shadow overflow-hidden">
+                        <img
+                          src={otherImage}
+                          alt={otherFinish.finishName}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        className="aspect-square rounded-lg shadow-sm group-hover:shadow-md transition-shadow"
+                        style={{ backgroundColor: otherFinish.swatchColor }}
+                      />
+                    )}
+                    <p className="text-xs font-medium text-center mt-2 group-hover:text-primary transition-colors">
+                      {otherFinish.finishName}
+                    </p>
+                  </Link>
+                );
+              })}
           </div>
         </div>
       </section>
