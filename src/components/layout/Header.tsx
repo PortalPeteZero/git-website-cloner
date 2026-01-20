@@ -52,6 +52,15 @@ const Header = () => {
             <Link to="/contact" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Contact
             </Link>
+            <a 
+              href="https://canary-detect-coatings.es/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button variant="default" size="sm">
+                Pool Coatings
+              </Button>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -103,6 +112,16 @@ const Header = () => {
               >
                 Contact
               </Link>
+              <a 
+                href="https://canary-detect-coatings.es/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Button variant="default" size="sm" className="w-fit">
+                  Pool Coatings
+                </Button>
+              </a>
             </div>
           </nav>
         )}
