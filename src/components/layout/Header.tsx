@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,9 +21,26 @@ const services = [
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isActive = (path: string) => location.pathname === path;
+  const isServicesActive = location.pathname.startsWith("/services");
 
   return (
-    <header className="bg-gradient-to-r from-background via-background to-muted/30 sticky top-0 z-50 border-b border-border/50 shadow-md backdrop-blur-sm">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border/50" 
+        : "bg-gradient-to-r from-background via-background to-muted/30 border-b border-border/30"
+    }`}>
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between py-3 lg:py-4">
           {/* Logo */}
@@ -40,13 +57,21 @@ const Header = () => {
             {/* Primary Links */}
             <Link 
               to="/services" 
-              className="relative px-4 py-2 text-canary-navy font-semibold text-sm hover:text-primary transition-all duration-300 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+              className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
+                isServicesActive 
+                  ? "text-primary after:w-full" 
+                  : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
+              } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
             >
               Services
             </Link>
             <Link 
               to="/contact" 
-              className="relative px-4 py-2 text-canary-navy font-semibold text-sm hover:text-primary transition-all duration-300 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+              className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
+                isActive("/contact") 
+                  ? "text-primary after:w-full" 
+                  : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
+              } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
             >
               Contact
             </Link>

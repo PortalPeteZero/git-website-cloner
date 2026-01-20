@@ -144,7 +144,8 @@ const Technology = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group bg-card border border-border rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500"
+                whileHover={{ y: -6 }}
+                className="group bg-card border-2 border-border hover:border-primary/30 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300"
               >
                 {/* Header with Icon */}
                 <div className="p-8 pb-6">
