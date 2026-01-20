@@ -54,7 +54,7 @@ const Footer = () => {
               </p>
               <div className="flex gap-4 mt-4">
                 <a 
-                  href="https://www.facebook.com/canarydetect" 
+                  href="https://www.facebook.com/profile.php?id=100071808930725" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
@@ -63,7 +63,7 @@ const Footer = () => {
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://www.instagram.com/canarydetect" 
+                  href="https://www.instagram.com/canarydetect_the_leaky_finders/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
