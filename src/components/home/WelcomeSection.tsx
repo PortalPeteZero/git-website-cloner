@@ -85,7 +85,7 @@ const WelcomeSection = () => {
               />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-lg shadow-2xl">
-              <div className="text-3xl font-heading font-bold">10+</div>
+              <div className="text-3xl font-heading font-bold">40+</div>
               <div className="text-sm">Years Experience</div>
             </div>
           </motion.div>
