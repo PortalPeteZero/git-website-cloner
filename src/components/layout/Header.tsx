@@ -40,9 +40,6 @@ const Header = () => {
             <Link to="/services" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Services
             </Link>
-            <Link to="/technology" className="text-canary-navy font-medium hover:text-primary transition-colors">
-              Technology
-            </Link>
             <Link to="/contact" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Contact
             </Link>
@@ -115,13 +112,6 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
-              </Link>
-              <Link 
-                to="/technology" 
-                className="text-canary-navy font-medium hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Technology
               </Link>
               <Link 
                 to="/contact" 
