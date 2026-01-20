@@ -4,7 +4,7 @@ import { Shield, Award, Clock, MapPin, FileCheck, Wrench } from "lucide-react";
 
 const stats = [
   { value: 500, suffix: "+", label: "Leaks Found", icon: Wrench },
-  { value: 10, suffix: "+", label: "Years Experience", icon: Award },
+  { value: 40, suffix: "+", label: "Years Experience", icon: Award },
   { value: 100, suffix: "%", label: "Success Rate", icon: Shield },
   { value: 24, suffix: "hr", label: "Emergency Service", icon: Clock },
 ];
