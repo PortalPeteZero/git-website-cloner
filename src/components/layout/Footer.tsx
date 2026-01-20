@@ -138,25 +138,50 @@ const Footer = () => {
               </ul>
               
               <h4 className="font-heading font-bold text-lg mt-6 mb-3">Service Areas</h4>
-              <ul className="space-y-2">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
                 <li>
-                  <Link to="/locations/arrecife" className="text-canary-white/80 hover:text-primary transition-colors">
+                  <Link to="/locations/arrecife" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
                     Arrecife
                   </Link>
                 </li>
                 <li>
-                  <Link to="/locations/puerto-del-carmen" className="text-canary-white/80 hover:text-primary transition-colors">
+                  <Link to="/locations/puerto-del-carmen" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
                     Puerto del Carmen
                   </Link>
                 </li>
                 <li>
-                  <Link to="/locations/playa-blanca" className="text-canary-white/80 hover:text-primary transition-colors">
+                  <Link to="/locations/playa-blanca" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
                     Playa Blanca
                   </Link>
                 </li>
                 <li>
-                  <Link to="/locations/costa-teguise" className="text-canary-white/80 hover:text-primary transition-colors">
+                  <Link to="/locations/costa-teguise" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
                     Costa Teguise
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/locations/yaiza" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
+                    Yaiza
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/locations/tias" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
+                    Tías
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/locations/playa-honda" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
+                    Playa Honda
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/locations/san-bartolome" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
+                    San Bartolomé
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/locations/teguise" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
+                    Teguise
                   </Link>
                 </li>
               </ul>
