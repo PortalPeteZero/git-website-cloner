@@ -92,7 +92,7 @@ const Services = () => {
               Professional Leak Detection Services
             </h1>
             <p className="text-canary-white/80 text-lg leading-relaxed">
-              We offer a comprehensive range of leak detection and repair services across the Canary Islands, 
+              We offer a comprehensive range of leak detection and repair services across Lanzarote, 
               using the latest technology and equipment to find and fix leaks quickly and efficiently.
             </p>
           </motion.div>

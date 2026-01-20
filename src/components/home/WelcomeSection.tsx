@@ -25,10 +25,10 @@ const WelcomeSection = () => {
           >
             <span className="text-primary font-semibold uppercase tracking-wide text-sm">Welcome to Canary Detect</span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-6 text-canary-navy">
-              Professional Leak Detection Services in the Canary Islands
+              Professional Leak Detection Services in Lanzarote
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Canary Detect provides professional leak detection services across the Canary Islands. 
+              Canary Detect provides professional leak detection services across Lanzarote.
               Our team of experts uses the latest technology and equipment to locate leaks quickly 
               and accurately, helping you save time, money, and prevent further damage to your property.
             </p>

@@ -18,54 +18,54 @@ const caseStudies = [
   {
     id: 1,
     title: "Hotel Pool Leak Detection",
-    location: "Gran Canaria",
+    location: "Playa Blanca",
     description: "Located a significant leak in a hotel pool that was causing water loss of 5,000 liters per day.",
-    fullDescription: "A large hotel in Gran Canaria contacted us about their swimming pool which was losing approximately 5,000 liters of water per day. Using our specialist pool leak detection equipment, we were able to identify a crack in the pool shell caused by ground movement. The hotel was able to arrange repairs and significantly reduce their water and chemical costs.",
+    fullDescription: "A large hotel in Playa Blanca contacted us about their swimming pool which was losing approximately 5,000 liters of water per day. Using our specialist pool leak detection equipment, we were able to identify a crack in the pool shell caused by ground movement. The hotel was able to arrange repairs and significantly reduce their water and chemical costs.",
     result: "Leak found and repaired within 48 hours",
     image: poolLeak1,
   },
   {
     id: 2,
     title: "Underground Pipe Location",
-    location: "Tenerife",
+    location: "Puerto del Carmen",
     description: "Successfully mapped underground utility pipes for a new construction project.",
-    fullDescription: "A construction company in Tenerife needed to know the exact location of all underground utilities before beginning excavation work on a new development. Our team used ground-penetrating radar and electromagnetic locating equipment to map all buried pipes and cables, providing detailed drawings for the construction team.",
+    fullDescription: "A construction company in Puerto del Carmen needed to know the exact location of all underground utilities before beginning excavation work on a new development. Our team used ground-penetrating radar and electromagnetic locating equipment to map all buried pipes and cables, providing detailed drawings for the construction team.",
     result: "Complete utility map delivered in 1 day",
     image: photo1,
   },
   {
     id: 3,
     title: "Residential Water Leak",
-    location: "Lanzarote",
+    location: "Costa Teguise",
     description: "Found and repaired a hidden leak in a villa that had been causing damp problems for months.",
-    fullDescription: "The owners of a villa in Lanzarote had been experiencing persistent damp on their walls for several months. Previous attempts to find the source had been unsuccessful. Using thermal imaging and acoustic leak detection, we were able to pinpoint a leak in a hot water pipe running under the floor slab. The repair was completed with minimal disruption.",
+    fullDescription: "The owners of a villa in Costa Teguise had been experiencing persistent damp on their walls for several months. Previous attempts to find the source had been unsuccessful. Using thermal imaging and acoustic leak detection, we were able to pinpoint a leak in a hot water pipe running under the floor slab. The repair was completed with minimal disruption.",
     result: "Problem solved after months of searching",
     image: photo2,
   },
   {
     id: 4,
     title: "Commercial Building Survey",
-    location: "Fuerteventura",
+    location: "Arrecife",
     description: "Pre-purchase drainage survey for a commercial property revealed significant issues.",
-    fullDescription: "A client considering purchasing a commercial property in Fuerteventura asked us to conduct a comprehensive drainage survey before completing the purchase. Our CCTV inspection revealed significant root intrusion and collapsed sections in the main sewer line. This information allowed the buyer to negotiate a significant reduction in the purchase price.",
+    fullDescription: "A client considering purchasing a commercial property in Arrecife asked us to conduct a comprehensive drainage survey before completing the purchase. Our CCTV inspection revealed significant root intrusion and collapsed sections in the main sewer line. This information allowed the buyer to negotiate a significant reduction in the purchase price.",
     result: "Saved client €15,000 in negotiations",
     image: drainDetection1,
   },
   {
     id: 5,
     title: "Apartment Complex Leak",
-    location: "Gran Canaria",
+    location: "Playa Honda",
     description: "Traced a leak affecting multiple apartments to a single source in the main riser.",
-    fullDescription: "An apartment complex in Las Palmas was experiencing water damage in three different apartments on different floors. Building management suspected multiple leaks but our investigation revealed a single leak in the main water riser that was tracking through the building. One repair solved all the problems.",
+    fullDescription: "An apartment complex in Playa Honda was experiencing water damage in three different apartments on different floors. Building management suspected multiple leaks but our investigation revealed a single leak in the main water riser that was tracking through the building. One repair solved all the problems.",
     result: "Single leak causing multiple problems identified",
     image: pipeInspection1,
   },
   {
     id: 6,
     title: "Spa Resort Pool System",
-    location: "Tenerife",
+    location: "Yaiza",
     description: "Complete leak detection survey of spa facilities including pools, hot tubs, and pipework.",
-    fullDescription: "A luxury spa resort in Tenerife commissioned a complete leak detection survey of their water facilities. We tested all pools, hot tubs, fountains, and associated pipework. Several small leaks were identified and repaired, resulting in significant water and energy savings for the resort.",
+    fullDescription: "A luxury spa resort in Yaiza commissioned a complete leak detection survey of their water facilities. We tested all pools, hot tubs, fountains, and associated pipework. Several small leaks were identified and repaired, resulting in significant water and energy savings for the resort.",
     result: "Annual water savings of €8,000+",
     image: photo3,
   },
@@ -95,7 +95,7 @@ const CaseStudies = () => {
               Case Studies
             </h1>
             <p className="text-canary-white/80 text-lg leading-relaxed">
-              See examples of our leak detection work across the Canary Islands. 
+              See examples of our leak detection work across Lanzarote. 
               From hotel pools to residential villas, we've helped hundreds of clients solve their leak problems.
             </p>
           </motion.div>

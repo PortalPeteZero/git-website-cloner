@@ -25,7 +25,7 @@ const About = () => {
               Professional Leak Detection Experts
             </h1>
             <p className="text-canary-white/80 text-lg leading-relaxed">
-              Canary Detect is a professional leak detection company serving the Canary Islands. 
+              Canary Detect is a professional leak detection company serving Lanzarote. 
               With years of experience and the latest technology, we help property owners find and fix leaks quickly.
             </p>
           </motion.div>
@@ -46,7 +46,7 @@ const About = () => {
                 Dedicated to Finding Solutions
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Canary Detect was founded with a simple mission: to provide the Canary Islands with 
+                Canary Detect was founded with a simple mission: to provide Lanzarote with 
                 professional, reliable leak detection services. We understand how frustrating and 
                 costly water leaks can be, which is why we've invested in the best equipment and 
                 training to deliver accurate results.
@@ -54,7 +54,7 @@ const About = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Our team brings together years of experience in plumbing, construction, and 
                 leak detection technology. We've helped hundreds of homeowners, businesses, 
-                and hotels across Gran Canaria, Tenerife, Lanzarote, and the other islands.
+                and hotels across Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, and the whole island.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 We take pride in our non-invasive approach - using advanced acoustic, thermal, 

@@ -23,7 +23,7 @@ const Contact = () => {
             </h1>
             <p className="text-canary-white/80 text-lg leading-relaxed">
               Have a leak problem? Contact us today for a free consultation and quote. 
-              We're here to help with all your leak detection needs across the Canary Islands.
+              We're here to help with all your leak detection needs across Lanzarote.
             </p>
           </motion.div>
         </div>
@@ -130,11 +130,11 @@ const Contact = () => {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
-                  <div>
+                <div>
                     <h3 className="font-heading font-bold mb-1">Location</h3>
                     <p className="text-muted-foreground">
-                      Serving all the Canary Islands<br />
-                      Gran Canaria, Tenerife, Lanzarote & more
+                      Serving all of Lanzarote<br />
+                      Arrecife, Puerto del Carmen, Playa Blanca & more
                     </p>
                   </div>
                 </div>
@@ -154,14 +154,18 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
+              {/* Map - Lanzarote */}
               <div className="mt-8 aspect-video bg-muted rounded-lg overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  <div className="text-center">
-                    <MapPin className="h-12 w-12 mx-auto mb-2 opacity-50" />
-                    <p>Canary Islands, Spain</p>
-                  </div>
-                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224925.55097tried!2d-13.8!3d29.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc462847b8c4f8e7%3A0x5e5c6cc5c5c5c5c5!2sLanzarote!5e0!3m2!1sen!2ses!4v1700000000000!5m2!1sen!2ses"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Lanzarote, Canary Islands"
+                />
               </div>
             </motion.div>
           </div>

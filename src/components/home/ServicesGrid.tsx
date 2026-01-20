@@ -82,7 +82,7 @@ const ServicesGrid = () => {
           </h2>
           <p className="text-white/70">
             We offer a comprehensive range of leak detection and repair services 
-            across the Canary Islands, using the latest technology and equipment.
+            across Lanzarote, using the latest technology and equipment.
           </p>
         </motion.div>
 
