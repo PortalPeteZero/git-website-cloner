@@ -54,20 +54,20 @@ const Footer = () => {
               </p>
               <div className="flex gap-4 mt-4">
                 <a 
-                  href="https://facebook.com" 
+                  href="https://www.facebook.com/canarydetect" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
-                  aria-label="Facebook"
+                  aria-label="Follow us on Facebook"
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/canarydetect" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
-                  aria-label="Instagram"
+                  aria-label="Follow us on Instagram"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>

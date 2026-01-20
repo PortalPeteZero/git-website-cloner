@@ -44,7 +44,7 @@ const Header = () => {
               About Us
             </Link>
             <Link to="/case-studies" className="text-canary-navy font-medium hover:text-primary transition-colors">
-              Technology
+              Case Studies
             </Link>
             <Link to="/contact" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Contact
@@ -84,7 +84,7 @@ const Header = () => {
                 className="text-canary-navy font-medium hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Technology
+                Case Studies
               </Link>
               <Link 
                 to="/contact" 
