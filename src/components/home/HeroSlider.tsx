@@ -76,9 +76,9 @@ const HeroSlider = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Refined gradient overlay - less dark, more visible image */}
-      <div className="absolute inset-0 bg-gradient-to-r from-canary-navy/95 via-canary-navy/60 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-canary-navy/40 via-transparent to-transparent" />
+      {/* Enhanced gradient overlay for better text contrast */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[rgba(30,41,59,0.9)] via-[rgba(30,41,59,0.7)] to-[rgba(30,41,59,0.3)]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,41,59,0.5)] via-transparent to-transparent" />
 
       {/* Content */}
       <div className="relative h-full flex items-center">
@@ -96,16 +96,16 @@ const HeroSlider = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4"
+                  className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]"
                 >
                   Leak Detection Lanzarote &amp; Canary Islands
                 </motion.span>
-                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-[1.1]">
+                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-[1.1] drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
                   {slide.title}
                   <br />
-                  <span className="text-primary">{slide.subtitle}</span>
+                  <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">{slide.subtitle}</span>
                 </h1>
-                <p className="text-white/90 text-lg md:text-xl mb-10 leading-relaxed max-w-xl">
+                <p className="text-slate-100 text-lg md:text-xl mb-10 leading-relaxed max-w-xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
                   {slide.description}
                 </p>
               </motion.div>
