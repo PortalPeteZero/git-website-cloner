@@ -86,7 +86,10 @@ const Header = () => {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Button variant="default" size="sm">
+              <Button 
+                size="sm"
+                className="bg-gradient-to-r from-primary via-orange-500 to-primary bg-[length:200%_100%] hover:bg-[position:100%_0] text-white font-semibold shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:scale-105 transition-all duration-300 border-0"
+              >
                 Pool Coatings
               </Button>
             </a>
@@ -167,7 +170,10 @@ const Header = () => {
                   rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <Button variant="default" size="sm">
+                  <Button 
+                    size="sm"
+                    className="bg-gradient-to-r from-primary via-orange-500 to-primary bg-[length:200%_100%] hover:bg-[position:100%_0] text-white font-semibold shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:scale-105 transition-all duration-300 border-0"
+                  >
                     Pool Coatings
                   </Button>
                 </a>
