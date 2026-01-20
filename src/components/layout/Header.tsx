@@ -43,12 +43,6 @@ const Header = () => {
             <Link to="/technology" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Technology
             </Link>
-            <Link to="/about" className="text-canary-navy font-medium hover:text-primary transition-colors">
-              About Us
-            </Link>
-            <Link to="/case-studies" className="text-canary-navy font-medium hover:text-primary transition-colors">
-              Case Studies
-            </Link>
             <Link to="/contact" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Contact
             </Link>
@@ -62,6 +56,15 @@ const Header = () => {
                 Pool Leak Surveys
               </Button>
             </Link>
+            <a 
+              href="https://leakguardlanzarote.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" size="sm">
+                Water Leak Monitoring & Alarm
+              </Button>
+            </a>
             <a 
               href="https://canary-detect-coatings.es/" 
               target="_blank" 
@@ -102,20 +105,6 @@ const Header = () => {
                 Technology
               </Link>
               <Link 
-                to="/about" 
-                className="text-canary-navy font-medium hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About Us
-              </Link>
-              <Link 
-                to="/case-studies" 
-                className="text-canary-navy font-medium hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Case Studies
-              </Link>
-              <Link 
                 to="/contact" 
                 className="text-canary-navy font-medium hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
@@ -133,6 +122,16 @@ const Header = () => {
                     Pool Leak Surveys
                   </Button>
                 </Link>
+                <a 
+                  href="https://leakguardlanzarote.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Button variant="outline" size="sm">
+                    Water Leak Monitoring & Alarm
+                  </Button>
+                </a>
                 <a 
                   href="https://canary-detect-coatings.es/" 
                   target="_blank" 
