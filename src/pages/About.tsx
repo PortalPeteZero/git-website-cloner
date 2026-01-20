@@ -48,8 +48,8 @@ const About = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Canary Detect was founded with a simple mission: to provide Lanzarote with 
                 professional, reliable leak detection services. We understand how frustrating and 
-                costly water leaks can be, which is why we've invested in the best equipment and 
-                training to deliver accurate results.
+                costly water leaks can be, which is why we've invested over <strong className="text-foreground">€80,000</strong> in 
+                the best equipment and training to deliver accurate results.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Our team brings together years of experience in plumbing, construction, and 
@@ -74,6 +74,75 @@ const About = () => {
                   <p className="font-heading font-bold text-lg">Since 2014</p>
                 </div>
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Guarantees */}
+      <section className="py-16 md:py-24 bg-canary-dark">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-2xl mx-auto mb-12"
+          >
+            <span className="text-primary font-medium">Our Promises</span>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-canary-white">
+              Why Choose Canary Detect
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-canary-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-canary-white/10"
+            >
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🎯</span>
+              </div>
+              <h3 className="font-heading font-bold text-xl mb-3 text-canary-white">No Find, No Fee</h3>
+              <p className="text-canary-white/70 text-sm leading-relaxed">
+                If we can't locate your leak, you don't pay. For leak confirmation surveys, 
+                a 50% charge applies as the work has been completed.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-canary-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-canary-white/10"
+            >
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">💰</span>
+              </div>
+              <h3 className="font-heading font-bold text-xl mb-3 text-canary-white">Fixed Fee Guarantee</h3>
+              <p className="text-canary-white/70 text-sm leading-relaxed">
+                No hidden extras. We quote a fixed price upfront and stick to it, 
+                regardless of how long the job takes.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-canary-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-canary-white/10"
+            >
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">📋</span>
+              </div>
+              <h3 className="font-heading font-bold text-xl mb-3 text-canary-white">Insurance-Ready Reports</h3>
+              <p className="text-canary-white/70 text-sm leading-relaxed">
+                All surveys include professional photographic reports suitable for 
+                insurance claims and property documentation.
+              </p>
             </motion.div>
           </div>
         </div>
