@@ -66,6 +66,15 @@ const Header = () => {
               </Button>
             </a>
             <a 
+              href="https://leak-detective.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" size="sm">
+                Try Our Spot The Leak Game
+              </Button>
+            </a>
+            <a 
               href="https://canary-detect-coatings.es/" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -130,6 +139,16 @@ const Header = () => {
                 >
                   <Button variant="outline" size="sm">
                     Water Leak Monitoring & Alarm
+                  </Button>
+                </a>
+                <a 
+                  href="https://leak-detective.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Button variant="outline" size="sm">
+                    Try Our Spot The Leak Game
                   </Button>
                 </a>
                 <a 
