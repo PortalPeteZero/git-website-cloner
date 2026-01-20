@@ -34,7 +34,7 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
     >
       <Link 
         to={href}
-        className="group block bg-white rounded-lg border-0 hover:shadow-2xl transition-all duration-300 overflow-hidden"
+        className="group block bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 ease-in-out overflow-hidden"
       >
         {images.length > 0 && (
           <div className="aspect-[16/10] overflow-hidden relative">
