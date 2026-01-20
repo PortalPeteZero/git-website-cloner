@@ -161,32 +161,56 @@ const ServiceDetail = () => {
   return (
     <Layout>
       {/* Hero Section with Image */}
-      <section className="relative bg-canary-dark py-16 md:py-24 overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden">
+        {/* Background Image - Full visibility */}
         <div className="absolute inset-0">
           <img 
             src={service.heroImage} 
             alt={service.title}
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/90 to-canary-dark/70" />
+          {/* Gradient overlay - only on left side for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/80 to-transparent" />
+          {/* Bottom gradient for smooth transition */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        
+        <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl"
           >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center">
-                <Icon className="h-7 w-7 text-primary-foreground" />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="flex items-center gap-4 mb-6"
+            >
+              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/30">
+                <Icon className="h-8 w-8 text-primary-foreground" />
               </div>
-            </div>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-canary-white mb-6">
+            </motion.div>
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-canary-white mb-6 drop-shadow-lg">
               {service.title}
             </h1>
-            <p className="text-canary-white/80 text-lg leading-relaxed">
+            <p className="text-canary-white text-lg md:text-xl leading-relaxed drop-shadow-md max-w-xl">
               {service.description}
             </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="mt-8 flex flex-wrap gap-4"
+            >
+              <Button size="lg" asChild className="shadow-lg">
+                <Link to="/contact">Get a Quote</Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white">
+                <a href="tel:+34646022695">Call Now</a>
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </section>
