@@ -12,11 +12,6 @@ import CaseStudies from "./pages/CaseStudies";
 import Technology from "./pages/Technology";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
-import PoolCoatingsIndex from "./pages/pool-coatings/PoolCoatingsIndex";
-import ColourSelector from "./pages/pool-coatings/ColourSelector";
-import ColourDetail from "./pages/pool-coatings/ColourDetail";
-import WhyEcoFinish from "./pages/pool-coatings/WhyEcoFinish";
-import Process from "./pages/pool-coatings/Process";
 
 const queryClient = new QueryClient();
 
@@ -35,11 +30,6 @@ const App = () => (
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/technology" element={<Technology />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/pool-coatings" element={<PoolCoatingsIndex />} />
-          <Route path="/pool-coatings/colours" element={<ColourSelector />} />
-          <Route path="/pool-coatings/colours/:colourId" element={<ColourDetail />} />
-          <Route path="/pool-coatings/why-eco-finish" element={<WhyEcoFinish />} />
-          <Route path="/pool-coatings/process" element={<Process />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </TooltipProvider>
