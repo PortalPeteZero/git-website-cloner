@@ -36,7 +36,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
             <Link to="/services" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Services
             </Link>
@@ -51,6 +51,16 @@ const Header = () => {
             </Link>
             <Link to="/contact" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Contact
+            </Link>
+            <Link to="/services/water-leak-detection">
+              <Button variant="outline" size="sm">
+                Water Leak Detection
+              </Button>
+            </Link>
+            <Link to="/services/pool-leak-detection">
+              <Button variant="outline" size="sm">
+                Pool Leak Surveys
+              </Button>
             </Link>
             <a 
               href="https://canary-detect-coatings.es/" 
@@ -112,16 +122,28 @@ const Header = () => {
               >
                 Contact
               </Link>
-              <a 
-                href="https://canary-detect-coatings.es/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <Button variant="default" size="sm" className="w-fit">
-                  Pool Coatings
-                </Button>
-              </a>
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Link to="/services/water-leak-detection" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="outline" size="sm">
+                    Water Leak Detection
+                  </Button>
+                </Link>
+                <Link to="/services/pool-leak-detection" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="outline" size="sm">
+                    Pool Leak Surveys
+                  </Button>
+                </Link>
+                <a 
+                  href="https://canary-detect-coatings.es/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Button variant="default" size="sm">
+                    Pool Coatings
+                  </Button>
+                </a>
+              </div>
             </div>
           </nav>
         )}
