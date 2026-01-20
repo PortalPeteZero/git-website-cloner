@@ -11,7 +11,7 @@ import undergroundDetectionImg from "@/assets/services/underground-detection.jpg
 import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg";
 import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg";
 import leakRepairImg from "@/assets/services/leak-repair.jpg";
-import titleBg from "@/assets/title-bg.jpg";
+import servicesHero from "@/assets/hero/services-hero.jpg";
 
 // Import gallery images for carousels
 import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
@@ -82,7 +82,7 @@ const Services = () => {
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src={titleBg} 
+            src={servicesHero} 
             alt=""
             className="w-full h-full object-cover"
           />

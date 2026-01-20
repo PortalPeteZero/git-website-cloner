@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, CheckCircle, Clock, TrendingUp } from "lucide-react";
 
-// Import case study images
+// Import hero and case study images
+import caseStudiesHero from "@/assets/hero/case-studies-hero.jpg";
 import drainDetection1 from "@/assets/case-studies/drain-detection-1.jpg";
 import poolLeak1 from "@/assets/case-studies/pool-leak-1.jpg";
 import pipeInspection1 from "@/assets/case-studies/pipe-inspection-1.jpg";
@@ -84,7 +85,7 @@ const CaseStudies = () => {
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src={drainDetection1} 
+            src={caseStudiesHero} 
             alt=""
             className="w-full h-full object-cover"
           />
