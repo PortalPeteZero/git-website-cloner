@@ -1,14 +1,72 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import titleBg from "@/assets/title-bg.jpg";
 import SEOHead from "@/components/seo/SEOHead";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const validateEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const validatePhone = (phone: string) => phone === "" || /^[\d\s+()-]{7,}$/.test(phone);
+
+  const getFieldError = (field: string) => {
+    if (!touched[field]) return null;
+    if (field === "name" && formData.name.trim().length < 2) return "Name is required";
+    if (field === "email" && !validateEmail(formData.email)) return "Valid email is required";
+    if (field === "phone" && !validatePhone(formData.phone)) return "Enter a valid phone number";
+    if (field === "message" && formData.message.trim().length < 10) return "Message must be at least 10 characters";
+    return null;
+  };
+
+  const handleBlur = (field: string) => {
+    setTouched((prev) => ({ ...prev, [field]: true }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setTouched({ name: true, email: true, phone: true, message: true });
+    
+    if (getFieldError("name") || getFieldError("email") || getFieldError("message")) return;
+    
+    setIsSubmitting(true);
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    setIsSubmitting(false);
+    setSubmitStatus("success");
+    
+    // Reset after 3 seconds
+    setTimeout(() => {
+      setSubmitStatus("idle");
+      setFormData({ name: "", phone: "", email: "", service: "", message: "" });
+      setTouched({});
+    }, 3000);
+  };
+
+  const getInputClassName = (field: string) => {
+    const error = getFieldError(field);
+    const value = formData[field as keyof typeof formData];
+    const base = "w-full bg-background border-2 rounded-md px-4 py-3 text-base transition-all duration-200 focus:outline-none";
+    
+    if (error) return `${base} border-destructive ring-4 ring-destructive/10 focus:border-destructive`;
+    if (touched[field] && value) return `${base} border-green-500 bg-green-500/5 focus:border-green-500 focus:ring-4 focus:ring-green-500/10`;
+    return `${base} border-input hover:border-primary/50 focus:border-primary focus:ring-4 focus:ring-primary/10`;
+  };
+
   return (
     <Layout>
       <SEOHead 
@@ -57,40 +115,82 @@ const Contact = () => {
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
                 Send Us a Message
               </h2>
-              <form className="space-y-6">
+
+              {/* Success Message */}
+              <AnimatePresence>
+                {submitStatus === "success" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="mb-6 p-4 bg-green-500/10 border border-green-500 rounded-lg flex items-center gap-3"
+                  >
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-green-700 font-medium">Message sent successfully! We'll get back to you soon.</span>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-sm font-medium text-gray-700">Your Name</Label>
+                    <Label htmlFor="name" className="text-sm font-medium text-foreground">Your Name</Label>
                     <Input 
-                      id="name" 
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onBlur={() => handleBlur("name")}
                       placeholder="John Smith" 
-                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-3 text-base focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all duration-200"
+                      className={getInputClassName("name")}
                     />
+                    {getFieldError("name") && (
+                      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm text-destructive flex items-center gap-1">
+                        <AlertCircle className="h-3 w-3" /> {getFieldError("name")}
+                      </motion.p>
+                    )}
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number</Label>
+                    <Label htmlFor="phone" className="text-sm font-medium text-foreground">Phone Number</Label>
                     <Input 
                       id="phone" 
-                      type="tel" 
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onBlur={() => handleBlur("phone")}
                       placeholder="+34 600 000 000" 
-                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-3 text-base focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all duration-200"
+                      className={getInputClassName("phone")}
                     />
+                    {getFieldError("phone") && (
+                      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm text-destructive flex items-center gap-1">
+                        <AlertCircle className="h-3 w-3" /> {getFieldError("phone")}
+                      </motion.p>
+                    )}
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm font-medium text-gray-700">Email Address</Label>
+                  <Label htmlFor="email" className="text-sm font-medium text-foreground">Email Address</Label>
                   <Input 
                     id="email" 
-                    type="email" 
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onBlur={() => handleBlur("email")}
                     placeholder="john@example.com" 
-                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-3 text-base focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all duration-200"
+                    className={getInputClassName("email")}
                   />
+                  {getFieldError("email") && (
+                    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm text-destructive flex items-center gap-1">
+                      <AlertCircle className="h-3 w-3" /> {getFieldError("email")}
+                    </motion.p>
+                  )}
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="service" className="text-sm font-medium text-gray-700">Service Required</Label>
+                  <Label htmlFor="service" className="text-sm font-medium text-foreground">Service Required</Label>
                   <select
                     id="service"
-                    className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-base appearance-none cursor-pointer focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all duration-200 bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%236b7280%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_12px_center] bg-no-repeat"
+                    value={formData.service}
+                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                    className="flex h-12 w-full rounded-md border-2 border-input bg-background px-4 py-3 text-base appearance-none cursor-pointer transition-all duration-200 hover:border-primary/50 focus:border-primary focus:ring-4 focus:ring-primary/10 focus:outline-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23f97316%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_12px_center] bg-no-repeat"
                   >
                     <option value="">Select a service...</option>
                     <option value="drain-detection">Drain Detection</option>
@@ -103,20 +203,45 @@ const Contact = () => {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-sm font-medium text-gray-700">Your Message</Label>
+                  <Label htmlFor="message" className="text-sm font-medium text-foreground">Your Message</Label>
                   <Textarea
                     id="message"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onBlur={() => handleBlur("message")}
                     placeholder="Please describe your problem or enquiry..."
                     rows={5}
-                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-3 text-base min-h-[120px] resize-y focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all duration-200"
+                    className={`${getInputClassName("message")} min-h-[120px] resize-y`}
                   />
+                  {getFieldError("message") && (
+                    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm text-destructive flex items-center gap-1">
+                      <AlertCircle className="h-3 w-3" /> {getFieldError("message")}
+                    </motion.p>
+                  )}
                 </div>
                 <Button 
                   type="submit" 
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md font-semibold transition-all duration-200"
+                  disabled={isSubmitting || submitStatus === "success"}
+                  className={`min-w-[160px] ${
+                    submitStatus === "success" 
+                      ? "bg-green-500 hover:bg-green-500" 
+                      : ""
+                  }`}
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : submitStatus === "success" ? (
+                    <>
+                      <CheckCircle className="h-4 w-4" />
+                      Sent!
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
               </form>
             </motion.div>
