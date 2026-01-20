@@ -49,7 +49,7 @@ const Footer = () => {
                 <img src={logo} alt="Canary Detect - The Leaky Finders" className="h-12 w-auto" />
               </div>
               <p className="text-canary-white/80 text-sm leading-relaxed">
-                Professional leak detection services across the Canary Islands. 
+                Professional leak detection services across Lanzarote. 
                 Using the latest technology to find and fix leaks quickly and efficiently.
               </p>
               <div className="flex gap-4 mt-4">
@@ -169,7 +169,7 @@ const Footer = () => {
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-canary-white/80">
-                    Canary Islands, Spain
+                    Lanzarote, Canary Islands
                   </span>
                 </li>
               </ul>

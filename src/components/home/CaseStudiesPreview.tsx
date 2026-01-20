@@ -11,7 +11,7 @@ const caseStudies = [
   {
     id: 1,
     title: "Hotel Pool Leak Detection",
-    location: "Gran Canaria",
+    location: "Playa Blanca",
     description:
       "Located a significant leak in a hotel pool that was causing water loss of 5,000 liters per day.",
     image: poolLeak1,
@@ -19,14 +19,14 @@ const caseStudies = [
   {
     id: 2,
     title: "Underground Pipe Location",
-    location: "Tenerife",
+    location: "Puerto del Carmen",
     description: "Successfully mapped underground utility pipes for a new construction project.",
     image: photo1,
   },
   {
     id: 3,
     title: "Residential Water Leak",
-    location: "Lanzarote",
+    location: "Costa Teguise",
     description:
       "Found and repaired a hidden leak in a villa that had been causing damp problems for months.",
     image: photo2,
@@ -48,7 +48,7 @@ const CaseStudiesPreview = () => {
             Recent Case Studies
           </h2>
           <p className="text-gray-600">
-            See examples of our leak detection work across the Canary Islands.
+            See examples of our leak detection work across Lanzarote.
           </p>
         </motion.div>
 
