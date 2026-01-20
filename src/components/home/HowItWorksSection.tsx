@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, ClipboardCheck, Search, FileText, Wrench } from "lucide-react";
+import { Phone, ClipboardCheck, Search, FileText, Wrench, ArrowRight } from "lucide-react";
 
 const steps = [
   {
@@ -36,13 +36,13 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-muted">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-muted to-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-12"
+          className="text-center max-w-2xl mx-auto mb-16"
         >
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">
             Our Process
@@ -56,30 +56,96 @@ const HowItWorksSection = () => {
           </p>
         </motion.div>
 
-        <div className="relative">
-          {/* Connection line - desktop only */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-primary/20 -translate-y-1/2 z-0" />
+        {/* Desktop Timeline */}
+        <div className="hidden lg:block relative">
+          {/* Main connection line */}
+          <div className="absolute top-[60px] left-[10%] right-[10%] h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 rounded-full" />
+          
+          {/* Animated progress overlay */}
+          <motion.div 
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="absolute top-[60px] left-[10%] right-[10%] h-1 bg-gradient-to-r from-primary via-primary to-primary rounded-full origin-left"
+          />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
+          <div className="grid grid-cols-5 gap-4 relative z-10">
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
+                transition={{ delay: index * 0.15 }}
+                className="text-center group"
               >
-                <div className="bg-background rounded-xl p-6 border border-border shadow-sm">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 relative">
-                    <step.icon className="h-7 w-7 text-primary-foreground" />
-                    <span className="absolute -top-2 -right-2 w-7 h-7 bg-canary-navy text-white rounded-full flex items-center justify-center text-sm font-bold">
-                      {step.number}
-                    </span>
-                  </div>
-                  <h3 className="font-heading font-bold text-lg mb-2 text-foreground">
+                {/* Step Number Circle */}
+                <div className="relative inline-block mb-6">
+                  <motion.div 
+                    whileHover={{ scale: 1.1 }}
+                    className="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-primary to-[hsl(25,93%,45%)] p-1 shadow-xl shadow-primary/30 group-hover:shadow-2xl group-hover:shadow-primary/40 transition-all duration-300"
+                  >
+                    <div className="w-full h-full rounded-full bg-background flex flex-col items-center justify-center">
+                      <span className="text-3xl font-bold text-primary mb-1">{step.number}</span>
+                      <step.icon className="h-8 w-8 text-primary/70" />
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Content Card */}
+                <div className="bg-card rounded-xl p-5 border border-border shadow-sm group-hover:shadow-lg group-hover:border-primary/30 transition-all duration-300">
+                  <h3 className="font-heading font-bold text-lg mb-2 text-foreground group-hover:text-primary transition-colors">
                     {step.title}
                   </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+
+                {/* Arrow connector (except last) */}
+                {index < steps.length - 1 && (
+                  <div className="absolute top-[60px] -right-2 transform translate-x-1/2 hidden xl:block">
+                    <ArrowRight className="h-5 w-5 text-primary" />
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile/Tablet Timeline */}
+        <div className="lg:hidden relative">
+          {/* Vertical connection line */}
+          <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary to-primary/30 rounded-full" />
+
+          <div className="space-y-6 relative z-10">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="flex gap-6 group"
+              >
+                {/* Step Number Circle */}
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-[hsl(25,93%,45%)] p-0.5 shadow-lg shadow-primary/30">
+                    <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
+                      <span className="text-xl font-bold text-primary">{step.number}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content Card */}
+                <div className="flex-1 bg-card rounded-xl p-5 border border-border shadow-sm group-hover:shadow-lg group-hover:border-primary/30 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-2">
+                    <step.icon className="h-5 w-5 text-primary" />
+                    <h3 className="font-heading font-bold text-lg text-foreground group-hover:text-primary transition-colors">
+                      {step.title}
+                    </h3>
+                  </div>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {step.description}
                   </p>
