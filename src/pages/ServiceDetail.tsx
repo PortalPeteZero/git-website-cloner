@@ -253,113 +253,125 @@ const ServiceDetail = () => {
 
       {/* Free Leak Confirmation Section - Only for Water Leak Detection */}
       {service.freeLeakSection?.enabled && (
-        <section className="py-16 md:py-20 bg-canary-navy">
+        <section className="py-10 md:py-14 bg-background">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <span className="text-primary font-semibold text-sm uppercase tracking-widest mb-2 block">About CanaryDetect</span>
-              <p className="text-white/90 text-lg max-w-3xl mx-auto leading-relaxed">
-                CanaryDetect are Lanzarote's leading water leak detection specialists with over 40 years of combined expertise. 
-                We use advanced technology to protect your property from hidden water damage. Our team provides professional 
-                leak detection services across the island.
-              </p>
-            </motion.div>
+            <div className="rounded-2xl bg-gradient-to-br from-canary-navy to-canary-dark border border-canary-white/10 overflow-hidden">
+              <div className="p-6 md:p-10 lg:p-12">
+                <div className="grid lg:grid-cols-12 gap-10 items-start">
+                  {/* Left column */}
+                  <div className="lg:col-span-7">
+                    <motion.div
+                      initial={{ opacity: 0, y: 16 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                    >
+                      <span className="text-primary font-semibold text-xs uppercase tracking-widest mb-3 block">
+                        About CanaryDetect
+                      </span>
+                      <p className="text-canary-white/90 text-base md:text-lg leading-relaxed">
+                        CanaryDetect are Lanzarote's leading water leak detection specialists with over 40 years of combined expertise.
+                        We use advanced technology to protect your property from hidden water damage. Our team provides professional
+                        leak detection services across the island.
+                      </p>
+                    </motion.div>
 
-            {/* Important Notice Box */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="max-w-3xl mx-auto mb-12"
-            >
-              <h2 className="text-primary font-heading text-2xl md:text-3xl font-bold text-center mb-6">
-                IMPORTANT - What This Service Includes
-              </h2>
-              <div className="bg-canary-cyan/10 border-2 border-canary-cyan rounded-xl p-6 md:p-8">
-                <p className="text-white text-lg md:text-xl text-center font-medium leading-relaxed">
-                  {service.freeLeakSection.importantNote}
-                </p>
+                    {/* Highlight chips */}
+                    <div className="mt-6 grid sm:grid-cols-3 gap-3">
+                      {service.freeLeakSection.highlights.map((h) => (
+                        <div
+                          key={h.text}
+                          className="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 px-4 py-3"
+                        >
+                          <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center">
+                            <h.icon className="h-5 w-5 text-primary" />
+                          </div>
+                          <p className="text-canary-white/90 text-sm leading-snug">{h.text}</p>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Includes list */}
+                    <div className="mt-8">
+                      <h3 className="font-heading font-bold text-canary-white text-lg mb-4">
+                        What you get
+                      </h3>
+                      <div className="grid sm:grid-cols-2 gap-3">
+                        {service.freeLeakSection.includes.map((item, index) => (
+                          <motion.div
+                            key={item}
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.06 }}
+                            className="flex items-start gap-3 rounded-lg bg-white/5 border border-white/10 px-4 py-3"
+                          >
+                            <CheckCircle className="h-5 w-5 text-canary-cyan flex-shrink-0 mt-0.5" />
+                            <span className="text-canary-white/90 text-sm md:text-base">{item}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mt-8 flex flex-wrap gap-3">
+                      <Button asChild size="lg" className="shadow-lg">
+                        <Link to="/contact">Request your free confirmation</Link>
+                      </Button>
+                      <Button
+                        asChild
+                        size="lg"
+                        variant="outline"
+                        className="bg-white/10 border-white/25 text-white hover:bg-white/15 hover:text-white"
+                      >
+                        <a href="tel:+34711051071">Call +34 711 051 071</a>
+                      </Button>
+                    </div>
+                  </div>
+
+                  {/* Right column */}
+                  <div className="lg:col-span-5">
+                    <motion.div
+                      initial={{ opacity: 0, y: 16 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.05 }}
+                      className="rounded-2xl bg-canary-cyan/10 border border-canary-cyan/60 p-6 md:p-8"
+                    >
+                      <span className="text-primary font-semibold text-xs uppercase tracking-widest block mb-3">
+                        Important
+                      </span>
+                      <h2 className="font-heading text-xl md:text-2xl font-bold text-canary-white mb-4">
+                        What this service includes
+                      </h2>
+                      <p className="text-canary-white text-base leading-relaxed">
+                        {service.freeLeakSection.importantNote}
+                      </p>
+                      <p className="text-canary-white/80 mt-4 leading-relaxed">
+                        {service.freeLeakSection.subNote}
+                      </p>
+
+                      <div className="mt-6 flex flex-col gap-3">
+                        <a
+                          href="mailto:info@canary-detect.com"
+                          className="flex items-center gap-2 text-canary-white/90 hover:text-primary transition-colors"
+                        >
+                          <Mail className="h-4 w-4" />
+                          <span>info@canary-detect.com</span>
+                        </a>
+                        <a
+                          href="https://canary-detect.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-canary-white/90 hover:text-primary transition-colors"
+                        >
+                          <Globe className="h-4 w-4" />
+                          <span>canary-detect.com</span>
+                        </a>
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
               </div>
-              <p className="text-white/80 text-center mt-6 leading-relaxed">
-                {service.freeLeakSection.subNote}
-              </p>
-            </motion.div>
-
-            {/* Features List */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="max-w-xl mx-auto mb-12"
-            >
-              <div className="space-y-4">
-                {service.freeLeakSection.includes.map((item, index) => (
-                  <motion.div
-                    key={item}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 + index * 0.1 }}
-                    className="flex items-center gap-3"
-                  >
-                    <CheckCircle className="h-6 w-6 text-canary-cyan flex-shrink-0" />
-                    <span className="text-white text-lg">{item}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Contact Info */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12"
-            >
-              <a href="https://canary-detect.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-canary-cyan hover:text-primary transition-colors">
-                <Globe className="h-5 w-5" />
-                <span className="text-xl font-medium">canary-detect.com</span>
-              </a>
-              <a href="tel:+34711051071" className="flex items-center gap-2 text-primary hover:text-canary-cyan transition-colors">
-                <Phone className="h-5 w-5" />
-                <span className="text-xl font-bold">+34 711 051 071</span>
-              </a>
-              <a href="mailto:info@canary-detect.com" className="flex items-center gap-2 text-canary-cyan hover:text-primary transition-colors">
-                <Mail className="h-5 w-5" />
-                <span className="text-xl font-medium">info@canary-detect.com</span>
-              </a>
-            </motion.div>
-          </div>
-        </section>
-      )}
-
-      {/* Service Header Section - Shows original hero content as section header */}
-      {service.freeLeakSection?.enabled && (
-        <section className="py-12 md:py-16 bg-muted">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center max-w-3xl mx-auto"
-            >
-              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Icon className="h-8 w-8 text-primary-foreground" />
-              </div>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-                {service.title}
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                {service.description}
-              </p>
-            </motion.div>
+            </div>
           </div>
         </section>
       )}
@@ -367,6 +379,27 @@ const ServiceDetail = () => {
       {/* Content Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
+          {service.freeLeakSection?.enabled && (
+            <div className="mb-10 md:mb-14">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center max-w-3xl mx-auto"
+              >
+                <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                  <Icon className="h-7 w-7 text-primary-foreground" />
+                </div>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-3">
+                  {service.title}
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  {service.description}
+                </p>
+              </motion.div>
+            </div>
+          )}
+
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <motion.div
