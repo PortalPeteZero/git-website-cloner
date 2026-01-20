@@ -40,14 +40,14 @@ const Header = () => {
             <Link to="/services" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Services
             </Link>
+            <Link to="/pool-coatings" className="text-canary-navy font-medium hover:text-primary transition-colors">
+              Pool Coatings
+            </Link>
             <Link to="/technology" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Technology
             </Link>
             <Link to="/about" className="text-canary-navy font-medium hover:text-primary transition-colors">
               About Us
-            </Link>
-            <Link to="/case-studies" className="text-canary-navy font-medium hover:text-primary transition-colors">
-              Case Studies
             </Link>
             <Link to="/contact" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Contact
@@ -76,6 +76,13 @@ const Header = () => {
                 Services
               </Link>
               <Link 
+                to="/pool-coatings" 
+                className="text-canary-navy font-medium hover:text-primary transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Pool Coatings
+              </Link>
+              <Link 
                 to="/technology" 
                 className="text-canary-navy font-medium hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
@@ -88,13 +95,6 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About Us
-              </Link>
-              <Link 
-                to="/case-studies" 
-                className="text-canary-navy font-medium hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Case Studies
               </Link>
               <Link 
                 to="/contact" 
