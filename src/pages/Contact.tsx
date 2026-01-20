@@ -130,11 +130,15 @@ const Contact = () => {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
-                <div>
-                    <h3 className="font-heading font-bold mb-1">Location</h3>
+                  <div>
+                    <h3 className="font-heading font-bold mb-1">Office</h3>
                     <p className="text-muted-foreground">
-                      Serving all of Lanzarote<br />
-                      Arrecife, Puerto del Carmen, Playa Blanca & more
+                      Zona Industrial, 1<br />
+                      35580 Playa Blanca, Lanzarote
+                    </p>
+                    <p className="text-muted-foreground text-sm mt-2">
+                      Serving all of Lanzarote including<br />
+                      Arrecife, Puerto del Carmen & Costa Teguise
                     </p>
                   </div>
                 </div>
@@ -154,17 +158,17 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Map - Lanzarote */}
+              {/* Map - Playa Blanca Office */}
               <div className="mt-8 aspect-video bg-muted rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224925.55097tried!2d-13.8!3d29.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc462847b8c4f8e7%3A0x5e5c6cc5c5c5c5c5!2sLanzarote!5e0!3m2!1sen!2ses!4v1700000000000!5m2!1sen!2ses"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.5!2d-13.8267!3d28.8608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc462a0e0e0e0e0e%3A0x0!2sZona%20Industrial%2C%20Playa%20Blanca!5e0!3m2!1sen!2ses!4v1700000000000!5m2!1sen!2ses"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Lanzarote, Canary Islands"
+                  title="Canary Detect Office - Playa Blanca, Lanzarote"
                 />
               </div>
             </motion.div>
