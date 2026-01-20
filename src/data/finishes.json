@@ -5,49 +5,63 @@
       "finishName": "Blue Lagoon",
       "productLine": "aquaBRIGHT",
       "swatchColor": "#0077B6",
-      "description": "A vibrant, tropical blue that creates stunning turquoise water colours. Perfect for creating that Mediterranean villa feel."
+      "description": "A vibrant, tropical blue that creates stunning turquoise water colours. Perfect for creating that Mediterranean villa feel.",
+      "image": "blue-lagoon.jpg",
+      "gallery": ["blue-lagoon.jpg", "blue-lagoon-2.jpg"]
     },
     {
       "id": "mediterranean-blue",
       "finishName": "Mediterranean Blue",
       "productLine": "aquaBRIGHT",
       "swatchColor": "#0096C7",
-      "description": "Classic Mediterranean pool blue that never goes out of style. Creates beautiful azure water tones."
+      "description": "Classic Mediterranean pool blue that never goes out of style. Creates beautiful azure water tones.",
+      "image": "mediterranean-blue.jpg",
+      "gallery": ["mediterranean-blue.jpg"]
     },
     {
       "id": "french-grey",
       "finishName": "French Grey",
       "productLine": "aquaBRIGHT",
       "swatchColor": "#8E9AAF",
-      "description": "Sophisticated grey that creates elegant, modern water colours with subtle blue undertones."
+      "description": "Sophisticated grey that creates elegant, modern water colours with subtle blue undertones.",
+      "image": "french-grey.jpg",
+      "gallery": ["french-grey.jpg", "gallery-grey-steps.jpg"]
     },
     {
       "id": "sandy-beach",
       "finishName": "Sandy Beach",
       "productLine": "aquaBRIGHT",
       "swatchColor": "#E8D5B7",
-      "description": "Natural sand tones that create a warm, inviting lagoon-like water colour."
+      "description": "Natural sand tones that create a warm, inviting lagoon-like water colour.",
+      "image": "sandy-beach.jpg",
+      "gallery": ["sandy-beach.jpg", "sandy-beach-2.jpg", "gallery-sandy-beach.jpg"]
     },
     {
       "id": "santorini",
       "finishName": "Santorini",
       "productLine": "aquaBRIGHT",
       "swatchColor": "#48CAE4",
-      "description": "Inspired by the stunning pools of Santorini, Greece. Creates bright, inviting water colours."
+      "description": "Inspired by the stunning pools of Santorini, Greece. Creates bright, inviting water colours.",
+      "image": "santorini.jpg",
+      "gallery": ["santorini.jpg"]
     },
     {
       "id": "pacific-blue",
       "finishName": "Pacific Blue",
       "productLine": "aquaBRIGHT",
       "swatchColor": "#00B4D8",
-      "description": "Deep, rich blue that evokes the Pacific Ocean. Creates dramatic, luxurious water colours."
+      "description": "Deep, rich blue that evokes the Pacific Ocean. Creates dramatic, luxurious water colours.",
+      "image": "pacific-blue.jpg",
+      "gallery": ["pacific-blue.jpg"]
     },
     {
       "id": "kona-coast",
       "finishName": "Kona Coast",
       "productLine": "aquaBRIGHT",
       "swatchColor": "#023E8A",
-      "description": "Dark, dramatic blue inspired by Hawaiian volcanic coastlines. Creates deep, mysterious water colours."
+      "description": "Dark, dramatic blue inspired by Hawaiian volcanic coastlines. Creates deep, mysterious water colours.",
+      "image": "kona-coast.jpg",
+      "gallery": ["kona-coast.jpg"]
     },
     {
       "id": "ocean-mist",
@@ -61,7 +75,9 @@
       "finishName": "Tropical Teal",
       "productLine": "aquaBRIGHT",
       "swatchColor": "#2A9D8F",
-      "description": "Rich teal that creates exotic, tropical water colours with green undertones."
+      "description": "Rich teal that creates exotic, tropical water colours with green undertones.",
+      "image": "tropical-teal.jpg",
+      "gallery": ["tropical-teal.jpg", "tropical-teal-2.jpg"]
     },
     {
       "id": "pearl-white",
@@ -82,7 +98,9 @@
       "finishName": "Midnight Blue",
       "productLine": "aquaBRIGHT",
       "swatchColor": "#03045E",
-      "description": "The deepest blue in our range. Creates mysterious, infinity-edge style water colours."
+      "description": "The deepest blue in our range. Creates mysterious, infinity-edge style water colours.",
+      "image": "midnight-blue.jpg",
+      "gallery": ["midnight-blue.jpg", "midnight-blue-2.jpg"]
     },
     {
       "id": "crystal-clear",

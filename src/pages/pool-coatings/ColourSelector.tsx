@@ -4,6 +4,30 @@ import { ArrowRight, Star } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import finishData from "@/data/finishes.json";
 
+// Import all available pool coating images
+import blueLagoon from "@/assets/pool-coatings/blue-lagoon.jpg";
+import mediterraneanBlue from "@/assets/pool-coatings/mediterranean-blue.jpg";
+import frenchGrey from "@/assets/pool-coatings/french-grey.jpg";
+import sandyBeach from "@/assets/pool-coatings/sandy-beach.jpg";
+import santorini from "@/assets/pool-coatings/santorini.jpg";
+import pacificBlue from "@/assets/pool-coatings/pacific-blue.jpg";
+import konaCoast from "@/assets/pool-coatings/kona-coast.jpg";
+import tropicalTeal from "@/assets/pool-coatings/tropical-teal.jpg";
+import midnightBlue from "@/assets/pool-coatings/midnight-blue.jpg";
+
+// Map finish IDs to imported images
+const finishImages: Record<string, string> = {
+  "blue-lagoon": blueLagoon,
+  "mediterranean-blue": mediterraneanBlue,
+  "french-grey": frenchGrey,
+  "sandy-beach": sandyBeach,
+  "santorini": santorini,
+  "pacific-blue": pacificBlue,
+  "kona-coast": konaCoast,
+  "tropical-teal": tropicalTeal,
+  "midnight-blue": midnightBlue,
+};
+
 const popularFinishes = ["blue-lagoon", "mediterranean-blue", "french-grey", "sandy-beach", "santorini"];
 
 export default function ColourSelector() {
@@ -12,6 +36,7 @@ export default function ColourSelector() {
 
   const FinishCard = ({ finish }: { finish: typeof finishData.finishes[0] }) => {
     const isPopular = popularFinishes.includes(finish.id);
+    const hasImage = finishImages[finish.id];
 
     return (
       <Link
@@ -24,10 +49,20 @@ export default function ColourSelector() {
             Popular
           </div>
         )}
-        <div
-          className="aspect-square"
-          style={{ backgroundColor: finish.swatchColor }}
-        />
+        {hasImage ? (
+          <div className="aspect-square overflow-hidden">
+            <img
+              src={hasImage}
+              alt={`${finish.finishName} pool finish`}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        ) : (
+          <div
+            className="aspect-square"
+            style={{ backgroundColor: finish.swatchColor }}
+          />
+        )}
         <div className="p-4">
           <div className="flex items-center justify-between gap-2">
             <h3 className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -35,7 +70,13 @@ export default function ColourSelector() {
             </h3>
             <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
           </div>
-          <p className="text-xs text-muted-foreground mt-1">{finish.productLine}</p>
+          <div className="flex items-center gap-2 mt-1">
+            <div
+              className="w-3 h-3 rounded-full border border-border/50"
+              style={{ backgroundColor: finish.swatchColor }}
+            />
+            <p className="text-xs text-muted-foreground">{finish.productLine}</p>
+          </div>
         </div>
       </Link>
     );

@@ -4,6 +4,14 @@ import { ArrowRight, Sun, Shield, Droplets, Leaf, Check, Clock, Palette } from "
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
+// Import hero/featured images
+import blueLagoon from "@/assets/pool-coatings/blue-lagoon.jpg";
+import mediterraneanBlue from "@/assets/pool-coatings/mediterranean-blue.jpg";
+import frenchGrey from "@/assets/pool-coatings/french-grey.jpg";
+import sandyBeach from "@/assets/pool-coatings/sandy-beach.jpg";
+import santorini from "@/assets/pool-coatings/santorini.jpg";
+import pacificBlue from "@/assets/pool-coatings/pacific-blue.jpg";
+
 const benefits = [
   { icon: Sun, text: "UV-stable pigments that won't fade" },
   { icon: Shield, text: "Resistant to salt air corrosion" },
@@ -18,12 +26,28 @@ const comparisons = [
   { feature: "Long-Term Cost", eco: "Lower total", traditional: "Recurring expense" },
 ];
 
+const featuredColours = [
+  { id: "blue-lagoon", image: blueLagoon, name: "Blue Lagoon" },
+  { id: "mediterranean-blue", image: mediterraneanBlue, name: "Mediterranean Blue" },
+  { id: "french-grey", image: frenchGrey, name: "French Grey" },
+  { id: "sandy-beach", image: sandyBeach, name: "Sandy Beach" },
+  { id: "santorini", image: santorini, name: "Santorini" },
+  { id: "pacific-blue", image: pacificBlue, name: "Pacific Blue" },
+];
+
 export default function PoolCoatingsIndex() {
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero Section with Image */}
       <section className="relative bg-canary-dark py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/95 to-canary-dark/80" />
+        <div className="absolute inset-0">
+          <img
+            src={blueLagoon}
+            alt="ECO Finish pool coating"
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/95 to-canary-dark/70" />
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -172,26 +196,58 @@ export default function PoolCoatingsIndex() {
         </div>
       </section>
 
-      {/* Colour Preview */}
-      <section className="py-12 bg-canary-dark">
+      {/* Colour Preview with Real Images */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-center md:text-left">
-              <h3 className="text-xl font-bold text-canary-white mb-1">21+ Colour Options</h3>
-              <p className="text-canary-white/70 text-sm">From vibrant blues to natural sands</p>
-            </div>
-            <div className="flex items-center gap-2">
-              {["#0077B6", "#48CAE4", "#023E8A", "#00B4D8", "#8E9AAF", "#E8D5B7"].map((color) => (
-                <div
-                  key={color}
-                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg shadow-lg hover:scale-110 transition-transform duration-200"
-                  style={{ backgroundColor: color }}
-                />
-              ))}
-            </div>
-            <Button variant="outline" className="border-canary-white/30 text-canary-white hover:bg-canary-white/10" asChild>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-2xl mx-auto mb-12"
+          >
+            <span className="text-primary font-medium">Our Colours</span>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">
+              21+ Water Colours to Choose From
+            </h2>
+            <p className="text-muted-foreground">
+              From vibrant blues to natural sands — find the perfect finish for your pool.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {featuredColours.map((colour, index) => (
+              <motion.div
+                key={colour.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+              >
+                <Link
+                  to={`/pool-coatings/colours/${colour.id}`}
+                  className="group block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src={colour.image}
+                      alt={colour.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="bg-card p-3 text-center">
+                    <p className="text-sm font-medium group-hover:text-primary transition-colors">
+                      {colour.name}
+                    </p>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Button size="lg" asChild>
               <Link to="/pool-coatings/colours">
-                Explore Colours
+                View All 21+ Colours
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
