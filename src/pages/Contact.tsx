@@ -60,23 +60,37 @@ const Contact = () => {
               <form className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Your Name</Label>
-                    <Input id="name" placeholder="John Smith" />
+                    <Label htmlFor="name" className="text-sm font-medium text-gray-700">Your Name</Label>
+                    <Input 
+                      id="name" 
+                      placeholder="John Smith" 
+                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-3 text-base focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all duration-200"
+                    />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" type="tel" placeholder="+34 600 000 000" />
+                    <Label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number</Label>
+                    <Input 
+                      id="phone" 
+                      type="tel" 
+                      placeholder="+34 600 000 000" 
+                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-3 text-base focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all duration-200"
+                    />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" />
+                  <Label htmlFor="email" className="text-sm font-medium text-gray-700">Email Address</Label>
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="john@example.com" 
+                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-3 text-base focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all duration-200"
+                  />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="service">Service Required</Label>
+                  <Label htmlFor="service" className="text-sm font-medium text-gray-700">Service Required</Label>
                   <select
                     id="service"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-base appearance-none cursor-pointer focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all duration-200 bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%236b7280%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_12px_center] bg-no-repeat"
                   >
                     <option value="">Select a service...</option>
                     <option value="drain-detection">Drain Detection</option>
@@ -89,14 +103,19 @@ const Contact = () => {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message">Your Message</Label>
+                  <Label htmlFor="message" className="text-sm font-medium text-gray-700">Your Message</Label>
                   <Textarea
                     id="message"
                     placeholder="Please describe your problem or enquiry..."
                     rows={5}
+                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-3 text-base min-h-[120px] resize-y focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all duration-200"
                   />
                 </div>
-                <Button type="submit" size="lg">
+                <Button 
+                  type="submit" 
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md font-semibold transition-all duration-200"
+                >
                   Send Message
                 </Button>
               </form>
