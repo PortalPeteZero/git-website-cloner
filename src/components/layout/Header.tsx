@@ -46,16 +46,26 @@ const Header = () => {
             <Link to="/contact" className="text-canary-navy font-medium hover:text-primary transition-colors">
               Contact
             </Link>
-            <Link to="/services/water-leak-detection">
-              <Button variant="outline" size="sm">
-                Water Leak Detection
-              </Button>
-            </Link>
-            <Link to="/services/pool-leak-detection">
-              <Button variant="outline" size="sm">
-                Pool Leak Surveys
-              </Button>
-            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm" className="gap-1">
+                  Leak Detection Surveys
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border border-border shadow-lg z-50">
+                <DropdownMenuItem asChild>
+                  <Link to="/services/water-leak-detection" className="cursor-pointer">
+                    Water Leak Detection
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/pool-leak-detection" className="cursor-pointer">
+                    Pool Leak Surveys
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a 
               href="https://leakguardlanzarote.com/" 
               target="_blank" 
@@ -121,16 +131,26 @@ const Header = () => {
                 Contact
               </Link>
               <div className="flex flex-wrap gap-2 pt-2">
-                <Link to="/services/water-leak-detection" onClick={() => setMobileMenuOpen(false)}>
-                  <Button variant="outline" size="sm">
-                    Water Leak Detection
-                  </Button>
-                </Link>
-                <Link to="/services/pool-leak-detection" onClick={() => setMobileMenuOpen(false)}>
-                  <Button variant="outline" size="sm">
-                    Pool Leak Surveys
-                  </Button>
-                </Link>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="outline" size="sm" className="gap-1">
+                      Leak Detection Surveys
+                      <ChevronDown className="h-4 w-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-background border border-border shadow-lg z-50">
+                    <DropdownMenuItem asChild>
+                      <Link to="/services/water-leak-detection" onClick={() => setMobileMenuOpen(false)} className="cursor-pointer">
+                        Water Leak Detection
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link to="/services/pool-leak-detection" onClick={() => setMobileMenuOpen(false)} className="cursor-pointer">
+                        Pool Leak Surveys
+                      </Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
                 <a 
                   href="https://leakguardlanzarote.com/" 
                   target="_blank" 
