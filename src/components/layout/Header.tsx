@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -23,53 +23,82 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-background sticky top-0 z-50 border-b border-border shadow-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
+    <header className="bg-gradient-to-r from-background via-background to-muted/30 sticky top-0 z-50 border-b border-border/50 shadow-md backdrop-blur-sm">
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="flex items-center justify-between py-3 lg:py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center group">
             <img
               src={logo}
               alt="Canary Detect - The Leaky Finders"
-              className="h-20 md:h-24 lg:h-28 w-auto"
+              className="h-16 md:h-20 lg:h-24 w-auto transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
-            <Link to="/services" className="text-canary-navy font-medium hover:text-primary transition-colors">
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
+            {/* Primary Links */}
+            <Link 
+              to="/services" 
+              className="relative px-4 py-2 text-canary-navy font-semibold text-sm hover:text-primary transition-all duration-300 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+            >
               Services
             </Link>
-            <Link to="/contact" className="text-canary-navy font-medium hover:text-primary transition-colors">
+            <Link 
+              to="/contact" 
+              className="relative px-4 py-2 text-canary-navy font-semibold text-sm hover:text-primary transition-all duration-300 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+            >
               Contact
             </Link>
+
+            {/* Divider */}
+            <div className="h-8 w-px bg-border mx-2" />
+
+            {/* Leak Detection Surveys Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-1">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="gap-1.5 border-2 border-primary/30 bg-primary/5 text-canary-navy font-semibold hover:border-primary hover:bg-primary/10 hover:text-primary transition-all duration-300 shadow-sm hover:shadow-md"
+                >
                   Leak Detection Surveys
-                  <ChevronDown className="h-4 w-4" />
+                  <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border border-border shadow-lg z-50">
+              <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-2 border-primary/20 shadow-xl rounded-lg p-1 z-50">
                 <DropdownMenuItem asChild>
-                  <Link to="/services/water-leak-detection" className="cursor-pointer">
+                  <Link 
+                    to="/services/water-leak-detection" 
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                  >
                     Water Leak Detection
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/services/pool-leak-detection" className="cursor-pointer">
+                  <Link 
+                    to="/services/pool-leak-detection" 
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                  >
                     Pool Leak Surveys
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+
+            {/* External Links */}
             <a 
               href="https://leakguardlanzarote.com/" 
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Button variant="outline" size="sm">
-                Water Leak Monitoring & Alarm
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="gap-1.5 border-2 border-secondary/30 bg-secondary/5 text-canary-navy font-semibold hover:border-secondary hover:bg-secondary/10 hover:text-secondary transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                Water Leak Monitoring
+                <ExternalLink className="h-3 w-3 opacity-60" />
               </Button>
             </a>
             <a 
@@ -77,10 +106,17 @@ const Header = () => {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Button variant="outline" size="sm">
-                Try Our Spot The Leak Game
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="gap-1.5 border-2 border-canary-navy/20 bg-canary-navy/5 text-canary-navy font-semibold hover:border-canary-navy/40 hover:bg-canary-navy/10 transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                Spot The Leak Game
+                <ExternalLink className="h-3 w-3 opacity-60" />
               </Button>
             </a>
+
+            {/* Pool Coatings CTA - Premium styling */}
             <a 
               href="https://canary-detect-coatings.es/" 
               target="_blank" 
@@ -88,16 +124,20 @@ const Header = () => {
             >
               <Button 
                 size="sm"
-                className="bg-gradient-to-r from-primary via-orange-500 to-primary bg-[length:200%_100%] hover:bg-[position:100%_0] text-white font-semibold shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:scale-105 transition-all duration-300 border-0"
+                className="relative overflow-hidden bg-gradient-to-r from-primary to-[hsl(25,93%,50%)] text-white font-bold shadow-lg shadow-primary/40 hover:shadow-xl hover:shadow-primary/50 hover:scale-105 transition-all duration-300 border-0 px-5"
               >
-                Pool Coatings
+                <span className="relative z-10 flex items-center gap-1.5">
+                  Pool Coatings
+                  <ExternalLink className="h-3 w-3" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[hsl(25,93%,45%)] to-primary opacity-0 hover:opacity-100 transition-opacity duration-300" />
               </Button>
             </a>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-canary-navy"
+            className="lg:hidden p-2.5 text-canary-navy hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -107,74 +147,110 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="lg:hidden pb-4 border-t border-border pt-4 animate-fade-in">
-            <div className="flex flex-col gap-4">
+          <nav className="lg:hidden pb-6 border-t border-border/50 pt-4 animate-fade-in">
+            <div className="flex flex-col gap-3">
+              {/* Primary Links */}
               <Link 
                 to="/services" 
-                className="text-canary-navy font-medium hover:text-primary transition-colors"
+                className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link 
                 to="/contact" 
-                className="text-canary-navy font-medium hover:text-primary transition-colors"
+                className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </Link>
-              <div className="flex flex-wrap gap-2 pt-2">
+
+              <div className="h-px bg-border my-2" />
+
+              {/* Buttons */}
+              <div className="flex flex-col gap-3 px-2">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="outline" size="sm" className="gap-1">
+                    <Button 
+                      variant="outline" 
+                      size="default"
+                      className="w-full justify-between gap-1.5 border-2 border-primary/30 bg-primary/5 text-canary-navy font-semibold hover:border-primary hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                    >
                       Leak Detection Surveys
                       <ChevronDown className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-background border border-border shadow-lg z-50">
+                  <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-2 border-primary/20 shadow-xl rounded-lg p-1 z-50 w-[200px]">
                     <DropdownMenuItem asChild>
-                      <Link to="/services/water-leak-detection" onClick={() => setMobileMenuOpen(false)} className="cursor-pointer">
+                      <Link 
+                        to="/services/water-leak-detection" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
+                      >
                         Water Leak Detection
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                      <Link to="/services/pool-leak-detection" onClick={() => setMobileMenuOpen(false)} className="cursor-pointer">
+                      <Link 
+                        to="/services/pool-leak-detection" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
+                      >
                         Pool Leak Surveys
                       </Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
+
                 <a 
                   href="https://leakguardlanzarote.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
+                  className="w-full"
                 >
-                  <Button variant="outline" size="sm">
-                    Water Leak Monitoring & Alarm
+                  <Button 
+                    variant="outline" 
+                    size="default"
+                    className="w-full justify-center gap-1.5 border-2 border-secondary/30 bg-secondary/5 text-canary-navy font-semibold hover:border-secondary hover:bg-secondary/10 hover:text-secondary transition-all duration-300"
+                  >
+                    Water Leak Monitoring
+                    <ExternalLink className="h-3 w-3 opacity-60" />
                   </Button>
                 </a>
+
                 <a 
                   href="https://leak-detective.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
+                  className="w-full"
                 >
-                  <Button variant="outline" size="sm">
-                    Try Our Spot The Leak Game
+                  <Button 
+                    variant="outline" 
+                    size="default"
+                    className="w-full justify-center gap-1.5 border-2 border-canary-navy/20 bg-canary-navy/5 text-canary-navy font-semibold hover:border-canary-navy/40 hover:bg-canary-navy/10 transition-all duration-300"
+                  >
+                    Spot The Leak Game
+                    <ExternalLink className="h-3 w-3 opacity-60" />
                   </Button>
                 </a>
+
                 <a 
                   href="https://canary-detect-coatings.es/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
+                  className="w-full"
                 >
                   <Button 
-                    size="sm"
-                    className="bg-gradient-to-r from-primary via-orange-500 to-primary bg-[length:200%_100%] hover:bg-[position:100%_0] text-white font-semibold shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:scale-105 transition-all duration-300 border-0"
+                    size="default"
+                    className="w-full justify-center relative overflow-hidden bg-gradient-to-r from-primary to-[hsl(25,93%,50%)] text-white font-bold shadow-lg shadow-primary/40 hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 border-0"
                   >
-                    Pool Coatings
+                    <span className="flex items-center gap-1.5">
+                      Pool Coatings
+                      <ExternalLink className="h-3 w-3" />
+                    </span>
                   </Button>
                 </a>
               </div>
