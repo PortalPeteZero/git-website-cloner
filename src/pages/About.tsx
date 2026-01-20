@@ -34,7 +34,7 @@ const About = () => {
               Lanzarote's Leading <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Leak Detection Experts</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
-              Canary Detect is a professional leak detection company serving Lanzarote. 
+              Canary Detect - "The Leaky Finders" - is a professional leak detection company serving Lanzarote. 
               With years of experience and the latest technology, we help property owners find and fix leaks quickly.
             </p>
           </motion.div>
@@ -43,7 +43,7 @@ const About = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-20 md:py-28 bg-background section-noise">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -90,7 +90,7 @@ const About = () => {
       </section>
 
       {/* Our Guarantees */}
-      <section className="py-20 md:py-28 bg-canary-dark">
+      <section className="py-20 md:py-28 bg-canary-dark section-pattern-dark">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -159,7 +159,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 md:py-28 bg-muted">
+      <section className="py-20 md:py-28 bg-muted section-pattern">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -226,7 +226,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-primary">
+      <section className="py-20 md:py-28 bg-primary section-stripes-orange">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

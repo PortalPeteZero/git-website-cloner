@@ -56,6 +56,16 @@ const Header = () => {
           <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
             {/* Primary Links */}
             <Link 
+              to="/" 
+              className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
+                isActive("/") 
+                  ? "text-primary after:w-full" 
+                  : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
+              } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
+            >
+              Home
+            </Link>
+            <Link 
               to="/services" 
               className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
                 isServicesActive 
@@ -175,6 +185,13 @@ const Header = () => {
           <nav className="lg:hidden pb-6 border-t border-border/50 pt-4 animate-fade-in">
             <div className="flex flex-col gap-3">
               {/* Primary Links */}
+              <Link 
+                to="/" 
+                className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
               <Link 
                 to="/services" 
                 className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
