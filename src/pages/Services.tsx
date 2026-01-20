@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Droplets, Search, Cable, Waves, CircleDot, Wrench } from "lucide-react";
 import ServiceCard from "@/components/home/ServiceCard";
+import SEOHead from "@/components/seo/SEOHead";
 
 // Import service hero images
 import drainDetectionImg from "@/assets/services/drain-detection.jpg";
@@ -71,6 +72,12 @@ const services = [
 const Services = () => {
   return (
     <Layout>
+      <SEOHead 
+        title="Leak Detection Services Lanzarote | Water, Pool & Pipe Detection | Canary Detect"
+        description="Professional leak detection services in Lanzarote. Water leak detection, pool leak detection, underground pipe detection, CCTV drain surveys & leak repair. Accurate leak detection with €80,000+ equipment."
+        keywords="leak detection service Lanzarote, professional leak detection, water pipe leak detection, swimming pool leak detection, underground water leak detection, pool pipe leak repair, water pipe leak repair, leak detection and repair, accurate leak detection, leak detection company Lanzarote"
+        canonical="https://canary-detect.com/services"
+      />
       {/* Hero Section with Background Image */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -91,11 +98,12 @@ const Services = () => {
           >
             <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">Our Services</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight">
-              Professional Leak Detection <span className="text-primary">Services</span>
+              Leak Detection Services <span className="text-primary">Lanzarote</span>
             </h1>
             <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-2xl">
-              We offer a comprehensive range of leak detection and repair services across Lanzarote, 
-              using the latest technology and equipment to find and fix leaks quickly and efficiently.
+              Professional leak detection and repair services across Lanzarote and the Canary Islands. 
+              We use €80,000+ of specialist equipment including thermal imaging, acoustic sensors 
+              and tracer gas to find water leaks, pool leaks and underground pipe leaks with centimetre accuracy.
             </p>
           </motion.div>
         </div>
