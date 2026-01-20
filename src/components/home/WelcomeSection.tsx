@@ -53,9 +53,9 @@ const WelcomeSection = () => {
               ))}
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <Button className="bg-primary hover:bg-primary/90 text-white font-semibold" asChild>
-                <Link to="/about">About Us</Link>
+                <Link to="/technology">See Our Technology & The Canary Detect Difference</Link>
               </Button>
               <Button variant="outline" className="border-canary-navy text-canary-navy hover:bg-canary-navy hover:text-white" asChild>
                 <Link to="/contact">Contact Us</Link>
