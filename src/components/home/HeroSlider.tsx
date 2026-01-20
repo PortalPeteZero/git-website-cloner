@@ -57,15 +57,15 @@ const HeroSlider = () => {
   const slide = heroSlides[currentSlide];
 
   return (
-    <section className="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
+    <section className="relative h-[550px] md:h-[650px] lg:h-[750px] overflow-hidden">
       {/* Background Images with Carousel */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 1 }}
           className="absolute inset-0"
         >
           <img 
@@ -76,53 +76,70 @@ const HeroSlider = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Navy overlay - stronger on left, fading to right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-canary-navy via-canary-navy/80 to-canary-navy/20" />
+      {/* Refined gradient overlay - less dark, more visible image */}
+      <div className="absolute inset-0 bg-gradient-to-r from-canary-navy/95 via-canary-navy/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-canary-navy/40 via-transparent to-transparent" />
 
       {/* Content */}
       <div className="relative h-full flex items-center">
         <div className="container mx-auto px-4">
-          <div className="max-w-xl">
+          <div className="max-w-2xl">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               >
-                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                <motion.span 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4"
+                >
+                  Professional Leak Detection
+                </motion.span>
+                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-[1.1]">
                   {slide.title}
                   <br />
-                  {slide.subtitle}
+                  <span className="text-primary">{slide.subtitle}</span>
                 </h1>
-                <p className="text-white/90 text-lg md:text-xl mb-8 leading-relaxed">
+                <p className="text-white/90 text-lg md:text-xl mb-10 leading-relaxed max-w-xl">
                   {slide.description}
                 </p>
               </motion.div>
             </AnimatePresence>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold px-8" asChild>
-              <Link to="/contact">Get a Quote</Link>
-            </Button>
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all" asChild>
+                <Link to="/contact">Get a Free Quote</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg backdrop-blur-sm" asChild>
+                <Link to="/services">Our Services</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Slide Indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+      {/* Slide Indicators - Enhanced */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
         {heroSlides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentSlide(idx)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`h-2 rounded-full transition-all duration-500 ${
               idx === currentSlide 
-                ? "bg-primary w-8" 
-                : "bg-white/50 hover:bg-white/80"
+                ? "bg-primary w-12" 
+                : "bg-white/40 w-2 hover:bg-white/70"
             }`}
             aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
       </div>
+
+      {/* Decorative element */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

@@ -75,31 +75,34 @@ const CaseStudies = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-canary-dark py-16 md:py-24 overflow-hidden">
+      <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={titleBg} 
             alt=""
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/90 to-canary-dark/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-canary-navy/90 via-canary-navy/70 to-canary-navy/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-canary-navy/60 via-transparent to-transparent" />
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="text-primary font-medium">Our Work</span>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-canary-white mt-2 mb-6">
-              Case Studies
+            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">Our Work</span>
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight">
+              Case <span className="text-primary">Studies</span>
             </h1>
-            <p className="text-canary-white/80 text-lg leading-relaxed">
+            <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-2xl">
               See examples of our leak detection work across Lanzarote. 
               From hotel pools to residential villas, we've helped hundreds of clients solve their leak problems.
             </p>
           </motion.div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
       </section>
 
       {/* Case Studies Grid */}
