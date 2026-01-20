@@ -182,6 +182,201 @@ const locationsData: Record<string, LocationData> = {
       description: "Professional leak detection Costa Teguise. Water leak detection for apartments, villas & community pools. Expert service for shared buildings. Call +34 711 051 071",
       keywords: "leak detection Costa Teguise, water leak detection Costa Teguise, pool leak detection Costa Teguise, apartment leak detection Lanzarote, community pool leak Costa Teguise"
     }
+  },
+  "yaiza": {
+    name: "Yaiza",
+    slug: "yaiza",
+    description: "Professional leak detection services in Yaiza, one of Lanzarote's most picturesque municipalities.",
+    heroText: "Yaiza's luxury villas, rural fincas and traditional properties deserve expert leak detection. We provide specialist services throughout this beautiful municipality.",
+    areaDescription: "Yaiza municipality covers the southwest of Lanzarote including Playa Blanca, El Golfo, and the stunning Timanfaya National Park area. The region features many high-end properties with complex water systems and swimming pools. Our proximity to Yaiza (we're based in Playa Blanca) means fast response times and local knowledge of building styles and common plumbing issues in the area.",
+    nearbyAreas: ["Playa Blanca", "El Golfo", "Femés", "Uga", "Las Breñas"],
+    services: [
+      {
+        title: "Water Leak Detection Yaiza",
+        description: "Expert water leak detection for Yaiza's luxury villas and rural fincas. Thermal imaging and acoustic detection for hidden leaks.",
+        href: "/services/water-leak-detection",
+        icon: Droplets
+      },
+      {
+        title: "Pool Leak Detection Yaiza",
+        description: "Swimming pool leak detection for Yaiza's many private pools. Complete pinpointing service with professional reports.",
+        href: "/services/pool-leak-detection",
+        icon: Waves
+      },
+      {
+        title: "Underground Detection Yaiza",
+        description: "Underground pipe and utility detection for rural properties in Yaiza. Essential for construction and landscaping projects.",
+        href: "/services/underground-detection",
+        icon: Search
+      },
+      {
+        title: "Leak Repair Yaiza",
+        description: "Professional leak repair service throughout Yaiza municipality. Water pipes, pool systems and underground repairs.",
+        href: "/services/leak-repair",
+        icon: Wrench
+      }
+    ],
+    seo: {
+      title: "Leak Detection Yaiza | Villa & Finca Leak Detection | Canary Detect",
+      description: "Professional leak detection Yaiza. Water leak detection for luxury villas, fincas & rural properties. Pool leak detection. Fast local service. Call +34 711 051 071",
+      keywords: "leak detection Yaiza, water leak detection Yaiza, pool leak detection Yaiza, villa leak detection Lanzarote, finca leak repair Yaiza"
+    }
+  },
+  "tias": {
+    name: "Tías",
+    slug: "tias",
+    description: "Expert leak detection services in Tías, serving one of Lanzarote's fastest-growing municipalities.",
+    heroText: "Tías municipality, home to Puerto del Carmen, needs reliable leak detection services. We serve residential, commercial and tourist properties throughout the area.",
+    areaDescription: "Tías is one of Lanzarote's most populous municipalities, encompassing Puerto del Carmen and surrounding residential areas. The mix of older Spanish properties and newer tourist developments means varied plumbing systems and different types of leak challenges. Our multi-technology approach is ideal for accurately locating leaks in any property type.",
+    nearbyAreas: ["Puerto del Carmen", "Mácher", "La Asomada", "Conil", "Arrecife"],
+    services: [
+      {
+        title: "Water Leak Detection Tías",
+        description: "Professional water leak detection throughout Tías. Serving residential properties and holiday rentals with non-invasive detection methods.",
+        href: "/services/water-leak-detection",
+        icon: Droplets
+      },
+      {
+        title: "Pool Leak Detection Tías",
+        description: "Pool leak detection for Tías properties. Expert service for private pools and community swimming pools.",
+        href: "/services/pool-leak-detection",
+        icon: Waves
+      },
+      {
+        title: "Drain Detection Tías",
+        description: "CCTV drain surveys and pipe inspection in Tías. Identify blockages, damage and drainage issues quickly.",
+        href: "/services/drain-detection",
+        icon: Search
+      },
+      {
+        title: "Leak Repair Tías",
+        description: "Complete leak repair services in Tías. From detection through to professional repair of all leak types.",
+        href: "/services/leak-repair",
+        icon: Wrench
+      }
+    ],
+    seo: {
+      title: "Leak Detection Tías | Water & Pool Leak Detection | Canary Detect",
+      description: "Professional leak detection Tías. Water leak detection, pool leak detection & drain surveys. Serving Tías and Puerto del Carmen. No Find No Fee. Call +34 711 051 071",
+      keywords: "leak detection Tías, water leak detection Tías, pool leak detection Tías, plumber Tías Lanzarote, leak repair Tías"
+    }
+  },
+  "playa-honda": {
+    name: "Playa Honda",
+    slug: "playa-honda",
+    description: "Professional leak detection in Playa Honda, Lanzarote's second-largest town.",
+    heroText: "Playa Honda's residential properties and commercial buildings need reliable leak detection. We provide fast, professional service to this growing community.",
+    areaDescription: "Playa Honda is Lanzarote's second-largest population centre, located between Arrecife and the airport. The town has a mix of apartment blocks, townhouses and commercial properties. Many buildings date from the 1980s and 90s, meaning aging pipework is common. Our leak detection technology can pinpoint leaks in these older systems without unnecessary excavation.",
+    nearbyAreas: ["Arrecife", "San Bartolomé", "Tías", "Puerto del Carmen"],
+    services: [
+      {
+        title: "Water Leak Detection Playa Honda",
+        description: "Water leak detection for Playa Honda apartments and houses. Non-invasive methods ideal for shared buildings and community properties.",
+        href: "/services/water-leak-detection",
+        icon: Droplets
+      },
+      {
+        title: "Pool Leak Detection Playa Honda",
+        description: "Community pool and private pool leak detection in Playa Honda. Professional reports for property managers.",
+        href: "/services/pool-leak-detection",
+        icon: Waves
+      },
+      {
+        title: "Pipe Inspection Playa Honda",
+        description: "CCTV pipe inspection for Playa Honda properties. Assess aging pipework condition before problems escalate.",
+        href: "/services/pipe-inspection",
+        icon: Search
+      },
+      {
+        title: "Leak Repair Playa Honda",
+        description: "Professional leak repair in Playa Honda. Water pipes, drains and underground systems.",
+        href: "/services/leak-repair",
+        icon: Wrench
+      }
+    ],
+    seo: {
+      title: "Leak Detection Playa Honda | Apartment & House Leak Detection | Canary Detect",
+      description: "Professional leak detection Playa Honda. Water leak detection for apartments, houses & community buildings. Fast response. No Find No Fee. Call +34 711 051 071",
+      keywords: "leak detection Playa Honda, water leak detection Playa Honda, pool leak detection Playa Honda, plumber Playa Honda, apartment leak Playa Honda"
+    }
+  },
+  "san-bartolome": {
+    name: "San Bartolomé",
+    slug: "san-bartolome",
+    description: "Expert leak detection services in San Bartolomé, in the heart of Lanzarote.",
+    heroText: "San Bartolomé's residential properties and rural fincas need specialist leak detection. We provide professional services throughout this central municipality.",
+    areaDescription: "San Bartolomé sits at the geographic centre of Lanzarote, making it easily accessible from our base. The municipality includes traditional villages and rural properties as well as more modern developments. Underground water supply systems are common in rural areas, requiring specialist detection equipment to locate leaks accurately.",
+    nearbyAreas: ["Arrecife", "Playa Honda", "Tías", "Teguise", "Mozaga"],
+    services: [
+      {
+        title: "Water Leak Detection San Bartolomé",
+        description: "Water leak detection for San Bartolomé properties. Specialist service for both village houses and rural fincas.",
+        href: "/services/water-leak-detection",
+        icon: Droplets
+      },
+      {
+        title: "Underground Detection San Bartolomé",
+        description: "Underground pipe detection for San Bartolomé's rural properties. Locate buried pipes before excavation work.",
+        href: "/services/underground-detection",
+        icon: Search
+      },
+      {
+        title: "Pool Leak Detection San Bartolomé",
+        description: "Pool leak detection for private pools in San Bartolomé. Complete survey with leak pinpointing.",
+        href: "/services/pool-leak-detection",
+        icon: Waves
+      },
+      {
+        title: "Leak Repair San Bartolomé",
+        description: "Professional leak repair throughout San Bartolomé. Water pipes, underground systems and pool repairs.",
+        href: "/services/leak-repair",
+        icon: Wrench
+      }
+    ],
+    seo: {
+      title: "Leak Detection San Bartolomé | Rural & Village Leak Detection | Canary Detect",
+      description: "Professional leak detection San Bartolomé. Water leak detection for village houses, fincas & rural properties. Underground pipe detection. Call +34 711 051 071",
+      keywords: "leak detection San Bartolomé, water leak detection San Bartolomé, underground leak detection San Bartolomé, rural leak detection Lanzarote"
+    }
+  },
+  "teguise": {
+    name: "Teguise",
+    slug: "teguise",
+    description: "Professional leak detection in Teguise, Lanzarote's historic former capital.",
+    heroText: "Teguise's historic buildings and surrounding villages need specialist leak detection. We provide expert services for traditional properties and modern developments alike.",
+    areaDescription: "Teguise is Lanzarote's largest municipality by area, stretching from Costa Teguise on the coast to the historic town of Teguise inland. The area includes traditional Canarian architecture, rural fincas, and modern coastal developments. Historic properties often have complex or unusual plumbing systems that require careful, non-invasive leak detection methods.",
+    nearbyAreas: ["Costa Teguise", "Tahiche", "Guatiza", "Haría", "Arrecife"],
+    services: [
+      {
+        title: "Water Leak Detection Teguise",
+        description: "Specialist water leak detection for Teguise's historic properties and modern homes. Non-invasive methods protect valuable buildings.",
+        href: "/services/water-leak-detection",
+        icon: Droplets
+      },
+      {
+        title: "Pool Leak Detection Teguise",
+        description: "Pool leak detection for Teguise municipality. Serving rural villas and Costa Teguise developments.",
+        href: "/services/pool-leak-detection",
+        icon: Waves
+      },
+      {
+        title: "Drain Detection Teguise",
+        description: "CCTV drain surveys for Teguise properties. Essential for older buildings with unknown drainage layouts.",
+        href: "/services/drain-detection",
+        icon: Search
+      },
+      {
+        title: "Leak Repair Teguise",
+        description: "Professional leak repair in Teguise. Sympathetic repairs for historic properties and modern solutions for new builds.",
+        href: "/services/leak-repair",
+        icon: Wrench
+      }
+    ],
+    seo: {
+      title: "Leak Detection Teguise | Historic & Rural Property Leak Detection | Canary Detect",
+      description: "Professional leak detection Teguise. Specialist service for historic buildings, rural fincas & coastal properties. Non-invasive methods. Call +34 711 051 071",
+      keywords: "leak detection Teguise, water leak detection Teguise, historic building leak detection Lanzarote, rural leak detection Teguise, Costa Teguise leak detection"
+    }
   }
 };
 
