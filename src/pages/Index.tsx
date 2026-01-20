@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import HeroSlider from "@/components/home/HeroSlider";
 import WelcomeSection from "@/components/home/WelcomeSection";
+import TrustBadgesSection from "@/components/home/TrustBadgesSection";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import TechnologySection from "@/components/home/TechnologySection";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
@@ -20,6 +21,7 @@ const Index = () => {
       />
       <HeroSlider />
       <WelcomeSection />
+      <TrustBadgesSection />
       <ServicesGrid />
       <TechnologySection />
       <HowItWorksSection />

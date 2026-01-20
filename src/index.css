@@ -109,6 +109,8 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
@@ -118,7 +120,32 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
-    @apply font-bold;
+    @apply font-bold tracking-tight;
+  }
+
+  /* Refined typography */
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl leading-tight;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl leading-tight;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl leading-snug;
+  }
+
+  p {
+    @apply leading-relaxed;
+    max-width: 65ch;
+  }
+
+  /* Improved focus styles for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
   }
 }
 
@@ -164,6 +191,31 @@
   .image-zoom:hover {
     @apply scale-105;
   }
+
+  /* Section with subtle pattern */
+  .section-pattern {
+    position: relative;
+  }
+
+  .section-pattern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  /* Dark section pattern */
+  .section-pattern-dark::before {
+    opacity: 0.02;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Touch target minimum size for mobile */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
 }
 
 /* Reduced motion preferences */
@@ -176,5 +228,23 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  /* Larger touch targets on mobile */
+  button, a, input, select, textarea {
+    min-height: 44px;
+  }
+
+  /* Prevent zoom on input focus (iOS) */
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  /* Reduce animation complexity on mobile */
+  .card-hover:hover {
+    transform: none;
   }
 }
