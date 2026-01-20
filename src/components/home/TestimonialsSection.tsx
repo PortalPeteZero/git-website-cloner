@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, MapPin } from "lucide-react";
 
 const testimonials = [
   {
@@ -8,6 +8,7 @@ const testimonials = [
     location: "Puerto del Carmen",
     text: "Canary Detect found a leak in our pool that we'd been searching for months. Professional, fast, and saved us thousands in water bills. Highly recommended!",
     rating: 5,
+    initials: "MG",
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ const testimonials = [
     location: "Playa Blanca",
     text: "Excellent service! They located a hidden pipe leak under our villa floor without any damage. The thermal imaging technology is impressive.",
     rating: 5,
+    initials: "JM",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const testimonials = [
     location: "Arrecife",
     text: "Very professional team. They helped us map all underground utilities before our construction project. Saved us from costly mistakes.",
     rating: 5,
+    initials: "CR",
   },
   {
     id: 4,
@@ -29,12 +32,13 @@ const testimonials = [
     location: "Costa Teguise",
     text: "After months of unexplained damp, Canary Detect found the leak in just a few hours. Great communication and fair pricing.",
     rating: 5,
+    initials: "ST",
   },
 ];
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-background to-muted/50">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +58,7 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
@@ -62,28 +66,53 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-card rounded-lg p-6 border border-border shadow-sm hover:shadow-md transition-shadow relative"
+              className="group relative bg-card rounded-2xl p-8 border-t-4 border-t-primary border-x border-b border-border shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <Quote className="h-8 w-8 text-primary/20 absolute top-4 right-4" />
-              
-              <div className="flex gap-1 mb-4">
+              {/* Large decorative quote */}
+              <div className="absolute top-6 right-6">
+                <Quote className="h-12 w-12 text-primary/10 group-hover:text-primary/20 transition-colors" />
+              </div>
+
+              {/* Animated Stars */}
+              <div className="flex gap-1.5 mb-5">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
+                  <motion.div
                     key={i}
-                    className="h-4 w-4 fill-primary text-primary"
-                  />
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 + i * 0.05 }}
+                  >
+                    <Star
+                      className="h-5 w-5 fill-primary text-primary drop-shadow-sm"
+                    />
+                  </motion.div>
                 ))}
               </div>
 
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                "{testimonial.text}"
-              </p>
+              {/* Quote Text */}
+              <blockquote className="text-foreground text-lg leading-relaxed mb-6 italic relative">
+                <span className="text-primary text-2xl font-serif absolute -left-2 -top-2">"</span>
+                {testimonial.text}
+                <span className="text-primary text-2xl font-serif">"</span>
+              </blockquote>
 
-              <div className="border-t border-border pt-4">
-                <p className="font-heading font-bold text-foreground">
-                  {testimonial.name}
-                </p>
-                <p className="text-xs text-primary">{testimonial.location}</p>
+              {/* Customer Info */}
+              <div className="flex items-center gap-4 pt-5 border-t border-border/50">
+                {/* Avatar */}
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-[hsl(25,93%,45%)] flex items-center justify-center shadow-md">
+                  <span className="text-white font-bold text-sm">{testimonial.initials}</span>
+                </div>
+                
+                <div className="flex-1">
+                  <p className="font-heading font-bold text-foreground">
+                    {testimonial.name}
+                  </p>
+                  <div className="flex items-center gap-1.5 text-primary text-sm">
+                    <MapPin className="h-3.5 w-3.5" />
+                    <span>{testimonial.location}</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}

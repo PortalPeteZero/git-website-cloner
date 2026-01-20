@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Atom, AudioLines, Thermometer, Mic, Video, CheckCircle, AlertCircle } from "lucide-react";
+import { Atom, AudioLines, Thermometer, Mic, Video, CheckCircle, AlertCircle, Sparkles } from "lucide-react";
 import photo4 from "@/assets/gallery/photo-4.jpg";
 
 const technologies = [
@@ -15,6 +15,7 @@ const technologies = [
     bestFor: "Particularly effective for locating leaks in buried pipework.",
     limitations:
       "Gas travels through the path of least resistance. If a leak is underneath concrete but there is softer ground nearby, the highest reading may appear in the softer area. We account for this when interpreting results.",
+    color: "from-violet-500 to-purple-600",
   },
   {
     name: "Geophone",
@@ -25,6 +26,7 @@ const technologies = [
     bestFor: "Works best on hard surfaces where sound travels clearly.",
     limitations:
       "Background noise from traffic, machinery, or other water sources can interfere. Sound can also travel along the pipe, meaning the loudest surface point may not be directly above the leak.",
+    color: "from-blue-500 to-cyan-600",
   },
   {
     name: "Infrared Thermal Imaging",
@@ -35,6 +37,7 @@ const technologies = [
     bestFor: "Excellent for detecting leaks behind walls, under floors, and where water has spread from the original leak point.",
     limitations:
       "Other heat sources such as underfloor heating, sun exposure, or electrical equipment can affect readings and must be accounted for.",
+    color: "from-red-500 to-orange-600",
   },
   {
     name: "Pipe Mic",
@@ -45,6 +48,7 @@ const technologies = [
     bestFor: "The most precise method available - centimetre accuracy for pinpointing leaks.",
     limitations:
       "We need clear access into the pipe. This can be blocked by 90-degree bends, debris, or pipework that is too narrow for the equipment.",
+    color: "from-emerald-500 to-teal-600",
   },
   {
     name: "Internal CCTV Inspection",
@@ -55,6 +59,7 @@ const technologies = [
     bestFor: "Reveals the true layout of pipework including T-junctions and hidden branches. Identifies cracks, corrosion, joint failures, and root intrusion.",
     limitations:
       "Access can be limited by narrow pipes, sharp 90-degree bends, T-junctions, debris, or standing water.",
+    color: "from-amber-500 to-yellow-600",
   },
 ];
 
@@ -90,34 +95,37 @@ const Technology = () => {
       </section>
 
       {/* Equipment Value */}
-      <section className="py-12 bg-primary">
+      <section className="py-12 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)]">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8"
           >
-            <p className="text-primary-foreground text-lg md:text-xl font-medium">
-              Canary Detect carries over{" "}
-              <span className="font-heading font-bold text-2xl md:text-3xl">€80,000</span>{" "}
-              worth of the latest leak detection equipment
-            </p>
-            <p className="text-primary-foreground/80 mt-2">
-              Delivering centimetre accuracy and keeping repair costs to an absolute minimum
-            </p>
+            <Sparkles className="h-10 w-10 text-white/80" />
+            <div>
+              <p className="text-primary-foreground text-lg md:text-xl font-medium">
+                Canary Detect carries over{" "}
+                <span className="font-heading font-bold text-2xl md:text-3xl">€80,000</span>{" "}
+                worth of the latest leak detection equipment
+              </p>
+              <p className="text-primary-foreground/80 mt-2">
+                Delivering centimetre accuracy and keeping repair costs to an absolute minimum
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Technologies Detail */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-2xl mx-auto mb-12"
+            className="text-center max-w-2xl mx-auto mb-16"
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
               Our Detection Methods
@@ -128,57 +136,61 @@ const Technology = () => {
             </p>
           </motion.div>
 
-          <div className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card border border-border rounded-xl overflow-hidden"
+                className="group bg-card border border-border rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500"
               >
-                <div className="grid md:grid-cols-3 gap-0">
-                  {/* Left: Title & Icon */}
-                  <div className="bg-muted p-6 md:p-8 flex flex-col justify-center">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center">
-                        <tech.icon className="h-7 w-7 text-primary-foreground" />
-                      </div>
-                      <div>
-                        <h3 className="font-heading font-bold text-xl">{tech.name}</h3>
-                        <p className="text-primary text-sm font-medium">{tech.subtitle}</p>
-                      </div>
+                {/* Header with Icon */}
+                <div className="p-8 pb-6">
+                  <div className="flex items-start gap-5">
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${tech.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <tech.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-bold text-2xl text-foreground group-hover:text-primary transition-colors">
+                        {tech.name}
+                      </h3>
+                      <p className="text-primary text-sm font-semibold uppercase tracking-wide mt-1">
+                        {tech.subtitle}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-muted-foreground leading-relaxed mt-5">
+                    {tech.description}
+                  </p>
+                </div>
+
+                {/* Best For & Limitations */}
+                <div className="grid sm:grid-cols-2 gap-4 p-8 pt-0">
+                  <div className="bg-green-500/5 border-l-4 border-green-500 rounded-r-lg p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CheckCircle className="h-4 w-4 text-green-600" />
+                      <span className="font-heading font-bold text-xs uppercase tracking-wide text-green-700">
+                        Best For
+                      </span>
                     </div>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      {tech.description}
+                      {tech.bestFor}
                     </p>
                   </div>
-
-                  {/* Right: Best For & Limitations */}
-                  <div className="md:col-span-2 p-6 md:p-8 grid md:grid-cols-2 gap-6">
-                    <div>
-                      <div className="flex items-center gap-2 mb-3">
-                        <CheckCircle className="h-5 w-5 text-green-600" />
-                        <h4 className="font-heading font-bold text-sm uppercase tracking-wide">
-                          Best For
-                        </h4>
-                      </div>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {tech.bestFor}
-                      </p>
+                  
+                  <div className="bg-amber-500/5 border-l-4 border-amber-500 rounded-r-lg p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <AlertCircle className="h-4 w-4 text-amber-600" />
+                      <span className="font-heading font-bold text-xs uppercase tracking-wide text-amber-700">
+                        Limitations
+                      </span>
                     </div>
-                    <div>
-                      <div className="flex items-center gap-2 mb-3">
-                        <AlertCircle className="h-5 w-5 text-amber-600" />
-                        <h4 className="font-heading font-bold text-sm uppercase tracking-wide">
-                          Limitations
-                        </h4>
-                      </div>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {tech.limitations}
-                      </p>
-                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {tech.limitations}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -233,13 +245,13 @@ const Technology = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-card border border-border rounded-xl p-8"
+              className="bg-card border border-border rounded-2xl p-8 shadow-lg"
             >
               <h3 className="font-heading font-bold text-xl mb-6 text-center">
                 Our Guarantee
               </h3>
               <div className="space-y-6">
-                <div className="text-center p-6 bg-primary/5 rounded-lg border border-primary/20">
+                <div className="text-center p-6 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20">
                   <p className="font-heading font-bold text-2xl text-primary mb-2">
                     No Find, No Fee
                   </p>
@@ -248,14 +260,14 @@ const Technology = () => {
                     This has never happened so far.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-muted rounded-lg">
+                <div className="text-center p-6 bg-muted rounded-xl">
                   <p className="font-heading font-bold text-xl mb-2">Fixed Fee Policy</p>
                   <p className="text-muted-foreground text-sm">
                     We don't charge extra if the survey takes longer than expected. 
                     We're committed to completing the job.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-muted rounded-lg">
+                <div className="text-center p-6 bg-muted rounded-xl">
                   <p className="font-heading font-bold text-xl mb-2">Insurance Reports</p>
                   <p className="text-muted-foreground text-sm">
                     Every survey includes a detailed professional report that can be 
@@ -269,7 +281,7 @@ const Technology = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-primary">
+      <section className="py-20 md:py-28 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)]">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -283,7 +295,7 @@ const Technology = () => {
               Contact us today for a free consultation. Our multi-technology approach 
               means we'll find your leak with confidence.
             </p>
-            <Button size="lg" variant="secondary" asChild>
+            <Button size="lg" variant="secondary" className="shadow-xl" asChild>
               <Link to="/contact">Get a Free Quote</Link>
             </Button>
           </motion.div>
