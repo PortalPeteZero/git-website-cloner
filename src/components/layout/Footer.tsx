@@ -58,6 +58,7 @@ const Footer = () => {
               <div className="mb-4">
                 <img src={logo} alt="Canary Detect - The Leaky Finders" className="h-12 w-auto" />
               </div>
+              <p className="text-primary font-semibold text-sm italic mb-2">"The Leaky Finders"</p>
               <p className="text-canary-white/80 text-sm leading-relaxed">
                 Professional leak detection services across Lanzarote. 
                 Using the latest technology to find and fix leaks quickly and efficiently.
@@ -231,7 +232,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-canary-white/10 py-4">
         <div className="container mx-auto px-4 text-center text-sm text-canary-white/60">
-          <p>&copy; {new Date().getFullYear()} Canary Detect. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Canary Detect - "The Leaky Finders". All rights reserved.</p>
         </div>
       </div>
     </footer>

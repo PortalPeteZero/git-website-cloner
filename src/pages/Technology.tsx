@@ -95,7 +95,7 @@ const Technology = () => {
       </section>
 
       {/* Equipment Value */}
-      <section className="py-12 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)]">
+      <section className="py-12 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)] section-stripes-orange">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -201,7 +201,7 @@ const Technology = () => {
       </section>
 
       {/* Multi-Tech Approach */}
-      <section className="py-20 md:py-28 bg-muted">
+      <section className="py-20 md:py-28 bg-muted section-pattern">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -282,7 +282,7 @@ const Technology = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)]">
+      <section className="py-20 md:py-28 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)] section-stripes-orange">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
