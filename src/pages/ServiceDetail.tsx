@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle, Droplets, Search, Cable, Waves, CircleDot, Wrench, LucideIcon } from "lucide-react";
+import { CheckCircle, Droplets, Search, Cable, Waves, CircleDot, Wrench, LucideIcon, Home, HelpCircle, BadgeCheck, Phone, Mail, Globe } from "lucide-react";
 
 // Import service hero images
 import drainDetectionImg from "@/assets/services/drain-detection.jpg";
@@ -12,6 +12,7 @@ import undergroundDetectionImg from "@/assets/services/underground-detection.jpg
 import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg";
 import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg";
 import leakRepairImg from "@/assets/services/leak-repair.jpg";
+import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation.png";
 
 // Import gallery images
 import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
@@ -32,6 +33,14 @@ interface ServiceData {
   content: string;
   heroImage: string;
   galleryImages: string[];
+  specialHeroImage?: string;
+  freeLeakSection?: {
+    enabled: boolean;
+    highlights: { icon: LucideIcon; text: string }[];
+    includes: string[];
+    importantNote: string;
+    subNote: string;
+  };
 }
 
 const servicesData: Record<string, ServiceData> = {
@@ -88,7 +97,24 @@ const servicesData: Record<string, ServiceData> = {
     description: "Find hidden water leaks with centimetre accuracy using our multi-technology approach and €80,000+ of specialist equipment.",
     icon: Droplets,
     heroImage: waterLeakDetectionImg,
+    specialHeroImage: freeLeakConfirmationImg,
     galleryImages: [waterLeak1, waterLeak2],
+    freeLeakSection: {
+      enabled: true,
+      highlights: [
+        { icon: Home, text: "No visible signs - leaks go unnoticed" },
+        { icon: HelpCircle, text: "Complex water systems - mains pumps tanks" },
+        { icon: BadgeCheck, text: "FREE home visit and leak report" },
+      ],
+      includes: [
+        "FREE leak confirmation test",
+        "Professional written report",
+        "Expert assessment of your property",
+        "No obligation consultation",
+      ],
+      importantNote: "This service is to CONFIRM if you have a leak or not, with a detailed report. It is NOT a leak survey to pinpoint the exact location.",
+      subNote: "For full leak pinpointing surveys, contact us for our comprehensive detection service.",
+    },
     features: [
       "No Find, No Fee guarantee",
       "Centimetre accuracy",
@@ -162,10 +188,10 @@ const ServiceDetail = () => {
     <Layout>
       {/* Hero Section with Image */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden">
-        {/* Background Image - Full visibility */}
+        {/* Background Image - Use special hero if available */}
         <div className="absolute inset-0">
           <img 
-            src={service.heroImage} 
+            src={service.specialHeroImage || service.heroImage} 
             alt={service.title}
             className="w-full h-full object-cover"
           />
@@ -208,12 +234,125 @@ const ServiceDetail = () => {
                 <Link to="/contact">Get a Quote</Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white">
-                <a href="tel:+34646022695">Call Now</a>
+                <a href="tel:+34711051071">Call +34 711 051 071</a>
               </Button>
             </motion.div>
           </motion.div>
         </div>
       </section>
+
+      {/* Free Leak Confirmation Section - Only for Water Leak Detection */}
+      {service.freeLeakSection?.enabled && (
+        <section className="py-16 md:py-20 bg-canary-navy">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <span className="text-primary font-semibold text-sm uppercase tracking-widest mb-2 block">About CanaryDetect</span>
+              <p className="text-white/90 text-lg max-w-3xl mx-auto leading-relaxed">
+                CanaryDetect are Lanzarote's leading water leak detection specialists with over 40 years of combined expertise. 
+                We use advanced technology to protect your property from hidden water damage. Our team provides professional 
+                leak detection services across the island.
+              </p>
+            </motion.div>
+
+            {/* Important Notice Box */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="max-w-3xl mx-auto mb-12"
+            >
+              <h2 className="text-primary font-heading text-2xl md:text-3xl font-bold text-center mb-6">
+                IMPORTANT - What This Service Includes
+              </h2>
+              <div className="bg-canary-cyan/10 border-2 border-canary-cyan rounded-xl p-6 md:p-8">
+                <p className="text-white text-lg md:text-xl text-center font-medium leading-relaxed">
+                  {service.freeLeakSection.importantNote}
+                </p>
+              </div>
+              <p className="text-white/80 text-center mt-6 leading-relaxed">
+                {service.freeLeakSection.subNote}
+              </p>
+            </motion.div>
+
+            {/* Features List */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="max-w-xl mx-auto mb-12"
+            >
+              <div className="space-y-4">
+                {service.freeLeakSection.includes.map((item, index) => (
+                  <motion.div
+                    key={item}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + index * 0.1 }}
+                    className="flex items-center gap-3"
+                  >
+                    <CheckCircle className="h-6 w-6 text-canary-cyan flex-shrink-0" />
+                    <span className="text-white text-lg">{item}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Contact Info */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12"
+            >
+              <a href="https://canary-detect.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-canary-cyan hover:text-primary transition-colors">
+                <Globe className="h-5 w-5" />
+                <span className="text-xl font-medium">canary-detect.com</span>
+              </a>
+              <a href="tel:+34711051071" className="flex items-center gap-2 text-primary hover:text-canary-cyan transition-colors">
+                <Phone className="h-5 w-5" />
+                <span className="text-xl font-bold">+34 711 051 071</span>
+              </a>
+              <a href="mailto:info@canary-detect.com" className="flex items-center gap-2 text-canary-cyan hover:text-primary transition-colors">
+                <Mail className="h-5 w-5" />
+                <span className="text-xl font-medium">info@canary-detect.com</span>
+              </a>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Service Header Section - Shows original hero content as section header */}
+      {service.freeLeakSection?.enabled && (
+        <section className="py-12 md:py-16 bg-muted">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center max-w-3xl mx-auto"
+            >
+              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Icon className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+                {service.title}
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                {service.description}
+              </p>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Content Section */}
       <section className="py-16 md:py-24 bg-background">
@@ -228,7 +367,7 @@ const ServiceDetail = () => {
                 <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
                   About This Service
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-muted-foreground leading-relaxed mb-8 whitespace-pre-line">
                   {service.content}
                 </p>
 
@@ -305,7 +444,7 @@ const ServiceDetail = () => {
                     <Link to="/contact">Request a Quote</Link>
                   </Button>
                   <Button variant="outline" className="w-full" asChild>
-                    <a href="tel:+34646022695">Call Now</a>
+                    <a href="tel:+34711051071">Call +34 711 051 071</a>
                   </Button>
                 </div>
               </motion.div>
