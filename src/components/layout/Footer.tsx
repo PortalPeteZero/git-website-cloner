@@ -116,21 +116,6 @@ const Footer = () => {
               <h4 className="font-heading font-bold text-lg mb-4">Our Services</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/services/drain-detection" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Drain Detection
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/pipe-inspection" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Pipe Inspection
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/underground-detection" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Underground Detection
-                  </Link>
-                </li>
-                <li>
                   <Link to="/services/water-leak-detection" className="text-canary-white/80 hover:text-primary transition-colors">
                     Water Leak Detection
                   </Link>
@@ -141,8 +126,37 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/services/underground-detection" className="text-canary-white/80 hover:text-primary transition-colors">
+                    Underground Detection
+                  </Link>
+                </li>
+                <li>
                   <Link to="/services/leak-repair" className="text-canary-white/80 hover:text-primary transition-colors">
                     Leak Repair
+                  </Link>
+                </li>
+              </ul>
+              
+              <h4 className="font-heading font-bold text-lg mt-6 mb-3">Service Areas</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/locations/arrecife" className="text-canary-white/80 hover:text-primary transition-colors">
+                    Arrecife
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/locations/puerto-del-carmen" className="text-canary-white/80 hover:text-primary transition-colors">
+                    Puerto del Carmen
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/locations/playa-blanca" className="text-canary-white/80 hover:text-primary transition-colors">
+                    Playa Blanca
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/locations/costa-teguise" className="text-canary-white/80 hover:text-primary transition-colors">
+                    Costa Teguise
                   </Link>
                 </li>
               </ul>
