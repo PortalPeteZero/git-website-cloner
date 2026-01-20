@@ -146,6 +146,30 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
+              
+              <h4 className="font-heading font-bold text-lg mb-4 mt-6">Pool Coatings</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/pool-coatings" className="text-canary-white/80 hover:text-primary transition-colors">
+                    ECO Finish Overview
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/pool-coatings/colours" className="text-canary-white/80 hover:text-primary transition-colors">
+                    Colour Selector
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/pool-coatings/why-eco-finish" className="text-canary-white/80 hover:text-primary transition-colors">
+                    Why ECO Finish
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/pool-coatings/process" className="text-canary-white/80 hover:text-primary transition-colors">
+                    Installation Process
+                  </Link>
+                </li>
+              </ul>
             </div>
 
             {/* Contact Info */}
