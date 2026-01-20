@@ -43,7 +43,7 @@ const technologies = [
 
 const TechnologySection = () => {
   return (
-    <section className="py-16 md:py-24 bg-canary-navy relative overflow-hidden">
+    <section className="py-20 md:py-28 bg-canary-navy relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -52,7 +52,7 @@ const TechnologySection = () => {
         }} />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

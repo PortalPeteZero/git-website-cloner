@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import drainDetection1 from "@/assets/case-studies/drain-detection-1.jpg";
 import poolLeak1 from "@/assets/case-studies/pool-leak-1.jpg";
 import pipeInspection1 from "@/assets/case-studies/pipe-inspection-1.jpg";
-import titleBg from "@/assets/title-bg.jpg";
 
 // Import gallery photos for variety
 import photo1 from "@/assets/gallery/photo-1.jpg";
@@ -78,14 +77,14 @@ const CaseStudies = () => {
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src={titleBg} 
+            src={drainDetection1} 
             alt=""
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(30,41,59,0.9)] via-[rgba(30,41,59,0.7)] to-[rgba(30,41,59,0.4)]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,41,59,0.6)] via-transparent to-transparent" />
         </div>
-        <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 py-20 md:py-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -106,8 +105,8 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
@@ -147,8 +146,8 @@ const CaseStudies = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 md:py-28 bg-primary">
+        <div className="container mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

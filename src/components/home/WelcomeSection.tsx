@@ -15,8 +15,8 @@ const features = [
 
 const WelcomeSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -69,14 +69,14 @@ const WelcomeSection = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl ring-1 ring-black/5">
               <img 
                 src={welcomeImg} 
                 alt="Professional leak detection equipment and technician" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-lg shadow-xl">
+            <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-lg shadow-2xl">
               <div className="text-3xl font-heading font-bold">10+</div>
               <div className="text-sm">Years Experience</div>
             </div>
