@@ -3,7 +3,14 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
-import blogPlaceholder from "@/assets/blog-placeholder.png";
+
+// Import unique images for each blog post
+import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
+import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg";
+import poolLeakImg from "@/assets/services/pool-leak-detection.jpg";
+import drainDetectionImg from "@/assets/services/drain-detection.jpg";
+import undergroundImg from "@/assets/services/underground-detection.jpg";
+import leakRepairImg from "@/assets/services/leak-repair.jpg";
 
 const blogPosts = [
   {
@@ -13,6 +20,7 @@ const blogPosts = [
     date: "2024-01-15",
     author: "Pete Ashcroft",
     category: "Tips & Advice",
+    image: waterLeakImg,
   },
   {
     id: 2,
@@ -21,6 +29,7 @@ const blogPosts = [
     date: "2024-01-08",
     author: "Dave Poxon",
     category: "Technology",
+    image: pipeInspectionImg,
   },
   {
     id: 3,
@@ -29,6 +38,7 @@ const blogPosts = [
     date: "2023-12-20",
     author: "Pete Ashcroft",
     category: "Pool Care",
+    image: poolLeakImg,
   },
   {
     id: 4,
@@ -37,6 +47,7 @@ const blogPosts = [
     date: "2023-12-10",
     author: "Dave Poxon",
     category: "Tips & Advice",
+    image: drainDetectionImg,
   },
   {
     id: 5,
@@ -45,6 +56,7 @@ const blogPosts = [
     date: "2023-11-28",
     author: "Pete Ashcroft",
     category: "Technology",
+    image: undergroundImg,
   },
   {
     id: 6,
@@ -53,6 +65,7 @@ const blogPosts = [
     date: "2023-11-15",
     author: "Dave Poxon",
     category: "Tips & Advice",
+    image: leakRepairImg,
   },
 ];
 
@@ -99,7 +112,7 @@ const Blog = () => {
               >
                 <div className="aspect-video overflow-hidden">
                   <img
-                    src={blogPlaceholder}
+                    src={post.image}
                     alt={`${post.title} cover`}
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

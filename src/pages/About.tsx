@@ -105,8 +105,12 @@ const About = () => {
               viewport={{ once: true }}
               className="bg-card rounded-lg p-6 text-center border border-border"
             >
-              <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="font-heading font-bold text-2xl text-primary">PA</span>
+              <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 border-4 border-primary/20">
+                <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face"
+                  alt="Pete Ashcroft - Co-Founder & Lead Technician"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-heading font-bold text-xl mb-1">Pete Ashcroft</h3>
               <p className="text-primary font-medium text-sm mb-3">Co-Founder & Lead Technician</p>
@@ -124,8 +128,12 @@ const About = () => {
               transition={{ delay: 0.1 }}
               className="bg-card rounded-lg p-6 text-center border border-border"
             >
-              <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="font-heading font-bold text-2xl text-primary">DP</span>
+              <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 border-4 border-primary/20">
+                <img 
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
+                  alt="Dave Poxon - Co-Founder & Technical Director"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-heading font-bold text-xl mb-1">Dave Poxon</h3>
               <p className="text-primary font-medium text-sm mb-3">Co-Founder & Technical Director</p>
