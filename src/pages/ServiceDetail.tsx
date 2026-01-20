@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle, Droplets, Search, Cable, Waves, CircleDot, Wrench, LucideIcon, Home, HelpCircle, BadgeCheck } from "lucide-react";
 import FreeLeakConfirmationSection from "@/components/services/FreeLeakConfirmationSection";
-
+import SEOHead from "@/components/seo/SEOHead";
 // Import service hero images
 import drainDetectionImg from "@/assets/services/drain-detection.jpg";
 import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg";
@@ -35,6 +35,11 @@ interface ServiceData {
   heroImage: string;
   galleryImages: string[];
   specialHeroImage?: string;
+  seo: {
+    title: string;
+    description: string;
+    keywords: string;
+  };
   freeLeakSection?: {
     enabled: boolean;
     highlights: { icon: LucideIcon; text: string }[];
@@ -46,11 +51,16 @@ interface ServiceData {
 
 const servicesData: Record<string, ServiceData> = {
   "drain-detection": {
-    title: "Drain Detection & CCTV Surveys",
-    description: "Professional drain tracing, CCTV inspection, and unblocking services using 6 different camera systems for pipes of all sizes.",
+    title: "Drain Detection & CCTV Surveys Lanzarote",
+    description: "Professional drain tracing, CCTV inspection, and unblocking services in Lanzarote using 6 different camera systems for pipes of all sizes.",
     icon: Search,
     heroImage: drainDetectionImg,
     galleryImages: [drainDetection2, drainDetection3],
+    seo: {
+      title: "Drain Detection & CCTV Surveys Lanzarote | Canary Detect",
+      description: "Professional drain detection and CCTV pipe inspection in Lanzarote. 6 camera systems for all pipe sizes. Drain tracing, unblocking & detailed video reports. Serving all Lanzarote.",
+      keywords: "drain detection Lanzarote, CCTV drain survey, pipe inspection Lanzarote, drain unblocking, drain camera inspection Canary Islands"
+    },
     features: [
       "6 camera systems for all pipe sizes",
       "Advanced locators for exact positioning",
@@ -62,11 +72,16 @@ const servicesData: Record<string, ServiceData> = {
     content: "Canary Detect have 6 camera systems of all sizes, allowing us to survey a variety of pipe sizes from very small bathroom pipes to main drains. Our advanced locators can pinpoint the exact position of the camera head from the surface, along with depth measurements. This means we can not only view your pipes internally but also accurately locate their route from above ground.\n\nUnlike many other companies, we combine our jetting with our cameras. This enables us to inspect the pipes before and after cleaning, and using the cameras while we work ensures nothing is missed. We have a range of equipment for cleaning and unblocking pipes, from jetting machines to 'pipe knockers' for more difficult obstructions.\n\nIf pipes are full of standing water, grease, or blockages, we may need to clean them first before the cameras can see clearly.",
   },
   "pipe-inspection": {
-    title: "Pipe Inspection",
-    description: "Comprehensive CCTV pipe inspection to assess condition and identify problems before they become costly repairs.",
+    title: "Pipe Inspection Lanzarote",
+    description: "Comprehensive CCTV water pipe inspection in Lanzarote to assess condition and identify problems before they become costly repairs.",
     icon: CircleDot,
     heroImage: pipeInspectionImg,
     galleryImages: [pipeInspection2, pipeInspection3],
+    seo: {
+      title: "Pipe Inspection & CCTV Survey Lanzarote | Water Pipe Leak Detection",
+      description: "Professional pipe inspection and CCTV surveys in Lanzarote. Detect water pipe leaks, corrosion, blockages & joint failures. Pre-purchase property surveys. HD camera inspection.",
+      keywords: "pipe inspection Lanzarote, water pipe leak detection, CCTV pipe survey, pipe condition assessment, pre-purchase pipe survey Canary Islands"
+    },
     features: [
       "High-definition camera inspection",
       "Pipe condition assessment",
@@ -75,14 +90,19 @@ const servicesData: Record<string, ServiceData> = {
       "Pre-purchase surveys",
       "Recorded video footage",
     ],
-    content: "Our pipe inspection service provides a thorough assessment of your plumbing system's condition. Using high-definition push-rod cameras, we can inspect pipes from 25mm to 300mm diameter, identifying issues such as scale buildup, corrosion, joint failures, and structural damage. This is particularly valuable for pre-purchase property surveys.",
+    content: "Our pipe inspection service provides a thorough assessment of your plumbing system's condition. Using high-definition push-rod cameras, we can inspect pipes from 25mm to 300mm diameter, identifying issues such as scale buildup, corrosion, joint failures, and structural damage. This is particularly valuable for pre-purchase property surveys in Lanzarote.",
   },
   "underground-detection": {
-    title: "Underground Pipe & Cable Detection",
-    description: "Locate buried utilities, pipes, and cables before you dig using ground-penetrating radar and electromagnetic locators.",
+    title: "Underground Pipe & Cable Detection Lanzarote",
+    description: "Find water leak underground in Lanzarote. Locate buried utilities, pipes, and cables before you dig using ground-penetrating radar and electromagnetic locators.",
     icon: Cable,
     heroImage: undergroundDetectionImg,
     galleryImages: [undergroundDetection6],
+    seo: {
+      title: "Underground Water Leak Detection Lanzarote | Find Water Leak Underground",
+      description: "Underground water leak detection and pipe location in Lanzarote. GPR radar, electromagnetic locators. Find buried pipes, cables & utilities. Construction site surveys.",
+      keywords: "underground water leak detection, find water leak underground, underground pipe detection Lanzarote, buried pipe location, utility detection Canary Islands, underground leak repair"
+    },
     features: [
       "Ground-penetrating radar (GPR)",
       "Electromagnetic pipe locators",
@@ -91,15 +111,20 @@ const servicesData: Record<string, ServiceData> = {
       "Construction site surveys",
       "As-built documentation",
     ],
-    content: "Before any excavation work, it's essential to know what's buried beneath the surface. Our underground detection service uses ground-penetrating radar and electromagnetic locating equipment to identify the position and depth of buried pipes, cables, and other utilities. This helps prevent costly damage and potential safety hazards during construction or landscaping projects.",
+    content: "Before any excavation work, it's essential to know what's buried beneath the surface. Our underground detection service in Lanzarote uses ground-penetrating radar and electromagnetic locating equipment to identify the position and depth of buried pipes, cables, and other utilities. This helps prevent costly damage and potential safety hazards during construction or landscaping projects.",
   },
   "water-leak-detection": {
-    title: "Water Pipe Leak Detection",
-    description: "Find hidden water leaks with centimetre accuracy using our multi-technology approach and €80,000+ of specialist equipment.",
+    title: "Water Pipe Leak Detection Lanzarote",
+    description: "Hidden water leak detection in Lanzarote with centimetre accuracy using our multi-technology approach and €80,000+ of specialist equipment. Water meter running? We'll find the leak.",
     icon: Droplets,
     heroImage: waterLeakDetectionImg,
     specialHeroImage: freeLeakConfirmationImg,
     galleryImages: [waterLeak1, waterLeak2],
+    seo: {
+      title: "Water Leak Detection Lanzarote | Hidden Water Leak Detection | No Find No Fee",
+      description: "Professional water leak detection Lanzarote. Find hidden water leaks with centimetre accuracy. Water meter running? Thermal imaging, tracer gas, acoustic detection. No Find No Fee. €80,000+ equipment.",
+      keywords: "water leak detection Canary Islands, hidden water leak detection, water meter running leak, water pipe leak detection, water pipe leak repair, leak detection Lanzarote, Lanzarote water leak specialist, accurate leak detection"
+    },
     freeLeakSection: {
       enabled: true,
       highlights: [
@@ -126,14 +151,19 @@ const servicesData: Record<string, ServiceData> = {
       "Non-invasive methods",
       "Insurance-ready reports",
     ],
-    content: "Canary Detect carries over €80,000 worth of the latest leak-detection equipment, enabling us to offer a truly premium service. No single technology is 100% accurate, which is why we always confirm a leak location using at least two independent technologies.\n\nOur methods include: GASENSE tracer gas detection where we pressurise pipes with a safe nitrogen/hydrogen mixture and detect escaping gas at surface level; acoustic geophones that detect the sound of water escaping from pressurised pipes; infrared thermal imaging to identify temperature differences caused by leaking water; and pipe microphones inserted directly into pipework for centimetre-accurate positioning.\n\nWe operate on a No Find, No Fee basis - if we confirm you have a leak but cannot locate it, there is no charge. Our surveys include detailed professional reports suitable for insurance claims.",
+    content: "Canary Detect carries over €80,000 worth of the latest leak-detection equipment, enabling us to offer a truly premium water leak detection service in Lanzarote. No single technology is 100% accurate, which is why we always confirm a leak location using at least two independent technologies.\n\nOur methods include: GASENSE tracer gas detection where we pressurise pipes with a safe nitrogen/hydrogen mixture and detect escaping gas at surface level; acoustic geophones that detect the sound of water escaping from pressurised pipes; infrared thermal imaging to identify temperature differences caused by leaking water; and pipe microphones inserted directly into pipework for centimetre-accurate positioning.\n\nWe operate on a No Find, No Fee basis - if we confirm you have a leak but cannot locate it, there is no charge. Our surveys include detailed professional reports suitable for insurance claims.",
   },
   "pool-leak-detection": {
-    title: "Pool Leak Detection",
-    description: "Comprehensive swimming pool and spa leak detection - we don't just confirm a leak, we pinpoint its exact location.",
+    title: "Pool Leak Detection Lanzarote",
+    description: "Swimming pool leak detection in Lanzarote - we don't just confirm a leak, we pinpoint its exact location. Pool losing water? We'll find why.",
     icon: Waves,
     heroImage: poolLeakDetectionImg,
     galleryImages: [poolLeak2, poolLeak3],
+    seo: {
+      title: "Pool Leak Detection Lanzarote | Swimming Pool Leak Detection | Playa Blanca",
+      description: "Professional pool leak detection Lanzarote. Pool losing water? We pinpoint the exact leak location. Acoustic testing, pressure testing, CCTV inspection. Pool leak repair service available.",
+      keywords: "pool leak detection Lanzarote, swimming pool leak detection, pool losing water leak, pool pipe leak repair, pool leak detection Playa Blanca, pool leak repair service"
+    },
     features: [
       "Acoustic testing of all fittings",
       "Pool shell testing (acoustic & electronic)",
@@ -145,14 +175,19 @@ const servicesData: Record<string, ServiceData> = {
       "H2/N2 gas detection",
       "Insurance-ready reports",
     ],
-    content: "Unlike some companies, our pool surveys not only confirm a leak is present and identify which section is affected, but we then go on to pinpoint the exact position of the leak.\n\nOur comprehensive survey tests every aspect of your pool including: acoustic testing around all fittings, pool shell, and lights; testing of pump, filter, and fittings in the pump housing; pressure testing of all pipework; and electronic testing of the pool shell.\n\nOnce a leaking section is found, we pinpoint the leak using CCTV cameras for internal pipe inspection, internal pipe hydrophones, external geophones, vacuum leak location, and H2/N2 gas insertion and detection.\n\nEvery survey includes a detailed professional report for your insurance company. Please note: for complete testing, the pool should be clean and filled to halfway up the skimmers. You're free to use your own contractor for repairs - you're not obligated to use our repair team.",
+    content: "Unlike some companies, our pool leak detection surveys in Lanzarote not only confirm a leak is present and identify which section is affected, but we then go on to pinpoint the exact position of the leak.\n\nOur comprehensive survey tests every aspect of your pool including: acoustic testing around all fittings, pool shell, and lights; testing of pump, filter, and fittings in the pump housing; pressure testing of all pipework; and electronic testing of the pool shell.\n\nOnce a leaking section is found, we pinpoint the leak using CCTV cameras for internal pipe inspection, internal pipe hydrophones, external geophones, vacuum leak location, and H2/N2 gas insertion and detection.\n\nEvery survey includes a detailed professional report for your insurance company. Please note: for complete testing, the pool should be clean and filled to halfway up the skimmers. You're free to use your own contractor for repairs - you're not obligated to use our repair team.",
   },
   "leak-repair": {
-    title: "Leak Repair",
-    description: "Professional leak repair services to fix the problems we find, providing a complete solution from detection to repair.",
+    title: "Leak Repair Lanzarote",
+    description: "Professional leak repair services in Lanzarote to fix water pipe leaks, pool pipe leaks and underground leaks - complete solution from detection to repair.",
     icon: Wrench,
     heroImage: leakRepairImg,
     galleryImages: [],
+    seo: {
+      title: "Leak Repair Lanzarote | Water Pipe Leak Repair | Pool Pipe Leak Repair",
+      description: "Professional leak repair Lanzarote. Water pipe leak repair, pool pipe leak repair, underground leak repair. Emergency leak repair available. Complete detection to repair service.",
+      keywords: "leak repair Lanzarote, water leak repair Canary Islands, water pipe leak repair, pool pipe leak repair, underground leak repair, emergency leak repair Lanzarote, leak detection and repair"
+    },
     features: [
       "Pipe repairs",
       "Pool repairs",
@@ -161,13 +196,14 @@ const servicesData: Record<string, ServiceData> = {
       "Patch repairs",
       "Complete replacements",
     ],
-    content: "Once we've located your leak, we can also provide professional repair services. Our experienced team can carry out a wide range of repairs, from simple pipe fixes to more complex pool shell repairs. We use quality materials and proven techniques to ensure a lasting solution to your leak problems.",
+    content: "Once we've located your leak in Lanzarote, we can also provide professional leak repair services. Our experienced team can carry out a wide range of repairs, from simple pipe fixes to more complex pool shell repairs. We use quality materials and proven techniques to ensure a lasting solution to your leak problems. Emergency leak repair available across Lanzarote.",
   },
 };
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? servicesData[slug] : null;
+  const canonicalUrl = `https://canary-detect.com/services/${slug}`;
 
   if (!service) {
     return (
@@ -187,6 +223,13 @@ const ServiceDetail = () => {
 
   return (
     <Layout>
+      <SEOHead 
+        title={service.seo.title}
+        description={service.seo.description}
+        keywords={service.seo.keywords}
+        canonical={canonicalUrl}
+        type="service"
+      />
       {/* Special Full-Width Banner for Water Leak Detection */}
       {service.specialHeroImage && (
         <section className="w-full">

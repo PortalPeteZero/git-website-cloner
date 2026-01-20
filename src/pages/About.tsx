@@ -4,10 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import welcomeImg from "@/assets/welcome.jpg";
 import titleBg from "@/assets/title-bg.jpg";
+import SEOHead from "@/components/seo/SEOHead";
 
 const About = () => {
   return (
     <Layout>
+      <SEOHead 
+        title="About Canary Detect | Lanzarote Water Leak Specialist | Professional Leak Detection"
+        description="Lanzarote's leading leak detection company. €80,000+ specialist equipment, No Find No Fee guarantee, insurance-ready reports. Serving Arrecife, Puerto del Carmen, Playa Blanca & all Lanzarote."
+        keywords="Lanzarote water leak specialist, leak detection company Lanzarote, professional leak detection, accurate leak detection, hidden water leak detection, leak detection Lanzarote prices"
+        canonical="https://canary-detect.com/about"
+      />
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -24,7 +31,7 @@ const About = () => {
           >
             <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">About Us</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight">
-              Professional Leak Detection <span className="text-primary">Experts</span>
+              Lanzarote's Leading <span className="text-primary">Leak Detection Experts</span>
             </h1>
             <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-2xl">
               Canary Detect is a professional leak detection company serving Lanzarote. 

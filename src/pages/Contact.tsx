@@ -6,10 +6,17 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import titleBg from "@/assets/title-bg.jpg";
+import SEOHead from "@/components/seo/SEOHead";
 
 const Contact = () => {
   return (
     <Layout>
+      <SEOHead 
+        title="Contact Canary Detect | Leak Detection Lanzarote | Emergency Leak Repair"
+        description="Contact Canary Detect for professional leak detection in Lanzarote. Emergency leak repair available. Free quotes for water leak detection, pool leak detection & pipe inspection. Call +34 711 051 071"
+        keywords="leak detection Lanzarote, emergency leak repair Lanzarote, leak detection Lanzarote prices, pool leak detection Playa Blanca, water leak repair Canary Islands"
+        canonical="https://canary-detect.com/contact"
+      />
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -29,8 +36,8 @@ const Contact = () => {
               Get in <span className="text-primary">Touch</span>
             </h1>
             <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-2xl">
-              Have a leak problem? Contact us today for a free consultation and quote. 
-              We're here to help with all your leak detection needs across Lanzarote.
+              Need leak detection in Lanzarote? Contact us for a free consultation and quote. 
+              Emergency leak repair available. Serving Arrecife, Puerto del Carmen, Playa Blanca & all areas.
             </p>
           </motion.div>
         </div>
