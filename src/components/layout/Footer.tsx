@@ -94,13 +94,13 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/case-studies" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Case Studies
+                  <Link to="/technology" className="text-canary-white/80 hover:text-primary transition-colors">
+                    Technology
                   </Link>
                 </li>
                 <li>
-                  <Link to="/blog" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Blog
+                  <Link to="/case-studies" className="text-canary-white/80 hover:text-primary transition-colors">
+                    Case Studies
                   </Link>
                 </li>
                 <li>
@@ -169,7 +169,8 @@ const Footer = () => {
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-canary-white/80">
-                    Lanzarote, Canary Islands
+                    Zona Industrial, 1<br />
+                    35580 Playa Blanca, Lanzarote
                   </span>
                 </li>
               </ul>
