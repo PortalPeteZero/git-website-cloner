@@ -411,8 +411,8 @@ const LocationPage = () => {
       <section className="relative min-h-[50vh] md:min-h-[55vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={titleBg} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-canary-navy/95 via-canary-navy/75 to-canary-navy/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-canary-navy/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(30,41,59,0.9)] via-[rgba(30,41,59,0.7)] to-[rgba(30,41,59,0.4)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,41,59,0.6)] via-transparent to-transparent" />
         </div>
         <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
           <motion.div
@@ -421,14 +421,14 @@ const LocationPage = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <div className="flex items-center gap-2 text-primary mb-4">
+            <div className="flex items-center gap-2 text-white mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
               <MapPin className="h-5 w-5" />
-              <span className="font-semibold text-sm uppercase tracking-widest">Leak Detection</span>
+              <span className="font-semibold text-sm uppercase tracking-[0.1em]">Leak Detection</span>
             </div>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight">
-              Leak Detection <span className="text-primary">{locationData.name}</span>
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+              Leak Detection <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">{locationData.name}</span>
             </h1>
-            <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-2xl">
+            <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
               {locationData.heroText}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
