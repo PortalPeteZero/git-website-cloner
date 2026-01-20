@@ -114,7 +114,7 @@ const HeroSlider = () => {
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all" asChild>
                 <Link to="/contact">Get a Free Quote</Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg backdrop-blur-sm" asChild>
+              <Button size="lg" variant="outline" className="border-2 border-white bg-white/10 text-white hover:bg-white hover:text-canary-navy px-8 py-6 text-lg backdrop-blur-sm shadow-lg" asChild>
                 <Link to="/services">Our Services</Link>
               </Button>
             </div>
