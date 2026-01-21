@@ -14,11 +14,12 @@ import undergroundDetectionImg from "@/assets/services/underground-detection.jpg
 import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg";
 import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg";
 import leakRepairImg from "@/assets/services/leak-repair.jpg";
+import drainUnblockingImg from "@/assets/services/drain-unblocking.jpg";
+import poolLeakRepairImg from "@/assets/services/pool-leak-repair.jpg";
 import servicesHero from "@/assets/hero/services-hero.jpg";
 
 // Import gallery images for carousels
 import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
-import drainDetection3 from "@/assets/services/gallery/drain-detection-3.jpg";
 import pipeInspection2 from "@/assets/services/gallery/pipe-inspection-2.jpg";
 import pipeInspection3 from "@/assets/services/gallery/pipe-inspection-3.jpg";
 import poolLeak2 from "@/assets/services/gallery/pool-leak-2.jpg";
@@ -26,21 +27,23 @@ import poolLeak3 from "@/assets/services/gallery/pool-leak-3.jpg";
 import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
 import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
+import drainUnblocking1 from "@/assets/services/gallery/drain-unblocking-1.jpg";
+import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
 
 const services = [
   {
-    title: "Drain Detection",
-    description: "Locate and identify drainage issues using advanced camera inspection and tracing technology. We can find blockages, breaks, and root intrusions.",
+    title: "Drain & Pipe Surveys",
+    description: "CCTV camera inspection and drain tracing to locate blockages, breaks, root intrusions and pipe condition issues. 6 camera systems for all pipe sizes with detailed video reports.",
     icon: Search,
     href: "/services/drain-detection",
-    images: [drainDetectionImg, drainDetection2, drainDetection3],
+    images: [drainDetectionImg, pipeInspectionImg, drainDetection2, pipeInspection2],
   },
   {
-    title: "Pipe Inspection",
-    description: "CCTV pipe inspection to assess the condition of your pipes and identify blockages, damage, or deterioration before they become major problems.",
+    title: "Drain Unblocking",
+    description: "Blocked drain? High-pressure jetting and mechanical cleaning to clear all types of blockages fast. CCTV inspection before and after. Emergency callout available.",
     icon: CircleDot,
-    href: "/services/pipe-inspection",
-    images: [pipeInspectionImg, pipeInspection2, pipeInspection3],
+    href: "/services/drain-unblocking",
+    images: [drainUnblockingImg, drainUnblocking1, pipeInspection3],
   },
   {
     title: "Underground Detection",
@@ -65,10 +68,17 @@ const services = [
   },
   {
     title: "Leak Repair",
-    description: "Found a leak? We'll fix it fast. Professional leak repair services once we've located the problem. Complete solutions from detection to repair.",
+    description: "Found a water leak? We'll fix it fast. Professional pipe and plumbing repairs once we've located the problem. Complete solutions from detection to repair.",
     icon: Wrench,
     href: "/services/leak-repair",
     images: [leakRepairImg],
+  },
+  {
+    title: "Pool Leak Repair",
+    description: "Swimming pool leaking? We repair pool pipes, shell cracks, fittings and equipment. Complete detection-to-repair service with quality materials guaranteed.",
+    icon: Waves,
+    href: "/services/pool-leak-repair",
+    images: [poolLeakRepairImg, poolRepair1, poolLeak2],
   },
 ];
 
