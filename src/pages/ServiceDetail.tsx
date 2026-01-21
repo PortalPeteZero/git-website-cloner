@@ -147,7 +147,7 @@ const servicesData: Record<string, ServiceData> = {
       "Construction site surveys",
       "As-built documentation",
     ],
-    content: "Before any excavation work, it's essential to know what's buried beneath the surface. Our underground detection service in Lanzarote uses ground-penetrating radar and electromagnetic locating equipment to identify the position and depth of buried pipes, cables, and other utilities. This helps prevent costly damage and potential safety hazards during construction or landscaping projects.",
+    content: "Before any excavation work, it's essential to know what's buried beneath the surface. Our underground detection service in Lanzarote uses ground-penetrating radar (GPR) and electromagnetic locating equipment to identify the position and depth of buried pipes, cables, and other utilities.\n\n**Ground Radar Surveys**: Our GPR equipment sends radio waves into the ground that bounce back when they hit buried objects. This creates a detailed subsurface map showing pipe routes, cable runs, and even voids or changes in soil density. GPR is particularly effective in Lanzarote's volcanic terrain where metallic locators may struggle.\n\n**Electromagnetic Location**: For metallic pipes and cables, we use precision electromagnetic locators that can trace routes and estimate depth. Combined with GPR, this dual-technology approach ensures we find both metallic and non-metallic utilities.\n\nWhether you're planning construction work, landscaping, or need to locate a specific pipe run, our surveys prevent costly accidental damage and potential safety hazards.",
   },
   "water-leak-detection": {
     title: "Water Pipe Leak Detection Lanzarote",
@@ -366,7 +366,7 @@ const ServiceDetail = () => {
                 key={currentSlide}
                 src={carouselImages[currentSlide].src}
                 alt={carouselImages[currentSlide].alt}
-                className="w-full h-full object-cover"
+                className={`w-full h-full ${isUndergroundPage ? 'object-contain object-center bg-canary-dark' : 'object-cover'}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
