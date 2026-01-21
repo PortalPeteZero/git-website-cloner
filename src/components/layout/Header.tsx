@@ -101,7 +101,7 @@ const Header = () => {
                     to="/services/drain-detection" 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
-                    Drain Surveys
+                    Drain & Pipe Surveys
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -289,7 +289,7 @@ const Header = () => {
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
-                        Drain Surveys
+                        Drain & Pipe Surveys
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
