@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -63,11 +62,7 @@ const FAQSection = () => {
       <FAQSchema faqs={faqs} />
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <span className="text-primary font-semibold uppercase tracking-wide text-sm">
               FAQ
             </span>
@@ -85,13 +80,9 @@ const FAQSection = () => {
             <Button asChild>
               <Link to="/contact">Contact Us</Link>
             </Button>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
@@ -104,7 +95,7 @@ const FAQSection = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
