@@ -5,6 +5,13 @@ import drainDetectionImg from "@/assets/services/drain-detection.jpg";
 import undergroundImg from "@/assets/services/underground-detection.jpg";
 import leakRepairImg from "@/assets/services/leak-repair.jpg";
 
+// Blog-specific images
+import poolBucketTestImg from "@/assets/blog/pool-bucket-test.jpg";
+import thermalUndergroundImg from "@/assets/blog/thermal-underground-leak.jpg";
+import waterMeterImg from "@/assets/blog/water-meter-leak.jpg";
+import risingDampImg from "@/assets/blog/rising-damp-wall.jpg";
+import poolDiverImg from "@/assets/blog/pool-diver-inspection.jpg";
+
 export interface BlogArticle {
   id: number;
   slug: string;
@@ -30,7 +37,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2025-01-15",
     author: "Pete Ashcroft",
     category: "Pool Care",
-    image: poolLeakImg,
+    image: poolBucketTestImg,
     metaTitle: "How to Check for Pool Leaks | Swimming Pool Leak Test Lanzarote",
     metaDescription: "Learn how to check for pool leaks with the bucket test and dye test. Professional swimming pool leak detection tips from Lanzarote experts. Find leaks fast.",
     keywords: "how to check for pool leaks, pool leak test, swimming pool losing water, bucket test pool leak, dye test pool leak, pool leak detection Lanzarote",
@@ -158,7 +165,7 @@ If you've tried the bucket test and suspect a leak, don't wait. Water leaks wast
     date: "2025-01-08",
     author: "Dave Poxon",
     category: "Tips & Advice",
-    image: undergroundImg,
+    image: thermalUndergroundImg,
     metaTitle: "Signs of Underground Water Leak | Hidden Pipe Leak Detection Lanzarote",
     metaDescription: "Discover the 7 warning signs of underground water leaks. High water bills, wet spots, low pressure? Learn how to detect hidden pipe leaks in Lanzarote.",
     keywords: "signs of underground water leak, hidden water leak detection, underground pipe leak, water leak under concrete, water meter running when taps off, high water bill leak",
@@ -295,7 +302,7 @@ Underground water leaks only get worse with time. If you've noticed any of these
     date: "2025-01-02",
     author: "Pete Ashcroft",
     category: "Tips & Advice",
-    image: waterLeakImg,
+    image: waterMeterImg,
     metaTitle: "Water Meter Running When Taps Off | Hidden Leak Detection Lanzarote",
     metaDescription: "Water meter running when all taps are off? You have a hidden leak. Learn how to check your meter, find the leak source, and get professional help in Lanzarote.",
     keywords: "water meter running when taps off, hidden water leak, water leak detection, meter spinning no water use, find water leak, leak detection Lanzarote",
@@ -415,7 +422,7 @@ A spinning water meter is your property telling you something is wrong. Don't ig
     date: "2024-12-18",
     author: "Dave Poxon",
     category: "Tips & Advice",
-    image: leakRepairImg,
+    image: risingDampImg,
     metaTitle: "Damp Walls Causes & Solutions | Water Leak Detection Lanzarote",
     metaDescription: "Damp walls in your Lanzarote home? Discover the causes from leaking pipes to condensation, and learn how professional leak detection can solve the problem.",
     keywords: "damp walls, water damage walls, wall leak detection, rising damp, penetrating damp, condensation problems, leak detection Lanzarote",
@@ -724,7 +731,7 @@ If you suspect hidden leaks in your Lanzarote property, thermal imaging can reve
     date: "2024-12-01",
     author: "Dave Poxon",
     category: "Pool Care",
-    image: drainDetectionImg,
+    image: poolDiverImg,
     metaTitle: "Swimming Pool Leak Repair Cost Lanzarote | Pool Leak Detection Prices",
     metaDescription: "What does pool leak detection and repair cost in Lanzarote? Complete guide to swimming pool leak repair prices, from detection to fix. No Find, No Fee guarantee.",
     keywords: "pool leak repair cost, swimming pool leak detection price, pool leak fix cost Lanzarote, pool repair prices, leak detection cost, pool plumbing repair",
