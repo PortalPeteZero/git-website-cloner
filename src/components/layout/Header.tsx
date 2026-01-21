@@ -206,6 +206,17 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            {/* Blog Link */}
+            <Link to="/blog">
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="gap-1.5 border-2 border-canary-navy/20 bg-canary-navy/5 text-canary-navy font-semibold hover:border-canary-navy/40 hover:bg-canary-navy/10 transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                See our Blog
+              </Button>
+            </Link>
+
             {/* External Links */}
             <a 
               href="https://leak-detective.com/" 
