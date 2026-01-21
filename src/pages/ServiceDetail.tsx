@@ -380,6 +380,8 @@ const ServiceDetail = () => {
                   src={carouselImages[0].src} 
                   alt={carouselImages[0].alt}
                   className="w-full h-full object-cover"
+                  fetchPriority="high"
+                  decoding="async"
                 />
               </div>
               <div className="relative overflow-hidden">
@@ -387,6 +389,8 @@ const ServiceDetail = () => {
                   src={carouselImages[1].src} 
                   alt={carouselImages[1].alt}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="relative overflow-hidden">
@@ -394,6 +398,8 @@ const ServiceDetail = () => {
                   src={carouselImages[2].src} 
                   alt={carouselImages[2].alt}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -404,6 +410,8 @@ const ServiceDetail = () => {
                 src={carouselImages[currentSlide].src}
                 alt={carouselImages[currentSlide].alt}
                 className="w-full h-full object-cover"
+                fetchPriority="high"
+                decoding="async"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
