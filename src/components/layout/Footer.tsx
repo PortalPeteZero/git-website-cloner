@@ -1,50 +1,86 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, ArrowRight, Clock, Shield, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import logo from "@/assets/logo-dark-bg.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-canary-dark text-canary-white relative">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-      }} />
+    <footer className="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
       
       {/* Callback Form Section */}
-      <div className="bg-primary py-8 relative overflow-hidden">
-        {/* Diagonal stripe pattern */}
-        <div className="absolute inset-0 opacity-[0.05]" style={{
-          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,1) 20px, rgba(255,255,255,1) 21px)`,
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary to-orange-500" />
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 11px)`,
         }} />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="font-heading text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
-              Request a Callback
-            </h3>
-            <p className="text-primary-foreground/90 mb-6">
-              Leave your details and we'll get back to you within 24 hours
-            </p>
-            <form className="flex flex-col sm:flex-row gap-4">
+        <div className="container mx-auto px-4 py-8 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div className="text-center lg:text-left">
+              <h3 className="font-heading text-xl md:text-2xl font-bold text-white">
+                Get a Free Quote Today
+              </h3>
+              <p className="text-white/80 text-sm mt-1">
+                We'll call you back within 24 hours
+              </p>
+            </div>
+            <form className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
               <Input 
                 type="text" 
                 placeholder="Your Name" 
-                className="bg-background text-foreground"
+                className="bg-white/95 text-slate-900 border-0 h-11 min-w-[180px] placeholder:text-slate-500"
               />
               <Input 
                 type="tel" 
-                placeholder="Your Phone Number" 
-                className="bg-background text-foreground"
+                placeholder="Phone Number" 
+                className="bg-white/95 text-slate-900 border-0 h-11 min-w-[180px] placeholder:text-slate-500"
               />
               <Button 
                 type="submit" 
-                variant="secondary"
-                className="whitespace-nowrap"
+                className="bg-slate-900 hover:bg-slate-800 text-white h-11 px-6 whitespace-nowrap group"
               >
-                Call Me Back
+                Request Callback
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Trust badges */}
+      <div className="border-b border-white/10">
+        <div className="container mx-auto px-4 py-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex items-center justify-center md:justify-start gap-3 text-white/70">
+              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                <Shield className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-medium text-white text-sm">No Find, No Fee</p>
+                <p className="text-xs">Guaranteed results</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-3 text-white/70">
+              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                <Clock className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-medium text-white text-sm">24hr Response</p>
+                <p className="text-xs">Fast turnaround</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center md:justify-end gap-3 text-white/70">
+              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                <Award className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-medium text-white text-sm">€80K+ Equipment</p>
+                <p className="text-xs">Professional grade</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -52,175 +88,152 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="py-12 relative z-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Logo & About */}
-            <div>
-              <div className="mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6">
+            {/* Logo & About - 3 cols */}
+            <div className="lg:col-span-3">
+              <div className="mb-5">
                 <img src={logo} alt="Canary Detect - The Leaky Finders" className="h-12 w-auto" />
               </div>
-              <p className="text-primary font-semibold text-sm italic mb-2">"The Leaky Finders"</p>
-              <p className="text-canary-white/80 text-sm leading-relaxed">
-                Professional leak detection services across Lanzarote. 
-                Using the latest technology to find and fix leaks quickly and efficiently.
+              <p className="text-primary font-semibold text-sm italic mb-3">"The Leaky Finders"</p>
+              <p className="text-slate-400 text-sm leading-relaxed mb-5">
+                Lanzarote's leading leak detection specialists. Professional service with the latest technology.
               </p>
-              <div className="flex gap-4 mt-4">
+              <div className="flex gap-3">
                 <a 
                   href="https://www.facebook.com/profile.php?id=100071808930725" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all duration-300 group"
                   aria-label="Follow us on Facebook"
                 >
-                  <Facebook className="h-5 w-5" />
+                  <Facebook className="h-4 w-4 text-white/80 group-hover:text-white" />
                 </a>
                 <a 
                   href="https://www.instagram.com/canarydetect_the_leaky_finders/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 flex items-center justify-center transition-all duration-300 group"
                   aria-label="Follow us on Instagram"
                 >
-                  <Instagram className="h-5 w-5" />
+                  <Instagram className="h-4 w-4 text-white/80 group-hover:text-white" />
                 </a>
               </div>
             </div>
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="font-heading font-bold text-lg mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about" className="text-canary-white/80 hover:text-primary transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/technology" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Technology
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/case-studies" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Case Studies
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Contact
-                  </Link>
-                </li>
+            {/* Quick Links - 2 cols */}
+            <div className="lg:col-span-2">
+              <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-primary"></span>
+                Navigation
+              </h4>
+              <ul className="space-y-2.5">
+                {[
+                  { to: "/", label: "Home" },
+                  { to: "/about", label: "About Us" },
+                  { to: "/services", label: "Services" },
+                  { to: "/technology", label: "Technology" },
+                  { to: "/case-studies", label: "Case Studies" },
+                  { to: "/contact", label: "Contact" },
+                ].map(link => (
+                  <li key={link.to}>
+                    <Link 
+                      to={link.to} 
+                      className="text-slate-400 hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group"
+                    >
+                      <span className="w-0 group-hover:w-2 h-0.5 bg-primary transition-all duration-300"></span>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            {/* Services */}
-            <div>
-              <h4 className="font-heading font-bold text-lg mb-4">Our Services</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/services/water-leak-detection" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Water Leak Detection
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/pool-leak-detection" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Swimming Pool Leak Detection
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/underground-detection" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Underground Detection
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/leak-repair" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Leak Repair
-                  </Link>
-                </li>
-              </ul>
-              
-              <h4 className="font-heading font-bold text-lg mt-6 mb-3">Service Areas</h4>
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
-                <li>
-                  <Link to="/locations/arrecife" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
-                    Arrecife
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/locations/puerto-del-carmen" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
-                    Puerto del Carmen
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/locations/playa-blanca" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
-                    Playa Blanca
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/locations/costa-teguise" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
-                    Costa Teguise
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/locations/yaiza" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
-                    Yaiza
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/locations/tias" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
-                    Tías
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/locations/playa-honda" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
-                    Playa Honda
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/locations/san-bartolome" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
-                    San Bartolomé
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/locations/teguise" className="text-canary-white/80 hover:text-primary transition-colors text-sm">
-                    Teguise
-                  </Link>
-                </li>
+            {/* Services - 3 cols */}
+            <div className="lg:col-span-3">
+              <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-primary"></span>
+                Services
+              </h4>
+              <ul className="space-y-2.5">
+                {[
+                  { to: "/services/water-leak-detection", label: "Water Leak Detection" },
+                  { to: "/services/pool-leak-detection", label: "Pool Leak Detection" },
+                  { to: "/services/underground-detection", label: "Underground Detection" },
+                  { to: "/services/drain-detection", label: "Drain & Pipe Surveys" },
+                  { to: "/services/leak-repair", label: "Leak Repair" },
+                  { to: "/services/pool-leak-repair", label: "Pool Leak Repair" },
+                ].map(link => (
+                  <li key={link.to}>
+                    <Link 
+                      to={link.to} 
+                      className="text-slate-400 hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group"
+                    >
+                      <span className="w-0 group-hover:w-2 h-0.5 bg-primary transition-all duration-300"></span>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            {/* Contact Info */}
-            <div>
-              <h4 className="font-heading font-bold text-lg mb-4">Contact Us</h4>
+            {/* Service Areas - 2 cols */}
+            <div className="lg:col-span-2">
+              <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-primary"></span>
+                Areas
+              </h4>
+              <ul className="space-y-2">
+                {[
+                  "Arrecife", "Puerto del Carmen", "Playa Blanca", 
+                  "Costa Teguise", "Yaiza", "Tías", "Playa Honda"
+                ].map(area => (
+                  <li key={area}>
+                    <Link 
+                      to={`/locations/${area.toLowerCase().replace(/ /g, '-')}`}
+                      className="text-slate-400 hover:text-primary transition-colors text-sm"
+                    >
+                      {area}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact Info - 2 cols */}
+            <div className="lg:col-span-2">
+              <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-primary"></span>
+                Contact
+              </h4>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <a href="tel:+34646022695" className="text-canary-white/80 hover:text-primary transition-colors">
+                <li>
+                  <a href="tel:+34646022695" className="flex items-center gap-3 group">
+                    <div className="w-9 h-9 rounded-lg bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center transition-colors">
+                      <Phone className="h-4 w-4 text-primary" />
+                    </div>
+                    <span className="text-slate-300 group-hover:text-white transition-colors text-sm font-medium">
                       +34 646 02 26 95
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </li>
-                <li className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <a href="mailto:info@canary-detect.com" className="text-canary-white/80 hover:text-primary transition-colors">
-                    info@canary-detect.com
+                <li>
+                  <a href="mailto:info@canary-detect.com" className="flex items-center gap-3 group">
+                    <div className="w-9 h-9 rounded-lg bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center transition-colors">
+                      <Mail className="h-4 w-4 text-primary" />
+                    </div>
+                    <span className="text-slate-300 group-hover:text-white transition-colors text-sm">
+                      info@canary-detect.com
+                    </span>
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-canary-white/80">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-4 w-4 text-primary" />
+                  </div>
+                  <span className="text-slate-400 text-sm leading-relaxed">
                     Zona Industrial, 1<br />
-                    35580 Playa Blanca, Lanzarote
+                    35580 Playa Blanca<br />
+                    Lanzarote
                   </span>
                 </li>
               </ul>
@@ -230,15 +243,22 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-canary-white/10 py-4">
-        <div className="container mx-auto px-4 text-center text-sm text-canary-white/60">
-          <p>
-            &copy; {new Date().getFullYear()} Canary Detect - "The Leaky Finders". All rights reserved.
-            <span className="mx-2">|</span>
-            <Link to="/admin/login" className="hover:text-primary transition-colors">
-              Admin
-            </Link>
-          </p>
+      <div className="border-t border-white/10 relative z-10">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+            <p>
+              © {new Date().getFullYear()} Canary Detect - "The Leaky Finders". All rights reserved.
+            </p>
+            <div className="flex items-center gap-4">
+              <Link to="/blog" className="hover:text-primary transition-colors">
+                Blog
+              </Link>
+              <span className="text-slate-700">•</span>
+              <Link to="/admin/login" className="hover:text-primary transition-colors">
+                Admin
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
