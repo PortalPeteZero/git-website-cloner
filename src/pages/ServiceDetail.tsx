@@ -198,6 +198,52 @@ const servicesData: Record<string, ServiceData> = {
     ],
     content: "Once we've located your leak in Lanzarote, we can also provide professional leak repair services. Our experienced team can carry out a wide range of repairs, from simple pipe fixes to more complex pool shell repairs. We use quality materials and proven techniques to ensure a lasting solution to your leak problems. Emergency leak repair available across Lanzarote.",
   },
+  "drain-unblocking": {
+    title: "Drain Unblocking Lanzarote",
+    description: "Professional drain unblocking services in Lanzarote. Blocked drain? We clear all types of blockages quickly and effectively using high-pressure jetting and specialist equipment.",
+    icon: Search,
+    heroImage: drainDetectionImg,
+    galleryImages: [drainDetection2, drainDetection3],
+    seo: {
+      title: "Drain Unblocking Lanzarote | Blocked Drain Clearance | Emergency Service",
+      description: "Professional drain unblocking Lanzarote. Blocked drain cleared fast with high-pressure jetting. Kitchen, bathroom, main drains. Emergency drain unblocking available. CCTV inspection included.",
+      keywords: "drain unblocking Lanzarote, blocked drain Lanzarote, drain clearance, drain jetting, emergency drain unblocking, blocked toilet, blocked sink Canary Islands"
+    },
+    features: [
+      "High-pressure water jetting",
+      "Mechanical drain cleaning",
+      "Root cutting & removal",
+      "Grease & fat dissolution",
+      "CCTV before & after inspection",
+      "Emergency callout available",
+      "All drain sizes cleared",
+      "Preventative maintenance",
+    ],
+    content: "Blocked drains can cause serious disruption to your home or business in Lanzarote. Canary Detect provides fast, effective drain unblocking services using professional high-pressure jetting equipment capable of clearing even the most stubborn blockages.\n\nWe handle all types of blockages including: grease and fat buildup in kitchen drains, hair and soap accumulation in bathroom drains, foreign object removal, tree root intrusion, and scale deposits in older pipes.\n\nUnlike basic drain clearance, we always include CCTV inspection before and after the work. This ensures we identify the cause of the blockage, confirm it's completely cleared, and check for any underlying damage that could cause future problems.\n\nOur equipment includes high-pressure jetting machines up to 4000 PSI, mechanical 'pipe knockers' for solid blockages, and rotating cutting heads for root removal. Emergency drain unblocking is available across Lanzarote - call us for same-day service.",
+  },
+  "pool-leak-repair": {
+    title: "Pool Leak Repair Lanzarote",
+    description: "Professional swimming pool leak repair in Lanzarote. From pipe repairs to shell crack fixing, we repair all types of pool leaks with lasting solutions.",
+    icon: Waves,
+    heroImage: poolLeakDetectionImg,
+    galleryImages: [poolLeak2, poolLeak3],
+    seo: {
+      title: "Pool Leak Repair Lanzarote | Swimming Pool Pipe Repair | Pool Shell Repair",
+      description: "Professional pool leak repair Lanzarote. Swimming pool pipe repair, shell crack repair, fitting replacement. Complete pool leak detection and repair service. Quality materials & lasting repairs.",
+      keywords: "pool leak repair Lanzarote, swimming pool repair, pool pipe repair, pool shell repair, pool fitting repair, pool leak fix Canary Islands, pool leak detection and repair"
+    },
+    features: [
+      "Pool pipe repairs",
+      "Shell crack repairs",
+      "Fitting & light replacement",
+      "Skimmer repairs",
+      "Return line repairs",
+      "Main drain repairs",
+      "Structural crack injection",
+      "Quality materials guaranteed",
+    ],
+    content: "Once we've pinpointed your pool leak in Lanzarote, our experienced repair team can fix it properly. We specialise in all types of swimming pool leak repairs, ensuring your pool is watertight and ready to use.\n\nOur pool leak repair services include:\n\n**Pipe Repairs**: Leaking pool pipes are often the culprit. We excavate only where necessary, repair or replace damaged sections, and pressure test to confirm the fix.\n\n**Shell Repairs**: Cracks in the pool shell can develop over time due to ground movement or settling. We use specialist underwater repair compounds and structural injection techniques for lasting repairs.\n\n**Fitting Repairs**: Lights, returns, skimmers, and main drains all have potential leak points. We replace gaskets, reseal fittings, or replace components as needed.\n\n**Complete Service**: As Lanzarote's leak detection specialists, we offer a complete detection-to-repair service. This means one company, one responsibility, and no finger-pointing between contractors.\n\nAll repairs come with our quality guarantee. We use professional-grade materials designed for the Lanzarote climate and pool chemical environment.",
+  },
 };
 
 const ServiceDetail = () => {
