@@ -23,11 +23,10 @@ import poolLeak2 from "@/assets/services/gallery/pool-leak-2.jpg";
 import poolLeak3 from "@/assets/services/gallery/pool-leak-3.jpg";
 import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
 import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
-import leakRepair1 from "@/assets/services/gallery/leak-repair-1.jpg";
-import leakRepair2 from "@/assets/services/gallery/leak-repair-2.jpg";
-import leakRepair3 from "@/assets/services/gallery/leak-repair-3.jpg";
-import leakRepair4 from "@/assets/services/gallery/leak-repair-4.jpg";
-import leakRepair5 from "@/assets/services/gallery/leak-repair-5.jpg";
+import leakRepairBa1 from "@/assets/services/gallery/leak-repair-ba-1.jpg";
+import leakRepairBa2 from "@/assets/services/gallery/leak-repair-ba-2.jpg";
+import leakRepairBa3 from "@/assets/services/gallery/leak-repair-ba-3.jpg";
+import leakRepairBa4 from "@/assets/services/gallery/leak-repair-ba-4.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
 
 const services = [
@@ -76,7 +75,7 @@ const services = [
     description: "Found a leak? We'll fix it fast. Professional leak repair services once we've located the problem.",
     icon: Wrench,
     href: "/services/leak-repair",
-    images: [leakRepair1, leakRepair2, leakRepair3, leakRepair4, leakRepair5],
+    images: [leakRepairBa1, leakRepairBa2, leakRepairBa3, leakRepairBa4],
     imageAlt: "Professional leak repair service Lanzarote",
   },
 ];
