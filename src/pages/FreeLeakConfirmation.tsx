@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, CheckCircle } from "lucide-react";
-import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation.png";
+import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg";
 
 const FreeLeakConfirmation = () => {
   const canonicalUrl = "https://canary-detect.com/services/free-leak-confirmation";
@@ -69,9 +69,9 @@ const FreeLeakConfirmation = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-canary-cyan/20 to-primary/30 rounded-3xl blur-xl opacity-60" />
                 <img
-                  src={freeLeakConfirmationImg}
-                  alt="Free Leak Confirmation Test - New for 2026"
-                  className="relative rounded-2xl shadow-2xl border border-white/10 w-full"
+                  src={waterLeakDetectionImg}
+                  alt="Professional leak detection equipment"
+                  className="relative rounded-2xl shadow-2xl border border-white/10 w-full object-cover aspect-[4/3]"
                 />
               </div>
             </motion.div>
