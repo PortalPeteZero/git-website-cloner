@@ -389,11 +389,11 @@ const ServiceDetail = () => {
       )}
 
       {/* Content Section */}
-      <section className="py-12 md:py-16 bg-background section-divider">
+      <section className="py-10 md:py-12 bg-background section-divider">
         <div className="container mx-auto px-4">
 
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-            <div className="lg:col-span-2 space-y-8">
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-10 items-start">
+            <div className="lg:col-span-2 space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -526,7 +526,7 @@ const ServiceDetail = () => {
             </div>
 
             {/* Sidebar CTA */}
-            <div>
+            <div className="h-fit">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -534,7 +534,7 @@ const ServiceDetail = () => {
                 className="bg-gradient-to-br from-canary-navy to-slate-800 rounded-xl p-6 sticky top-24 shadow-xl"
               >
                 <h3 className="font-heading text-xl font-bold mb-2 text-white">Get a Quote</h3>
-                <p className="text-white/70 text-sm mb-6">
+                <p className="text-white/70 text-sm mb-4">
                   Contact us today for a free consultation and quote for {service.title.toLowerCase()} services.
                 </p>
                 <div className="space-y-3">
@@ -545,7 +545,7 @@ const ServiceDetail = () => {
                     <a href="tel:+34711051071">Call +34 711 051 071</a>
                   </Button>
                 </div>
-                <div className="mt-6 pt-5 border-t border-white/10">
+                <div className="mt-4 pt-4 border-t border-white/10">
                   <div className="flex items-center gap-2 text-white/80 text-sm">
                     <Shield className="h-4 w-4 text-primary" />
                     <span>No Find, No Fee Guarantee</span>
