@@ -244,10 +244,10 @@ const BlogArticle = () => {
               className="mt-12 p-8 bg-canary-navy rounded-xl text-white text-center"
             >
               <h3 className="font-heading text-2xl font-bold mb-4">
-                Need Professional Leak Detection?
+                Need The Leaky Finders?
               </h3>
               <p className="text-white/80 mb-6 max-w-lg mx-auto">
-                Don't let hidden leaks damage your property. Contact Canary Detect for expert leak detection across Lanzarote with our No Find, No Fee guarantee.
+                Don't let hidden leaks damage your property. Contact Canary Detect - The Leaky Finders - for expert leak detection across Lanzarote with our No Find, No Fee guarantee.
               </p>
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link to="/contact">

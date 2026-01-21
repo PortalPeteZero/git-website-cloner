@@ -37,12 +37,12 @@ const CaseStudiesPreview = () => {
     <section className="py-12 md:py-16 bg-muted/50 section-divider">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-primary font-semibold uppercase tracking-wide text-sm">Our Work</span>
+          <span className="text-primary font-semibold uppercase tracking-wide text-sm">The Leaky Finders at Work</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-canary-navy">
             Recent Case Studies
           </h2>
           <p className="text-muted-foreground">
-            See examples of our leak detection work across Lanzarote.
+            See how The Leaky Finders solve leak problems across Lanzarote.
           </p>
         </div>
 

@@ -15,17 +15,17 @@ import terraceScene from "@/assets/hero/carousel-terrace.jpg";
 const heroSlides = [
   {
     image: hqScene,
-    alt: "Canary Detect headquarters with technicians and van in Lanzarote",
-    title: "Leak Detection Lanzarote.",
+    alt: "Canary Detect - The Leaky Finders headquarters with technicians and van in Lanzarote",
+    title: "The Leaky Finders.",
     subtitle: "No Find, No Fee.",
     description: "Professional water leak detection and swimming pool leak detection across Lanzarote. Using €80,000+ specialist equipment including thermal imaging, acoustic sensors and tracer gas technology.",
     subtext: "Is your pool losing water? Water meter running? Damp walls? We find and fix leaks fast."
   },
   {
     image: terraceScene,
-    alt: "Leak detection specialists at villa terrace with pool in Lanzarote",
+    alt: "The Leaky Finders at villa terrace with pool in Lanzarote",
     title: "Villa & Pool Specialists.",
-    subtitle: "Expert Detection Team.",
+    subtitle: "The Leaky Finders.",
     description: "Our trained technicians use advanced acoustic equipment and thermal imaging to detect hidden leaks at your villa or pool area without unnecessary damage.",
     subtext: ""
   },
