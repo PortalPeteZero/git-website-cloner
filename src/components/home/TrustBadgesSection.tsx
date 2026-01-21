@@ -1,5 +1,4 @@
-import { motion, useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Shield, Award, Clock, MapPin, FileCheck, Wrench } from "lucide-react";
 
 const stats = [
@@ -16,38 +15,14 @@ const badges = [
   { label: "Insurance Reports", icon: FileCheck, description: "Included free" },
 ];
 
-const AnimatedCounter = ({ value, suffix = "" }: { value: number; suffix?: string }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+const formatNumber = (n: number) => new Intl.NumberFormat("en-GB").format(n);
 
-  useEffect(() => {
-    if (!isInView) return;
-
-    const duration = 1500;
-    const steps = 60;
-    const stepValue = value / steps;
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += stepValue;
-      if (current >= value) {
-        setCount(value);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-
-    return () => clearInterval(timer);
-  }, [isInView, value]);
-
-  return (
-    <span ref={ref} className="tabular-nums">
-      {count}{suffix}
-    </span>
-  );
-};
+const StatValue = ({ value, suffix = "" }: { value: number; suffix?: string }) => (
+  <span className="tabular-nums">
+    {formatNumber(value)}
+    {suffix}
+  </span>
+);
 
 const TrustBadgesSection = () => {
   return (
@@ -73,7 +48,7 @@ const TrustBadgesSection = () => {
                 <stat.icon className="h-6 w-6 text-primary" />
               </div>
               <div className="font-heading text-4xl md:text-5xl font-bold text-primary mb-1">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                <StatValue value={stat.value} suffix={stat.suffix} />
               </div>
               <div className="text-muted-foreground text-sm md:text-base">{stat.label}</div>
             </motion.div>
