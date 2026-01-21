@@ -89,12 +89,12 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Contact Us</span>
+            <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Contact The Leaky Finders</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
               Contact Lanzarote <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Leak Detection Experts</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
-              Need leak detection in Lanzarote? Contact us for a free consultation and quote. 
+              Need leak detection in Lanzarote? Contact The Leaky Finders for a free consultation and quote. 
               Emergency leak repair available. Serving Arrecife, Puerto del Carmen, Playa Blanca & all areas.
             </p>
           </motion.div>
@@ -253,7 +253,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
-                Contact Information
+                Contact The Leaky Finders
               </h2>
               <p className="text-muted-foreground mb-8">
                 We're available to help with your leak detection needs. 
