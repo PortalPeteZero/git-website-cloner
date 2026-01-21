@@ -580,37 +580,7 @@ const ServiceDetail = () => {
                 ))}
               </div>
 
-              {/* Underground Detection: keep gallery under the text so the left column isn't empty */}
-              {slug === 'underground-detection' && service.galleryImages.length > 0 && (
-                <div className="mt-8">
-                  <h3 className="font-heading text-xl font-bold mb-4">Gallery</h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    {service.galleryImages.slice(0, 4).map((img, index) => (
-                      <button
-                        key={index}
-                        onClick={() => openLightbox(index)}
-                        className="rounded-lg overflow-hidden cursor-zoom-in group aspect-[4/3]"
-                      >
-                        <img
-                          src={img}
-                          alt={`${service.title} ${index + 1}`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </button>
-                    ))}
-                  </div>
-                  {service.galleryImages.length > 4 && (
-                    <button
-                      onClick={() => openLightbox(0)}
-                      className="mt-3 text-primary hover:text-primary/80 text-sm font-medium"
-                    >
-                      View all {service.galleryImages.length} photos →
-                    </button>
-                  )}
-                </div>
-              )}
+
 
             </motion.div>
 
@@ -636,23 +606,23 @@ const ServiceDetail = () => {
                 </div>
               </div>
 
-              {/* Technology CTA for Water Leak Detection */}
-              {slug === 'water-leak-detection' && (
+              {/* Technology CTA for Underground Detection */}
+              {slug === 'underground-detection' && (
                 <Link
                   to="/technology"
-                  className="block rounded-2xl bg-gradient-to-br from-primary via-amber-500 to-primary p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-[1.02]"
+                  className="block rounded-2xl bg-gradient-to-br from-primary via-accent to-primary p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-[1.02]"
                 >
                   <div className="flex flex-col items-center gap-3">
-                    <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Atom className="h-7 w-7 text-white" />
+                    <div className="w-14 h-14 bg-primary-foreground/15 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Atom className="h-7 w-7 text-primary-foreground" />
                     </div>
-                    <h3 className="font-heading text-lg font-bold text-white">
+                    <h3 className="font-heading text-lg font-bold text-primary-foreground">
                       See Our Multi-Technology Approach
                     </h3>
-                    <p className="text-white/80 text-sm">
-                      Learn how we combine 4+ detection methods for pinpoint accuracy
+                    <p className="text-primary-foreground/80 text-sm">
+                      The equipment and methods we use across Lanzarote
                     </p>
-                    <span className="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-white/20 rounded-full text-white font-medium text-sm group-hover:bg-white/30 transition-colors">
+                    <span className="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-primary-foreground/15 rounded-full text-primary-foreground font-medium text-sm group-hover:bg-primary-foreground/25 transition-colors">
                       Explore Technology
                       <ChevronRight className="h-4 w-4" />
                     </span>
@@ -660,36 +630,28 @@ const ServiceDetail = () => {
                 </Link>
               )}
 
-              {slug === 'underground-detection' && service.galleryImages.length > 0 && (
-                <div className="rounded-2xl border border-border bg-card p-4">
-                  <h3 className="font-heading text-lg font-bold mb-3">Survey in action</h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    {[service.galleryImages[0], service.galleryImages[3], service.galleryImages[5]]
-                      .filter(Boolean)
-                      .slice(0, 3)
-                      .map((img, idx) => {
-                        const actualIndex = service.galleryImages.findIndex((x) => x === img);
-                        const isHero = idx === 0;
-                        return (
-                          <button
-                            key={`${img}-${idx}`}
-                            onClick={() => openLightbox(Math.max(actualIndex, 0))}
-                            className={`rounded-lg overflow-hidden cursor-zoom-in group ${
-                              isHero ? 'col-span-2 aspect-[16/10]' : 'aspect-[4/3]'
-                            }`}
-                          >
-                            <img
-                              src={img}
-                              alt={`${service.title} survey photo ${idx + 1}`}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                              loading="lazy"
-                              decoding="async"
-                            />
-                          </button>
-                        );
-                      })}
+              {/* Technology CTA for Water Leak Detection */}
+              {slug === 'water-leak-detection' && (
+                <Link
+                  to="/technology"
+                  className="block rounded-2xl bg-gradient-to-br from-primary via-accent to-primary p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-[1.02]"
+                >
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-14 h-14 bg-primary-foreground/15 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Atom className="h-7 w-7 text-primary-foreground" />
+                    </div>
+                    <h3 className="font-heading text-lg font-bold text-primary-foreground">
+                      See Our Multi-Technology Approach
+                    </h3>
+                    <p className="text-primary-foreground/80 text-sm">
+                      Learn how we combine 4+ detection methods for pinpoint accuracy
+                    </p>
+                    <span className="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-primary-foreground/15 rounded-full text-primary-foreground font-medium text-sm group-hover:bg-primary-foreground/25 transition-colors">
+                      Explore Technology
+                      <ChevronRight className="h-4 w-4" />
+                    </span>
                   </div>
-                </div>
+                </Link>
               )}
 
               {/* Gallery images on the right for compact layout pages */}
@@ -718,7 +680,7 @@ const ServiceDetail = () => {
             </motion.div>
           </div>
 
-          {service.galleryImages.length > 0 && slug !== 'underground-detection' && slug !== 'drain-unblocking' && service.content.length >= 600 && (
+          {service.galleryImages.length > 0 && (slug === 'underground-detection' || (slug !== 'drain-unblocking' && service.content.length >= 600)) && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
