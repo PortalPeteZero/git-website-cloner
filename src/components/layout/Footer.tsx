@@ -13,7 +13,7 @@ const Footer = () => {
       }} />
       
       {/* Callback Form Section */}
-      <div className="bg-primary py-12 relative overflow-hidden">
+      <div className="bg-primary py-8 relative overflow-hidden">
         {/* Diagonal stripe pattern */}
         <div className="absolute inset-0 opacity-[0.05]" style={{
           backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,1) 20px, rgba(255,255,255,1) 21px)`,
