@@ -18,7 +18,7 @@ const About = () => {
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={aboutHero} alt="" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
+          <img src={aboutHero} alt="Canary Detect leak detection team Lanzarote" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(30,41,59,0.9)] via-[rgba(30,41,59,0.7)] to-[rgba(30,41,59,0.4)]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,41,59,0.6)] via-transparent to-transparent" />
         </div>
@@ -57,14 +57,13 @@ const About = () => {
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Canary Detect was founded with a simple mission: to provide Lanzarote with 
-                professional, reliable leak detection services. We understand how frustrating and 
-                costly water leaks can be, which is why we've invested over <strong className="text-foreground">€80,000</strong> in 
-                the best equipment and training to deliver accurate results.
+                professional, reliable <Link to="/services" className="text-primary hover:underline">leak detection services</Link>. We understand how frustrating and 
+                costly water leaks can be, which is why we've invested over <Link to="/technology" className="text-primary hover:underline font-semibold">€80,000 in the latest equipment</Link> and training to deliver accurate results.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Our team brings together years of experience in plumbing, construction, and 
-                leak detection technology. We've helped hundreds of homeowners, businesses, 
-                and hotels across Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, and the whole island.
+                leak detection technology. We've helped <Link to="/case-studies" className="text-primary hover:underline">hundreds of homeowners, businesses, 
+                and hotels</Link> across Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, and the whole island.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 We take pride in our non-invasive approach - using advanced acoustic, thermal, 
@@ -79,7 +78,7 @@ const About = () => {
               className="relative"
             >
               <div className="aspect-square rounded-lg overflow-hidden relative">
-                <img src={welcomeImg} alt="Canary Detect team at work" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                <img src={welcomeImg} alt="Professional leak detection technician using acoustic equipment Lanzarote" className="w-full h-full object-cover" loading="lazy" decoding="async" />
                 <div className="absolute bottom-4 left-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg">
                   <p className="font-heading font-bold text-lg">Since 2014</p>
                 </div>

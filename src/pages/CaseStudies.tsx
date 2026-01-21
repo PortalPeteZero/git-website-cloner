@@ -19,63 +19,69 @@ import photo3 from "@/assets/gallery/photo-3.jpg";
 const caseStudies = [
   {
     id: 1,
-    title: "Hotel Pool Leak Detection",
+    title: "Hotel Swimming Pool Losing 5,000 Liters Daily",
     location: "Playa Blanca",
-    description: "Located a significant leak in a hotel pool that was causing water loss of 5,000 liters per day.",
+    description: "Located a significant leak in a hotel swimming pool that was causing massive water loss.",
     fullDescription: "A large hotel in Playa Blanca contacted us about their swimming pool which was losing approximately 5,000 liters of water per day. Using our specialist pool leak detection equipment, we were able to identify a crack in the pool shell caused by ground movement. The hotel was able to arrange repairs and significantly reduce their water and chemical costs.",
     result: "Leak found and repaired within 48 hours",
     metrics: { time: "48 hours", savings: "€12,000/year" },
     image: poolLeak1,
+    imageAlt: "Hotel swimming pool leak detection Playa Blanca",
   },
   {
     id: 2,
-    title: "Underground Pipe Location",
+    title: "Underground Pipe Location for Construction",
     location: "Puerto del Carmen",
     description: "Successfully mapped underground utility pipes for a new construction project.",
     fullDescription: "A construction company in Puerto del Carmen needed to know the exact location of all underground utilities before beginning excavation work on a new development. Our team used ground-penetrating radar and electromagnetic locating equipment to map all buried pipes and cables, providing detailed drawings for the construction team.",
     result: "Complete utility map delivered in 1 day",
     metrics: { time: "1 day", savings: "Avoided damage" },
     image: photo1,
+    imageAlt: "Underground pipe location Puerto del Carmen",
   },
   {
     id: 3,
-    title: "Residential Water Leak",
+    title: "Months of Unexplained Damp - Hidden Leak Found",
     location: "Costa Teguise",
-    description: "Found and repaired a hidden leak in a villa that had been causing damp problems for months.",
+    description: "Found a hidden leak in a villa that had been causing damp problems for months.",
     fullDescription: "The owners of a villa in Costa Teguise had been experiencing persistent damp on their walls for several months. Previous attempts to find the source had been unsuccessful. Using thermal imaging and acoustic leak detection, we were able to pinpoint a leak in a hot water pipe running under the floor slab. The repair was completed with minimal disruption.",
     result: "Problem solved after months of searching",
     metrics: { time: "3 hours", savings: "Minimal excavation" },
     image: photo2,
+    imageAlt: "Hidden water leak detection Costa Teguise villa",
   },
   {
     id: 4,
-    title: "Commercial Building Survey",
+    title: "Pre-Purchase Drainage Survey Saves €15,000",
     location: "Arrecife",
     description: "Pre-purchase drainage survey for a commercial property revealed significant issues.",
     fullDescription: "A client considering purchasing a commercial property in Arrecife asked us to conduct a comprehensive drainage survey before completing the purchase. Our CCTV inspection revealed significant root intrusion and collapsed sections in the main sewer line. This information allowed the buyer to negotiate a significant reduction in the purchase price.",
     result: "Saved client €15,000 in negotiations",
     metrics: { time: "Half day", savings: "€15,000" },
     image: drainDetection1,
+    imageAlt: "CCTV drainage survey commercial building Arrecife",
   },
   {
     id: 5,
-    title: "Apartment Complex Leak",
+    title: "Water Damage in Multiple Apartments - Single Leak Found",
     location: "Playa Honda",
     description: "Traced a leak affecting multiple apartments to a single source in the main riser.",
     fullDescription: "An apartment complex in Playa Honda was experiencing water damage in three different apartments on different floors. Building management suspected multiple leaks but our investigation revealed a single leak in the main water riser that was tracking through the building. One repair solved all the problems.",
     result: "Single leak causing multiple problems identified",
     metrics: { time: "4 hours", savings: "3 repairs avoided" },
     image: pipeInspection1,
+    imageAlt: "Apartment water riser leak detection Playa Honda",
   },
   {
     id: 6,
-    title: "Spa Resort Pool System",
+    title: "Spa Resort Swimming Pool System Survey",
     location: "Yaiza",
-    description: "Complete leak detection survey of spa facilities including pools, hot tubs, and pipework.",
-    fullDescription: "A luxury spa resort in Yaiza commissioned a complete leak detection survey of their water facilities. We tested all pools, hot tubs, fountains, and associated pipework. Several small leaks were identified and repaired, resulting in significant water and energy savings for the resort.",
+    description: "Complete leak detection survey of spa facilities including swimming pools, hot tubs, and pipework.",
+    fullDescription: "A luxury spa resort in Yaiza commissioned a complete leak detection survey of their water facilities. We tested all swimming pools, hot tubs, fountains, and associated pipework. Several small leaks were identified and repaired, resulting in significant water and energy savings for the resort.",
     result: "Annual water savings of €8,000+",
     metrics: { time: "2 days", savings: "€8,000/year" },
     image: photo3,
+    imageAlt: "Spa resort swimming pool leak survey Yaiza",
   },
 ];
 
@@ -93,7 +99,7 @@ const CaseStudies = () => {
         <div className="absolute inset-0">
           <img 
             src={caseStudiesHero} 
-            alt=""
+            alt="Leak detection case studies across Lanzarote"
             className="w-full h-full object-cover"
             fetchPriority="high"
             decoding="async"
@@ -113,8 +119,8 @@ const CaseStudies = () => {
               Leak Detection & Repair <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Case Studies Lanzarote</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
-              See examples of our leak detection work across Lanzarote. 
-              From hotel pools to residential villas, we've helped hundreds of clients solve their leak problems.
+              See examples of our <Link to="/services" className="underline hover:text-primary transition-colors">leak detection work</Link> across Lanzarote. 
+              From hotel swimming pools to residential villas, we've helped hundreds of clients solve their leak problems using our <Link to="/technology" className="underline hover:text-primary transition-colors">specialist equipment</Link>.
             </p>
           </motion.div>
         </div>
@@ -139,7 +145,7 @@ const CaseStudies = () => {
                   <div className="aspect-video overflow-hidden">
                     <img 
                       src={study.image} 
-                      alt={study.title}
+                      alt={study.imageAlt || study.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
                       decoding="async"

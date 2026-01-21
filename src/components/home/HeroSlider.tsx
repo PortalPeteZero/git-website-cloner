@@ -13,33 +13,43 @@ import photo5 from "@/assets/gallery/photo-5.jpg";
 const heroSlides = [
   {
     image: photo1,
+    alt: "Leak detection equipment and technician Lanzarote",
     title: "Leak Detection Lanzarote.",
     subtitle: "No Find, No Fee.",
-    description: "Professional water leak detection and pool leak detection across Lanzarote. Using €80,000+ specialist equipment including thermal imaging, acoustic sensors and tracer gas technology."
+    description: "Professional water leak detection and swimming pool leak detection across Lanzarote. Using €80,000+ specialist equipment including thermal imaging, acoustic sensors and tracer gas technology.",
+    subtext: "Is your pool losing water? Water meter running? Damp walls? We find and fix leaks fast."
   },
   {
     image: photo2,
-    title: "Pool Leak Detection.",
+    alt: "Swimming pool leak detection Playa Blanca Lanzarote",
+    title: "Swimming Pool Leak Detection.",
     subtitle: "Pool Losing Water?",
-    description: "Swimming pool leak detection specialists in Lanzarote. We don't just confirm leaks—we pinpoint the exact location using pressure testing, acoustic detection and CCTV inspection."
+    description: "Is your swimming pool losing water every day? Constant refilling? We don't just confirm leaks—we pinpoint the exact location using pressure testing, acoustic detection and CCTV inspection.",
+    subtext: ""
   },
   {
     image: photo3,
+    alt: "Underground pipe detection using ground-penetrating radar",
     title: "Underground Leak Detection.",
     subtitle: "Find Water Leaks Fast.",
-    description: "Underground water leak detection in Lanzarote. Find hidden leaks beneath floors, gardens and driveways with centimetre accuracy using ground-penetrating radar."
+    description: "Need to find buried pipes before digging? Underground water leak detection in Lanzarote. Find hidden leaks beneath floors, gardens and driveways with centimetre accuracy.",
+    subtext: ""
   },
   {
     image: photo4,
+    alt: "Thermal imaging camera detecting hidden water leak",
     title: "Water Pipe Leak Detection.",
     subtitle: "Hidden Leak Specialists.",
-    description: "Hidden water leak detection throughout the Canary Islands. Is your water meter running? We'll find the leak with thermal imaging, tracer gas and acoustic technology."
+    description: "Damp walls? High water bills? Meter running when taps are off? Find hidden water leaks in walls, floors and ceilings with thermal imaging, tracer gas and acoustic technology.",
+    subtext: ""
   },
   {
     image: photo5,
+    alt: "Professional leak repair service Lanzarote",
     title: "Leak Repair Lanzarote.",
     subtitle: "Detection to Repair.",
-    description: "Complete leak detection and repair service. Water pipe leak repair, pool pipe leak repair and underground leak repair. Emergency leak repair available across Lanzarote."
+    description: "Found a leak? We'll fix it fast. Complete leak detection and repair service. Water pipe leak repair, swimming pool pipe leak repair and underground leak repair across Lanzarote.",
+    subtext: ""
   }
 ];
 
@@ -70,7 +80,7 @@ const HeroSlider = () => {
         >
           <img 
             src={slide.image} 
-            alt="" 
+            alt={slide.alt} 
             className="w-full h-full object-cover"
             fetchPriority="high"
             decoding="async"

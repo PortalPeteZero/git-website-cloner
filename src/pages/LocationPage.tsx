@@ -410,7 +410,7 @@ const LocationPage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[50vh] md:min-h-[55vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={titleBg} alt="" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
+          <img src={titleBg} alt={`Leak detection services in ${locationData.name} Lanzarote`} className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(30,41,59,0.9)] via-[rgba(30,41,59,0.7)] to-[rgba(30,41,59,0.4)]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,41,59,0.6)] via-transparent to-transparent" />
         </div>
@@ -426,7 +426,7 @@ const LocationPage = () => {
               <span className="font-semibold text-sm uppercase tracking-[0.1em]">Leak Detection</span>
             </div>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
-              Leak Detection <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">{locationData.name}</span>
+              Professional Leak Detection & Repair in <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">{locationData.name}</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
               {locationData.heroText}

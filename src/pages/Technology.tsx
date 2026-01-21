@@ -76,7 +76,7 @@ const Technology = () => {
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={technologyHero} alt="" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
+          <img src={technologyHero} alt="Multi-technology leak detection equipment Lanzarote" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(30,41,59,0.9)] via-[rgba(30,41,59,0.7)] to-[rgba(30,41,59,0.4)]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,41,59,0.6)] via-transparent to-transparent" />
         </div>
@@ -92,9 +92,9 @@ const Technology = () => {
               Professional Multi-Technology <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Leak Detection Lanzarote</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
-              Many leak detection companies rely on just one technology, but no single method is 100% accurate. 
+              Struggling to find where water is leaking from? Many leak detection companies rely on just one technology, but no single method is 100% accurate. 
               Each has its own strengths and limitations. That's why we always confirm a leak location using 
-              at least two independent technologies.
+              at least two independent technologies for our <Link to="/services" className="underline hover:text-primary transition-colors">leak detection services</Link>.
             </p>
           </motion.div>
         </div>
@@ -301,7 +301,7 @@ const Technology = () => {
             </h2>
             <p className="text-primary-foreground/90 text-lg mb-8 max-w-xl mx-auto">
               Contact us today for a free consultation. Our multi-technology approach 
-              means we'll find your leak with confidence.
+              means we'll find your leak with confidence. <Link to="/case-studies" className="underline hover:text-white transition-colors">See our case studies</Link> for real examples.
             </p>
             <Button size="lg" variant="secondary" className="shadow-xl" asChild>
               <Link to="/contact">Get a Free Quote</Link>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Droplets, Search, Cable, Waves, CircleDot, Wrench } from "lucide-react";
 import ServiceCard from "@/components/home/ServiceCard";
@@ -43,28 +44,28 @@ const services = [
   },
   {
     title: "Underground Detection",
-    description: "Locate underground pipes, cables, and utilities using ground-penetrating radar and electromagnetic pipe locators. Essential for construction and renovation projects.",
+    description: "Need to find buried pipes before digging? Avoid costly damage by locating underground pipes, cables, and utilities with ground-penetrating radar and electromagnetic locators.",
     icon: Cable,
     href: "/services/underground-detection",
     images: [undergroundDetectionImg, undergroundDetection6],
   },
   {
     title: "Water Leak Detection",
-    description: "Find hidden water leaks in walls, floors, and ceilings using acoustic listening devices and thermal imaging cameras. Non-invasive and accurate.",
+    description: "Damp walls? High water bills? Meter running when taps are off? Find hidden water leaks in walls, floors, and ceilings using acoustic and thermal imaging.",
     icon: Droplets,
     href: "/services/water-leak-detection",
     images: [waterLeakDetectionImg, waterLeak1, waterLeak2],
   },
   {
-    title: "Pool Leak Detection",
-    description: "Specialist pool and spa leak detection to stop water loss and reduce chemical costs. We use pressure testing and dye testing techniques.",
+    title: "Swimming Pool Leak Detection",
+    description: "Is your swimming pool losing water every day? Constant refilling? We'll find the leak using pressure testing and dye testing techniques to stop water loss.",
     icon: Waves,
     href: "/services/pool-leak-detection",
     images: [poolLeakDetectionImg, poolLeak2, poolLeak3],
   },
   {
     title: "Leak Repair",
-    description: "Professional leak repair services once we've located the problem. We offer complete solutions from detection to repair.",
+    description: "Found a leak? We'll fix it fast. Professional leak repair services once we've located the problem. Complete solutions from detection to repair.",
     icon: Wrench,
     href: "/services/leak-repair",
     images: [leakRepairImg],
@@ -86,7 +87,7 @@ const Services = () => {
         <div className="absolute inset-0">
           <img 
             src={servicesHero} 
-            alt=""
+            alt="Professional leak detection equipment case Lanzarote"
             className="w-full h-full object-cover"
             fetchPriority="high"
             decoding="async"
@@ -107,8 +108,8 @@ const Services = () => {
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
               Professional leak detection and repair services across Lanzarote and the Canary Islands. 
-              We use €80,000+ of specialist equipment including thermal imaging, acoustic sensors 
-              and tracer gas to find water leaks, pool leaks and underground pipe leaks with centimetre accuracy.
+              We use <Link to="/technology" className="underline hover:text-primary transition-colors">€80,000+ of specialist equipment</Link> including thermal imaging, acoustic sensors 
+              and tracer gas to find water leaks, swimming pool leaks and underground pipe leaks with centimetre accuracy.
             </p>
           </motion.div>
         </div>
