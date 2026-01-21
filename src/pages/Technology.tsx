@@ -87,13 +87,13 @@ const Technology = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Our Technology</span>
+            <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">The Leaky Finders' Technology</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
               Professional Multi-Technology <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Leak Detection Lanzarote</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
               Struggling to find where water is leaking from? Many leak detection companies rely on just one technology, but no single method is 100% accurate. 
-              Each has its own strengths and limitations. That's why we always confirm a leak location using 
+              That's why The Leaky Finders always confirm a leak location using 
               at least two independent technologies for our <Link to="/services" className="underline hover:text-primary transition-colors">leak detection services</Link>.
             </p>
           </motion.div>
@@ -297,7 +297,7 @@ const Technology = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Ready to Find Your Leak?
+              Ready for The Leaky Finders?
             </h2>
             <p className="text-primary-foreground/90 text-lg mb-8 max-w-xl mx-auto">
               Contact us today for a free consultation. Our multi-technology approach 

@@ -112,12 +112,12 @@ const Services = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Our Services</span>
+            <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">The Leaky Finders</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
               Leak Detection Services <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Lanzarote</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
-              Professional leak detection and repair services across Lanzarote and the Canary Islands. 
+              The Leaky Finders provide professional leak detection and repair services across Lanzarote. 
               We use <Link to="/technology" className="underline hover:text-primary transition-colors">€80,000+ of specialist equipment</Link> including thermal imaging, acoustic sensors 
               and tracer gas to find water leaks, swimming pool leaks and underground pipe leaks with centimetre accuracy.
             </p>
@@ -149,7 +149,7 @@ const Services = () => {
             viewport={{ once: true }}
             className="text-center max-w-2xl mx-auto mb-12"
           >
-            <span className="text-primary font-medium">Why Choose Us</span>
+            <span className="text-primary font-medium">Why Choose The Leaky Finders</span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">
               The Canary Detect Difference
             </h2>
