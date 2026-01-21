@@ -551,46 +551,81 @@ const ServiceDetail = () => {
               </h2>
               
               {/* Split content into paragraphs with better formatting */}
-              <div className="space-y-4">
-                {service.content.split("\n\n").map((paragraph, idx) => (
-                  <Fragment key={idx}>
-                    <p className="text-muted-foreground leading-relaxed">{paragraph}</p>
+              {(() => {
+                const paragraphs = service.content.split("\n\n");
+                // For water-leak-detection, the last paragraph is the "No Find, No Fee" - we'll render it as a banner separately
+                const contentParagraphs = slug === "water-leak-detection" ? paragraphs.slice(0, -1) : paragraphs;
+                return (
+                  <div className="space-y-4">
+                    {contentParagraphs.map((paragraph, idx) => (
+                      <Fragment key={idx}>
+                        <p className="text-muted-foreground leading-relaxed">{paragraph}</p>
 
-                    {/* Water Leak Detection: insert the tech card mid-content so it lines up with the right-side CTA */}
-                    {slug === "water-leak-detection" && idx === 1 && (
-                      <div className="bg-gradient-to-br from-slate-50 to-muted/50 rounded-2xl p-6 md:p-8 border border-border">
-                        <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-3">
-                          <div className="w-10 h-10 bg-canary-navy rounded-lg flex items-center justify-center">
-                            <Search className="h-5 w-5 text-white" />
-                          </div>
-                          Detection Technologies We Use
-                        </h3>
-                        <div className="grid sm:grid-cols-2 gap-4">
-                          {[
-                            { icon: Atom, name: "GASENSE", desc: "Tracer gas detection for buried pipes" },
-                            { icon: AudioLines, name: "Geophones", desc: "Acoustic listening devices" },
-                            { icon: Thermometer, name: "Thermal Imaging", desc: "Infrared temperature detection" },
-                            { icon: Mic, name: "Pipe Mic", desc: "Centimetre-accurate positioning" },
-                          ].map((tech, tIdx) => (
-                            <div
-                              key={tIdx}
-                              className="flex items-start gap-3 p-3 bg-white rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-sm transition-all"
-                            >
-                              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <tech.icon className="h-5 w-5 text-primary" />
+                        {/* Water Leak Detection: insert the tech card mid-content so it lines up with the right-side CTA */}
+                        {slug === "water-leak-detection" && idx === 1 && (
+                          <div className="bg-gradient-to-br from-slate-50 to-muted/50 rounded-2xl p-6 md:p-8 border border-border">
+                            <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-3">
+                              <div className="w-10 h-10 bg-canary-navy rounded-lg flex items-center justify-center">
+                                <Search className="h-5 w-5 text-white" />
                               </div>
-                              <div>
-                                <p className="font-semibold text-foreground">{tech.name}</p>
-                                <p className="text-sm text-muted-foreground">{tech.desc}</p>
-                              </div>
+                              Detection Technologies We Use
+                            </h3>
+                            <div className="grid sm:grid-cols-2 gap-4">
+                              {[
+                                { icon: Atom, name: "GASENSE", desc: "Tracer gas detection for buried pipes" },
+                                { icon: AudioLines, name: "Geophones", desc: "Acoustic listening devices" },
+                                { icon: Thermometer, name: "Thermal Imaging", desc: "Infrared temperature detection" },
+                                { icon: Mic, name: "Pipe Mic", desc: "Centimetre-accurate positioning" },
+                              ].map((tech, tIdx) => (
+                                <div
+                                  key={tIdx}
+                                  className="flex items-start gap-3 p-3 bg-white rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-sm transition-all"
+                                >
+                                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <tech.icon className="h-5 w-5 text-primary" />
+                                  </div>
+                                  <div>
+                                    <p className="font-semibold text-foreground">{tech.name}</p>
+                                    <p className="text-sm text-muted-foreground">{tech.desc}</p>
+                                  </div>
+                                </div>
+                              ))}
                             </div>
-                          ))}
-                        </div>
+                          </div>
+                        )}
+                      </Fragment>
+                    ))}
+                  </div>
+                );
+              })()}
+
+              {/* No Find, No Fee Banner - Water Leak Detection */}
+              {slug === "water-leak-detection" && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="mt-8 bg-gradient-to-r from-primary via-accent to-primary rounded-xl p-6 md:p-8 shadow-lg"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                        <Shield className="h-7 w-7 text-white" />
                       </div>
-                    )}
-                  </Fragment>
-                ))}
-              </div>
+                    </div>
+                    <div>
+                      <h3 className="font-heading text-xl font-bold text-white mb-2">No Find, No Fee Guarantee</h3>
+                      <p className="text-white/90 leading-relaxed">
+                        We operate on a No Find, No Fee basis - if we confirm you have a leak but cannot locate it, there is no charge. Our surveys include detailed professional reports suitable for insurance claims.
+                      </p>
+                    </div>
+                    <div className="flex-shrink-0 flex items-center gap-2">
+                      <FileText className="h-6 w-6 text-white/80" />
+                      <span className="text-white/80 text-sm font-medium">Insurance-Ready Reports</span>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
 
 
 
