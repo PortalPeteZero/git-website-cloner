@@ -35,8 +35,6 @@ import drainDetection8 from "@/assets/services/gallery/drain-detection-8.jpg";
 import pipeInspection2 from "@/assets/services/gallery/pipe-inspection-2.jpg";
 import pipeInspection3 from "@/assets/services/gallery/pipe-inspection-3.jpg";
 import poolLeak1 from "@/assets/services/gallery/pool-leak-1.jpg";
-import poolLeak2 from "@/assets/services/gallery/pool-leak-2.jpg";
-import poolLeak3 from "@/assets/services/gallery/pool-leak-3.jpg";
 import poolLeak4 from "@/assets/services/gallery/pool-leak-4.jpg";
 import poolLeak5 from "@/assets/services/gallery/pool-leak-5.jpg";
 import poolLeak6 from "@/assets/services/gallery/pool-leak-6.jpg";
@@ -245,7 +243,7 @@ const servicesData: Record<string, ServiceData> = {
     description: "Professional swimming pool leak repair in Lanzarote. From pipe repairs to shell crack fixing, we repair all types of pool leaks with lasting solutions.",
     icon: Waves,
     heroImage: poolLeakRepairImg,
-    galleryImages: [poolRepair1, poolLeak2],
+    galleryImages: [poolRepair1, poolLeak9, poolLeak10],
     seo: {
       title: "Pool Leak Repair Lanzarote | Swimming Pool Pipe Repair | Pool Shell Repair",
       description: "Professional pool leak repair Lanzarote. Swimming pool pipe repair, shell crack repair, fitting replacement. Complete pool leak detection and repair service. Quality materials & lasting repairs.",
