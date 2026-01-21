@@ -1,73 +1,11 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
+import SEOHead from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Calendar, User, ArrowRight } from "lucide-react";
-
-// Import unique images for each blog post
+import { Calendar, User, ArrowRight, Clock } from "lucide-react";
+import { blogArticles } from "@/data/blogArticles";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
-import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg";
-import poolLeakImg from "@/assets/services/pool-leak-detection.jpg";
-import drainDetectionImg from "@/assets/services/drain-detection.jpg";
-import undergroundImg from "@/assets/services/underground-detection.jpg";
-import leakRepairImg from "@/assets/services/leak-repair.jpg";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "5 Signs You May Have a Hidden Water Leak",
-    excerpt: "Water leaks can go unnoticed for months, causing significant damage. Here are the warning signs to look out for...",
-    date: "2024-01-15",
-    author: "Pete Ashcroft",
-    category: "Tips & Advice",
-    image: waterLeakImg,
-  },
-  {
-    id: 2,
-    title: "The Benefits of Non-Invasive Leak Detection",
-    excerpt: "Modern leak detection technology means we can find leaks without breaking walls or floors. Learn how it works...",
-    date: "2024-01-08",
-    author: "Dave Poxon",
-    category: "Technology",
-    image: pipeInspectionImg,
-  },
-  {
-    id: 3,
-    title: "Swimming Pool Leak Detection: What You Need to Know",
-    excerpt: "Is your pool losing water? It might be evaporation, or it could be a leak. Here's how to tell the difference...",
-    date: "2023-12-20",
-    author: "Pete Ashcroft",
-    category: "Pool Care",
-    image: poolLeakImg,
-  },
-  {
-    id: 4,
-    title: "Understanding Your Water Bill: Signs of a Leak",
-    excerpt: "An unexplained increase in your water bill is often the first sign of a leak. Here's what to look for...",
-    date: "2023-12-10",
-    author: "Dave Poxon",
-    category: "Tips & Advice",
-    image: drainDetectionImg,
-  },
-  {
-    id: 5,
-    title: "Thermal Imaging in Leak Detection",
-    excerpt: "Thermal imaging cameras are one of our most valuable tools. Discover how they help us find hidden leaks...",
-    date: "2023-11-28",
-    author: "Pete Ashcroft",
-    category: "Technology",
-    image: undergroundImg,
-  },
-  {
-    id: 6,
-    title: "Preparing Your Property for a Leak Detection Survey",
-    excerpt: "Getting ready for a leak detection visit? Here's how to prepare your property for the best results...",
-    date: "2023-11-15",
-    author: "Dave Poxon",
-    category: "Tips & Advice",
-    image: leakRepairImg,
-  },
-];
 
 const Blog = () => {
   const formatDate = (dateString: string) => {
@@ -77,10 +15,17 @@ const Blog = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Leak Detection Blog | Tips & Guides | Canary Detect Lanzarote"
+        description="Expert leak detection tips, guides, and advice for Lanzarote property owners. Learn how to detect pool leaks, find underground water leaks, and protect your property."
+        keywords="leak detection blog, pool leak tips, water leak guide, underground leak detection, Lanzarote plumbing advice"
+        canonical="https://canary-detect.com/blog"
+      />
+
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={waterLeakImg} alt="" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
+          <img src={waterLeakImg} alt="Leak detection tips and advice blog" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-canary-navy/90 via-canary-navy/70 to-canary-navy/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-canary-navy/60 via-transparent to-transparent" />
         </div>
@@ -91,24 +36,82 @@ const Blog = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">Our Blog</span>
+            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">Leak Detection Blog</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight">
-              News & <span className="text-primary">Insights</span>
+              Expert Tips & <span className="text-primary">Guides</span>
             </h1>
             <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-2xl">
-              Tips, advice, and insights from our leak detection experts. 
-              Learn more about leak detection technology and how to protect your property.
+              Practical advice from Lanzarote's leak detection experts. 
+              Learn how to identify leaks, protect your property, and save money on repairs.
             </p>
           </motion.div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
       </section>
 
+      {/* Featured Article */}
+      {blogArticles[0] && (
+        <section className="py-12 md:py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <motion.article
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto"
+            >
+              <Link to={`/blog/${blogArticles[0].slug}`} className="group">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <img
+                    src={blogArticles[0].image}
+                    alt={blogArticles[0].title}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </Link>
+              <div>
+                <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
+                  Featured Article
+                </span>
+                <Link to={`/blog/${blogArticles[0].slug}`}>
+                  <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4 hover:text-primary transition-colors">
+                    {blogArticles[0].title}
+                  </h2>
+                </Link>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  {blogArticles[0].excerpt}
+                </p>
+                <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
+                  <span className="flex items-center gap-1">
+                    <Calendar className="h-4 w-4" />
+                    {formatDate(blogArticles[0].date)}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Clock className="h-4 w-4" />
+                    {blogArticles[0].readTime} min read
+                  </span>
+                </div>
+                <Button asChild>
+                  <Link to={`/blog/${blogArticles[0].slug}`}>
+                    Read Article
+                    <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
+                </Button>
+              </div>
+            </motion.article>
+          </div>
+        </section>
+      )}
+
       {/* Blog Grid */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-12 md:py-16 bg-muted">
         <div className="container mx-auto px-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-10">
+            All Articles
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
+            {blogArticles.slice(1).map((post, index) => (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -117,15 +120,17 @@ const Blog = () => {
                 transition={{ delay: index * 0.1 }}
                 className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
               >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={`${post.title} cover`}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+                <Link to={`/blog/${post.slug}`}>
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </Link>
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
                     <span className="flex items-center gap-1">
@@ -133,20 +138,28 @@ const Blog = () => {
                       {formatDate(post.date)}
                     </span>
                     <span className="flex items-center gap-1">
-                      <User className="h-3 w-3" />
-                      {post.author}
+                      <Clock className="h-3 w-3" />
+                      {post.readTime} min
                     </span>
                   </div>
-                  <h2 className="font-heading font-bold text-lg mb-2 group-hover:text-primary transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  <span className="text-xs text-primary font-medium">
+                    {post.category}
+                  </span>
+                  <Link to={`/blog/${post.slug}`}>
+                    <h3 className="font-heading font-bold text-lg mt-1 mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+                  </Link>
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-2">
                     {post.excerpt}
                   </p>
-                  <span className="inline-flex items-center text-primary font-medium text-sm group-hover:underline cursor-pointer">
+                  <Link 
+                    to={`/blog/${post.slug}`}
+                    className="inline-flex items-center text-primary font-medium text-sm hover:underline"
+                  >
                     Read More
                     <ArrowRight className="h-4 w-4 ml-1" />
-                  </span>
+                  </Link>
                 </div>
               </motion.article>
             ))}
@@ -155,7 +168,7 @@ const Blog = () => {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-16 md:py-24 bg-muted">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -164,19 +177,18 @@ const Blog = () => {
             className="max-w-xl mx-auto"
           >
             <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">
-              Stay Updated
+              Need Help With a Leak?
             </h2>
             <p className="text-muted-foreground mb-6">
-              Get the latest tips and news about leak detection delivered to your inbox.
+              Our expert team is ready to help you find and fix leaks across Lanzarote. 
+              Contact us for a free consultation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-              />
-              <Button>Subscribe</Button>
-            </div>
+            <Button asChild size="lg">
+              <Link to="/contact">
+                Get a Free Quote
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>
