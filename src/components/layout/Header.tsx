@@ -195,6 +195,14 @@ const Header = () => {
                     Pool Leak Surveys
                   </Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link 
+                    to="/services/free-leak-confirmation" 
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                  >
+                    Free Leak Confirmation Test
+                  </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -389,6 +397,15 @@ const Header = () => {
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
                         Pool Leak Surveys
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link 
+                        to="/services/free-leak-confirmation" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
+                      >
+                        Free Leak Confirmation Test
                       </Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
