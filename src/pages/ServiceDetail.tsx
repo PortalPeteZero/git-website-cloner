@@ -46,6 +46,11 @@ import poolLeak11 from "@/assets/services/gallery/pool-leak-11.jpg";
 import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
 import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
+import undergroundDetection1 from "@/assets/services/gallery/underground-detection-1.jpg";
+import undergroundDetection2 from "@/assets/services/gallery/underground-detection-2.jpg";
+import undergroundDetection3 from "@/assets/services/gallery/underground-detection-3.jpg";
+import undergroundDetection4 from "@/assets/services/gallery/underground-detection-4.jpg";
+import undergroundDetection5 from "@/assets/services/gallery/underground-detection-5.jpg";
 import drainUnblocking1 from "@/assets/services/gallery/drain-unblocking-1.jpg";
 import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
 import poolRepair2 from "@/assets/services/gallery/pool-repair-2.jpg";
@@ -65,6 +70,15 @@ const waterLeakCarouselImages = [
   { src: drainDetection6, alt: "Underground water leak detection with specialist equipment" },
   { src: drainDetection7, alt: "Pipe leak detection using acoustic technology" },
   { src: drainDetection8, alt: "Canary Detect field technician locating water leak" },
+];
+
+// Underground detection carousel images
+const undergroundCarouselImages = [
+  { src: undergroundDetection1, alt: "Ground penetrating radar survey in Lanzarote volcanic terrain" },
+  { src: undergroundDetection2, alt: "Electromagnetic pipe locator detecting buried utilities" },
+  { src: undergroundDetection3, alt: "RIDGID SeekTech pipe location equipment in use" },
+  { src: undergroundDetection4, alt: "Underground pipe detection in villa garden" },
+  { src: undergroundDetection5, alt: "Pipe location survey using electromagnetic technology" },
 ];
 
 interface ServiceData {
