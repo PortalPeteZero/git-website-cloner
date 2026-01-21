@@ -114,13 +114,13 @@ const CaseStudies = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Our Work</span>
+            <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">The Leaky Finders at Work</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
               Leak Detection & Repair <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Case Studies Lanzarote</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
-              See examples of our <Link to="/services" className="underline hover:text-primary transition-colors">leak detection work</Link> across Lanzarote. 
-              From hotel swimming pools to residential villas, we've helped hundreds of clients solve their leak problems using our <Link to="/technology" className="underline hover:text-primary transition-colors">specialist equipment</Link>.
+              See how The Leaky Finders solve <Link to="/services" className="underline hover:text-primary transition-colors">leak problems</Link> across Lanzarote. 
+              From hotel swimming pools to residential villas, we've helped hundreds of clients using our <Link to="/technology" className="underline hover:text-primary transition-colors">specialist equipment</Link>.
             </p>
           </motion.div>
         </div>
@@ -211,10 +211,10 @@ const CaseStudies = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Have a Similar Problem?
+              Need The Leaky Finders?
             </h2>
             <p className="text-primary-foreground/90 text-lg mb-8 max-w-xl mx-auto">
-              Contact us today to discuss your leak detection needs. We're here to help.
+              Contact The Leaky Finders today to discuss your leak detection needs. We're here to help.
             </p>
             <Button size="lg" variant="secondary" className="shadow-xl" asChild>
               <Link to="/contact">Get a Quote</Link>

@@ -96,9 +96,9 @@ const Blog = () => {
   return (
     <Layout>
       <SEOHead
-        title="Leak Detection Blog | Tips & Guides | Canary Detect Lanzarote"
-        description="Expert leak detection tips, guides, and advice for Lanzarote property owners. Learn how to detect pool leaks, find underground water leaks, and protect your property."
-        keywords="leak detection blog, pool leak tips, water leak guide, underground leak detection, Lanzarote plumbing advice"
+        title="Leak Detection Blog | Tips & Guides | The Leaky Finders Lanzarote"
+        description="Expert leak detection tips and guides from The Leaky Finders. Learn how to detect pool leaks, find underground water leaks, and protect your Lanzarote property."
+        keywords="leak detection blog, The Leaky Finders tips, pool leak guide, water leak detection Lanzarote, underground leak detection, Lanzarote plumbing advice"
         canonical="https://canary-detect.com/blog"
       />
 
@@ -116,12 +116,12 @@ const Blog = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">Leak Detection Blog</span>
+            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">The Leaky Finders Blog</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight">
               Expert Tips & <span className="text-primary">Guides</span>
             </h1>
             <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-2xl">
-              Practical advice from Lanzarote's leak detection experts. 
+              Practical advice from The Leaky Finders - Lanzarote's leak detection experts. 
               Learn how to identify leaks, protect your property, and save money on repairs.
             </p>
           </motion.div>
@@ -264,11 +264,11 @@ const Blog = () => {
             className="max-w-xl mx-auto"
           >
             <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">
-              Need Help With a Leak?
+              Need The Leaky Finders?
             </h2>
             <p className="text-muted-foreground mb-6">
               Our expert team is ready to help you find and fix leaks across Lanzarote. 
-              Contact us for a free consultation.
+              Contact The Leaky Finders for a free consultation.
             </p>
             <Button asChild size="lg">
               <Link to="/contact">

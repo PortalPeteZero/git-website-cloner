@@ -6,7 +6,7 @@ const testimonials = [
     id: 1,
     name: "María García",
     location: "Puerto del Carmen",
-    text: "Canary Detect found a leak in our pool that we'd been searching for months. Professional, fast, and saved us thousands in water bills. Highly recommended!",
+    text: "The Leaky Finders found a leak in our pool that we'd been searching for months. Professional, fast, and saved us thousands in water bills. Highly recommended!",
     rating: 5,
     initials: "MG",
   },
@@ -14,7 +14,7 @@ const testimonials = [
     id: 2,
     name: "John Mitchell",
     location: "Playa Blanca",
-    text: "Excellent service! They located a hidden pipe leak under our villa floor without any damage. The thermal imaging technology is impressive.",
+    text: "Excellent service from The Leaky Finders! They located a hidden pipe leak under our villa floor without any damage. The thermal imaging technology is impressive.",
     rating: 5,
     initials: "JM",
   },
@@ -22,7 +22,7 @@ const testimonials = [
     id: 3,
     name: "Carlos Rodríguez",
     location: "Arrecife",
-    text: "Very professional team. They helped us map all underground utilities before our construction project. Saved us from costly mistakes.",
+    text: "Very professional team at Canary Detect. They helped us map all underground utilities before our construction project. The Leaky Finders saved us from costly mistakes.",
     rating: 5,
     initials: "CR",
   },
@@ -30,7 +30,7 @@ const testimonials = [
     id: 4,
     name: "Sarah Thompson",
     location: "Costa Teguise",
-    text: "After months of unexplained damp, Canary Detect found the leak in just a few hours. Great communication and fair pricing.",
+    text: "After months of unexplained damp, The Leaky Finders found the source in just a few hours. Great communication and fair pricing. Truly the leak detection experts!",
     rating: 5,
     initials: "ST",
   },
@@ -50,11 +50,11 @@ const TestimonialsSection = () => {
             Testimonials
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-canary-navy">
-            What Our Clients Say
+            What Clients Say About The Leaky Finders
           </h2>
           <p className="text-muted-foreground">
             Don't just take our word for it - hear from property owners across Lanzarote
-            who have trusted us with their leak detection needs.
+            who have trusted Canary Detect with their leak detection needs.
           </p>
         </motion.div>
 
