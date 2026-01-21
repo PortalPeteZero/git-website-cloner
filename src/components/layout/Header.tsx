@@ -79,20 +79,73 @@ const Header = () => {
             {/* Divider */}
             <div className="h-8 w-px bg-border mx-2" />
 
-            {/* Services Button */}
-            <Link to="/services">
-              <Button 
-                variant="outline" 
-                size="sm"
-                className={`gap-1.5 border-2 font-semibold transition-all duration-300 shadow-sm hover:shadow-md ${
-                  isServicesActive 
-                    ? "border-primary bg-primary/10 text-primary" 
-                    : "border-canary-navy/20 bg-canary-navy/5 text-canary-navy hover:border-canary-navy/40 hover:bg-canary-navy/10"
-                }`}
-              >
-                Services
-              </Button>
-            </Link>
+            {/* Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className={`gap-1.5 border-2 font-semibold transition-all duration-300 shadow-sm hover:shadow-md ${
+                    isServicesActive 
+                      ? "border-primary bg-primary/10 text-primary" 
+                      : "border-canary-navy/20 bg-canary-navy/5 text-canary-navy hover:border-canary-navy/40 hover:bg-canary-navy/10"
+                  }`}
+                >
+                  Services
+                  <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-2 border-primary/20 shadow-xl rounded-lg p-1 z-50">
+                <DropdownMenuItem asChild>
+                  <Link 
+                    to="/services/drain-detection" 
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                  >
+                    Drain Surveys
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link 
+                    to="/services/drain-unblocking" 
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                  >
+                    Drain Unblocking
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link 
+                    to="/services/leak-repair" 
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                  >
+                    Leak Repair
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link 
+                    to="/services/pool-leak-repair" 
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                  >
+                    Pool Leak Repair
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link 
+                    to="/services/pipe-inspection" 
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                  >
+                    Pipe Inspection
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link 
+                    to="/services/underground-detection" 
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                  >
+                    Underground Pipe & Cable Location
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             {/* Villa & Pool Leaks Dropdown */}
             <DropdownMenu>
@@ -214,23 +267,78 @@ const Header = () => {
 
               {/* Buttons */}
               <div className="flex flex-col gap-3 px-2">
-                <Link 
-                  to="/services"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="w-full"
-                >
-                  <Button 
-                    variant="outline" 
-                    size="default"
-                    className={`w-full justify-center gap-1.5 border-2 font-semibold transition-all duration-300 ${
-                      isServicesActive 
-                        ? "border-primary bg-primary/10 text-primary" 
-                        : "border-canary-navy/20 bg-canary-navy/5 text-canary-navy hover:border-canary-navy/40 hover:bg-canary-navy/10"
-                    }`}
-                  >
-                    Services
-                  </Button>
-                </Link>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button 
+                      variant="outline" 
+                      size="default"
+                      className={`w-full justify-between gap-1.5 border-2 font-semibold transition-all duration-300 ${
+                        isServicesActive 
+                          ? "border-primary bg-primary/10 text-primary" 
+                          : "border-canary-navy/20 bg-canary-navy/5 text-canary-navy hover:border-canary-navy/40 hover:bg-canary-navy/10"
+                      }`}
+                    >
+                      Services
+                      <ChevronDown className="h-4 w-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-2 border-primary/20 shadow-xl rounded-lg p-1 z-50 w-[250px]">
+                    <DropdownMenuItem asChild>
+                      <Link 
+                        to="/services/drain-detection" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
+                      >
+                        Drain Surveys
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link 
+                        to="/services/drain-unblocking" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
+                      >
+                        Drain Unblocking
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link 
+                        to="/services/leak-repair" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
+                      >
+                        Leak Repair
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link 
+                        to="/services/pool-leak-repair" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
+                      >
+                        Pool Leak Repair
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link 
+                        to="/services/pipe-inspection" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
+                      >
+                        Pipe Inspection
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link 
+                        to="/services/underground-detection" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
+                      >
+                        Underground Pipe & Cable Location
+                      </Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
