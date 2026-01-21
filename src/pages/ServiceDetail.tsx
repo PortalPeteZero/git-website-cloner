@@ -601,12 +601,10 @@ const ServiceDetail = () => {
                 </div>
               </div>
 
-              {/* Gallery images on the right for short content pages */}
-              {service.galleryImages.length > 0 && service.content.length < 600 && (
+              {/* Gallery images on the right for compact layout pages */}
+              {service.galleryImages.length > 0 && (slug === 'underground-detection' || slug === 'drain-unblocking') && (
                 <div>
-                  <h3 className="font-heading text-lg font-bold mb-3">
-                    {slug === 'leak-repair' ? 'Before & After' : 'Gallery'}
-                  </h3>
+                  <h3 className="font-heading text-lg font-bold mb-3">Gallery</h3>
                   <div className="grid grid-cols-2 gap-3">
                     {service.galleryImages.slice(0, 6).map((img, index) => (
                       <button
@@ -624,21 +622,13 @@ const ServiceDetail = () => {
                       </button>
                     ))}
                   </div>
-                  {service.galleryImages.length > 6 && (
-                    <button
-                      onClick={() => openLightbox(6)}
-                      className="mt-3 text-primary hover:text-primary/80 text-sm font-medium"
-                    >
-                      View all {service.galleryImages.length} photos →
-                    </button>
-                  )}
                 </div>
               )}
             </motion.div>
           </div>
 
-          {/* Full Width Gallery Section - Only for pages with longer content */}
-          {service.galleryImages.length > 0 && service.content.length >= 600 && (
+          {/* Full Width Gallery Section - For most pages except compact layout ones */}
+          {service.galleryImages.length > 0 && slug !== 'underground-detection' && slug !== 'drain-unblocking' && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
