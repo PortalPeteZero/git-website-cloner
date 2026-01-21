@@ -300,12 +300,26 @@ const ServiceDetail = () => {
     return [];
   };
   const carouselImages = getCarouselImages();
+
+  // Underground: avoid repeating the hero-collage images in the gallery
+  const undergroundHeroSources = isUndergroundPage
+    ? new Set(carouselImages.slice(0, 3).map((i) => i.src))
+    : new Set<string>();
+  const galleryImages = isUndergroundPage
+    ? service?.galleryImages.filter((img) => !undergroundHeroSources.has(img)) ?? []
+    : service?.galleryImages ?? [];
   
   // Lightbox state for gallery
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [lightboxImages, setLightboxImages] = useState<string[]>([]);
   
-  const openLightbox = (index: number) => {
+  useEffect(() => {
+    if (service) setLightboxImages(service.galleryImages);
+  }, [service]);
+
+  const openLightbox = (index: number, images?: string[]) => {
+    setLightboxImages(images ?? service?.galleryImages ?? []);
     setLightboxIndex(index);
     setLightboxOpen(true);
   };
@@ -313,15 +327,13 @@ const ServiceDetail = () => {
   const closeLightbox = () => setLightboxOpen(false);
   
   const nextImage = () => {
-    if (service) {
-      setLightboxIndex((prev) => (prev + 1) % service.galleryImages.length);
-    }
+    if (!lightboxImages.length) return;
+    setLightboxIndex((prev) => (prev + 1) % lightboxImages.length);
   };
   
   const prevImage = () => {
-    if (service) {
-      setLightboxIndex((prev) => (prev - 1 + service.galleryImages.length) % service.galleryImages.length);
-    }
+    if (!lightboxImages.length) return;
+    setLightboxIndex((prev) => (prev - 1 + lightboxImages.length) % lightboxImages.length);
   };
   
   useEffect(() => {
@@ -680,7 +692,7 @@ const ServiceDetail = () => {
             </motion.div>
           </div>
 
-          {service.galleryImages.length > 0 && (slug === 'underground-detection' || (slug !== 'drain-unblocking' && service.content.length >= 600)) && (
+          {galleryImages.length > 0 && (slug === 'underground-detection' || (slug !== 'drain-unblocking' && service.content.length >= 600)) && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -693,12 +705,14 @@ const ServiceDetail = () => {
               <div className={`grid gap-4 ${
                 slug === 'leak-repair' 
                   ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' 
-                  : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
+                  : slug === 'underground-detection'
+                    ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+                    : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
               }`}>
-                {service.galleryImages.slice(0, 8).map((img, index) => (
+                {galleryImages.slice(0, 8).map((img, index) => (
                   <button
                     key={index}
-                    onClick={() => openLightbox(index)}
+                    onClick={() => openLightbox(index, galleryImages)}
                     className={`rounded-lg overflow-hidden cursor-zoom-in group ${
                       slug === 'leak-repair' ? 'aspect-[16/9]' : 'aspect-[4/3]'
                     }`}
@@ -720,7 +734,7 @@ const ServiceDetail = () => {
 
       {/* Lightbox Modal */}
       <AnimatePresence>
-        {lightboxOpen && service && (
+        {lightboxOpen && service && lightboxImages.length > 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -738,7 +752,7 @@ const ServiceDetail = () => {
             </button>
             
             {/* Previous button */}
-            {service.galleryImages.length > 1 && (
+            {lightboxImages.length > 1 && (
               <button
                 onClick={(e) => { e.stopPropagation(); prevImage(); }}
                 className="absolute left-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -755,14 +769,14 @@ const ServiceDetail = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2 }}
-              src={service.galleryImages[lightboxIndex]}
+              src={lightboxImages[lightboxIndex]}
               alt={`${service.title} ${lightboxIndex + 1}`}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />
             
             {/* Next button */}
-            {service.galleryImages.length > 1 && (
+            {lightboxImages.length > 1 && (
               <button
                 onClick={(e) => { e.stopPropagation(); nextImage(); }}
                 className="absolute right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -773,9 +787,9 @@ const ServiceDetail = () => {
             )}
             
             {/* Image counter */}
-            {service.galleryImages.length > 1 && (
+            {lightboxImages.length > 1 && (
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm">
-                {lightboxIndex + 1} / {service.galleryImages.length}
+                {lightboxIndex + 1} / {lightboxImages.length}
               </div>
             )}
           </motion.div>
