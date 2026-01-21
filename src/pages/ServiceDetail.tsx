@@ -537,6 +537,38 @@ const ServiceDetail = () => {
             </div>
           </motion.div>
 
+          {/* No Find, No Fee Banner - Water Leak Detection (full-width within content container) */}
+          {slug === "water-leak-detection" && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mb-8 bg-gradient-to-r from-primary via-accent to-primary shadow-lg"
+            >
+              <div className="container mx-auto px-4 py-6 md:py-8">
+                <div className="flex flex-col md:flex-row md:items-center gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 bg-primary-foreground/15 rounded-full flex items-center justify-center">
+                      <Shield className="h-7 w-7 text-primary-foreground" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-primary-foreground/95 leading-relaxed">
+                      {(() => {
+                        const paragraphs = service.content.split("\n\n");
+                        return paragraphs[paragraphs.length - 1] ?? "";
+                      })()}
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0 flex items-center gap-2">
+                    <FileText className="h-6 w-6 text-primary-foreground/80" />
+                    <span className="text-primary-foreground/80 text-sm font-medium">Insurance-Ready Reports</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
           {/* Two Column Layout - Description + What's Included & Gallery */}
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Left Column - Description (takes more space) */}
@@ -598,36 +630,6 @@ const ServiceDetail = () => {
                   </div>
                 );
               })()}
-
-              {/* No Find, No Fee Banner - Water Leak Detection */}
-              {slug === "water-leak-detection" && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="mt-8 bg-gradient-to-r from-primary via-accent to-primary rounded-xl p-6 md:p-8 shadow-lg"
-                >
-                  <div className="flex flex-col md:flex-row md:items-center gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
-                        <Shield className="h-7 w-7 text-white" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-heading text-xl font-bold text-white mb-2">No Find, No Fee Guarantee</h3>
-                      <p className="text-white/90 leading-relaxed">
-                        We operate on a No Find, No Fee basis - if we confirm you have a leak but cannot locate it, there is no charge. Our surveys include detailed professional reports suitable for insurance claims.
-                      </p>
-                    </div>
-                    <div className="flex-shrink-0 flex items-center gap-2">
-                      <FileText className="h-6 w-6 text-white/80" />
-                      <span className="text-white/80 text-sm font-medium">Insurance-Ready Reports</span>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-
-
 
             </motion.div>
 
