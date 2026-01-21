@@ -133,7 +133,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link to="/services/pool-leak-detection" className="text-canary-white/80 hover:text-primary transition-colors">
-                    Pool Leak Detection
+                    Swimming Pool Leak Detection
                   </Link>
                 </li>
                 <li>

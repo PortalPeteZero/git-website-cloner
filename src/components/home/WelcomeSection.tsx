@@ -37,12 +37,12 @@ const WelcomeSection = () => {
             </h2>
             <p className="text-primary font-semibold italic mb-6">"The Leaky Finders"</p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Canary Detect provides professional leak detection services across Lanzarote.
-              Our team of experts uses the latest technology and equipment to locate leaks quickly 
+              Canary Detect provides professional <Link to="/services" className="text-primary hover:underline">leak detection services</Link> across Lanzarote.
+              Our team of experts uses the <Link to="/technology" className="text-primary hover:underline">latest technology and equipment</Link> to locate leaks quickly 
               and accurately, helping you save time, money, and prevent further damage to your property.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Whether you have a swimming pool leak, water pipe leak, or need underground pipe detection, 
+              Whether you have a <Link to="/services/pool-leak-detection" className="text-primary hover:underline">swimming pool leak</Link>, <Link to="/services/water-leak-detection" className="text-primary hover:underline">water pipe leak</Link>, or need <Link to="/services/underground-detection" className="text-primary hover:underline">underground pipe detection</Link>, 
               we have the expertise and equipment to find the problem and provide effective solutions.
             </p>
 
@@ -81,7 +81,7 @@ const WelcomeSection = () => {
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl ring-1 ring-black/5">
               <img 
                 src={welcomeImg} 
-                alt="Professional leak detection equipment and technician" 
+                alt="Professional leak detection technician using acoustic equipment Lanzarote" 
                 className="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"

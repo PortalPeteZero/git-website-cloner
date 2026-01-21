@@ -27,6 +27,7 @@ const services = [
     icon: Search,
     href: "/services/drain-detection",
     images: [drainDetectionImg, drainDetection2, drainDetection3],
+    imageAlt: "CCTV drain inspection camera Lanzarote",
   },
   {
     title: "Pipe Inspection",
@@ -34,34 +35,39 @@ const services = [
     icon: CircleDot,
     href: "/services/pipe-inspection",
     images: [pipeInspectionImg, pipeInspection2, pipeInspection3],
+    imageAlt: "Pipe inspection camera equipment",
   },
   {
     title: "Underground Detection",
-    description: "Locate underground pipes, cables, and utilities using ground-penetrating radar and pipe locators.",
+    description: "Need to find buried pipes before digging? Locate underground pipes, cables, and utilities with ground-penetrating radar.",
     icon: Cable,
     href: "/services/underground-detection",
     images: [undergroundDetectionImg, undergroundDetection6],
+    imageAlt: "Ground penetrating radar pipe detection",
   },
   {
     title: "Water Leak Detection",
-    description: "Find hidden water leaks in walls, floors, and ceilings using acoustic and thermal imaging.",
+    description: "Damp walls? High water bills? Meter running when taps are off? Find hidden water leaks using acoustic and thermal imaging.",
     icon: Droplets,
     href: "/services/water-leak-detection",
     images: [waterLeakDetectionImg, waterLeak1, waterLeak2],
+    imageAlt: "Acoustic leak detection listening device",
   },
   {
-    title: "Pool Leak Detection",
-    description: "Specialist pool and spa leak detection to stop water loss and reduce chemical costs.",
+    title: "Swimming Pool Leak Detection",
+    description: "Is your swimming pool losing water every day? Constant refilling? We'll find the leak and stop the water loss.",
     icon: Waves,
     href: "/services/pool-leak-detection",
     images: [poolLeakDetectionImg, poolLeak2, poolLeak3],
+    imageAlt: "Swimming pool leak detection pressure testing",
   },
   {
     title: "Leak Repair",
-    description: "Professional leak repair services once we've located the problem.",
+    description: "Found a leak? We'll fix it fast. Professional leak repair services once we've located the problem.",
     icon: Wrench,
     href: "/services/leak-repair",
     images: [leakRepairImg],
+    imageAlt: "Professional leak repair service Lanzarote",
   },
 ];
 
@@ -97,6 +103,7 @@ const ServicesGrid = () => {
               icon={service.icon}
               href={service.href}
               image={service.images?.[0]}
+              imageAlt={service.imageAlt}
             />
           ))}
         </div>

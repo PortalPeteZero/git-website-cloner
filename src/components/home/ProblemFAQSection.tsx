@@ -12,7 +12,7 @@ import { HelpCircle, ArrowRight } from "lucide-react";
 const problemFaqs = [
   {
     question: "Why is my pool losing water?",
-    answer: "If your swimming pool is losing more than 6mm of water per day (beyond normal evaporation), you likely have a leak. Common causes include cracks in the pool shell, damaged pipe connections, or faulty fittings. Our pool leak detection service in Lanzarote can pinpoint the exact location using pressure testing and specialist equipment."
+    answer: "If your swimming pool is losing more than 6mm of water per day (beyond normal evaporation), you likely have a leak. Common causes include cracks in the pool shell, damaged pipe connections, or faulty fittings. Our swimming pool leak detection service in Lanzarote can pinpoint the exact location using pressure testing and specialist equipment."
   },
   {
     question: "My water meter is running when all taps are off - do I have a leak?",
@@ -23,8 +23,8 @@ const problemFaqs = [
     answer: "We use multiple technologies to find underground water leaks: tracer gas detection (GASENSE), acoustic listening devices (geophones), and thermal imaging. By combining at least two methods, we achieve centimetre accuracy in locating underground leaks, minimizing excavation and repair costs."
   },
   {
-    question: "Can you detect leaks in pool pipes?",
-    answer: "Yes, we specialize in pool pipe leak detection. We use pressure testing to isolate leaks in pool plumbing, then pinpoint the exact location using acoustic equipment and tracer gas. This works for underground pool pipes, return lines, and suction lines."
+    question: "Can you detect leaks in swimming pool pipes?",
+    answer: "Yes, we specialize in swimming pool pipe leak detection. We use pressure testing to isolate leaks in pool plumbing, then pinpoint the exact location using acoustic equipment and tracer gas. This works for underground pool pipes, return lines, and suction lines."
   },
   {
     question: "Do you repair leaks or just detect them?",

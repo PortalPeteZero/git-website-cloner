@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "What leak detection technology do you use?",
     answer:
-      "We carry the latest leak detection equipment including: GASENSE tracer gas detection, acoustic geophones for underground water leak detection, infrared thermal imaging cameras for hidden water leak detection, pipe microphones with centimetre accuracy, and multiple CCTV camera systems for pipes of all sizes.",
+      "We carry the latest leak detection equipment including: GASENSE tracer gas detection, acoustic geophones for underground water leak detection, infrared thermal imaging cameras for hidden water leak detection, pipe microphones with centimetre accuracy, and multiple CCTV camera systems for pipes of all sizes. Learn more about our technology on our dedicated technology page.",
   },
   {
     question: "Do you provide leak detection reports for insurance claims?",

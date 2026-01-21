@@ -7,9 +7,10 @@ interface ServiceCardLiteProps {
   icon: LucideIcon;
   href: string;
   image?: string;
+  imageAlt?: string;
 }
 
-const ServiceCardLite = ({ title, description, icon: Icon, href, image }: ServiceCardLiteProps) => {
+const ServiceCardLite = ({ title, description, icon: Icon, href, image, imageAlt }: ServiceCardLiteProps) => {
   return (
     <div className="transition-transform duration-300 ease-out hover:-translate-y-1">
       <Link
@@ -20,7 +21,7 @@ const ServiceCardLite = ({ title, description, icon: Icon, href, image }: Servic
           <div className="aspect-[16/10] overflow-hidden relative">
             <img
               src={image}
-              alt={title}
+              alt={imageAlt || title}
               className="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
               decoding="async"
