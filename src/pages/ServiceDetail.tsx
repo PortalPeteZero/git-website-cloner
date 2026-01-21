@@ -439,7 +439,6 @@ const ServiceDetail = () => {
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
-              />
             ))}
           </div>
         )}
