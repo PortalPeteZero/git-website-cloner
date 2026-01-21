@@ -42,12 +42,13 @@ import undergroundDetection6 from "@/assets/services/gallery/underground-detecti
 import drainUnblocking1 from "@/assets/services/gallery/drain-unblocking-1.jpg";
 import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
 
-// Water leak detection carousel images
+// Water leak detection carousel images - real field photos
 const waterLeakCarouselImages = [
-  { src: waterLeakHqScene, alt: "Canary Detect technicians at headquarters detecting leak in Lanzarote" },
-  { src: waterLeakSportsFacility, alt: "Water leak detection at sports facility in Lanzarote" },
-  { src: waterLeakUtilityRoom, alt: "Indoor utility room water leak detection with acoustic equipment" },
-  { src: waterLeakResidentialStreet, alt: "Residential street water leak detection in Lanzarote" },
+  { src: drainDetection4, alt: "Water leak detection technician with acoustic equipment in Lanzarote" },
+  { src: drainDetection5, alt: "Professional leak detection survey at villa in Lanzarote" },
+  { src: drainDetection6, alt: "Underground water leak detection with specialist equipment" },
+  { src: drainDetection7, alt: "Pipe leak detection using acoustic technology" },
+  { src: drainDetection8, alt: "Canary Detect field technician locating water leak" },
 ];
 
 interface ServiceData {
@@ -79,7 +80,7 @@ const servicesData: Record<string, ServiceData> = {
     description: "Professional CCTV drain and pipe inspection in Lanzarote. 6 camera systems for all pipe sizes - from bathroom pipes to main drains. Detailed video reports and accurate location tracing.",
     icon: Search,
     heroImage: drainDetectionImg,
-    galleryImages: [drainDetection4, drainDetection5, drainDetection6, drainDetection7, drainDetection8, drainDetection2, drainDetection3],
+    galleryImages: [drainDetection2, drainDetection3, pipeInspection2, pipeInspection3],
     seo: {
       title: "Drain & Pipe Surveys Lanzarote | CCTV Inspection | Canary Detect",
       description: "Professional drain and pipe CCTV inspection in Lanzarote. 6 camera systems for all pipe sizes. Drain tracing, condition assessment, blockage detection & detailed video reports.",
@@ -124,7 +125,7 @@ const servicesData: Record<string, ServiceData> = {
     icon: Droplets,
     heroImage: waterLeakDetectionImg,
     specialHeroImage: freeLeakConfirmationImg,
-    galleryImages: [waterLeakHqScene, waterLeakSportsFacility, waterLeakUtilityRoom, waterLeakResidentialStreet],
+    galleryImages: [drainDetection4, drainDetection5, drainDetection6, drainDetection7, drainDetection8],
     seo: {
       title: "Water Leak Detection Lanzarote | Hidden Water Leak Detection | No Find No Fee",
       description: "Professional water leak detection Lanzarote. Find hidden water leaks with centimetre accuracy. Water meter running? Thermal imaging, tracer gas, acoustic detection. No Find No Fee. €80,000+ equipment.",
