@@ -41,6 +41,13 @@ import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
 import drainUnblocking1 from "@/assets/services/gallery/drain-unblocking-1.jpg";
 import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
+import leakRepair1 from "@/assets/services/gallery/leak-repair-1.jpg";
+import leakRepair2 from "@/assets/services/gallery/leak-repair-2.jpg";
+import leakRepair3 from "@/assets/services/gallery/leak-repair-3.jpg";
+import leakRepair4 from "@/assets/services/gallery/leak-repair-4.jpg";
+import leakRepair5 from "@/assets/services/gallery/leak-repair-5.jpg";
+import leakRepair6 from "@/assets/services/gallery/leak-repair-6.jpg";
+import leakRepair7 from "@/assets/services/gallery/leak-repair-7.jpg";
 
 // Water leak detection carousel images - real field photos
 const waterLeakCarouselImages = [
@@ -187,8 +194,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Leak Repair Lanzarote",
     description: "Professional leak repair services in Lanzarote to fix water pipe leaks, pool pipe leaks and underground leaks - complete solution from detection to repair.",
     icon: Wrench,
-    heroImage: leakRepairImg,
-    galleryImages: [],
+    heroImage: leakRepair1,
+    galleryImages: [leakRepair1, leakRepair2, leakRepair3, leakRepair4, leakRepair5, leakRepair6, leakRepair7],
     seo: {
       title: "Leak Repair Lanzarote | Water Pipe Leak Repair | Pool Pipe Leak Repair",
       description: "Professional leak repair Lanzarote. Water pipe leak repair, pool pipe leak repair, underground leak repair. Emergency leak repair available. Complete detection to repair service.",
