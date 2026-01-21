@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -17,6 +18,12 @@ import drainUnblockingImg from "@/assets/services/drain-unblocking.jpg";
 import poolLeakRepairImg from "@/assets/services/pool-leak-repair.jpg";
 import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation.png";
 
+// Import water leak carousel images
+import waterLeakHqScene from "@/assets/services/water-leak/hq-scene.jpg";
+import waterLeakSportsFacility from "@/assets/services/water-leak/sports-facility.jpg";
+import waterLeakUtilityRoom from "@/assets/services/water-leak/utility-room.jpg";
+import waterLeakResidentialStreet from "@/assets/services/water-leak/residential-street.jpg";
+
 // Import gallery images
 import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
 import drainDetection3 from "@/assets/services/gallery/drain-detection-3.jpg";
@@ -29,6 +36,14 @@ import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
 import drainUnblocking1 from "@/assets/services/gallery/drain-unblocking-1.jpg";
 import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
+
+// Water leak detection carousel images
+const waterLeakCarouselImages = [
+  { src: waterLeakHqScene, alt: "Canary Detect technicians at headquarters detecting leak in Lanzarote" },
+  { src: waterLeakSportsFacility, alt: "Water leak detection at sports facility in Lanzarote" },
+  { src: waterLeakUtilityRoom, alt: "Indoor utility room water leak detection with acoustic equipment" },
+  { src: waterLeakResidentialStreet, alt: "Residential street water leak detection in Lanzarote" },
+];
 
 interface ServiceData {
   title: string;
@@ -235,6 +250,18 @@ const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? servicesData[slug] : null;
   const canonicalUrl = `https://canary-detect.com/services/${slug}`;
+  
+  // Carousel state for water-leak-detection
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const isWaterLeakPage = slug === "water-leak-detection";
+  
+  useEffect(() => {
+    if (!isWaterLeakPage) return;
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % waterLeakCarouselImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [isWaterLeakPage]);
 
   if (!service) {
     return (
@@ -261,16 +288,31 @@ const ServiceDetail = () => {
         canonical={canonicalUrl}
         type="service"
       />
-      {/* Hero Section - Standard for all services */}
+      {/* Hero Section - Carousel for water-leak-detection, standard for others */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={service.heroImage} 
-            alt={service.title}
-            className="w-full h-full object-cover"
-            fetchPriority="high"
-            decoding="async"
-          />
+          {isWaterLeakPage ? (
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentSlide}
+                src={waterLeakCarouselImages[currentSlide].src}
+                alt={waterLeakCarouselImages[currentSlide].alt}
+                className="w-full h-full object-cover"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              />
+            </AnimatePresence>
+          ) : (
+            <img 
+              src={service.heroImage} 
+              alt={service.title}
+              className="w-full h-full object-cover"
+              fetchPriority="high"
+              decoding="async"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/80 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
@@ -313,6 +355,24 @@ const ServiceDetail = () => {
             </motion.div>
           </motion.div>
         </div>
+        
+        {/* Carousel Indicators - Only for water leak detection */}
+        {isWaterLeakPage && (
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+            {waterLeakCarouselImages.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentSlide(idx)}
+                className={`h-2 rounded-full transition-all duration-500 ${
+                  idx === currentSlide 
+                    ? "bg-primary w-12" 
+                    : "bg-white/40 w-2 hover:bg-white/70"
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+        )}
       </section>
 
 
