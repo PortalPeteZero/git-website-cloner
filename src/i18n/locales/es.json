@@ -1,0 +1,607 @@
+{
+  "meta": {
+    "home": {
+      "title": "Detección de Fugas Lanzarote | Detección de Fugas de Agua y Piscinas",
+      "description": "Detección profesional de fugas de agua y piscinas en Lanzarote. Equipo especializado de €80.000+. Sin encontrar, sin pagar. Los Cazafugas.",
+      "keywords": "detección de fugas Lanzarote, detección fugas agua, detección fugas piscinas, fugas subterráneas, detección tuberías Lanzarote"
+    },
+    "services": {
+      "title": "Servicios de Detección de Fugas Lanzarote | Agua, Piscina y Tuberías",
+      "description": "Servicios profesionales de detección y reparación de fugas en Lanzarote. Cámaras térmicas, sensores acústicos, gas trazador.",
+      "keywords": "servicios detección fugas, reparación fugas agua, reparación fugas piscinas, inspección tuberías Lanzarote"
+    },
+    "technology": {
+      "title": "Equipo Profesional de Detección de Fugas | Tecnología Avanzada Lanzarote",
+      "description": "Más de €80.000 en equipo especializado de detección de fugas. Tecnología multi-método para precisión al centímetro.",
+      "keywords": "tecnología detección fugas, imagen térmica, gas trazador, detección acústica, inspección CCTV"
+    },
+    "about": {
+      "title": "Sobre Canary Detect | Especialistas en Fugas Lanzarote | Detección Profesional",
+      "description": "Empresa líder en detección de fugas en Lanzarote desde 2014. Los Cazafugas - servicio profesional en toda la isla.",
+      "keywords": "Canary Detect, Los Cazafugas, empresa detección fugas Lanzarote"
+    },
+    "caseStudies": {
+      "title": "Casos de Éxito Detección de Fugas Lanzarote | Resultados Reales",
+      "description": "Vea cómo Los Cazafugas resuelven problemas de fugas en Lanzarote. Hoteles, villas, piscinas.",
+      "keywords": "casos detección fugas, reparación fugas piscinas, reparación fugas agua Lanzarote"
+    },
+    "contact": {
+      "title": "Contactar Canary Detect | Detección de Fugas Lanzarote | Reparación Urgente",
+      "description": "Contacte con Los Cazafugas para detección profesional de fugas en Lanzarote. Teléfono: +34 711 051 071. Servicio en toda la isla.",
+      "keywords": "contactar Canary Detect, presupuesto detección fugas, reparación urgente fugas Lanzarote"
+    }
+  },
+  "navigation": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "technology": "Tecnología",
+    "about": "Sobre Nosotros",
+    "caseStudies": "Casos de Éxito",
+    "contact": "Contacto",
+    "blog": "Blog",
+    "getQuote": "Presupuesto Gratis",
+    "villaPoolLeaks": "Fugas en Villas y Piscinas",
+    "seeOurBlog": "Ver nuestro Blog",
+    "seeOurTechnology": "Ver Nuestra Tecnología →",
+    "spotTheLeakGame": "Juego Detecta la Fuga",
+    "poolCoatings": "Revestimientos de Piscinas",
+    "freeLeakTest": "Test de Confirmación de Fugas Gratis",
+    "waterLeakDetection": "Detección de Fugas de Agua",
+    "poolLeakDetection": "Detección de Fugas de Piscinas",
+    "undergroundDetection": "Detección de Tuberías Subterráneas",
+    "drainDetection": "Inspección de Desagües y Tuberías",
+    "leakRepair": "Reparación de Fugas",
+    "poolLeakRepair": "Reparación de Fugas de Piscinas",
+    "drainUnblocking": "Desbloqueo de Desagües"
+  },
+  "services": {
+    "drainDetection": {
+      "title": "Inspección de Desagües y Tuberías",
+      "shortTitle": "Detección de Desagües",
+      "description": "¿Desagües bloqueados? Limpiamos e inspeccionamos con cámaras CCTV."
+    },
+    "undergroundDetection": {
+      "title": "Detección de Tuberías y Cables Subterráneos",
+      "description": "¿Necesita localizar tuberías enterradas antes de excavar?"
+    },
+    "waterLeakDetection": {
+      "title": "Detección de Fugas de Agua",
+      "description": "¿Paredes húmedas? ¿Facturas de agua altas? ¿Contador corriendo?"
+    },
+    "poolLeakDetection": {
+      "title": "Detección de Fugas de Piscinas",
+      "description": "¿Su piscina pierde agua cada día? ¿Rellenado constante?"
+    },
+    "leakRepair": {
+      "title": "Reparación de Fugas",
+      "description": "¿Ha encontrado una fuga? La reparamos rápidamente."
+    },
+    "poolLeakRepair": {
+      "title": "Reparación de Fugas de Piscinas",
+      "description": "Servicios profesionales de reparación de fugas de piscinas."
+    },
+    "drainUnblocking": {
+      "title": "Desbloqueo de Desagües",
+      "description": "¿Desagües bloqueados? Limpieza con agua a alta presión."
+    },
+    "freeLeakConfirmation": {
+      "title": "Test de Confirmación de Fugas Gratis",
+      "description": "¿No está seguro si tiene una fuga? Lo confirmamos gratis."
+    }
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "Los Cazafugas.",
+        "subtitle": "Sin Encontrar, Sin Pagar.",
+        "description": "Detección profesional de fugas de agua y piscinas en toda Lanzarote. Con más de €80.000 en equipos especializados incluyendo cámaras térmicas, sensores acústicos y tecnología de gas trazador.",
+        "subtext": "¿Su piscina pierde agua? ¿Contador corriendo? ¿Paredes húmedas? Encontramos y reparamos fugas rápidamente.",
+        "alt": "Canary Detect - Los Cazafugas sede con técnicos y furgoneta en Lanzarote"
+      },
+      {
+        "title": "Especialistas en Villas y Piscinas.",
+        "subtitle": "Los Cazafugas.",
+        "description": "Nuestros técnicos cualificados utilizan equipos acústicos avanzados e imágenes térmicas para detectar fugas ocultas en su villa o área de piscina sin daños innecesarios.",
+        "subtext": "",
+        "alt": "Los Cazafugas en terraza de villa con piscina en Lanzarote"
+      },
+      {
+        "title": "Tecnología Avanzada.",
+        "subtitle": "Detección de Precisión.",
+        "description": "Más de €80.000 en equipos especializados incluyendo cámaras térmicas, sensores acústicos y tecnología de gas trazador para precisión al centímetro.",
+        "subtext": "",
+        "alt": "Equipo de detección de fugas y técnico en Lanzarote"
+      },
+      {
+        "title": "Detección de Fugas de Piscinas.",
+        "subtitle": "¿Su Piscina Pierde Agua?",
+        "description": "¿Su piscina pierde agua cada día? ¿Rellenado constante? No solo confirmamos las fugas, localizamos la posición exacta usando pruebas de presión, detección acústica e inspección CCTV.",
+        "subtext": "",
+        "alt": "Detección de fugas de piscina Playa Blanca Lanzarote"
+      },
+      {
+        "title": "Detección de Fugas Subterráneas.",
+        "subtitle": "Encuentre Fugas de Agua Rápido.",
+        "description": "¿Necesita encontrar tuberías enterradas antes de excavar? Detección de fugas de agua subterráneas en Lanzarote. Encuentre fugas ocultas bajo suelos, jardines y caminos con precisión centimétrica.",
+        "subtext": "",
+        "alt": "Detección de tuberías subterráneas usando radar de penetración terrestre"
+      },
+      {
+        "title": "Detección de Fugas de Tuberías de Agua.",
+        "subtitle": "Especialistas en Fugas Ocultas.",
+        "description": "¿Paredes húmedas? ¿Facturas de agua altas? ¿Contador corriendo con los grifos cerrados? Encuentre fugas de agua ocultas en paredes, suelos y techos con imágenes térmicas, gas trazador y tecnología acústica.",
+        "subtext": "",
+        "alt": "Cámara de imagen térmica detectando fuga de agua oculta"
+      },
+      {
+        "title": "Reparación de Fugas Lanzarote.",
+        "subtitle": "De la Detección a la Reparación.",
+        "description": "¿Ha encontrado una fuga? La reparamos rápidamente. Servicio completo de detección y reparación de fugas. Reparación de fugas de tuberías de agua, reparación de fugas de piscinas y reparación de fugas subterráneas en toda Lanzarote.",
+        "subtext": "",
+        "alt": "Servicio profesional de reparación de fugas Lanzarote"
+      }
+    ]
+  },
+  "welcome": {
+    "subtitle": "Bienvenido a Canary Detect",
+    "title": "Servicios Profesionales de Detección de Fugas en Lanzarote",
+    "tagline": "\"Los Cazafugas\"",
+    "paragraph1": "Canary Detect ofrece servicios profesionales de detección de fugas en toda Lanzarote. Nuestro equipo de expertos utiliza la última tecnología y equipos para localizar fugas de forma rápida y precisa, ayudándole a ahorrar tiempo, dinero y prevenir más daños a su propiedad.",
+    "paragraph2": "Ya sea que tenga una fuga de piscina, fuga de tubería de agua o necesite detección de tuberías subterráneas, tenemos la experiencia y el equipo para encontrar el problema y proporcionar soluciones efectivas.",
+    "features": [
+      "Métodos de detección no invasivos",
+      "Última tecnología acústica",
+      "Equipos de imagen térmica",
+      "Resultados rápidos y precisos",
+      "Profesionales experimentados",
+      "Precios competitivos"
+    ],
+    "ctaTechnology": "Vea Nuestra Tecnología y la Diferencia Canary Detect",
+    "ctaContact": "Contáctenos",
+    "experienceBadge": "40+ Años de Experiencia"
+  },
+  "stats": {
+    "leaksFound": {
+      "value": 1200,
+      "suffix": "+",
+      "label": "Fugas Encontradas"
+    },
+    "experience": {
+      "value": 40,
+      "suffix": "+",
+      "label": "Años de Experiencia Combinada"
+    },
+    "successRate": {
+      "value": 99,
+      "suffix": "%",
+      "label": "Tasa de Éxito"
+    },
+    "emergency": {
+      "value": "24/7",
+      "label": "Servicio de Emergencia"
+    }
+  },
+  "badges": {
+    "noFindNoFee": {
+      "label": "Sin Encontrar, Sin Pagar",
+      "description": "Resultados garantizados"
+    },
+    "equipment": {
+      "label": "€80K+ en Equipos",
+      "description": "Grado profesional"
+    },
+    "allLanzarote": {
+      "label": "Toda Lanzarote",
+      "description": "Cobertura en toda la isla"
+    },
+    "insuranceReports": {
+      "label": "Informes para Seguros",
+      "description": "Incluidos gratis"
+    }
+  },
+  "technology": {
+    "sectionTitle": "Nuestros Métodos de Detección",
+    "sectionSubtitle": "Enfoque Multi-Tecnología",
+    "sectionDescription": "Combinamos múltiples tecnologías de detección para garantizar la precisión. Cada fuga se confirma usando al menos dos métodos independientes.",
+    "equipmentValue": "Inversión de €80.000+ en Tecnología de Detección",
+    "equipmentDescription": "Nuestros técnicos llevan los últimos equipos de grado profesional a cada trabajo.",
+    "ctaButton": "Explorar Nuestra Tecnología",
+    "tracerGas": {
+      "name": "Detección con Gas Trazador",
+      "subtitle": "Tecnología GASENSE",
+      "description": "Presurizamos las tuberías con una mezcla segura de nitrógeno/hidrógeno. El gas escapa en el punto de la fuga y sube a través de cualquier material - hormigón, baldosas, tierra - donde nuestros sensores lo detectan con precisión milimétrica.",
+      "bestFor": "Ideal para: Fugas subterráneas, tuberías ocultas, tuberías de piscinas",
+      "limitations": "Requiere aislamiento de tuberías"
+    },
+    "acoustic": {
+      "name": "Escucha Acústica",
+      "subtitle": "Geófonos y Correladores",
+      "description": "Detectamos el sonido del agua escapando de tuberías presurizadas. Nuestro equipo amplifica los sonidos de fugas miles de veces, permitiéndonos localizar fugas a través de hormigón, tierra y otros materiales.",
+      "bestFor": "Ideal para: Fugas en red principal, sistemas presurizados, tuberías de gran diámetro",
+      "limitations": "Requiere presión de agua"
+    },
+    "thermal": {
+      "name": "Imagen Térmica",
+      "subtitle": "Cámaras Infrarrojas",
+      "description": "Identificamos diferencias de temperatura causadas por agua fugándose. Las fugas de agua fría o de calefacción se muestran claramente en imágenes térmicas, revelando humedad oculta detrás de paredes y bajo suelos.",
+      "bestFor": "Ideal para: Fugas en paredes, suelo radiante, mapeo de humedad",
+      "limitations": "Requiere diferencial de temperatura"
+    },
+    "pipeMic": {
+      "name": "Micrófono Interno",
+      "subtitle": "Micrófonos de Tubería",
+      "description": "Insertados directamente en las tuberías para escuchar desde el interior. Proporciona localización con precisión centimétrica de fugas en tramos de tuberías accesibles.",
+      "bestFor": "Ideal para: Tuberías accesibles, verificación, tuberías de pequeño diámetro",
+      "limitations": "Requiere punto de acceso a tubería"
+    },
+    "cctv": {
+      "name": "Inspección CCTV",
+      "subtitle": "Sistemas de Cámaras",
+      "description": "6 sistemas de cámaras para todos los tamaños de tuberías desde 25mm hasta 300mm. Inspeccionamos desagües, alcantarillado y tuberías subterráneas para encontrar bloqueos, daños e infiltraciones.",
+      "bestFor": "Ideal para: Inspecciones de desagües, bloqueos, daños estructurales",
+      "limitations": "Requiere acceso al desagüe"
+    }
+  },
+  "howItWorks": {
+    "sectionTitle": "Cómo Funciona",
+    "sectionSubtitle": "Nuestro Proceso",
+    "sectionDescription": "Desde su primera llamada hasta el problema resuelto - esto es lo que puede esperar.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Contáctenos",
+        "description": "Llame o rellene nuestro formulario de contacto. Discutiremos su situación y proporcionaremos un presupuesto a precio fijo."
+      },
+      {
+        "number": "2",
+        "title": "Evaluación",
+        "description": "Evaluaremos su propiedad y determinaremos los mejores métodos de detección para su situación específica."
+      },
+      {
+        "number": "3",
+        "title": "Detección",
+        "description": "Nuestros expertos usan tecnología avanzada para localizar su fuga con precisión, minimizando las molestias a su propiedad."
+      },
+      {
+        "number": "4",
+        "title": "Informe",
+        "description": "Recibirá un informe detallado documentando nuestros hallazgos, apto para reclamaciones de seguros si es necesario."
+      },
+      {
+        "number": "5",
+        "title": "Reparación",
+        "description": "Podemos reparar la fuga o proporcionar orientación para el contratista que elija. De cualquier forma, sabrá exactamente qué hay que hacer."
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionTitle": "Lo Que Dicen los Clientes Sobre Los Cazafugas",
+    "sectionSubtitle": "Testimonios",
+    "sectionDescription": "No solo confíe en nuestra palabra - vea lo que dicen nuestros clientes.",
+    "items": [
+      {
+        "name": "María García",
+        "location": "Puerto del Carmen",
+        "text": "Los Cazafugas encontraron una fuga en nuestra piscina que habíamos estado buscando durante meses. Profesionales, rápidos y nos ahorraron miles en facturas de agua. ¡Muy recomendados!",
+        "rating": 5,
+        "initials": "MG"
+      },
+      {
+        "name": "John Mitchell",
+        "location": "Playa Blanca",
+        "text": "¡Excelente servicio de Los Cazafugas! Localizaron una fuga de tubería oculta bajo el suelo de nuestra villa sin ningún daño. La tecnología de imagen térmica es impresionante.",
+        "rating": 5,
+        "initials": "JM"
+      },
+      {
+        "name": "Carlos Rodríguez",
+        "location": "Arrecife",
+        "text": "Equipo muy profesional en Canary Detect. Nos ayudaron a mapear todas las utilidades subterráneas antes de nuestro proyecto de construcción. Los Cazafugas nos ahorraron errores costosos.",
+        "rating": 5,
+        "initials": "CR"
+      },
+      {
+        "name": "Sarah Thompson",
+        "location": "Costa Teguise",
+        "text": "Después de meses de humedad inexplicable, Los Cazafugas encontraron la fuente en solo unas horas. Gran comunicación y precios justos. ¡Verdaderos expertos en detección de fugas!",
+        "rating": 5,
+        "initials": "ST"
+      }
+    ]
+  },
+  "caseStudies": {
+    "sectionTitle": "Casos de Éxito Recientes",
+    "sectionSubtitle": "Los Cazafugas en Acción",
+    "sectionDescription": "Vea cómo Los Cazafugas resuelven problemas de fugas en Lanzarote.",
+    "viewAll": "Ver Todos los Casos de Éxito",
+    "items": [
+      {
+        "title": "Detección de Fugas de Piscinas",
+        "location": "Puerto del Carmen",
+        "description": "Localizamos y reparamos una fuga compleja en las tuberías de la piscina que perdía 500 litros por día. Ahorramos miles al propietario en facturas de agua.",
+        "image": "pool-leak-1.jpg"
+      },
+      {
+        "title": "Inspección de Tuberías Subterráneas",
+        "location": "Playa Blanca",
+        "description": "Mapeo completo de servicios subterráneos para un nuevo proyecto de construcción de villa. Identificamos todos los servicios enterrados para evitar daños costosos.",
+        "image": "pipe-inspection-1.jpg"
+      },
+      {
+        "title": "Detección y Reparación de Desagües",
+        "location": "Arrecife",
+        "description": "La inspección CCTV reveló un desagüe colapsado causando bloqueos repetidos. Localizado y reparado con excavación mínima.",
+        "image": "drain-detection-1.jpg"
+      }
+    ]
+  },
+  "faq": {
+    "sectionTitle": "Preguntas Frecuentes sobre Detección de Fugas en Lanzarote",
+    "sectionSubtitle": "Preguntas Frecuentes",
+    "sectionDescription": "¿Tiene preguntas sobre nuestros servicios de detección de fugas? Aquí están las respuestas a las preguntas más comunes que recibimos.",
+    "cantFind": "¿No encuentra lo que busca? Contáctenos y estaremos encantados de ayudar.",
+    "contactUs": "Contáctenos",
+    "items": [
+      {
+        "question": "¿Cuál es su política 'Sin Encontrar, Sin Pagar'?",
+        "answer": "Si confirmamos que tiene una fuga de agua pero no podemos localizarla, no hay cargo por nuestro servicio de detección de fugas - esto nunca ha sucedido hasta ahora. Sin embargo, si encontramos que no tiene una fuga y su problema es causado por otra cosa, cobramos el 50% del coste de la inspección por un 'Estudio de Confirmación de Fuga' y proporcionamos un informe para su tranquilidad."
+      },
+      {
+        "question": "¿Qué precisión tiene su detección de fugas de agua en Lanzarote?",
+        "answer": "Utilizamos un enfoque multi-tecnología con más de €80.000 en equipos especializados de detección de fugas para confirmar cada ubicación de fuga usando al menos dos tecnologías independientes. Esto proporciona precisión centimétrica en el 95% de los casos, localizando fugas de agua a menos de 30cm² de su posición - manteniendo los costes de reparación y las molestias al mínimo absoluto."
+      },
+      {
+        "question": "¿Qué áreas de Lanzarote cubren para detección de fugas?",
+        "answer": "Cubrimos toda la isla de Lanzarote para detección de fugas de agua, detección de fugas de piscinas y detección de tuberías subterráneas. Esto incluye Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, Tías, Yaiza, Playa Honda, Teguise y todas las áreas circundantes. Nuestra base está en Playa Blanca."
+      },
+      {
+        "question": "¿Ofrecen reparación de fugas además de detección?",
+        "answer": "Sí, ofrecemos servicios completos de reparación de fugas en Lanzarote para reparación de fugas de tuberías de agua, reparación de fugas de piscinas y reparación de fugas subterráneas. Sin embargo, también es libre de usar su propio contratista para la reparación - no está obligado a usar nuestro equipo de reparación. Proporcionamos informes detallados para guiar cualquier trabajo de reparación."
+      },
+      {
+        "question": "¿Necesitarán romper paredes o suelos para encontrar mi fuga de agua?",
+        "answer": "Nuestros métodos de detección de fugas de agua ocultas son no invasivos. Utilizamos sensores acústicos, imágenes térmicas, gas trazador, cámaras CCTV y otra tecnología avanzada para localizar fugas sin dañar su propiedad. En casos raros, puede ser necesario un acceso mínimo, pero esto se discute y acuerda previamente."
+      },
+      {
+        "question": "¿Qué tecnología de detección de fugas utilizan?",
+        "answer": "Llevamos los últimos equipos de detección de fugas incluyendo: detección de gas trazador GASENSE, geófonos acústicos para detección de fugas de agua subterráneas, cámaras de imagen térmica infrarroja para detección de fugas de agua ocultas, micrófonos de tubería con precisión centimétrica, y múltiples sistemas de cámaras CCTV para tuberías de todos los tamaños."
+      },
+      {
+        "question": "¿Proporcionan informes de detección de fugas para reclamaciones de seguros?",
+        "answer": "Sí, cada inspección de detección de fugas incluye un informe profesional detallado que puede usarse para su compañía de seguros. Esto documenta nuestros hallazgos, métodos utilizados y recomendaciones para la reparación de fugas."
+      },
+      {
+        "question": "¿Cuánto cuesta la detección de fugas en Lanzarote?",
+        "answer": "Operamos con tarifas fijas con precios transparentes de detección de fugas en Lanzarote. Cotizamos un precio fijo por adelantado y lo mantenemos, independientemente de cuánto tiempo tome la inspección. Contáctenos para un presupuesto gratuito basado en sus requisitos específicos."
+      },
+      {
+        "question": "Mi contador de agua está corriendo - ¿tengo una fuga?",
+        "answer": "Un contador de agua que corre constantemente a menudo indica una fuga de agua oculta. Nuestra prueba de confirmación de fugas GRATUITA puede determinar si tiene una fuga antes de comprometerse con una inspección completa. Evaluaremos su sistema de agua, comprobaremos lo básico y proporcionaremos un informe profesional sin coste."
+      }
+    ]
+  },
+  "problemFaq": {
+    "sectionTitle": "Problemas de Fugas que Resolvemos",
+    "sectionSubtitle": "Problemas Comunes",
+    "sectionDescription": "¿No está seguro si tiene una fuga? Estos son los signos más comunes que nuestros clientes notan antes de llamarnos. Si alguno de estos le suena familiar, podemos ayudar.",
+    "getExpertHelp": "Obtener Ayuda Experta",
+    "items": [
+      {
+        "question": "¿Por qué mi piscina pierde agua?",
+        "answer": "Si su piscina pierde más de 6mm de agua por día (más allá de la evaporación normal), probablemente tiene una fuga. Las causas comunes incluyen grietas en el vaso de la piscina, conexiones de tuberías dañadas o accesorios defectuosos. Nuestro servicio de detección de fugas de piscinas en Lanzarote puede localizar la ubicación exacta usando pruebas de presión y equipos especializados."
+      },
+      {
+        "question": "Mi contador de agua sigue corriendo con todos los grifos cerrados - ¿tengo una fuga?",
+        "answer": "Sí, si su contador de agua continúa funcionando cuando no se está usando agua, esto indica una fuga de agua oculta en algún lugar de su propiedad. Esto podría ser en tuberías subterráneas, bajo losas del suelo o detrás de paredes. Nuestra detección de fugas acústica y de imágenes térmicas puede encontrar estas fugas ocultas sin romper paredes o suelos."
+      },
+      {
+        "question": "¿Cómo encuentran fugas de agua subterráneas?",
+        "answer": "Utilizamos múltiples tecnologías para encontrar fugas de agua subterráneas: detección de gas trazador (GASENSE), dispositivos de escucha acústica (geófonos) e imágenes térmicas. Combinando al menos dos métodos, logramos precisión centimétrica en la localización de fugas subterráneas, minimizando los costes de excavación y reparación."
+      },
+      {
+        "question": "¿Pueden detectar fugas en tuberías de piscinas?",
+        "answer": "Sí, nos especializamos en detección de fugas de tuberías de piscinas. Utilizamos pruebas de presión para aislar fugas en la fontanería de la piscina, luego localizamos la ubicación exacta usando equipos acústicos y gas trazador. Esto funciona para tuberías de piscina subterráneas, líneas de retorno y líneas de succión."
+      },
+      {
+        "question": "¿Reparan fugas o solo las detectan?",
+        "answer": "Ofrecemos tanto servicios de detección de fugas como de reparación de fugas en toda Lanzarote. Una vez que localizamos su fuga, podemos repararla nosotros mismos o proporcionar orientación detallada para el contratista que elija. Nuestros informes incluyen la ubicación exacta y los métodos de reparación recomendados."
+      },
+      {
+        "question": "¿Cuánto cuesta la detección de fugas en Lanzarote?",
+        "answer": "Ofrecemos inspecciones de detección de fugas a tarifa fija sin costes ocultos. Los precios varían según el tamaño de la propiedad y la complejidad. Contáctenos para un presupuesto gratuito. Recuerde nuestra garantía Sin Encontrar, Sin Pagar - si confirmamos que tiene una fuga pero no podemos localizarla, no hay cargo."
+      }
+    ]
+  },
+  "footer": {
+    "getQuoteTitle": "Obtenga un Presupuesto Gratis Hoy",
+    "getQuoteSubtitle": "Le devolveremos la llamada en 24 horas",
+    "namePlaceholder": "Su Nombre",
+    "phonePlaceholder": "Número de Teléfono",
+    "requestCallback": "Solicitar Llamada",
+    "noFindNoFee": "Sin Encontrar, Sin Pagar",
+    "guaranteedResults": "Resultados garantizados",
+    "response24hr": "Respuesta en 24h",
+    "fastTurnaround": "Respuesta rápida",
+    "equipment": "€80K+ en Equipos",
+    "professionalGrade": "Grado profesional",
+    "tagline": "\"Los Cazafugas\"",
+    "aboutText": "Los principales especialistas en detección de fugas de Lanzarote. Servicio profesional con la última tecnología.",
+    "navigation": "Navegación",
+    "servicesTitle": "Servicios",
+    "areasServed": "Zonas Atendidas",
+    "contactTitle": "Contacto",
+    "allLanzarote": "Toda Lanzarote",
+    "copyright": "© {year} Canary Detect - \"Los Cazafugas\". Todos los derechos reservados.",
+    "admin": "Admin"
+  },
+  "forms": {
+    "yourName": "Su Nombre",
+    "phoneNumber": "Número de Teléfono",
+    "email": "Correo Electrónico",
+    "serviceRequired": "Servicio Requerido",
+    "yourMessage": "Su Mensaje",
+    "propertyAddress": "Dirección de la Propiedad",
+    "sendMessage": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "sent": "¡Enviado!",
+    "messageSentSuccess": "¡Mensaje enviado con éxito! Le responderemos pronto.",
+    "requestFreeTest": "Solicitar Test Gratis",
+    "requestFullSurvey": "Solicitar Inspección Completa",
+    "selectService": "Seleccione un servicio...",
+    "placeholders": {
+      "name": "Juan García",
+      "phone": "+34 600 000 000",
+      "email": "juan@ejemplo.com",
+      "address": "Dirección de su propiedad en Lanzarote",
+      "message": "Por favor describa su problema o consulta..."
+    },
+    "errors": {
+      "nameRequired": "El nombre es obligatorio",
+      "emailRequired": "Se requiere un email válido",
+      "phoneInvalid": "Introduzca un número de teléfono válido",
+      "messageMin": "El mensaje debe tener al menos 10 caracteres"
+    },
+    "dialog": {
+      "title": "¿Qué Tipo de Solicitud?",
+      "description": "Por favor elija entre nuestro test de confirmación de fugas gratuito o una inspección completa de fugas.",
+      "freeTestTitle": "Test de Confirmación de Fugas Gratis",
+      "freeTestDescription": "Evaluación rápida para confirmar si tiene una fuga. Sin compromiso, sin cargo.",
+      "fullSurveyTitle": "Inspección Completa de Fugas",
+      "fullSurveyDescription": "Detección completa para localizar la ubicación exacta de su fuga."
+    }
+  },
+  "contact": {
+    "heroSubtitle": "Contactar con Los Cazafugas",
+    "heroTitle": "Contactar",
+    "heroTitleHighlight": "Expertos en Detección de Fugas Lanzarote",
+    "heroDescription": "¿Necesita detección de fugas en Lanzarote? Contacte con Los Cazafugas para una consulta y presupuesto gratuitos. Reparación de emergencia disponible. Servicio en Arrecife, Puerto del Carmen, Playa Blanca y todas las zonas.",
+    "sendMessage": "Envíenos un Mensaje",
+    "contactInfo": "Contactar con Los Cazafugas",
+    "contactDescription": "Estamos disponibles para ayudarle con sus necesidades de detección de fugas. Póngase en contacto usando cualquiera de los métodos a continuación.",
+    "phone": "Teléfono",
+    "email": "Email",
+    "office": "Oficina",
+    "hours": "Horario",
+    "hoursText": "Lunes - Viernes: 8:00 - 18:00\nSábado: 9:00 - 14:00\nLlamadas de emergencia disponibles",
+    "servingAreas": "Servicio en toda Lanzarote incluyendo Arrecife, Puerto del Carmen y Costa Teguise",
+    "emergencyAvailable": "Llamadas de emergencia disponibles"
+  },
+  "about": {
+    "heroSubtitle": "Sobre Canary Detect",
+    "heroTitle": "Los Cazafugas",
+    "heroDescription": "Los especialistas de confianza en detección de fugas de Lanzarote con más de 40 años de experiencia combinada.",
+    "storyTitle": "Nuestra Historia",
+    "storyP1": "Canary Detect fue fundada con una misión simple: proporcionar a Lanzarote servicios profesionales y precisos de detección de fugas utilizando la última tecnología.",
+    "storyP2": "Después de años de experiencia en la industria del agua del Reino Unido, nuestros fundadores vieron la necesidad de servicios especializados de detección de fugas en las Islas Canarias. Demasiados propietarios estaban sufriendo fugas no detectadas, llevando a altas facturas de agua, daños a la propiedad y reparaciones costosas.",
+    "storyP3": "Hoy, estamos orgullosos de ser la empresa líder de detección de fugas de Lanzarote, sirviendo a hogares, empresas, hoteles y propietarios de piscinas en toda la isla.",
+    "promisesTitle": "Nuestras Promesas",
+    "promises": [
+      {
+        "title": "Sin Encontrar, Sin Pagar",
+        "description": "Si confirmamos que tiene una fuga pero no podemos localizarla, no paga por la detección."
+      },
+      {
+        "title": "Precios Fijos",
+        "description": "Cotizamos por adelantado y lo mantenemos. Sin sorpresas, sin costes ocultos."
+      },
+      {
+        "title": "Informes Profesionales",
+        "description": "Informes detallados incluidos con cada inspección, aptos para reclamaciones de seguros."
+      },
+      {
+        "title": "Servicio en Toda la Isla",
+        "description": "Cubrimos toda Lanzarote, desde Arrecife hasta Playa Blanca."
+      }
+    ],
+    "equipmentTitle": "Inversión de €80.000+ en Equipos",
+    "equipmentDescription": "Hemos invertido mucho en la última tecnología de detección de fugas para proporcionar detección precisa y no invasiva."
+  },
+  "caseStudiesPage": {
+    "heroSubtitle": "Casos de Éxito",
+    "heroTitle": "Resultados Reales de Los Cazafugas",
+    "heroDescription": "Vea cómo hemos ayudado a propietarios en toda Lanzarote a resolver sus problemas de fugas."
+  },
+  "pricing": {
+    "sectionTitle": "Precios Transparentes",
+    "sectionSubtitle": "Sin Costes Ocultos",
+    "sectionDescription": "Creemos en precios honestos y por adelantado. Esto es lo que puede esperar.",
+    "items": [
+      {
+        "title": "Test de Confirmación de Fugas",
+        "features": [
+          "Evaluación inicial GRATIS",
+          "Comprobación del contador de agua",
+          "Inspección visual básica",
+          "Asesoramiento profesional",
+          "Sin compromiso"
+        ]
+      },
+      {
+        "title": "Detección Estándar de Fugas",
+        "features": [
+          "Detección multi-tecnología",
+          "Imagen térmica",
+          "Detección acústica",
+          "Informe detallado",
+          "Documentación lista para seguros"
+        ]
+      },
+      {
+        "title": "Detección de Fugas de Piscinas",
+        "features": [
+          "Pruebas de presión",
+          "Trazado de tuberías",
+          "Inspección del vaso",
+          "Comprobación de accesorios",
+          "Recomendaciones de reparación"
+        ]
+      }
+    ],
+    "getQuote": "Solicitar Presupuesto",
+    "guaranteesTitle": "Nuestras Garantías",
+    "guarantees": [
+      {
+        "title": "Sin Encontrar, Sin Pagar",
+        "description": "Si confirmamos una fuga pero no podemos localizarla, no paga.",
+        "highlight": true
+      },
+      {
+        "title": "Precios Fijos",
+        "description": "Presupuesto por adelantado, sin sorpresas ni costes ocultos."
+      },
+      {
+        "title": "Informes para Seguros",
+        "description": "Documentación profesional incluida gratis."
+      }
+    ],
+    "note": "Cada propiedad es diferente. Contáctenos para un presupuesto preciso basado en su situación específica.",
+    "ctaButton": "Obtenga su Presupuesto Gratis"
+  },
+  "common": {
+    "learnMore": "Saber Más",
+    "getQuote": "Solicitar Presupuesto",
+    "getYourFreeQuote": "Obtenga su Presupuesto Gratis",
+    "getInTouch": "Contactar",
+    "viewAll": "Ver Todo",
+    "readMore": "Leer Más",
+    "callNow": "Llamar Ahora",
+    "emailUs": "Enviar Email",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "close": "Cerrar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito"
+  },
+  "serviceDetail": {
+    "aboutService": "Sobre Este Servicio",
+    "whatsIncluded": "Qué Incluye",
+    "bookNow": "Reservar Ahora",
+    "getQuote": "Solicitar Presupuesto",
+    "relatedServices": "Servicios Relacionados",
+    "gallery": "Galería",
+    "seeOurTechnology": "Vea Nuestro Enfoque Multi-Tecnología",
+    "technologyDescription": "Combinamos múltiples métodos de detección para precisión milimétrica."
+  }
+}

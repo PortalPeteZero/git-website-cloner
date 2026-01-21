@@ -1,0 +1,607 @@
+{
+  "meta": {
+    "home": {
+      "title": "Leak Detection Lanzarote | Pool & Water Leak Repair",
+      "description": "Professional leak detection in Lanzarote. Find water leaks, pool leaks & underground pipes with €80,000+ equipment. No Find, No Fee guarantee.",
+      "keywords": "leak detection Lanzarote, water leak detection, pool leak detection, underground leak detection, pipe detection Lanzarote"
+    },
+    "services": {
+      "title": "Leak Detection Services Lanzarote | Water, Pool & Pipe Detection",
+      "description": "Professional leak detection and repair services in Lanzarote. Thermal imaging, acoustic sensors, tracer gas technology. No Find, No Fee.",
+      "keywords": "leak detection services, water leak repair, pool leak repair, pipe inspection Lanzarote"
+    },
+    "technology": {
+      "title": "Professional Leak Detection Equipment | Advanced Technology Lanzarote",
+      "description": "€80,000+ in specialist leak detection equipment. Multi-technology approach for centimetre-precision accuracy.",
+      "keywords": "leak detection technology, thermal imaging, tracer gas, acoustic detection, CCTV inspection"
+    },
+    "about": {
+      "title": "About Canary Detect | Leak Specialists Lanzarote | Professional Detection",
+      "description": "Leading leak detection company in Lanzarote since 2014. The Leaky Finders - professional service across the island.",
+      "keywords": "Canary Detect, The Leaky Finders, leak detection company Lanzarote"
+    },
+    "caseStudies": {
+      "title": "Leak Detection Case Studies Lanzarote | Real Results",
+      "description": "See how The Leaky Finders solve leak problems across Lanzarote. Hotels, villas, pools.",
+      "keywords": "leak detection case studies, pool leak repair, water leak repair Lanzarote"
+    },
+    "contact": {
+      "title": "Contact Canary Detect | Leak Detection Lanzarote | Emergency Repair",
+      "description": "Contact The Leaky Finders for professional leak detection in Lanzarote. Phone: +34 711 051 071. Island-wide service.",
+      "keywords": "contact Canary Detect, leak detection quote, emergency leak repair Lanzarote"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "technology": "Technology",
+    "about": "About",
+    "caseStudies": "Case Studies",
+    "contact": "Contact",
+    "blog": "Blog",
+    "getQuote": "Get a Free Quote",
+    "villaPoolLeaks": "Villa & Pool Leaks",
+    "seeOurBlog": "See our Blog",
+    "seeOurTechnology": "See Our Technology →",
+    "spotTheLeakGame": "Spot The Leak Game",
+    "poolCoatings": "Pool Coatings",
+    "freeLeakTest": "Free Leak Confirmation Test",
+    "waterLeakDetection": "Water Leak Detection",
+    "poolLeakDetection": "Swimming Pool Leak Detection",
+    "undergroundDetection": "Underground Pipe Detection",
+    "drainDetection": "Drain & Pipe Surveys",
+    "leakRepair": "Leak Repair",
+    "poolLeakRepair": "Pool Leak Repair",
+    "drainUnblocking": "Drain Unblocking"
+  },
+  "services": {
+    "drainDetection": {
+      "title": "Drain & Pipe Surveys",
+      "shortTitle": "Drain Detection",
+      "description": "Blocked drains? We clear and inspect with CCTV cameras."
+    },
+    "undergroundDetection": {
+      "title": "Underground Pipe & Cable Detection",
+      "description": "Need to find buried pipes before digging?"
+    },
+    "waterLeakDetection": {
+      "title": "Water Leak Detection",
+      "description": "Damp walls? High water bills? Water meter running?"
+    },
+    "poolLeakDetection": {
+      "title": "Swimming Pool Leak Detection",
+      "description": "Pool losing water every day? Constant refilling?"
+    },
+    "leakRepair": {
+      "title": "Leak Repair",
+      "description": "Found a leak? We'll fix it fast."
+    },
+    "poolLeakRepair": {
+      "title": "Pool Leak Repair",
+      "description": "Professional pool leak repair services."
+    },
+    "drainUnblocking": {
+      "title": "Drain Unblocking",
+      "description": "Blocked drains? High-pressure water jetting."
+    },
+    "freeLeakConfirmation": {
+      "title": "Free Leak Confirmation Test",
+      "description": "Not sure if you have a leak? We'll confirm for free."
+    }
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "The Leaky Finders.",
+        "subtitle": "No Find, No Fee.",
+        "description": "Professional water leak detection and swimming pool leak detection across Lanzarote. Using €80,000+ specialist equipment including thermal imaging, acoustic sensors and tracer gas technology.",
+        "subtext": "Is your pool losing water? Water meter running? Damp walls? We find and fix leaks fast.",
+        "alt": "Canary Detect - The Leaky Finders headquarters with technicians and van in Lanzarote"
+      },
+      {
+        "title": "Villa & Pool Specialists.",
+        "subtitle": "The Leaky Finders.",
+        "description": "Our skilled technicians use advanced acoustic equipment and thermal imaging to detect hidden leaks in your villa or pool area without unnecessary damage.",
+        "subtext": "",
+        "alt": "The Leaky Finders at villa pool terrace in Lanzarote"
+      },
+      {
+        "title": "Advanced Technology.",
+        "subtitle": "Precision Detection.",
+        "description": "€80,000+ in specialist equipment including thermal imaging cameras, acoustic sensors and tracer gas technology for centimetre-precision accuracy.",
+        "subtext": "",
+        "alt": "Leak detection equipment and technician in Lanzarote"
+      },
+      {
+        "title": "Swimming Pool Leak Detection.",
+        "subtitle": "Is Your Pool Losing Water?",
+        "description": "Is your pool losing water every day? Constant refilling? We don't just confirm leaks, we pinpoint the exact location using pressure testing, acoustic detection and CCTV inspection.",
+        "subtext": "",
+        "alt": "Pool leak detection Playa Blanca Lanzarote"
+      },
+      {
+        "title": "Underground Leak Detection.",
+        "subtitle": "Find Water Leaks Fast.",
+        "description": "Need to find buried pipes before digging? Underground water leak detection in Lanzarote. Find hidden leaks under floors, gardens and driveways with centimetre precision.",
+        "subtext": "",
+        "alt": "Underground pipe detection using ground penetrating radar"
+      },
+      {
+        "title": "Water Pipe Leak Detection.",
+        "subtitle": "Hidden Leak Specialists.",
+        "description": "Damp walls? High water bills? Water meter running with taps off? Find hidden water leaks in walls, floors and ceilings with thermal imaging, tracer gas and acoustic technology.",
+        "subtext": "",
+        "alt": "Thermal imaging camera detecting hidden water leak"
+      },
+      {
+        "title": "Leak Repair Lanzarote.",
+        "subtitle": "From Detection to Repair.",
+        "description": "Found a leak? We'll fix it fast. Complete leak detection and repair service. Water pipe leak repair, pool leak repair and underground leak repair across Lanzarote.",
+        "subtext": "",
+        "alt": "Professional leak repair service Lanzarote"
+      }
+    ]
+  },
+  "welcome": {
+    "subtitle": "Welcome to Canary Detect",
+    "title": "Professional Leak Detection Services in Lanzarote",
+    "tagline": "\"The Leaky Finders\"",
+    "paragraph1": "Canary Detect provides professional leak detection services across Lanzarote. Our team of experts uses the latest technology and equipment to locate leaks quickly and accurately, helping you save time, money and prevent further damage to your property.",
+    "paragraph2": "Whether you have a swimming pool leak, water pipe leak or need underground pipe detection, we have the expertise and equipment to find the problem and provide effective solutions.",
+    "features": [
+      "Non-invasive detection methods",
+      "Latest acoustic technology",
+      "Thermal imaging equipment",
+      "Fast and accurate results",
+      "Experienced professionals",
+      "Competitive pricing"
+    ],
+    "ctaTechnology": "See Our Technology & The Canary Detect Difference",
+    "ctaContact": "Contact Us",
+    "experienceBadge": "40+ Years Experience"
+  },
+  "stats": {
+    "leaksFound": {
+      "value": 1200,
+      "suffix": "+",
+      "label": "Leaks Found"
+    },
+    "experience": {
+      "value": 40,
+      "suffix": "+",
+      "label": "Years Combined Experience"
+    },
+    "successRate": {
+      "value": 99,
+      "suffix": "%",
+      "label": "Success Rate"
+    },
+    "emergency": {
+      "value": "24/7",
+      "label": "Emergency Service"
+    }
+  },
+  "badges": {
+    "noFindNoFee": {
+      "label": "No Find, No Fee",
+      "description": "Guaranteed results"
+    },
+    "equipment": {
+      "label": "€80K+ Equipment",
+      "description": "Professional grade"
+    },
+    "allLanzarote": {
+      "label": "All Lanzarote",
+      "description": "Island-wide coverage"
+    },
+    "insuranceReports": {
+      "label": "Insurance Reports",
+      "description": "Included free"
+    }
+  },
+  "technology": {
+    "sectionTitle": "Our Detection Methods",
+    "sectionSubtitle": "Multi-Technology Approach",
+    "sectionDescription": "We combine multiple detection technologies to ensure accuracy. Each leak is confirmed using at least two independent methods.",
+    "equipmentValue": "€80,000+ Investment in Detection Technology",
+    "equipmentDescription": "Our technicians carry the latest professional-grade equipment to every job.",
+    "ctaButton": "Explore Our Technology",
+    "tracerGas": {
+      "name": "Tracer Gas Detection",
+      "subtitle": "GASENSE Technology",
+      "description": "We pressurise pipes with a safe nitrogen/hydrogen mixture. The gas escapes at the leak point and rises through any material - concrete, tiles, soil - where our sensors detect it with pinpoint accuracy.",
+      "bestFor": "Best for: Underground leaks, concealed pipes, pool pipework",
+      "limitations": "Requires pipe isolation"
+    },
+    "acoustic": {
+      "name": "Acoustic Listening",
+      "subtitle": "Geophones & Correlators",
+      "description": "Detect the sound of water escaping from pressurised pipes. Our equipment amplifies leak sounds thousands of times, allowing us to pinpoint leaks through concrete, soil and other materials.",
+      "bestFor": "Best for: Mains leaks, pressurised systems, large diameter pipes",
+      "limitations": "Requires water pressure"
+    },
+    "thermal": {
+      "name": "Thermal Imaging",
+      "subtitle": "Infrared Cameras",
+      "description": "Identify temperature differences caused by leaking water. Cold water supply leaks or hot water heating leaks show clearly on thermal images, revealing hidden moisture behind walls and under floors.",
+      "bestFor": "Best for: Wall leaks, underfloor heating, moisture mapping",
+      "limitations": "Requires temperature differential"
+    },
+    "pipeMic": {
+      "name": "Internal Microphone",
+      "subtitle": "Pipe Mics",
+      "description": "Inserted directly into pipework to listen from inside the pipe. Provides centimetre-precision location of leaks in accessible pipe runs.",
+      "bestFor": "Best for: Accessible pipes, verification, small diameter pipes",
+      "limitations": "Requires pipe access point"
+    },
+    "cctv": {
+      "name": "CCTV Inspection",
+      "subtitle": "Camera Systems",
+      "description": "6 camera systems for all pipe sizes from 25mm to 300mm. Inspect drains, sewers and underground pipes to find blockages, damage and infiltration.",
+      "bestFor": "Best for: Drain surveys, blockages, structural damage",
+      "limitations": "Requires drain access"
+    }
+  },
+  "howItWorks": {
+    "sectionTitle": "How It Works",
+    "sectionSubtitle": "Our Process",
+    "sectionDescription": "From your first call to problem solved - here's what to expect.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Contact Us",
+        "description": "Call or fill out our contact form. We'll discuss your situation and provide a fixed-price quote."
+      },
+      {
+        "number": "2",
+        "title": "Assessment",
+        "description": "We'll assess your property and determine the best detection methods for your specific situation."
+      },
+      {
+        "number": "3",
+        "title": "Detection",
+        "description": "Our experts use advanced technology to locate your leak with precision, minimising disruption to your property."
+      },
+      {
+        "number": "4",
+        "title": "Report",
+        "description": "You receive a detailed report documenting our findings, suitable for insurance claims if needed."
+      },
+      {
+        "number": "5",
+        "title": "Repair",
+        "description": "We can repair the leak or provide guidance for your chosen contractor. Either way, you'll know exactly what needs to be done."
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionTitle": "What Clients Say About The Leaky Finders",
+    "sectionSubtitle": "Testimonials",
+    "sectionDescription": "Don't just take our word for it - see what our customers have to say.",
+    "items": [
+      {
+        "name": "María García",
+        "location": "Puerto del Carmen",
+        "text": "The Leaky Finders found a leak in our pool that we'd been searching for months. Professional, fast and saved us thousands in water bills. Highly recommended!",
+        "rating": 5,
+        "initials": "MG"
+      },
+      {
+        "name": "John Mitchell",
+        "location": "Playa Blanca",
+        "text": "Excellent service from The Leaky Finders! They located a hidden pipe leak under our villa floor without any damage. The thermal imaging technology is impressive.",
+        "rating": 5,
+        "initials": "JM"
+      },
+      {
+        "name": "Carlos Rodríguez",
+        "location": "Arrecife",
+        "text": "Very professional team at Canary Detect. They helped us map all underground utilities before our construction project. The Leaky Finders saved us costly mistakes.",
+        "rating": 5,
+        "initials": "CR"
+      },
+      {
+        "name": "Sarah Thompson",
+        "location": "Costa Teguise",
+        "text": "After months of unexplained dampness, The Leaky Finders found the source in just hours. Great communication and fair pricing. True leak detection experts!",
+        "rating": 5,
+        "initials": "ST"
+      }
+    ]
+  },
+  "caseStudies": {
+    "sectionTitle": "Recent Case Studies",
+    "sectionSubtitle": "The Leaky Finders at Work",
+    "sectionDescription": "See how The Leaky Finders solve leak problems across Lanzarote.",
+    "viewAll": "View All Case Studies",
+    "items": [
+      {
+        "title": "Swimming Pool Leak Detection",
+        "location": "Puerto del Carmen",
+        "description": "Located and repaired a complex pool pipework leak that had been losing 500 litres per day. Saved the owner thousands in water bills.",
+        "image": "pool-leak-1.jpg"
+      },
+      {
+        "title": "Underground Pipe Survey",
+        "location": "Playa Blanca",
+        "description": "Complete underground utility mapping for a new villa construction project. Identified all buried services to avoid costly damage.",
+        "image": "pipe-inspection-1.jpg"
+      },
+      {
+        "title": "Drain Detection & Repair",
+        "location": "Arrecife",
+        "description": "CCTV inspection revealed a collapsed drain causing repeated blockages. Located and repaired with minimal excavation.",
+        "image": "drain-detection-1.jpg"
+      }
+    ]
+  },
+  "faq": {
+    "sectionTitle": "Leak Detection Lanzarote FAQ",
+    "sectionSubtitle": "FAQ",
+    "sectionDescription": "Got questions about our leak detection services? Here are the answers to the most common questions we receive.",
+    "cantFind": "Can't find what you're looking for? Contact us and we'll be happy to help.",
+    "contactUs": "Contact Us",
+    "items": [
+      {
+        "question": "What is your 'No Find, No Fee' leak detection policy?",
+        "answer": "If we confirm you have a water leak but cannot locate it, there's no charge for our leak detection service - this has never happened yet. However, if we find that you don't have a leak and your problem is caused by something else, we charge 50% of the inspection cost for a 'Leak Confirmation Survey' and provide a report for your peace of mind."
+      },
+      {
+        "question": "How accurate is your water leak detection in Lanzarote?",
+        "answer": "We use a multi-technology approach with over €80,000 in specialist leak detection equipment to confirm every leak location using at least two independent technologies. This provides centimetre precision in 95% of cases, locating water leaks to within 30cm² of their position - keeping repair costs and disruption to an absolute minimum."
+      },
+      {
+        "question": "What areas of Lanzarote do you cover for leak detection?",
+        "answer": "We cover the entire island of Lanzarote for water leak detection, pool leak detection and underground pipe detection. This includes Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, Tías, Yaiza, Playa Honda, Teguise and all surrounding areas. Our base is in Playa Blanca."
+      },
+      {
+        "question": "Do you offer leak repair as well as detection?",
+        "answer": "Yes, we offer complete leak repair services in Lanzarote for water pipe leak repair, pool leak repair and underground leak repair. However, you're also free to use your own contractor for the repair - you're not obliged to use our repair team. We provide detailed reports to guide any repair work."
+      },
+      {
+        "question": "Will you need to break walls or floors to find my water leak?",
+        "answer": "Our hidden water leak detection methods are non-invasive. We use acoustic sensors, thermal imaging, tracer gas, CCTV cameras and other advanced technology to locate leaks without damaging your property. In rare cases, minimal access may be needed, but this is discussed and agreed beforehand."
+      },
+      {
+        "question": "What leak detection technology do you use?",
+        "answer": "We carry the latest leak detection equipment including: GASENSE tracer gas detection, acoustic geophones for underground water leak detection, infrared thermal imaging cameras for hidden water leak detection, pipe microphones with centimetre precision, and multiple CCTV camera systems for pipes of all sizes."
+      },
+      {
+        "question": "Do you provide leak detection reports for insurance claims?",
+        "answer": "Yes, every leak detection inspection includes a detailed professional report that can be used for your insurance company. This documents our findings, methods used and recommendations for leak repair."
+      },
+      {
+        "question": "How much does leak detection cost in Lanzarote?",
+        "answer": "We operate on fixed-fee rates with transparent leak detection pricing in Lanzarote. We quote a fixed price upfront and stick to it, regardless of how long the inspection takes. Contact us for a free quote based on your specific requirements."
+      },
+      {
+        "question": "My water meter is running - do I have a leak?",
+        "answer": "A constantly running water meter often indicates a hidden water leak. Our FREE leak confirmation test can determine whether you have a leak before committing to a full inspection. We'll assess your water system, check the basics and provide a professional report at no cost."
+      }
+    ]
+  },
+  "problemFaq": {
+    "sectionTitle": "Leak Problems We Solve",
+    "sectionSubtitle": "Common Problems",
+    "sectionDescription": "Not sure if you have a leak? These are the most common signs our customers notice before calling us. If any of these sound familiar, we can help.",
+    "getExpertHelp": "Get Expert Help",
+    "items": [
+      {
+        "question": "Why is my pool losing water?",
+        "answer": "If your swimming pool is losing more than 6mm of water per day (beyond normal evaporation), you likely have a leak. Common causes include cracks in the pool shell, damaged pipe connections or faulty fittings. Our pool leak detection service in Lanzarote can pinpoint the exact location using pressure testing and specialist equipment."
+      },
+      {
+        "question": "My water meter is running when all taps are off - do I have a leak?",
+        "answer": "Yes, if your water meter continues running when no water is being used, this indicates a hidden water leak somewhere on your property. This could be in underground pipes, under floor slabs or behind walls. Our acoustic and thermal imaging leak detection can find these hidden leaks without breaking walls or floors."
+      },
+      {
+        "question": "How do you find water leaks underground?",
+        "answer": "We use multiple technologies to find underground water leaks: tracer gas detection (GASENSE), acoustic listening devices (geophones) and thermal imaging. By combining at least two methods, we achieve centimetre precision in locating underground leaks, minimising excavation and repair costs."
+      },
+      {
+        "question": "Can you detect leaks in pool pipes?",
+        "answer": "Yes, we specialise in pool pipe leak detection. We use pressure testing to isolate leaks in pool plumbing, then pinpoint the exact location using acoustic equipment and tracer gas. This works for underground pool pipes, return lines and suction lines."
+      },
+      {
+        "question": "Do you repair leaks or just detect them?",
+        "answer": "We offer both leak detection and leak repair services across Lanzarote. Once we locate your leak, we can repair it ourselves or provide detailed guidance for your chosen contractor. Our reports include the exact location and recommended repair methods."
+      },
+      {
+        "question": "How much does leak detection cost in Lanzarote?",
+        "answer": "We offer fixed-fee leak detection inspections with no hidden costs. Prices vary based on property size and complexity. Contact us for a free quote. Remember our No Find, No Fee guarantee - if we confirm you have a leak but can't locate it, there's no charge."
+      }
+    ]
+  },
+  "footer": {
+    "getQuoteTitle": "Get a Free Quote Today",
+    "getQuoteSubtitle": "We'll call you back within 24 hours",
+    "namePlaceholder": "Your Name",
+    "phonePlaceholder": "Phone Number",
+    "requestCallback": "Request Callback",
+    "noFindNoFee": "No Find, No Fee",
+    "guaranteedResults": "Guaranteed results",
+    "response24hr": "24hr Response",
+    "fastTurnaround": "Fast turnaround",
+    "equipment": "€80K+ Equipment",
+    "professionalGrade": "Professional grade",
+    "tagline": "\"The Leaky Finders\"",
+    "aboutText": "Lanzarote's leading leak detection specialists. Professional service with the latest technology.",
+    "navigation": "Navigation",
+    "servicesTitle": "Services",
+    "areasServed": "Areas Served",
+    "contactTitle": "Contact",
+    "allLanzarote": "All Lanzarote",
+    "copyright": "© {year} Canary Detect - \"The Leaky Finders\". All rights reserved.",
+    "admin": "Admin"
+  },
+  "forms": {
+    "yourName": "Your Name",
+    "phoneNumber": "Phone Number",
+    "email": "Email Address",
+    "serviceRequired": "Service Required",
+    "yourMessage": "Your Message",
+    "propertyAddress": "Property Address",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "sent": "Sent!",
+    "messageSentSuccess": "Message sent successfully! We'll get back to you soon.",
+    "requestFreeTest": "Request Free Test",
+    "requestFullSurvey": "Request Full Survey",
+    "selectService": "Select a service...",
+    "placeholders": {
+      "name": "John Smith",
+      "phone": "+34 600 000 000",
+      "email": "john@example.com",
+      "address": "Your property address in Lanzarote",
+      "message": "Please describe your problem or enquiry..."
+    },
+    "errors": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Valid email is required",
+      "phoneInvalid": "Enter a valid phone number",
+      "messageMin": "Message must be at least 10 characters"
+    },
+    "dialog": {
+      "title": "What Type of Request?",
+      "description": "Please choose between our free leak confirmation test or a full leak survey.",
+      "freeTestTitle": "Free Leak Confirmation Test",
+      "freeTestDescription": "Quick assessment to confirm if you have a leak. No obligation, no charge.",
+      "fullSurveyTitle": "Full Leak Survey",
+      "fullSurveyDescription": "Comprehensive detection to pinpoint the exact location of your leak."
+    }
+  },
+  "contact": {
+    "heroSubtitle": "Contact The Leaky Finders",
+    "heroTitle": "Contact Lanzarote",
+    "heroTitleHighlight": "Leak Detection Experts",
+    "heroDescription": "Need leak detection in Lanzarote? Contact The Leaky Finders for a free consultation and quote. Emergency repair available. Service in Arrecife, Puerto del Carmen, Playa Blanca and all areas.",
+    "sendMessage": "Send Us a Message",
+    "contactInfo": "Contact The Leaky Finders",
+    "contactDescription": "We're available to help with your leak detection needs. Get in touch using any of the methods below.",
+    "phone": "Phone",
+    "email": "Email",
+    "office": "Office",
+    "hours": "Hours",
+    "hoursText": "Monday - Friday: 8:00 - 18:00\nSaturday: 9:00 - 14:00\nEmergency calls available",
+    "servingAreas": "Serving all of Lanzarote including Arrecife, Puerto del Carmen & Costa Teguise",
+    "emergencyAvailable": "Emergency calls available"
+  },
+  "about": {
+    "heroSubtitle": "About Canary Detect",
+    "heroTitle": "The Leaky Finders",
+    "heroDescription": "Lanzarote's trusted leak detection specialists with 40+ years combined experience.",
+    "storyTitle": "Our Story",
+    "storyP1": "Canary Detect was founded with a simple mission: to provide Lanzarote with professional, accurate leak detection services using the latest technology.",
+    "storyP2": "After years of experience in the UK water industry, our founders saw a need for specialist leak detection services in the Canary Islands. Too many property owners were suffering from undetected leaks, leading to high water bills, property damage and costly repairs.",
+    "storyP3": "Today, we're proud to be Lanzarote's leading leak detection company, serving homes, businesses, hotels and pool owners across the island.",
+    "promisesTitle": "Our Promises",
+    "promises": [
+      {
+        "title": "No Find, No Fee",
+        "description": "If we confirm you have a leak but can't locate it, you don't pay for detection."
+      },
+      {
+        "title": "Fixed Pricing",
+        "description": "We quote upfront and stick to it. No surprises, no hidden costs."
+      },
+      {
+        "title": "Professional Reports",
+        "description": "Detailed reports included with every inspection, suitable for insurance claims."
+      },
+      {
+        "title": "Island-Wide Service",
+        "description": "We cover all of Lanzarote, from Arrecife to Playa Blanca."
+      }
+    ],
+    "equipmentTitle": "€80,000+ Equipment Investment",
+    "equipmentDescription": "We've invested heavily in the latest leak detection technology to provide accurate, non-invasive detection."
+  },
+  "caseStudiesPage": {
+    "heroSubtitle": "Case Studies",
+    "heroTitle": "Real Results from The Leaky Finders",
+    "heroDescription": "See how we've helped property owners across Lanzarote solve their leak problems."
+  },
+  "pricing": {
+    "sectionTitle": "Transparent Pricing",
+    "sectionSubtitle": "No Hidden Costs",
+    "sectionDescription": "We believe in honest, upfront pricing. Here's what you can expect.",
+    "items": [
+      {
+        "title": "Leak Confirmation Test",
+        "features": [
+          "FREE initial assessment",
+          "Water meter check",
+          "Basic visual inspection",
+          "Professional advice",
+          "No obligation"
+        ]
+      },
+      {
+        "title": "Standard Leak Detection",
+        "features": [
+          "Multi-technology detection",
+          "Thermal imaging",
+          "Acoustic detection",
+          "Detailed report",
+          "Insurance-ready documentation"
+        ]
+      },
+      {
+        "title": "Pool Leak Detection",
+        "features": [
+          "Pressure testing",
+          "Pipe tracing",
+          "Shell inspection",
+          "Fitting checks",
+          "Repair recommendations"
+        ]
+      }
+    ],
+    "getQuote": "Get a Quote",
+    "guaranteesTitle": "Our Guarantees",
+    "guarantees": [
+      {
+        "title": "No Find, No Fee",
+        "description": "If we confirm a leak but can't locate it, you don't pay.",
+        "highlight": true
+      },
+      {
+        "title": "Fixed Pricing",
+        "description": "Quote upfront, no surprises or hidden costs."
+      },
+      {
+        "title": "Insurance Reports",
+        "description": "Professional documentation included free."
+      }
+    ],
+    "note": "Every property is different. Contact us for an accurate quote based on your specific situation.",
+    "ctaButton": "Get Your Free Quote"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getQuote": "Get a Quote",
+    "getYourFreeQuote": "Get Your Free Quote",
+    "getInTouch": "Get In Touch",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "callNow": "Call Now",
+    "emailUs": "Email Us",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "serviceDetail": {
+    "aboutService": "About This Service",
+    "whatsIncluded": "What's Included",
+    "bookNow": "Book Now",
+    "getQuote": "Get a Quote",
+    "relatedServices": "Related Services",
+    "gallery": "Gallery",
+    "seeOurTechnology": "See Our Multi-Technology Approach",
+    "technologyDescription": "We combine multiple detection methods for pinpoint accuracy."
+  }
+}

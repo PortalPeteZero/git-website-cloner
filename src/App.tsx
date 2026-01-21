@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -26,28 +27,47 @@ const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <ScrollToTop />
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/free-leak-confirmation" element={<FreeLeakConfirmation />} />
-            <Route path="/services/pipe-inspection" element={<Navigate to="/services/drain-detection" replace />} />
-            <Route path="/services/:slug" element={<ServiceDetail />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/technology" element={<Technology />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogArticle />} />
-            <Route path="/locations/:location" element={<LocationPage />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/admin/login" element={<AdminLogin />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </TooltipProvider>
+        <LanguageProvider>
+          <ScrollToTop />
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <Routes>
+              {/* English Routes */}
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/free-leak-confirmation" element={<FreeLeakConfirmation />} />
+              <Route path="/services/pipe-inspection" element={<Navigate to="/services/drain-detection" replace />} />
+              <Route path="/services/:slug" element={<ServiceDetail />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/technology" element={<Technology />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogArticle />} />
+              <Route path="/locations/:location" element={<LocationPage />} />
+              
+              {/* Spanish Routes */}
+              <Route path="/es" element={<Index />} />
+              <Route path="/es/sobre-nosotros" element={<About />} />
+              <Route path="/es/servicios" element={<Services />} />
+              <Route path="/es/servicios/confirmacion-fugas-gratis" element={<FreeLeakConfirmation />} />
+              <Route path="/es/servicios/:slug" element={<ServiceDetail />} />
+              <Route path="/es/contacto" element={<Contact />} />
+              <Route path="/es/casos-de-exito" element={<CaseStudies />} />
+              <Route path="/es/tecnologia" element={<Technology />} />
+              <Route path="/es/blog" element={<Blog />} />
+              <Route path="/es/blog/:slug" element={<BlogArticle />} />
+              <Route path="/es/ubicaciones/:location" element={<LocationPage />} />
+              
+              {/* Admin (English only) */}
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/admin/login" element={<AdminLogin />} />
+              
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </TooltipProvider>
+        </LanguageProvider>
       </BrowserRouter>
     </QueryClientProvider>
   </HelmetProvider>
