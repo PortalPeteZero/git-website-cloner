@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { Droplets, Search, Cable, Waves, CircleDot, Wrench } from "lucide-react";
 import ServiceCard from "@/components/home/ServiceCard";
 import SEOHead from "@/components/seo/SEOHead";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 
 // Import service hero images
 import drainDetectionImg from "@/assets/services/drain-detection.jpg";
@@ -73,11 +74,12 @@ const Services = () => {
   return (
     <Layout>
       <SEOHead 
-        title="Leak Detection Services Lanzarote | Water, Pool & Pipe Detection | Canary Detect"
-        description="Professional leak detection services in Lanzarote. Water leak detection, pool leak detection, underground pipe detection, CCTV drain surveys & leak repair. Accurate leak detection with €80,000+ equipment."
+        title="Leak Detection Services Lanzarote | Water, Pool & Pipe Detection & Repair"
+        description="Complete leak detection and repair services across Lanzarote. Swimming pool leak detection, water pipe leaks, underground detection. Professional equipment, accurate results. Free quotes available."
         keywords="leak detection service Lanzarote, professional leak detection, water pipe leak detection, swimming pool leak detection, underground water leak detection, pool pipe leak repair, water pipe leak repair, leak detection and repair, accurate leak detection, leak detection company Lanzarote"
         canonical="https://canary-detect.com/services"
       />
+      <ServiceSchema />
       {/* Hero Section with Background Image */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">

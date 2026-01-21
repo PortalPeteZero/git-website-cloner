@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, CheckCircle, Clock, TrendingUp } from "lucide-react";
+import SEOHead from "@/components/seo/SEOHead";
 
 // Import hero and case study images
 import caseStudiesHero from "@/assets/hero/case-studies-hero.jpg";
@@ -81,6 +82,12 @@ const caseStudies = [
 const CaseStudies = () => {
   return (
     <Layout>
+      <SEOHead 
+        title="Leak Detection Case Studies Lanzarote | Real Results & Success Stories"
+        description="See real leak detection work across Lanzarote. Hotel pools, villas, commercial buildings. Case studies from Playa Blanca, Puerto del Carmen, Costa Teguise & Arrecife."
+        keywords="leak detection case studies, Lanzarote leak repair results, pool leak detection examples, water leak detection success, commercial leak detection Lanzarote"
+        canonical="https://canary-detect.com/case-studies"
+      />
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -103,7 +110,7 @@ const CaseStudies = () => {
           >
             <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Our Work</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
-              Case <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Studies</span>
+              Leak Detection & Repair <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Case Studies Lanzarote</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
               See examples of our leak detection work across Lanzarote. 
