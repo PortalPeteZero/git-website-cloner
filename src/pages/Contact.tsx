@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import contactHero from "@/assets/hero/contact-hero.jpg";
 import SEOHead from "@/components/seo/SEOHead";
+import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -75,6 +76,7 @@ const Contact = () => {
         keywords="leak detection Lanzarote, emergency leak repair Lanzarote, leak detection Lanzarote prices, pool leak detection Playa Blanca, water leak repair Canary Islands"
         canonical="https://canary-detect.com/contact"
       />
+      <LocalBusinessSchema page="contact" />
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
