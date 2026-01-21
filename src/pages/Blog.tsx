@@ -1,13 +1,93 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
-import { blogArticles } from "@/data/blogArticles";
+import { blogArticles, BlogArticle as StaticBlogArticle } from "@/data/blogArticles";
+import { supabase } from "@/integrations/supabase/client";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
 
+interface DatabaseBlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string | null;
+  category: string | null;
+  author: string;
+  featured_image: string | null;
+  read_time: number | null;
+  created_at: string;
+}
+
+interface CombinedPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  author: string;
+  image: string;
+  readTime: number;
+  date: string;
+  isDatabase: boolean;
+}
+
 const Blog = () => {
+  const [dbPosts, setDbPosts] = useState<CombinedPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchDbPosts = async () => {
+      const { data, error } = await supabase
+        .from('blog_posts')
+        .select('id, slug, title, excerpt, category, author, featured_image, read_time, created_at')
+        .eq('published', true)
+        .order('created_at', { ascending: false });
+
+      if (!error && data) {
+        setDbPosts(data.map(post => ({
+          id: post.id,
+          slug: post.slug,
+          title: post.title,
+          excerpt: post.excerpt || '',
+          category: post.category || 'Blog',
+          author: post.author,
+          image: post.featured_image || waterLeakImg,
+          readTime: post.read_time || 5,
+          date: post.created_at,
+          isDatabase: true,
+        })));
+      }
+      setLoading(false);
+    };
+
+    fetchDbPosts();
+  }, []);
+
+  // Convert static articles to combined format
+  const staticPosts: CombinedPost[] = blogArticles.map(article => ({
+    id: String(article.id),
+    slug: article.slug,
+    title: article.title,
+    excerpt: article.excerpt,
+    category: article.category,
+    author: article.author,
+    image: article.image,
+    readTime: article.readTime,
+    date: article.date,
+    isDatabase: false,
+  }));
+
+  // Combine and sort all posts by date (newest first)
+  const allPosts = [...dbPosts, ...staticPosts].sort((a, b) => 
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
+  const featuredPost = allPosts[0];
+  const otherPosts = allPosts.slice(1);
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -50,7 +130,7 @@ const Blog = () => {
       </section>
 
       {/* Featured Article */}
-      {blogArticles[0] && (
+      {featuredPost && (
         <section className="py-12 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <motion.article
@@ -59,11 +139,11 @@ const Blog = () => {
               viewport={{ once: true }}
               className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto"
             >
-              <Link to={`/blog/${blogArticles[0].slug}`} className="group">
+              <Link to={`/blog/${featuredPost.slug}`} className="group">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <img
-                    src={blogArticles[0].image}
-                    alt={blogArticles[0].title}
+                    src={featuredPost.image}
+                    alt={featuredPost.title}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -74,26 +154,26 @@ const Blog = () => {
                 <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
                   Featured Article
                 </span>
-                <Link to={`/blog/${blogArticles[0].slug}`}>
+                <Link to={`/blog/${featuredPost.slug}`}>
                   <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4 hover:text-primary transition-colors">
-                    {blogArticles[0].title}
+                    {featuredPost.title}
                   </h2>
                 </Link>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {blogArticles[0].excerpt}
+                  {featuredPost.excerpt}
                 </p>
                 <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
                   <span className="flex items-center gap-1">
                     <Calendar className="h-4 w-4" />
-                    {formatDate(blogArticles[0].date)}
+                    {formatDate(featuredPost.date)}
                   </span>
                   <span className="flex items-center gap-1">
                     <Clock className="h-4 w-4" />
-                    {blogArticles[0].readTime} min read
+                    {featuredPost.readTime} min read
                   </span>
                 </div>
                 <Button asChild>
-                  <Link to={`/blog/${blogArticles[0].slug}`}>
+                  <Link to={`/blog/${featuredPost.slug}`}>
                     Read Article
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Link>
@@ -110,60 +190,67 @@ const Blog = () => {
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-10">
             All Articles
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogArticles.slice(1).map((post, index) => (
-              <motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
-              >
-                <Link to={`/blog/${post.slug}`}>
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                </Link>
-                <div className="p-6">
-                  <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="h-3 w-3" />
-                      {formatDate(post.date)}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="h-3 w-3" />
-                      {post.readTime} min
-                    </span>
-                  </div>
-                  <span className="text-xs text-primary font-medium">
-                    {post.category}
-                  </span>
+          
+          {loading ? (
+            <div className="flex justify-center py-12">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {otherPosts.map((post, index) => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
+                >
                   <Link to={`/blog/${post.slug}`}>
-                    <h3 className="font-heading font-bold text-lg mt-1 mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
+                    <div className="aspect-video overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
                   </Link>
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-2">
-                    {post.excerpt}
-                  </p>
-                  <Link 
-                    to={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-primary font-medium text-sm hover:underline"
-                  >
-                    Read More
-                    <ArrowRight className="h-4 w-4 ml-1" />
-                  </Link>
-                </div>
-              </motion.article>
-            ))}
-          </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        {formatDate(post.date)}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="h-3 w-3" />
+                        {post.readTime} min
+                      </span>
+                    </div>
+                    <span className="text-xs text-primary font-medium">
+                      {post.category}
+                    </span>
+                    <Link to={`/blog/${post.slug}`}>
+                      <h3 className="font-heading font-bold text-lg mt-1 mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                        {post.title}
+                      </h3>
+                    </Link>
+                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-2">
+                      {post.excerpt}
+                    </p>
+                    <Link 
+                      to={`/blog/${post.slug}`}
+                      className="inline-flex items-center text-primary font-medium text-sm hover:underline"
+                    >
+                      Read More
+                      <ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

@@ -14,6 +14,8 @@ import Technology from "./pages/Technology";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import LocationPage from "./pages/LocationPage";
+import Admin from "./pages/Admin";
+import AdminLogin from "./pages/AdminLogin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +38,8 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/locations/:location" element={<LocationPage />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </TooltipProvider>

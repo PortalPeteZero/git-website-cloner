@@ -1,35 +1,119 @@
+import { useState, useEffect } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, Clock, ArrowLeft, ArrowRight } from "lucide-react";
-import { getArticleBySlug, getRelatedArticles, BlogArticle as BlogArticleType } from "@/data/blogArticles";
+import { getArticleBySlug, getRelatedArticles, BlogArticle as StaticBlogArticle } from "@/data/blogArticles";
+import { supabase } from "@/integrations/supabase/client";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
+
+interface DatabaseBlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string | null;
+  content: string;
+  category: string | null;
+  author: string;
+  featured_image: string | null;
+  meta_title: string | null;
+  meta_description: string | null;
+  keywords: string | null;
+  read_time: number | null;
+  created_at: string;
+}
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
-  const article = slug ? getArticleBySlug(slug) : undefined;
+  const [dbPost, setDbPost] = useState<DatabaseBlogPost | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
+
+  // Check static articles first
+  const staticArticle = slug ? getArticleBySlug(slug) : undefined;
   const relatedArticles = slug ? getRelatedArticles(slug, 3) : [];
 
+  useEffect(() => {
+    if (staticArticle) {
+      setLoading(false);
+      return;
+    }
+
+    const fetchDbPost = async () => {
+      if (!slug) {
+        setNotFound(true);
+        setLoading(false);
+        return;
+      }
+
+      const { data, error } = await supabase
+        .from('blog_posts')
+        .select('*')
+        .eq('slug', slug)
+        .eq('published', true)
+        .single();
+
+      if (error || !data) {
+        setNotFound(true);
+      } else {
+        setDbPost(data);
+      }
+      setLoading(false);
+    };
+
+    fetchDbPost();
+  }, [slug, staticArticle]);
+
+  if (loading) {
+    return (
+      <Layout>
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (notFound && !staticArticle) {
+    return <Navigate to="/blog" replace />;
+  }
+
+  // Use static article or database post
+  const article = staticArticle || dbPost;
   if (!article) {
     return <Navigate to="/blog" replace />;
   }
 
+  const isStatic = !!staticArticle;
+  const title = isStatic ? staticArticle.title : dbPost!.title;
+  const metaTitle = isStatic ? staticArticle.metaTitle : (dbPost!.meta_title || dbPost!.title);
+  const metaDescription = isStatic ? staticArticle.metaDescription : (dbPost!.meta_description || dbPost!.excerpt || '');
+  const keywords = isStatic ? staticArticle.keywords : (dbPost!.keywords || '');
+  const content = isStatic ? staticArticle.content : dbPost!.content;
+  const category = isStatic ? staticArticle.category : (dbPost!.category || 'Blog');
+  const author = isStatic ? staticArticle.author : dbPost!.author;
+  const readTime = isStatic ? staticArticle.readTime : (dbPost!.read_time || 5);
+  const date = isStatic ? staticArticle.date : dbPost!.created_at;
+  const image = isStatic ? staticArticle.image : (dbPost!.featured_image || waterLeakImg);
+
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    const dateObj = new Date(dateString);
+    return dateObj.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
   };
 
   return (
     <Layout>
       <SEOHead
-        title={article.metaTitle}
-        description={article.metaDescription}
-        keywords={article.keywords}
-        canonical={`https://canary-detect.com/blog/${article.slug}`}
+        title={metaTitle}
+        description={metaDescription}
+        keywords={keywords}
+        canonical={`https://canary-detect.com/blog/${slug}`}
         type="article"
-        image={article.image}
+        image={image}
       />
 
       {/* Article Schema */}
@@ -37,12 +121,12 @@ const BlogArticle = () => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": article.title,
-          "description": article.excerpt,
-          "image": article.image,
+          "headline": title,
+          "description": metaDescription,
+          "image": image,
           "author": {
             "@type": "Person",
-            "name": article.author
+            "name": author
           },
           "publisher": {
             "@type": "Organization",
@@ -52,11 +136,11 @@ const BlogArticle = () => {
               "url": "https://canary-detect.com/logo.png"
             }
           },
-          "datePublished": article.date,
-          "dateModified": article.date,
+          "datePublished": date,
+          "dateModified": date,
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": `https://canary-detect.com/blog/${article.slug}`
+            "@id": `https://canary-detect.com/blog/${slug}`
           }
         })}
       </script>
@@ -65,8 +149,8 @@ const BlogArticle = () => {
       <section className="relative min-h-[40vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src={article.image} 
-            alt={article.title}
+            src={image} 
+            alt={title}
             className="w-full h-full object-cover" 
             fetchPriority="high" 
             decoding="async" 
@@ -90,25 +174,25 @@ const BlogArticle = () => {
             </Link>
             
             <span className="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
-              {article.category}
+              {category}
             </span>
             
             <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-6 leading-tight">
-              {article.title}
+              {title}
             </h1>
             
             <div className="flex flex-wrap items-center gap-4 text-white/80 text-sm">
               <span className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                {formatDate(article.date)}
+                {formatDate(date)}
               </span>
               <span className="flex items-center gap-2">
                 <User className="h-4 w-4" />
-                {article.author}
+                {author}
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
-                {article.readTime} min read
+                {readTime} min read
               </span>
             </div>
           </motion.div>
@@ -133,9 +217,12 @@ const BlogArticle = () => {
                 prose-strong:text-foreground prose-strong:font-semibold
                 prose-a:text-primary prose-a:no-underline hover:prose-a:underline
                 prose-ul:my-4 prose-ol:my-4
-                prose-table:border-border prose-th:bg-muted prose-th:p-3 prose-td:p-3 prose-td:border-border"
+                prose-table:border-border prose-th:bg-muted prose-th:p-3 prose-td:p-3 prose-td:border-border
+                [&_.video-embed]:my-8 [&_.video-embed]:rounded-lg [&_.video-embed]:overflow-hidden [&_.video-embed]:shadow-lg
+                [&_iframe]:w-full [&_iframe]:aspect-video"
             >
               <ReactMarkdown
+                rehypePlugins={[rehypeRaw]}
                 components={{
                   a: ({ href, children }) => {
                     if (href?.startsWith('/')) {
@@ -145,7 +232,7 @@ const BlogArticle = () => {
                   }
                 }}
               >
-                {article.content}
+                {content}
               </ReactMarkdown>
             </motion.div>
 

@@ -55,19 +55,25 @@ If you're losing more than 5cm of water per week, you likely have a leak that ne
 
 ## The Bucket Test: Your First Step
 
-The bucket test is the most reliable DIY method to determine if your pool is leaking or just evaporating water. Here's how to do it:
+The bucket test is the most reliable DIY method to determine if your pool is leaking or just evaporating water. Watch this excellent video from Swim University that demonstrates exactly how to perform the test:
+
+<div class="video-embed">
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/Zqiz4qBJU_g?start=37" title="Pool Bucket Test - How to Find a Pool Leak" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Step-by-Step Bucket Test
 
-1. **Fill a bucket** with pool water and place it on the first or second step of your pool
-2. **Mark the water level** inside the bucket with tape or marker
-3. **Mark the pool water level** on the outside of the bucket
-4. **Wait 24 hours** without using the pool
-5. **Compare the levels** - if the pool level dropped more than the bucket level, you have a leak
+1. **Bring your pool water to normal level** before starting the test
+2. **Fill a 5-gallon bucket** with pool water to about one inch from the top
+3. **Place the bucket on the first or second step** so the water temperature matches
+4. **Mark the water level** inside the bucket with tape or marker
+5. **Mark the pool water level** on the outside of the bucket
+6. **Wait 24 hours** without using the pool or running any equipment
+7. **Compare the levels** - if the pool level dropped more than the bucket level, you have a leak
 
 ### Interpreting Your Results
 
-- **Equal drop**: Normal evaporation - no leak
+- **Equal drop**: Normal evaporation - no leak detected
 - **Pool dropped more**: You have a leak - time for professional leak detection
 - **Pool dropped significantly more**: Serious leak requiring immediate attention
 
