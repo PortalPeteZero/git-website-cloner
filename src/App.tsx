@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
+import FreeLeakConfirmation from "./pages/FreeLeakConfirmation";
 import Contact from "./pages/Contact";
 import CaseStudies from "./pages/CaseStudies";
 import Technology from "./pages/Technology";
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/free-leak-confirmation" element={<FreeLeakConfirmation />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/case-studies" element={<CaseStudies />} />
