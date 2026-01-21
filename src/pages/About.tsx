@@ -43,7 +43,7 @@ const About = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 md:py-28 bg-background section-noise">
+      <section className="py-12 md:py-16 bg-background section-noise">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -89,7 +89,7 @@ const About = () => {
       </section>
 
       {/* Our Guarantees */}
-      <section className="py-20 md:py-28 bg-canary-dark section-pattern-dark">
+      <section className="py-12 md:py-16 bg-canary-dark section-pattern-dark">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -58,7 +58,7 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="py-12 md:py-16 bg-background">
       <FAQSchema faqs={faqs} />
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-start">

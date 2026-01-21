@@ -43,7 +43,7 @@ const technologies = [
 
 const TechnologySection = () => {
   return (
-    <section className="py-20 md:py-28 bg-canary-navy relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-canary-navy relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

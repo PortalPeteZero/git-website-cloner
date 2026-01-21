@@ -34,7 +34,7 @@ const caseStudies = [
 
 const CaseStudiesPreview = () => {
   return (
-    <section className="py-20 md:py-28 bg-gray-50">
+    <section className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">Our Work</span>

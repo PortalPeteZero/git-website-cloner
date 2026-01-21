@@ -127,7 +127,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 md:py-28 bg-background section-noise">
+      <section className="py-12 md:py-16 bg-background section-noise">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -141,7 +141,7 @@ const Services = () => {
       <PricingSection />
 
       {/* Why Choose Us */}
-      <section className="py-20 md:py-28 bg-muted section-pattern">
+      <section className="py-12 md:py-16 bg-muted section-pattern">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
