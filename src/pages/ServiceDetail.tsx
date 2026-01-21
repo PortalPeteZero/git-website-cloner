@@ -579,36 +579,6 @@ const ServiceDetail = () => {
                 </div>
               )}
 
-              {/* Technology Methods - Only for water leak detection */}
-              {slug === 'water-leak-detection' && (
-                <div className="bg-gradient-to-br from-slate-50 to-muted/50 rounded-2xl p-6 md:p-8 border border-border mt-6">
-                  <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 bg-canary-navy rounded-lg flex items-center justify-center">
-                      <Search className="h-5 w-5 text-white" />
-                    </div>
-                    Detection Technologies We Use
-                  </h3>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    {[
-                      { icon: Atom, name: "GASENSE", desc: "Tracer gas detection for buried pipes" },
-                      { icon: AudioLines, name: "Geophones", desc: "Acoustic listening devices" },
-                      { icon: Thermometer, name: "Thermal Imaging", desc: "Infrared temperature detection" },
-                      { icon: Mic, name: "Pipe Mic", desc: "Centimetre-accurate positioning" },
-                    ].map((tech, idx) => (
-                      <div key={idx} className="flex items-start gap-3 p-3 bg-white rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-sm transition-all">
-                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <tech.icon className="h-5 w-5 text-primary" />
-                        </div>
-                        <div>
-                          <p className="font-semibold text-foreground">{tech.name}</p>
-                          <p className="text-sm text-muted-foreground">{tech.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
             </motion.div>
 
             {/* Right Column - What's Included + Gallery for short content */}
@@ -715,7 +685,43 @@ const ServiceDetail = () => {
             </motion.div>
           </div>
 
-          {/* Full Width Gallery Section - For longer pages */}
+          {/* Technology Methods - Full width for water leak detection */}
+          {slug === 'water-leak-detection' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-8"
+            >
+              <div className="bg-gradient-to-br from-slate-50 to-muted/50 rounded-2xl p-6 md:p-8 border border-border">
+                <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-3">
+                  <div className="w-10 h-10 bg-canary-navy rounded-lg flex items-center justify-center">
+                    <Search className="h-5 w-5 text-white" />
+                  </div>
+                  Detection Technologies We Use
+                </h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {[
+                    { icon: Atom, name: "GASENSE", desc: "Tracer gas detection for buried pipes" },
+                    { icon: AudioLines, name: "Geophones", desc: "Acoustic listening devices" },
+                    { icon: Thermometer, name: "Thermal Imaging", desc: "Infrared temperature detection" },
+                    { icon: Mic, name: "Pipe Mic", desc: "Centimetre-accurate positioning" },
+                  ].map((tech, idx) => (
+                    <div key={idx} className="flex items-start gap-3 p-3 bg-white rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-sm transition-all">
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <tech.icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">{tech.name}</p>
+                        <p className="text-sm text-muted-foreground">{tech.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+
           {service.galleryImages.length > 0 && slug !== 'underground-detection' && slug !== 'drain-unblocking' && service.content.length >= 600 && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
