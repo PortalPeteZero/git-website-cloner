@@ -376,3 +376,24 @@
 .blog-prose p:has(strong:first-child:contains("Remember")) {
   @apply bg-primary/10 border-l-4 border-primary rounded-r-lg p-4 my-6;
 }
+
+/* Video thumbnail click-to-load */
+.blog-prose .video-thumbnail {
+  @apply my-8 rounded-xl overflow-hidden shadow-lg;
+}
+
+.blog-prose .video-thumbnail .video-link {
+  @apply relative block cursor-pointer;
+}
+
+.blog-prose .video-thumbnail .video-thumb-img {
+  @apply w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105;
+}
+
+.blog-prose .video-thumbnail .play-button {
+  @apply absolute inset-0 flex items-center justify-center text-6xl text-white bg-black/40 transition-all duration-300 group-hover:bg-black/60;
+}
+
+.blog-prose .video-thumbnail .video-caption {
+  @apply block bg-canary-navy text-white text-center py-3 px-4 font-medium text-sm;
+}
