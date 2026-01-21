@@ -106,9 +106,9 @@ const HeroSlider = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Enhanced gradient overlay for better text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[rgba(30,41,59,0.9)] via-[rgba(30,41,59,0.7)] to-[rgba(30,41,59,0.3)]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,41,59,0.5)] via-transparent to-transparent" />
+      {/* Enhanced gradient overlay for better text contrast - WCAG AA compliant */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.3)]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] via-transparent to-transparent" />
 
       {/* Content */}
       <div className="relative h-full flex items-center">

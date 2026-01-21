@@ -35,8 +35,8 @@ const FreeLeakConfirmation = () => {
             alt="Leak detection specialist at work"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-canary-navy/95 via-canary-navy/80 to-canary-navy/60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-canary-navy/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.65)] to-[rgba(0,0,0,0.45)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-transparent" />
         </div>
 
         {/* Decorative elements */}

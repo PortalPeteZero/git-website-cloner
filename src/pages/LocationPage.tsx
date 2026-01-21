@@ -411,8 +411,8 @@ const LocationPage = () => {
       <section className="relative min-h-[50vh] md:min-h-[55vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={titleBg} alt={`Leak detection services in ${locationData.name} Lanzarote`} className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(30,41,59,0.9)] via-[rgba(30,41,59,0.7)] to-[rgba(30,41,59,0.4)]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,41,59,0.6)] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.35)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] via-transparent to-transparent" />
         </div>
         <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
           <motion.div
@@ -505,10 +505,10 @@ const LocationPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-muted rounded-xl p-6 sticky top-24"
+                className="bg-card border border-border rounded-xl p-6 sticky top-24 shadow-sm"
               >
-                <h3 className="font-heading text-xl font-bold mb-4">Get a Quote in {locationData.name}</h3>
-                <p className="text-muted-foreground text-sm mb-6">
+                <h3 className="font-heading text-xl font-bold text-foreground mb-4">Get a Quote in {locationData.name}</h3>
+                <p className="text-foreground/80 text-sm mb-6">
                   Contact us for a free consultation and quote. Fast response times across {locationData.name}.
                 </p>
                 <div className="space-y-4 mb-6">

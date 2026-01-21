@@ -427,7 +427,7 @@ const ServiceDetail = () => {
               decoding="async"
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.25)]" />
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
         
@@ -516,7 +516,7 @@ const ServiceDetail = () => {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
                 <h3 className="font-heading text-xl font-bold text-white">Get a Free Quote</h3>
-                <p className="text-white/70 text-sm mt-1">
+                <p className="text-white text-sm mt-1">
                   Contact us today for a free consultation for {service.title.toLowerCase()} services.
                 </p>
               </div>
@@ -626,7 +626,7 @@ const ServiceDetail = () => {
                                   </div>
                                   <div>
                                     <p className="font-semibold text-foreground">{tech.name}</p>
-                                    <p className="text-sm text-muted-foreground">{tech.desc}</p>
+                                    <p className="text-sm text-foreground/80">{tech.desc}</p>
                                   </div>
                                 </div>
                               ))}

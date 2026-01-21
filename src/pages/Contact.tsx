@@ -79,8 +79,8 @@ const Contact = () => {
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={contactHero} alt="" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(30,41,59,0.9)] via-[rgba(30,41,59,0.7)] to-[rgba(30,41,59,0.4)]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,41,59,0.6)] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.35)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] via-transparent to-transparent" />
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10 py-20 md:py-28">
           <motion.div
@@ -265,10 +265,10 @@ const Contact = () => {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
-                  <div>
+                <div>
                     <h3 className="font-heading font-bold mb-1">Phone</h3>
-                    <a href="tel:+34646022695" className="text-muted-foreground hover:text-primary transition-colors">
-                      +34 646 02 26 95
+                    <a href="tel:+34711051071" className="text-muted-foreground hover:text-primary transition-colors">
+                      +34 711 051 071
                     </a>
                   </div>
                 </div>
