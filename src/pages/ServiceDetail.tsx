@@ -12,7 +12,7 @@ import drainDetectionImg from "@/assets/services/drain-detection.jpg";
 import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg";
 import undergroundDetectionImg from "@/assets/services/underground-detection.jpg";
 import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg";
-import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg";
+import poolLeakDetectionImg from "@/assets/services/pool-leak-detection-hero.jpg";
 import leakRepairImg from "@/assets/services/leak-repair.jpg";
 import drainUnblockingImg from "@/assets/services/drain-unblocking.jpg";
 import poolLeakRepairImg from "@/assets/services/pool-leak-repair.jpg";
