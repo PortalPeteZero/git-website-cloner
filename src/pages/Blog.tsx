@@ -80,7 +80,7 @@ const Blog = () => {
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={waterLeakImg} alt="" className="w-full h-full object-cover" />
+          <img src={waterLeakImg} alt="" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-canary-navy/90 via-canary-navy/70 to-canary-navy/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-canary-navy/60 via-transparent to-transparent" />
         </div>
@@ -122,6 +122,7 @@ const Blog = () => {
                     src={post.image}
                     alt={`${post.title} cover`}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

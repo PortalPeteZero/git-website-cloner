@@ -49,6 +49,8 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
                 className="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
               />
             </AnimatePresence>
             

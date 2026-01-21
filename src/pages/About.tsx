@@ -18,7 +18,7 @@ const About = () => {
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={aboutHero} alt="" className="w-full h-full object-cover" />
+          <img src={aboutHero} alt="" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(30,41,59,0.9)] via-[rgba(30,41,59,0.7)] to-[rgba(30,41,59,0.4)]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,41,59,0.6)] via-transparent to-transparent" />
         </div>
@@ -79,7 +79,7 @@ const About = () => {
               className="relative"
             >
               <div className="aspect-square rounded-lg overflow-hidden relative">
-                <img src={welcomeImg} alt="Canary Detect team at work" className="w-full h-full object-cover" />
+                <img src={welcomeImg} alt="Canary Detect team at work" className="w-full h-full object-cover" loading="lazy" decoding="async" />
                 <div className="absolute bottom-4 left-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg">
                   <p className="font-heading font-bold text-lg">Since 2014</p>
                 </div>
@@ -189,6 +189,8 @@ const About = () => {
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face"
                   alt="Pete Ashcroft - Co-Founder & Lead Technician"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="font-heading font-bold text-xl mb-1">Pete Ashcroft</h3>
@@ -212,6 +214,8 @@ const About = () => {
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
                   alt="Dave Poxon - Co-Founder & Technical Director"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="font-heading font-bold text-xl mb-1">Dave Poxon</h3>

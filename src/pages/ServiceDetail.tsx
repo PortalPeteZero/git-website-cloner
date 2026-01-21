@@ -237,6 +237,8 @@ const ServiceDetail = () => {
             src={service.specialHeroImage} 
             alt="Free Leak Confirmation Test - New for 2026"
             className="w-full h-auto"
+            fetchPriority="high"
+            decoding="async"
           />
         </section>
       )}
@@ -249,6 +251,8 @@ const ServiceDetail = () => {
               src={service.heroImage} 
               alt={service.title}
               className="w-full h-full object-cover"
+              fetchPriority="high"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/80 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
@@ -360,6 +364,8 @@ const ServiceDetail = () => {
                           src={service.heroImage} 
                           alt={`${service.title} 1`}
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </motion.div>
                       {service.galleryImages.map((img, index) => (
@@ -375,6 +381,8 @@ const ServiceDetail = () => {
                             src={img} 
                             alt={`${service.title} ${index + 2}`}
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
+                            decoding="async"
                           />
                         </motion.div>
                       ))}

@@ -72,6 +72,8 @@ const HeroSlider = () => {
             src={slide.image} 
             alt="" 
             className="w-full h-full object-cover"
+            fetchPriority="high"
+            decoding="async"
           />
         </motion.div>
       </AnimatePresence>

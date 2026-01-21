@@ -83,6 +83,8 @@ const WelcomeSection = () => {
                 src={welcomeImg} 
                 alt="Professional leak detection equipment and technician" 
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-lg shadow-2xl">
