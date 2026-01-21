@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -37,12 +36,7 @@ const CaseStudiesPreview = () => {
   return (
     <section className="py-20 md:py-28 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-12"
-        >
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">Our Work</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-canary-navy">
             Recent Case Studies
@@ -50,16 +44,12 @@ const CaseStudiesPreview = () => {
           <p className="text-gray-600">
             See examples of our leak detection work across Lanzarote.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {caseStudies.map((study, index) => (
-            <motion.div
+          {caseStudies.map((study) => (
+            <div
               key={study.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
               className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
             >
               <div className="aspect-video overflow-hidden">
@@ -80,7 +70,7 @@ const CaseStudiesPreview = () => {
                 </h3>
                 <p className="text-gray-600 text-sm">{study.description}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

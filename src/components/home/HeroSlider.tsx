@@ -49,7 +49,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
+    }, 7000); // Slower transitions for better performance
     
     return () => clearInterval(timer);
   }, []);
@@ -62,10 +62,10 @@ const HeroSlider = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
           className="absolute inset-0"
         >
           <img 
@@ -89,19 +89,14 @@ const HeroSlider = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
               >
-                <motion.span 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]"
-                >
+                <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
                   Leak Detection Lanzarote &amp; Canary Islands
-                </motion.span>
+                </span>
                 <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-[1.1] drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
                   {slide.title}
                   <br />

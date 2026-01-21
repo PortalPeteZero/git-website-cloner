@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { LucideIcon } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface ServiceCardProps {
   title: string;
@@ -20,7 +20,7 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
     
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
+    }, 5000); // Slower for better performance
     
     return () => clearInterval(timer);
   }, [images.length]);
@@ -39,20 +39,13 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
       >
         {images.length > 0 && (
           <div className="aspect-[16/10] overflow-hidden relative">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={currentImageIndex}
-                src={images[currentImageIndex]}
-                alt={`${title} ${currentImageIndex + 1}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                decoding="async"
-              />
-            </AnimatePresence>
+            <img
+              src={images[currentImageIndex]}
+              alt={`${title} ${currentImageIndex + 1}`}
+              className="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500 transition-opacity"
+              loading="lazy"
+              decoding="async"
+            />
             
             {/* Subtle gradient overlay for smoother transition */}
             <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/30 to-transparent pointer-events-none" />
