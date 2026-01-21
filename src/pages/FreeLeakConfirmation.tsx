@@ -96,12 +96,6 @@ const FreeLeakConfirmation = () => {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-8 py-6" asChild>
-                  <a href="tel:+34828679761">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Call Now
-                  </a>
-                </Button>
               </motion.div>
             </motion.div>
           </div>
