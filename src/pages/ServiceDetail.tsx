@@ -48,6 +48,11 @@ import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
 import drainUnblocking1 from "@/assets/services/gallery/drain-unblocking-1.jpg";
 import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
+import poolRepair2 from "@/assets/services/gallery/pool-repair-2.jpg";
+import poolRepair3 from "@/assets/services/gallery/pool-repair-3.jpg";
+import poolRepair4 from "@/assets/services/gallery/pool-repair-4.jpg";
+import poolRepair5 from "@/assets/services/gallery/pool-repair-5.jpg";
+import poolRepair6 from "@/assets/services/gallery/pool-repair-6.jpg";
 import leakRepairBa1 from "@/assets/services/gallery/leak-repair-ba-1.jpg";
 import leakRepairBa2 from "@/assets/services/gallery/leak-repair-ba-2.jpg";
 import leakRepairBa3 from "@/assets/services/gallery/leak-repair-ba-3.jpg";
@@ -243,7 +248,7 @@ const servicesData: Record<string, ServiceData> = {
     description: "Professional swimming pool leak repair in Lanzarote. From pipe repairs to shell crack fixing, we repair all types of pool leaks with lasting solutions.",
     icon: Waves,
     heroImage: poolLeakRepairImg,
-    galleryImages: [poolRepair1, poolLeak9, poolLeak10],
+    galleryImages: [poolRepair1, poolRepair2, poolRepair3, poolRepair4, poolRepair5, poolRepair6],
     seo: {
       title: "Pool Leak Repair Lanzarote | Swimming Pool Pipe Repair | Pool Shell Repair",
       description: "Professional pool leak repair Lanzarote. Swimming pool pipe repair, shell crack repair, fitting replacement. Complete pool leak detection and repair service. Quality materials & lasting repairs.",

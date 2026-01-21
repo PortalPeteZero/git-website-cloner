@@ -19,8 +19,8 @@ import drainDetection7 from "@/assets/services/gallery/drain-detection-7.jpg";
 import drainDetection8 from "@/assets/services/gallery/drain-detection-8.jpg";
 import pipeInspection2 from "@/assets/services/gallery/pipe-inspection-2.jpg";
 import pipeInspection3 from "@/assets/services/gallery/pipe-inspection-3.jpg";
-import poolLeak2 from "@/assets/services/gallery/pool-leak-2.jpg";
-import poolLeak3 from "@/assets/services/gallery/pool-leak-3.jpg";
+import poolLeak7 from "@/assets/services/gallery/pool-leak-7.jpg";
+import poolLeak8 from "@/assets/services/gallery/pool-leak-8.jpg";
 import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
 import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import leakRepairBa1 from "@/assets/services/gallery/leak-repair-ba-1.jpg";
@@ -67,7 +67,7 @@ const services = [
     description: "Is your swimming pool losing water every day? Constant refilling? We'll find the leak and stop the water loss.",
     icon: Waves,
     href: "/services/pool-leak-detection",
-    images: [poolLeakDetectionImg, poolLeak2, poolLeak3],
+    images: [poolLeakDetectionImg, poolLeak8, poolLeak7],
     imageAlt: "Swimming pool leak detection pressure testing",
   },
   {
