@@ -15,7 +15,7 @@ export default function ServiceSchema() {
         "name": "Canary Detect",
         "alternateName": "The Leaky Finders",
         "description": "Professional leak detection and repair services in Lanzarote. Specialists in water leak detection, pool leak detection, and underground pipe location.",
-        "telephone": "+34 646 02 26 95",
+        "telephone": "+34 711 051 071",
         "email": "info@canary-detect.com",
         "address": {
           "@type": "PostalAddress",
