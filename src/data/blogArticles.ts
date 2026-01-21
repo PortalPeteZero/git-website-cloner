@@ -64,13 +64,7 @@ If you're losing more than 5cm of water per week, you likely have a leak that ne
 
 The bucket test is the most reliable DIY method to determine if your pool is leaking or just evaporating water. Watch this excellent video from Swim University that demonstrates exactly how to perform the test:
 
-<div class="video-thumbnail">
-<a href="https://www.youtube.com/watch?v=Zqiz4qBJU_g&t=37s" target="_blank" rel="noopener noreferrer" class="video-link">
-<img src="https://img.youtube.com/vi/Zqiz4qBJU_g/maxresdefault.jpg" alt="Pool Bucket Test Video - How to Find a Pool Leak" class="video-thumb-img" />
-<div class="play-button">▶</div>
-<span class="video-caption">🎬 Watch: Pool Bucket Test - How to Find a Pool Leak (YouTube)</span>
-</a>
-</div>
+<div class="video-thumbnail"><a href="https://www.youtube.com/watch?v=Zqiz4qBJU_g&t=37s" target="_blank" rel="noopener noreferrer" class="video-link group"><img src="https://img.youtube.com/vi/Zqiz4qBJU_g/maxresdefault.jpg" alt="Pool Bucket Test Video - How to Find a Pool Leak" class="video-thumb-img" /><span class="play-button">▶</span><span class="video-caption">🎬 Watch: Pool Bucket Test - How to Find a Pool Leak (YouTube)</span></a></div>
 
 ### Step-by-Step Bucket Test
 
