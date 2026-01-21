@@ -9,15 +9,33 @@ import photo2 from "@/assets/gallery/photo-2.jpg";
 import photo3 from "@/assets/gallery/photo-3.jpg";
 import photo4 from "@/assets/gallery/photo-4.jpg";
 import photo5 from "@/assets/gallery/photo-5.jpg";
+import hqScene from "@/assets/hero/carousel-hq-scene.jpg";
+import terraceScene from "@/assets/hero/carousel-terrace.jpg";
 
 const heroSlides = [
   {
-    image: photo1,
-    alt: "Leak detection equipment and technician Lanzarote",
+    image: hqScene,
+    alt: "Canary Detect headquarters with technicians and van in Lanzarote",
     title: "Leak Detection Lanzarote.",
     subtitle: "No Find, No Fee.",
     description: "Professional water leak detection and swimming pool leak detection across Lanzarote. Using €80,000+ specialist equipment including thermal imaging, acoustic sensors and tracer gas technology.",
     subtext: "Is your pool losing water? Water meter running? Damp walls? We find and fix leaks fast."
+  },
+  {
+    image: terraceScene,
+    alt: "Leak detection specialists at villa terrace with pool in Lanzarote",
+    title: "Villa & Pool Specialists.",
+    subtitle: "Expert Detection Team.",
+    description: "Our trained technicians use advanced acoustic equipment and thermal imaging to detect hidden leaks at your villa or pool area without unnecessary damage.",
+    subtext: ""
+  },
+  {
+    image: photo1,
+    alt: "Leak detection equipment and technician Lanzarote",
+    title: "Advanced Technology.",
+    subtitle: "Precision Detection.",
+    description: "€80,000+ worth of specialist equipment including thermal imaging cameras, acoustic sensors and tracer gas technology for pinpoint accuracy.",
+    subtext: ""
   },
   {
     image: photo2,
