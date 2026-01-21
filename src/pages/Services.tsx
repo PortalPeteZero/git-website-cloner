@@ -22,8 +22,9 @@ import servicesHero from "@/assets/hero/services-hero.jpg";
 import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
 import pipeInspection2 from "@/assets/services/gallery/pipe-inspection-2.jpg";
 import pipeInspection3 from "@/assets/services/gallery/pipe-inspection-3.jpg";
-import poolLeak2 from "@/assets/services/gallery/pool-leak-2.jpg";
-import poolLeak3 from "@/assets/services/gallery/pool-leak-3.jpg";
+import poolLeak7 from "@/assets/services/gallery/pool-leak-7.jpg";
+import poolLeak8 from "@/assets/services/gallery/pool-leak-8.jpg";
+import poolLeak10 from "@/assets/services/gallery/pool-leak-10.jpg";
 import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
 import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
@@ -64,7 +65,7 @@ const services = [
     description: "Is your swimming pool losing water every day? Constant refilling? We'll find the leak using pressure testing and dye testing techniques to stop water loss.",
     icon: Waves,
     href: "/services/pool-leak-detection",
-    images: [poolLeakDetectionImg, poolLeak2, poolLeak3],
+    images: [poolLeakDetectionImg, poolLeak8, poolLeak7],
   },
   {
     title: "Leak Repair",
@@ -78,7 +79,7 @@ const services = [
     description: "Swimming pool leaking? We repair pool pipes, shell cracks, fittings and equipment. Complete detection-to-repair service with quality materials guaranteed.",
     icon: Waves,
     href: "/services/pool-leak-repair",
-    images: [poolLeakRepairImg, poolRepair1, poolLeak2],
+    images: [poolLeakRepairImg, poolRepair1, poolLeak10],
   },
 ];
 
