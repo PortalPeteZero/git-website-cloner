@@ -43,14 +43,21 @@ const technologies = [
 
 const TechnologySection = () => {
   return (
-    <section className="py-12 md:py-16 bg-canary-navy relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
+    <section className="py-12 md:py-16 bg-gradient-to-br from-slate-900 via-canary-navy to-slate-900 relative overflow-hidden">
+      {/* Gradient orbs for depth */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl" />
+      
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
         }} />
       </div>
+      
+      {/* Accent line at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div
@@ -96,9 +103,9 @@ const TechnologySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors group"
+              className="bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:from-white/[0.12] hover:to-white/[0.05] transition-all duration-300 group hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
             >
-              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary/30 to-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:from-primary/40 group-hover:to-primary/20 transition-all duration-300 group-hover:scale-105">
                 <tech.icon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-heading font-bold text-white text-lg mb-1">
