@@ -602,7 +602,7 @@ const ServiceDetail = () => {
               </div>
 
               {/* Gallery images on the right for compact layout pages */}
-              {service.galleryImages.length > 0 && (slug === 'underground-detection' || slug === 'drain-unblocking') && (
+              {service.galleryImages.length > 0 && slug === 'drain-unblocking' && (
                 <div>
                   <h3 className="font-heading text-lg font-bold mb-3">Gallery</h3>
                   <div className="grid grid-cols-2 gap-3">
@@ -627,8 +627,8 @@ const ServiceDetail = () => {
             </motion.div>
           </div>
 
-          {/* Full Width Gallery Section - For most pages except compact layout ones */}
-          {service.galleryImages.length > 0 && slug !== 'underground-detection' && slug !== 'drain-unblocking' && (
+          {/* Full Width Gallery Section - For longer pages + Underground Detection */}
+          {service.galleryImages.length > 0 && (slug === 'underground-detection' || (slug !== 'drain-unblocking' && service.content.length >= 600)) && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
