@@ -194,8 +194,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Leak Repair Lanzarote",
     description: "Professional leak repair services in Lanzarote to fix water pipe leaks, pool pipe leaks and underground leaks - complete solution from detection to repair.",
     icon: Wrench,
-    heroImage: leakRepair1,
-    galleryImages: [leakRepair1, leakRepair2, leakRepair3, leakRepair4, leakRepair5, leakRepair6, leakRepair7],
+    heroImage: leakRepair2,
+    galleryImages: [leakRepair1, leakRepair3, leakRepair4, leakRepair5, leakRepair6, leakRepair7],
     seo: {
       title: "Leak Repair Lanzarote | Water Pipe Leak Repair | Pool Pipe Leak Repair",
       description: "Professional leak repair Lanzarote. Water pipe leak repair, pool pipe leak repair, underground leak repair. Emergency leak repair available. Complete detection to repair service.",
@@ -525,24 +525,15 @@ const ServiceDetail = () => {
                   viewport={{ once: true }}
                 >
                   <h3 className="font-heading text-xl font-bold mb-4">Gallery</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                      <img 
-                        src={service.heroImage} 
-                        alt={`${service.title} 1`}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                    {service.galleryImages.map((img, index) => (
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {service.galleryImages.slice(0, 6).map((img, index) => (
                       <div
                         key={index}
                         className="aspect-[4/3] rounded-lg overflow-hidden"
                       >
                         <img 
                           src={img} 
-                          alt={`${service.title} ${index + 2}`}
+                          alt={`${service.title} ${index + 1}`}
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                           loading="lazy"
                           decoding="async"
