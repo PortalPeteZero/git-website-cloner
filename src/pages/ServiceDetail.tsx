@@ -464,13 +464,14 @@ const ServiceDetail = () => {
             </div>
           </motion.div>
 
-          {/* Two Column Layout */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Left Column - Description */}
+          {/* Two Column Layout - Description + What's Included */}
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+            {/* Left Column - Description (takes more space) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="lg:col-span-3"
             >
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
                 About This Service
@@ -516,64 +517,66 @@ const ServiceDetail = () => {
               )}
             </motion.div>
 
-            {/* Right Column - Features + Gallery */}
-            <div className="space-y-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="font-heading text-xl font-bold mb-4">What's Included</h3>
-                <div className="grid sm:grid-cols-2 gap-3">
+            {/* Right Column - What's Included */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-2"
+            >
+              <div className="bg-gradient-to-br from-slate-50 to-muted/30 rounded-2xl p-6 border border-border h-fit">
+                <h3 className="font-heading text-xl font-bold mb-5">What's Included</h3>
+                <div className="space-y-3">
                   {service.features.map((feature, index) => (
                     <div
                       key={feature}
-                      className="flex items-center gap-2"
+                      className="flex items-start gap-3"
                     >
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">{feature}</span>
                     </div>
                   ))}
                 </div>
-              </motion.div>
-
-              {/* Image Gallery */}
-              {service.galleryImages.length > 0 && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="font-heading text-xl font-bold mb-4">
-                    {slug === 'leak-repair' ? 'Before & After' : 'Gallery'}
-                  </h3>
-                  <div className={`grid gap-3 ${
-                    slug === 'leak-repair' 
-                      ? 'grid-cols-1 sm:grid-cols-2' 
-                      : 'grid-cols-2 sm:grid-cols-3'
-                  }`}>
-                    {service.galleryImages.slice(0, 6).map((img, index) => (
-                      <button
-                        key={index}
-                        onClick={() => openLightbox(index)}
-                        className={`rounded-lg overflow-hidden cursor-zoom-in group ${
-                          slug === 'leak-repair' ? 'aspect-[16/9]' : 'aspect-[4/3]'
-                        }`}
-                      >
-                        <img 
-                          src={img} 
-                          alt={`${service.title} ${index + 1}`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </button>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </div>
+              </div>
+            </motion.div>
           </div>
+
+          {/* Full Width Gallery Section - Below the two columns */}
+          {service.galleryImages.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-10"
+            >
+              <h3 className="font-heading text-xl font-bold mb-4">
+                {slug === 'leak-repair' ? 'Before & After' : 'Gallery'}
+              </h3>
+              <div className={`grid gap-4 ${
+                slug === 'leak-repair' 
+                  ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' 
+                  : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
+              }`}>
+                {service.galleryImages.slice(0, 8).map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => openLightbox(index)}
+                    className={`rounded-lg overflow-hidden cursor-zoom-in group ${
+                      slug === 'leak-repair' ? 'aspect-[16/9]' : 'aspect-[4/3]'
+                    }`}
+                  >
+                    <img 
+                      src={img} 
+                      alt={`${service.title} ${index + 1}`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          )}
         </div>
       </section>
 
