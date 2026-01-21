@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,21 @@ import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 import { blogArticles, BlogArticle as StaticBlogArticle } from "@/data/blogArticles";
 import { supabase } from "@/integrations/supabase/client";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
+
+// Hero carousel images
+import heroHqScene from "@/assets/hero/blog-hq-scene.jpg";
+import heroElAtico from "@/assets/hero/blog-el-atico.jpg";
+import heroPoolSpa from "@/assets/hero/blog-pool-spa.jpg";
+import heroTerrace from "@/assets/hero/blog-terrace.jpg";
+import heroVillageSquare from "@/assets/hero/blog-village-square.jpg";
+
+const heroSlides = [
+  { image: heroHqScene, alt: "Canary Detect HQ - Leak detection specialists" },
+  { image: heroElAtico, alt: "Commercial leak detection in Lanzarote" },
+  { image: heroPoolSpa, alt: "Pool and spa leak detection services" },
+  { image: heroTerrace, alt: "Villa pool leak detection in Lanzarote" },
+  { image: heroVillageSquare, alt: "Municipal water leak detection" },
+];
 
 interface DatabaseBlogPost {
   id: string;
@@ -37,6 +52,15 @@ interface CombinedPost {
 const Blog = () => {
   const [dbPosts, setDbPosts] = useState<CombinedPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Hero carousel auto-rotation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const fetchDbPosts = async () => {
@@ -102,13 +126,29 @@ const Blog = () => {
         canonical="https://canary-detect.com/blog"
       />
 
-      {/* Hero Section */}
+      {/* Hero Section with Carousel */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
+        {/* Carousel Background */}
         <div className="absolute inset-0">
-          <img src={waterLeakImg} alt="Leak detection tips and advice blog" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentSlide}
+              src={heroSlides[currentSlide].image}
+              alt={heroSlides[currentSlide].alt}
+              className="w-full h-full object-cover"
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8 }}
+              fetchPriority="high"
+              decoding="async"
+            />
+          </AnimatePresence>
           <div className="absolute inset-0 bg-gradient-to-r from-canary-navy/90 via-canary-navy/70 to-canary-navy/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-canary-navy/60 via-transparent to-transparent" />
         </div>
+
+        {/* Hero Content */}
         <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -126,6 +166,23 @@ const Blog = () => {
             </p>
           </motion.div>
         </div>
+
+        {/* Carousel Indicators */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+          {heroSlides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentSlide(idx)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                idx === currentSlide 
+                  ? 'w-8 bg-primary' 
+                  : 'w-4 bg-white/40 hover:bg-white/60'
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
       </section>
 
