@@ -357,16 +357,41 @@ const ServiceDetail = () => {
         canonical={canonicalUrl}
         type="service"
       />
-      {/* Hero Section - Carousel for pages with carousel, standard for others */}
+      {/* Hero Section - Collage for underground, Carousel for water leak, standard for others */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          {hasHeroCarousel && carouselImages.length > 0 ? (
+          {isUndergroundPage && carouselImages.length >= 3 ? (
+            // Collage layout for underground detection
+            <div className="w-full h-full grid grid-cols-3 grid-rows-2 gap-1">
+              <div className="col-span-2 row-span-2 relative overflow-hidden">
+                <img 
+                  src={carouselImages[0].src} 
+                  alt={carouselImages[0].alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="relative overflow-hidden">
+                <img 
+                  src={carouselImages[1].src} 
+                  alt={carouselImages[1].alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="relative overflow-hidden">
+                <img 
+                  src={carouselImages[2].src} 
+                  alt={carouselImages[2].alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          ) : hasHeroCarousel && carouselImages.length > 0 ? (
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentSlide}
                 src={carouselImages[currentSlide].src}
                 alt={carouselImages[currentSlide].alt}
-                className={`w-full h-full ${isUndergroundPage ? 'object-contain object-center bg-canary-dark' : 'object-cover'}`}
+                className="w-full h-full object-cover"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -418,15 +443,15 @@ const ServiceDetail = () => {
               <Button size="lg" asChild className="shadow-lg">
                 <Link to="/contact">Get a Quote</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white">
+              <Button size="lg" variant="secondary" asChild className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy">
                 <a href="tel:+34711051071">Call +34 711 051 071</a>
               </Button>
             </motion.div>
           </motion.div>
         </div>
         
-        {/* Carousel Indicators - For pages with hero carousel */}
-        {hasHeroCarousel && carouselImages.length > 0 && (
+        {/* Carousel Indicators - For pages with hero carousel (not collage) */}
+        {hasHeroCarousel && !isUndergroundPage && carouselImages.length > 0 && (
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
             {carouselImages.map((_, idx) => (
               <button
@@ -479,7 +504,7 @@ const ServiceDetail = () => {
                 <Button className="whitespace-nowrap" size="lg" asChild>
                   <Link to="/contact">Request a Quote</Link>
                 </Button>
-                <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white whitespace-nowrap" size="lg" asChild>
+                <Button variant="secondary" className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy whitespace-nowrap" size="lg" asChild>
                   <a href="tel:+34711051071">Call +34 711 051 071</a>
                 </Button>
               </div>

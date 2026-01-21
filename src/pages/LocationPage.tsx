@@ -435,7 +435,7 @@ const LocationPage = () => {
               <Button size="lg" asChild className="shadow-lg">
                 <Link to="/contact">Get a Free Quote</Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white" asChild>
+              <Button size="lg" variant="secondary" className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy" asChild>
                 <a href="tel:+34711051071">
                   <Phone className="h-4 w-4 mr-2" />
                   Call +34 711 051 071
@@ -631,7 +631,7 @@ const LocationPage = () => {
               <Button size="lg" variant="secondary" asChild>
                 <Link to="/contact">Get a Free Quote</Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10" asChild>
+              <Button size="lg" variant="secondary" className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy" asChild>
                 <a href="tel:+34711051071">Call +34 711 051 071</a>
               </Button>
             </div>
