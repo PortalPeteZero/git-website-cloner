@@ -306,3 +306,73 @@
     transform: none;
   }
 }
+
+/* Blog Article Prose Enhancements */
+.blog-prose h2 {
+  @apply text-2xl font-bold mt-12 mb-6 pb-3 border-b border-border text-foreground;
+}
+
+.blog-prose h3 {
+  @apply text-xl font-bold mt-8 mb-4 text-primary;
+}
+
+.blog-prose h4 {
+  @apply text-lg font-semibold mt-6 mb-3 text-foreground/90;
+}
+
+.blog-prose p {
+  @apply text-muted-foreground leading-relaxed mb-5;
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  @apply my-5 pl-6 space-y-2;
+}
+
+.blog-prose li {
+  @apply text-muted-foreground leading-relaxed;
+}
+
+.blog-prose strong {
+  @apply text-foreground font-semibold;
+}
+
+/* Bold text followed by content = styled as mini-headers */
+.blog-prose p > strong:first-child:only-child,
+.blog-prose li > strong:first-child {
+  @apply text-foreground block mb-1;
+}
+
+/* Info boxes for content wrapped in bold headers */
+.blog-prose h4 + ul,
+.blog-prose p:has(> strong:first-child) + ul {
+  @apply bg-muted/50 rounded-lg p-4 border-l-4 border-primary/30;
+}
+
+/* Tables */
+.blog-prose table {
+  @apply w-full my-8 border-collapse rounded-lg overflow-hidden shadow-sm;
+}
+
+.blog-prose th {
+  @apply bg-canary-navy text-white p-3 text-left font-semibold text-sm;
+}
+
+.blog-prose td {
+  @apply p-3 border-b border-border bg-card text-muted-foreground;
+}
+
+.blog-prose tr:last-child td {
+  @apply border-b-0;
+}
+
+/* Blockquotes */
+.blog-prose blockquote {
+  @apply border-l-4 border-primary bg-primary/5 py-4 px-6 my-8 rounded-r-lg italic text-foreground/80;
+}
+
+/* Pro tips and callouts */
+.blog-prose p:has(strong:first-child:contains("Pro tip")),
+.blog-prose p:has(strong:first-child:contains("Remember")) {
+  @apply bg-primary/10 border-l-4 border-primary rounded-r-lg p-4 my-6;
+}
