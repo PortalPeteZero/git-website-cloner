@@ -42,6 +42,9 @@ import poolLeak5 from "@/assets/services/gallery/pool-leak-5.jpg";
 import poolLeak6 from "@/assets/services/gallery/pool-leak-6.jpg";
 import poolLeak7 from "@/assets/services/gallery/pool-leak-7.jpg";
 import poolLeak8 from "@/assets/services/gallery/pool-leak-8.jpg";
+import poolLeak9 from "@/assets/services/gallery/pool-leak-9.jpg";
+import poolLeak10 from "@/assets/services/gallery/pool-leak-10.jpg";
+import poolLeak11 from "@/assets/services/gallery/pool-leak-11.jpg";
 import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
 import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
@@ -174,7 +177,7 @@ const servicesData: Record<string, ServiceData> = {
     description: "Swimming pool leak detection in Lanzarote - we don't just confirm a leak, we pinpoint its exact location. Pool losing water? We'll find why.",
     icon: Waves,
     heroImage: poolLeak1,
-    galleryImages: [poolLeak8, poolLeak7, poolLeak4, poolLeak5, poolLeak6],
+    galleryImages: [poolLeak8, poolLeak7, poolLeak10, poolLeak11, poolLeak9, poolLeak4, poolLeak5, poolLeak6],
     seo: {
       title: "Pool Leak Detection Lanzarote | Swimming Pool Leak Detection | Playa Blanca",
       description: "Professional pool leak detection Lanzarote. Pool losing water? We pinpoint the exact leak location. Acoustic testing, pressure testing, CCTV inspection. Pool leak repair service available.",
