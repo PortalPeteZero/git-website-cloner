@@ -180,8 +180,8 @@ export default function LeakConfirmationForm() {
               <Button
                 onClick={() => submitForm("Full Leak Survey Request")}
                 disabled={isSubmitting}
-                variant="outline"
-                className="w-full bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white"
+                variant="secondary"
+                className="w-full bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy"
               >
                 <FileSearch className="h-4 w-4 mr-2" />
                 {isSubmitting ? "Sending..." : "Send a Survey Booking Request"}
