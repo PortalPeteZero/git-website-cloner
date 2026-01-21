@@ -20,17 +20,36 @@ export default function FreeLeakConfirmationSection({
   subNote,
 }: Props) {
   return (
-    <section className="w-full bg-gradient-to-br from-canary-navy via-canary-dark to-canary-navy section-divider">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
-        {/* Featured promo banner */}
-        <div className="mb-8 md:mb-10 rounded-2xl overflow-hidden shadow-2xl border border-white/10 max-w-4xl mx-auto">
-          <img 
-            src={freeLeakConfirmationImg} 
-            alt="Free Leak Confirmation Test - New for 2026 - 95% of Lanzarote leaks are hidden"
-            className="w-full h-auto"
-            loading="eager"
-            decoding="async"
-          />
+    <section className="w-full bg-gradient-to-br from-slate-900 via-canary-navy to-slate-900 relative overflow-hidden">
+      {/* Gradient orbs for depth */}
+      <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-canary-cyan/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 right-10 w-64 h-64 bg-primary/5 rounded-full blur-2xl" />
+      
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }} />
+      </div>
+
+      {/* Accent line at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 relative z-10">
+        {/* Featured promo banner with glow effect */}
+        <div className="mb-8 md:mb-10 relative max-w-4xl mx-auto">
+          <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-canary-cyan/20 to-primary/20 rounded-3xl blur-xl opacity-60" />
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+            <img 
+              src={freeLeakConfirmationImg} 
+              alt="Free Leak Confirmation Test - New for 2026 - 95% of Lanzarote leaks are hidden"
+              className="w-full h-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
         </div>
 
         {/* Header */}
