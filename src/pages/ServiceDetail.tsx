@@ -155,7 +155,7 @@ const servicesData: Record<string, ServiceData> = {
     icon: Droplets,
     heroImage: waterLeakDetectionImg,
     specialHeroImage: freeLeakConfirmationImg,
-    galleryImages: [drainDetection4, drainDetection5, drainDetection6, drainDetection7, drainDetection8],
+    galleryImages: [drainDetection4, drainDetection5, drainDetection6, drainDetection7],
     seo: {
       title: "Water Leak Detection Lanzarote | Hidden Water Leak Detection | No Find No Fee",
       description: "Professional water leak detection Lanzarote. Find hidden water leaks with centimetre accuracy. Water meter running? Thermal imaging, tracer gas, acoustic detection. No Find No Fee. €80,000+ equipment.",
