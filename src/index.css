@@ -377,23 +377,35 @@
   @apply bg-primary/10 border-l-4 border-primary rounded-r-lg p-4 my-6;
 }
 
-/* Video thumbnail click-to-load */
-.blog-prose .video-thumbnail {
-  @apply my-8 rounded-xl overflow-hidden shadow-lg;
+/* Video thumbnail click-to-load - MUST be inside blog-prose only */
+.blog-prose > .video-thumbnail {
+  @apply my-8 rounded-xl overflow-hidden shadow-lg block;
 }
 
-.blog-prose .video-thumbnail .video-link {
+.blog-prose > .video-thumbnail > .video-link {
   @apply relative block cursor-pointer;
 }
 
-.blog-prose .video-thumbnail .video-thumb-img {
-  @apply w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105;
+.blog-prose > .video-thumbnail > .video-link > .video-thumb-img {
+  @apply w-full aspect-video object-cover transition-transform duration-300;
 }
 
-.blog-prose .video-thumbnail .play-button {
-  @apply absolute inset-0 flex items-center justify-center text-6xl text-white bg-black/40 transition-all duration-300 group-hover:bg-black/60;
+.blog-prose > .video-thumbnail > .video-link.group:hover > .video-thumb-img {
+  @apply scale-105;
 }
 
-.blog-prose .video-thumbnail .video-caption {
+.blog-prose > .video-thumbnail > .video-link > .play-button {
+  @apply absolute inset-0 flex items-center justify-center text-6xl text-white bg-black/40 transition-all duration-300 pointer-events-none;
+}
+
+.blog-prose > .video-thumbnail > .video-link.group:hover > .play-button {
+  @apply bg-black/60;
+}
+
+.blog-prose > .video-thumbnail > .video-link:hover > .play-button {
+  @apply bg-black/60;
+}
+
+.blog-prose > .video-thumbnail > .video-link > .video-caption {
   @apply block bg-canary-navy text-white text-center py-3 px-4 font-medium text-sm;
 }
