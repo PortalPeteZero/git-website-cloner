@@ -31,7 +31,7 @@ const services = [
     description: "Locate and identify drainage issues using advanced camera inspection and tracing technology.",
     icon: Search,
     href: "/services/drain-detection",
-    images: [drainDetection4, drainDetection5, drainDetection6, drainDetection7, drainDetection8],
+    images: [drainDetectionImg, drainDetection2, drainDetection3],
     imageAlt: "CCTV drain inspection camera Lanzarote",
   },
   {
@@ -55,7 +55,7 @@ const services = [
     description: "Damp walls? High water bills? Meter running when taps are off? Find hidden water leaks using acoustic and thermal imaging.",
     icon: Droplets,
     href: "/services/water-leak-detection",
-    images: [waterLeakDetectionImg, waterLeak1, waterLeak2],
+    images: [drainDetection4, drainDetection5, drainDetection6, drainDetection7, drainDetection8],
     imageAlt: "Acoustic leak detection listening device",
   },
   {
