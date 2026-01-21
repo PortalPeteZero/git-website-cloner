@@ -4,6 +4,7 @@ import { Droplets, Search, Cable, Waves, CircleDot, Wrench } from "lucide-react"
 import ServiceCard from "@/components/home/ServiceCard";
 import SEOHead from "@/components/seo/SEOHead";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import PricingSection from "@/components/services/PricingSection";
 
 // Import service hero images
 import drainDetectionImg from "@/assets/services/drain-detection.jpg";
@@ -124,6 +125,9 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      {/* Pricing & Guarantees */}
+      <PricingSection />
 
       {/* Why Choose Us */}
       <section className="py-20 md:py-28 bg-muted section-pattern">
