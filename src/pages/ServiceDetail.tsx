@@ -357,15 +357,15 @@ const ServiceDetail = () => {
         canonical={canonicalUrl}
         type="service"
       />
-      {/* Hero Section - Carousel for water-leak-detection, standard for others */}
+      {/* Hero Section - Carousel for pages with carousel, standard for others */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          {isWaterLeakPage ? (
+          {hasHeroCarousel && carouselImages.length > 0 ? (
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentSlide}
-                src={waterLeakCarouselImages[currentSlide].src}
-                alt={waterLeakCarouselImages[currentSlide].alt}
+                src={carouselImages[currentSlide].src}
+                alt={carouselImages[currentSlide].alt}
                 className="w-full h-full object-cover"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -425,10 +425,10 @@ const ServiceDetail = () => {
           </motion.div>
         </div>
         
-        {/* Carousel Indicators - Only for water leak detection */}
-        {isWaterLeakPage && (
+        {/* Carousel Indicators - For pages with hero carousel */}
+        {hasHeroCarousel && carouselImages.length > 0 && (
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
-            {waterLeakCarouselImages.map((_, idx) => (
+            {carouselImages.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentSlide(idx)}
@@ -438,6 +438,7 @@ const ServiceDetail = () => {
                     : "bg-white/40 w-2 hover:bg-white/70"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
+              />
               />
             ))}
           </div>
