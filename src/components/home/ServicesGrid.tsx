@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
 import { Droplets, Search, Cable, Waves, CircleDot, Wrench } from "lucide-react";
-import ServiceCard from "./ServiceCard";
+import ServiceCardLite from "./ServiceCardLite";
 
 // Import service hero images
 import drainDetectionImg from "@/assets/services/drain-detection.jpg";
@@ -78,12 +77,7 @@ const ServicesGrid = () => {
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-primary/10 to-transparent opacity-50" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-12"
-        >
+        <div className="text-center max-w-2xl mx-auto mb-12 animate-fade-in">
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">What We Do</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-white">
             Our Services
@@ -92,11 +86,18 @@ const ServicesGrid = () => {
             We offer a comprehensive range of leak detection and repair services 
             across Lanzarote, using the latest technology and equipment.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <ServiceCard key={service.title} {...service} index={index} />
+            <ServiceCardLite
+              key={service.title}
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+              href={service.href}
+              image={service.images?.[0]}
+            />
           ))}
         </div>
       </div>
