@@ -169,7 +169,7 @@ If you've tried the bucket test and suspect a leak, don't wait. Water leaks wast
     date: "2025-01-08",
     author: "Dave Poxon",
     category: "Tips & Advice",
-    image: thermalUndergroundImg,
+    image: undergroundImg,
     metaTitle: "Signs of Underground Water Leak | Hidden Pipe Leak Detection Lanzarote",
     metaDescription: "Discover the 7 warning signs of underground water leaks. High water bills, wet spots, low pressure? Learn how to detect hidden pipe leaks in Lanzarote.",
     keywords: "signs of underground water leak, hidden water leak detection, underground pipe leak, water leak under concrete, water meter running when taps off, high water bill leak",
@@ -247,7 +247,7 @@ Professional leak detectors use sensitive acoustic equipment to amplify these so
 
 ## 7. Warm Spots on Floors
 
-If you have hot water pipes running underground (common in some Lanzarote properties), a leak can create:
+If you have hot water pipes running under concrete slabs, a leak can create:
 
 - **Warm patches** on tile or concrete floors
 - **Localised heating** in specific areas
@@ -587,7 +587,7 @@ Don't guess at the cause of your damp walls – get professional diagnosis. What
     date: "2024-12-10",
     author: "Pete Ashcroft",
     category: "Technology",
-    image: pipeInspectionImg,
+    image: thermalUndergroundImg,
     metaTitle: "Thermal Imaging Leak Detection | How It Works | Lanzarote",
     metaDescription: "Learn how thermal imaging cameras find hidden water leaks behind walls and under floors. Non-invasive leak detection technology explained by Lanzarote experts.",
     keywords: "thermal imaging leak detection, infrared leak detection, non-invasive leak detection, find leak without damage, thermal camera water leak, leak detection technology",
@@ -669,12 +669,12 @@ Thermal imaging works best:
 
 ## Real-World Applications in Lanzarote
 
-### Underfloor Heating Leaks
+### Hot Water Pipe Leaks
 
-Lanzarote properties with underfloor heating benefit particularly from thermal imaging:
-- Hot water pipes show clearly as warm lines
-- Leaks appear as wet cool spots surrounded by warm pipes
-- Entire floor areas can be scanned quickly
+Hot water pipes running through walls or under floors are easily detected:
+- Hot water pipes show clearly as warm lines on the thermal image
+- Leaks appear as wet cool spots where water is escaping
+- Entire areas can be scanned quickly without disruption
 
 ### Swimming Pool Leaks
 
@@ -714,7 +714,7 @@ This multi-technology approach ensures we find leaks accurately and efficiently.
 
 **The problem**: Homeowner noticed increasing water bills but no visible leaks.
 
-**Thermal imaging revealed**: A clear thermal signature showing the path of an underfloor hot water pipe with a distinct cool spot where water was escaping.
+**Thermal imaging revealed**: A clear thermal signature showing the path of a hot water pipe with a distinct cool spot where water was escaping.
 
 **The result**: Leak located precisely, repair completed with minimal floor damage, water bill returned to normal.
 

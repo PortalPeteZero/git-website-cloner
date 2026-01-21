@@ -37,7 +37,7 @@ const technologies = [
       "Infrared thermal imaging detects temperature differences on surfaces. When water leaks from a pipe, it often causes localised cooling or heating depending on the water temperature and surroundings. Our thermal camera identifies these temperature anomalies, revealing areas of moisture that are not visible to the naked eye.",
     bestFor: "Excellent for detecting leaks behind walls, under floors, and where water has spread from the original leak point.",
     limitations:
-      "Other heat sources such as underfloor heating, sun exposure, or electrical equipment can affect readings and must be accounted for.",
+      "Other heat sources such as sun exposure, electrical equipment, or recently used hot water can affect readings and must be accounted for.",
     color: "from-red-500 to-orange-600",
   },
   {
