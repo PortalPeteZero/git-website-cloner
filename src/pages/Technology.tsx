@@ -126,13 +126,13 @@ const Technology = () => {
       </section>
 
       {/* Technologies Detail */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-2xl mx-auto mb-16"
+            className="text-center max-w-2xl mx-auto mb-10"
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
               Our Detection Methods
@@ -208,7 +208,7 @@ const Technology = () => {
       </section>
 
       {/* Multi-Tech Approach */}
-      <section className="py-20 md:py-28 bg-muted section-pattern">
+      <section className="py-12 md:py-16 bg-muted section-pattern">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -289,7 +289,7 @@ const Technology = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)] section-stripes-orange">
+      <section className="py-10 md:py-12 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)] section-stripes-orange">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

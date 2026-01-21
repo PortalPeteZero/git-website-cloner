@@ -66,14 +66,14 @@ const pricingInfo = [
 
 const PricingSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-muted section-pattern">
+    <section className="py-12 md:py-16 bg-muted section-pattern">
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-10"
         >
           <span className="text-primary font-medium">Transparent Pricing</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">
@@ -86,7 +86,7 @@ const PricingSection = () => {
         </motion.div>
 
         {/* Service Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
           {pricingInfo.map((service, index) => (
             <motion.div
               key={service.title}

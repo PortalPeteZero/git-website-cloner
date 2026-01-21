@@ -128,7 +128,7 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => (
@@ -203,7 +203,7 @@ const CaseStudies = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)] section-stripes-orange">
+      <section className="py-10 md:py-12 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)] section-stripes-orange">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

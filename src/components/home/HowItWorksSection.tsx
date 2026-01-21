@@ -36,13 +36,13 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-muted to-background overflow-hidden">
+    <section className="py-12 md:py-16 bg-gradient-to-b from-muted to-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-10"
         >
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">
             Our Process
