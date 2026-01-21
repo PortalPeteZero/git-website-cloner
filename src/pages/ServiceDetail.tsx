@@ -547,6 +547,38 @@ const ServiceDetail = () => {
                 ))}
               </div>
 
+              {/* Underground Detection: keep gallery under the text so the left column isn't empty */}
+              {slug === 'underground-detection' && service.galleryImages.length > 0 && (
+                <div className="mt-8">
+                  <h3 className="font-heading text-xl font-bold mb-4">Gallery</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {service.galleryImages.slice(0, 4).map((img, index) => (
+                      <button
+                        key={index}
+                        onClick={() => openLightbox(index)}
+                        className="rounded-lg overflow-hidden cursor-zoom-in group aspect-[4/3]"
+                      >
+                        <img
+                          src={img}
+                          alt={`${service.title} ${index + 1}`}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                  {service.galleryImages.length > 4 && (
+                    <button
+                      onClick={() => openLightbox(0)}
+                      className="mt-3 text-primary hover:text-primary/80 text-sm font-medium"
+                    >
+                      View all {service.galleryImages.length} photos →
+                    </button>
+                  )}
+                </div>
+              )}
+
               {/* Technology Methods - Only for water leak detection */}
               {slug === 'water-leak-detection' && (
                 <div className="bg-gradient-to-br from-slate-50 to-muted/50 rounded-2xl p-6 md:p-8 border border-border mt-6">
@@ -601,6 +633,39 @@ const ServiceDetail = () => {
                 </div>
               </div>
 
+              {/* Fill the right column on Underground Detection so the layout feels balanced */}
+              {slug === 'underground-detection' && service.galleryImages.length > 0 && (
+                <div className="rounded-2xl border border-border bg-card p-4">
+                  <h3 className="font-heading text-lg font-bold mb-3">Survey in action</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {[service.galleryImages[0], service.galleryImages[3], service.galleryImages[5]]
+                      .filter(Boolean)
+                      .slice(0, 3)
+                      .map((img, idx) => {
+                        const actualIndex = service.galleryImages.findIndex((x) => x === img);
+                        const isHero = idx === 0;
+                        return (
+                          <button
+                            key={`${img}-${idx}`}
+                            onClick={() => openLightbox(Math.max(actualIndex, 0))}
+                            className={`rounded-lg overflow-hidden cursor-zoom-in group ${
+                              isHero ? 'col-span-2 aspect-[16/10]' : 'aspect-[4/3]'
+                            }`}
+                          >
+                            <img
+                              src={img}
+                              alt={`${service.title} survey photo ${idx + 1}`}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </button>
+                        );
+                      })}
+                  </div>
+                </div>
+              )}
+
               {/* Gallery images on the right for compact layout pages */}
               {service.galleryImages.length > 0 && slug === 'drain-unblocking' && (
                 <div>
@@ -627,8 +692,8 @@ const ServiceDetail = () => {
             </motion.div>
           </div>
 
-          {/* Full Width Gallery Section - For longer pages + Underground Detection */}
-          {service.galleryImages.length > 0 && (slug === 'underground-detection' || (slug !== 'drain-unblocking' && service.content.length >= 600)) && (
+          {/* Full Width Gallery Section - For longer pages */}
+          {service.galleryImages.length > 0 && slug !== 'underground-detection' && slug !== 'drain-unblocking' && service.content.length >= 600 && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
