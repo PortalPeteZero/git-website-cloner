@@ -34,14 +34,14 @@ const caseStudies = [
 
 const CaseStudiesPreview = () => {
   return (
-    <section className="py-12 md:py-16 bg-gray-50">
+    <section className="py-12 md:py-16 bg-muted/50 section-divider">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">Our Work</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-canary-navy">
             Recent Case Studies
           </h2>
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             See examples of our leak detection work across Lanzarote.
           </p>
         </div>
@@ -68,7 +68,7 @@ const CaseStudiesPreview = () => {
                 <h3 className="font-heading font-bold text-lg mt-1 mb-2 text-canary-navy group-hover:text-primary transition-colors">
                   {study.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{study.description}</p>
+                <p className="text-muted-foreground text-sm">{study.description}</p>
               </div>
             </div>
           ))}
