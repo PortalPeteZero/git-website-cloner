@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle, Droplets, Search, Cable, Waves, CircleDot, Wrench, LucideIcon, Home, HelpCircle, BadgeCheck } from "lucide-react";
+import { CheckCircle, Droplets, Search, Cable, Waves, CircleDot, Wrench, LucideIcon, Home, HelpCircle, BadgeCheck, Atom, AudioLines, Thermometer, Mic, Shield, FileText } from "lucide-react";
 import FreeLeakConfirmationSection from "@/components/services/FreeLeakConfirmationSection";
 import SEOHead from "@/components/seo/SEOHead";
 // Import service hero images
@@ -343,7 +343,7 @@ const ServiceDetail = () => {
       )}
 
       {/* Content Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-12 md:py-16 bg-background section-divider">
         <div className="container mx-auto px-4">
           {service.freeLeakSection?.enabled && (
             <div className="mb-10 md:mb-14">
@@ -366,8 +366,8 @@ const ServiceDetail = () => {
             </div>
           )}
 
-          <div className="grid lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+            <div className="lg:col-span-2 space-y-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -376,65 +376,124 @@ const ServiceDetail = () => {
                 <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
                   About This Service
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-8 whitespace-pre-line">
-                  {service.content}
-                </p>
+                
+                {/* Split content into paragraphs with better formatting */}
+                <div className="space-y-4">
+                  {service.content.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx} className="text-muted-foreground leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </motion.div>
 
-                {/* Image Gallery */}
-                {service.galleryImages.length > 0 && (
-                  <div className="mb-8">
-                    <h3 className="font-heading text-xl font-bold mb-4">Gallery</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
+              {/* Technology Methods - Only for water leak detection */}
+              {slug === 'water-leak-detection' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-slate-50 to-muted/50 rounded-2xl p-6 md:p-8 border border-border"
+                >
+                  <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 bg-canary-navy rounded-lg flex items-center justify-center">
+                      <Search className="h-5 w-5 text-white" />
+                    </div>
+                    Detection Technologies We Use
+                  </h3>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {[
+                      { icon: Atom, name: "GASENSE", desc: "Tracer gas detection for buried pipes" },
+                      { icon: AudioLines, name: "Geophones", desc: "Acoustic listening devices" },
+                      { icon: Thermometer, name: "Thermal Imaging", desc: "Infrared temperature detection" },
+                      { icon: Mic, name: "Pipe Mic", desc: "Centimetre-accurate positioning" },
+                    ].map((tech, idx) => (
+                      <div key={idx} className="flex items-start gap-3 p-3 bg-white rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-sm transition-all">
+                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <tech.icon className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-foreground">{tech.name}</p>
+                          <p className="text-sm text-muted-foreground">{tech.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Trust badges row */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="flex flex-wrap gap-4"
+              >
+                <div className="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium border border-green-200">
+                  <Shield className="h-4 w-4" />
+                  No Find, No Fee
+                </div>
+                <div className="flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium border border-blue-200">
+                  <BadgeCheck className="h-4 w-4" />
+                  €80,000+ Equipment
+                </div>
+                <div className="flex items-center gap-2 bg-orange-50 text-orange-700 px-4 py-2 rounded-full text-sm font-medium border border-orange-200">
+                  <FileText className="h-4 w-4" />
+                  Insurance Reports
+                </div>
+              </motion.div>
+
+              {/* Image Gallery */}
+              {service.galleryImages.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="font-heading text-xl font-bold mb-4">Gallery</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                      <img 
+                        src={service.heroImage} 
+                        alt={`${service.title} 1`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    {service.galleryImages.map((img, index) => (
+                      <div
+                        key={index}
                         className="aspect-[4/3] rounded-lg overflow-hidden"
                       >
                         <img 
-                          src={service.heroImage} 
-                          alt={`${service.title} 1`}
+                          src={img} 
+                          alt={`${service.title} ${index + 2}`}
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                           loading="lazy"
                           decoding="async"
                         />
-                      </motion.div>
-                      {service.galleryImages.map((img, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, scale: 0.95 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: (index + 1) * 0.1 }}
-                          className="aspect-[4/3] rounded-lg overflow-hidden"
-                        >
-                          <img 
-                            src={img} 
-                            alt={`${service.title} ${index + 2}`}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </motion.div>
-                      ))}
-                    </div>
+                      </div>
+                    ))}
                   </div>
-                )}
+                </motion.div>
+              )}
 
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="font-heading text-xl font-bold mb-4">What's Included</h3>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {service.features.map((feature, index) => (
-                    <motion.div
+                    <div
                       key={feature}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
                       className="flex items-center gap-2"
                     >
                       <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                       <span>{feature}</span>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </motion.div>
@@ -446,19 +505,25 @@ const ServiceDetail = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-muted rounded-lg p-6 sticky top-24"
+                className="bg-gradient-to-br from-canary-navy to-slate-800 rounded-xl p-6 sticky top-24 shadow-xl"
               >
-                <h3 className="font-heading text-xl font-bold mb-4">Get a Quote</h3>
-                <p className="text-muted-foreground text-sm mb-6">
+                <h3 className="font-heading text-xl font-bold mb-2 text-white">Get a Quote</h3>
+                <p className="text-white/70 text-sm mb-6">
                   Contact us today for a free consultation and quote for {service.title.toLowerCase()} services.
                 </p>
-                <div className="space-y-4">
-                  <Button className="w-full" asChild>
+                <div className="space-y-3">
+                  <Button className="w-full" size="lg" asChild>
                     <Link to="/contact">Request a Quote</Link>
                   </Button>
-                  <Button variant="outline" className="w-full" asChild>
+                  <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10 hover:text-white" size="lg" asChild>
                     <a href="tel:+34711051071">Call +34 711 051 071</a>
                   </Button>
+                </div>
+                <div className="mt-6 pt-5 border-t border-white/10">
+                  <div className="flex items-center gap-2 text-white/80 text-sm">
+                    <Shield className="h-4 w-4 text-primary" />
+                    <span>No Find, No Fee Guarantee</span>
+                  </div>
                 </div>
               </motion.div>
             </div>
