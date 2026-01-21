@@ -12,6 +12,11 @@ import leakRepairImg from "@/assets/services/leak-repair.jpg";
 // Import gallery images for carousels
 import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
 import drainDetection3 from "@/assets/services/gallery/drain-detection-3.jpg";
+import drainDetection4 from "@/assets/services/gallery/drain-detection-4.jpg";
+import drainDetection5 from "@/assets/services/gallery/drain-detection-5.jpg";
+import drainDetection6 from "@/assets/services/gallery/drain-detection-6.jpg";
+import drainDetection7 from "@/assets/services/gallery/drain-detection-7.jpg";
+import drainDetection8 from "@/assets/services/gallery/drain-detection-8.jpg";
 import pipeInspection2 from "@/assets/services/gallery/pipe-inspection-2.jpg";
 import pipeInspection3 from "@/assets/services/gallery/pipe-inspection-3.jpg";
 import poolLeak2 from "@/assets/services/gallery/pool-leak-2.jpg";
@@ -26,7 +31,7 @@ const services = [
     description: "Locate and identify drainage issues using advanced camera inspection and tracing technology.",
     icon: Search,
     href: "/services/drain-detection",
-    images: [drainDetectionImg, drainDetection2, drainDetection3],
+    images: [drainDetection4, drainDetection5, drainDetection6, drainDetection7, drainDetection8],
     imageAlt: "CCTV drain inspection camera Lanzarote",
   },
   {
