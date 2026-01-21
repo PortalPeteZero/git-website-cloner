@@ -55,46 +55,27 @@ interface ServiceData {
 
 const servicesData: Record<string, ServiceData> = {
   "drain-detection": {
-    title: "Drain Detection & CCTV Surveys Lanzarote",
-    description: "Professional drain tracing, CCTV inspection, and unblocking services in Lanzarote using 6 different camera systems for pipes of all sizes.",
+    title: "Drain & Pipe Surveys Lanzarote",
+    description: "Professional CCTV drain and pipe inspection in Lanzarote. 6 camera systems for all pipe sizes - from bathroom pipes to main drains. Detailed video reports and accurate location tracing.",
     icon: Search,
     heroImage: drainDetectionImg,
-    galleryImages: [drainDetection2, drainDetection3],
+    galleryImages: [pipeInspectionImg, drainDetection2, pipeInspection2],
     seo: {
-      title: "Drain Detection & CCTV Surveys Lanzarote | Canary Detect",
-      description: "Professional drain detection and CCTV pipe inspection in Lanzarote. 6 camera systems for all pipe sizes. Drain tracing, unblocking & detailed video reports. Serving all Lanzarote.",
-      keywords: "drain detection Lanzarote, CCTV drain survey, pipe inspection Lanzarote, drain unblocking, drain camera inspection Canary Islands"
+      title: "Drain & Pipe Surveys Lanzarote | CCTV Inspection | Canary Detect",
+      description: "Professional drain and pipe CCTV inspection in Lanzarote. 6 camera systems for all pipe sizes. Drain tracing, condition assessment, blockage detection & detailed video reports.",
+      keywords: "drain survey Lanzarote, pipe inspection Lanzarote, CCTV drain survey, pipe condition assessment, drain camera inspection, pre-purchase pipe survey Canary Islands"
     },
     features: [
       "6 camera systems for all pipe sizes",
+      "High-definition video inspection",
       "Advanced locators for exact positioning",
       "Depth measurement capability",
-      "Jetting & unblocking services",
-      "Before and after inspection",
+      "Pipe condition assessment",
+      "Joint & corrosion detection",
+      "Pre-purchase property surveys",
       "Detailed video reports",
     ],
-    content: "Canary Detect have 6 camera systems of all sizes, allowing us to survey a variety of pipe sizes from very small bathroom pipes to main drains. Our advanced locators can pinpoint the exact position of the camera head from the surface, along with depth measurements. This means we can not only view your pipes internally but also accurately locate their route from above ground.\n\nUnlike many other companies, we combine our jetting with our cameras. This enables us to inspect the pipes before and after cleaning, and using the cameras while we work ensures nothing is missed. We have a range of equipment for cleaning and unblocking pipes, from jetting machines to 'pipe knockers' for more difficult obstructions.\n\nIf pipes are full of standing water, grease, or blockages, we may need to clean them first before the cameras can see clearly.",
-  },
-  "pipe-inspection": {
-    title: "Pipe Inspection Lanzarote",
-    description: "Comprehensive CCTV water pipe inspection in Lanzarote to assess condition and identify problems before they become costly repairs.",
-    icon: CircleDot,
-    heroImage: pipeInspectionImg,
-    galleryImages: [pipeInspection2, pipeInspection3],
-    seo: {
-      title: "Pipe Inspection & CCTV Survey Lanzarote | Water Pipe Leak Detection",
-      description: "Professional pipe inspection and CCTV surveys in Lanzarote. Detect water pipe leaks, corrosion, blockages & joint failures. Pre-purchase property surveys. HD camera inspection.",
-      keywords: "pipe inspection Lanzarote, water pipe leak detection, CCTV pipe survey, pipe condition assessment, pre-purchase pipe survey Canary Islands"
-    },
-    features: [
-      "High-definition camera inspection",
-      "Pipe condition assessment",
-      "Joint displacement detection",
-      "Corrosion identification",
-      "Pre-purchase surveys",
-      "Recorded video footage",
-    ],
-    content: "Our pipe inspection service provides a thorough assessment of your plumbing system's condition. Using high-definition push-rod cameras, we can inspect pipes from 25mm to 300mm diameter, identifying issues such as scale buildup, corrosion, joint failures, and structural damage. This is particularly valuable for pre-purchase property surveys in Lanzarote.",
+    content: "Canary Detect have 6 camera systems of all sizes, allowing us to survey a variety of pipe sizes from very small bathroom pipes to main drains. Our advanced locators can pinpoint the exact position of the camera head from the surface, along with depth measurements. This means we can not only view your pipes internally but also accurately locate their route from above ground.\n\nUsing high-definition push-rod cameras, we can inspect pipes from 25mm to 300mm diameter, identifying issues such as scale buildup, corrosion, joint failures, and structural damage. This is particularly valuable for pre-purchase property surveys in Lanzarote.\n\nUnlike many other companies, we combine our jetting with our cameras. This enables us to inspect the pipes before and after cleaning, and using the cameras while we work ensures nothing is missed. We have a range of equipment for cleaning and unblocking pipes, from jetting machines to 'pipe knockers' for more difficult obstructions.\n\nIf pipes are full of standing water, grease, or blockages, we may need to clean them first before the cameras can see clearly.",
   },
   "underground-detection": {
     title: "Underground Pipe & Cable Detection Lanzarote",
