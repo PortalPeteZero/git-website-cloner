@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { BadgeCheck, CheckCircle2, Mail, Phone } from "lucide-react";
+import { BadgeCheck, CheckCircle2, Mail, Phone, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation.png";
 
 type Props = {
   title: string;
@@ -19,17 +20,29 @@ export default function FreeLeakConfirmationSection({
   subNote,
 }: Props) {
   return (
-    <section className="w-full bg-gradient-to-br from-canary-navy via-canary-dark to-canary-navy">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        {/* Header - Full width, big typography */}
-        <header className="text-center mb-10 md:mb-14">
-          <p className="text-primary font-bold text-sm md:text-base uppercase tracking-[0.25em] mb-3">
-            CANARY DETECT'S NEW SERVICE FOR 2026
-          </p>
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-canary-white leading-tight">
-            FREE LEAK CONFIRMATION TESTS
+    <section className="w-full bg-gradient-to-br from-canary-navy via-canary-dark to-canary-navy section-divider">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+        {/* Featured promo banner */}
+        <div className="mb-8 md:mb-10 rounded-2xl overflow-hidden shadow-2xl border border-white/10 max-w-4xl mx-auto">
+          <img 
+            src={freeLeakConfirmationImg} 
+            alt="Free Leak Confirmation Test - New for 2026 - 95% of Lanzarote leaks are hidden"
+            className="w-full h-auto"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+
+        {/* Header */}
+        <header className="text-center mb-8 md:mb-10">
+          <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+            <Sparkles className="h-4 w-4" />
+            NEW SERVICE FOR 2026
+          </div>
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-canary-white leading-tight">
+            Free Leak Confirmation Tests
           </h2>
-          <p className="text-canary-white/90 text-xl md:text-2xl lg:text-3xl mt-4 md:mt-6 font-light">
+          <p className="text-canary-white/90 text-lg md:text-xl mt-3 font-light">
             No more guessing. No wasted money. No catch.
           </p>
         </header>
@@ -46,54 +59,54 @@ export default function FreeLeakConfirmationSection({
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
-              <div className="rounded-xl bg-white/5 border border-white/10 p-5 md:p-6">
+              <div className="rounded-xl bg-white/5 border border-white/10 p-5">
                 <p className="text-orange-400 font-bold text-xs uppercase tracking-widest">The old problem</p>
-                <p className="text-canary-white/90 mt-3 text-sm md:text-base leading-relaxed">
+                <p className="text-canary-white/90 mt-3 text-sm leading-relaxed">
                   You suspect a leak. You book a survey. We arrive. Turns out there's no leak—just a dripping tap or a meter
                   misread. You've paid for peace of mind, but it feels like wasted money.
                 </p>
               </div>
-              <div className="rounded-xl bg-primary/15 border border-primary/40 p-5 md:p-6">
+              <div className="rounded-xl bg-primary/15 border border-primary/40 p-5">
                 <p className="text-primary font-bold text-xs uppercase tracking-widest">The new solution</p>
-                <p className="text-canary-white/90 mt-3 text-sm md:text-base leading-relaxed">
+                <p className="text-canary-white/90 mt-3 text-sm leading-relaxed">
                   Before you book a full survey, we'll come to your property for a free leak confirmation test. We'll assess
                   your system, check the basics, and give you a professional report—at no cost.
                 </p>
               </div>
             </div>
 
-            <div className="rounded-xl bg-white/5 border border-white/10 p-5 md:p-6">
+            <div className="rounded-xl bg-white/5 border border-white/10 p-5">
               <p className="text-canary-cyan font-bold text-xs uppercase tracking-widest">What's in it for us?</p>
-              <p className="text-canary-white/85 mt-3 text-sm md:text-base leading-relaxed">
+              <p className="text-canary-white/85 mt-3 text-sm leading-relaxed">
                 Honestly? Efficiency. We often reserve half-day slots for surveys, only to discover on arrival there's no
                 leak. That's lost time we could've spent helping someone with a real problem. This way, we fill our schedule
                 with genuine leaks, you only pay when there's something to find, and nobody wastes time or money.
               </p>
-              <p className="text-canary-white font-bold mt-3 text-base md:text-lg">Win-win. No catch. Just smarter service.</p>
+              <p className="text-canary-white font-bold mt-3 text-base">Win-win. No catch. Just smarter service.</p>
             </div>
           </div>
 
           {/* Right Sidebar - 2 cols */}
           <aside className="lg:col-span-2">
-            <div className="rounded-2xl bg-canary-cyan/10 border-2 border-canary-cyan/50 p-5 md:p-6 lg:p-7 h-full">
-              <div className="flex items-center gap-3 mb-5">
+            <div className="rounded-2xl bg-canary-cyan/10 border-2 border-canary-cyan/50 p-5 md:p-6 h-full">
+              <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
                   <BadgeCheck className="h-5 w-5 text-primary" />
                 </div>
                 <div>
                   <p className="text-primary font-bold text-xs uppercase tracking-widest">Important</p>
-                  <h3 className="font-heading text-lg md:text-xl font-bold text-canary-white">
+                  <h3 className="font-heading text-lg font-bold text-canary-white">
                     What this includes
                   </h3>
                 </div>
               </div>
 
-              <p className="text-canary-white text-sm md:text-base leading-relaxed">{importantNote}</p>
-              <p className="text-canary-white/75 mt-3 text-sm leading-relaxed">{subNote}</p>
+              <p className="text-canary-white text-sm leading-relaxed">{importantNote}</p>
+              <p className="text-canary-white/75 mt-2 text-sm leading-relaxed">{subNote}</p>
 
-              <div className="mt-5">
-                <h4 className="font-heading font-bold text-canary-white text-sm mb-3">Included</h4>
-                <ul className="space-y-2">
+              <div className="mt-4">
+                <h4 className="font-heading font-bold text-canary-white text-sm mb-2">Included</h4>
+                <ul className="space-y-1.5">
                   {includes.map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-canary-cyan flex-shrink-0 mt-0.5" />
@@ -103,8 +116,8 @@ export default function FreeLeakConfirmationSection({
                 </ul>
               </div>
 
-              <div className="mt-6 flex flex-col gap-2">
-                <Button asChild size="lg" className="w-full shadow-lg text-base">
+              <div className="mt-5 flex flex-col gap-2">
+                <Button asChild size="lg" className="w-full shadow-lg">
                   <Link to="/contact">Request your free confirmation</Link>
                 </Button>
                 <Button
@@ -117,7 +130,7 @@ export default function FreeLeakConfirmationSection({
                 </Button>
               </div>
 
-              <div className="mt-5 flex flex-wrap gap-4 text-sm">
+              <div className="mt-4 flex flex-wrap gap-4 text-sm">
                 <a
                   href={`mailto:${email}`}
                   className="flex items-center gap-2 text-canary-white/80 hover:text-primary transition-colors"
@@ -138,7 +151,7 @@ export default function FreeLeakConfirmationSection({
         </div>
 
         {/* Footer note */}
-        <p className="mt-8 text-center text-canary-white/60 text-sm">
+        <p className="mt-6 text-center text-canary-white/60 text-sm">
           <span className="text-canary-white/80 font-medium">Note:</span> This is a confirmation visit and report — not a pinpointing survey.
         </p>
       </div>

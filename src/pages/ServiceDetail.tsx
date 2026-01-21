@@ -261,74 +261,60 @@ const ServiceDetail = () => {
         canonical={canonicalUrl}
         type="service"
       />
-      {/* Special Full-Width Banner for Water Leak Detection */}
-      {service.specialHeroImage && (
-        <section className="w-full">
+      {/* Hero Section - Standard for all services */}
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
           <img 
-            src={service.specialHeroImage} 
-            alt="Free Leak Confirmation Test - New for 2026"
-            className="w-full h-auto"
+            src={service.heroImage} 
+            alt={service.title}
+            className="w-full h-full object-cover"
             fetchPriority="high"
             decoding="async"
           />
-        </section>
-      )}
-
-      {/* Standard Hero Section - only show if no special hero */}
-      {!service.specialHeroImage && (
-        <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src={service.heroImage} 
-              alt={service.title}
-              className="w-full h-full object-cover"
-              fetchPriority="high"
-              decoding="async"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/80 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
-          </div>
-          
-          <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="max-w-2xl"
+          <div className="absolute inset-0 bg-gradient-to-r from-canary-dark via-canary-dark/80 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl"
+          >
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="flex items-center gap-4 mb-6"
             >
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-                className="flex items-center gap-4 mb-6"
-              >
-                <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/30">
-                  <Icon className="h-8 w-8 text-primary-foreground" />
-                </div>
-              </motion.div>
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-canary-white mb-6 drop-shadow-lg">
-                {service.title}
-              </h1>
-              <p className="text-canary-white text-lg md:text-xl leading-relaxed drop-shadow-md max-w-xl">
-                {service.description}
-              </p>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="mt-8 flex flex-wrap gap-4"
-              >
-                <Button size="lg" asChild className="shadow-lg">
-                  <Link to="/contact">Get a Quote</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white">
-                  <a href="tel:+34711051071">Call +34 711 051 071</a>
-                </Button>
-              </motion.div>
+              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/30">
+                <Icon className="h-8 w-8 text-primary-foreground" />
+              </div>
             </motion.div>
-          </div>
-        </section>
-      )}
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-canary-white mb-6 drop-shadow-lg">
+              {service.title}
+            </h1>
+            <p className="text-canary-white text-lg md:text-xl leading-relaxed drop-shadow-md max-w-xl">
+              {service.description}
+            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="mt-8 flex flex-wrap gap-4"
+            >
+              <Button size="lg" asChild className="shadow-lg">
+                <Link to="/contact">Get a Quote</Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white">
+                <a href="tel:+34711051071">Call +34 711 051 071</a>
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
 
       {/* Free Leak Confirmation Section - Only for Water Leak Detection */}
       {service.freeLeakSection?.enabled && (
@@ -345,26 +331,6 @@ const ServiceDetail = () => {
       {/* Content Section */}
       <section className="py-12 md:py-16 bg-background section-divider">
         <div className="container mx-auto px-4">
-          {service.freeLeakSection?.enabled && (
-            <div className="mb-10 md:mb-14">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-center max-w-3xl mx-auto"
-              >
-                <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg">
-                  <Icon className="h-7 w-7 text-primary-foreground" />
-                </div>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-3">
-                  {service.title}
-                </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  {service.description}
-                </p>
-              </motion.div>
-            </div>
-          )}
 
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             <div className="lg:col-span-2 space-y-8">
