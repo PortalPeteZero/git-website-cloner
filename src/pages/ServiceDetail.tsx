@@ -27,6 +27,11 @@ import waterLeakResidentialStreet from "@/assets/services/water-leak/residential
 // Import gallery images
 import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
 import drainDetection3 from "@/assets/services/gallery/drain-detection-3.jpg";
+import drainDetection4 from "@/assets/services/gallery/drain-detection-4.jpg";
+import drainDetection5 from "@/assets/services/gallery/drain-detection-5.jpg";
+import drainDetection6 from "@/assets/services/gallery/drain-detection-6.jpg";
+import drainDetection7 from "@/assets/services/gallery/drain-detection-7.jpg";
+import drainDetection8 from "@/assets/services/gallery/drain-detection-8.jpg";
 import pipeInspection2 from "@/assets/services/gallery/pipe-inspection-2.jpg";
 import pipeInspection3 from "@/assets/services/gallery/pipe-inspection-3.jpg";
 import poolLeak2 from "@/assets/services/gallery/pool-leak-2.jpg";
@@ -74,7 +79,7 @@ const servicesData: Record<string, ServiceData> = {
     description: "Professional CCTV drain and pipe inspection in Lanzarote. 6 camera systems for all pipe sizes - from bathroom pipes to main drains. Detailed video reports and accurate location tracing.",
     icon: Search,
     heroImage: drainDetectionImg,
-    galleryImages: [pipeInspectionImg, drainDetection2, pipeInspection2],
+    galleryImages: [drainDetection4, drainDetection5, drainDetection6, drainDetection7, drainDetection8, drainDetection2, drainDetection3],
     seo: {
       title: "Drain & Pipe Surveys Lanzarote | CCTV Inspection | Canary Detect",
       description: "Professional drain and pipe CCTV inspection in Lanzarote. 6 camera systems for all pipe sizes. Drain tracing, condition assessment, blockage detection & detailed video reports.",
