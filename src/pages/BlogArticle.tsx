@@ -30,32 +30,34 @@ interface DatabaseBlogPost {
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const [dbPost, setDbPost] = useState<DatabaseBlogPost | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [notFound, setNotFound] = useState(false);
 
-  // Check static articles first
+  // Check static articles first - this is synchronous and immediate
   const staticArticle = slug ? getArticleBySlug(slug) : undefined;
   const relatedArticles = slug ? getRelatedArticles(slug, 3) : [];
 
   useEffect(() => {
+    // If we have a static article, no need to fetch from DB
     if (staticArticle) {
-      setLoading(false);
       return;
     }
 
+    // Only fetch from DB if no static article found
     const fetchDbPost = async () => {
       if (!slug) {
         setNotFound(true);
-        setLoading(false);
         return;
       }
 
+      setLoading(true);
+      
       const { data, error } = await supabase
         .from('blog_posts')
         .select('*')
         .eq('slug', slug)
         .eq('published', true)
-        .single();
+        .maybeSingle();
 
       if (error || !data) {
         setNotFound(true);
@@ -68,7 +70,8 @@ const BlogArticle = () => {
     fetchDbPost();
   }, [slug, staticArticle]);
 
-  if (loading) {
+  // Show loading only when fetching from DB (not for static articles)
+  if (loading && !staticArticle) {
     return (
       <Layout>
         <div className="min-h-screen flex items-center justify-center">
