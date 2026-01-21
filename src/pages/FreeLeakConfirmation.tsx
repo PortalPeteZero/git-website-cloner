@@ -4,11 +4,17 @@ import FreeLeakConfirmationSection from "@/components/services/FreeLeakConfirmat
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, CheckCircle } from "lucide-react";
-import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg";
+import { ArrowRight, Phone, CheckCircle, FileCheck, Clock, Shield } from "lucide-react";
+import heroImage from "@/assets/gallery/photo-3.jpg";
 
 const FreeLeakConfirmation = () => {
   const canonicalUrl = "https://canary-detect.com/services/free-leak-confirmation";
+
+  const trustPoints = [
+    { icon: FileCheck, text: "Professional Report" },
+    { icon: Clock, text: "Quick Assessment" },
+    { icon: Shield, text: "No Obligation" },
+  ];
 
   return (
     <Layout>
@@ -20,63 +26,89 @@ const FreeLeakConfirmation = () => {
         type="service"
       />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden bg-gradient-to-br from-canary-navy via-slate-800 to-canary-navy">
-        {/* Gradient orbs for depth */}
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-canary-cyan/15 rounded-full blur-3xl" />
+      {/* Hero Section - Full Width Background */}
+      <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Leak detection specialist at work"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-canary-navy/95 via-canary-navy/80 to-canary-navy/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-canary-navy/50 to-transparent" />
+        </div>
 
-        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        {/* Decorative elements */}
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/3 w-64 h-64 bg-canary-cyan/10 rounded-full blur-3xl" />
+
+        <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
+          <div className="max-w-3xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.7 }}
             >
-              <span className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-                NEW FOR 2026 - NO CATCH
+              <span className="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
+                <CheckCircle className="h-4 w-4" />
+                NEW FOR 2026 — COMPLETELY FREE
               </span>
-              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
+              
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
                 Free Leak
-                <span className="block text-primary">Confirmation Test</span>
+                <span className="block text-primary drop-shadow-lg">Confirmation Test</span>
               </h1>
-              <p className="text-xl text-white/90 mb-8 max-w-xl">
-                Not sure if you have a leak? Before booking a full survey, we'll come to your property 
-                and confirm whether a leak exists — completely free, with a professional report.
+              
+              <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed">
+                Not sure if you have a leak? We'll visit your property and confirm — 
+                <span className="text-primary font-semibold"> completely free</span>, with a professional report.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold shadow-lg" asChild>
+
+              {/* Trust Points */}
+              <motion.div 
+                className="flex flex-wrap gap-4 mb-10"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                {trustPoints.map((point, index) => (
+                  <div 
+                    key={index}
+                    className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20"
+                  >
+                    <point.icon className="h-4 w-4 text-primary" />
+                    <span className="text-white text-sm font-medium">{point.text}</span>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div 
+                className="flex flex-wrap gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold shadow-xl text-lg px-8 py-6" asChild>
                   <a href="#enquiry-form">
-                    Book Free Test
+                    Book Your Free Test
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
+                <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-8 py-6" asChild>
                   <a href="tel:+34828679761">
                     <Phone className="mr-2 h-5 w-5" />
                     Call Now
                   </a>
                 </Button>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden lg:block"
-            >
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-canary-cyan/20 to-primary/30 rounded-3xl blur-xl opacity-60" />
-                <img
-                  src={waterLeakDetectionImg}
-                  alt="Professional leak detection equipment"
-                  className="relative rounded-2xl shadow-2xl border border-white/10 w-full object-cover aspect-[4/3]"
-                />
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
+
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
       </section>
 
 
