@@ -232,7 +232,13 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-canary-white/10 py-4">
         <div className="container mx-auto px-4 text-center text-sm text-canary-white/60">
-          <p>&copy; {new Date().getFullYear()} Canary Detect - "The Leaky Finders". All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Canary Detect - "The Leaky Finders". All rights reserved.
+            <span className="mx-2">|</span>
+            <Link to="/admin/login" className="hover:text-primary transition-colors">
+              Admin
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
