@@ -132,8 +132,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Underground Pipe & Cable Detection Lanzarote",
     description: "Find water leak underground in Lanzarote. Locate buried utilities, pipes, and cables before you dig using ground-penetrating radar and electromagnetic locators.",
     icon: Cable,
-    heroImage: undergroundDetectionImg,
-    galleryImages: [undergroundDetection6],
+    heroImage: undergroundDetection1,
+    galleryImages: [undergroundDetection1, undergroundDetection2, undergroundDetection3, undergroundDetection4, undergroundDetection5, undergroundDetection6],
     seo: {
       title: "Underground Water Leak Detection Lanzarote | Find Water Leak Underground",
       description: "Underground water leak detection and pipe location in Lanzarote. GPR radar, electromagnetic locators. Find buried pipes, cables & utilities. Construction site surveys.",
