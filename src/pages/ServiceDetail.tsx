@@ -41,13 +41,10 @@ import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
 import drainUnblocking1 from "@/assets/services/gallery/drain-unblocking-1.jpg";
 import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
-import leakRepair1 from "@/assets/services/gallery/leak-repair-1.jpg";
-import leakRepair2 from "@/assets/services/gallery/leak-repair-2.jpg";
-import leakRepair3 from "@/assets/services/gallery/leak-repair-3.jpg";
-import leakRepair4 from "@/assets/services/gallery/leak-repair-4.jpg";
-import leakRepair5 from "@/assets/services/gallery/leak-repair-5.jpg";
-import leakRepair6 from "@/assets/services/gallery/leak-repair-6.jpg";
-import leakRepair7 from "@/assets/services/gallery/leak-repair-7.jpg";
+import leakRepairBa1 from "@/assets/services/gallery/leak-repair-ba-1.jpg";
+import leakRepairBa2 from "@/assets/services/gallery/leak-repair-ba-2.jpg";
+import leakRepairBa3 from "@/assets/services/gallery/leak-repair-ba-3.jpg";
+import leakRepairBa4 from "@/assets/services/gallery/leak-repair-ba-4.jpg";
 
 // Water leak detection carousel images - real field photos
 const waterLeakCarouselImages = [
@@ -194,8 +191,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Leak Repair Lanzarote",
     description: "Professional leak repair services in Lanzarote to fix water pipe leaks, pool pipe leaks and underground leaks - complete solution from detection to repair.",
     icon: Wrench,
-    heroImage: leakRepair2,
-    galleryImages: [leakRepair1, leakRepair3, leakRepair4, leakRepair5, leakRepair6, leakRepair7],
+    heroImage: leakRepairBa4,
+    galleryImages: [leakRepairBa1, leakRepairBa2, leakRepairBa3, leakRepairBa4],
     seo: {
       title: "Leak Repair Lanzarote | Water Pipe Leak Repair | Pool Pipe Leak Repair",
       description: "Professional leak repair Lanzarote. Water pipe leak repair, pool pipe leak repair, underground leak repair. Emergency leak repair available. Complete detection to repair service.",
@@ -524,12 +521,20 @@ const ServiceDetail = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                 >
-                  <h3 className="font-heading text-xl font-bold mb-4">Gallery</h3>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  <h3 className="font-heading text-xl font-bold mb-4">
+                    {slug === 'leak-repair' ? 'Before & After' : 'Gallery'}
+                  </h3>
+                  <div className={`grid gap-3 ${
+                    slug === 'leak-repair' 
+                      ? 'grid-cols-1 sm:grid-cols-2' 
+                      : 'grid-cols-2 sm:grid-cols-3'
+                  }`}>
                     {service.galleryImages.slice(0, 6).map((img, index) => (
                       <div
                         key={index}
-                        className="aspect-[4/3] rounded-lg overflow-hidden"
+                        className={`rounded-lg overflow-hidden ${
+                          slug === 'leak-repair' ? 'aspect-[16/9]' : 'aspect-[4/3]'
+                        }`}
                       >
                         <img 
                           src={img} 
