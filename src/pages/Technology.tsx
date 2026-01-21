@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Atom, AudioLines, Thermometer, Mic, Video, CheckCircle, AlertCircle, Sparkles } from "lucide-react";
 import technologyHero from "@/assets/hero/technology-hero.jpg";
+import SEOHead from "@/components/seo/SEOHead";
 
 const technologies = [
   {
@@ -66,6 +67,12 @@ const technologies = [
 const Technology = () => {
   return (
     <Layout>
+      <SEOHead 
+        title="Professional Leak Detection Equipment | Advanced Technology Lanzarote"
+        description="Discover our €80,000+ leak detection technology. Thermal imaging, acoustic sensors, tracer gas, CCTV inspection. Multi-technology approach for accurate leak detection in Lanzarote."
+        keywords="leak detection equipment Lanzarote, thermal imaging leak detection, acoustic leak detection, tracer gas detection, CCTV pipe inspection, professional leak detection technology"
+        canonical="https://canary-detect.com/technology"
+      />
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -82,7 +89,7 @@ const Technology = () => {
           >
             <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Our Technology</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
-              Multi-Technology <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Leak Detection</span>
+              Professional Multi-Technology <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Leak Detection Lanzarote</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
               Many leak detection companies rely on just one technology, but no single method is 100% accurate. 

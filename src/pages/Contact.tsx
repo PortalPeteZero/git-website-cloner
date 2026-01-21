@@ -91,7 +91,7 @@ const Contact = () => {
           >
             <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Contact Us</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
-              Get in <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Touch</span>
+              Contact Lanzarote <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Leak Detection Experts</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
               Need leak detection in Lanzarote? Contact us for a free consultation and quote. 

@@ -14,8 +14,8 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead 
-        title="Leak Detection Lanzarote | Water & Pool Leak Detection | Canary Detect"
-        description="Professional leak detection Lanzarote. Expert water leak detection, pool leak detection, underground pipe detection & leak repair. No Find No Fee guarantee. €80,000+ specialist equipment. Serving Arrecife, Puerto del Carmen, Playa Blanca."
+        title="Leak Detection Lanzarote | Pool & Water Leak Repair | No Find No Fee"
+        description="Professional leak detection in Lanzarote. Find water leaks, pool leaks & underground pipes with €80,000+ equipment. No Find, No Fee guarantee. Serving Playa Blanca, Puerto del Carmen & Arrecife."
         keywords="leak detection Lanzarote, water leak detection Canary Islands, pool leak detection Lanzarote, leak repair Lanzarote, underground water leak detection, swimming pool leak detection, hidden water leak detection, Lanzarote water leak specialist, leak detection service Lanzarote, professional leak detection"
         canonical="https://canary-detect.com"
       />
