@@ -66,6 +66,36 @@ const Header = () => {
               Home
             </Link>
             <Link 
+              to="/technology" 
+              className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
+                isActive("/technology") 
+                  ? "text-primary after:w-full" 
+                  : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
+              } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
+            >
+              Technology
+            </Link>
+            <Link 
+              to="/case-studies" 
+              className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
+                isActive("/case-studies") 
+                  ? "text-primary after:w-full" 
+                  : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
+              } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
+            >
+              Case Studies
+            </Link>
+            <Link 
+              to="/about" 
+              className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
+                isActive("/about") 
+                  ? "text-primary after:w-full" 
+                  : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
+              } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
+            >
+              About
+            </Link>
+            <Link 
               to="/contact" 
               className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
                 isActive("/contact") 
@@ -291,6 +321,27 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
+              </Link>
+              <Link 
+                to="/technology" 
+                className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Technology
+              </Link>
+              <Link 
+                to="/case-studies" 
+                className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Case Studies
+              </Link>
+              <Link 
+                to="/about" 
+                className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
               </Link>
               <Link 
                 to="/contact" 
