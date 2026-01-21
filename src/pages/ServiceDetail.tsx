@@ -75,9 +75,9 @@ const waterLeakCarouselImages = [
 // Underground detection carousel images
 const undergroundCarouselImages = [
   { src: undergroundDetection1, alt: "Ground penetrating radar survey in Lanzarote volcanic terrain" },
-  { src: undergroundDetection2, alt: "Electromagnetic pipe locator detecting buried utilities" },
-  { src: undergroundDetection3, alt: "RIDGID SeekTech pipe location equipment in use" },
   { src: undergroundDetection4, alt: "Underground pipe detection in villa garden" },
+  { src: undergroundDetection6, alt: "Canary Detect technician with pipe location equipment" },
+  { src: undergroundDetection2, alt: "Electromagnetic pipe locator detecting buried utilities" },
   { src: undergroundDetection5, alt: "Pipe location survey using electromagnetic technology" },
 ];
 
