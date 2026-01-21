@@ -144,6 +144,15 @@ const Header = () => {
                     Underground Pipe & Cable Location
                   </Link>
                 </DropdownMenuItem>
+                <div className="border-t border-border/50 my-1" />
+                <DropdownMenuItem asChild>
+                  <Link 
+                    to="/technology" 
+                    className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md transition-colors"
+                  >
+                    See Our Technology →
+                  </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -201,6 +210,15 @@ const Header = () => {
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
                     Free Leak Confirmation Test
+                  </Link>
+                </DropdownMenuItem>
+                <div className="border-t border-border/50 my-1" />
+                <DropdownMenuItem asChild>
+                  <Link 
+                    to="/technology" 
+                    className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md transition-colors"
+                  >
+                    See Our Technology →
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -356,6 +374,16 @@ const Header = () => {
                         Underground Pipe & Cable Location
                       </Link>
                     </DropdownMenuItem>
+                    <div className="border-t border-border/50 my-1" />
+                    <DropdownMenuItem asChild>
+                      <Link 
+                        to="/technology" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md"
+                      >
+                        See Our Technology →
+                      </Link>
+                    </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
 
@@ -417,6 +445,16 @@ const Header = () => {
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
                         Free Leak Confirmation Test
+                      </Link>
+                    </DropdownMenuItem>
+                    <div className="border-t border-border/50 my-1" />
+                    <DropdownMenuItem asChild>
+                      <Link 
+                        to="/technology" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md"
+                      >
+                        See Our Technology →
                       </Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
