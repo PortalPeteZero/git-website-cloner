@@ -577,42 +577,9 @@ const ServiceDetail = () => {
                 </div>
               )}
 
-              {/* Gallery Section for pages with short content - inline with About section */}
-              {service.galleryImages.length > 0 && service.content.length < 600 && (
-                <div className="mt-8">
-                  <h3 className="font-heading text-xl font-bold mb-4">
-                    {slug === 'leak-repair' ? 'Before & After' : 'Gallery'}
-                  </h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    {service.galleryImages.slice(0, 4).map((img, index) => (
-                      <button
-                        key={index}
-                        onClick={() => openLightbox(index)}
-                        className="rounded-lg overflow-hidden cursor-zoom-in group aspect-[4/3]"
-                      >
-                        <img 
-                          src={img} 
-                          alt={`${service.title} ${index + 1}`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </button>
-                    ))}
-                  </div>
-                  {service.galleryImages.length > 4 && (
-                    <button
-                      onClick={() => openLightbox(4)}
-                      className="mt-3 text-primary hover:text-primary/80 text-sm font-medium"
-                    >
-                      View all {service.galleryImages.length} photos →
-                    </button>
-                  )}
-                </div>
-              )}
             </motion.div>
 
-            {/* Right Column - What's Included + Additional Gallery */}
+            {/* Right Column - What's Included + Gallery for short content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -634,24 +601,37 @@ const ServiceDetail = () => {
                 </div>
               </div>
 
-              {/* Additional gallery images on the right for short content pages */}
-              {service.galleryImages.length > 4 && service.content.length < 600 && (
-                <div className="grid grid-cols-2 gap-3">
-                  {service.galleryImages.slice(4, 6).map((img, index) => (
+              {/* Gallery images on the right for short content pages */}
+              {service.galleryImages.length > 0 && service.content.length < 600 && (
+                <div>
+                  <h3 className="font-heading text-lg font-bold mb-3">
+                    {slug === 'leak-repair' ? 'Before & After' : 'Gallery'}
+                  </h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {service.galleryImages.slice(0, 6).map((img, index) => (
+                      <button
+                        key={index}
+                        onClick={() => openLightbox(index)}
+                        className="rounded-lg overflow-hidden cursor-zoom-in group aspect-[4/3]"
+                      >
+                        <img 
+                          src={img} 
+                          alt={`${service.title} ${index + 1}`}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                  {service.galleryImages.length > 6 && (
                     <button
-                      key={index}
-                      onClick={() => openLightbox(index + 4)}
-                      className="rounded-lg overflow-hidden cursor-zoom-in group aspect-[4/3]"
+                      onClick={() => openLightbox(6)}
+                      className="mt-3 text-primary hover:text-primary/80 text-sm font-medium"
                     >
-                      <img 
-                        src={img} 
-                        alt={`${service.title} ${index + 5}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      View all {service.galleryImages.length} photos →
                     </button>
-                  ))}
+                  )}
                 </div>
               )}
             </motion.div>
