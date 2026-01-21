@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle, Droplets, Search, Cable, Waves, CircleDot, Wrench, LucideIcon, Home, HelpCircle, BadgeCheck, Atom, AudioLines, Thermometer, Mic, Shield, FileText } from "lucide-react";
+import { CheckCircle, Droplets, Search, Cable, Waves, CircleDot, Wrench, LucideIcon, Home, HelpCircle, BadgeCheck, Atom, AudioLines, Thermometer, Mic, Shield, FileText, X, ChevronLeft, ChevronRight } from "lucide-react";
 import FreeLeakConfirmationSection from "@/components/services/FreeLeakConfirmationSection";
 import SEOHead from "@/components/seo/SEOHead";
 // Import service hero images
@@ -264,6 +264,29 @@ const ServiceDetail = () => {
   // Carousel state for water-leak-detection
   const [currentSlide, setCurrentSlide] = useState(0);
   const isWaterLeakPage = slug === "water-leak-detection";
+  
+  // Lightbox state for gallery
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+  
+  const closeLightbox = () => setLightboxOpen(false);
+  
+  const nextImage = () => {
+    if (service) {
+      setLightboxIndex((prev) => (prev + 1) % service.galleryImages.length);
+    }
+  };
+  
+  const prevImage = () => {
+    if (service) {
+      setLightboxIndex((prev) => (prev - 1 + service.galleryImages.length) % service.galleryImages.length);
+    }
+  };
   
   useEffect(() => {
     if (!isWaterLeakPage) return;
@@ -530,20 +553,21 @@ const ServiceDetail = () => {
                       : 'grid-cols-2 sm:grid-cols-3'
                   }`}>
                     {service.galleryImages.slice(0, 6).map((img, index) => (
-                      <div
+                      <button
                         key={index}
-                        className={`rounded-lg overflow-hidden ${
+                        onClick={() => openLightbox(index)}
+                        className={`rounded-lg overflow-hidden cursor-zoom-in group ${
                           slug === 'leak-repair' ? 'aspect-[16/9]' : 'aspect-[4/3]'
                         }`}
                       >
                         <img 
                           src={img} 
                           alt={`${service.title} ${index + 1}`}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           loading="lazy"
                           decoding="async"
                         />
-                      </div>
+                      </button>
                     ))}
                   </div>
                 </motion.div>
@@ -552,6 +576,70 @@ const ServiceDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {lightboxOpen && service && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+            onClick={closeLightbox}
+          >
+            {/* Close button */}
+            <button
+              onClick={closeLightbox}
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              aria-label="Close lightbox"
+            >
+              <X className="h-6 w-6 text-white" />
+            </button>
+            
+            {/* Previous button */}
+            {service.galleryImages.length > 1 && (
+              <button
+                onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                className="absolute left-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="h-8 w-8 text-white" />
+              </button>
+            )}
+            
+            {/* Image */}
+            <motion.img
+              key={lightboxIndex}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.2 }}
+              src={service.galleryImages[lightboxIndex]}
+              alt={`${service.title} ${lightboxIndex + 1}`}
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+            
+            {/* Next button */}
+            {service.galleryImages.length > 1 && (
+              <button
+                onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                className="absolute right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                aria-label="Next image"
+              >
+                <ChevronRight className="h-8 w-8 text-white" />
+              </button>
+            )}
+            
+            {/* Image counter */}
+            {service.galleryImages.length > 1 && (
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm">
+                {lightboxIndex + 1} / {service.galleryImages.length}
+              </div>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Layout>
   );
 };
