@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, CheckCircle, FileCheck, Clock, Shield } from "lucide-react";
-import heroImage from "@/assets/gallery/photo-3.jpg";
+import heroImage from "@/assets/hero/free-leak-hero.jpg";
 
 const FreeLeakConfirmation = () => {
   const canonicalUrl = "https://canary-detect.com/services/free-leak-confirmation";
