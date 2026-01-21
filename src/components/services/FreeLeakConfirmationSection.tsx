@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import { BadgeCheck, CheckCircle2, Mail, Phone, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation.png";
+import LeakConfirmationForm from "./LeakConfirmationForm";
 
 type Props = {
   title: string;
@@ -66,47 +66,46 @@ export default function FreeLeakConfirmationSection({
           </p>
         </header>
 
-        {/* Main Grid */}
-        <div className="grid lg:grid-cols-5 gap-6 lg:gap-8">
-          {/* Left Content - 3 cols */}
-          <div className="lg:col-span-3 space-y-5">
-            <p className="text-canary-white/90 text-base md:text-lg leading-relaxed">
+        {/* Main Grid - Now 3 columns on large screens */}
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+          {/* Left Content */}
+          <div className="lg:col-span-1 space-y-5">
+            <p className="text-canary-white/90 text-base leading-relaxed">
               Here in Lanzarote, <span className="text-primary font-semibold">95% of the leaks we deal with are hidden</span>—no visible signs, no
-              obvious clues. Even massive leaks in villas can go completely unnoticed for weeks. Add in the complexity of
-              local water systems (mains supply through a meter, electric pumps, underground tanks), and it's no wonder
-              homeowners aren't sure if they actually have a leak or not.
+              obvious clues. Even massive leaks in villas can go completely unnoticed for weeks.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="rounded-xl bg-white/5 border border-white/10 p-5">
-                <p className="text-orange-400 font-bold text-xs uppercase tracking-widest">The old problem</p>
-                <p className="text-canary-white/90 mt-3 text-sm leading-relaxed">
-                  You suspect a leak. You book a survey. We arrive. Turns out there's no leak—just a dripping tap or a meter
-                  misread. You've paid for peace of mind, but it feels like wasted money.
-                </p>
-              </div>
-              <div className="rounded-xl bg-primary/15 border border-primary/40 p-5">
-                <p className="text-primary font-bold text-xs uppercase tracking-widest">The new solution</p>
-                <p className="text-canary-white/90 mt-3 text-sm leading-relaxed">
-                  Before you book a full survey, we'll come to your property for a free leak confirmation test. We'll assess
-                  your system, check the basics, and give you a professional report—at no cost.
-                </p>
-              </div>
+            <div className="rounded-xl bg-white/5 border border-white/10 p-5">
+              <p className="text-orange-400 font-bold text-xs uppercase tracking-widest">The old problem</p>
+              <p className="text-canary-white/90 mt-3 text-sm leading-relaxed">
+                You suspect a leak. You book a survey. We arrive. Turns out there's no leak—just a dripping tap or a meter
+                misread. You've paid for peace of mind, but it feels like wasted money.
+              </p>
+            </div>
+            <div className="rounded-xl bg-primary/15 border border-primary/40 p-5">
+              <p className="text-primary font-bold text-xs uppercase tracking-widest">The new solution</p>
+              <p className="text-canary-white/90 mt-3 text-sm leading-relaxed">
+                Before you book a full survey, we'll come to your property for a free leak confirmation test. We'll assess
+                your system, check the basics, and give you a professional report—at no cost.
+              </p>
             </div>
 
             <div className="rounded-xl bg-white/5 border border-white/10 p-5">
               <p className="text-canary-cyan font-bold text-xs uppercase tracking-widest">What's in it for us?</p>
               <p className="text-canary-white/85 mt-3 text-sm leading-relaxed">
-                Honestly? Efficiency. We often reserve half-day slots for surveys, only to discover on arrival there's no
-                leak. That's lost time we could've spent helping someone with a real problem. This way, we fill our schedule
-                with genuine leaks, you only pay when there's something to find, and nobody wastes time or money.
+                Efficiency. We often reserve half-day slots for surveys, only to discover on arrival there's no
+                leak. This way, we fill our schedule with genuine leaks—win-win.
               </p>
-              <p className="text-canary-white font-bold mt-3 text-base">Win-win. No catch. Just smarter service.</p>
             </div>
           </div>
 
-          {/* Right Sidebar - 2 cols */}
-          <aside className="lg:col-span-2">
+          {/* Center - Form */}
+          <div className="lg:col-span-1">
+            <LeakConfirmationForm />
+          </div>
+
+          {/* Right Sidebar - What's Included */}
+          <div className="lg:col-span-1">
             <div className="rounded-2xl bg-canary-cyan/10 border-2 border-canary-cyan/50 p-5 md:p-6 h-full">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
@@ -136,9 +135,6 @@ export default function FreeLeakConfirmationSection({
               </div>
 
               <div className="mt-5 flex flex-col gap-2">
-                <Button asChild size="lg" className="w-full shadow-lg">
-                  <Link to="/contact">Request your free confirmation</Link>
-                </Button>
                 <Button
                   asChild
                   size="lg"
@@ -166,7 +162,7 @@ export default function FreeLeakConfirmationSection({
                 </a>
               </div>
             </div>
-          </aside>
+          </div>
         </div>
 
         {/* Footer note */}
