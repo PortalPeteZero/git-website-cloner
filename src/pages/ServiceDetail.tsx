@@ -287,9 +287,19 @@ const ServiceDetail = () => {
   const service = slug ? servicesData[slug] : null;
   const canonicalUrl = `https://canary-detect.com/services/${slug}`;
   
-  // Carousel state for water-leak-detection
+  // Carousel state for pages with hero carousels
   const [currentSlide, setCurrentSlide] = useState(0);
   const isWaterLeakPage = slug === "water-leak-detection";
+  const isUndergroundPage = slug === "underground-detection";
+  const hasHeroCarousel = isWaterLeakPage || isUndergroundPage;
+  
+  // Get carousel images based on page
+  const getCarouselImages = () => {
+    if (isWaterLeakPage) return waterLeakCarouselImages;
+    if (isUndergroundPage) return undergroundCarouselImages;
+    return [];
+  };
+  const carouselImages = getCarouselImages();
   
   // Lightbox state for gallery
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -315,12 +325,12 @@ const ServiceDetail = () => {
   };
   
   useEffect(() => {
-    if (!isWaterLeakPage) return;
+    if (!hasHeroCarousel || carouselImages.length === 0) return;
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % waterLeakCarouselImages.length);
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [isWaterLeakPage]);
+  }, [hasHeroCarousel, carouselImages.length]);
 
   if (!service) {
     return (
