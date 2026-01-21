@@ -34,8 +34,14 @@ import drainDetection7 from "@/assets/services/gallery/drain-detection-7.jpg";
 import drainDetection8 from "@/assets/services/gallery/drain-detection-8.jpg";
 import pipeInspection2 from "@/assets/services/gallery/pipe-inspection-2.jpg";
 import pipeInspection3 from "@/assets/services/gallery/pipe-inspection-3.jpg";
+import poolLeak1 from "@/assets/services/gallery/pool-leak-1.jpg";
 import poolLeak2 from "@/assets/services/gallery/pool-leak-2.jpg";
 import poolLeak3 from "@/assets/services/gallery/pool-leak-3.jpg";
+import poolLeak4 from "@/assets/services/gallery/pool-leak-4.jpg";
+import poolLeak5 from "@/assets/services/gallery/pool-leak-5.jpg";
+import poolLeak6 from "@/assets/services/gallery/pool-leak-6.jpg";
+import poolLeak7 from "@/assets/services/gallery/pool-leak-7.jpg";
+import poolLeak8 from "@/assets/services/gallery/pool-leak-8.jpg";
 import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
 import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
@@ -167,8 +173,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Pool Leak Detection Lanzarote",
     description: "Swimming pool leak detection in Lanzarote - we don't just confirm a leak, we pinpoint its exact location. Pool losing water? We'll find why.",
     icon: Waves,
-    heroImage: poolLeakDetectionImg,
-    galleryImages: [poolLeak2, poolLeak3],
+    heroImage: poolLeak1,
+    galleryImages: [poolLeak8, poolLeak7, poolLeak4, poolLeak5, poolLeak6, poolLeak2, poolLeak3],
     seo: {
       title: "Pool Leak Detection Lanzarote | Swimming Pool Leak Detection | Playa Blanca",
       description: "Professional pool leak detection Lanzarote. Pool losing water? We pinpoint the exact leak location. Acoustic testing, pressure testing, CCTV inspection. Pool leak repair service available.",
