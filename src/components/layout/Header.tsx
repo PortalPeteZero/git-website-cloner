@@ -89,7 +89,7 @@ const Header = () => {
             {/* Divider */}
             <div className="h-8 w-px bg-border mx-2" />
 
-            {/* Leak Detection Surveys Dropdown */}
+            {/* Villa & Pool Leaks Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button 
@@ -97,17 +97,36 @@ const Header = () => {
                   size="sm" 
                   className="gap-1.5 border-2 border-primary/30 bg-primary/5 text-canary-navy font-semibold hover:border-primary hover:bg-primary/10 hover:text-primary transition-all duration-300 shadow-sm hover:shadow-md"
                 >
-                  Leak Detection Surveys
+                  Villa & Pool Leaks
                   <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-2 border-primary/20 shadow-xl rounded-lg p-1 z-50">
+                <DropdownMenuItem asChild>
+                  <a 
+                    href="https://leakguardlanzarote.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors flex items-center gap-2"
+                  >
+                    Water Leak Monitoring
+                    <ExternalLink className="h-3 w-3 opacity-60" />
+                  </a>
+                </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link 
                     to="/services/water-leak-detection" 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
                     Water Leak Detection
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link 
+                    to="/services/water-leak-detection" 
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                  >
+                    Villa Leak Surveys
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -122,20 +141,6 @@ const Header = () => {
             </DropdownMenu>
 
             {/* External Links */}
-            <a 
-              href="https://leakguardlanzarote.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button 
-                variant="outline" 
-                size="sm"
-                className="gap-1.5 border-2 border-secondary/30 bg-secondary/5 text-canary-navy font-semibold hover:border-secondary hover:bg-secondary/10 hover:text-secondary transition-all duration-300 shadow-sm hover:shadow-md"
-              >
-                Water Leak Monitoring
-                <ExternalLink className="h-3 w-3 opacity-60" />
-              </Button>
-            </a>
             <a 
               href="https://leak-detective.com/" 
               target="_blank" 
@@ -218,11 +223,23 @@ const Header = () => {
                       size="default"
                       className="w-full justify-between gap-1.5 border-2 border-primary/30 bg-primary/5 text-canary-navy font-semibold hover:border-primary hover:bg-primary/10 hover:text-primary transition-all duration-300"
                     >
-                      Leak Detection Surveys
+                      Villa & Pool Leaks
                       <ChevronDown className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-2 border-primary/20 shadow-xl rounded-lg p-1 z-50 w-[200px]">
+                    <DropdownMenuItem asChild>
+                      <a 
+                        href="https://leakguardlanzarote.com/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md flex items-center gap-2"
+                      >
+                        Water Leak Monitoring
+                        <ExternalLink className="h-3 w-3 opacity-60" />
+                      </a>
+                    </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link 
                         to="/services/water-leak-detection" 
@@ -230,6 +247,15 @@ const Header = () => {
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
                         Water Leak Detection
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link 
+                        to="/services/water-leak-detection" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
+                      >
+                        Villa Leak Surveys
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
@@ -243,23 +269,6 @@ const Header = () => {
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-
-                <a 
-                  href="https://leakguardlanzarote.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="w-full"
-                >
-                  <Button 
-                    variant="outline" 
-                    size="default"
-                    className="w-full justify-center gap-1.5 border-2 border-secondary/30 bg-secondary/5 text-canary-navy font-semibold hover:border-secondary hover:bg-secondary/10 hover:text-secondary transition-all duration-300"
-                  >
-                    Water Leak Monitoring
-                    <ExternalLink className="h-3 w-3 opacity-60" />
-                  </Button>
-                </a>
 
                 <a 
                   href="https://leak-detective.com/" 
