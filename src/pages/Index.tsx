@@ -8,6 +8,7 @@ import HowItWorksSection from "@/components/home/HowItWorksSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import CaseStudiesPreview from "@/components/home/CaseStudiesPreview";
 import FAQSection from "@/components/home/FAQSection";
+import ProblemFAQSection from "@/components/home/ProblemFAQSection";
 import SEOHead from "@/components/seo/SEOHead";
 
 const Index = () => {
@@ -27,6 +28,7 @@ const Index = () => {
       <HowItWorksSection />
       <TestimonialsSection />
       <CaseStudiesPreview />
+      <ProblemFAQSection />
       <FAQSection />
     </Layout>
   );
