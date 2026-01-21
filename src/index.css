@@ -254,6 +254,22 @@
     pointer-events: none;
   }
 
+  /* Subtle section divider for light sections */
+  .section-divider {
+    position: relative;
+  }
+
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(90%, 1200px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)) 20%, hsl(var(--border)) 80%, transparent);
+  }
+
   /* Touch target minimum size for mobile */
   .touch-target {
     @apply min-h-[44px] min-w-[44px];
