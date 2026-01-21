@@ -5,6 +5,18 @@ import { Link } from "react-router-dom";
 import { Atom, AudioLines, Thermometer, Mic, Video, CheckCircle, AlertCircle, Sparkles } from "lucide-react";
 import technologyHero from "@/assets/hero/technology-hero.jpg";
 import SEOHead from "@/components/seo/SEOHead";
+// Before & After images
+import leakRepairBa1 from "@/assets/services/gallery/leak-repair-ba-1.jpg";
+import leakRepairBa2 from "@/assets/services/gallery/leak-repair-ba-2.jpg";
+import leakRepairBa3 from "@/assets/services/gallery/leak-repair-ba-3.jpg";
+import leakRepairBa4 from "@/assets/services/gallery/leak-repair-ba-4.jpg";
+
+const beforeAfterImages = [
+  { src: leakRepairBa1, caption: "Pinpoint accuracy means minimal excavation" },
+  { src: leakRepairBa2, caption: "Small repair area - just 2 tiles lifted" },
+  { src: leakRepairBa3, caption: "Precise location saves time and money" },
+  { src: leakRepairBa4, caption: "Targeted repair with minimal disruption" },
+];
 
 const technologies = [
   {
@@ -285,6 +297,48 @@ const Technology = () => {
               </div>
             </motion.div>
           </div>
+
+          {/* Before & After Proof Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12"
+          >
+            <div className="text-center mb-8">
+              <h3 className="font-heading text-2xl md:text-3xl font-bold mb-3">
+                Proof: Pinpoint Accuracy = Minimal Repairs
+              </h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                When we combine multiple detection technologies, we pinpoint leaks to the centimetre. 
+                This means smaller excavations, lower repair costs, and less disruption to your property.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {beforeAfterImages.map((img, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="aspect-[4/3] rounded-xl overflow-hidden mb-3 border-2 border-border group-hover:border-primary/30 transition-colors">
+                    <img 
+                      src={img.src} 
+                      alt={`Before and after leak repair ${index + 1} - ${img.caption}`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="text-sm text-muted-foreground text-center font-medium">
+                    {img.caption}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
