@@ -174,7 +174,7 @@ const servicesData: Record<string, ServiceData> = {
     description: "Swimming pool leak detection in Lanzarote - we don't just confirm a leak, we pinpoint its exact location. Pool losing water? We'll find why.",
     icon: Waves,
     heroImage: poolLeak1,
-    galleryImages: [poolLeak8, poolLeak7, poolLeak4, poolLeak5, poolLeak6, poolLeak2, poolLeak3],
+    galleryImages: [poolLeak8, poolLeak7, poolLeak4, poolLeak5, poolLeak6],
     seo: {
       title: "Pool Leak Detection Lanzarote | Swimming Pool Leak Detection | Playa Blanca",
       description: "Professional pool leak detection Lanzarote. Pool losing water? We pinpoint the exact leak location. Acoustic testing, pressure testing, CCTV inspection. Pool leak repair service available.",
