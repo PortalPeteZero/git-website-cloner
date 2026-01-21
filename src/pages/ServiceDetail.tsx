@@ -13,6 +13,8 @@ import undergroundDetectionImg from "@/assets/services/underground-detection.jpg
 import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg";
 import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg";
 import leakRepairImg from "@/assets/services/leak-repair.jpg";
+import drainUnblockingImg from "@/assets/services/drain-unblocking.jpg";
+import poolLeakRepairImg from "@/assets/services/pool-leak-repair.jpg";
 import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation.png";
 
 // Import gallery images
@@ -25,6 +27,8 @@ import poolLeak3 from "@/assets/services/gallery/pool-leak-3.jpg";
 import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
 import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
+import drainUnblocking1 from "@/assets/services/gallery/drain-unblocking-1.jpg";
+import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
 
 interface ServiceData {
   title: string;
@@ -202,8 +206,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Drain Unblocking Lanzarote",
     description: "Professional drain unblocking services in Lanzarote. Blocked drain? We clear all types of blockages quickly and effectively using high-pressure jetting and specialist equipment.",
     icon: Search,
-    heroImage: drainDetectionImg,
-    galleryImages: [drainDetection2, drainDetection3],
+    heroImage: drainUnblockingImg,
+    galleryImages: [drainUnblocking1, drainDetection2],
     seo: {
       title: "Drain Unblocking Lanzarote | Blocked Drain Clearance | Emergency Service",
       description: "Professional drain unblocking Lanzarote. Blocked drain cleared fast with high-pressure jetting. Kitchen, bathroom, main drains. Emergency drain unblocking available. CCTV inspection included.",
@@ -225,8 +229,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Pool Leak Repair Lanzarote",
     description: "Professional swimming pool leak repair in Lanzarote. From pipe repairs to shell crack fixing, we repair all types of pool leaks with lasting solutions.",
     icon: Waves,
-    heroImage: poolLeakDetectionImg,
-    galleryImages: [poolLeak2, poolLeak3],
+    heroImage: poolLeakRepairImg,
+    galleryImages: [poolRepair1, poolLeak2],
     seo: {
       title: "Pool Leak Repair Lanzarote | Swimming Pool Pipe Repair | Pool Shell Repair",
       description: "Professional pool leak repair Lanzarote. Swimming pool pipe repair, shell crack repair, fitting replacement. Complete pool leak detection and repair service. Quality materials & lasting repairs.",
