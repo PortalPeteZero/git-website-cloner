@@ -633,7 +633,30 @@ const ServiceDetail = () => {
                 </div>
               </div>
 
-              {/* Fill the right column on Underground Detection so the layout feels balanced */}
+              {/* Technology CTA for Water Leak Detection */}
+              {slug === 'water-leak-detection' && (
+                <Link
+                  to="/technology"
+                  className="block rounded-2xl bg-gradient-to-br from-primary via-amber-500 to-primary p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-[1.02]"
+                >
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Atom className="h-7 w-7 text-white" />
+                    </div>
+                    <h3 className="font-heading text-lg font-bold text-white">
+                      See Our Multi-Technology Approach
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                      Learn how we combine 4+ detection methods for pinpoint accuracy
+                    </p>
+                    <span className="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-white/20 rounded-full text-white font-medium text-sm group-hover:bg-white/30 transition-colors">
+                      Explore Technology
+                      <ChevronRight className="h-4 w-4" />
+                    </span>
+                  </div>
+                </Link>
+              )}
+
               {slug === 'underground-detection' && service.galleryImages.length > 0 && (
                 <div className="rounded-2xl border border-border bg-card p-4">
                   <h3 className="font-heading text-lg font-bold mb-3">Survey in action</h3>
