@@ -66,16 +66,6 @@ const Header = () => {
               Home
             </Link>
             <Link 
-              to="/services" 
-              className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
-                isServicesActive 
-                  ? "text-primary after:w-full" 
-                  : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
-              } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
-            >
-              Services
-            </Link>
-            <Link 
               to="/contact" 
               className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
                 isActive("/contact") 
@@ -88,6 +78,21 @@ const Header = () => {
 
             {/* Divider */}
             <div className="h-8 w-px bg-border mx-2" />
+
+            {/* Services Button */}
+            <Link to="/services">
+              <Button 
+                variant="outline" 
+                size="sm"
+                className={`gap-1.5 border-2 font-semibold transition-all duration-300 shadow-sm hover:shadow-md ${
+                  isServicesActive 
+                    ? "border-primary bg-primary/10 text-primary" 
+                    : "border-canary-navy/20 bg-canary-navy/5 text-canary-navy hover:border-canary-navy/40 hover:bg-canary-navy/10"
+                }`}
+              >
+                Services
+              </Button>
+            </Link>
 
             {/* Villa & Pool Leaks Dropdown */}
             <DropdownMenu>
@@ -198,13 +203,6 @@ const Header = () => {
                 Home
               </Link>
               <Link 
-                to="/services" 
-                className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link 
                 to="/contact" 
                 className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
@@ -216,6 +214,24 @@ const Header = () => {
 
               {/* Buttons */}
               <div className="flex flex-col gap-3 px-2">
+                <Link 
+                  to="/services"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full"
+                >
+                  <Button 
+                    variant="outline" 
+                    size="default"
+                    className={`w-full justify-center gap-1.5 border-2 font-semibold transition-all duration-300 ${
+                      isServicesActive 
+                        ? "border-primary bg-primary/10 text-primary" 
+                        : "border-canary-navy/20 bg-canary-navy/5 text-canary-navy hover:border-canary-navy/40 hover:bg-canary-navy/10"
+                    }`}
+                  >
+                    Services
+                  </Button>
+                </Link>
+
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button 
