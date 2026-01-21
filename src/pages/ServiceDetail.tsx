@@ -391,36 +391,70 @@ const ServiceDetail = () => {
       {/* Content Section */}
       <section className="py-10 md:py-12 bg-background section-divider">
         <div className="container mx-auto px-4">
+          
+          {/* CTA Banner - Full Width at Top */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-canary-navy to-slate-800 rounded-xl p-6 md:p-8 shadow-xl mb-8"
+          >
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <h3 className="font-heading text-xl font-bold text-white">Get a Free Quote</h3>
+                <p className="text-white/70 text-sm mt-1">
+                  Contact us today for a free consultation for {service.title.toLowerCase()} services.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button className="whitespace-nowrap" size="lg" asChild>
+                  <Link to="/contact">Request a Quote</Link>
+                </Button>
+                <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white whitespace-nowrap" size="lg" asChild>
+                  <a href="tel:+34711051071">Call +34 711 051 071</a>
+                </Button>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-4 mt-4 pt-4 border-t border-white/10">
+              <div className="flex items-center gap-2 text-white/80 text-sm">
+                <Shield className="h-4 w-4 text-primary" />
+                <span>No Find, No Fee Guarantee</span>
+              </div>
+              <div className="flex items-center gap-2 text-white/80 text-sm">
+                <BadgeCheck className="h-4 w-4 text-primary" />
+                <span>€80,000+ Equipment</span>
+              </div>
+              <div className="flex items-center gap-2 text-white/80 text-sm">
+                <FileText className="h-4 w-4 text-primary" />
+                <span>Insurance Reports</span>
+              </div>
+            </div>
+          </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-6 lg:gap-10 items-start">
-            <div className="lg:col-span-2 space-y-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
-                  About This Service
-                </h2>
-                
-                {/* Split content into paragraphs with better formatting */}
-                <div className="space-y-4">
-                  {service.content.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="text-muted-foreground leading-relaxed">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </motion.div>
+          {/* Two Column Layout */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Left Column - Description */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
+                About This Service
+              </h2>
+              
+              {/* Split content into paragraphs with better formatting */}
+              <div className="space-y-4">
+                {service.content.split('\n\n').map((paragraph, idx) => (
+                  <p key={idx} className="text-muted-foreground leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
 
               {/* Technology Methods - Only for water leak detection */}
               {slug === 'water-leak-detection' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-slate-50 to-muted/50 rounded-2xl p-6 md:p-8 border border-border"
-                >
+                <div className="bg-gradient-to-br from-slate-50 to-muted/50 rounded-2xl p-6 md:p-8 border border-border mt-6">
                   <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 bg-canary-navy rounded-lg flex items-center justify-center">
                       <Search className="h-5 w-5 text-white" />
@@ -445,27 +479,28 @@ const ServiceDetail = () => {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               )}
+            </motion.div>
 
-              {/* Trust badges row */}
+            {/* Right Column - Features + Gallery */}
+            <div className="space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="flex flex-wrap gap-4"
               >
-                <div className="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium border border-green-200">
-                  <Shield className="h-4 w-4" />
-                  No Find, No Fee
-                </div>
-                <div className="flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium border border-blue-200">
-                  <BadgeCheck className="h-4 w-4" />
-                  €80,000+ Equipment
-                </div>
-                <div className="flex items-center gap-2 bg-orange-50 text-orange-700 px-4 py-2 rounded-full text-sm font-medium border border-orange-200">
-                  <FileText className="h-4 w-4" />
-                  Insurance Reports
+                <h3 className="font-heading text-xl font-bold mb-4">What's Included</h3>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {service.features.map((feature, index) => (
+                    <div
+                      key={feature}
+                      className="flex items-center gap-2"
+                    >
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
 
@@ -477,7 +512,7 @@ const ServiceDetail = () => {
                   viewport={{ once: true }}
                 >
                   <h3 className="font-heading text-xl font-bold mb-4">Gallery</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                     <div className="aspect-[4/3] rounded-lg overflow-hidden">
                       <img 
                         src={service.heroImage} 
@@ -504,54 +539,6 @@ const ServiceDetail = () => {
                   </div>
                 </motion.div>
               )}
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="font-heading text-xl font-bold mb-4">What's Included</h3>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {service.features.map((feature, index) => (
-                    <div
-                      key={feature}
-                      className="flex items-center gap-2"
-                    >
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Sidebar CTA */}
-            <div className="h-fit">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-canary-navy to-slate-800 rounded-xl p-6 sticky top-24 shadow-xl"
-              >
-                <h3 className="font-heading text-xl font-bold mb-2 text-white">Get a Quote</h3>
-                <p className="text-white/70 text-sm mb-4">
-                  Contact us today for a free consultation and quote for {service.title.toLowerCase()} services.
-                </p>
-                <div className="space-y-3">
-                  <Button className="w-full" size="lg" asChild>
-                    <Link to="/contact">Request a Quote</Link>
-                  </Button>
-                  <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10 hover:text-white" size="lg" asChild>
-                    <a href="tel:+34711051071">Call +34 711 051 071</a>
-                  </Button>
-                </div>
-                <div className="mt-4 pt-4 border-t border-white/10">
-                  <div className="flex items-center gap-2 text-white/80 text-sm">
-                    <Shield className="h-4 w-4 text-primary" />
-                    <span>No Find, No Fee Guarantee</span>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </div>
         </div>
