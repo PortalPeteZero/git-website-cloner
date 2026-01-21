@@ -500,7 +500,7 @@ const ServiceDetail = () => {
             </div>
           </motion.div>
 
-          {/* Two Column Layout - Description + What's Included */}
+          {/* Two Column Layout - Description + What's Included & Gallery */}
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Left Column - Description (takes more space) */}
             <motion.div
@@ -551,16 +551,50 @@ const ServiceDetail = () => {
                   </div>
                 </div>
               )}
+
+              {/* Gallery Section for pages with short content - inline with About section */}
+              {service.galleryImages.length > 0 && service.content.length < 600 && (
+                <div className="mt-8">
+                  <h3 className="font-heading text-xl font-bold mb-4">
+                    {slug === 'leak-repair' ? 'Before & After' : 'Gallery'}
+                  </h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {service.galleryImages.slice(0, 4).map((img, index) => (
+                      <button
+                        key={index}
+                        onClick={() => openLightbox(index)}
+                        className="rounded-lg overflow-hidden cursor-zoom-in group aspect-[4/3]"
+                      >
+                        <img 
+                          src={img} 
+                          alt={`${service.title} ${index + 1}`}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                  {service.galleryImages.length > 4 && (
+                    <button
+                      onClick={() => openLightbox(4)}
+                      className="mt-3 text-primary hover:text-primary/80 text-sm font-medium"
+                    >
+                      View all {service.galleryImages.length} photos →
+                    </button>
+                  )}
+                </div>
+              )}
             </motion.div>
 
-            {/* Right Column - What's Included */}
+            {/* Right Column - What's Included + Additional Gallery */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-2"
+              className="lg:col-span-2 space-y-6"
             >
-              <div className="bg-gradient-to-br from-slate-50 to-muted/30 rounded-2xl p-6 border border-border h-fit">
+              <div className="bg-gradient-to-br from-slate-50 to-muted/30 rounded-2xl p-6 border border-border">
                 <h3 className="font-heading text-xl font-bold mb-5">What's Included</h3>
                 <div className="space-y-3">
                   {service.features.map((feature, index) => (
@@ -574,11 +608,32 @@ const ServiceDetail = () => {
                   ))}
                 </div>
               </div>
+
+              {/* Additional gallery images on the right for short content pages */}
+              {service.galleryImages.length > 4 && service.content.length < 600 && (
+                <div className="grid grid-cols-2 gap-3">
+                  {service.galleryImages.slice(4, 6).map((img, index) => (
+                    <button
+                      key={index}
+                      onClick={() => openLightbox(index + 4)}
+                      className="rounded-lg overflow-hidden cursor-zoom-in group aspect-[4/3]"
+                    >
+                      <img 
+                        src={img} 
+                        alt={`${service.title} ${index + 5}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </motion.div>
           </div>
 
-          {/* Full Width Gallery Section - Below the two columns */}
-          {service.galleryImages.length > 0 && (
+          {/* Full Width Gallery Section - Only for pages with longer content */}
+          {service.galleryImages.length > 0 && service.content.length >= 600 && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
