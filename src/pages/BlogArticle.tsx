@@ -208,28 +208,61 @@ const BlogArticle = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="prose prose-lg max-w-none
-                prose-headings:font-heading prose-headings:text-foreground prose-headings:font-bold
-                prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
-                prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-                prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4
-                prose-li:text-muted-foreground prose-li:leading-relaxed
-                prose-strong:text-foreground prose-strong:font-semibold
-                prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-                prose-ul:my-4 prose-ol:my-4
-                prose-table:border-border prose-th:bg-muted prose-th:p-3 prose-td:p-3 prose-td:border-border
-                [&_.video-embed]:my-8 [&_.video-embed]:rounded-lg [&_.video-embed]:overflow-hidden [&_.video-embed]:shadow-lg
-                [&_iframe]:w-full [&_iframe]:aspect-video"
+              className="blog-prose prose prose-lg max-w-none [&_.video-embed]:my-8 [&_.video-embed]:rounded-xl [&_.video-embed]:overflow-hidden [&_.video-embed]:shadow-lg [&_iframe]:w-full [&_iframe]:aspect-video [&_iframe]:rounded-xl"
             >
               <ReactMarkdown
                 rehypePlugins={[rehypeRaw]}
                 components={{
                   a: ({ href, children }) => {
                     if (href?.startsWith('/')) {
-                      return <Link to={href} className="text-primary hover:underline">{children}</Link>;
+                      return <Link to={href} className="text-primary hover:underline font-medium">{children}</Link>;
                     }
-                    return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
-                  }
+                    return <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">{children}</a>;
+                  },
+                  h2: ({ children }) => (
+                    <h2 className="text-2xl font-bold mt-12 mb-6 pb-3 border-b border-border text-foreground font-heading first:mt-0">{children}</h2>
+                  ),
+                  h3: ({ children }) => (
+                    <h3 className="text-xl font-bold mt-10 mb-4 text-primary font-heading">{children}</h3>
+                  ),
+                  h4: ({ children }) => (
+                    <h4 className="text-base font-semibold mt-6 mb-3 text-foreground font-heading">{children}</h4>
+                  ),
+                  p: ({ children }) => (
+                    <p className="text-muted-foreground leading-relaxed mb-5">{children}</p>
+                  ),
+                  ul: ({ children }) => (
+                    <ul className="my-5 ml-4 space-y-2 list-disc marker:text-primary">{children}</ul>
+                  ),
+                  ol: ({ children }) => (
+                    <ol className="my-5 ml-4 space-y-2 list-decimal marker:text-primary marker:font-semibold">{children}</ol>
+                  ),
+                  li: ({ children }) => (
+                    <li className="text-muted-foreground leading-relaxed pl-2">{children}</li>
+                  ),
+                  strong: ({ children }) => (
+                    <strong className="text-foreground font-semibold">{children}</strong>
+                  ),
+                  blockquote: ({ children }) => (
+                    <blockquote className="border-l-4 border-primary bg-primary/5 py-4 px-6 my-8 rounded-r-lg italic text-foreground/80 not-italic">{children}</blockquote>
+                  ),
+                  table: ({ children }) => (
+                    <div className="overflow-x-auto my-8 rounded-lg border border-border">
+                      <table className="w-full border-collapse">{children}</table>
+                    </div>
+                  ),
+                  thead: ({ children }) => (
+                    <thead className="bg-canary-navy">{children}</thead>
+                  ),
+                  th: ({ children }) => (
+                    <th className="text-white p-3 text-left font-semibold text-sm">{children}</th>
+                  ),
+                  td: ({ children }) => (
+                    <td className="p-3 border-b border-border bg-card text-muted-foreground">{children}</td>
+                  ),
+                  hr: () => (
+                    <hr className="my-10 border-t-2 border-border" />
+                  ),
                 }}
               >
                 {content}
