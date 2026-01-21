@@ -46,6 +46,11 @@ import poolLeak11 from "@/assets/services/gallery/pool-leak-11.jpg";
 import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
 import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
+import undergroundDetection1 from "@/assets/services/gallery/underground-detection-1.jpg";
+import undergroundDetection2 from "@/assets/services/gallery/underground-detection-2.jpg";
+import undergroundDetection3 from "@/assets/services/gallery/underground-detection-3.jpg";
+import undergroundDetection4 from "@/assets/services/gallery/underground-detection-4.jpg";
+import undergroundDetection5 from "@/assets/services/gallery/underground-detection-5.jpg";
 import drainUnblocking1 from "@/assets/services/gallery/drain-unblocking-1.jpg";
 import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
 import poolRepair2 from "@/assets/services/gallery/pool-repair-2.jpg";
@@ -65,6 +70,15 @@ const waterLeakCarouselImages = [
   { src: drainDetection6, alt: "Underground water leak detection with specialist equipment" },
   { src: drainDetection7, alt: "Pipe leak detection using acoustic technology" },
   { src: drainDetection8, alt: "Canary Detect field technician locating water leak" },
+];
+
+// Underground detection carousel images
+const undergroundCarouselImages = [
+  { src: undergroundDetection1, alt: "Ground penetrating radar survey in Lanzarote volcanic terrain" },
+  { src: undergroundDetection2, alt: "Electromagnetic pipe locator detecting buried utilities" },
+  { src: undergroundDetection3, alt: "RIDGID SeekTech pipe location equipment in use" },
+  { src: undergroundDetection4, alt: "Underground pipe detection in villa garden" },
+  { src: undergroundDetection5, alt: "Pipe location survey using electromagnetic technology" },
 ];
 
 interface ServiceData {
@@ -118,8 +132,8 @@ const servicesData: Record<string, ServiceData> = {
     title: "Underground Pipe & Cable Detection Lanzarote",
     description: "Find water leak underground in Lanzarote. Locate buried utilities, pipes, and cables before you dig using ground-penetrating radar and electromagnetic locators.",
     icon: Cable,
-    heroImage: undergroundDetectionImg,
-    galleryImages: [undergroundDetection6],
+    heroImage: undergroundDetection1,
+    galleryImages: [undergroundDetection1, undergroundDetection2, undergroundDetection3, undergroundDetection4, undergroundDetection5, undergroundDetection6],
     seo: {
       title: "Underground Water Leak Detection Lanzarote | Find Water Leak Underground",
       description: "Underground water leak detection and pipe location in Lanzarote. GPR radar, electromagnetic locators. Find buried pipes, cables & utilities. Construction site surveys.",
@@ -273,9 +287,19 @@ const ServiceDetail = () => {
   const service = slug ? servicesData[slug] : null;
   const canonicalUrl = `https://canary-detect.com/services/${slug}`;
   
-  // Carousel state for water-leak-detection
+  // Carousel state for pages with hero carousels
   const [currentSlide, setCurrentSlide] = useState(0);
   const isWaterLeakPage = slug === "water-leak-detection";
+  const isUndergroundPage = slug === "underground-detection";
+  const hasHeroCarousel = isWaterLeakPage || isUndergroundPage;
+  
+  // Get carousel images based on page
+  const getCarouselImages = () => {
+    if (isWaterLeakPage) return waterLeakCarouselImages;
+    if (isUndergroundPage) return undergroundCarouselImages;
+    return [];
+  };
+  const carouselImages = getCarouselImages();
   
   // Lightbox state for gallery
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -301,12 +325,12 @@ const ServiceDetail = () => {
   };
   
   useEffect(() => {
-    if (!isWaterLeakPage) return;
+    if (!hasHeroCarousel || carouselImages.length === 0) return;
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % waterLeakCarouselImages.length);
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [isWaterLeakPage]);
+  }, [hasHeroCarousel, carouselImages.length]);
 
   if (!service) {
     return (
@@ -333,15 +357,15 @@ const ServiceDetail = () => {
         canonical={canonicalUrl}
         type="service"
       />
-      {/* Hero Section - Carousel for water-leak-detection, standard for others */}
+      {/* Hero Section - Carousel for pages with carousel, standard for others */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          {isWaterLeakPage ? (
+          {hasHeroCarousel && carouselImages.length > 0 ? (
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentSlide}
-                src={waterLeakCarouselImages[currentSlide].src}
-                alt={waterLeakCarouselImages[currentSlide].alt}
+                src={carouselImages[currentSlide].src}
+                alt={carouselImages[currentSlide].alt}
                 className="w-full h-full object-cover"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -401,10 +425,10 @@ const ServiceDetail = () => {
           </motion.div>
         </div>
         
-        {/* Carousel Indicators - Only for water leak detection */}
-        {isWaterLeakPage && (
+        {/* Carousel Indicators - For pages with hero carousel */}
+        {hasHeroCarousel && carouselImages.length > 0 && (
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
-            {waterLeakCarouselImages.map((_, idx) => (
+            {carouselImages.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentSlide(idx)}
