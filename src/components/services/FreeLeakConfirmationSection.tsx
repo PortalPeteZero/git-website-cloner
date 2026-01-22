@@ -164,7 +164,7 @@ export default function FreeLeakConfirmationSection({
                   variant="secondary"
                   className="w-full bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy"
                 >
-                  <a href={`tel:${phone}`}>{isSpanish ? "Llamar" : "Call"} {phone}</a>
+                  <a href={`tel:${phone.replace(/\s/g, '')}`}>{isSpanish ? "Llamar" : "Call"} {phone}</a>
                 </Button>
               </div>
 
@@ -177,7 +177,7 @@ export default function FreeLeakConfirmationSection({
                   <span>{email}</span>
                 </a>
                 <a
-                  href={`tel:${phone}`}
+                  href={`tel:${phone.replace(/\s/g, '')}`}
                   className="flex items-center gap-2 text-canary-white/80 hover:text-primary transition-colors"
                 >
                   <Phone className="h-4 w-4" />
