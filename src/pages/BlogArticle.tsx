@@ -23,20 +23,29 @@ const normalizeMarkdown = (md: string): string => {
   const normalized = md.replace(/\r\n?/g, "\n");
   const paragraphs = normalized.split(/\n\s*\n+/);
 
+  const stripInlineHtml = (s: string) => s.replace(/<\/?[^>]+>/g, "");
+  const unwrapPTags = (s: string) => s.trim().replace(/^<p>([\s\S]*)<\/p>$/i, "$1").trim();
+  const inline = (s: string) => unwrapPTags(s).trim();
+
   const isStandaloneEmphasis = (p: string) => {
-    const t = p.trim();
-    return /^(\*\*[^*\n]+\*\*|\*[^*\n]+\*)$/.test(t);
+    const t = inline(p);
+    // We see both markdown emphasis (e.g. **aljibe**) and migrated HTML (e.g. <strong>aljibe</strong>)
+    return /^(\*\*[^*\n]+\*\*|\*[^*\n]+\*|<(strong|b|em|i)>[^<\n]+<\/(strong|b|em|i)>)$/i.test(t);
   };
 
   const isPunctuationOnly = (p: string) => {
-    const t = p.trim();
+    const t = stripInlineHtml(inline(p)).trim();
     return /^[,.;:!?]+$/.test(t);
   };
 
   // Avoid touching headings/lists/code blocks/raw HTML blocks.
   const isBlocky = (p: string) => {
     const t = p.trim();
-    return /^(#{1,6}\s|[-*+]\s|>\s|\d+\.\s|```|<)/.test(t);
+    if (/^(#{1,6}\s|[-*+]\s|>\s|\d+\.\s|```)/.test(t)) return true;
+    // Treat common inline-ish wrappers as safe (these often appear in DB content)
+    if (/^<\/?(p|strong|b|em|i)\b/i.test(t)) return false;
+    // Other HTML blocks should not be merged.
+    return /^</.test(t);
   };
 
   const tightenPunctuation = (s: string) => s.replace(/\s+([,.;:!?])/g, "$1");
@@ -52,19 +61,21 @@ const normalizeMarkdown = (md: string): string => {
     // Also handles the common import pattern: [text] + [**term**] + [,] + [continuation]
     if (isStandaloneEmphasis(curr) && prev && next && !isBlocky(prev) && !isBlocky(next)) {
       if (isPunctuationOnly(next) && next2 && !isBlocky(next2)) {
-        out[out.length - 1] = tightenPunctuation(`${prev.trim()} ${curr}${next} ${next2}`);
+        const punct = stripInlineHtml(inline(next)).trim();
+        out[out.length - 1] = tightenPunctuation(`${inline(prev)} ${inline(curr)}${punct} ${inline(next2)}`);
         i += 2; // consumed next + next2
         continue;
       }
 
-      out[out.length - 1] = tightenPunctuation(`${prev.trim()} ${curr} ${next}`);
+      out[out.length - 1] = tightenPunctuation(`${inline(prev)} ${inline(curr)} ${inline(next)}`);
       i++; // consumed next
       continue;
     }
 
     // Merge: [text] + [,] + [continuation]
     if (isPunctuationOnly(curr) && prev && next && !isBlocky(prev) && !isBlocky(next)) {
-      out[out.length - 1] = tightenPunctuation(`${prev.trim()}${curr} ${next}`);
+      const punct = stripInlineHtml(inline(curr)).trim();
+      out[out.length - 1] = tightenPunctuation(`${inline(prev)}${punct} ${inline(next)}`);
       i++; // consumed next
       continue;
     }
