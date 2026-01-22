@@ -19,7 +19,9 @@ import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
 const normalizeMarkdown = (md: string): string => {
   if (!md) return md;
 
-  const paragraphs = md.split(/\n{2,}/);
+  // Normalize CRLF + treat whitespace-only blank lines as paragraph breaks
+  const normalized = md.replace(/\r\n?/g, "\n");
+  const paragraphs = normalized.split(/\n\s*\n+/);
 
   const isStandaloneEmphasis = (p: string) => {
     const t = p.trim();
@@ -44,9 +46,17 @@ const normalizeMarkdown = (md: string): string => {
     const curr = paragraphs[i]?.trim() ?? "";
     const prev = out[out.length - 1];
     const next = paragraphs[i + 1]?.trim();
+    const next2 = paragraphs[i + 2]?.trim();
 
     // Merge: [text] + [**term**] + [continuation]
+    // Also handles the common import pattern: [text] + [**term**] + [,] + [continuation]
     if (isStandaloneEmphasis(curr) && prev && next && !isBlocky(prev) && !isBlocky(next)) {
+      if (isPunctuationOnly(next) && next2 && !isBlocky(next2)) {
+        out[out.length - 1] = tightenPunctuation(`${prev.trim()} ${curr}${next} ${next2}`);
+        i += 2; // consumed next + next2
+        continue;
+      }
+
       out[out.length - 1] = tightenPunctuation(`${prev.trim()} ${curr} ${next}`);
       i++; // consumed next
       continue;
