@@ -248,7 +248,7 @@ const BlogArticle = () => {
       </script>
 
       {/* Hero Section */}
-      <section className="relative min-h-[40vh] md:min-h-[50vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[40vh] md:min-h-[50vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={image} 

@@ -19,7 +19,7 @@ const About = () => {
         canonical={isSpanish ? "https://canary-detect.com/es/sobre-nosotros" : "https://canary-detect.com/about"}
       />
       {/* Hero Section */}
-      <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
           <img src={aboutHero} alt={isSpanish ? "Equipo de detección de fugas Canary Detect Lanzarote" : "Canary Detect leak detection team Lanzarote"} className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.35)]" />

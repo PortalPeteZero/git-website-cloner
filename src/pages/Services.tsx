@@ -111,7 +111,7 @@ const Services = () => {
       />
       <ServiceSchema />
       {/* Hero Section with Background Image */}
-      <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={servicesHero} 

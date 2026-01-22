@@ -112,7 +112,7 @@ const ServiceDetail = () => {
         type="service"
       />
       {/* Hero Section - Collage for underground, Carousel for water leak, standard for others */}
-      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
           {isUndergroundPage && carouselImages.length >= 3 ? (
             // Collage layout for underground detection
