@@ -1,4 +1,7 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useTranslation } from '@/i18n/LanguageContext';
+import { getEquivalentRoute } from '@/i18n/routes';
 
 interface SEOHeadProps {
   title: string;
@@ -17,7 +20,13 @@ export default function SEOHead({
   type = 'website',
   image = '/og-image.jpg'
 }: SEOHeadProps) {
+  const location = useLocation();
+  const { language, isSpanish } = useTranslation();
+
   useEffect(() => {
+    // Set html lang attribute
+    document.documentElement.lang = language;
+    
     // Update document title
     document.title = title;
     
@@ -40,11 +49,13 @@ export default function SEOHead({
     const ogDescription = document.querySelector('meta[property="og:description"]');
     const ogImage = document.querySelector('meta[property="og:image"]');
     const ogType = document.querySelector('meta[property="og:type"]');
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
     
     if (ogTitle) ogTitle.setAttribute('content', title);
     if (ogDescription) ogDescription.setAttribute('content', description);
     if (ogImage) ogImage.setAttribute('content', image);
     if (ogType) ogType.setAttribute('content', type);
+    if (ogLocale) ogLocale.setAttribute('content', isSpanish ? 'es_ES' : 'en_GB');
     
     // Update Twitter tags
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
@@ -60,7 +71,46 @@ export default function SEOHead({
         canonicalLink.setAttribute('href', canonical);
       }
     }
-  }, [title, description, keywords, canonical, type, image]);
+
+    // Add/update hreflang tags
+    const baseUrl = 'https://canary-detect.com';
+    const enUrl = isSpanish 
+      ? `${baseUrl}${getEquivalentRoute(location.pathname, 'en')}`
+      : `${baseUrl}${location.pathname}`;
+    const esUrl = isSpanish
+      ? `${baseUrl}${location.pathname}`
+      : `${baseUrl}${getEquivalentRoute(location.pathname, 'es')}`;
+
+    // Manage hreflang link tags
+    let hreflangEn = document.querySelector('link[hreflang="en"]') as HTMLLinkElement;
+    let hreflangEs = document.querySelector('link[hreflang="es"]') as HTMLLinkElement;
+    let hreflangDefault = document.querySelector('link[hreflang="x-default"]') as HTMLLinkElement;
+
+    if (!hreflangEn) {
+      hreflangEn = document.createElement('link');
+      hreflangEn.setAttribute('rel', 'alternate');
+      hreflangEn.setAttribute('hreflang', 'en');
+      document.head.appendChild(hreflangEn);
+    }
+    hreflangEn.setAttribute('href', enUrl);
+
+    if (!hreflangEs) {
+      hreflangEs = document.createElement('link');
+      hreflangEs.setAttribute('rel', 'alternate');
+      hreflangEs.setAttribute('hreflang', 'es');
+      document.head.appendChild(hreflangEs);
+    }
+    hreflangEs.setAttribute('href', esUrl);
+
+    if (!hreflangDefault) {
+      hreflangDefault = document.createElement('link');
+      hreflangDefault.setAttribute('rel', 'alternate');
+      hreflangDefault.setAttribute('hreflang', 'x-default');
+      document.head.appendChild(hreflangDefault);
+    }
+    hreflangDefault.setAttribute('href', enUrl);
+
+  }, [title, description, keywords, canonical, type, image, language, isSpanish, location.pathname]);
   
   return null;
 }
