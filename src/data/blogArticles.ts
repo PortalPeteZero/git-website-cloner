@@ -12,6 +12,22 @@ import waterMeterImg from "@/assets/blog/water-meter-leak.jpg";
 import risingDampImg from "@/assets/blog/rising-damp-wall.jpg";
 import poolDiverImg from "@/assets/blog/pool-diver-inspection.jpg";
 import lanzaroteWaterHeroImg from "@/assets/blog/lanzarote-water-hero.jpg";
+import lanzaroteTraditionalHouseImg from "@/assets/blog/lanzarote-traditional-house.jpg";
+import lanzaroteAljibeImg from "@/assets/blog/lanzarote-aljibe-cistern.jpg";
+import lanzaroteTankerImg from "@/assets/blog/lanzarote-water-tanker.jpg";
+import lanzaroteSystemHouseImg from "@/assets/blog/lanzarote-water-system-house.png";
+import lanzaroteSystemDiagramImg from "@/assets/blog/lanzarote-water-system-diagram.png";
+import lanzaroteMeterLeakImg from "@/assets/blog/lanzarote-water-meter-leak.png";
+
+// Helper to create image placeholders for markdown content
+export const BLOG_IMAGES = {
+  lanzaroteTraditionalHouse: lanzaroteTraditionalHouseImg,
+  lanzaroteAljibe: lanzaroteAljibeImg,
+  lanzaroteTanker: lanzaroteTankerImg,
+  lanzaroteSystemHouse: lanzaroteSystemHouseImg,
+  lanzaroteSystemDiagram: lanzaroteSystemDiagramImg,
+  lanzaroteMeterLeak: lanzaroteMeterLeakImg,
+};
 
 export interface BlogArticle {
   id: number;
