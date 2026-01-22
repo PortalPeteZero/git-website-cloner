@@ -165,7 +165,7 @@ const CaseStudies = () => {
         canonical={isSpanish ? "https://canary-detect.com/es/casos-de-exito" : "https://canary-detect.com/case-studies"}
       />
       {/* Hero Section */}
-      <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={caseStudiesHero} 

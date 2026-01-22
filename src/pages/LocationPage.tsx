@@ -45,7 +45,7 @@ const LocationPage = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] md:min-h-[55vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[55vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
           <img src={titleBg} alt={`${isSpanish ? 'Servicios de detección de fugas en' : 'Leak detection services in'} ${locationData.name} Lanzarote`} className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.35)]" />
