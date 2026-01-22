@@ -233,8 +233,8 @@ const Blog = () => {
           <div className="container mx-auto px-4">
             <motion.article
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto"
             >
               <Link to={`${blogBasePath}/${featuredPost.slug}`} className="group">
