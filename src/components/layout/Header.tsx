@@ -40,14 +40,8 @@ const Header = () => {
     }`}>
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between py-3 lg:py-4">
-          {/* Logo */}
-          <Link to={getRoute("/", "/es")} className="flex items-center group">
-            <img
-              src={logo}
-              alt={isSpanish ? "Canary Detect - Los Cazafugas" : "Canary Detect - The Leaky Finders"}
-              className="h-16 md:h-20 lg:h-24 w-auto transition-transform duration-300 group-hover:scale-105"
-            />
-          </Link>
+          {/* Spacer for layout balance */}
+          <div className="w-8" />
 
           {/* Desktop Navigation - Show at xl (1280px+) to prevent overflow */}
           <nav className="hidden xl:flex items-center gap-1 2xl:gap-3">
