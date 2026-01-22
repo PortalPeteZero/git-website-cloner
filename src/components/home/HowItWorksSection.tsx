@@ -1,40 +1,74 @@
 import { motion } from "framer-motion";
 import { Phone, ClipboardCheck, Search, FileText, Wrench, ArrowRight } from "lucide-react";
-
-const steps = [
-  {
-    number: 1,
-    title: "Contact Us",
-    description: "Call or fill out our contact form to describe your leak problem.",
-    icon: Phone,
-  },
-  {
-    number: 2,
-    title: "Assessment",
-    description: "We'll discuss your situation and arrange a convenient time to visit.",
-    icon: ClipboardCheck,
-  },
-  {
-    number: 3,
-    title: "Detection",
-    description: "Our experts use advanced technology to locate the leak precisely.",
-    icon: Search,
-  },
-  {
-    number: 4,
-    title: "Report",
-    description: "You receive a detailed report with findings and recommendations.",
-    icon: FileText,
-  },
-  {
-    number: 5,
-    title: "Repair",
-    description: "We can repair the leak or provide guidance for your chosen contractor.",
-    icon: Wrench,
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const HowItWorksSection = () => {
+  const { isSpanish } = useLanguage();
+
+  const steps = isSpanish ? [
+    {
+      number: 1,
+      title: "Contáctenos",
+      description: "Llame o rellene nuestro formulario de contacto para describir su problema de fuga.",
+      icon: Phone,
+    },
+    {
+      number: 2,
+      title: "Evaluación",
+      description: "Discutiremos su situación y acordaremos una hora conveniente para visitarle.",
+      icon: ClipboardCheck,
+    },
+    {
+      number: 3,
+      title: "Detección",
+      description: "Nuestros expertos usan tecnología avanzada para localizar la fuga con precisión.",
+      icon: Search,
+    },
+    {
+      number: 4,
+      title: "Informe",
+      description: "Recibirá un informe detallado con hallazgos y recomendaciones.",
+      icon: FileText,
+    },
+    {
+      number: 5,
+      title: "Reparación",
+      description: "Podemos reparar la fuga o proporcionar orientación para su contratista elegido.",
+      icon: Wrench,
+    },
+  ] : [
+    {
+      number: 1,
+      title: "Contact Us",
+      description: "Call or fill out our contact form to describe your leak problem.",
+      icon: Phone,
+    },
+    {
+      number: 2,
+      title: "Assessment",
+      description: "We'll discuss your situation and arrange a convenient time to visit.",
+      icon: ClipboardCheck,
+    },
+    {
+      number: 3,
+      title: "Detection",
+      description: "Our experts use advanced technology to locate the leak precisely.",
+      icon: Search,
+    },
+    {
+      number: 4,
+      title: "Report",
+      description: "You receive a detailed report with findings and recommendations.",
+      icon: FileText,
+    },
+    {
+      number: 5,
+      title: "Repair",
+      description: "We can repair the leak or provide guidance for your chosen contractor.",
+      icon: Wrench,
+    },
+  ];
+
   return (
     <section className="py-12 md:py-16 bg-gradient-to-b from-muted to-background overflow-hidden section-divider">
       <div className="container mx-auto px-4 md:px-6">
@@ -45,14 +79,15 @@ const HowItWorksSection = () => {
           className="text-center max-w-2xl mx-auto mb-10"
         >
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">
-            Our Process
+            {isSpanish ? "Nuestro Proceso" : "Our Process"}
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-canary-navy">
-            How It Works
+            {isSpanish ? "Cómo Funciona" : "How It Works"}
           </h2>
           <p className="text-muted-foreground">
-            From your first call to problem solved - here's what to expect when you
-            work with Canary Detect.
+            {isSpanish 
+              ? "Desde su primera llamada hasta el problema resuelto - esto es lo que puede esperar cuando trabaja con Canary Detect."
+              : "From your first call to problem solved - here's what to expect when you work with Canary Detect."}
           </p>
         </motion.div>
 
