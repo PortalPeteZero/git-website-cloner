@@ -9,20 +9,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/logo-light-bg.png";
-
-const services = [
-  { name: "Drain Detection", href: "/services/drain-detection" },
-  { name: "Pipe Inspection", href: "/services/pipe-inspection" },
-  { name: "Underground Pipe & Cable Detection", href: "/services/underground-detection" },
-  { name: "Water Pipe Leak Detection", href: "/services/water-leak-detection" },
-  { name: "Pool Leak Detection", href: "/services/pool-leak-detection" },
-  { name: "Leak Repair", href: "/services/leak-repair" },
-];
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { t, isSpanish } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +27,10 @@ const Header = () => {
   }, []);
 
   const isActive = (path: string) => location.pathname === path;
-  const isServicesActive = location.pathname.startsWith("/services");
+  const isServicesActive = location.pathname.includes("/services") || location.pathname.includes("/servicios");
+
+  // Helper for language-aware routes
+  const getRoute = (enPath: string, esPath: string) => isSpanish ? esPath : enPath;
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
@@ -44,66 +41,69 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between py-3 lg:py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center group">
+          <Link to={getRoute("/", "/es")} className="flex items-center group">
             <img
               src={logo}
-              alt="Canary Detect - The Leaky Finders"
+              alt={isSpanish ? "Canary Detect - Los Cazafugas" : "Canary Detect - The Leaky Finders"}
               className="h-16 md:h-20 lg:h-24 w-auto transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
+            {/* Language Switcher */}
+            <LanguageSwitcher />
+            
             {/* Primary Links */}
             <Link 
-              to="/" 
+              to={getRoute("/", "/es")} 
               className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
-                isActive("/") 
+                isActive("/") || isActive("/es")
                   ? "text-primary after:w-full" 
                   : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
               } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
             >
-              Home
+              {t('navigation.home')}
             </Link>
             <Link 
-              to="/technology" 
+              to={getRoute("/technology", "/es/tecnologia")} 
               className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
-                isActive("/technology") 
+                isActive("/technology") || isActive("/es/tecnologia")
                   ? "text-primary after:w-full" 
                   : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
               } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
             >
-              Technology
+              {t('navigation.technology')}
             </Link>
             <Link 
-              to="/case-studies" 
+              to={getRoute("/case-studies", "/es/casos-de-exito")} 
               className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
-                isActive("/case-studies") 
+                isActive("/case-studies") || isActive("/es/casos-de-exito")
                   ? "text-primary after:w-full" 
                   : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
               } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
             >
-              Case Studies
+              {t('navigation.caseStudies')}
             </Link>
             <Link 
-              to="/about" 
+              to={getRoute("/about", "/es/sobre-nosotros")} 
               className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
-                isActive("/about") 
+                isActive("/about") || isActive("/es/sobre-nosotros")
                   ? "text-primary after:w-full" 
                   : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
               } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
             >
-              About
+              {t('navigation.about')}
             </Link>
             <Link 
-              to="/contact" 
+              to={getRoute("/contact", "/es/contacto")} 
               className={`relative px-4 py-2 font-semibold text-sm transition-all duration-300 ${
-                isActive("/contact") 
+                isActive("/contact") || isActive("/es/contacto")
                   ? "text-primary after:w-full" 
                   : "text-canary-navy hover:text-primary after:w-0 hover:after:w-full"
               } after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-primary after:transition-all after:duration-300`}
             >
-              Contact
+              {t('navigation.contact')}
             </Link>
 
             {/* Divider */}
@@ -121,66 +121,66 @@ const Header = () => {
                       : "border-canary-navy/20 bg-canary-navy/5 text-canary-navy hover:border-canary-navy/40 hover:bg-canary-navy/10"
                   }`}
                 >
-                  Services
+                  {t('navigation.services')}
                   <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-2 border-primary/20 shadow-xl rounded-lg p-1 z-50">
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/services/drain-detection" 
+                    to={getRoute("/services/drain-detection", "/es/servicios/deteccion-desagues")} 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
-                    Drain & Pipe Surveys
+                    {isSpanish ? "Inspección de Desagües" : "Drain & Pipe Surveys"}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/services/drain-unblocking" 
+                    to={getRoute("/services/drain-unblocking", "/es/servicios/desbloqueo-desagues")} 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
-                    Drain Unblocking
+                    {isSpanish ? "Desbloqueo de Desagües" : "Drain Unblocking"}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/services/leak-repair" 
+                    to={getRoute("/services/leak-repair", "/es/servicios/reparacion-fugas")} 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
-                    Leak Repair
+                    {isSpanish ? "Reparación de Fugas" : "Leak Repair"}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/services/pool-leak-repair" 
+                    to={getRoute("/services/pool-leak-repair", "/es/servicios/reparacion-fugas-piscinas")} 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
-                    Pool Leak Repair
+                    {isSpanish ? "Reparación Fugas Piscinas" : "Pool Leak Repair"}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/services/pipe-inspection" 
+                    to={getRoute("/services/pipe-inspection", "/es/servicios/inspeccion-tuberias")} 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
-                    Pipe Inspection
+                    {isSpanish ? "Inspección de Tuberías" : "Pipe Inspection"}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/services/underground-detection" 
+                    to={getRoute("/services/underground-detection", "/es/servicios/deteccion-subterranea")} 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
-                    Underground Pipe & Cable Location
+                    {isSpanish ? "Detección Subterránea" : "Underground Pipe & Cable Location"}
                   </Link>
                 </DropdownMenuItem>
                 <div className="border-t border-border/50 my-1" />
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/technology" 
+                    to={getRoute("/technology", "/es/tecnologia")} 
                     className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md transition-colors"
                   >
-                    See Our Technology →
+                    {isSpanish ? "Ver Nuestra Tecnología →" : "See Our Technology →"}
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -194,7 +194,7 @@ const Header = () => {
                   size="sm" 
                   className="gap-1.5 border-2 border-primary/30 bg-primary/5 text-canary-navy font-semibold hover:border-primary hover:bg-primary/10 hover:text-primary transition-all duration-300 shadow-sm hover:shadow-md"
                 >
-                  Villa & Pool Leaks
+                  {t('navigation.villaPoolLeaks')}
                   <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                 </Button>
               </DropdownMenuTrigger>
@@ -206,62 +206,62 @@ const Header = () => {
                     rel="noopener noreferrer"
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors flex items-center gap-2"
                   >
-                    Water Leak Monitoring
+                    {isSpanish ? "Monitoreo de Fugas" : "Water Leak Monitoring"}
                     <ExternalLink className="h-3 w-3 opacity-60" />
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/services/water-leak-detection" 
+                    to={getRoute("/services/water-leak-detection", "/es/servicios/deteccion-fugas-agua")} 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
-                    Water Leak Detection
+                    {isSpanish ? "Detección de Fugas de Agua" : "Water Leak Detection"}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/services/water-leak-detection" 
+                    to={getRoute("/services/water-leak-detection", "/es/servicios/deteccion-fugas-agua")} 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
-                    Villa Leak Surveys
+                    {isSpanish ? "Inspección de Villas" : "Villa Leak Surveys"}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/services/pool-leak-detection" 
+                    to={getRoute("/services/pool-leak-detection", "/es/servicios/deteccion-fugas-piscinas")} 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
-                    Pool Leak Surveys
+                    {isSpanish ? "Inspección de Piscinas" : "Pool Leak Surveys"}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/services/free-leak-confirmation" 
+                    to={getRoute("/services/free-leak-confirmation", "/es/servicios/confirmacion-fugas-gratis")} 
                     className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
-                    Free Leak Confirmation Test
+                    {isSpanish ? "Test Confirmación Gratis" : "Free Leak Confirmation Test"}
                   </Link>
                 </DropdownMenuItem>
                 <div className="border-t border-border/50 my-1" />
                 <DropdownMenuItem asChild>
                   <Link 
-                    to="/technology" 
+                    to={getRoute("/technology", "/es/tecnologia")} 
                     className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md transition-colors"
                   >
-                    See Our Technology →
+                    {isSpanish ? "Ver Nuestra Tecnología →" : "See Our Technology →"}
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
             {/* Blog Link */}
-            <Link to="/blog">
+            <Link to={getRoute("/blog", "/es/blog")}>
               <Button 
                 variant="outline" 
                 size="sm"
                 className="gap-1.5 border-2 border-canary-navy/20 bg-canary-navy/5 text-canary-navy font-semibold hover:border-canary-navy/40 hover:bg-canary-navy/10 transition-all duration-300 shadow-sm hover:shadow-md"
               >
-                See our Blog
+                {t('navigation.seeOurBlog')}
               </Button>
             </Link>
 
@@ -276,7 +276,7 @@ const Header = () => {
                 size="sm"
                 className="gap-1.5 border-2 border-canary-navy/20 bg-canary-navy/5 text-canary-navy font-semibold hover:border-canary-navy/40 hover:bg-canary-navy/10 transition-all duration-300 shadow-sm hover:shadow-md"
               >
-                Spot The Leak Game
+                {t('navigation.spotTheLeakGame')}
                 <ExternalLink className="h-3 w-3 opacity-60" />
               </Button>
             </a>
@@ -292,7 +292,7 @@ const Header = () => {
                 className="relative overflow-hidden bg-gradient-to-r from-primary to-[hsl(25,93%,50%)] text-white font-bold shadow-lg shadow-primary/40 hover:shadow-xl hover:shadow-primary/50 hover:scale-105 transition-all duration-300 border-0 px-5"
               >
                 <span className="relative z-10 flex items-center gap-1.5">
-                  Pool Coatings
+                  {t('navigation.poolCoatings')}
                   <ExternalLink className="h-3 w-3" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[hsl(25,93%,45%)] to-primary opacity-0 hover:opacity-100 transition-opacity duration-300" />
@@ -314,41 +314,44 @@ const Header = () => {
         {mobileMenuOpen && (
           <nav className="lg:hidden pb-6 border-t border-border/50 pt-4 animate-fade-in">
             <div className="flex flex-col gap-3">
+              {/* Language Switcher Mobile */}
+              <LanguageSwitcher variant="mobile" />
+              
               {/* Primary Links */}
               <Link 
-                to="/" 
+                to={getRoute("/", "/es")} 
                 className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Home
+                {t('navigation.home')}
               </Link>
               <Link 
-                to="/technology" 
+                to={getRoute("/technology", "/es/tecnologia")} 
                 className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Technology
+                {t('navigation.technology')}
               </Link>
               <Link 
-                to="/case-studies" 
+                to={getRoute("/case-studies", "/es/casos-de-exito")} 
                 className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Case Studies
+                {t('navigation.caseStudies')}
               </Link>
               <Link 
-                to="/about" 
+                to={getRoute("/about", "/es/sobre-nosotros")} 
                 className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                About
+                {t('navigation.about')}
               </Link>
               <Link 
-                to="/contact" 
+                to={getRoute("/contact", "/es/contacto")} 
                 className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact
+                {t('navigation.contact')}
               </Link>
 
               <div className="h-px bg-border my-2" />
@@ -366,73 +369,73 @@ const Header = () => {
                           : "border-canary-navy/20 bg-canary-navy/5 text-canary-navy hover:border-canary-navy/40 hover:bg-canary-navy/10"
                       }`}
                     >
-                      Services
+                      {t('navigation.services')}
                       <ChevronDown className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-2 border-primary/20 shadow-xl rounded-lg p-1 z-50 w-[250px]">
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/services/drain-detection" 
+                        to={getRoute("/services/drain-detection", "/es/servicios/deteccion-desagues")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
-                        Drain & Pipe Surveys
+                        {isSpanish ? "Inspección de Desagües" : "Drain & Pipe Surveys"}
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/services/drain-unblocking" 
+                        to={getRoute("/services/drain-unblocking", "/es/servicios/desbloqueo-desagues")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
-                        Drain Unblocking
+                        {isSpanish ? "Desbloqueo de Desagües" : "Drain Unblocking"}
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/services/leak-repair" 
+                        to={getRoute("/services/leak-repair", "/es/servicios/reparacion-fugas")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
-                        Leak Repair
+                        {isSpanish ? "Reparación de Fugas" : "Leak Repair"}
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/services/pool-leak-repair" 
+                        to={getRoute("/services/pool-leak-repair", "/es/servicios/reparacion-fugas-piscinas")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
-                        Pool Leak Repair
+                        {isSpanish ? "Reparación Fugas Piscinas" : "Pool Leak Repair"}
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/services/pipe-inspection" 
+                        to={getRoute("/services/pipe-inspection", "/es/servicios/inspeccion-tuberias")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
-                        Pipe Inspection
+                        {isSpanish ? "Inspección de Tuberías" : "Pipe Inspection"}
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/services/underground-detection" 
+                        to={getRoute("/services/underground-detection", "/es/servicios/deteccion-subterranea")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
-                        Underground Pipe & Cable Location
+                        {isSpanish ? "Detección Subterránea" : "Underground Pipe & Cable Location"}
                       </Link>
                     </DropdownMenuItem>
                     <div className="border-t border-border/50 my-1" />
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/technology" 
+                        to={getRoute("/technology", "/es/tecnologia")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md"
                       >
-                        See Our Technology →
+                        {isSpanish ? "Ver Nuestra Tecnología →" : "See Our Technology →"}
                       </Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
@@ -445,7 +448,7 @@ const Header = () => {
                       size="default"
                       className="w-full justify-between gap-1.5 border-2 border-primary/30 bg-primary/5 text-canary-navy font-semibold hover:border-primary hover:bg-primary/10 hover:text-primary transition-all duration-300"
                     >
-                      Villa & Pool Leaks
+                      {t('navigation.villaPoolLeaks')}
                       <ChevronDown className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
@@ -458,54 +461,54 @@ const Header = () => {
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md flex items-center gap-2"
                       >
-                        Water Leak Monitoring
+                        {isSpanish ? "Monitoreo de Fugas" : "Water Leak Monitoring"}
                         <ExternalLink className="h-3 w-3 opacity-60" />
                       </a>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/services/water-leak-detection" 
+                        to={getRoute("/services/water-leak-detection", "/es/servicios/deteccion-fugas-agua")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
-                        Water Leak Detection
+                        {isSpanish ? "Detección de Fugas de Agua" : "Water Leak Detection"}
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/services/water-leak-detection" 
+                        to={getRoute("/services/water-leak-detection", "/es/servicios/deteccion-fugas-agua")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
-                        Villa Leak Surveys
+                        {isSpanish ? "Inspección de Villas" : "Villa Leak Surveys"}
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/services/pool-leak-detection" 
+                        to={getRoute("/services/pool-leak-detection", "/es/servicios/deteccion-fugas-piscinas")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
-                        Pool Leak Surveys
+                        {isSpanish ? "Inspección de Piscinas" : "Pool Leak Surveys"}
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/services/free-leak-confirmation" 
+                        to={getRoute("/services/free-leak-confirmation", "/es/servicios/confirmacion-fugas-gratis")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
                       >
-                        Free Leak Confirmation Test
+                        {isSpanish ? "Test Confirmación Gratis" : "Free Leak Confirmation Test"}
                       </Link>
                     </DropdownMenuItem>
                     <div className="border-t border-border/50 my-1" />
                     <DropdownMenuItem asChild>
                       <Link 
-                        to="/technology" 
+                        to={getRoute("/technology", "/es/tecnologia")} 
                         onClick={() => setMobileMenuOpen(false)} 
                         className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md"
                       >
-                        See Our Technology →
+                        {isSpanish ? "Ver Nuestra Tecnología →" : "See Our Technology →"}
                       </Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
@@ -523,7 +526,7 @@ const Header = () => {
                     size="default"
                     className="w-full justify-center gap-1.5 border-2 border-canary-navy/20 bg-canary-navy/5 text-canary-navy font-semibold hover:border-canary-navy/40 hover:bg-canary-navy/10 transition-all duration-300"
                   >
-                    Spot The Leak Game
+                    {t('navigation.spotTheLeakGame')}
                     <ExternalLink className="h-3 w-3 opacity-60" />
                   </Button>
                 </a>
@@ -540,7 +543,7 @@ const Header = () => {
                     className="w-full justify-center relative overflow-hidden bg-gradient-to-r from-primary to-[hsl(25,93%,50%)] text-white font-bold shadow-lg shadow-primary/40 hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 border-0"
                   >
                     <span className="flex items-center gap-1.5">
-                      Pool Coatings
+                      {t('navigation.poolCoatings')}
                       <ExternalLink className="h-3 w-3" />
                     </span>
                   </Button>

@@ -1,5 +1,6 @@
 import { Droplets, Search, Cable, Waves, CircleDot, Wrench } from "lucide-react";
 import ServiceCardLite from "./ServiceCardLite";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 // Import service hero images
 import drainDetectionImg from "@/assets/services/drain-detection.jpg";
@@ -29,58 +30,72 @@ import leakRepairBa3 from "@/assets/services/gallery/leak-repair-ba-3.jpg";
 import leakRepairBa4 from "@/assets/services/gallery/leak-repair-ba-4.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
 
-const services = [
-  {
-    title: "Drain Detection",
-    description: "Locate and identify drainage issues using advanced camera inspection and tracing technology.",
-    icon: Search,
-    href: "/services/drain-detection",
-    images: [drainDetectionImg, drainDetection2, drainDetection3],
-    imageAlt: "CCTV drain inspection camera Lanzarote",
-  },
-  {
-    title: "Pipe Inspection",
-    description: "CCTV pipe inspection to assess the condition of your pipes and identify blockages or damage.",
-    icon: CircleDot,
-    href: "/services/pipe-inspection",
-    images: [pipeInspectionImg, pipeInspection2, pipeInspection3],
-    imageAlt: "Pipe inspection camera equipment",
-  },
-  {
-    title: "Underground Detection",
-    description: "Need to find buried pipes before digging? Locate underground pipes, cables, and utilities with ground-penetrating radar.",
-    icon: Cable,
-    href: "/services/underground-detection",
-    images: [undergroundDetectionImg, undergroundDetection6],
-    imageAlt: "Ground penetrating radar pipe detection",
-  },
-  {
-    title: "Water Leak Detection",
-    description: "Damp walls? High water bills? Meter running when taps are off? Find hidden water leaks using acoustic and thermal imaging.",
-    icon: Droplets,
-    href: "/services/water-leak-detection",
-    images: [drainDetection4, drainDetection5, drainDetection6, drainDetection7, drainDetection8],
-    imageAlt: "Acoustic leak detection listening device",
-  },
-  {
-    title: "Swimming Pool Leak Detection",
-    description: "Is your swimming pool losing water every day? Constant refilling? We'll find the leak and stop the water loss.",
-    icon: Waves,
-    href: "/services/pool-leak-detection",
-    images: [poolLeakDetectionImg, poolLeak8, poolLeak7],
-    imageAlt: "Swimming pool leak detection pressure testing",
-  },
-  {
-    title: "Leak Repair",
-    description: "Found a leak? We'll fix it fast. Professional leak repair services once we've located the problem.",
-    icon: Wrench,
-    href: "/services/leak-repair",
-    images: [leakRepairBa1, leakRepairBa2, leakRepairBa3, leakRepairBa4],
-    imageAlt: "Professional leak repair service Lanzarote",
-  },
-];
-
 const ServicesGrid = () => {
+  const { isSpanish } = useLanguage();
+
+  const services = [
+    {
+      title: isSpanish ? "Detección de Desagües" : "Drain Detection",
+      description: isSpanish 
+        ? "Localice e identifique problemas de drenaje usando inspección con cámara avanzada y tecnología de rastreo."
+        : "Locate and identify drainage issues using advanced camera inspection and tracing technology.",
+      icon: Search,
+      href: isSpanish ? "/es/servicios/deteccion-desagues" : "/services/drain-detection",
+      images: [drainDetectionImg, drainDetection2, drainDetection3],
+      imageAlt: isSpanish ? "Inspección de desagües con cámara CCTV Lanzarote" : "CCTV drain inspection camera Lanzarote",
+    },
+    {
+      title: isSpanish ? "Inspección de Tuberías" : "Pipe Inspection",
+      description: isSpanish
+        ? "Inspección CCTV de tuberías para evaluar el estado de sus tuberías e identificar bloqueos o daños."
+        : "CCTV pipe inspection to assess the condition of your pipes and identify blockages or damage.",
+      icon: CircleDot,
+      href: isSpanish ? "/es/servicios/inspeccion-tuberias" : "/services/pipe-inspection",
+      images: [pipeInspectionImg, pipeInspection2, pipeInspection3],
+      imageAlt: isSpanish ? "Equipo de inspección de tuberías con cámara" : "Pipe inspection camera equipment",
+    },
+    {
+      title: isSpanish ? "Detección Subterránea" : "Underground Detection",
+      description: isSpanish
+        ? "¿Necesita localizar tuberías enterradas antes de excavar? Localice tuberías, cables y servicios subterráneos con radar de penetración terrestre."
+        : "Need to find buried pipes before digging? Locate underground pipes, cables, and utilities with ground-penetrating radar.",
+      icon: Cable,
+      href: isSpanish ? "/es/servicios/deteccion-subterranea" : "/services/underground-detection",
+      images: [undergroundDetectionImg, undergroundDetection6],
+      imageAlt: isSpanish ? "Detección de tuberías con radar de penetración terrestre" : "Ground penetrating radar pipe detection",
+    },
+    {
+      title: isSpanish ? "Detección de Fugas de Agua" : "Water Leak Detection",
+      description: isSpanish
+        ? "¿Paredes húmedas? ¿Facturas de agua altas? ¿Contador corriendo con los grifos cerrados? Encuentre fugas de agua ocultas usando tecnología acústica y de imagen térmica."
+        : "Damp walls? High water bills? Meter running when taps are off? Find hidden water leaks using acoustic and thermal imaging.",
+      icon: Droplets,
+      href: isSpanish ? "/es/servicios/deteccion-fugas-agua" : "/services/water-leak-detection",
+      images: [drainDetection4, drainDetection5, drainDetection6, drainDetection7, drainDetection8],
+      imageAlt: isSpanish ? "Dispositivo de escucha para detección acústica de fugas" : "Acoustic leak detection listening device",
+    },
+    {
+      title: isSpanish ? "Detección de Fugas de Piscinas" : "Swimming Pool Leak Detection",
+      description: isSpanish
+        ? "¿Su piscina pierde agua cada día? ¿Rellenado constante? Encontraremos la fuga y detendremos la pérdida de agua."
+        : "Is your swimming pool losing water every day? Constant refilling? We'll find the leak and stop the water loss.",
+      icon: Waves,
+      href: isSpanish ? "/es/servicios/deteccion-fugas-piscinas" : "/services/pool-leak-detection",
+      images: [poolLeakDetectionImg, poolLeak8, poolLeak7],
+      imageAlt: isSpanish ? "Prueba de presión para detección de fugas de piscinas" : "Swimming pool leak detection pressure testing",
+    },
+    {
+      title: isSpanish ? "Reparación de Fugas" : "Leak Repair",
+      description: isSpanish
+        ? "¿Ha encontrado una fuga? La reparamos rápidamente. Servicios profesionales de reparación de fugas una vez localizado el problema."
+        : "Found a leak? We'll fix it fast. Professional leak repair services once we've located the problem.",
+      icon: Wrench,
+      href: isSpanish ? "/es/servicios/reparacion-fugas" : "/services/leak-repair",
+      images: [leakRepairBa1, leakRepairBa2, leakRepairBa3, leakRepairBa4],
+      imageAlt: isSpanish ? "Servicio profesional de reparación de fugas Lanzarote" : "Professional leak repair service Lanzarote",
+    },
+  ];
+
   return (
     <section className="py-12 md:py-16 bg-canary-navy relative overflow-hidden">
       {/* Subtle dot pattern */}
@@ -93,13 +108,16 @@ const ServicesGrid = () => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-12 animate-fade-in">
-          <span className="text-primary font-semibold uppercase tracking-wide text-sm">What We Do</span>
+          <span className="text-primary font-semibold uppercase tracking-wide text-sm">
+            {isSpanish ? "Lo Que Hacemos" : "What We Do"}
+          </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-white">
-            Our Services
+            {isSpanish ? "Nuestros Servicios" : "Our Services"}
           </h2>
           <p className="text-white/70">
-            We offer a comprehensive range of leak detection and repair services 
-            across Lanzarote, using the latest technology and equipment.
+            {isSpanish 
+              ? "Ofrecemos una gama completa de servicios de detección y reparación de fugas en toda Lanzarote, utilizando la última tecnología y equipos."
+              : "We offer a comprehensive range of leak detection and repair services across Lanzarote, using the latest technology and equipment."}
           </p>
         </div>
 

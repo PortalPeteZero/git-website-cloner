@@ -1,42 +1,78 @@
 import { motion } from "framer-motion";
 import { Star, Quote, MapPin } from "lucide-react";
-
-const testimonials = [
-  {
-    id: 1,
-    name: "María García",
-    location: "Puerto del Carmen",
-    text: "The Leaky Finders found a leak in our pool that we'd been searching for months. Professional, fast, and saved us thousands in water bills. Highly recommended!",
-    rating: 5,
-    initials: "MG",
-  },
-  {
-    id: 2,
-    name: "John Mitchell",
-    location: "Playa Blanca",
-    text: "Excellent service from The Leaky Finders! They located a hidden pipe leak under our villa floor without any damage. The thermal imaging technology is impressive.",
-    rating: 5,
-    initials: "JM",
-  },
-  {
-    id: 3,
-    name: "Carlos Rodríguez",
-    location: "Arrecife",
-    text: "Very professional team at Canary Detect. They helped us map all underground utilities before our construction project. The Leaky Finders saved us from costly mistakes.",
-    rating: 5,
-    initials: "CR",
-  },
-  {
-    id: 4,
-    name: "Sarah Thompson",
-    location: "Costa Teguise",
-    text: "After months of unexplained damp, The Leaky Finders found the source in just a few hours. Great communication and fair pricing. Truly the leak detection experts!",
-    rating: 5,
-    initials: "ST",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const TestimonialsSection = () => {
+  const { isSpanish } = useLanguage();
+
+  const testimonials = isSpanish ? [
+    {
+      id: 1,
+      name: "María García",
+      location: "Puerto del Carmen",
+      text: "Los Cazafugas encontraron una fuga en nuestra piscina que habíamos estado buscando durante meses. Profesionales, rápidos y nos ahorraron miles en facturas de agua. ¡Muy recomendados!",
+      rating: 5,
+      initials: "MG",
+    },
+    {
+      id: 2,
+      name: "John Mitchell",
+      location: "Playa Blanca",
+      text: "¡Excelente servicio de Los Cazafugas! Localizaron una fuga de tubería oculta bajo el suelo de nuestra villa sin ningún daño. La tecnología de imagen térmica es impresionante.",
+      rating: 5,
+      initials: "JM",
+    },
+    {
+      id: 3,
+      name: "Carlos Rodríguez",
+      location: "Arrecife",
+      text: "Equipo muy profesional en Canary Detect. Nos ayudaron a mapear todas las utilidades subterráneas antes de nuestro proyecto de construcción. Los Cazafugas nos ahorraron errores costosos.",
+      rating: 5,
+      initials: "CR",
+    },
+    {
+      id: 4,
+      name: "Sarah Thompson",
+      location: "Costa Teguise",
+      text: "Después de meses de humedad inexplicable, Los Cazafugas encontraron la fuente en solo unas horas. Gran comunicación y precios justos. ¡Verdaderos expertos en detección de fugas!",
+      rating: 5,
+      initials: "ST",
+    },
+  ] : [
+    {
+      id: 1,
+      name: "María García",
+      location: "Puerto del Carmen",
+      text: "The Leaky Finders found a leak in our pool that we'd been searching for months. Professional, fast, and saved us thousands in water bills. Highly recommended!",
+      rating: 5,
+      initials: "MG",
+    },
+    {
+      id: 2,
+      name: "John Mitchell",
+      location: "Playa Blanca",
+      text: "Excellent service from The Leaky Finders! They located a hidden pipe leak under our villa floor without any damage. The thermal imaging technology is impressive.",
+      rating: 5,
+      initials: "JM",
+    },
+    {
+      id: 3,
+      name: "Carlos Rodríguez",
+      location: "Arrecife",
+      text: "Very professional team at Canary Detect. They helped us map all underground utilities before our construction project. The Leaky Finders saved us from costly mistakes.",
+      rating: 5,
+      initials: "CR",
+    },
+    {
+      id: 4,
+      name: "Sarah Thompson",
+      location: "Costa Teguise",
+      text: "After months of unexplained damp, The Leaky Finders found the source in just a few hours. Great communication and fair pricing. Truly the leak detection experts!",
+      rating: 5,
+      initials: "ST",
+    },
+  ];
+
   return (
     <section className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/50">
       <div className="container mx-auto px-4 md:px-6">
@@ -47,14 +83,17 @@ const TestimonialsSection = () => {
           className="text-center max-w-2xl mx-auto mb-12"
         >
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">
-            Testimonials
+            {isSpanish ? "Testimonios" : "Testimonials"}
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-canary-navy">
-            What Clients Say About The Leaky Finders
+            {isSpanish 
+              ? "Lo que Dicen los Clientes Sobre Los Cazafugas"
+              : "What Clients Say About The Leaky Finders"}
           </h2>
           <p className="text-muted-foreground">
-            Don't just take our word for it - hear from property owners across Lanzarote
-            who have trusted Canary Detect with their leak detection needs.
+            {isSpanish 
+              ? "No solo confíe en nuestra palabra - escuche a los propietarios de toda Lanzarote que han confiado en Canary Detect para sus necesidades de detección de fugas."
+              : "Don't just take our word for it - hear from property owners across Lanzarote who have trusted Canary Detect with their leak detection needs."}
           </p>
         </motion.div>
 

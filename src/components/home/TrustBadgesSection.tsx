@@ -1,30 +1,54 @@
 import { motion } from "framer-motion";
 import { Shield, Award, Clock, MapPin, FileCheck, Wrench } from "lucide-react";
-
-const stats = [
-  { value: 1200, suffix: "+", label: "Leaks Found", icon: Wrench },
-  { value: 40, suffix: "+", label: "Years Combined Experience", icon: Award },
-  { value: 99, suffix: "%", label: "Success Rate", icon: Shield },
-  { value: 24, suffix: "/7", label: "Emergency Service", icon: Clock },
-];
-
-const badges = [
-  { label: "No Find, No Fee", icon: Shield, description: "Risk-free guarantee" },
-  { label: "€80,000+ Equipment", icon: Award, description: "Latest technology" },
-  { label: "All Lanzarote", icon: MapPin, description: "Island-wide coverage" },
-  { label: "Insurance Reports", icon: FileCheck, description: "Included free" },
-];
-
-const formatNumber = (n: number) => new Intl.NumberFormat("en-GB").format(n);
-
-const StatValue = ({ value, suffix = "" }: { value: number; suffix?: string }) => (
-  <span className="tabular-nums">
-    {formatNumber(value)}
-    {suffix}
-  </span>
-);
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const TrustBadgesSection = () => {
+  const { isSpanish } = useLanguage();
+
+  const stats = [
+    { value: 1200, suffix: "+", label: isSpanish ? "Fugas Encontradas" : "Leaks Found", icon: Wrench },
+    { value: 40, suffix: "+", label: isSpanish ? "Años de Experiencia Combinada" : "Years Combined Experience", icon: Award },
+    { value: 99, suffix: "%", label: isSpanish ? "Tasa de Éxito" : "Success Rate", icon: Shield },
+    { value: 24, suffix: "/7", label: isSpanish ? "Servicio de Emergencia" : "Emergency Service", icon: Clock },
+  ];
+
+  const badges = [
+    { 
+      label: isSpanish ? "Sin Encontrar, Sin Pagar" : "No Find, No Fee", 
+      icon: Shield, 
+      description: isSpanish ? "Resultados garantizados" : "Risk-free guarantee" 
+    },
+    { 
+      label: isSpanish ? "€80.000+ en Equipos" : "€80,000+ Equipment", 
+      icon: Award, 
+      description: isSpanish ? "Última tecnología" : "Latest technology" 
+    },
+    { 
+      label: isSpanish ? "Toda Lanzarote" : "All Lanzarote", 
+      icon: MapPin, 
+      description: isSpanish ? "Cobertura en toda la isla" : "Island-wide coverage" 
+    },
+    { 
+      label: isSpanish ? "Informes para Seguros" : "Insurance Reports", 
+      icon: FileCheck, 
+      description: isSpanish ? "Incluidos gratis" : "Included free" 
+    },
+  ];
+
+  const formatNumber = (n: number) => {
+    // Use Spanish format with dots for Spanish, commas for English
+    return isSpanish 
+      ? new Intl.NumberFormat("es-ES").format(n)
+      : new Intl.NumberFormat("en-GB").format(n);
+  };
+
+  const StatValue = ({ value, suffix = "" }: { value: number; suffix?: string }) => (
+    <span className="tabular-nums">
+      {formatNumber(value)}
+      {suffix}
+    </span>
+  );
+
   return (
     <section className="relative py-10 md:py-12 bg-gradient-to-b from-muted/50 to-background overflow-hidden">
       {/* Subtle pattern background */}

@@ -3,17 +3,30 @@ import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import welcomeImg from "@/assets/welcome.jpg";
-
-const features = [
-  "Non-invasive detection methods",
-  "Latest acoustic technology",
-  "Thermal imaging equipment",
-  "Fast and accurate results",
-  "Experienced professionals",
-  "Competitive pricing",
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const WelcomeSection = () => {
+  const { isSpanish } = useLanguage();
+
+  const features = isSpanish ? [
+    "Métodos de detección no invasivos",
+    "Última tecnología acústica",
+    "Equipos de imagen térmica",
+    "Resultados rápidos y precisos",
+    "Profesionales experimentados",
+    "Precios competitivos",
+  ] : [
+    "Non-invasive detection methods",
+    "Latest acoustic technology",
+    "Thermal imaging equipment",
+    "Fast and accurate results",
+    "Experienced professionals",
+    "Competitive pricing",
+  ];
+
+  // Helper for language-aware routes
+  const getRoute = (enPath: string, esPath: string) => isSpanish ? esPath : enPath;
+
   return (
     <section className="py-12 md:py-16 bg-background relative overflow-hidden">
       {/* Subtle background pattern */}
@@ -31,19 +44,44 @@ const WelcomeSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-primary font-semibold uppercase tracking-wide text-sm">Welcome to Canary Detect</span>
+            <span className="text-primary font-semibold uppercase tracking-wide text-sm">
+              {isSpanish ? "Bienvenido a Canary Detect" : "Welcome to Canary Detect"}
+            </span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-2 text-canary-navy">
-              Professional Leak Detection Services in Lanzarote
+              {isSpanish 
+                ? "Servicios Profesionales de Detección de Fugas en Lanzarote"
+                : "Professional Leak Detection Services in Lanzarote"}
             </h2>
-            <p className="text-primary font-semibold italic mb-6">"The Leaky Finders"</p>
+            <p className="text-primary font-semibold italic mb-6">
+              {isSpanish ? '"Los Cazafugas"' : '"The Leaky Finders"'}
+            </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Canary Detect provides professional <Link to="/services" className="text-primary hover:underline">leak detection services</Link> across Lanzarote.
-              Our team of experts uses the <Link to="/technology" className="text-primary hover:underline">latest technology and equipment</Link> to locate leaks quickly 
-              and accurately, helping you save time, money, and prevent further damage to your property.
+              {isSpanish ? (
+                <>
+                  Canary Detect ofrece <Link to="/es/servicios" className="text-primary hover:underline">servicios profesionales de detección de fugas</Link> en toda Lanzarote.
+                  Nuestro equipo de expertos utiliza la <Link to="/es/tecnologia" className="text-primary hover:underline">última tecnología y equipos</Link> para localizar fugas de forma rápida 
+                  y precisa, ayudándole a ahorrar tiempo, dinero y prevenir más daños a su propiedad.
+                </>
+              ) : (
+                <>
+                  Canary Detect provides professional <Link to="/services" className="text-primary hover:underline">leak detection services</Link> across Lanzarote.
+                  Our team of experts uses the <Link to="/technology" className="text-primary hover:underline">latest technology and equipment</Link> to locate leaks quickly 
+                  and accurately, helping you save time, money, and prevent further damage to your property.
+                </>
+              )}
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Whether you have a <Link to="/services/pool-leak-detection" className="text-primary hover:underline">swimming pool leak</Link>, <Link to="/services/water-leak-detection" className="text-primary hover:underline">water pipe leak</Link>, or need <Link to="/services/underground-detection" className="text-primary hover:underline">underground pipe detection</Link>, 
-              we have the expertise and equipment to find the problem and provide effective solutions.
+              {isSpanish ? (
+                <>
+                  Ya sea que tenga una <Link to="/es/servicios/deteccion-fugas-piscinas" className="text-primary hover:underline">fuga de piscina</Link>, <Link to="/es/servicios/deteccion-fugas-agua" className="text-primary hover:underline">fuga de tubería de agua</Link>, o necesite <Link to="/es/servicios/deteccion-subterranea" className="text-primary hover:underline">detección de tuberías subterráneas</Link>, 
+                  tenemos la experiencia y el equipo para encontrar el problema y proporcionar soluciones efectivas.
+                </>
+              ) : (
+                <>
+                  Whether you have a <Link to="/services/pool-leak-detection" className="text-primary hover:underline">swimming pool leak</Link>, <Link to="/services/water-leak-detection" className="text-primary hover:underline">water pipe leak</Link>, or need <Link to="/services/underground-detection" className="text-primary hover:underline">underground pipe detection</Link>, 
+                  we have the expertise and equipment to find the problem and provide effective solutions.
+                </>
+              )}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-3 mb-8">
@@ -64,10 +102,16 @@ const WelcomeSection = () => {
 
             <div className="flex flex-wrap gap-4">
               <Button className="bg-primary hover:bg-primary/90 text-white font-semibold" asChild>
-                <Link to="/technology">See Our Technology & The Canary Detect Difference</Link>
+                <Link to={getRoute("/technology", "/es/tecnologia")}>
+                  {isSpanish 
+                    ? "Vea Nuestra Tecnología y la Diferencia Canary Detect"
+                    : "See Our Technology & The Canary Detect Difference"}
+                </Link>
               </Button>
               <Button variant="outline" className="border-canary-navy text-canary-navy hover:bg-canary-navy hover:text-white" asChild>
-                <Link to="/contact">Contact Us</Link>
+                <Link to={getRoute("/contact", "/es/contacto")}>
+                  {isSpanish ? "Contáctenos" : "Contact Us"}
+                </Link>
               </Button>
             </div>
           </motion.div>
@@ -81,7 +125,9 @@ const WelcomeSection = () => {
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl ring-1 ring-black/5">
               <img 
                 src={welcomeImg} 
-                alt="Professional leak detection technician using acoustic equipment Lanzarote" 
+                alt={isSpanish 
+                  ? "Técnico profesional de detección de fugas usando equipo acústico Lanzarote"
+                  : "Professional leak detection technician using acoustic equipment Lanzarote"} 
                 className="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
@@ -89,7 +135,7 @@ const WelcomeSection = () => {
             </div>
             <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-lg shadow-2xl">
               <div className="text-3xl font-heading font-bold">40+</div>
-              <div className="text-sm">Years Experience</div>
+              <div className="text-sm">{isSpanish ? "Años de Experiencia" : "Years Experience"}</div>
             </div>
           </motion.div>
         </div>
