@@ -293,7 +293,7 @@ const ServiceDetail = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mb-8 bg-gradient-to-r from-primary via-accent to-primary shadow-lg"
+              className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw] max-w-[100vw] mb-8 bg-gradient-to-r from-primary via-accent to-primary shadow-lg overflow-hidden"
             >
               <div className="container mx-auto px-4 py-6 md:py-8">
                 <div className="flex flex-col md:flex-row md:items-center gap-4">

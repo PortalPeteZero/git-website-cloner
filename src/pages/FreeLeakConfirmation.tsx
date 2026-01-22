@@ -127,7 +127,7 @@ const FreeLeakConfirmation = () => {
       <div id="enquiry-form">
         <FreeLeakConfirmationSection
           title={isSpanish ? "Test de Confirmación de Fugas Gratis" : "Free Leak Confirmation Tests"}
-          phone="+34 828 679 761"
+          phone="+34 711 051 071"
           email="info@canary-detect.com"
           includes={isSpanish ? [
             "Test de confirmación de fugas GRATIS",
