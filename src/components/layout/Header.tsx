@@ -56,8 +56,8 @@ const Header = () => {
       {/* Top Row - Logo + Primary Navigation */}
       <div className="bg-canary-navy">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
+          <div className="flex items-center h-16">
+            {/* Logo - Left side */}
             <Link to={getRoute("/", "/es")} className="flex items-center group shrink-0">
               <img
                 src={logoTransparent}
@@ -66,8 +66,8 @@ const Header = () => {
               />
             </Link>
 
-            {/* Desktop Top Nav */}
-            <nav className="hidden lg:flex items-center gap-1">
+            {/* Desktop Top Nav - Centered */}
+            <nav className="hidden lg:flex items-center justify-center gap-1 flex-1">
               <Link 
                 to={getRoute("/", "/es")} 
                 className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
@@ -119,26 +119,14 @@ const Header = () => {
                 Blog
               </Link>
 
-              <div className="h-4 w-px bg-white/20 mx-2" />
+              <div className="h-4 w-px bg-white/20 mx-3" />
 
               <LanguageSwitcher variant="dark" />
-
-              <div className="h-4 w-px bg-white/20 mx-2" />
-
-              <Link to={getRoute("/contact", "/es/contacto")}>
-                <Button 
-                  size="sm"
-                  className="bg-primary hover:bg-primary/90 text-white font-bold gap-1.5 shadow-md hover:shadow-lg transition-all duration-300"
-                >
-                  <Phone className="h-3.5 w-3.5" />
-                  {t('navigation.contact')}
-                </Button>
-              </Link>
             </nav>
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2.5 text-white hover:text-primary hover:bg-white/10 rounded-lg transition-all duration-300"
+              className="lg:hidden p-2.5 text-white hover:text-primary hover:bg-white/10 rounded-lg transition-all duration-300 ml-auto"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -155,7 +143,20 @@ const Header = () => {
           : "bg-background"
       }`}>
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-3 py-1.5">
+          <div className="flex items-center py-1.5">
+            {/* Contact Button - Left aligned under logo */}
+            <Link to={getRoute("/contact", "/es/contacto")} className="shrink-0">
+              <Button 
+                size="sm"
+                className="bg-canary-navy hover:bg-canary-navy/90 text-white font-bold gap-1.5 shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                <Phone className="h-3.5 w-3.5" />
+                {t('navigation.contact')}
+              </Button>
+            </Link>
+
+            {/* Center buttons */}
+            <div className="flex items-center justify-center gap-3 flex-1">
             {/* Services Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -314,6 +315,7 @@ const Header = () => {
                 {isSpanish ? "Test Gratis" : "Free Test"}
               </button>
             </Link>
+            </div>
           </div>
         </div>
       </div>
