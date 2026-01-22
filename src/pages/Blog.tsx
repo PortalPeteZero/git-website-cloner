@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 import { blogArticles, BlogArticle as StaticBlogArticle } from "@/data/blogArticles";
 import { supabase } from "@/integrations/supabase/client";
+import { useTranslation } from "@/i18n/LanguageContext";
+import { getContactPath, getBlogPath } from "@/i18n/routes";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
 
 // Hero carousel images
@@ -16,12 +18,12 @@ import heroPoolSpa from "@/assets/hero/blog-pool-spa.jpg";
 import heroTerrace from "@/assets/hero/blog-terrace.jpg";
 import heroVillageSquare from "@/assets/hero/blog-village-square.jpg";
 
-const heroSlides = [
-  { image: heroHqScene, alt: "Canary Detect HQ - Leak detection specialists" },
-  { image: heroElAtico, alt: "Commercial leak detection in Lanzarote" },
-  { image: heroPoolSpa, alt: "Pool and spa leak detection services" },
-  { image: heroTerrace, alt: "Villa pool leak detection in Lanzarote" },
-  { image: heroVillageSquare, alt: "Municipal water leak detection" },
+const getHeroSlides = (isSpanish: boolean) => [
+  { image: heroHqScene, alt: isSpanish ? "Canary Detect HQ - Especialistas en detección de fugas" : "Canary Detect HQ - Leak detection specialists" },
+  { image: heroElAtico, alt: isSpanish ? "Detección de fugas comercial en Lanzarote" : "Commercial leak detection in Lanzarote" },
+  { image: heroPoolSpa, alt: isSpanish ? "Servicios de detección de fugas en piscinas y spa" : "Pool and spa leak detection services" },
+  { image: heroTerrace, alt: isSpanish ? "Detección de fugas en piscinas de villas en Lanzarote" : "Villa pool leak detection in Lanzarote" },
+  { image: heroVillageSquare, alt: isSpanish ? "Detección de fugas de agua municipal" : "Municipal water leak detection" },
 ];
 
 interface DatabaseBlogPost {
@@ -50,9 +52,12 @@ interface CombinedPost {
 }
 
 const Blog = () => {
+  const { isSpanish } = useTranslation();
   const [dbPosts, setDbPosts] = useState<CombinedPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const heroSlides = getHeroSlides(isSpanish);
 
   // Hero carousel auto-rotation
   useEffect(() => {
@@ -60,7 +65,7 @@ const Blog = () => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [heroSlides.length]);
 
   useEffect(() => {
     const fetchDbPosts = async () => {
@@ -114,16 +119,50 @@ const Blog = () => {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    return date.toLocaleDateString(isSpanish ? 'es-ES' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
   };
+
+  // UI text translations
+  const uiText = {
+    blogTitle: isSpanish ? "Blog de Los Cazafugas" : "The Leaky Finders Blog",
+    heroTitle: isSpanish ? "Consejos y " : "Expert Tips & ",
+    heroTitleHighlight: isSpanish ? "Guías" : "Guides",
+    heroDescription: isSpanish 
+      ? "Consejos prácticos de Los Cazafugas - expertos en detección de fugas de Lanzarote. Aprenda a identificar fugas, proteger su propiedad y ahorrar en reparaciones."
+      : "Practical advice from The Leaky Finders - Lanzarote's leak detection experts. Learn how to identify leaks, protect your property, and save money on repairs.",
+    featuredArticle: isSpanish ? "Artículo Destacado" : "Featured Article",
+    readArticle: isSpanish ? "Leer Artículo" : "Read Article",
+    allArticles: isSpanish ? "Todos los Artículos" : "All Articles",
+    readMore: isSpanish ? "Leer Más" : "Read More",
+    minRead: isSpanish ? "min lectura" : "min read",
+    min: isSpanish ? "min" : "min",
+    ctaTitle: isSpanish ? "¿Necesita a Los Cazafugas?" : "Need The Leaky Finders?",
+    ctaDescription: isSpanish 
+      ? "Nuestro equipo de expertos está listo para ayudarle a encontrar y reparar fugas en todo Lanzarote. Contacte a Los Cazafugas para una consulta gratuita."
+      : "Our expert team is ready to help you find and fix leaks across Lanzarote. Contact The Leaky Finders for a free consultation.",
+    ctaButton: isSpanish ? "Solicitar Presupuesto Gratis" : "Get a Free Quote",
+    seo: {
+      title: isSpanish 
+        ? "Blog de Detección de Fugas | Consejos y Guías | Los Cazafugas Lanzarote"
+        : "Leak Detection Blog | Tips & Guides | The Leaky Finders Lanzarote",
+      description: isSpanish 
+        ? "Consejos expertos de Los Cazafugas. Aprenda a detectar fugas en piscinas, encontrar fugas de agua subterráneas y proteger su propiedad en Lanzarote."
+        : "Expert leak detection tips and guides from The Leaky Finders. Learn how to detect pool leaks, find underground water leaks, and protect your Lanzarote property.",
+      keywords: isSpanish 
+        ? "blog detección fugas, consejos Los Cazafugas, guía fugas piscina, detección fugas agua Lanzarote, fugas subterráneas, consejos fontanería Lanzarote"
+        : "leak detection blog, The Leaky Finders tips, pool leak guide, water leak detection Lanzarote, underground leak detection, Lanzarote plumbing advice",
+    },
+  };
+
+  const blogBasePath = getBlogPath(isSpanish);
 
   return (
     <Layout>
       <SEOHead
-        title="Leak Detection Blog | Tips & Guides | The Leaky Finders Lanzarote"
-        description="Expert leak detection tips and guides from The Leaky Finders. Learn how to detect pool leaks, find underground water leaks, and protect your Lanzarote property."
-        keywords="leak detection blog, The Leaky Finders tips, pool leak guide, water leak detection Lanzarote, underground leak detection, Lanzarote plumbing advice"
-        canonical="https://canary-detect.com/blog"
+        title={uiText.seo.title}
+        description={uiText.seo.description}
+        keywords={uiText.seo.keywords}
+        canonical={isSpanish ? "https://canary-detect.com/es/blog" : "https://canary-detect.com/blog"}
       />
 
       {/* Hero Section with Carousel */}
@@ -156,13 +195,12 @@ const Blog = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">The Leaky Finders Blog</span>
+            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">{uiText.blogTitle}</span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight">
-              Expert Tips & <span className="text-primary">Guides</span>
+              {uiText.heroTitle}<span className="text-primary">{uiText.heroTitleHighlight}</span>
             </h1>
             <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-2xl">
-              Practical advice from The Leaky Finders - Lanzarote's leak detection experts. 
-              Learn how to identify leaks, protect your property, and save money on repairs.
+              {uiText.heroDescription}
             </p>
           </motion.div>
         </div>
@@ -196,7 +234,7 @@ const Blog = () => {
               viewport={{ once: true }}
               className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto"
             >
-              <Link to={`/blog/${featuredPost.slug}`} className="group">
+              <Link to={`${blogBasePath}/${featuredPost.slug}`} className="group">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <img
                     src={featuredPost.image}
@@ -209,9 +247,9 @@ const Blog = () => {
               </Link>
               <div>
                 <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
-                  Featured Article
+                  {uiText.featuredArticle}
                 </span>
-                <Link to={`/blog/${featuredPost.slug}`}>
+                <Link to={`${blogBasePath}/${featuredPost.slug}`}>
                   <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4 hover:text-primary transition-colors">
                     {featuredPost.title}
                   </h2>
@@ -226,12 +264,12 @@ const Blog = () => {
                   </span>
                   <span className="flex items-center gap-1">
                     <Clock className="h-4 w-4" />
-                    {featuredPost.readTime} min read
+                    {featuredPost.readTime} {uiText.minRead}
                   </span>
                 </div>
                 <Button asChild>
-                  <Link to={`/blog/${featuredPost.slug}`}>
-                    Read Article
+                  <Link to={`${blogBasePath}/${featuredPost.slug}`}>
+                    {uiText.readArticle}
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Link>
                 </Button>
@@ -245,7 +283,7 @@ const Blog = () => {
       <section className="py-12 md:py-16 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-10">
-            All Articles
+            {uiText.allArticles}
           </h2>
           
           {loading ? (
@@ -263,7 +301,7 @@ const Blog = () => {
                   transition={{ delay: index * 0.1 }}
                   className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
                 >
-                  <Link to={`/blog/${post.slug}`}>
+                  <Link to={`${blogBasePath}/${post.slug}`}>
                     <div className="aspect-video overflow-hidden">
                       <img
                         src={post.image}
@@ -282,13 +320,13 @@ const Blog = () => {
                       </span>
                       <span className="flex items-center gap-1">
                         <Clock className="h-3 w-3" />
-                        {post.readTime} min
+                        {post.readTime} {uiText.min}
                       </span>
                     </div>
                     <span className="text-xs text-primary font-medium">
                       {post.category}
                     </span>
-                    <Link to={`/blog/${post.slug}`}>
+                    <Link to={`${blogBasePath}/${post.slug}`}>
                       <h3 className="font-heading font-bold text-lg mt-1 mb-2 group-hover:text-primary transition-colors line-clamp-2">
                         {post.title}
                       </h3>
@@ -297,10 +335,10 @@ const Blog = () => {
                       {post.excerpt}
                     </p>
                     <Link 
-                      to={`/blog/${post.slug}`}
+                      to={`${blogBasePath}/${post.slug}`}
                       className="inline-flex items-center text-primary font-medium text-sm hover:underline"
                     >
-                      Read More
+                      {uiText.readMore}
                       <ArrowRight className="h-4 w-4 ml-1" />
                     </Link>
                   </div>
@@ -321,15 +359,14 @@ const Blog = () => {
             className="max-w-xl mx-auto"
           >
             <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">
-              Need The Leaky Finders?
+              {uiText.ctaTitle}
             </h2>
             <p className="text-muted-foreground mb-6">
-              Our expert team is ready to help you find and fix leaks across Lanzarote. 
-              Contact The Leaky Finders for a free consultation.
+              {uiText.ctaDescription}
             </p>
             <Button asChild size="lg">
-              <Link to="/contact">
-                Get a Free Quote
+              <Link to={getContactPath(isSpanish)}>
+                {uiText.ctaButton}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

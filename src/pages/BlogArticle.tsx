@@ -9,6 +9,8 @@ import { getArticleBySlug, getRelatedArticles, BlogArticle as StaticBlogArticle 
 import { supabase } from "@/integrations/supabase/client";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import { useTranslation } from "@/i18n/LanguageContext";
+import { getContactPath, getBlogPath } from "@/i18n/routes";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
 
 interface DatabaseBlogPost {
@@ -29,6 +31,7 @@ interface DatabaseBlogPost {
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { isSpanish } = useTranslation();
   const [dbPost, setDbPost] = useState<DatabaseBlogPost | null>(null);
   const [loading, setLoading] = useState(false);
   const [notFound, setNotFound] = useState(false);
@@ -36,6 +39,21 @@ const BlogArticle = () => {
   // Check static articles first - this is synchronous and immediate
   const staticArticle = slug ? getArticleBySlug(slug) : undefined;
   const relatedArticles = slug ? getRelatedArticles(slug, 3) : [];
+
+  const blogBasePath = getBlogPath(isSpanish);
+
+  // UI text translations
+  const uiText = {
+    backToBlog: isSpanish ? "Volver al Blog" : "Back to Blog",
+    minRead: isSpanish ? "min lectura" : "min read",
+    ctaTitle: isSpanish ? "¿Necesita a Los Cazafugas?" : "Need The Leaky Finders?",
+    ctaDescription: isSpanish 
+      ? "No deje que las fugas ocultas dañen su propiedad. Contacte con Canary Detect - Los Cazafugas - para detección experta de fugas en todo Lanzarote con nuestra garantía Sin Encontrar, Sin Pagar."
+      : "Don't let hidden leaks damage your property. Contact Canary Detect - The Leaky Finders - for expert leak detection across Lanzarote with our No Find, No Fee guarantee.",
+    ctaButton: isSpanish ? "Solicitar Presupuesto Gratis" : "Get a Free Quote",
+    relatedArticles: isSpanish ? "Artículos Relacionados" : "Related Articles",
+    readMore: isSpanish ? "Leer Más" : "Read More",
+  };
 
   useEffect(() => {
     // If we have a static article, no need to fetch from DB
@@ -82,13 +100,13 @@ const BlogArticle = () => {
   }
 
   if (notFound && !staticArticle) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to={blogBasePath} replace />;
   }
 
   // Use static article or database post
   const article = staticArticle || dbPost;
   if (!article) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to={blogBasePath} replace />;
   }
 
   const isStatic = !!staticArticle;
@@ -105,8 +123,12 @@ const BlogArticle = () => {
 
   const formatDate = (dateString: string) => {
     const dateObj = new Date(dateString);
-    return dateObj.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    return dateObj.toLocaleDateString(isSpanish ? 'es-ES' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
   };
+
+  const canonicalUrl = isSpanish 
+    ? `https://canary-detect.com/es/blog/${slug}`
+    : `https://canary-detect.com/blog/${slug}`;
 
   return (
     <Layout>
@@ -114,7 +136,7 @@ const BlogArticle = () => {
         title={metaTitle}
         description={metaDescription}
         keywords={keywords}
-        canonical={`https://canary-detect.com/blog/${slug}`}
+        canonical={canonicalUrl}
         type="article"
         image={image}
       />
@@ -143,7 +165,7 @@ const BlogArticle = () => {
           "dateModified": date,
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": `https://canary-detect.com/blog/${slug}`
+            "@id": canonicalUrl
           }
         })}
       </script>
@@ -169,11 +191,11 @@ const BlogArticle = () => {
             className="max-w-4xl"
           >
             <Link 
-              to="/blog" 
+              to={blogBasePath} 
               className="inline-flex items-center text-white/80 hover:text-primary transition-colors mb-6"
             >
               <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Blog
+              {uiText.backToBlog}
             </Link>
             
             <span className="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
@@ -195,7 +217,7 @@ const BlogArticle = () => {
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
-                {readTime} min read
+                {readTime} {uiText.minRead}
               </span>
             </div>
           </motion.div>
@@ -218,7 +240,9 @@ const BlogArticle = () => {
                 components={{
                   a: ({ href, children }) => {
                     if (href?.startsWith('/')) {
-                      return <Link to={href} className="text-primary hover:underline font-medium">{children}</Link>;
+                      // Handle internal links with language prefix
+                      const localizedHref = isSpanish && !href.startsWith('/es') ? `/es${href}` : href;
+                      return <Link to={localizedHref} className="text-primary hover:underline font-medium">{children}</Link>;
                     }
                     return <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">{children}</a>;
                   },
@@ -280,14 +304,14 @@ const BlogArticle = () => {
               className="mt-12 p-8 bg-canary-navy rounded-xl text-white text-center"
             >
               <h3 className="font-heading text-2xl font-bold mb-4">
-                Need The Leaky Finders?
+                {uiText.ctaTitle}
               </h3>
               <p className="text-white/80 mb-6 max-w-lg mx-auto">
-                Don't let hidden leaks damage your property. Contact Canary Detect - The Leaky Finders - for expert leak detection across Lanzarote with our No Find, No Fee guarantee.
+                {uiText.ctaDescription}
               </p>
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link to="/contact">
-                  Get a Free Quote
+                <Link to={getContactPath(isSpanish)}>
+                  {uiText.ctaButton}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -301,7 +325,7 @@ const BlogArticle = () => {
         <section className="py-12 md:py-16 bg-muted">
           <div className="container mx-auto px-4">
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-8">
-              Related Articles
+              {uiText.relatedArticles}
             </h2>
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {relatedArticles.map((post, index) => (
@@ -313,7 +337,7 @@ const BlogArticle = () => {
                   transition={{ delay: index * 0.1 }}
                   className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
                 >
-                  <Link to={`/blog/${post.slug}`}>
+                  <Link to={`${blogBasePath}/${post.slug}`}>
                     <div className="aspect-video overflow-hidden">
                       <img
                         src={post.image}
@@ -329,7 +353,7 @@ const BlogArticle = () => {
                         {post.title}
                       </h3>
                       <span className="inline-flex items-center text-primary text-sm font-medium">
-                        Read More
+                        {uiText.readMore}
                         <ArrowRight className="h-3 w-3 ml-1" />
                       </span>
                     </div>
