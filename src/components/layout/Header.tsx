@@ -62,7 +62,7 @@ const Header = () => {
               <img
                 src={logoTransparent}
                 alt={isSpanish ? "Canary Detect - Los Cazafugas" : "Canary Detect - The Leaky Finders"}
-                className="h-14 md:h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-20 md:h-24 w-auto transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
 
