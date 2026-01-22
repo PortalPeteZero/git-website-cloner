@@ -15,7 +15,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import logoLight from "@/assets/logo-light-bg.png";
-import logoDark from "@/assets/logo-dark-bg.png";
+import logoTransparent from "@/assets/logo-transparent.png";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/i18n/LanguageContext";
 
@@ -60,7 +60,7 @@ const Header = () => {
             {/* Logo */}
             <Link to={getRoute("/", "/es")} className="flex items-center group shrink-0">
               <img
-                src={logoDark}
+                src={logoTransparent}
                 alt={isSpanish ? "Canary Detect - Los Cazafugas" : "Canary Detect - The Leaky Finders"}
                 className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
               />
