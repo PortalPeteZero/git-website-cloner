@@ -178,7 +178,7 @@ const HeroSlider = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] via-transparent to-transparent" />
 
       {/* Content */}
-      <div className="relative h-full flex items-center">
+      <div className="relative h-full flex items-start pt-16 md:pt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
             <AnimatePresence mode="wait">
