@@ -37,8 +37,8 @@ const BlogArticle = () => {
   const [notFound, setNotFound] = useState(false);
 
   // Check static articles first - this is synchronous and immediate
-  const staticArticle = slug ? getArticleBySlug(slug) : undefined;
-  const relatedArticles = slug ? getRelatedArticles(slug, 3) : [];
+  const staticArticle = slug ? getArticleBySlug(slug, isSpanish) : undefined;
+  const relatedArticles = slug ? getRelatedArticles(slug, isSpanish, 3) : [];
 
   const blogBasePath = getBlogPath(isSpanish);
 
