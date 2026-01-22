@@ -378,7 +378,7 @@ const Technology = () => {
                   <div className="aspect-[4/3] rounded-xl overflow-hidden mb-3 border-2 border-border group-hover:border-primary/30 transition-colors">
                     <img 
                       src={img.src} 
-                      alt={`Before and after leak repair ${index + 1} - ${img.caption}`}
+                      alt={isSpanish ? `Antes y después reparación fuga ${index + 1} - ${img.caption}` : `Before and after leak repair ${index + 1} - ${img.caption}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />

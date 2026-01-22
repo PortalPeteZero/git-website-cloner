@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface ServiceCardLiteProps {
   title: string;
@@ -11,6 +12,8 @@ interface ServiceCardLiteProps {
 }
 
 const ServiceCardLite = ({ title, description, icon: Icon, href, image, imageAlt }: ServiceCardLiteProps) => {
+  const { isSpanish } = useLanguage();
+  
   return (
     <div className="transition-transform duration-300 ease-out hover:-translate-y-1">
       <Link
@@ -40,7 +43,7 @@ const ServiceCardLite = ({ title, description, icon: Icon, href, image, imageAlt
           </h3>
           <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
           <span className="inline-flex items-center gap-1 mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all duration-300">
-            Learn More
+            {isSpanish ? 'Más Información' : 'Learn More'}
             <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
           </span>
         </div>

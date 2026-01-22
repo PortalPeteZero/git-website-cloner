@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface ServiceCardProps {
   title: string;
@@ -13,6 +14,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ title, description, icon: Icon, href, images = [], index = 0 }: ServiceCardProps) => {
+  const { isSpanish } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -76,7 +78,7 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
             {description}
           </p>
           <span className="inline-flex items-center gap-1 mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all duration-300">
-            Learn More 
+            {isSpanish ? 'Más Información' : 'Learn More'}
             <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
           </span>
         </div>
