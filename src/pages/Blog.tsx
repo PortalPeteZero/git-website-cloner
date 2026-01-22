@@ -1,10 +1,10 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Calendar, User, ArrowRight, Clock } from "lucide-react";
+import { Calendar, ArrowRight, Clock } from "lucide-react";
 import { getBlogArticles, BlogArticle as StaticBlogArticle } from "@/data/blogArticles";
 import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "@/i18n/LanguageContext";
@@ -51,6 +51,8 @@ interface CombinedPost {
   isDatabase: boolean;
 }
 
+const normalizeInlineText = (value: string) => value.replace(/\s+/g, " ").trim();
+
 const Blog = () => {
   const { isSpanish } = useTranslation();
   const [dbPosts, setDbPosts] = useState<CombinedPost[]>([]);
@@ -79,8 +81,8 @@ const Blog = () => {
         setDbPosts(data.map(post => ({
           id: post.id,
           slug: post.slug,
-          title: post.title,
-          excerpt: post.excerpt || '',
+          title: normalizeInlineText(post.title),
+          excerpt: normalizeInlineText(post.excerpt || ''),
           category: post.category || 'Blog',
           author: post.author,
           image: post.featured_image || waterLeakImg,
@@ -102,8 +104,8 @@ const Blog = () => {
   const staticPosts: CombinedPost[] = blogArticles.map(article => ({
     id: String(article.id),
     slug: article.slug,
-    title: article.title,
-    excerpt: article.excerpt,
+    title: normalizeInlineText(article.title),
+    excerpt: normalizeInlineText(article.excerpt),
     category: article.category,
     author: article.author,
     image: article.image,
@@ -299,9 +301,8 @@ const Blog = () => {
                 <motion.article
                   key={post.id}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.06 }}
                   className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
                 >
                   <Link to={`${blogBasePath}/${post.slug}`}>
