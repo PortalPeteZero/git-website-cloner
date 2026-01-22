@@ -11,6 +11,7 @@ import thermalUndergroundImg from "@/assets/blog/thermal-underground-leak.jpg";
 import waterMeterImg from "@/assets/blog/water-meter-leak.jpg";
 import risingDampImg from "@/assets/blog/rising-damp-wall.jpg";
 import poolDiverImg from "@/assets/blog/pool-diver-inspection.jpg";
+import lanzaroteWaterHeroImg from "@/assets/blog/lanzarote-water-hero.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -32,6 +33,144 @@ export interface BlogArticle {
 export const blogArticlesEn: BlogArticle[] = [
   {
     id: 1,
+    slug: "master-your-lanzarote-water-system",
+    title: "Master Your Lanzarote Water System: The Essential Guide for Residents",
+    excerpt: "From aljibes to pumps, understand how Lanzarote's unique water infrastructure works—and how to spot hidden leaks before they cost you. Plus: can you drink the water?",
+    date: "2025-01-22",
+    author: "Canary Detect",
+    category: "Essential Guides",
+    image: lanzaroteWaterHeroImg,
+    metaTitle: "Lanzarote Water System Guide | Aljibe, Pumps & Leak Detection",
+    metaDescription: "The essential guide to Lanzarote's unique water system. Learn how aljibes and pumps work, why leak detection is challenging, and whether you can drink the tap water.",
+    keywords: "Lanzarote water system, aljibe Lanzarote, water pump Lanzarote, can you drink tap water Lanzarote, water meter spinning, leak detection Lanzarote, grupo de presion",
+    readTime: 12,
+    content: `
+## Introduction
+
+For residents of Lanzarote, managing water is a fundamental aspect of daily life, deeply woven into the island's history and infrastructure. Unlike the straightforward mains-fed systems common in many parts of the world, Lanzarote's homes often rely on a unique combination of an underground water tank, known as an **aljibe**, and a pump system. This setup is a direct response to the island's arid climate and historical water scarcity.
+
+However, this traditional system presents modern challenges, particularly when it comes to detecting water leaks. At Canary Detect, we find that many puzzling leak scenarios are rooted in a misunderstanding of how these systems operate. This article explains the history behind Lanzarote's water network, how it functions, and why it makes leak detection a unique challenge.
+
+![Traditional Lanzarote Architecture](/assets/blog/lanzarote-traditional-house.jpg)
+
+*The iconic white, flat-roofed architecture of Lanzarote, set against the volcanic landscape. Modern domestic aljibes are typically filled by tanker rather than rainwater.*
+
+## A History Forged by Scarcity
+
+![Canarian Cistern](/assets/blog/lanzarote-aljibe-cistern.jpg)
+
+*A traditional Canarian cistern (aljibe) in Lanzarote, showing the underground tank access point surrounded by volcanic soil.*
+
+Lanzarote is the driest of the Canary Islands, receiving minimal rainfall and possessing no natural rivers or significant surface water. The term **aljibe** itself comes from the Arabic *al-gúbb*, meaning cistern or well, a technology introduced to the Iberian Peninsula centuries ago to store precious water in arid regions.
+
+Historically, the islanders were masters of water conservation, developing methods to capture every possible drop. This included large-scale public reservoirs (*maretas*) and channels to collect rainwater runoff. While the classic, flat-roofed design of Canarian houses was perfect for channeling rainwater into a household aljibe, the primary method for filling these domestic tanks for many years has been through water tanker delivery, known locally as a *pipa*.
+
+Even with the advent of modern desalination plants in the 1960s, which now supply the entire island, the legacy of water scarcity persists. The mains water supply can be inconsistent, with low pressure and, in some rural areas, scheduled cuts that can leave homes without water for days at a time. As a result, the aljibe and pump system remains an essential component of most households, providing a crucial buffer and ensuring consistent water pressure.
+
+![Water Tanker](/assets/blog/lanzarote-water-tanker.jpg)
+
+*Water tankers (pipas) are still a common sight in the Canary Islands, delivering water to fill domestic aljibes, especially during supply interruptions.*
+
+## How the Aljibe and Pump System Works
+
+A typical domestic water system in Lanzarote consists of three main parts:
+
+1. **The Aljibe:** An underground storage tank, typically made of concrete, that holds the home's primary water reserve. It is filled from the mains supply via a pipe controlled by a float valve.
+2. **The Float Valve (Ballcock):** This valve automatically opens to top up the aljibe from the mains when the water level drops and closes when it is full. It functions just like the mechanism inside a toilet cistern.
+3. **The Pressure Pump (Grupo de Presión):** Because the mains pressure is often too low for household needs, a pump is used to draw water from the aljibe and deliver it to the taps, showers, and appliances at a consistent, usable pressure.
+
+Many homes also feature a **mains bypass**. This is a branch off the mains supply (after the ballcock feed to the aljibe) that connects directly to the house pipework after the pump, controlled by a valve. In practice, this bypass is often left open, with the pump running as normal. The mains provides a base level of pressure, and the pump "tops up" the pressure to ensure adequate flow throughout the house. If the pump fails, the house still receives water directly from the mains (albeit at lower pressure). This dual-feed arrangement is practical but adds complexity when diagnosing leaks.
+
+![House Context Diagram](/assets/blog/lanzarote-water-system-house.png)
+
+*A typical Lanzarote domestic water system in context: mains water enters via the meter, feeds the underground aljibe through a float valve, and the pressure pump (above ground) draws water up to supply the house. The bypass valve allows mains water to supplement the pump supply.*
+
+![Schematic Diagram](/assets/blog/lanzarote-water-system-diagram.png)
+
+*Schematic view: mains water feeds the aljibe via a float valve, while a bypass branch (often left open) provides direct mains pressure. The pump draws from the aljibe to boost pressure, and both supplies combine before reaching the house.*
+
+## The Unique Challenge of Leak Detection
+
+This system creates specific challenges when trying to identify a water leak, often leading to confusing signals from the water meter.
+
+### Mystery 1: The Intermittent Water Meter
+
+A common assumption is that a leak will cause the water meter to spin continuously. With an aljibe system, this is rarely the case. If you have a leak inside your house (e.g., a dripping tap or a faulty toilet), the water is being lost from the **pump-fed side** of the system. The water is coming from the aljibe, not directly from the mains.
+
+Your water meter will only spin for brief periods when the float valve in the aljibe opens to replenish the water that has been lost. This means a significant leak can go unnoticed, as the meter appears to be static most of the time, only to spin intermittently as the tank tops itself up.
+
+### Mystery 2: The Constantly Spinning Meter (That Isn't a Leak)
+
+Conversely, a constantly spinning meter doesn't always mean you have a leak in your property's pipework. The most common culprit in this scenario is a **faulty float valve** in the aljibe itself.
+
+If the valve fails to close properly when the tank is full, water from the mains will continuously trickle in and overflow from the aljibe. However, you are unlikely to see water pooling on the surface. Most aljibes are not fully watertight all the way up. The upper section, typically above the 80-90% full level or above where the ballcock sits, is often not sealed. When water rises past this point, it simply seeps into the surrounding ground and disappears under your patio tiles, completely unnoticed. To an observer, the meter spins non-stop, creating the perfect illusion of a major leak. In reality, it is a simple mechanical failure in the tank's filling mechanism.
+
+![Water Meter Leak Detection](/assets/blog/lanzarote-water-meter-leak.png)
+
+*A spinning leak indicator on a water meter can be caused by a true leak or a faulty float valve in the aljibe.*
+
+### The Telltale Pump
+
+One of the clearest signs of a leak in an aljibe system is the behaviour of the pump itself. If no one is using water, the pump should stay silent. A leak on the pump-fed side will slowly drain the pressure in the system, causing the pump to kick in periodically to restore it.
+
+### The Non-Return Valve Factor
+
+A critical but often overlooked component in these systems is the **non-return valve** (also called a check valve). These are typically installed at the water meter and on the mains bypass pipework. Their job is to prevent water from flowing backward into the mains supply.
+
+When a non-return valve fails, the higher pressure from the pump can push water back toward the mains. This causes the pump to run frequently as it tries to maintain pressure against a system that is effectively "leaking" water back the way it came. The symptoms mimic a genuine leak: the pump cycles on and off, and the water meter spins.
+
+You might assume that water flowing backward would cause the meter to spin in reverse, reducing your bill. In practice, the opposite is usually true. Water meters are designed to measure forward flow, and when water oscillates back and forth due to pressure fluctuations, the meter tends to register more forward movement than backward. The result is a higher water bill, not a lower one.
+
+### The Bypass Complication
+
+If your property has a mains bypass, it adds another layer of complexity. A leak could exist on the mains-fed side or the pump-fed side, and isolating the source requires systematically shutting off different parts of the system to observe the meter's behaviour. This can be a challenging process for the average homeowner.
+
+## Conclusion: Know Your System
+
+Understanding whether your water comes directly from the mains or via an aljibe and pump is the first and most critical step in diagnosing a potential leak in Lanzarote. The behaviour of your water meter can be misleading if you don't know what it's connected to.
+
+If you suspect a leak but can't make sense of what your water meter is telling you, the unique characteristics of your water system are likely the reason. Before you face a high water bill or potential property damage, it's essential to get an expert diagnosis.
+
+## Can You Drink the Water?
+
+This is one of the most frequently asked questions by visitors and new residents, and the answer is not a simple "yes" or "no." It requires understanding the difference between the water entering your property and the water coming out of your tap.
+
+### The Official Stance: Yes, It's Potable
+
+Legally and technically, the water supplied by Canal Gestión Lanzarote is safe to drink. It is desalinated seawater that undergoes reverse osmosis, remineralisation (adding calcium and magnesium), and chlorination. It must meet strict sanitary criteria set by **EU Directive 2020/2184** on the quality of water intended for human consumption.
+
+Regular testing is conducted to ensure it meets these standards at the point of supply. Experts from the University of Las Palmas de Gran Canaria and local health inspectors have confirmed that the mains water is safe, often containing less plastic residue than bottled water.
+
+### The Reality: It Depends on Your Tank
+
+While the water is safe when it passes through the meter, the safety of what comes out of your tap depends entirely on where it has been stored.
+
+In our years at Canary Detect, we have inspected the inside of countless aljibes. The reality is stark:
+
+- **The Good:** Some tanks are pristine, well-maintained, and perfectly safe.
+- **The Bad:** Others are sites of "pure horror" that would make you run to the toilet just looking at them. We have seen tanks with sediment buildup, root intrusion, crumbling concrete, and even drowned pests.
+
+If your tap water comes from an aljibe that hasn't been cleaned or inspected in years, it may no longer be safe to drink, regardless of its quality at the meter.
+
+### Our Recommendation
+
+If you want to drink tap water (which is cheaper, eco-friendly, and convenient), follow these rules:
+
+1. **Bypass the Tank for Drinking:** The safest option is to have a dedicated "drinking water tap" in your kitchen that is plumbed **directly to the mains**, bypassing the aljibe and pump entirely. This ensures you are drinking the regulated, safe water directly from the supply network.
+2. **Maintain Your Aljibe:** If you must use tank water, treat your aljibe like the critical infrastructure it is. It requires regular inspection, cleaning, and waterproofing to prevent contamination.
+3. **Check the Condition:** Don't assume your tank is clean. Have it inspected. If it's in poor condition, use it only for washing and flushing until it can be professionally remediated.
+
+## Still Unsure? Don't Guess.
+
+95% of leaks in Lanzarote are hidden. No visible signs, no obvious clues. Before you pay for a full survey, get a definitive answer with our **Free Leak Confirmation Test**.
+
+**Contact Canary Detect** for professional leak detection across Lanzarote. We serve Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, Yaiza, and all areas of the island.
+
+[Get a free leak confirmation test →](/services/free-leak-confirmation)
+    `
+  },
+  {
+    id: 2,
     slug: "how-to-check-for-pool-leaks-lanzarote",
     title: "How to Check for Pool Leaks: A Complete Guide for Lanzarote Pool Owners",
     excerpt: "Is your swimming pool losing water? Learn the bucket test, dye test, and when to call professional leak detection services in Lanzarote.",
@@ -157,7 +296,7 @@ If you've tried the bucket test and suspect a leak, don't wait. Water leaks wast
     `
   },
   {
-    id: 2,
+    id: 3,
     slug: "signs-of-underground-water-leak",
     title: "7 Signs of an Underground Water Leak: What Lanzarote Homeowners Must Know",
     excerpt: "Underground water leaks can go undetected for months. Learn the warning signs and how to detect hidden pipe leaks before they cause major damage.",
@@ -294,7 +433,7 @@ Underground water leaks only get worse with time. If you've noticed any of these
     `
   },
   {
-    id: 3,
+    id: 4,
     slug: "water-meter-running-when-taps-off",
     title: "Water Meter Running When Taps Are Off? Here's What It Means",
     excerpt: "If your water meter keeps spinning with all taps closed, you likely have a hidden leak. Learn how to check and what to do next.",
@@ -414,7 +553,7 @@ A spinning water meter is your property telling you something is wrong. Don't ig
     `
   },
   {
-    id: 4,
+    id: 5,
     slug: "damp-walls-causes-solutions",
     title: "Damp Walls in Lanzarote: Causes, Detection & Solutions",
     excerpt: "Damp walls aren't just unsightly – they indicate water intrusion that needs addressing. Learn the common causes and how to fix them.",
@@ -575,7 +714,7 @@ Don't guess at the cause of your damp walls – get professional diagnosis. What
     `
   },
   {
-    id: 5,
+    id: 6,
     slug: "thermal-imaging-leak-detection-explained",
     title: "How Thermal Imaging Finds Hidden Water Leaks: Technology Explained",
     excerpt: "Discover how thermal imaging cameras detect water leaks behind walls and under floors without any damage to your property.",
@@ -723,7 +862,7 @@ If you suspect hidden leaks in your Lanzarote property, thermal imaging can reve
     `
   },
   {
-    id: 6,
+    id: 7,
     slug: "swimming-pool-leak-repair-cost-lanzarote",
     title: "Swimming Pool Leak Repair Costs in Lanzarote: What to Expect",
     excerpt: "Understanding the costs of pool leak detection and repair in Lanzarote. From minor fixes to major repairs, here's your complete pricing guide.",
@@ -897,6 +1036,144 @@ We serve pool owners in Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza, a
 export const blogArticlesEs: BlogArticle[] = [
   {
     id: 1,
+    slug: "domina-tu-sistema-de-agua-lanzarote",
+    title: "Domina Tu Sistema de Agua en Lanzarote: La Guía Esencial para Residentes",
+    excerpt: "Desde aljibes hasta bombas, comprende cómo funciona la infraestructura de agua única de Lanzarote—y cómo detectar fugas ocultas antes de que te cuesten dinero. Además: ¿se puede beber el agua?",
+    date: "2025-01-22",
+    author: "Canary Detect",
+    category: "Guías Esenciales",
+    image: lanzaroteWaterHeroImg,
+    metaTitle: "Guía Sistema de Agua Lanzarote | Aljibe, Bombas y Detección de Fugas",
+    metaDescription: "La guía esencial del sistema de agua único de Lanzarote. Aprende cómo funcionan los aljibes y las bombas, por qué la detección de fugas es un desafío, y si puedes beber el agua del grifo.",
+    keywords: "sistema de agua Lanzarote, aljibe Lanzarote, bomba de agua Lanzarote, se puede beber agua grifo Lanzarote, contador de agua girando, detección fugas Lanzarote, grupo de presión",
+    readTime: 12,
+    content: `
+## Introducción
+
+Para los residentes de Lanzarote, gestionar el agua es un aspecto fundamental de la vida diaria, profundamente arraigado en la historia e infraestructura de la isla. A diferencia de los sistemas alimentados directamente por la red que son comunes en muchas partes del mundo, los hogares de Lanzarote a menudo dependen de una combinación única de un tanque de agua subterráneo, conocido como **aljibe**, y un sistema de bombeo. Esta configuración es una respuesta directa al clima árido de la isla y a la escasez histórica de agua.
+
+Sin embargo, este sistema tradicional presenta desafíos modernos, particularmente cuando se trata de detectar fugas de agua. En Canary Detect, encontramos que muchos escenarios desconcertantes de fugas tienen su origen en una incomprensión de cómo funcionan estos sistemas. Este artículo explica la historia detrás de la red de agua de Lanzarote, cómo funciona, y por qué hace que la detección de fugas sea un desafío único.
+
+![Arquitectura Tradicional de Lanzarote](/assets/blog/lanzarote-traditional-house.jpg)
+
+*La icónica arquitectura blanca de techos planos de Lanzarote, con el paisaje volcánico de fondo. Los aljibes domésticos modernos generalmente se llenan con camión cisterna en lugar de agua de lluvia.*
+
+## Una Historia Forjada por la Escasez
+
+![Aljibe Canario](/assets/blog/lanzarote-aljibe-cistern.jpg)
+
+*Un aljibe canario tradicional en Lanzarote, mostrando el punto de acceso al tanque subterráneo rodeado de suelo volcánico.*
+
+Lanzarote es la más seca de las Islas Canarias, recibiendo precipitaciones mínimas y sin ríos naturales ni aguas superficiales significativas. El término **aljibe** proviene del árabe *al-gúbb*, que significa cisterna o pozo, una tecnología introducida en la Península Ibérica hace siglos para almacenar el preciado agua en regiones áridas.
+
+Históricamente, los isleños eran maestros en la conservación del agua, desarrollando métodos para capturar cada gota posible. Esto incluía grandes embalses públicos (*maretas*) y canales para recoger la escorrentía de agua de lluvia. Mientras que el diseño clásico de las casas canarias con techos planos era perfecto para canalizar el agua de lluvia hacia un aljibe doméstico, el método principal para llenar estos tanques domésticos durante muchos años ha sido la entrega con camión cisterna, conocido localmente como *pipa*.
+
+Incluso con la llegada de las modernas plantas desalinizadoras en la década de 1960, que ahora abastecen a toda la isla, el legado de la escasez de agua persiste. El suministro de agua de la red puede ser inconsistente, con baja presión y, en algunas zonas rurales, cortes programados que pueden dejar a los hogares sin agua durante días. Como resultado, el sistema de aljibe y bomba sigue siendo un componente esencial de la mayoría de los hogares, proporcionando un amortiguador crucial y asegurando una presión de agua constante.
+
+![Camión Cisterna](/assets/blog/lanzarote-water-tanker.jpg)
+
+*Los camiones cisterna (pipas) siguen siendo una vista común en las Islas Canarias, entregando agua para llenar los aljibes domésticos, especialmente durante las interrupciones del suministro.*
+
+## Cómo Funciona el Sistema de Aljibe y Bomba
+
+Un sistema típico de agua doméstica en Lanzarote consta de tres partes principales:
+
+1. **El Aljibe:** Un tanque de almacenamiento subterráneo, típicamente hecho de hormigón, que contiene la reserva principal de agua del hogar. Se llena desde el suministro de la red a través de una tubería controlada por una válvula de flotador.
+2. **La Válvula de Flotador (Boya):** Esta válvula se abre automáticamente para rellenar el aljibe desde la red cuando el nivel del agua baja y se cierra cuando está lleno. Funciona igual que el mecanismo dentro de una cisterna del váter.
+3. **El Grupo de Presión:** Debido a que la presión de la red a menudo es demasiado baja para las necesidades del hogar, se utiliza una bomba para extraer agua del aljibe y entregarla a los grifos, duchas y electrodomésticos a una presión constante y utilizable.
+
+Muchos hogares también cuentan con un **bypass de la red**. Esta es una derivación del suministro de la red (después de la alimentación de la boya al aljibe) que conecta directamente a la tubería de la casa después de la bomba, controlada por una válvula. En la práctica, este bypass a menudo se deja abierto, con la bomba funcionando normalmente. La red proporciona un nivel base de presión, y la bomba "completa" la presión para asegurar un flujo adecuado en toda la casa. Si la bomba falla, la casa sigue recibiendo agua directamente de la red (aunque a menor presión). Esta disposición de doble alimentación es práctica pero añade complejidad al diagnosticar fugas.
+
+![Diagrama del Sistema de la Casa](/assets/blog/lanzarote-water-system-house.png)
+
+*Un sistema típico de agua doméstica de Lanzarote en contexto: el agua de la red entra a través del contador, alimenta el aljibe subterráneo a través de una válvula de flotador, y el grupo de presión (sobre el suelo) extrae el agua para abastecer la casa. La válvula de bypass permite que el agua de la red complemente el suministro de la bomba.*
+
+![Diagrama Esquemático](/assets/blog/lanzarote-water-system-diagram.png)
+
+*Vista esquemática: el agua de la red alimenta el aljibe a través de una válvula de flotador, mientras que una rama de bypass (a menudo dejada abierta) proporciona presión directa de la red. La bomba extrae del aljibe para aumentar la presión, y ambos suministros se combinan antes de llegar a la casa.*
+
+## El Desafío Único de la Detección de Fugas
+
+Este sistema crea desafíos específicos al intentar identificar una fuga de agua, a menudo llevando a señales confusas del contador de agua.
+
+### Misterio 1: El Contador de Agua Intermitente
+
+Una suposición común es que una fuga hará que el contador de agua gire continuamente. Con un sistema de aljibe, esto rara vez es el caso. Si tienes una fuga dentro de tu casa (por ejemplo, un grifo goteando o un váter defectuoso), el agua se está perdiendo del **lado alimentado por la bomba** del sistema. El agua viene del aljibe, no directamente de la red.
+
+Tu contador de agua solo girará durante breves períodos cuando la válvula de flotador en el aljibe se abra para reponer el agua que se ha perdido. Esto significa que una fuga significativa puede pasar desapercibida, ya que el contador parece estar estático la mayor parte del tiempo, solo para girar intermitentemente mientras el tanque se rellena solo.
+
+### Misterio 2: El Contador que Gira Constantemente (Que No Es una Fuga)
+
+Por el contrario, un contador que gira constantemente no siempre significa que tienes una fuga en las tuberías de tu propiedad. El culpable más común en este escenario es una **válvula de flotador defectuosa** en el propio aljibe.
+
+Si la válvula no se cierra correctamente cuando el tanque está lleno, el agua de la red goteará continuamente y se desbordará del aljibe. Sin embargo, es poco probable que veas agua acumulándose en la superficie. La mayoría de los aljibes no son completamente herméticos hasta arriba. La sección superior, típicamente por encima del nivel del 80-90% lleno o por encima de donde se asienta la boya, a menudo no está sellada. Cuando el agua sube más allá de este punto, simplemente se filtra en el suelo circundante y desaparece bajo las baldosas de tu patio, completamente desapercibida. Para un observador, el contador gira sin parar, creando la ilusión perfecta de una fuga importante. En realidad, es una simple falla mecánica en el mecanismo de llenado del tanque.
+
+![Detección de Fugas del Contador de Agua](/assets/blog/lanzarote-water-meter-leak.png)
+
+*Un indicador de fugas girando en un contador de agua puede ser causado por una fuga real o una válvula de flotador defectuosa en el aljibe.*
+
+### La Bomba Delatora
+
+Una de las señales más claras de una fuga en un sistema de aljibe es el comportamiento de la bomba misma. Si nadie está usando agua, la bomba debería permanecer en silencio. Una fuga en el lado alimentado por la bomba drenará lentamente la presión en el sistema, haciendo que la bomba se active periódicamente para restaurarla.
+
+### El Factor de la Válvula de Retención
+
+Un componente crítico pero a menudo pasado por alto en estos sistemas es la **válvula de retención** (también llamada válvula antirretorno). Estas se instalan típicamente en el contador de agua y en la tubería de bypass de la red. Su trabajo es evitar que el agua fluya hacia atrás hacia el suministro de la red.
+
+Cuando una válvula de retención falla, la mayor presión de la bomba puede empujar el agua de vuelta hacia la red. Esto hace que la bomba funcione frecuentemente mientras intenta mantener la presión contra un sistema que efectivamente está "perdiendo" agua por donde vino. Los síntomas imitan una fuga genuina: la bomba se enciende y apaga, y el contador de agua gira.
+
+Podrías asumir que el agua fluyendo hacia atrás haría que el contador girara en reversa, reduciendo tu factura. En la práctica, generalmente ocurre lo contrario. Los contadores de agua están diseñados para medir el flujo hacia adelante, y cuando el agua oscila hacia adelante y hacia atrás debido a fluctuaciones de presión, el contador tiende a registrar más movimiento hacia adelante que hacia atrás. El resultado es una factura de agua más alta, no más baja.
+
+### La Complicación del Bypass
+
+Si tu propiedad tiene un bypass de la red, añade otra capa de complejidad. Podría existir una fuga en el lado alimentado por la red o en el lado alimentado por la bomba, y aislar la fuente requiere cerrar sistemáticamente diferentes partes del sistema para observar el comportamiento del contador. Este puede ser un proceso desafiante para el propietario promedio.
+
+## Conclusión: Conoce Tu Sistema
+
+Entender si tu agua viene directamente de la red o a través de un aljibe y bomba es el primer y más crítico paso para diagnosticar una posible fuga en Lanzarote. El comportamiento de tu contador de agua puede ser engañoso si no sabes a qué está conectado.
+
+Si sospechas una fuga pero no puedes entender lo que tu contador de agua te está diciendo, las características únicas de tu sistema de agua son probablemente la razón. Antes de enfrentarte a una factura de agua alta o posibles daños a la propiedad, es esencial obtener un diagnóstico experto.
+
+## ¿Se Puede Beber el Agua?
+
+Esta es una de las preguntas más frecuentes de visitantes y nuevos residentes, y la respuesta no es un simple "sí" o "no". Requiere entender la diferencia entre el agua que entra en tu propiedad y el agua que sale de tu grifo.
+
+### La Posición Oficial: Sí, Es Potable
+
+Legal y técnicamente, el agua suministrada por Canal Gestión Lanzarote es segura para beber. Es agua de mar desalinizada que pasa por ósmosis inversa, remineralización (añadiendo calcio y magnesio) y cloración. Debe cumplir con estrictos criterios sanitarios establecidos por la **Directiva UE 2020/2184** sobre la calidad del agua destinada al consumo humano.
+
+Se realizan pruebas regulares para asegurar que cumple con estos estándares en el punto de suministro. Expertos de la Universidad de Las Palmas de Gran Canaria e inspectores de salud locales han confirmado que el agua de la red es segura, a menudo conteniendo menos residuos plásticos que el agua embotellada.
+
+### La Realidad: Depende de Tu Tanque
+
+Mientras que el agua es segura cuando pasa por el contador, la seguridad de lo que sale de tu grifo depende enteramente de dónde ha sido almacenada.
+
+En nuestros años en Canary Detect, hemos inspeccionado el interior de innumerables aljibes. La realidad es cruda:
+
+- **Lo Bueno:** Algunos tanques están impecables, bien mantenidos y perfectamente seguros.
+- **Lo Malo:** Otros son sitios de "puro horror" que te harían correr al baño solo con mirarlos. Hemos visto tanques con acumulación de sedimentos, intrusión de raíces, hormigón desmoronándose, e incluso plagas ahogadas.
+
+Si el agua de tu grifo viene de un aljibe que no ha sido limpiado o inspeccionado en años, puede que ya no sea segura para beber, independientemente de su calidad en el contador.
+
+### Nuestra Recomendación
+
+Si quieres beber agua del grifo (que es más barata, ecológica y conveniente), sigue estas reglas:
+
+1. **Evita el Tanque para Beber:** La opción más segura es tener un grifo dedicado para "agua potable" en tu cocina que esté conectado **directamente a la red**, evitando completamente el aljibe y la bomba. Esto asegura que estás bebiendo el agua regulada y segura directamente de la red de suministro.
+2. **Mantén Tu Aljibe:** Si debes usar agua del tanque, trata tu aljibe como la infraestructura crítica que es. Requiere inspección regular, limpieza e impermeabilización para prevenir la contaminación.
+3. **Comprueba el Estado:** No asumas que tu tanque está limpio. Haz que lo inspeccionen. Si está en malas condiciones, úsalo solo para lavar y tirar de la cadena hasta que pueda ser remediado profesionalmente.
+
+## ¿Todavía No Estás Seguro? No Adivines.
+
+El 95% de las fugas en Lanzarote están ocultas. Sin señales visibles, sin pistas obvias. Antes de pagar por una inspección completa, obtén una respuesta definitiva con nuestro **Test de Confirmación de Fugas Gratis**.
+
+**Contacta con Canary Detect** para detección profesional de fugas en toda Lanzarote. Servimos Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, Yaiza y todas las áreas de la isla.
+
+[Obtén un test de confirmación de fugas gratis →](/es/servicios/confirmacion-fugas-gratis)
+    `
+  },
+  {
+    id: 2,
     slug: "como-detectar-fugas-en-piscinas-lanzarote",
     title: "Cómo Detectar Fugas en Piscinas: Guía Completa para Propietarios en Lanzarote",
     excerpt: "¿Tu piscina está perdiendo agua? Aprende la prueba del cubo, la prueba del tinte y cuándo llamar a servicios profesionales de detección de fugas en Lanzarote.",
