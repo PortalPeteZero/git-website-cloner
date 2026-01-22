@@ -50,19 +50,27 @@ export default function SEOHead({
     const ogImage = document.querySelector('meta[property="og:image"]');
     const ogType = document.querySelector('meta[property="og:type"]');
     const ogLocale = document.querySelector('meta[property="og:locale"]');
+    const ogLocaleAlt = document.querySelector('meta[property="og:locale:alternate"]');
+    const ogUrl = document.querySelector('meta[property="og:url"]');
     
     if (ogTitle) ogTitle.setAttribute('content', title);
     if (ogDescription) ogDescription.setAttribute('content', description);
-    if (ogImage) ogImage.setAttribute('content', image);
+    if (ogImage) ogImage.setAttribute('content', image.startsWith('http') ? image : `https://canary-detect.com${image}`);
     if (ogType) ogType.setAttribute('content', type);
     if (ogLocale) ogLocale.setAttribute('content', isSpanish ? 'es_ES' : 'en_GB');
+    if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', isSpanish ? 'en_GB' : 'es_ES');
+    if (ogUrl && canonical) ogUrl.setAttribute('content', canonical);
     
     // Update Twitter tags
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
     const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    const twitterImage = document.querySelector('meta[name="twitter:image"]');
+    const twitterUrl = document.querySelector('meta[name="twitter:url"]');
     
     if (twitterTitle) twitterTitle.setAttribute('content', title);
     if (twitterDescription) twitterDescription.setAttribute('content', description);
+    if (twitterImage) twitterImage.setAttribute('content', image.startsWith('http') ? image : `https://canary-detect.com${image}`);
+    if (twitterUrl && canonical) twitterUrl.setAttribute('content', canonical);
     
     // Update canonical if provided
     if (canonical) {
