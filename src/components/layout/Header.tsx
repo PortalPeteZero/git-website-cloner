@@ -57,17 +57,19 @@ const Header = () => {
       <div className="bg-canary-navy">
         <div className="container mx-auto px-4">
           <div className="flex items-center h-16">
-            {/* Logo - Left side */}
-            <Link to={getRoute("/", "/es")} className="flex items-center group shrink-0">
-              <img
-                src={logoTransparent}
-                alt={isSpanish ? "Canary Detect - Los Cazafugas" : "Canary Detect - The Leaky Finders"}
-                className="h-28 md:h-32 w-auto transition-transform duration-300 group-hover:scale-105"
-              />
-            </Link>
+            {/* Logo - Left side with fixed width for alignment */}
+            <div className="w-40 shrink-0">
+              <Link to={getRoute("/", "/es")} className="flex items-center group">
+                <img
+                  src={logoTransparent}
+                  alt={isSpanish ? "Canary Detect - Los Cazafugas" : "Canary Detect - The Leaky Finders"}
+                  className="h-28 md:h-32 w-auto transition-transform duration-300 group-hover:scale-105"
+                />
+              </Link>
+            </div>
 
             {/* Desktop Top Nav - Centered */}
-            <nav className="hidden lg:flex items-center justify-center gap-1 flex-1">
+            <nav className="hidden lg:flex items-center justify-center gap-6 flex-1">
               <Link 
                 to={getRoute("/", "/es")} 
                 className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
@@ -119,10 +121,13 @@ const Header = () => {
                 Blog
               </Link>
 
-              <div className="h-4 w-px bg-white/20 mx-3" />
+              <div className="h-4 w-px bg-white/20 mx-2" />
 
               <LanguageSwitcher variant="dark" />
             </nav>
+
+            {/* Empty spacer to balance the layout */}
+            <div className="hidden lg:block w-40 shrink-0" />
 
             {/* Mobile Menu Button */}
             <button
@@ -144,19 +149,21 @@ const Header = () => {
       }`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center py-1.5">
-            {/* Contact Button - Left aligned under logo */}
-            <Link to={getRoute("/contact", "/es/contacto")} className="shrink-0">
-              <Button 
-                size="sm"
-                className="bg-canary-navy hover:bg-canary-navy/90 text-white font-bold gap-1.5 shadow-md hover:shadow-lg transition-all duration-300"
-              >
-                <Phone className="h-3.5 w-3.5" />
-                {t('navigation.contact')}
-              </Button>
-            </Link>
+            {/* Contact Button - Centered under logo with fixed width */}
+            <div className="w-40 shrink-0 flex justify-center">
+              <Link to={getRoute("/contact", "/es/contacto")}>
+                <Button 
+                  size="sm"
+                  className="bg-canary-navy hover:bg-canary-navy/90 text-white font-bold gap-1.5 shadow-md hover:shadow-lg transition-all duration-300"
+                >
+                  <Phone className="h-3.5 w-3.5" />
+                  {t('navigation.contact')}
+                </Button>
+              </Link>
+            </div>
 
             {/* Center buttons */}
-            <div className="flex items-center justify-center gap-3 flex-1">
+            <div className="flex items-center justify-center gap-4 flex-1">
             {/* Services Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -316,6 +323,9 @@ const Header = () => {
               </button>
             </Link>
             </div>
+
+            {/* Empty spacer to balance the layout */}
+            <div className="w-40 shrink-0" />
           </div>
         </div>
       </div>
