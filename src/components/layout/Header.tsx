@@ -155,12 +155,12 @@ const Header = () => {
           : "bg-background"
       }`}>
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-3 py-3">
+          <div className="flex items-center justify-center gap-3 py-1.5">
             {/* Services Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button 
-                  className={`group flex items-center gap-2 px-5 py-2.5 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md ${
+                  className={`group flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md ${
                     isServicesActive 
                       ? "bg-primary text-white shadow-primary/30" 
                       : "bg-primary text-white hover:bg-primary/90"
@@ -234,7 +234,7 @@ const Header = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button 
-                  className="group flex items-center gap-2 px-5 py-2.5 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md bg-accent text-white hover:bg-accent/90"
+                  className="group flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md bg-accent text-white hover:bg-accent/90"
                 >
                   <Waves className="h-4 w-4" />
                   {t('navigation.villaPoolLeaks')}
@@ -300,7 +300,7 @@ const Header = () => {
               href="https://leak-detective.com/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2.5 font-semibold text-sm rounded-lg transition-all duration-300 bg-canary-navy/10 text-canary-navy hover:bg-canary-navy hover:text-white"
+              className="flex items-center gap-2 px-4 py-2 font-semibold text-sm rounded-lg transition-all duration-300 border-2 border-primary/30 text-primary hover:bg-primary hover:text-white hover:border-primary"
             >
               <Gamepad2 className="h-4 w-4" />
               {t('navigation.spotTheLeakGame')}
@@ -309,7 +309,7 @@ const Header = () => {
 
             {/* Free Test CTA */}
             <Link to={getRoute("/services/free-leak-confirmation", "/es/servicios/confirmacion-fugas-gratis")}>
-              <button className="flex items-center gap-2 px-5 py-2.5 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md bg-gradient-to-r from-primary to-accent text-white hover:opacity-90">
+              <button className="flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md bg-gradient-to-r from-primary to-accent text-white hover:opacity-90">
                 <TestTube className="h-4 w-4" />
                 {isSpanish ? "Test Gratis" : "Free Test"}
               </button>
