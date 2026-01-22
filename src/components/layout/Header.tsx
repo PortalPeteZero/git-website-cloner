@@ -49,8 +49,8 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
+          {/* Desktop Navigation - Show at xl (1280px+) to prevent overflow */}
+          <nav className="hidden xl:flex items-center gap-1 2xl:gap-3">
             {/* Language Switcher */}
             <LanguageSwitcher />
             
@@ -300,9 +300,9 @@ const Header = () => {
             </a>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Show until xl breakpoint */}
           <button
-            className="lg:hidden p-2.5 text-canary-navy hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300"
+            className="xl:hidden p-2.5 text-canary-navy hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -312,7 +312,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="lg:hidden pb-6 border-t border-border/50 pt-4 animate-fade-in">
+          <nav className="xl:hidden pb-6 border-t border-border/50 pt-4 animate-fade-in">
             <div className="flex flex-col gap-3">
               {/* Language Switcher Mobile */}
               <LanguageSwitcher variant="mobile" />
