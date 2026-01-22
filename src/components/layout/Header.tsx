@@ -10,13 +10,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/logo-light-bg.png";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useLanguage } from "@/i18n/LanguageContext";
+import { useTranslation } from "@/i18n/LanguageContext";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const { t, isSpanish } = useLanguage();
+  const { t, isSpanish } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
