@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,13 +8,19 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/logo-light-bg.png";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/i18n/LanguageContext";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [villaPoolOpen, setVillaPoolOpen] = useState(false);
   const location = useLocation();
   const { t, isSpanish } = useTranslation();
 
@@ -307,9 +313,132 @@ const Header = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <nav className="xl:hidden pb-6 border-t border-border/50 pt-4 animate-fade-in">
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-1">
               {/* Language Switcher Mobile */}
-              <LanguageSwitcher variant="mobile" />
+              <div className="px-4 py-2">
+                <LanguageSwitcher variant="mobile" />
+              </div>
+              
+              <div className="h-px bg-border my-2" />
+
+              {/* Services Section - Expandable */}
+              <Collapsible open={servicesOpen} onOpenChange={setServicesOpen}>
+                <CollapsibleTrigger className="w-full px-4 py-3 flex items-center justify-between text-canary-navy font-bold text-lg hover:bg-primary/5 rounded-lg transition-all">
+                  <span className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-primary" />
+                    {t('navigation.services')}
+                  </span>
+                  <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="pl-6 pr-4 pb-2 space-y-1">
+                  <Link 
+                    to={getRoute("/services/drain-detection", "/es/servicios/deteccion-desagues")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-canary-navy/80 font-medium hover:text-primary hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Inspección de Desagües" : "Drain & Pipe Surveys"}
+                  </Link>
+                  <Link 
+                    to={getRoute("/services/drain-unblocking", "/es/servicios/desbloqueo-desagues")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-canary-navy/80 font-medium hover:text-primary hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Desbloqueo de Desagües" : "Drain Unblocking"}
+                  </Link>
+                  <Link 
+                    to={getRoute("/services/leak-repair", "/es/servicios/reparacion-fugas")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-canary-navy/80 font-medium hover:text-primary hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Reparación de Fugas" : "Leak Repair"}
+                  </Link>
+                  <Link 
+                    to={getRoute("/services/pool-leak-repair", "/es/servicios/reparacion-fugas-piscinas")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-canary-navy/80 font-medium hover:text-primary hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Reparación Fugas Piscinas" : "Pool Leak Repair"}
+                  </Link>
+                  <Link 
+                    to={getRoute("/services/pipe-inspection", "/es/servicios/inspeccion-tuberias")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-canary-navy/80 font-medium hover:text-primary hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Inspección de Tuberías" : "Pipe Inspection"}
+                  </Link>
+                  <Link 
+                    to={getRoute("/services/underground-detection", "/es/servicios/deteccion-subterranea")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-canary-navy/80 font-medium hover:text-primary hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Detección Subterránea" : "Underground Location"}
+                  </Link>
+                </CollapsibleContent>
+              </Collapsible>
+
+              {/* Villa & Pool Leaks Section - Expandable */}
+              <Collapsible open={villaPoolOpen} onOpenChange={setVillaPoolOpen}>
+                <CollapsibleTrigger className="w-full px-4 py-3 flex items-center justify-between text-canary-navy font-bold text-lg hover:bg-primary/5 rounded-lg transition-all">
+                  <span className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-accent" />
+                    {t('navigation.villaPoolLeaks')}
+                  </span>
+                  <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${villaPoolOpen ? 'rotate-180' : ''}`} />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="pl-6 pr-4 pb-2 space-y-1">
+                  <a 
+                    href="https://leakguardlanzarote.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-canary-navy/80 font-medium hover:text-primary hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Monitoreo de Fugas" : "Water Leak Monitoring"}
+                    <ExternalLink className="h-3 w-3 opacity-60 ml-auto" />
+                  </a>
+                  <Link 
+                    to={getRoute("/services/water-leak-detection", "/es/servicios/deteccion-fugas-agua")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-canary-navy/80 font-medium hover:text-primary hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Detección de Fugas de Agua" : "Water Leak Detection"}
+                  </Link>
+                  <Link 
+                    to={getRoute("/services/water-leak-detection", "/es/servicios/deteccion-fugas-agua")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-canary-navy/80 font-medium hover:text-primary hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Inspección de Villas" : "Villa Leak Surveys"}
+                  </Link>
+                  <Link 
+                    to={getRoute("/services/pool-leak-detection", "/es/servicios/deteccion-fugas-piscinas")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-canary-navy/80 font-medium hover:text-primary hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Inspección de Piscinas" : "Pool Leak Surveys"}
+                  </Link>
+                  <Link 
+                    to={getRoute("/services/free-leak-confirmation", "/es/servicios/confirmacion-fugas-gratis")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-canary-navy/80 font-medium hover:text-primary hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Test Confirmación Gratis" : "Free Leak Confirmation Test"}
+                  </Link>
+                </CollapsibleContent>
+              </Collapsible>
+
+              <div className="h-px bg-border my-2" />
               
               {/* Primary Links */}
               <Link 
@@ -347,167 +476,18 @@ const Header = () => {
               >
                 {t('navigation.contact')}
               </Link>
+              <Link 
+                to={getRoute("/blog", "/es/blog")} 
+                className="px-4 py-3 text-canary-navy font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t('navigation.seeOurBlog')}
+              </Link>
 
               <div className="h-px bg-border my-2" />
 
-              {/* Buttons */}
-              <div className="flex flex-col gap-3 px-2">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button 
-                      variant="outline" 
-                      size="default"
-                      className={`w-full justify-between gap-1.5 border-2 font-semibold transition-all duration-300 ${
-                        isServicesActive 
-                          ? "border-primary bg-primary/10 text-primary" 
-                          : "border-canary-navy/20 bg-canary-navy/5 text-canary-navy hover:border-canary-navy/40 hover:bg-canary-navy/10"
-                      }`}
-                    >
-                      {t('navigation.services')}
-                      <ChevronDown className="h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-2 border-primary/20 shadow-xl rounded-lg p-1 z-50 w-[250px]">
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/services/drain-detection", "/es/servicios/deteccion-desagues")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
-                      >
-                        {isSpanish ? "Inspección de Desagües" : "Drain & Pipe Surveys"}
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/services/drain-unblocking", "/es/servicios/desbloqueo-desagues")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
-                      >
-                        {isSpanish ? "Desbloqueo de Desagües" : "Drain Unblocking"}
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/services/leak-repair", "/es/servicios/reparacion-fugas")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
-                      >
-                        {isSpanish ? "Reparación de Fugas" : "Leak Repair"}
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/services/pool-leak-repair", "/es/servicios/reparacion-fugas-piscinas")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
-                      >
-                        {isSpanish ? "Reparación Fugas Piscinas" : "Pool Leak Repair"}
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/services/pipe-inspection", "/es/servicios/inspeccion-tuberias")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
-                      >
-                        {isSpanish ? "Inspección de Tuberías" : "Pipe Inspection"}
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/services/underground-detection", "/es/servicios/deteccion-subterranea")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
-                      >
-                        {isSpanish ? "Detección Subterránea" : "Underground Pipe & Cable Location"}
-                      </Link>
-                    </DropdownMenuItem>
-                    <div className="border-t border-border/50 my-1" />
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/technology", "/es/tecnologia")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md"
-                      >
-                        {isSpanish ? "Ver Nuestra Tecnología →" : "See Our Technology →"}
-                      </Link>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button 
-                      variant="outline" 
-                      size="default"
-                      className="w-full justify-between gap-1.5 border-2 border-primary/30 bg-primary/5 text-canary-navy font-semibold hover:border-primary hover:bg-primary/10 hover:text-primary transition-all duration-300"
-                    >
-                      {t('navigation.villaPoolLeaks')}
-                      <ChevronDown className="h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-2 border-primary/20 shadow-xl rounded-lg p-1 z-50 w-[200px]">
-                    <DropdownMenuItem asChild>
-                      <a 
-                        href="https://leakguardlanzarote.com/" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md flex items-center gap-2"
-                      >
-                        {isSpanish ? "Monitoreo de Fugas" : "Water Leak Monitoring"}
-                        <ExternalLink className="h-3 w-3 opacity-60" />
-                      </a>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/services/water-leak-detection", "/es/servicios/deteccion-fugas-agua")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
-                      >
-                        {isSpanish ? "Detección de Fugas de Agua" : "Water Leak Detection"}
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/services/water-leak-detection", "/es/servicios/deteccion-fugas-agua")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
-                      >
-                        {isSpanish ? "Inspección de Villas" : "Villa Leak Surveys"}
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/services/pool-leak-detection", "/es/servicios/deteccion-fugas-piscinas")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
-                      >
-                        {isSpanish ? "Inspección de Piscinas" : "Pool Leak Surveys"}
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/services/free-leak-confirmation", "/es/servicios/confirmacion-fugas-gratis")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md"
-                      >
-                        {isSpanish ? "Test Confirmación Gratis" : "Free Leak Confirmation Test"}
-                      </Link>
-                    </DropdownMenuItem>
-                    <div className="border-t border-border/50 my-1" />
-                    <DropdownMenuItem asChild>
-                      <Link 
-                        to={getRoute("/technology", "/es/tecnologia")} 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md"
-                      >
-                        {isSpanish ? "Ver Nuestra Tecnología →" : "See Our Technology →"}
-                      </Link>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-
+              {/* External Links */}
+              <div className="flex flex-col gap-2 px-4 pb-2">
                 <a 
                   href="https://leak-detective.com/" 
                   target="_blank" 
@@ -518,7 +498,7 @@ const Header = () => {
                   <Button 
                     variant="outline" 
                     size="default"
-                    className="w-full justify-center gap-1.5 border-2 border-canary-navy/20 bg-canary-navy/5 text-canary-navy font-semibold hover:border-canary-navy/40 hover:bg-canary-navy/10 transition-all duration-300"
+                    className="w-full justify-center gap-1.5 border-2 border-canary-navy/20 bg-canary-navy/5 text-canary-navy font-semibold"
                   >
                     {t('navigation.spotTheLeakGame')}
                     <ExternalLink className="h-3 w-3 opacity-60" />
@@ -534,12 +514,10 @@ const Header = () => {
                 >
                   <Button 
                     size="default"
-                    className="w-full justify-center relative overflow-hidden bg-gradient-to-r from-primary to-[hsl(25,93%,50%)] text-white font-bold shadow-lg shadow-primary/40 hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 border-0"
+                    className="w-full justify-center bg-gradient-to-r from-primary to-[hsl(25,93%,50%)] text-white font-bold shadow-lg shadow-primary/40"
                   >
-                    <span className="flex items-center gap-1.5">
-                      {t('navigation.poolCoatings')}
-                      <ExternalLink className="h-3 w-3" />
-                    </span>
+                    {t('navigation.poolCoatings')}
+                    <ExternalLink className="h-3 w-3 ml-1.5" />
                   </Button>
                 </a>
               </div>
