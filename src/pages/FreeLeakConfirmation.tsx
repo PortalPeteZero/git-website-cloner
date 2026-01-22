@@ -53,7 +53,7 @@ const FreeLeakConfirmation = () => {
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/3 w-64 h-64 bg-canary-cyan/10 rounded-full blur-3xl" />
 
-        <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
+        <div className="container mx-auto px-4 pt-16 pb-12 md:pt-20 md:pb-16 relative z-10">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

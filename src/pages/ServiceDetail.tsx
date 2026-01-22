@@ -173,7 +173,7 @@ const ServiceDetail = () => {
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
         
-        <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
+        <div className="container mx-auto px-4 relative z-10 pt-12 pb-10 md:pt-16 md:pb-14">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
