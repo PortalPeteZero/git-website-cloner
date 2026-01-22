@@ -176,9 +176,20 @@ const Header = () => {
                 </DropdownMenuItem>
                 <div className="border-t border-border/50 my-1" />
                 <DropdownMenuItem asChild>
+                  <a 
+                    href="https://canary-detect-coatings.es/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md transition-colors flex items-center gap-2"
+                  >
+                    {t('navigation.poolCoatings')}
+                    <ExternalLink className="h-3 w-3 opacity-60" />
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link 
                     to={getRoute("/technology", "/es/tecnologia")} 
-                    className="cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-md transition-colors"
+                    className="cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
                   >
                     {isSpanish ? "Ver Nuestra Tecnología →" : "See Our Technology →"}
                   </Link>
@@ -281,23 +292,6 @@ const Header = () => {
               </Button>
             </a>
 
-            {/* Pool Coatings CTA - Premium styling */}
-            <a 
-              href="https://canary-detect-coatings.es/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button 
-                size="sm"
-                className="relative overflow-hidden bg-gradient-to-r from-primary to-[hsl(25,93%,50%)] text-white font-bold shadow-lg shadow-primary/40 hover:shadow-xl hover:shadow-primary/50 hover:scale-105 transition-all duration-300 border-0 px-5"
-              >
-                <span className="relative z-10 flex items-center gap-1.5">
-                  {t('navigation.poolCoatings')}
-                  <ExternalLink className="h-3 w-3" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[hsl(25,93%,45%)] to-primary opacity-0 hover:opacity-100 transition-opacity duration-300" />
-              </Button>
-            </a>
           </nav>
 
           {/* Mobile Menu Button - Show until xl breakpoint */}
@@ -379,6 +373,17 @@ const Header = () => {
                     <ChevronRight className="h-4 w-4 text-primary/60" />
                     {isSpanish ? "Detección Subterránea" : "Underground Location"}
                   </Link>
+                  <a 
+                    href="https://canary-detect-coatings.es/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-primary font-semibold hover:bg-primary/5 rounded-md transition-all flex items-center gap-2"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary" />
+                    {t('navigation.poolCoatings')}
+                    <ExternalLink className="h-3 w-3 opacity-60 ml-auto" />
+                  </a>
                 </CollapsibleContent>
               </Collapsible>
 
@@ -505,21 +510,6 @@ const Header = () => {
                   </Button>
                 </a>
 
-                <a 
-                  href="https://canary-detect-coatings.es/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="w-full"
-                >
-                  <Button 
-                    size="default"
-                    className="w-full justify-center bg-gradient-to-r from-primary to-[hsl(25,93%,50%)] text-white font-bold shadow-lg shadow-primary/40"
-                  >
-                    {t('navigation.poolCoatings')}
-                    <ExternalLink className="h-3 w-3 ml-1.5" />
-                  </Button>
-                </a>
               </div>
             </div>
           </nav>
