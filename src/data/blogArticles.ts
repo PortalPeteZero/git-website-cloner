@@ -28,7 +28,8 @@ export interface BlogArticle {
   readTime: number;
 }
 
-export const blogArticles: BlogArticle[] = [
+// English blog articles
+export const blogArticlesEn: BlogArticle[] = [
   {
     id: 1,
     slug: "how-to-check-for-pool-leaks-lanzarote",
@@ -892,12 +893,910 @@ We serve pool owners in Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza, a
   }
 ];
 
-export function getArticleBySlug(slug: string): BlogArticle | undefined {
-  return blogArticles.find(article => article.slug === slug);
+// Spanish blog articles
+export const blogArticlesEs: BlogArticle[] = [
+  {
+    id: 1,
+    slug: "como-detectar-fugas-en-piscinas-lanzarote",
+    title: "Cómo Detectar Fugas en Piscinas: Guía Completa para Propietarios en Lanzarote",
+    excerpt: "¿Tu piscina está perdiendo agua? Aprende la prueba del cubo, la prueba del tinte y cuándo llamar a servicios profesionales de detección de fugas en Lanzarote.",
+    date: "2025-01-15",
+    author: "Pete Ashcroft",
+    category: "Cuidado de Piscinas",
+    image: poolBucketTestImg,
+    metaTitle: "Cómo Detectar Fugas en Piscinas | Test de Fugas Lanzarote",
+    metaDescription: "Aprende a detectar fugas en tu piscina con la prueba del cubo y del tinte. Consejos profesionales de detección de fugas en Lanzarote. Encuentra fugas rápidamente.",
+    keywords: "como detectar fugas piscina, test fugas piscina, piscina perdiendo agua, prueba cubo fuga piscina, prueba tinte fuga piscina, detección fugas piscina Lanzarote",
+    readTime: 8,
+    content: `
+## ¿Tu Piscina Está Perdiendo Agua?
+
+Si has notado que el nivel del agua de tu piscina baja más rápido de lo normal, no estás solo. Muchos propietarios de piscinas en Lanzarote enfrentan este problema, especialmente durante los meses calurosos de verano. Pero, ¿cómo saber si es evaporación o una fuga real?
+
+En esta guía completa, te mostraremos **cómo detectar fugas en piscinas** usando métodos caseros sencillos, y te explicaremos cuándo es momento de llamar a servicios profesionales de detección de fugas.
+
+## Entendiendo la Pérdida de Agua en Piscinas
+
+Antes de alarmarte por una posible fuga, es importante entender que cierta pérdida de agua es normal:
+
+- **Evaporación**: En el clima cálido de Lanzarote, las piscinas pueden perder 3-7mm de agua al día por evaporación
+- **Salpicaduras**: La natación activa y los juegos pueden causar pérdida significativa de agua
+- **Lavado del filtro**: La limpieza del filtro elimina agua de tu piscina
+- **Viento**: Los vientos alisios de Lanzarote aceleran la evaporación
+
+Si pierdes más de 5cm de agua por semana, probablemente tengas una fuga que necesita atención.
+
+## La Prueba del Cubo: Tu Primer Paso
+
+La prueba del cubo es el método casero más fiable para determinar si tu piscina tiene una fuga o simplemente está evaporando agua. Mira este excelente vídeo de Swim University que demuestra exactamente cómo realizar la prueba:
+
+<div class="video-thumbnail"><a href="https://www.youtube.com/watch?v=Zqiz4qBJU_g&t=37s" target="_blank" rel="noopener noreferrer" class="video-link group"><img src="https://img.youtube.com/vi/Zqiz4qBJU_g/maxresdefault.jpg" alt="Vídeo Prueba del Cubo - Cómo Encontrar una Fuga en la Piscina" class="video-thumb-img" /><span class="play-button">▶</span><span class="video-caption">🎬 Ver: Prueba del Cubo - Cómo Encontrar una Fuga (YouTube)</span></a></div>
+
+### Prueba del Cubo Paso a Paso
+
+1. **Lleva el agua de tu piscina al nivel normal** antes de comenzar la prueba
+2. **Llena un cubo de 20 litros** con agua de la piscina hasta aproximadamente 2,5cm del borde
+3. **Coloca el cubo en el primer o segundo escalón** para que la temperatura del agua coincida
+4. **Marca el nivel del agua** dentro del cubo con cinta o rotulador
+5. **Marca el nivel del agua de la piscina** en el exterior del cubo
+6. **Espera 24 horas** sin usar la piscina ni encender ningún equipo
+7. **Compara los niveles** - si el nivel de la piscina bajó más que el del cubo, tienes una fuga
+
+### Interpretando Tus Resultados
+
+- **Bajada igual**: Evaporación normal - no se detecta fuga
+- **La piscina bajó más**: Tienes una fuga - hora de detección profesional
+- **La piscina bajó significativamente más**: Fuga seria que requiere atención inmediata
+
+## La Prueba del Tinte: Localizando Fugas Visibles
+
+Si sospechas una fuga cerca de accesorios, luces o grietas visibles, la prueba del tinte puede ayudar a confirmar:
+
+1. Apaga todo el equipo de la piscina
+2. Deja que el agua quede completamente quieta
+3. Usa colorante alimentario o tinte de detección de fugas
+4. Aplica el tinte cerca de las áreas sospechosas
+5. Observa si el tinte es atraído hacia grietas o huecos
+
+**Consejo profesional**: Esta prueba funciona mejor en días calmados sin viento.
+
+## Ubicaciones Comunes de Fugas en Piscinas
+
+Basándonos en nuestra experiencia detectando fugas de piscinas en toda Lanzarote, estas son las ubicaciones más comunes:
+
+### Fugas Estructurales
+- Grietas en el vaso de la piscina
+- Fallos en juntas de expansión
+- Deterioro de azulejos y lechada
+
+### Fugas de Fontanería
+- Conexiones de tuberías subterráneas
+- Conexiones del skimmer
+- Accesorios de línea de retorno
+- Juntas del desagüe principal
+
+### Fugas de Equipos
+- Sellos de la bomba
+- Carcasa del filtro
+- Conexiones del calentador
+- Accesorios del clorador
+
+## Señales de que Necesitas Detección Profesional de Fugas
+
+Aunque las pruebas caseras son útiles, algunas situaciones requieren equipo profesional:
+
+- **Pérdida constante de agua** a pesar de pasar la prueba del cubo
+- **Facturas de agua inexplicablemente altas**
+- **Manchas húmedas** alrededor del equipo de la piscina o en tu jardín
+- **Grietas o hundimientos** en la terraza de la piscina
+- **Burbujas de aire** en las líneas de retorno
+- **Crecimiento de algas** en áreas específicas (puede indicar intrusión de agua)
+
+## Detección Profesional de Fugas de Piscinas en Lanzarote
+
+En Canary Detect, usamos tecnología avanzada para encontrar fugas de piscinas sin dañar tu piscina:
+
+- **Pruebas de presión** de todas las líneas de fontanería
+- **Detección electrónica de fugas** para precisión exacta
+- **Pruebas de tinte** con equipo de grado profesional
+- **Inspección con cámara subacuática** de tuberías y desagües
+
+Nuestra **garantía Sin Encontrar, Sin Pagar** significa que solo pagas cuando localizamos tu fuga.
+
+## Previniendo Futuras Fugas de Piscina
+
+Una vez reparada tu fuga, previene futuros problemas con estos consejos:
+
+1. **Inspecciones regulares** de accesorios visibles y equipos
+2. **Química del agua adecuada** para prevenir el deterioro
+3. **Reparación pronta** de pequeñas grietas o astillas
+4. **Mantenimiento invernal** para prevenir daños por congelación (raro pero posible en las zonas altas de Lanzarote)
+
+## Obtén Ayuda Profesional Hoy
+
+Si has probado la prueba del cubo y sospechas una fuga, no esperes. Las fugas de agua desperdician dinero y pueden causar daños estructurales a tu piscina y áreas circundantes.
+
+**Contacta con Canary Detect** para detección profesional de fugas de piscinas en Lanzarote. Servimos Playa Blanca, Puerto del Carmen, Costa Teguise, Arrecife y todas las áreas de la isla.
+
+[Contáctanos para un presupuesto gratis →](/es/contacto)
+    `
+  },
+  {
+    id: 2,
+    slug: "senales-fuga-agua-subterranea",
+    title: "7 Señales de una Fuga de Agua Subterránea: Lo que los Propietarios de Lanzarote Deben Saber",
+    excerpt: "Las fugas de agua subterráneas pueden pasar desapercibidas durante meses. Aprende las señales de advertencia y cómo detectar fugas ocultas antes de que causen daños mayores.",
+    date: "2025-01-08",
+    author: "Dave Poxon",
+    category: "Consejos",
+    image: undergroundImg,
+    metaTitle: "Señales de Fuga de Agua Subterránea | Detección de Fugas Ocultas Lanzarote",
+    metaDescription: "Descubre las 7 señales de advertencia de fugas de agua subterráneas. ¿Facturas altas, manchas húmedas, baja presión? Aprende a detectar fugas ocultas en Lanzarote.",
+    keywords: "señales fuga agua subterránea, detección fugas ocultas, fuga tubería subterránea, fuga agua bajo hormigón, contador agua girando, factura agua alta fuga",
+    readTime: 7,
+    content: `
+## Fugas de Agua Ocultas: El Destructor Silencioso de Propiedades
+
+Las fugas de agua subterráneas están entre los problemas más dañinos que un propietario puede enfrentar. A diferencia de las fugas visibles, pueden pasar desapercibidas durante meses o incluso años, causando lentamente daños estructurales y desperdiciando miles de euros en agua.
+
+En Lanzarote, donde el agua es preciosa y cara, detectar fugas subterráneas temprano es crucial. Aquí están las **7 señales de advertencia** que todo propietario debe conocer.
+
+## 1. Facturas de Agua Inexplicablemente Altas
+
+La primera señal más común de una fuga subterránea es un aumento repentino en tu factura de agua sin un aumento correspondiente en el uso.
+
+**Qué buscar:**
+- Factura 20% o más alta de lo habitual
+- Aumento constante durante varios meses
+- Sin cambio en los hábitos de consumo de agua del hogar
+
+**Consejo profesional**: Compara tu factura actual con el mismo período del año pasado, ya que las variaciones estacionales pueden afectar el consumo.
+
+## 2. Contador de Agua Girando Cuando Todos los Grifos Están Cerrados
+
+Esta es una de las pruebas más definitivas para una fuga de agua oculta:
+
+### Cómo Revisar tu Contador de Agua
+
+1. Cierra todos los electrodomésticos que usan agua
+2. Asegúrate de que no hay grifos abiertos
+3. Localiza tu contador de agua
+4. Anota la lectura o mira el dial
+5. Espera 30 minutos sin usar agua
+6. Revisa el contador de nuevo
+
+Si el contador se ha movido, tienes una fuga en algún lugar de tu sistema.
+
+## 3. Zonas Húmedas o Encharcadas en tu Jardín
+
+Las fugas de agua subterráneas a menudo emergen como áreas húmedas inexplicables:
+
+- **Zonas inusualmente verdes** en césped que por lo demás está seco
+- **Puntos fangosos o blandos** que nunca se secan
+- **Agua acumulándose** en la superficie sin fuente obvia
+- **Canales de erosión** apareciendo en el paisajismo
+
+En el clima seco de Lanzarote, las manchas húmedas persistentes son particularmente sospechosas.
+
+## 4. Baja Presión de Agua en Toda la Casa
+
+Una fuga en tu línea de suministro principal puede causar caídas de presión notables:
+
+- **Disminución gradual** de la presión durante semanas o meses
+- **Afecta a todos los grifos** por igual (a diferencia de un problema específico de un accesorio)
+- **Peor durante** horas pico de uso
+
+## 5. Grietas en Paredes, Suelos o Cimientos
+
+El agua socava los cimientos y causa movimiento estructural:
+
+- **Nuevas grietas** apareciendo en paredes o techos
+- **Puertas y ventanas** que de repente se atascan
+- **Suelos desnivelados** o estructuras inclinadas
+- **Grietas en entradas** o patios cerca de la sospechada fuga
+
+## 6. Sonido de Agua Corriendo
+
+A veces puedes escuchar fugas subterráneas si sabes qué buscar:
+
+- **Silbidos o zumbidos** cerca de paredes o suelos
+- **Sonido de agua corriendo** cuando no se usa agua
+- **Más fuerte por la noche** cuando el ruido ambiental es menor
+
+Los detectores profesionales de fugas usan equipos acústicos sensibles para amplificar estos sonidos y localizar con precisión las ubicaciones de las fugas.
+
+## 7. Zonas Calientes en los Suelos
+
+Si tienes tuberías de agua caliente bajo losas de hormigón, una fuga puede crear:
+
+- **Zonas calientes** en suelos de baldosas o hormigón
+- **Calentamiento localizado** en áreas específicas
+- **Temperatura del suelo más alta** de lo normal
+
+Esto es particularmente notable en propiedades con aire acondicionado.
+
+## Por Qué las Fugas Subterráneas Son Tan Peligrosas
+
+Ignorar estas señales de advertencia puede llevar a:
+
+- **Facturas de agua enormes**: Una fuga significativa puede desperdiciar miles de litros al mes
+- **Daños en cimientos**: La erosión del agua socava la integridad estructural
+- **Moho y hongos**: La humedad persistente crea riesgos para la salud
+- **Destrucción del paisaje**: Erosión y daño a las raíces
+- **Responsabilidad legal**: Si la fuga afecta propiedades vecinas
+
+## Detección Profesional de Fugas Subterráneas
+
+Encontrar la ubicación exacta de una fuga subterránea requiere equipo especializado:
+
+### Tecnología que Usamos
+
+- **Dispositivos de escucha acústica**: Amplifican el sonido del agua escapando
+- **Cámaras de imagen térmica**: Detectan diferencias de temperatura causadas por fugas
+- **Detección de gas trazador**: Inyectamos gas inofensivo y detectamos dónde emerge
+- **Radar de penetración terrestre**: Mapea tuberías subterráneas y huecos
+
+### La Ventaja de Canary Detect
+
+Nuestra **garantía Sin Encontrar, Sin Pagar** significa que confiamos en nuestra capacidad para localizar tu fuga. Hemos invertido más de 80.000€ en la última tecnología de detección, permitiéndonos encontrar fugas con precisión centimétrica.
+
+## ¿Qué Pasa Cuando Encontramos tu Fuga?
+
+Una vez localizada, podemos:
+
+1. **Marcar la ubicación exacta** para el contratista que elijas
+2. **Proporcionar un informe detallado** para propósitos de seguros
+3. **Recomendar opciones de reparación** basadas en el tipo de fuga
+4. **Ofrecer servicios de reparación** para ciertos tipos de fugas
+
+## No Esperes: Actúa Ante las Señales de Advertencia
+
+Las fugas de agua subterráneas solo empeoran con el tiempo. Si has notado alguna de estas señales de advertencia, contáctanos para una inspección profesional de detección de fugas.
+
+**Canary Detect** sirve a toda Lanzarote incluyendo Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, Yaiza y Tías.
+
+[Obtén un presupuesto gratis hoy →](/es/contacto)
+    `
+  },
+  {
+    id: 3,
+    slug: "contador-agua-girando-grifos-cerrados",
+    title: "¿El Contador de Agua Gira con los Grifos Cerrados? Esto Es lo que Significa",
+    excerpt: "Si tu contador de agua sigue girando con todos los grifos cerrados, probablemente tienes una fuga oculta. Aprende cómo comprobarlo y qué hacer.",
+    date: "2025-01-02",
+    author: "Pete Ashcroft",
+    category: "Consejos",
+    image: waterMeterImg,
+    metaTitle: "Contador de Agua Girando con Grifos Cerrados | Detección de Fugas Lanzarote",
+    metaDescription: "¿El contador de agua gira cuando todos los grifos están cerrados? Tienes una fuga oculta. Aprende a comprobar tu contador y obtén ayuda profesional en Lanzarote.",
+    keywords: "contador agua girando grifos cerrados, fuga agua oculta, detección fugas agua, contador girando sin uso, encontrar fuga agua, detección fugas Lanzarote",
+    readTime: 6,
+    content: `
+## El Misterio del Contador que Gira
+
+Has cerrado todos los grifos, te has asegurado de que la lavadora no está funcionando, y has comprobado que ningún inodoro está descargando – pero el dial de tu contador de agua sigue moviéndose. Esta situación frustrante es un indicador claro de que el agua está escapando de algún lugar de tu sistema.
+
+Vamos a explorar qué significa esto y cómo encontrar la fuente.
+
+## Confirmando que Tienes una Fuga
+
+Antes de llamar para pedir ayuda, realiza esta simple prueba:
+
+### La Prueba del Contador de 30 Minutos
+
+1. **Localiza tu contador de agua** (normalmente en una caja cerca de la calle o el límite de la propiedad)
+2. **Anota la lectura exacta** incluyendo todos los decimales
+3. **Asegúrate de que no se usa agua** en ningún lugar de la propiedad
+4. **Espera 30 minutos** sin usar agua
+5. **Revisa la lectura de nuevo**
+
+Si los números han cambiado, tienes una fuga. La cantidad de cambio indica la gravedad:
+
+- **Movimiento pequeño**: Fuga menor, pero aún necesita atención
+- **Movimiento significativo**: Fuga mayor que requiere acción urgente
+- **Giro rápido**: Fuga seria – considera cerrar el suministro principal
+
+## ¿A Dónde Va el Agua?
+
+Las fugas ocultas pueden ocurrir en varias ubicaciones:
+
+### Dentro de tu Propiedad
+- **Bajo los suelos**: Especialmente losas de hormigón
+- **Detrás de las paredes**: En tuberías ocultas
+- **En los techos**: Si las tuberías pasan por pisos superiores
+- **Cisternas de inodoros**: Fugas de rebosamiento silenciosas
+
+### Fuera de tu Propiedad
+- **Tuberías de suministro subterráneas**: Entre el contador y la casa
+- **Riego del jardín**: Tuberías enterradas y accesorios
+- **Piscina**: Fugas de fontanería y del vaso
+- **Fuentes ornamentales**: Fuentes y estanques
+
+## Comprobaciones Rápidas que Puedes Hacer
+
+Antes de llamar a profesionales, prueba estas investigaciones sencillas:
+
+### Revisa Todos los Inodoros
+1. Quita la tapa de la cisterna
+2. Añade colorante alimentario al tanque
+3. Espera 15 minutos sin tirar de la cadena
+4. Si aparece color en la taza, la válvula de descarga está fugando
+
+### Escucha las Fugas
+- Pon tu oído en las paredes cerca de las tuberías
+- Escucha por la noche cuando está tranquilo
+- Revisa cerca de calentadores de agua y tanques
+
+### Inspección Visual
+- Busca manchas húmedas en paredes o suelos
+- Revisa bajo los fregaderos y alrededor de electrodomésticos
+- Inspecciona tuberías visibles en busca de goteos
+
+## Por Qué las Fugas Ocultas Son Costosas
+
+En Lanzarote, el agua es cara. Una fuga que desperdicia solo 1 litro por minuto suma:
+
+- **1.440 litros al día**
+- **43.800 litros al mes**
+- **525.600 litros al año**
+
+Eso no es solo agua desperdiciada – es dinero desperdiciado y potencial daño a la propiedad.
+
+## Cuándo Llamar a Profesionales
+
+Si tu prueba del contador confirma una fuga pero no puedes encontrar la fuente, es hora de detección profesional de fugas.
+
+### Lo Que Aportamos a la Búsqueda
+
+En Canary Detect, usamos:
+
+- **Detección acústica**: Escucha el sonido del agua escapando
+- **Imagen térmica**: Ve los cambios de temperatura de las fugas
+- **Gas trazador**: Encuentra el punto exacto de salida de las fugas
+- **Pruebas de presión**: Aísla secciones de tu fontanería
+
+Nuestro equipo puede localizar fugas ocultas bajo hormigón, detrás de paredes, o en lo profundo del subsuelo.
+
+## El Enfoque de Canary Detect
+
+Cuando nos llamas por un contador de agua girando:
+
+1. **Escuchamos** para entender tu situación
+2. **Inspeccionamos** tu contador y fontanería visible
+3. **Probamos** usando nuestro equipo profesional
+4. **Localizamos** la posición exacta de la fuga
+5. **Informamos** con documentación clara
+
+Nuestra **garantía Sin Encontrar, Sin Pagar** significa que no pagas a menos que encontremos la fuga.
+
+## Detén el Giro Hoy
+
+Un contador de agua girando es tu propiedad diciéndote que algo está mal. No lo ignores – el problema solo empeorará y será más caro.
+
+**Contacta con Canary Detect** para detección profesional de fugas en toda Lanzarote. Servimos Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise y todas las áreas de la isla.
+
+[Reserva una inspección de detección de fugas →](/es/contacto)
+    `
+  },
+  {
+    id: 4,
+    slug: "paredes-humedas-causas-soluciones",
+    title: "Paredes Húmedas en Lanzarote: Causas, Detección y Soluciones",
+    excerpt: "Las paredes húmedas no son solo antiestéticas – indican intrusión de agua que necesita ser tratada. Aprende las causas comunes y cómo solucionarlas.",
+    date: "2024-12-18",
+    author: "Dave Poxon",
+    category: "Consejos",
+    image: risingDampImg,
+    metaTitle: "Paredes Húmedas Causas y Soluciones | Detección de Fugas Lanzarote",
+    metaDescription: "¿Paredes húmedas en tu casa de Lanzarote? Descubre las causas desde tuberías con fugas hasta condensación, y aprende cómo la detección profesional puede resolver el problema.",
+    keywords: "paredes húmedas, daño agua paredes, detección fugas pared, humedad por capilaridad, humedad por filtración, problemas condensación, detección fugas Lanzarote",
+    readTime: 7,
+    content: `
+## ¿Por Qué Están Mis Paredes Húmedas?
+
+Las paredes húmedas son un problema común en propiedades de toda Lanzarote, pero las causas no siempre son obvias. Lo que parece simple condensación podría ser en realidad una fuga de agua oculta causando daño continuo.
+
+Entender el tipo de humedad es el primer paso para resolver el problema.
+
+## Tipos de Humedad en Paredes
+
+### 1. Humedad por Capilaridad
+
+El agua del suelo sube a través de las paredes por acción capilar.
+
+**Características:**
+- Afecta solo a paredes de planta baja
+- Marcas de marea hasta 1 metro de altura
+- Depósitos de sal en la superficie de la pared
+- Pintura y papel tapiz despegándose
+
+**Común en Lanzarote**: Menos común debido al clima seco, pero puede ocurrir en propiedades antiguas sin barrera antihumedad.
+
+### 2. Humedad por Filtración
+
+El agua entra a través de la pared desde el exterior.
+
+**Características:**
+- Puede aparecer a cualquier altura
+- Peor durante o después de la lluvia
+- A menudo localizada en áreas específicas
+- Puede seguir grietas o juntas dañadas
+
+**Común en Lanzarote**: Muy común, especialmente en propiedades expuestas al clima o con exteriores envejecidos.
+
+### 3. Condensación
+
+El aire cálido y húmedo encontrándose con superficies frías crea humedad.
+
+**Características:**
+- Peor en meses de invierno
+- A menudo en esquinas y detrás de muebles
+- Acompañada de crecimiento de moho
+- Afecta múltiples habitaciones
+
+**Común en Lanzarote**: Menos común debido al clima cálido y buena ventilación, pero puede ocurrir en propiedades mal ventiladas.
+
+### 4. Fugas de Tuberías
+
+Tuberías de agua ocultas fugando detrás de las paredes.
+
+**Características:**
+- Humedad persistente independientemente del clima
+- Puede estar caliente si es tubería de agua caliente
+- A menudo localizada en puntos específicos
+- Puede estar acompañada de baja presión de agua
+
+**Común en Lanzarote**: Muy común, especialmente en propiedades antiguas con tuberías envejecidas.
+
+## Cómo Identificar la Causa
+
+### Pistas Visuales
+
+| Señal | Causa Probable |
+|-------|----------------|
+| Marca de marea a altura constante | Humedad por capilaridad |
+| Húmedo después de la lluvia | Humedad por filtración |
+| Crecimiento de moho negro | Condensación |
+| Mancha húmeda caliente | Fuga de tubería de agua caliente |
+| Humedad continua | Fuga de tubería |
+
+### Pruebas Caseras
+
+**La Prueba del Papel de Aluminio:**
+1. Pega papel de aluminio a la pared húmeda
+2. Sella todos los bordes con cinta
+3. Espera 24-48 horas
+4. Revisa ambos lados del papel
+
+- Humedad en el lado de la pared = fuente interna (fuga de tubería o capilaridad)
+- Humedad en el lado de la habitación = condensación
+
+## Los Peligros de Ignorar Paredes Húmedas
+
+La humedad no tratada lleva a:
+
+- **Daño estructural**: Paredes y yeso debilitados
+- **Crecimiento de moho**: Riesgos para la salud especialmente para condiciones respiratorias
+- **Peligros eléctricos**: El agua y la electricidad no se mezclan
+- **Devaluación de la propiedad**: La humedad es una preocupación importante para compradores
+- **Costos de reparación crecientes**: Los problemas empeoran con el tiempo
+
+## Detección Profesional de Fugas para Paredes Húmedas
+
+Cuando se sospechan fugas de tuberías, la detección profesional es esencial:
+
+### Tecnología que Usamos
+
+**Imagen Térmica**: Las tuberías con fugas crean diferencias de temperatura visibles en cámaras térmicas. Este método no invasivo nos muestra exactamente dónde fluye el agua detrás de tus paredes.
+
+**Mapeo de Humedad**: Los medidores electrónicos de humedad crean un mapa detallado de la humedad, ayudando a identificar la fuente y extensión del daño por agua.
+
+**Detección Acústica**: Micrófonos sensibles pueden escuchar el sonido del agua escapando de las tuberías, incluso a través de paredes y suelos.
+
+**Gas Trazador**: Para fugas difíciles de encontrar, inyectamos gas trazador inofensivo en las tuberías y detectamos dónde escapa.
+
+## Soluciones para Diferentes Tipos de Humedad
+
+### Para Fugas de Tuberías
+1. Detección profesional de fugas para localizar la fuente
+2. Reparar o reemplazar la sección dañada
+3. Permitir que las paredes se sequen (puede tomar semanas)
+4. Reenyesar y redecorar
+
+### Para Humedad por Filtración
+1. Identificar punto de entrada
+2. Reparar pared exterior, juntas o sellados
+3. Considerar impermeabilización externa
+4. Permitir secado antes de redecorar
+
+### Para Humedad por Capilaridad
+1. Instalar barrera química antihumedad
+2. Reenyesar con mortero especializado
+3. Asegurar que los niveles del suelo son correctos
+4. Mejorar el drenaje alrededor de la propiedad
+
+### Para Condensación
+1. Mejorar la ventilación
+2. Considerar deshumidificación
+3. Aumentar el aislamiento si es posible
+4. Abordar factores de estilo de vida
+
+## ¿Por Qué Elegir Canary Detect?
+
+Nos especializamos en encontrar las causas ocultas de las paredes húmedas:
+
+- **Métodos no invasivos**: Sin daño innecesario a las paredes
+- **Detección precisa**: Localización exacta de fugas
+- **Informes detallados**: Para seguros y contratistas
+- **Sin Encontrar, Sin Pagar**: Resultados garantizados
+
+## Haz que Investiguen tus Paredes Húmedas
+
+No adivines la causa de tus paredes húmedas – obtén un diagnóstico profesional. Lo que parece condensación podría ser una fuga oculta que te cuesta dinero cada día.
+
+**Contacta con Canary Detect** para servicios de detección de fugas en toda Lanzarote.
+
+[Solicita una inspección →](/es/contacto)
+    `
+  },
+  {
+    id: 5,
+    slug: "imagen-termica-deteccion-fugas-explicada",
+    title: "Cómo la Imagen Térmica Encuentra Fugas de Agua Ocultas: Tecnología Explicada",
+    excerpt: "Descubre cómo las cámaras de imagen térmica detectan fugas de agua detrás de paredes y bajo suelos sin ningún daño a tu propiedad.",
+    date: "2024-12-10",
+    author: "Pete Ashcroft",
+    category: "Tecnología",
+    image: thermalUndergroundImg,
+    metaTitle: "Imagen Térmica para Detección de Fugas | Cómo Funciona | Lanzarote",
+    metaDescription: "Aprende cómo las cámaras de imagen térmica encuentran fugas de agua ocultas detrás de paredes y bajo suelos. Tecnología de detección no invasiva explicada por expertos de Lanzarote.",
+    keywords: "imagen térmica detección fugas, detección fugas infrarroja, detección fugas no invasiva, encontrar fuga sin daño, cámara térmica fuga agua, tecnología detección fugas",
+    readTime: 6,
+    content: `
+## La Ciencia de Ver lo Invisible
+
+La imagen térmica es una de las herramientas más potentes en la detección moderna de fugas. Esta tecnología nos permite "ver" diferencias de temperatura que son invisibles a simple vista, revelando fugas de agua ocultas sin cortar paredes o suelos.
+
+## Cómo Funciona la Imagen Térmica
+
+### El Principio Básico
+
+Todo emite radiación infrarroja basada en su temperatura. Las cámaras de imagen térmica detectan esta radiación y la convierten en una imagen visible donde diferentes temperaturas aparecen como diferentes colores.
+
+**En detección de fugas:**
+- El agua evaporándose crea áreas más frías
+- Las tuberías de agua caliente aparecen como líneas cálidas
+- La humedad en las paredes se muestra como variaciones de temperatura
+- Las ubicaciones de fugas se convierten en patrones visibles
+
+### Lo Que Ve la Cámara
+
+Una imagen térmica típica muestra:
+- **Azul/púrpura**: Áreas más frías (a menudo húmedas)
+- **Verde/amarillo**: Temperaturas normales
+- **Naranja/rojo**: Áreas más cálidas (tuberías calientes o superficies calentadas por el sol)
+
+## Ventajas de la Imagen Térmica
+
+### 1. Detección No Invasiva
+
+La búsqueda tradicional de fugas podría implicar:
+- Hacer agujeros en paredes
+- Romper suelos
+- Excavar jardines
+
+La imagen térmica no requiere **nada de esto**. Simplemente apuntamos la cámara a las superficies y vemos lo que está pasando dentro.
+
+### 2. Velocidad y Eficiencia
+
+Una inspección térmica puede cubrir grandes áreas rápidamente:
+- Habitaciones enteras en minutos
+- Propiedades completas en horas
+- Resultados inmediatos en pantalla
+
+### 3. Documentación
+
+Las imágenes térmicas proporcionan:
+- Prueba visual de ubicaciones de fugas
+- Comparación antes y después
+- Evidencia para reclamaciones de seguros
+- Registros para contratistas
+
+### 4. Encontrar Múltiples Problemas
+
+Durante una inspección térmica, a menudo descubrimos:
+- Fugas adicionales más pequeñas
+- Deficiencias de aislamiento
+- Puntos calientes eléctricos
+- Puntos de infiltración de aire
+
+## Limitaciones de la Imagen Térmica
+
+### No Es Visión de Rayos X
+
+Las cámaras térmicas ven diferencias de temperatura en superficies, no a través de ellas. Necesitamos:
+- Que existan diferencias de temperatura
+- Tiempo adecuado para transferencia de calor
+- Condiciones ambientales apropiadas
+
+### Mejores Condiciones
+
+La imagen térmica funciona mejor:
+- Cuando los sistemas de calefacción/refrigeración están funcionando
+- Con diferencia de temperatura entre interior y exterior
+- Cuando las superficies han tenido tiempo de estabilizarse
+- Sin interferencia de luz solar directa
+
+## Aplicaciones del Mundo Real en Lanzarote
+
+### Fugas de Tuberías de Agua Caliente
+
+Las tuberías de agua caliente que pasan por paredes o bajo suelos se detectan fácilmente:
+- Las tuberías de agua caliente se muestran claramente como líneas cálidas en la imagen térmica
+- Las fugas aparecen como manchas frías húmedas donde el agua está escapando
+- Áreas enteras pueden escanearse rápidamente sin molestias
+
+### Fugas de Piscinas
+
+Para detección de fugas de piscinas:
+- Las cámaras térmicas pueden identificar rutas de tuberías subterráneas
+- Las fugas se muestran como puntos fríos donde el agua emerge
+- Los vasos de piscinas pueden escanearse en busca de anomalías de temperatura
+
+### Fugas de Techos Planos
+
+Muchas propiedades de Lanzarote tienen techos planos:
+- La humedad atrapada se muestra como diferencias de temperatura
+- Los puntos de entrada pueden identificarse antes de la lluvia
+- Grandes áreas inspeccionadas eficientemente
+
+## Nuestro Equipo de Imagen Térmica
+
+En Canary Detect, usamos cámaras de imagen térmica de grado profesional con:
+
+- **Alta resolución**: Imágenes detalladas que muestran ubicaciones precisas
+- **Precisión de temperatura**: Lecturas ±2% para análisis fiable
+- **Amplio rango de temperatura**: Adecuado para todas las condiciones
+- **Grabación digital**: Capacidad completa de documentación
+
+## La Imagen Térmica en Nuestro Proceso de Detección
+
+La imagen térmica es a menudo el primer paso en nuestro enfoque integral:
+
+1. **Inspección térmica**: Identificar áreas de preocupación
+2. **Mapeo de humedad**: Confirmar áreas húmedas electrónicamente
+3. **Detección acústica**: Escuchar fugas activas
+4. **Gas trazador**: Localizar ubicaciones exactas de fugas
+
+Este enfoque multi-tecnológico asegura que encontremos fugas con precisión y eficiencia.
+
+## Caso de Estudio: Villa en Playa Blanca
+
+**El problema**: El propietario notó facturas de agua crecientes pero sin fugas visibles.
+
+**La imagen térmica reveló**: Una firma térmica clara mostrando el camino de una tubería de agua caliente con un punto frío distintivo donde el agua estaba escapando.
+
+**El resultado**: Fuga localizada con precisión, reparación completada con daño mínimo al suelo, factura de agua volvió a la normalidad.
+
+## Reserva una Inspección de Imagen Térmica
+
+Si sospechas fugas ocultas en tu propiedad de Lanzarote, la imagen térmica puede revelar la verdad sin ningún daño.
+
+**Contacta con Canary Detect** – nuestra **garantía Sin Encontrar, Sin Pagar** asegura que solo pagas cuando encontramos tu fuga.
+
+[Programa tu inspección →](/es/contacto)
+    `
+  },
+  {
+    id: 6,
+    slug: "coste-reparacion-fugas-piscina-lanzarote",
+    title: "Costes de Reparación de Fugas de Piscina en Lanzarote: Qué Esperar",
+    excerpt: "Entiende los costes de detección y reparación de fugas de piscina en Lanzarote. Desde arreglos menores hasta reparaciones mayores, aquí está tu guía completa de precios.",
+    date: "2024-12-01",
+    author: "Dave Poxon",
+    category: "Cuidado de Piscinas",
+    image: poolDiverImg,
+    metaTitle: "Coste Reparación Fuga Piscina Lanzarote | Precios Detección Fugas Piscina",
+    metaDescription: "¿Cuánto cuesta la detección y reparación de fugas de piscina en Lanzarote? Guía completa de precios de reparación de piscinas, desde detección hasta solución. Garantía Sin Encontrar, Sin Pagar.",
+    keywords: "coste reparación fuga piscina, precio detección fugas piscina, coste arreglar fuga piscina Lanzarote, precios reparación piscina, coste detección fugas, reparación fontanería piscina",
+    readTime: 7,
+    content: `
+## Entendiendo los Costes de Fugas de Piscina
+
+Cuando tu piscina está perdiendo agua, una de tus primeras preguntas probablemente sea "¿Cuánto costará arreglar esto?" La respuesta depende de varios factores, desde el tipo de fuga hasta su ubicación y accesibilidad.
+
+Esta guía desglosa los costes típicos que puedes esperar en Lanzarote.
+
+## Costes de Detección Profesional de Fugas
+
+Antes de que cualquier reparación pueda ocurrir, la fuga debe ser encontrada. La detección profesional de fugas típicamente cuesta:
+
+### Inspección Estándar de Piscina
+- **Qué incluye**: Inspección exhaustiva del vaso de la piscina, accesorios y fontanería visible
+- **Tecnología usada**: Prueba de tinte, prueba de presión, detección electrónica
+- **Duración**: 2-4 horas
+- **Resultado**: Informe detallado identificando ubicación(es) de la fuga
+
+### Inspección Extendida (Fugas Complejas)
+- **Qué incluye**: Prueba de presión completa de fontanería, investigación de tuberías subterráneas
+- **Tecnología usada**: Gas trazador, detección acústica, imagen térmica
+- **Duración**: Medio día a día completo
+- **Resultado**: Ubicación precisa de fugas ocultas
+
+**Recuerda**: Nuestra **garantía Sin Encontrar, Sin Pagar** significa que solo pagas cuando localizamos exitosamente tu fuga.
+
+## Reparaciones Comunes de Fugas de Piscina y Costes
+
+### Reparaciones Menores
+
+**Reemplazo de Accesorios**
+- Nichos de luces, accesorios de retorno, caras de skimmers
+- Normalmente reemplazo sencillo
+- Puede requerir vaciar parcialmente la piscina
+
+**Reparaciones de Lechada y Azulejos**
+- Relechado de líneas de azulejos
+- Reemplazo de azulejos agrietados
+- Parches de superficie
+
+**Reparaciones de Equipos**
+- Reemplazo de sello de bomba
+- Arreglos de carcasa de filtro
+- Reemplazos de válvulas
+
+### Reparaciones Moderadas
+
+**Reparaciones de Skimmer**
+- Cuerpos de skimmer agrietados
+- Conexiones skimmer-piscina
+- Puede requerir cortar la terraza
+
+**Reparaciones de Grietas en el Vaso**
+- Grietas superficiales en fibra de vidrio o hormigón
+- Inyección de grietas estructurales
+- Aplicación de revestimiento impermeabilizante
+
+**Reparaciones Subacuáticas**
+- Reparaciones aplicadas por buzo
+- Aplicaciones de epoxi
+- Sellados de accesorios
+
+### Reparaciones Mayores
+
+**Reparaciones de Tuberías Subterráneas**
+- Excavación requerida
+- Reemplazo de tuberías
+- Restauración de la terraza
+
+**Reenlucido de Piscina**
+- Si las fugas son a través de superficie deteriorada
+- Vaciado completo requerido
+- Proceso de varios días
+
+**Reparaciones Estructurales**
+- Problemas de cimientos
+- Daño mayor del vaso
+- Puede requerir consulta de ingeniería
+
+## Factores que Afectan los Costes de Reparación
+
+### Ubicación de la Fuga
+- **Accesible**: Accesorios, tuberías visibles = coste menor
+- **Oculta**: Detrás de paredes, bajo terraza = coste mayor
+- **Subterránea**: Tuberías enterradas = coste más alto
+
+### Tipo de Fuga
+- **Simple**: Fallo de junta o sello = reparación sencilla
+- **Compleja**: Múltiples fugas, daño en vaso = trabajo extensivo
+
+### Tipo de Piscina
+- **Fibra de vidrio**: Generalmente reparaciones más fáciles
+- **Hormigón/gunite**: Más trabajo intensivo
+- **Con azulejos**: Trabajo adicional de azulejos requerido
+
+### Accesibilidad
+- **Fácil acceso**: Equipo estándar suficiente
+- **Difícil acceso**: Equipo especial, más tiempo
+
+## Consejos para Ahorrar Costes
+
+### Actúa Temprano
+Las fugas pequeñas se convierten en fugas grandes. Un accesorio que gotea hoy podría estar soltando chorros el próximo mes. La detección y reparación temprana ahorra dinero.
+
+### Obtén Detección Adecuada Primero
+No dejes que los contratistas empiecen a cavar sin detección profesional de fugas. Encontrar la ubicación exacta primero previene excavación innecesaria y costes de reparación.
+
+### Considera la Edad de la Piscina
+Para piscinas antiguas con múltiples problemas, sopesa los costes de reparación contra opciones de renovación.
+
+### Mantenimiento Regular
+El mantenimiento preventivo detecta problemas antes de que se conviertan en reparaciones caras.
+
+## El Verdadero Coste de Ignorar Fugas de Piscina
+
+Una piscina con fugas cuesta dinero cada día:
+
+**Pérdida de agua**: Rellenado constante aumenta las facturas de agua
+**Desperdicio de químicos**: El agua arrastra químicos caros
+**Costes de energía**: Calentar agua de reposición
+**Daño estructural**: El agua socava la terraza y alrededores
+**Desgaste de equipos**: Las bombas trabajan más duro para mantener niveles
+
+Incluso una fuga moderada puede costar 50-100€+ al mes solo en agua.
+
+## Nuestro Enfoque a la Detección de Fugas de Piscina
+
+En Canary Detect:
+
+1. **Inspeccionamos a fondo**: Identificamos todas las fugas, no solo la obvia
+2. **Informamos claramente**: Proporcionamos hallazgos detallados con fotos
+3. **Aconsejamos honestamente**: Recomendamos enfoques de reparación apropiados
+4. **Garantizamos resultados**: Sin Encontrar, Sin Pagar en servicios de detección
+
+## ¿Por Qué Elegir Detección Profesional?
+
+**Riesgos del enfoque DIY:**
+- Perder fugas ocultas
+- Diagnosticar mal el problema
+- Reparaciones innecesarias
+- Pérdida continua de agua
+
+**La detección profesional proporciona:**
+- Ubicación precisa de fugas
+- Evaluación completa
+- Documentación para contratistas
+- Reparaciones rentables
+
+## Haz que Inspeccionen tu Piscina
+
+Deja de perder agua y dinero. Contacta con Canary Detect para detección profesional de fugas de piscinas en toda Lanzarote.
+
+Servimos a propietarios de piscinas en Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza y en toda la isla.
+
+[Solicita una inspección de fugas de piscina →](/es/contacto)
+    `
+  }
+];
+
+// Slug mapping for English to Spanish
+export const blogSlugMap: Record<string, string> = {
+  "how-to-check-for-pool-leaks-lanzarote": "como-detectar-fugas-en-piscinas-lanzarote",
+  "signs-of-underground-water-leak": "senales-fuga-agua-subterranea",
+  "water-meter-running-when-taps-off": "contador-agua-girando-grifos-cerrados",
+  "damp-walls-causes-solutions": "paredes-humedas-causas-soluciones",
+  "thermal-imaging-leak-detection-explained": "imagen-termica-deteccion-fugas-explicada",
+  "swimming-pool-leak-repair-cost-lanzarote": "coste-reparacion-fugas-piscina-lanzarote"
+};
+
+// Reverse slug mapping for Spanish to English
+export const reverseBlogSlugMap: Record<string, string> = Object.fromEntries(
+  Object.entries(blogSlugMap).map(([en, es]) => [es, en])
+);
+
+// Helper function to get articles based on language
+export const getBlogArticles = (isSpanish: boolean): BlogArticle[] => {
+  return isSpanish ? blogArticlesEs : blogArticlesEn;
+};
+
+// Legacy export for backwards compatibility
+export const blogArticles = blogArticlesEn;
+
+export function getArticleBySlug(slug: string, isSpanish: boolean = false): BlogArticle | undefined {
+  const articles = getBlogArticles(isSpanish);
+  return articles.find(article => article.slug === slug);
 }
 
-export function getRelatedArticles(currentSlug: string, limit: number = 3): BlogArticle[] {
-  return blogArticles
+export function getRelatedArticles(currentSlug: string, isSpanish: boolean = false, limit: number = 3): BlogArticle[] {
+  const articles = getBlogArticles(isSpanish);
+  return articles
     .filter(article => article.slug !== currentSlug)
     .slice(0, limit);
+}
+
+// Helper to get equivalent slug in other language
+export function getEquivalentBlogSlug(slug: string, toSpanish: boolean): string {
+  if (toSpanish) {
+    return blogSlugMap[slug] || slug;
+  }
+  return reverseBlogSlugMap[slug] || slug;
 }
