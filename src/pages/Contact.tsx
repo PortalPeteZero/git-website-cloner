@@ -9,8 +9,10 @@ import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle, AlertCircle } from "l
 import contactHero from "@/assets/hero/contact-hero.jpg";
 import SEOHead from "@/components/seo/SEOHead";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
+import { useTranslation } from "@/i18n/LanguageContext";
 
 const Contact = () => {
+  const { t, isSpanish } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -27,10 +29,10 @@ const Contact = () => {
 
   const getFieldError = (field: string) => {
     if (!touched[field]) return null;
-    if (field === "name" && formData.name.trim().length < 2) return "Name is required";
-    if (field === "email" && !validateEmail(formData.email)) return "Valid email is required";
-    if (field === "phone" && !validatePhone(formData.phone)) return "Enter a valid phone number";
-    if (field === "message" && formData.message.trim().length < 10) return "Message must be at least 10 characters";
+    if (field === "name" && formData.name.trim().length < 2) return t('forms.errors.nameRequired');
+    if (field === "email" && !validateEmail(formData.email)) return t('forms.errors.emailRequired');
+    if (field === "phone" && !validatePhone(formData.phone)) return t('forms.errors.phoneInvalid');
+    if (field === "message" && formData.message.trim().length < 10) return t('forms.errors.messageMin');
     return null;
   };
 
@@ -68,13 +70,33 @@ const Contact = () => {
     return `${base} border-input hover:border-primary/50 focus:border-primary focus:ring-4 focus:ring-primary/10`;
   };
 
+  const serviceOptions = isSpanish ? [
+    { value: "", label: "Seleccione un servicio..." },
+    { value: "drain-detection", label: "Detección de Desagües" },
+    { value: "pipe-inspection", label: "Inspección de Tuberías" },
+    { value: "underground-detection", label: "Detección Subterránea" },
+    { value: "water-leak", label: "Detección de Fugas de Agua" },
+    { value: "pool-leak", label: "Detección de Fugas de Piscinas" },
+    { value: "leak-repair", label: "Reparación de Fugas" },
+    { value: "other", label: "Otro" },
+  ] : [
+    { value: "", label: "Select a service..." },
+    { value: "drain-detection", label: "Drain Detection" },
+    { value: "pipe-inspection", label: "Pipe Inspection" },
+    { value: "underground-detection", label: "Underground Detection" },
+    { value: "water-leak", label: "Water Leak Detection" },
+    { value: "pool-leak", label: "Pool Leak Detection" },
+    { value: "leak-repair", label: "Leak Repair" },
+    { value: "other", label: "Other" },
+  ];
+
   return (
     <Layout>
       <SEOHead 
-        title="Contact Canary Detect | Leak Detection Lanzarote | Emergency Leak Repair"
-        description="Contact Canary Detect for professional leak detection in Lanzarote. Emergency leak repair available. Free quotes for water leak detection, pool leak detection & pipe inspection. Call +34 711 051 071"
-        keywords="leak detection Lanzarote, emergency leak repair Lanzarote, leak detection Lanzarote prices, pool leak detection Playa Blanca, water leak repair Canary Islands"
-        canonical="https://canary-detect.com/contact"
+        title={t('meta.contact.title')}
+        description={t('meta.contact.description')}
+        keywords={t('meta.contact.keywords')}
+        canonical={isSpanish ? "https://canary-detect.com/es/contacto" : "https://canary-detect.com/contact"}
       />
       <LocalBusinessSchema page="contact" />
       {/* Hero Section */}
@@ -91,13 +113,14 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Contact The Leaky Finders</span>
+            <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
+              {t('contact.heroSubtitle')}
+            </span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
-              Contact Lanzarote <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Leak Detection Experts</span>
+              {t('contact.heroTitle')} <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">{t('contact.heroTitleHighlight')}</span>
             </h1>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
-              Need leak detection in Lanzarote? Contact The Leaky Finders for a free consultation and quote. 
-              Emergency leak repair available. Serving Arrecife, Puerto del Carmen, Playa Blanca & all areas.
+              {t('contact.heroDescription')}
             </p>
           </motion.div>
         </div>
@@ -115,7 +138,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
-                Send Us a Message
+                {t('contact.sendMessage')}
               </h2>
 
               {/* Success Message */}
@@ -128,7 +151,7 @@ const Contact = () => {
                     className="mb-6 p-4 bg-green-500/10 border border-green-500 rounded-lg flex items-center gap-3"
                   >
                     <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="text-green-700 font-medium">Message sent successfully! We'll get back to you soon.</span>
+                    <span className="text-green-700 font-medium">{t('forms.messageSentSuccess')}</span>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -136,13 +159,13 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-sm font-medium text-foreground">Your Name</Label>
+                    <Label htmlFor="name" className="text-sm font-medium text-foreground">{t('forms.yourName')}</Label>
                     <Input 
                       id="name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       onBlur={() => handleBlur("name")}
-                      placeholder="John Smith" 
+                      placeholder={t('forms.placeholders.name')} 
                       className={getInputClassName("name")}
                     />
                     {getFieldError("name") && (
@@ -152,14 +175,14 @@ const Contact = () => {
                     )}
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-sm font-medium text-foreground">Phone Number</Label>
+                    <Label htmlFor="phone" className="text-sm font-medium text-foreground">{t('forms.phoneNumber')}</Label>
                     <Input 
                       id="phone" 
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       onBlur={() => handleBlur("phone")}
-                      placeholder="+34 600 000 000" 
+                      placeholder={t('forms.placeholders.phone')} 
                       className={getInputClassName("phone")}
                     />
                     {getFieldError("phone") && (
@@ -170,14 +193,14 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm font-medium text-foreground">Email Address</Label>
+                  <Label htmlFor="email" className="text-sm font-medium text-foreground">{t('forms.email')}</Label>
                   <Input 
                     id="email" 
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     onBlur={() => handleBlur("email")}
-                    placeholder="john@example.com" 
+                    placeholder={t('forms.placeholders.email')} 
                     className={getInputClassName("email")}
                   />
                   {getFieldError("email") && (
@@ -187,31 +210,26 @@ const Contact = () => {
                   )}
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="service" className="text-sm font-medium text-foreground">Service Required</Label>
+                  <Label htmlFor="service" className="text-sm font-medium text-foreground">{t('forms.serviceRequired')}</Label>
                   <select
                     id="service"
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="flex h-12 w-full rounded-md border-2 border-input bg-background px-4 py-3 text-base appearance-none cursor-pointer transition-all duration-200 hover:border-primary/50 focus:border-primary focus:ring-4 focus:ring-primary/10 focus:outline-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23f97316%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_12px_center] bg-no-repeat"
                   >
-                    <option value="">Select a service...</option>
-                    <option value="drain-detection">Drain Detection</option>
-                    <option value="pipe-inspection">Pipe Inspection</option>
-                    <option value="underground-detection">Underground Detection</option>
-                    <option value="water-leak">Water Leak Detection</option>
-                    <option value="pool-leak">Pool Leak Detection</option>
-                    <option value="leak-repair">Leak Repair</option>
-                    <option value="other">Other</option>
+                    {serviceOptions.map(option => (
+                      <option key={option.value} value={option.value}>{option.label}</option>
+                    ))}
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-sm font-medium text-foreground">Your Message</Label>
+                  <Label htmlFor="message" className="text-sm font-medium text-foreground">{t('forms.yourMessage')}</Label>
                   <Textarea
                     id="message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     onBlur={() => handleBlur("message")}
-                    placeholder="Please describe your problem or enquiry..."
+                    placeholder={t('forms.placeholders.message')}
                     rows={5}
                     className={`${getInputClassName("message")} min-h-[120px] resize-y`}
                   />
@@ -234,15 +252,15 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="h-4 w-4 animate-spin" />
-                      Sending...
+                      {t('forms.sending')}
                     </>
                   ) : submitStatus === "success" ? (
                     <>
                       <CheckCircle className="h-4 w-4" />
-                      Sent!
+                      {t('forms.sent')}
                     </>
                   ) : (
-                    "Send Message"
+                    t('forms.sendMessage')
                   )}
                 </Button>
               </form>
@@ -255,11 +273,10 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
-                Contact The Leaky Finders
+                {t('contact.contactInfo')}
               </h2>
               <p className="text-muted-foreground mb-8">
-                We're available to help with your leak detection needs. 
-                Get in touch using any of the methods below.
+                {t('contact.contactDescription')}
               </p>
 
               <div className="space-y-6">
@@ -268,7 +285,7 @@ const Contact = () => {
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
                 <div>
-                    <h3 className="font-heading font-bold mb-1">Phone</h3>
+                    <h3 className="font-heading font-bold mb-1">{t('contact.phone')}</h3>
                     <a href="tel:+34711051071" className="text-muted-foreground hover:text-primary transition-colors">
                       +34 711 051 071
                     </a>
@@ -280,7 +297,7 @@ const Contact = () => {
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold mb-1">Email</h3>
+                    <h3 className="font-heading font-bold mb-1">{t('contact.email')}</h3>
                     <a href="mailto:info@canary-detect.com" className="text-muted-foreground hover:text-primary transition-colors">
                       info@canary-detect.com
                     </a>
@@ -292,14 +309,13 @@ const Contact = () => {
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold mb-1">Office</h3>
+                    <h3 className="font-heading font-bold mb-1">{t('contact.office')}</h3>
                     <p className="text-muted-foreground">
                       Zona Industrial, 1<br />
                       35580 Playa Blanca, Lanzarote
                     </p>
-                    <p className="text-muted-foreground text-sm mt-2">
-                      Serving all of Lanzarote including<br />
-                      Arrecife, Puerto del Carmen & Costa Teguise
+                    <p className="text-muted-foreground text-sm mt-2 whitespace-pre-line">
+                      {t('contact.servingAreas')}
                     </p>
                   </div>
                 </div>
@@ -309,11 +325,9 @@ const Contact = () => {
                     <Clock className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold mb-1">Hours</h3>
-                    <p className="text-muted-foreground">
-                      Monday - Friday: 8:00 - 18:00<br />
-                      Saturday: 9:00 - 14:00<br />
-                      Emergency calls available
+                    <h3 className="font-heading font-bold mb-1">{t('contact.hours')}</h3>
+                    <p className="text-muted-foreground whitespace-pre-line">
+                      {t('contact.hoursText')}
                     </p>
                   </div>
                 </div>
@@ -329,7 +343,7 @@ const Contact = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Canary Detect Office - Playa Blanca, Lanzarote"
+                  title={isSpanish ? "Oficina Canary Detect - Playa Blanca, Lanzarote" : "Canary Detect Office - Playa Blanca, Lanzarote"}
                 />
               </div>
             </motion.div>
