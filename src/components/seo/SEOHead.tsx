@@ -55,7 +55,7 @@ export default function SEOHead({
     
     if (ogTitle) ogTitle.setAttribute('content', title);
     if (ogDescription) ogDescription.setAttribute('content', description);
-    if (ogImage) ogImage.setAttribute('content', image.startsWith('http') ? image : `https://canary-detect.com${image}`);
+    if (ogImage) ogImage.setAttribute('content', image.startsWith('http') ? image : `https://canary-detect.com${image}?v=2`);
     if (ogType) ogType.setAttribute('content', type);
     if (ogLocale) ogLocale.setAttribute('content', isSpanish ? 'es_ES' : 'en_GB');
     if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', isSpanish ? 'en_GB' : 'es_ES');
@@ -69,7 +69,7 @@ export default function SEOHead({
     
     if (twitterTitle) twitterTitle.setAttribute('content', title);
     if (twitterDescription) twitterDescription.setAttribute('content', description);
-    if (twitterImage) twitterImage.setAttribute('content', image.startsWith('http') ? image : `https://canary-detect.com${image}`);
+    if (twitterImage) twitterImage.setAttribute('content', image.startsWith('http') ? image : `https://canary-detect.com${image}?v=2`);
     if (twitterUrl && canonical) twitterUrl.setAttribute('content', canonical);
     
     // Update canonical if provided
