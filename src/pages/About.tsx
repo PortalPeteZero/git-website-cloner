@@ -68,13 +68,13 @@ const About = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 {isSpanish ? (
                   <>
-                    Canary Detect se fundó con una misión simple: proporcionar a Lanzarote 
+                    Canary Detect es el nombre comercial de Camello Blanco S.L., una empresa con sede en Lanzarote establecida en 2014. Nos fundamos con una misión simple: proporcionar a Lanzarote 
                     <Link to="/es/servicios" className="text-primary hover:underline"> servicios profesionales y fiables de detección de fugas</Link>. Entendemos lo frustrantes y 
                     costosas que pueden ser las fugas de agua, por eso hemos invertido más de <Link to="/es/tecnologia" className="text-primary hover:underline font-semibold">€80.000 en los últimos equipos</Link> y formación para ofrecer resultados precisos.
                   </>
                 ) : (
                   <>
-                    Canary Detect was founded with a simple mission: to provide Lanzarote with 
+                    Canary Detect is the trading name of Camello Blanco S.L., a Lanzarote-based company established in 2014. We were founded with a simple mission: to provide Lanzarote with 
                     professional, reliable <Link to="/services" className="text-primary hover:underline">leak detection services</Link>. We understand how frustrating and 
                     costly water leaks can be, which is why we've invested over <Link to="/technology" className="text-primary hover:underline font-semibold">€80,000 in the latest equipment</Link> and training to deliver accurate results.
                   </>
