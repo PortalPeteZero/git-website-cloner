@@ -337,15 +337,16 @@
   @apply text-foreground font-semibold;
 }
 
-/* Bold text followed by content = styled as mini-headers */
-.blog-prose p > strong:first-child:only-child,
-.blog-prose li > strong:first-child {
-  @apply text-foreground block mb-1;
-}
+/*
+  IMPORTANT:
+  Avoid forcing <strong> to display:block inside paragraphs/lists.
+  In normal prose, a paragraph often has only ONE element (<strong>) plus text nodes.
+  Selectors like :only-child ignore text nodes, so they mistakenly match mid-sentence
+  emphasis (e.g. "...a **mains bypass**. This...") and push the term onto its own line.
+*/
 
-/* Info boxes for content wrapped in bold headers */
-.blog-prose h4 + ul,
-.blog-prose p:has(> strong:first-child) + ul {
+/* Info boxes for lists that follow explicit sub-headings */
+.blog-prose h4 + ul {
   @apply bg-muted/50 rounded-lg p-4 border-l-4 border-primary/30;
 }
 
