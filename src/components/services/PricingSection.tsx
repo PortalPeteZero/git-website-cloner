@@ -9,35 +9,49 @@ import {
   CheckCircle,
   ArrowRight
 } from "lucide-react";
+import { useTranslation } from "@/i18n/LanguageContext";
 
-const guarantees = [
+const getGuarantees = (isSpanish: boolean) => [
   {
     icon: Shield,
-    title: "No Find, No Fee",
-    description: "If we confirm you have a leak but cannot locate it, there is no charge. This has never happened so far.",
+    title: isSpanish ? "Sin Encontrar, Sin Pagar" : "No Find, No Fee",
+    description: isSpanish 
+      ? "Si confirmamos que tiene una fuga pero no podemos localizarla, no hay cargo. Esto nunca ha sucedido hasta ahora."
+      : "If we confirm you have a leak but cannot locate it, there is no charge. This has never happened so far.",
     highlight: true
   },
   {
     icon: BadgeCheck,
-    title: "Fixed Fee Policy",
-    description: "We quote a fixed price upfront and stick to it, regardless of how long the survey takes. No surprises."
+    title: isSpanish ? "Política de Precio Fijo" : "Fixed Fee Policy",
+    description: isSpanish
+      ? "Cotizamos un precio fijo por adelantado y lo mantenemos, independientemente de cuánto dure la inspección. Sin sorpresas."
+      : "We quote a fixed price upfront and stick to it, regardless of how long the survey takes. No surprises."
   },
   {
     icon: MessageSquareQuote,
-    title: "Free Quotes",
-    description: "Contact us for a free, no-obligation quote for your specific situation. We'll assess your needs and provide transparent pricing."
+    title: isSpanish ? "Presupuestos Gratis" : "Free Quotes",
+    description: isSpanish
+      ? "Contáctenos para un presupuesto gratuito y sin compromiso para su situación específica. Evaluaremos sus necesidades y proporcionaremos precios transparentes."
+      : "Contact us for a free, no-obligation quote for your specific situation. We'll assess your needs and provide transparent pricing."
   },
   {
     icon: FileText,
-    title: "Insurance Reports Included",
-    description: "Every survey includes a detailed professional photographic report suitable for insurance claims at no extra cost."
+    title: isSpanish ? "Informes para Seguros Incluidos" : "Insurance Reports Included",
+    description: isSpanish
+      ? "Cada inspección incluye un informe fotográfico profesional detallado adecuado para reclamaciones de seguros sin coste adicional."
+      : "Every survey includes a detailed professional photographic report suitable for insurance claims at no extra cost."
   }
 ];
 
-const pricingInfo = [
+const getPricingInfo = (isSpanish: boolean) => [
   {
-    title: "Residential Leak Detection",
-    features: [
+    title: isSpanish ? "Detección de Fugas Residencial" : "Residential Leak Detection",
+    features: isSpanish ? [
+      "Inspección a precio fijo para casas y villas",
+      "Informe completo con hallazgos incluido",
+      "Garantía Sin Encontrar, Sin Pagar aplica",
+      "Servicio el mismo día frecuentemente disponible"
+    ] : [
       "Fixed fee survey for homes and villas",
       "Full report with findings included",
       "No Find, No Fee guarantee applies",
@@ -45,8 +59,13 @@ const pricingInfo = [
     ]
   },
   {
-    title: "Swimming Pool Leak Detection",
-    features: [
+    title: isSpanish ? "Detección de Fugas de Piscinas" : "Swimming Pool Leak Detection",
+    features: isSpanish ? [
+      "Inspecciones especializadas de piscinas y spas",
+      "Pruebas de presión y localización",
+      "Recomendaciones de reparación incluidas",
+      "Funciona en todos los tipos de piscinas"
+    ] : [
       "Specialist pool and spa surveys",
       "Pressure testing and location",
       "Repair recommendations included",
@@ -54,8 +73,13 @@ const pricingInfo = [
     ]
   },
   {
-    title: "Commercial Leak Detection",
-    features: [
+    title: isSpanish ? "Detección de Fugas Comercial" : "Commercial Leak Detection",
+    features: isSpanish ? [
+      "Inspecciones adaptadas para negocios",
+      "Hoteles, apartamentos, oficinas",
+      "Informes profesionales detallados",
+      "Mínima interrupción garantizada"
+    ] : [
       "Tailored surveys for businesses",
       "Hotels, apartments, offices",
       "Detailed professional reports",
@@ -65,6 +89,10 @@ const pricingInfo = [
 ];
 
 const PricingSection = () => {
+  const { isSpanish } = useTranslation();
+  const guarantees = getGuarantees(isSpanish);
+  const pricingInfo = getPricingInfo(isSpanish);
+
   return (
     <section className="py-12 md:py-16 bg-muted section-pattern">
       <div className="container mx-auto px-4 md:px-6">
@@ -75,13 +103,18 @@ const PricingSection = () => {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-10"
         >
-          <span className="text-primary font-medium">Transparent Pricing</span>
+          <span className="text-primary font-medium">
+            {isSpanish ? "Precios Transparentes" : "Transparent Pricing"}
+          </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">
-            Leak Detection Lanzarote Prices & Guarantees
+            {isSpanish 
+              ? "Precios y Garantías de Detección de Fugas Lanzarote"
+              : "Leak Detection Lanzarote Prices & Guarantees"}
           </h2>
           <p className="text-muted-foreground">
-            We believe in transparent, fixed-fee pricing with no hidden costs. 
-            Our surveys are priced based on property type and complexity.
+            {isSpanish
+              ? "Creemos en precios fijos transparentes sin costes ocultos. Nuestras inspecciones se tarifan según el tipo de propiedad y complejidad."
+              : "We believe in transparent, fixed-fee pricing with no hidden costs. Our surveys are priced based on property type and complexity."}
           </p>
         </motion.div>
 
@@ -108,7 +141,9 @@ const PricingSection = () => {
                 ))}
               </ul>
               <Button variant="outline" className="w-full" asChild>
-                <Link to="/contact">Get a Quote</Link>
+                <Link to={isSpanish ? "/es/contacto" : "/contact"}>
+                  {isSpanish ? "Solicitar Presupuesto" : "Get a Quote"}
+                </Link>
               </Button>
             </motion.div>
           ))}
@@ -122,7 +157,7 @@ const PricingSection = () => {
           className="mb-12"
         >
           <h3 className="font-heading text-2xl font-bold text-center mb-8">
-            Our Guarantees
+            {isSpanish ? "Nuestras Garantías" : "Our Guarantees"}
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {guarantees.map((guarantee, index) => (
@@ -162,12 +197,13 @@ const PricingSection = () => {
           className="text-center"
         >
           <p className="text-muted-foreground text-sm mb-6 max-w-2xl mx-auto">
-            <strong>Note:</strong> For leak confirmation surveys (where we confirm if a leak exists), 
-            a 50% charge applies as diagnostic work has been completed.
+            <strong>{isSpanish ? "Nota:" : "Note:"}</strong> {isSpanish
+              ? "Para inspecciones de confirmación de fugas (donde confirmamos si existe una fuga), se aplica un cargo del 50% ya que el trabajo de diagnóstico ha sido completado."
+              : "For leak confirmation surveys (where we confirm if a leak exists), a 50% charge applies as diagnostic work has been completed."}
           </p>
           <Button size="lg" className="group" asChild>
-            <Link to="/contact">
-              Get Your Free Quote
+            <Link to={isSpanish ? "/es/contacto" : "/contact"}>
+              {isSpanish ? "Solicite Su Presupuesto Gratis" : "Get Your Free Quote"}
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
