@@ -3,7 +3,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { getEquivalentRoute } from '@/i18n/routes';
 
 interface LanguageSwitcherProps {
-  variant?: 'default' | 'mobile' | 'compact';
+  variant?: 'default' | 'mobile' | 'compact' | 'dark';
 }
 
 const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
@@ -45,6 +45,35 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
             Español
           </button>
         </div>
+      </div>
+    );
+  }
+
+  if (variant === 'dark') {
+    return (
+      <div className="flex items-center gap-0.5 border border-white/20 rounded-md p-0.5 bg-white/5">
+        <button
+          onClick={() => handleLanguageChange('en')}
+          className={`px-2 py-1 rounded font-medium text-xs transition-all ${
+            language === 'en'
+              ? 'bg-primary text-white'
+              : 'text-white/70 hover:text-white'
+          }`}
+          title="English"
+        >
+          EN
+        </button>
+        <button
+          onClick={() => handleLanguageChange('es')}
+          className={`px-2 py-1 rounded font-medium text-xs transition-all ${
+            language === 'es'
+              ? 'bg-primary text-white'
+              : 'text-white/70 hover:text-white'
+          }`}
+          title="Español"
+        >
+          ES
+        </button>
       </div>
     );
   }
