@@ -56,20 +56,18 @@ const Header = () => {
       {/* Top Row - Logo + Primary Navigation */}
       <div className="bg-canary-navy">
         <div className="container mx-auto px-4">
-          <div className="flex items-center h-16">
-            {/* Logo - Left side with fixed width for alignment */}
-            <div className="w-40 shrink-0">
-              <Link to={getRoute("/", "/es")} className="flex items-center group">
-                <img
-                  src={logoTransparent}
-                  alt={isSpanish ? "Canary Detect - Los Cazafugas" : "Canary Detect - The Leaky Finders"}
-                  className="h-28 md:h-32 w-auto transition-transform duration-300 group-hover:scale-105"
-                />
-              </Link>
-            </div>
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <Link to={getRoute("/", "/es")} className="flex items-center group shrink-0">
+              <img
+                src={logoTransparent}
+                alt={isSpanish ? "Canary Detect - Los Cazafugas" : "Canary Detect - The Leaky Finders"}
+                className="h-28 md:h-32 w-auto transition-transform duration-300 group-hover:scale-105"
+              />
+            </Link>
 
-            {/* Desktop Top Nav - Centered */}
-            <nav className="hidden lg:flex items-center justify-center gap-6 flex-1">
+            {/* Desktop Top Nav */}
+            <nav className="hidden lg:flex items-center gap-1">
               <Link 
                 to={getRoute("/", "/es")} 
                 className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
@@ -101,16 +99,6 @@ const Header = () => {
                 {t('navigation.caseStudies')}
               </Link>
               <Link 
-                to={getRoute("/about", "/es/sobre-nosotros")} 
-                className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
-                  isActive("/about") || isActive("/es/sobre-nosotros")
-                    ? "text-primary" 
-                    : "text-white/90 hover:text-primary"
-                }`}
-              >
-                {t('navigation.about')}
-              </Link>
-              <Link 
                 to={getRoute("/blog", "/es/blog")} 
                 className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
                   isActive("/blog") || isActive("/es/blog")
@@ -124,14 +112,25 @@ const Header = () => {
               <div className="h-4 w-px bg-white/20 mx-2" />
 
               <LanguageSwitcher variant="dark" />
-            </nav>
 
-            {/* Empty spacer to balance the layout */}
-            <div className="hidden lg:block w-40 shrink-0" />
+              <div className="h-4 w-px bg-white/20 mx-2" />
+
+              {/* Spot The Leak Game - in blue bar */}
+              <a 
+                href="https://leak-detective.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-3 py-1.5 font-semibold text-sm rounded-md transition-all duration-300 text-white/90 hover:text-primary"
+              >
+                <Gamepad2 className="h-4 w-4" />
+                {t('navigation.spotTheLeakGame')}
+                <ExternalLink className="h-3 w-3 opacity-70" />
+              </a>
+            </nav>
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2.5 text-white hover:text-primary hover:bg-white/10 rounded-lg transition-all duration-300 ml-auto"
+              className="lg:hidden p-2.5 text-white hover:text-primary hover:bg-white/10 rounded-lg transition-all duration-300"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -148,22 +147,32 @@ const Header = () => {
           : "bg-background"
       }`}>
         <div className="container mx-auto px-4">
-          <div className="flex items-center py-1.5">
-            {/* Contact Button - Centered under logo with fixed width */}
-            <div className="w-40 shrink-0 flex justify-center">
-              <Link to={getRoute("/contact", "/es/contacto")}>
-                <Button 
-                  size="sm"
-                  className="bg-canary-navy hover:bg-canary-navy/90 text-white font-bold gap-1.5 shadow-md hover:shadow-lg transition-all duration-300"
-                >
-                  <Phone className="h-3.5 w-3.5" />
-                  {t('navigation.contact')}
-                </Button>
-              </Link>
-            </div>
+          <div className="flex items-center justify-center gap-4 py-1.5">
+            {/* Contact Button */}
+            <Link to={getRoute("/contact", "/es/contacto")}>
+              <Button 
+                size="sm"
+                className="bg-canary-navy hover:bg-canary-navy/90 text-white font-bold gap-1.5 shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                <Phone className="h-3.5 w-3.5" />
+                {t('navigation.contact')}
+              </Button>
+            </Link>
 
-            {/* Center buttons */}
-            <div className="flex items-center justify-center gap-4 flex-1">
+            {/* About Button */}
+            <Link to={getRoute("/about", "/es/sobre-nosotros")}>
+              <Button 
+                size="sm"
+                variant="outline"
+                className="font-bold gap-1.5 border-primary/30 text-primary hover:bg-primary hover:text-white transition-all duration-300"
+              >
+                {t('navigation.about')}
+              </Button>
+            </Link>
+
+            {/* Divider */}
+            <div className="h-6 w-px bg-border" />
+
             {/* Services Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -300,21 +309,6 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Divider */}
-            <div className="h-8 w-px bg-border mx-1" />
-
-            {/* Spot The Leak Game */}
-            <a 
-              href="https://leak-detective.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 font-semibold text-sm rounded-lg transition-all duration-300 border-2 border-primary/30 text-primary hover:bg-primary hover:text-white hover:border-primary"
-            >
-              <Gamepad2 className="h-4 w-4" />
-              {t('navigation.spotTheLeakGame')}
-              <ExternalLink className="h-3.5 w-3.5 opacity-70" />
-            </a>
-
             {/* Free Test CTA */}
             <Link to={getRoute("/services/free-leak-confirmation", "/es/servicios/confirmacion-fugas-gratis")}>
               <button className="flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md bg-gradient-to-r from-primary to-accent text-white hover:opacity-90">
@@ -322,10 +316,6 @@ const Header = () => {
                 {isSpanish ? "Test Gratis" : "Free Test"}
               </button>
             </Link>
-            </div>
-
-            {/* Empty spacer to balance the layout */}
-            <div className="w-40 shrink-0" />
           </div>
         </div>
       </div>
