@@ -2,46 +2,55 @@ import { motion } from "framer-motion";
 import { Atom, AudioLines, Thermometer, Mic, Video, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useTranslation } from "@/i18n/LanguageContext";
 
-const technologies = [
+const getTechnologies = (isSpanish: boolean) => [
   {
     name: "GASENSE",
-    subtitle: "Tracer Gas Detection",
+    subtitle: isSpanish ? "Detección con Gas Trazador" : "Tracer Gas Detection",
     icon: Atom,
-    description:
-      "We pressurise pipes with a safe nitrogen/hydrogen mix. Gas escapes through faults and rises to the surface where our sensors detect it - perfect for buried pipework.",
+    description: isSpanish
+      ? "Presurizamos las tuberías con una mezcla segura de nitrógeno/hidrógeno. El gas escapa por las fallas y sube a la superficie donde nuestros sensores lo detectan - perfecto para tuberías enterradas."
+      : "We pressurise pipes with a safe nitrogen/hydrogen mix. Gas escapes through faults and rises to the surface where our sensors detect it - perfect for buried pipework.",
   },
   {
-    name: "Geophone",
-    subtitle: "Acoustic Listening",
+    name: isSpanish ? "Geófono" : "Geophone",
+    subtitle: isSpanish ? "Escucha Acústica" : "Acoustic Listening",
     icon: AudioLines,
-    description:
-      "Detects the distinctive sound of water escaping from pressurised pipes. We identify the loudest point along the pipe route to locate the leak.",
+    description: isSpanish
+      ? "Detecta el sonido distintivo del agua escapando de tuberías presurizadas. Identificamos el punto más ruidoso a lo largo del recorrido de la tubería para localizar la fuga."
+      : "Detects the distinctive sound of water escaping from pressurised pipes. We identify the loudest point along the pipe route to locate the leak.",
   },
   {
-    name: "Thermal Imaging",
-    subtitle: "Infrared Detection",
+    name: isSpanish ? "Imagen Térmica" : "Thermal Imaging",
+    subtitle: isSpanish ? "Detección Infrarroja" : "Infrared Detection",
     icon: Thermometer,
-    description:
-      "Our thermal cameras detect temperature anomalies caused by leaking water - revealing hidden moisture behind walls and under floors.",
+    description: isSpanish
+      ? "Nuestras cámaras térmicas detectan anomalías de temperatura causadas por agua fugándose - revelando humedad oculta detrás de paredes y bajo suelos."
+      : "Our thermal cameras detect temperature anomalies caused by leaking water - revealing hidden moisture behind walls and under floors.",
   },
   {
-    name: "Pipe Mic",
-    subtitle: "Internal Microphone",
+    name: isSpanish ? "Micrófono de Tubería" : "Pipe Mic",
+    subtitle: isSpanish ? "Micrófono Interno" : "Internal Microphone",
     icon: Mic,
-    description:
-      "Inserted directly into pipework, this amplifies leak sounds and can be located from above ground to centimetre accuracy - our most precise method.",
+    description: isSpanish
+      ? "Insertado directamente en las tuberías, amplifica los sonidos de fuga y puede localizarse desde la superficie con precisión centimétrica - nuestro método más preciso."
+      : "Inserted directly into pipework, this amplifies leak sounds and can be located from above ground to centimetre accuracy - our most precise method.",
   },
   {
-    name: "CCTV Inspection",
-    subtitle: "Internal Cameras",
+    name: isSpanish ? "Inspección CCTV" : "CCTV Inspection",
+    subtitle: isSpanish ? "Cámaras Internas" : "Internal Cameras",
     icon: Video,
-    description:
-      "Four camera systems for different pipe sizes let us visually identify cracks, corrosion, root intrusion, and joint failures with pinpoint accuracy.",
+    description: isSpanish
+      ? "Cuatro sistemas de cámaras para diferentes tamaños de tuberías nos permiten identificar visualmente grietas, corrosión, intrusión de raíces y fallos en juntas con precisión."
+      : "Four camera systems for different pipe sizes let us visually identify cracks, corrosion, root intrusion, and joint failures with pinpoint accuracy.",
   },
 ];
 
 const TechnologySection = () => {
+  const { isSpanish } = useTranslation();
+  const technologies = getTechnologies(isSpanish);
+  
   return (
     <section className="py-12 md:py-16 bg-gradient-to-br from-slate-900 via-canary-navy to-slate-900 relative overflow-hidden">
       {/* Gradient orbs for depth */}
@@ -67,15 +76,21 @@ const TechnologySection = () => {
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">
-            Our Approach
+            {isSpanish ? "Nuestro Enfoque" : "Our Approach"}
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-white">
-            Multi-Technology Detection
+            {isSpanish ? "Detección Multi-Tecnología" : "Multi-Technology Detection"}
           </h2>
           <p className="text-white/70 text-lg leading-relaxed">
-            No single method is 100% accurate. That's why we confirm every leak using{" "}
-            <span className="text-primary font-semibold">at least two independent technologies</span>,
-            delivering centimetre accuracy and keeping repair costs to an absolute minimum.
+            {isSpanish ? (
+              <>Ningún método es 100% preciso. Por eso confirmamos cada fuga usando{" "}
+              <span className="text-primary font-semibold">al menos dos tecnologías independientes</span>,
+              ofreciendo precisión centimétrica y manteniendo los costes de reparación al mínimo.</>
+            ) : (
+              <>No single method is 100% accurate. That's why we confirm every leak using{" "}
+              <span className="text-primary font-semibold">at least two independent technologies</span>,
+              delivering centimetre accuracy and keeping repair costs to an absolute minimum.</>
+            )}
           </p>
         </motion.div>
 
@@ -89,7 +104,7 @@ const TechnologySection = () => {
           <div className="bg-primary/20 border border-primary/30 rounded-full px-6 py-3 inline-flex items-center gap-3">
             <CheckCircle2 className="h-5 w-5 text-primary" />
             <span className="text-white font-medium">
-              Over <span className="text-primary font-bold">€80,000</span> of specialist equipment
+              {isSpanish ? "Más de" : "Over"} <span className="text-primary font-bold">€80,000</span> {isSpanish ? "en equipos especializados" : "of specialist equipment"}
             </span>
           </div>
         </motion.div>
@@ -129,7 +144,9 @@ const TechnologySection = () => {
           className="text-center"
         >
           <Button size="lg" variant="secondary" asChild>
-            <Link to="/technology">Learn More About Our Technology</Link>
+            <Link to={isSpanish ? "/es/tecnologia" : "/technology"}>
+              {isSpanish ? "Más Sobre Nuestra Tecnología" : "Learn More About Our Technology"}
+            </Link>
           </Button>
         </motion.div>
       </div>
