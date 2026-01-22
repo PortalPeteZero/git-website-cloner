@@ -12,7 +12,8 @@ const LocalBusinessSchema = ({ page = "home" }: LocalBusinessSchemaProps) => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://canary-detect.com/#business",
-    name: isSpanish ? "Canary Detect - Los Cazafugas" : "Canary Detect - The Leaky Finders",
+    name: "Canary Detect",
+    legalName: "Camello Blanco S.L.",
     alternateName: isSpanish ? "Los Cazafugas" : "The Leaky Finders",
     description: isSpanish
       ? "Servicios profesionales de detección y reparación de fugas en Lanzarote. Especialistas en detección de fugas de agua, detección de fugas de piscinas, detección de tuberías subterráneas e inspecciones de desagües con más de €80.000 en equipos avanzados incluyendo imágenes térmicas, sensores acústicos y tecnología de gas trazador."
