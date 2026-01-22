@@ -56,6 +56,50 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- English Blog Articles -->
+  <url>
+    <loc>https://canary-detect.com/blog/how-to-check-for-pool-leaks-lanzarote</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/how-to-check-for-pool-leaks-lanzarote"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/como-detectar-fugas-en-piscinas-lanzarote"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/blog/signs-of-underground-water-leak</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/signs-of-underground-water-leak"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/senales-fuga-agua-subterranea"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/blog/water-meter-running-when-taps-off</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/water-meter-running-when-taps-off"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/contador-agua-girando-grifos-cerrados"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/blog/damp-walls-causes-solutions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/damp-walls-causes-solutions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/paredes-humedas-causas-soluciones"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/blog/thermal-imaging-leak-detection-explained</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/thermal-imaging-leak-detection-explained"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/imagen-termica-deteccion-fugas-explicada"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/blog/swimming-pool-leak-repair-cost-lanzarote</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/swimming-pool-leak-repair-cost-lanzarote"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/coste-reparacion-fugas-piscina-lanzarote"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- English Service Pages -->
   <url>
     <loc>https://canary-detect.com/services/water-leak-detection</loc>
@@ -231,6 +275,50 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog"/>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Spanish Blog Articles -->
+  <url>
+    <loc>https://canary-detect.com/es/blog/como-detectar-fugas-en-piscinas-lanzarote</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/how-to-check-for-pool-leaks-lanzarote"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/como-detectar-fugas-en-piscinas-lanzarote"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/blog/senales-fuga-agua-subterranea</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/signs-of-underground-water-leak"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/senales-fuga-agua-subterranea"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/blog/contador-agua-girando-grifos-cerrados</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/water-meter-running-when-taps-off"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/contador-agua-girando-grifos-cerrados"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/blog/paredes-humedas-causas-soluciones</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/damp-walls-causes-solutions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/paredes-humedas-causas-soluciones"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/blog/imagen-termica-deteccion-fugas-explicada</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/thermal-imaging-leak-detection-explained"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/imagen-termica-deteccion-fugas-explicada"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/blog/coste-reparacion-fugas-piscina-lanzarote</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/swimming-pool-leak-repair-cost-lanzarote"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/coste-reparacion-fugas-piscina-lanzarote"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- Spanish Service Pages -->
