@@ -260,7 +260,7 @@ const BlogArticle = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-canary-navy/95 via-canary-navy/80 to-canary-navy/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-canary-navy/80 via-transparent to-transparent" />
         </div>
-        <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
+        <div className="container mx-auto px-4 relative z-10 pt-12 pb-10 md:pt-16 md:pb-14">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
