@@ -273,6 +273,11 @@ const Footer = () => {
               </Link>
             </div>
           </div>
+          <p className="text-center text-sm text-slate-500 mt-4">
+            {isSpanish 
+              ? "Canary Detect es un nombre comercial de Camello Blanco S.L."
+              : "Canary Detect is a trading name of Camello Blanco S.L."}
+          </p>
         </div>
       </div>
     </footer>
