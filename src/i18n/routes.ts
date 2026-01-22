@@ -41,6 +41,7 @@ export const reverseServiceSlugMap: Record<string, string> = Object.fromEntries(
 
 // Blog slug translations (English to Spanish)
 export const blogSlugMap: Record<string, string> = {
+  "master-your-lanzarote-water-system": "domina-tu-sistema-de-agua-lanzarote",
   "how-to-check-for-pool-leaks-lanzarote": "como-detectar-fugas-en-piscinas-lanzarote",
   "signs-of-underground-water-leak": "senales-fuga-agua-subterranea",
   "water-meter-running-when-taps-off": "contador-agua-girando-grifos-cerrados",

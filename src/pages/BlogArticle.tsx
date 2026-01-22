@@ -5,13 +5,26 @@ import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, Clock, ArrowLeft, ArrowRight } from "lucide-react";
-import { getArticleBySlug, getRelatedArticles, BlogArticle as StaticBlogArticle } from "@/data/blogArticles";
+import { getArticleBySlug, getRelatedArticles, BLOG_IMAGES } from "@/data/blogArticles";
 import { supabase } from "@/integrations/supabase/client";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getBlogPath } from "@/i18n/routes";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
+
+// Map static paths to imported images for markdown content
+const resolveImagePath = (src: string): string => {
+  const imageMap: Record<string, string> = {
+    '/assets/blog/lanzarote-traditional-house.jpg': BLOG_IMAGES.lanzaroteTraditionalHouse,
+    '/assets/blog/lanzarote-aljibe-cistern.jpg': BLOG_IMAGES.lanzaroteAljibe,
+    '/assets/blog/lanzarote-water-tanker.jpg': BLOG_IMAGES.lanzaroteTanker,
+    '/assets/blog/lanzarote-water-system-house.png': BLOG_IMAGES.lanzaroteSystemHouse,
+    '/assets/blog/lanzarote-water-system-diagram.png': BLOG_IMAGES.lanzaroteSystemDiagram,
+    '/assets/blog/lanzarote-water-meter-leak.png': BLOG_IMAGES.lanzaroteMeterLeak,
+  };
+  return imageMap[src] || src;
+};
 
 interface DatabaseBlogPost {
   id: string;
@@ -269,6 +282,17 @@ const BlogArticle = () => {
                   ),
                   strong: ({ children }) => (
                     <strong className="text-foreground font-semibold">{children}</strong>
+                  ),
+                  img: ({ src, alt }) => (
+                    <figure className="my-8">
+                      <img 
+                        src={resolveImagePath(src || '')} 
+                        alt={alt || ''} 
+                        className="w-full rounded-lg shadow-md"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </figure>
                   ),
                   blockquote: ({ children }) => (
                     <blockquote className="border-l-4 border-primary bg-primary/5 py-4 px-6 my-8 rounded-r-lg italic text-foreground/80 not-italic">{children}</blockquote>
