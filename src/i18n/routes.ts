@@ -39,6 +39,21 @@ export const reverseServiceSlugMap: Record<string, string> = Object.fromEntries(
   Object.entries(serviceSlugMap).map(([en, es]) => [es, en])
 );
 
+// Blog slug translations (English to Spanish)
+export const blogSlugMap: Record<string, string> = {
+  "how-to-check-for-pool-leaks-lanzarote": "como-detectar-fugas-en-piscinas-lanzarote",
+  "signs-of-underground-water-leak": "senales-fuga-agua-subterranea",
+  "water-meter-running-when-taps-off": "contador-agua-girando-grifos-cerrados",
+  "damp-walls-causes-solutions": "paredes-humedas-causas-soluciones",
+  "thermal-imaging-leak-detection-explained": "imagen-termica-deteccion-fugas-explicada",
+  "swimming-pool-leak-repair-cost-lanzarote": "coste-reparacion-fugas-piscina-lanzarote"
+};
+
+// Reverse blog slug map (Spanish to English)
+export const reverseBlogSlugMap: Record<string, string> = Object.fromEntries(
+  Object.entries(blogSlugMap).map(([en, es]) => [es, en])
+);
+
 // Get the English slug from a potentially Spanish slug
 export const getEnglishSlug = (slug: string): string => {
   return reverseServiceSlugMap[slug] || slug;
@@ -64,7 +79,8 @@ export const getEquivalentRoute = (currentPath: string, targetLang: 'en' | 'es')
     // Handle blog routes
     const blogMatch = currentPath.match(/^\/blog\/(.+)$/);
     if (blogMatch) {
-      return `/es/blog/${blogMatch[1]}`;
+      const spanishSlug = blogSlugMap[blogMatch[1]] || blogMatch[1];
+      return `/es/blog/${spanishSlug}`;
     }
     
     // Handle location routes
@@ -88,7 +104,8 @@ export const getEquivalentRoute = (currentPath: string, targetLang: 'en' | 'es')
     // Handle blog routes
     const blogMatch = currentPath.match(/^\/es\/blog\/(.+)$/);
     if (blogMatch) {
-      return `/blog/${blogMatch[1]}`;
+      const englishSlug = reverseBlogSlugMap[blogMatch[1]] || blogMatch[1];
+      return `/blog/${englishSlug}`;
     }
     
     // Handle location routes
@@ -136,6 +153,22 @@ export const getCaseStudiesPath = (isSpanish: boolean): string => {
 // Helper to get blog path
 export const getBlogPath = (isSpanish: boolean): string => {
   return isSpanish ? '/es/blog' : '/blog';
+};
+
+// Helper to get blog article path with proper slug translation
+export const getBlogArticlePath = (slug: string, isSpanish: boolean): string => {
+  const finalSlug = isSpanish ? (blogSlugMap[slug] || slug) : slug;
+  return isSpanish ? `/es/blog/${finalSlug}` : `/blog/${slug}`;
+};
+
+// Helper to get English blog slug from potentially Spanish slug
+export const getEnglishBlogSlug = (slug: string): string => {
+  return reverseBlogSlugMap[slug] || slug;
+};
+
+// Helper to get Spanish blog slug from English slug
+export const getSpanishBlogSlug = (slug: string): string => {
+  return blogSlugMap[slug] || slug;
 };
 
 // Helper to get home path

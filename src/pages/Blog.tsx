@@ -5,7 +5,7 @@ import SEOHead from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
-import { blogArticles, BlogArticle as StaticBlogArticle } from "@/data/blogArticles";
+import { getBlogArticles, BlogArticle as StaticBlogArticle } from "@/data/blogArticles";
 import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getBlogPath } from "@/i18n/routes";
@@ -94,6 +94,9 @@ const Blog = () => {
 
     fetchDbPosts();
   }, []);
+
+  // Get language-specific blog articles
+  const blogArticles = getBlogArticles(isSpanish);
 
   // Convert static articles to combined format
   const staticPosts: CombinedPost[] = blogArticles.map(article => ({
