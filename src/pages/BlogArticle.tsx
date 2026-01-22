@@ -13,6 +13,58 @@ import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getBlogPath } from "@/i18n/routes";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
 
+// Some migrated markdown sources can contain accidental paragraph breaks around inline bold terms,
+// e.g. "known as an\n\n**aljibe**\n\n, and ...".
+// This normalizer merges those standalone emphasis/punctuation paragraphs back into the sentence.
+const normalizeMarkdown = (md: string): string => {
+  if (!md) return md;
+
+  const paragraphs = md.split(/\n{2,}/);
+
+  const isStandaloneEmphasis = (p: string) => {
+    const t = p.trim();
+    return /^(\*\*[^*\n]+\*\*|\*[^*\n]+\*)$/.test(t);
+  };
+
+  const isPunctuationOnly = (p: string) => {
+    const t = p.trim();
+    return /^[,.;:!?]+$/.test(t);
+  };
+
+  // Avoid touching headings/lists/code blocks/raw HTML blocks.
+  const isBlocky = (p: string) => {
+    const t = p.trim();
+    return /^(#{1,6}\s|[-*+]\s|>\s|\d+\.\s|```|<)/.test(t);
+  };
+
+  const tightenPunctuation = (s: string) => s.replace(/\s+([,.;:!?])/g, "$1");
+
+  const out: string[] = [];
+  for (let i = 0; i < paragraphs.length; i++) {
+    const curr = paragraphs[i]?.trim() ?? "";
+    const prev = out[out.length - 1];
+    const next = paragraphs[i + 1]?.trim();
+
+    // Merge: [text] + [**term**] + [continuation]
+    if (isStandaloneEmphasis(curr) && prev && next && !isBlocky(prev) && !isBlocky(next)) {
+      out[out.length - 1] = tightenPunctuation(`${prev.trim()} ${curr} ${next}`);
+      i++; // consumed next
+      continue;
+    }
+
+    // Merge: [text] + [,] + [continuation]
+    if (isPunctuationOnly(curr) && prev && next && !isBlocky(prev) && !isBlocky(next)) {
+      out[out.length - 1] = tightenPunctuation(`${prev.trim()}${curr} ${next}`);
+      i++; // consumed next
+      continue;
+    }
+
+    out.push(curr);
+  }
+
+  return out.join("\n\n");
+};
+
 // Map static paths to imported images for markdown content
 const resolveImagePath = (src: string): string => {
   const imageMap: Record<string, string> = {
@@ -133,6 +185,8 @@ const BlogArticle = () => {
   const readTime = isStatic ? staticArticle.readTime : (dbPost!.read_time || 5);
   const date = isStatic ? staticArticle.date : dbPost!.created_at;
   const image = isStatic ? staticArticle.image : (dbPost!.featured_image || waterLeakImg);
+
+  const normalizedContent = normalizeMarkdown(content);
 
   const formatDate = (dateString: string) => {
     const dateObj = new Date(dateString);
@@ -316,7 +370,7 @@ const BlogArticle = () => {
                   ),
                 }}
               >
-                {content}
+                {normalizedContent}
               </ReactMarkdown>
             </motion.div>
 
