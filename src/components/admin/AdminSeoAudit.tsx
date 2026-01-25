@@ -14,9 +14,12 @@ import {
   Image,
   Link,
   Globe,
-  Download
+  Download,
+  FileDown
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import jsPDF from "jspdf";
+import autoTable from "jspdf-autotable";
 import { getServicesData } from "@/data/servicesData";
 import { getLocationsData } from "@/data/locationsData";
 import { blogArticlesEn, blogArticlesEs } from "@/data/blogArticles";
@@ -361,6 +364,309 @@ export default function AdminSeoAudit() {
     });
   };
 
+  const exportToPDF = () => {
+    const doc = new jsPDF();
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const dateStr = new Date().toLocaleDateString('en-GB', { 
+      day: '2-digit', month: 'long', year: 'numeric' 
+    });
+    
+    // Header
+    doc.setFillColor(30, 42, 71); // Navy blue
+    doc.rect(0, 0, pageWidth, 40, 'F');
+    
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(24);
+    doc.setFont('helvetica', 'bold');
+    doc.text('SEO Audit Report', 14, 20);
+    
+    doc.setFontSize(11);
+    doc.setFont('helvetica', 'normal');
+    doc.text('Canary Detect - The Leaky Finders', 14, 28);
+    doc.text(dateStr, pageWidth - 14, 28, { align: 'right' });
+    
+    let yPos = 50;
+    
+    // Executive Summary
+    doc.setTextColor(30, 42, 71);
+    doc.setFontSize(16);
+    doc.setFont('helvetica', 'bold');
+    doc.text('Executive Summary', 14, yPos);
+    yPos += 10;
+    
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(60, 60, 60);
+    
+    const summaryData = [
+      ['Health Score', `${healthScore}%`],
+      ['Total Routes Scanned', `${totalRoutes}`],
+      ['Routes with Issues', `${routesWithIssues}`],
+      ['Critical Errors', `${errors.length}`],
+      ['Warnings', `${warnings.length}`],
+      ['Informational', `${infos.length}`],
+    ];
+    
+    autoTable(doc, {
+      startY: yPos,
+      head: [['Metric', 'Value']],
+      body: summaryData,
+      theme: 'striped',
+      headStyles: { fillColor: [30, 42, 71], textColor: 255 },
+      styles: { fontSize: 10 },
+      margin: { left: 14, right: 14 },
+    });
+    
+    yPos = (doc as any).lastAutoTable.finalY + 15;
+    
+    // Critical Errors Section
+    if (errors.length > 0) {
+      doc.setFontSize(14);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(220, 38, 38); // Red
+      doc.text(`Critical Errors (${errors.length})`, 14, yPos);
+      yPos += 8;
+      
+      doc.setFontSize(9);
+      doc.setFont('helvetica', 'italic');
+      doc.setTextColor(100, 100, 100);
+      doc.text('These issues should be fixed immediately as they may impact search visibility.', 14, yPos);
+      yPos += 6;
+      
+      const errorData = errors.map(e => [e.path, e.category.toUpperCase(), e.message]);
+      
+      autoTable(doc, {
+        startY: yPos,
+        head: [['Page/Route', 'Category', 'Issue Description']],
+        body: errorData,
+        theme: 'striped',
+        headStyles: { fillColor: [220, 38, 38], textColor: 255 },
+        styles: { fontSize: 9, cellPadding: 3 },
+        columnStyles: {
+          0: { cellWidth: 50 },
+          1: { cellWidth: 25 },
+          2: { cellWidth: 'auto' },
+        },
+        margin: { left: 14, right: 14 },
+      });
+      
+      yPos = (doc as any).lastAutoTable.finalY + 15;
+    }
+    
+    // Warnings Section
+    if (warnings.length > 0) {
+      // Check if we need a new page
+      if (yPos > 240) {
+        doc.addPage();
+        yPos = 20;
+      }
+      
+      doc.setFontSize(14);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(202, 138, 4); // Yellow/amber
+      doc.text(`Warnings (${warnings.length})`, 14, yPos);
+      yPos += 8;
+      
+      doc.setFontSize(9);
+      doc.setFont('helvetica', 'italic');
+      doc.setTextColor(100, 100, 100);
+      doc.text('These issues may affect SEO performance and should be addressed when possible.', 14, yPos);
+      yPos += 6;
+      
+      const warningData = warnings.map(w => [w.path, w.category.toUpperCase(), w.message]);
+      
+      autoTable(doc, {
+        startY: yPos,
+        head: [['Page/Route', 'Category', 'Issue Description']],
+        body: warningData,
+        theme: 'striped',
+        headStyles: { fillColor: [202, 138, 4], textColor: 255 },
+        styles: { fontSize: 9, cellPadding: 3 },
+        columnStyles: {
+          0: { cellWidth: 50 },
+          1: { cellWidth: 25 },
+          2: { cellWidth: 'auto' },
+        },
+        margin: { left: 14, right: 14 },
+      });
+      
+      yPos = (doc as any).lastAutoTable.finalY + 15;
+    }
+    
+    // Informational Section
+    if (infos.length > 0) {
+      if (yPos > 240) {
+        doc.addPage();
+        yPos = 20;
+      }
+      
+      doc.setFontSize(14);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(59, 130, 246); // Blue
+      doc.text(`Informational Notes (${infos.length})`, 14, yPos);
+      yPos += 8;
+      
+      doc.setFontSize(9);
+      doc.setFont('helvetica', 'italic');
+      doc.setTextColor(100, 100, 100);
+      doc.text('Suggestions for optimization that are not critical but could improve performance.', 14, yPos);
+      yPos += 6;
+      
+      const infoData = infos.map(i => [i.path, i.category.toUpperCase(), i.message]);
+      
+      autoTable(doc, {
+        startY: yPos,
+        head: [['Page/Route', 'Category', 'Suggestion']],
+        body: infoData,
+        theme: 'striped',
+        headStyles: { fillColor: [59, 130, 246], textColor: 255 },
+        styles: { fontSize: 9, cellPadding: 3 },
+        columnStyles: {
+          0: { cellWidth: 50 },
+          1: { cellWidth: 25 },
+          2: { cellWidth: 'auto' },
+        },
+        margin: { left: 14, right: 14 },
+      });
+      
+      yPos = (doc as any).lastAutoTable.finalY + 15;
+    }
+    
+    // Full Route Audit Details
+    doc.addPage();
+    yPos = 20;
+    
+    doc.setFontSize(16);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(30, 42, 71);
+    doc.text('Detailed Route Audit', 14, yPos);
+    yPos += 8;
+    
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(100, 100, 100);
+    doc.text('Complete breakdown of SEO elements for each route.', 14, yPos);
+    yPos += 8;
+    
+    const routeData = audits.map(audit => [
+      audit.path,
+      audit.hasMetaTitle ? '✓' : '✗',
+      audit.metaTitleLength ? `${audit.metaTitleLength}` : '-',
+      audit.hasMetaDescription ? '✓' : '✗',
+      audit.metaDescLength ? `${audit.metaDescLength}` : '-',
+      audit.hasOgImage ? '✓' : '✗',
+      audit.issues.length.toString(),
+    ]);
+    
+    autoTable(doc, {
+      startY: yPos,
+      head: [['Route', 'Title', 'Len', 'Desc', 'Len', 'OG', 'Issues']],
+      body: routeData,
+      theme: 'striped',
+      headStyles: { fillColor: [30, 42, 71], textColor: 255 },
+      styles: { fontSize: 8, cellPadding: 2 },
+      columnStyles: {
+        0: { cellWidth: 70 },
+        1: { cellWidth: 15, halign: 'center' },
+        2: { cellWidth: 15, halign: 'center' },
+        3: { cellWidth: 15, halign: 'center' },
+        4: { cellWidth: 15, halign: 'center' },
+        5: { cellWidth: 15, halign: 'center' },
+        6: { cellWidth: 18, halign: 'center' },
+      },
+      margin: { left: 14, right: 14 },
+    });
+    
+    // Recommendations
+    doc.addPage();
+    yPos = 20;
+    
+    doc.setFontSize(16);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(30, 42, 71);
+    doc.text('Recommendations', 14, yPos);
+    yPos += 12;
+    
+    const recommendations = [
+      {
+        priority: 'High',
+        title: 'Fix Missing Meta Titles',
+        desc: 'Pages without meta titles will display the URL in search results, reducing click-through rates. Add unique, keyword-rich titles under 60 characters.',
+      },
+      {
+        priority: 'High',
+        title: 'Add Meta Descriptions',
+        desc: 'Missing meta descriptions allow search engines to generate snippets automatically, which may not be optimal. Write compelling descriptions under 160 characters.',
+      },
+      {
+        priority: 'Medium',
+        title: 'Optimize Title Lengths',
+        desc: 'Titles over 60 characters may be truncated in search results. Keep titles concise but descriptive.',
+      },
+      {
+        priority: 'Medium',
+        title: 'Review Open Graph Tags',
+        desc: 'Ensure all pages have proper OG images and descriptions for optimal social media sharing appearance.',
+      },
+      {
+        priority: 'Low',
+        title: 'Expand Short Descriptions',
+        desc: 'Meta descriptions under 120 characters may not fully utilize available space in search results. Consider expanding for better visibility.',
+      },
+    ];
+    
+    recommendations.forEach((rec, index) => {
+      if (yPos > 260) {
+        doc.addPage();
+        yPos = 20;
+      }
+      
+      const priorityColor = rec.priority === 'High' ? [220, 38, 38] : rec.priority === 'Medium' ? [202, 138, 4] : [59, 130, 246];
+      
+      doc.setFillColor(priorityColor[0], priorityColor[1], priorityColor[2]);
+      doc.roundedRect(14, yPos - 4, 25, 8, 2, 2, 'F');
+      doc.setFontSize(8);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(255, 255, 255);
+      doc.text(rec.priority, 16, yPos + 1);
+      
+      doc.setFontSize(11);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(30, 42, 71);
+      doc.text(rec.title, 44, yPos + 1);
+      yPos += 8;
+      
+      doc.setFontSize(9);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(80, 80, 80);
+      const descLines = doc.splitTextToSize(rec.desc, pageWidth - 28);
+      doc.text(descLines, 14, yPos);
+      yPos += descLines.length * 5 + 10;
+    });
+    
+    // Footer on all pages
+    const totalPages = doc.getNumberOfPages();
+    for (let i = 1; i <= totalPages; i++) {
+      doc.setPage(i);
+      doc.setFontSize(8);
+      doc.setTextColor(150, 150, 150);
+      doc.text(
+        `Page ${i} of ${totalPages} | Generated by Canary Detect SEO Audit Tool`,
+        pageWidth / 2,
+        doc.internal.pageSize.getHeight() - 10,
+        { align: 'center' }
+      );
+    }
+    
+    // Save
+    doc.save(`seo-audit-report-${new Date().toISOString().split('T')[0]}.pdf`);
+    
+    toast({
+      title: "PDF Report Generated",
+      description: "Your comprehensive SEO audit report has been downloaded.",
+    });
+  };
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -374,7 +680,11 @@ export default function AdminSeoAudit() {
         <div className="flex gap-2">
           <Button variant="outline" onClick={exportToCSV} disabled={allIssues.length === 0}>
             <Download className="h-4 w-4 mr-2" />
-            Export CSV
+            CSV
+          </Button>
+          <Button variant="outline" onClick={exportToPDF} disabled={audits.length === 0}>
+            <FileDown className="h-4 w-4 mr-2" />
+            PDF Report
           </Button>
           <Button onClick={runAudit} disabled={isScanning}>
             <RefreshCw className={`h-4 w-4 mr-2 ${isScanning ? "animate-spin" : ""}`} />
