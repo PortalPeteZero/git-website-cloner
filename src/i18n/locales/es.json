@@ -1,34 +1,39 @@
 {
   "meta": {
     "home": {
-      "title": "Detección de Fugas Lanzarote | Detección de Fugas de Agua y Piscinas",
-      "description": "Detección profesional de fugas de agua y piscinas en Lanzarote. Equipo especializado de €80.000+. Sin encontrar, sin pagar. Los Cazafugas.",
+      "title": "Canary Detect | Detección Fugas Agua Piscina Lanzarote",
+      "description": "Expertos detección fugas Lanzarote. Fugas agua, piscinas, tuberías. Respuesta rápida, tecnología avanzada.",
       "keywords": "detección de fugas Lanzarote, detección fugas agua, detección fugas piscinas, fugas subterráneas, detección tuberías Lanzarote"
     },
     "services": {
-      "title": "Servicios de Detección de Fugas Lanzarote | Agua, Piscina y Tuberías",
-      "description": "Servicios profesionales de detección y reparación de fugas en Lanzarote. Cámaras térmicas, sensores acústicos, gas trazador.",
+      "title": "Servicios Detección Fugas Lanzarote | Canary Detect",
+      "description": "Detección fugas agua, piscinas, subterráneas. Inspección tuberías. Servicios profesionales Lanzarote.",
       "keywords": "servicios detección fugas, reparación fugas agua, reparación fugas piscinas, inspección tuberías Lanzarote"
     },
     "technology": {
-      "title": "Equipo Profesional de Detección de Fugas | Tecnología Avanzada Lanzarote",
-      "description": "Más de €80.000 en equipo especializado de detección de fugas. Tecnología multi-método para precisión al centímetro.",
+      "title": "Tecnología Detección Fugas | Acústica Imagen Térmica",
+      "description": "Tecnología avanzada: sensores acústicos, imagen térmica, radar. Equipos profesionales resultados precisos.",
       "keywords": "tecnología detección fugas, imagen térmica, gas trazador, detección acústica, inspección CCTV"
     },
     "about": {
-      "title": "Sobre Canary Detect | Especialistas en Fugas Lanzarote | Detección Profesional",
-      "description": "Empresa líder en detección de fugas en Lanzarote desde 2014. Los Cazafugas - servicio profesional en toda la isla.",
+      "title": "Sobre Canary Detect | Expertos Detección Fugas",
+      "description": "Equipo profesional detección fugas Lanzarote. Tecnología avanzada, años experiencia.",
       "keywords": "Canary Detect, Los Cazafugas, empresa detección fugas Lanzarote"
     },
     "caseStudies": {
-      "title": "Casos de Éxito Detección de Fugas Lanzarote | Resultados Reales",
-      "description": "Vea cómo Los Cazafugas resuelven problemas de fugas en Lanzarote. Hoteles, villas, piscinas.",
+      "title": "Casos Éxito Detección Fugas | Canary Detect",
+      "description": "Casos reales detección fugas Lanzarote. Piscinas, agua, tuberías. Reparaciones exitosas.",
       "keywords": "casos detección fugas, reparación fugas piscinas, reparación fugas agua Lanzarote"
     },
     "contact": {
-      "title": "Contactar Canary Detect | Detección de Fugas Lanzarote | Reparación Urgente",
-      "description": "Contacte con Los Cazafugas para detección profesional de fugas en Lanzarote. Teléfono: +34 711 051 071. Servicio en toda la isla.",
+      "title": "Contacto Canary Detect | Detección Fugas Lanzarote",
+      "description": "Contacta Canary Detect para detección fugas Lanzarote. Presupuestos gratis, respuesta rápida.",
       "keywords": "contactar Canary Detect, presupuesto detección fugas, reparación urgente fugas Lanzarote"
+    },
+    "blog": {
+      "title": "Blog Detección Fugas | Consejos Guías | Canary Detect",
+      "description": "Consejos y guías detección fugas para propietarios Lanzarote. Fugas agua, piscinas, prevención.",
+      "keywords": "blog detección fugas, consejos fugas agua, guía fugas piscina, consejos Lanzarote"
     }
   },
   "navigation": {

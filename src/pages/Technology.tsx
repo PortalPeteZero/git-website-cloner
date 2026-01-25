@@ -95,15 +95,9 @@ const Technology = () => {
   return (
     <Layout>
       <SEOHead 
-        title={isSpanish 
-          ? "Equipo Profesional de Detección de Fugas | Tecnología Avanzada Lanzarote"
-          : "Professional Leak Detection Equipment | Advanced Technology Lanzarote"}
-        description={isSpanish
-          ? "Más de €80.000 en tecnología de detección de fugas. Imagen térmica, sensores acústicos, gas trazador, inspección CCTV. Enfoque multi-tecnología en Lanzarote."
-          : "Discover our €80,000+ leak detection technology. Thermal imaging, acoustic sensors, tracer gas, CCTV inspection. Multi-technology approach for accurate leak detection in Lanzarote."}
-        keywords={isSpanish
-          ? "tecnología detección fugas, imagen térmica, gas trazador, detección acústica, inspección CCTV Lanzarote"
-          : "leak detection equipment Lanzarote, thermal imaging leak detection, acoustic leak detection, tracer gas detection, CCTV pipe inspection, professional leak detection technology"}
+        title={t('meta.technology.title')}
+        description={t('meta.technology.description')}
+        keywords={t('meta.technology.keywords')}
         canonical={isSpanish ? "https://canary-detect.com/es/tecnologia" : "https://canary-detect.com/technology"}
       />
       {/* Hero Section */}

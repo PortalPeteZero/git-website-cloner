@@ -148,14 +148,14 @@ const Blog = () => {
     ctaButton: isSpanish ? "Solicitar Presupuesto Gratis" : "Get a Free Quote",
     seo: {
       title: isSpanish 
-        ? "Blog de Detección de Fugas | Consejos y Guías | Los Cazafugas Lanzarote"
-        : "Leak Detection Blog | Tips & Guides | The Leaky Finders Lanzarote",
+        ? "Blog Detección Fugas | Consejos Guías | Canary Detect"
+        : "Leak Detection Blog | Tips & Guides | Canary Detect",
       description: isSpanish 
-        ? "Consejos expertos de Los Cazafugas. Aprenda a detectar fugas en piscinas, encontrar fugas de agua subterráneas y proteger su propiedad en Lanzarote."
-        : "Expert leak detection tips and guides from The Leaky Finders. Learn how to detect pool leaks, find underground water leaks, and protect your Lanzarote property.",
+        ? "Consejos y guías detección fugas para propietarios Lanzarote. Fugas agua, piscinas, prevención."
+        : "Leak detection tips and guides for Lanzarote property owners. Water leaks, pool maintenance, prevention advice.",
       keywords: isSpanish 
-        ? "blog detección fugas, consejos Los Cazafugas, guía fugas piscina, detección fugas agua Lanzarote, fugas subterráneas, consejos fontanería Lanzarote"
-        : "leak detection blog, The Leaky Finders tips, pool leak guide, water leak detection Lanzarote, underground leak detection, Lanzarote plumbing advice",
+        ? "blog detección fugas, consejos fugas agua, guía fugas piscina, consejos Lanzarote"
+        : "leak detection blog, water leak tips, pool leak guide, Lanzarote property advice",
     },
   };
 
