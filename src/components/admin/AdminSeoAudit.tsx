@@ -307,9 +307,13 @@ export default function AdminSeoAudit() {
   const infos = allIssues.filter(i => i.type === "info");
 
   const totalRoutes = audits.length;
-  const routesWithIssues = audits.filter(a => a.issues.length > 0).length;
+  // Only count routes with errors or warnings as problematic (not informational items)
+  const routesWithProblems = audits.filter(a => 
+    a.issues.some(issue => issue.type === "error" || issue.type === "warning")
+  ).length;
+  const hasLinkErrors = linkIssues.some(i => i.type === "error");
   const healthScore = totalRoutes > 0 
-    ? Math.round(((totalRoutes - routesWithIssues) / totalRoutes) * 100) 
+    ? Math.round(((totalRoutes - routesWithProblems - (hasLinkErrors ? 1 : 0)) / totalRoutes) * 100) 
     : 100;
 
   const getIssueIcon = (type: SeoIssue["type"]) => {
@@ -405,7 +409,7 @@ export default function AdminSeoAudit() {
     const summaryData = [
       ['Health Score', `${healthScore}%`],
       ['Total Routes Scanned', `${totalRoutes}`],
-      ['Routes with Issues', `${routesWithIssues}`],
+      ['Routes with Problems', `${routesWithProblems}`],
       ['Critical Errors', `${errors.length}`],
       ['Warnings', `${warnings.length}`],
       ['Informational', `${infos.length}`],
