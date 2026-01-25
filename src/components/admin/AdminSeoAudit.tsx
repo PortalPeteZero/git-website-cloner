@@ -23,6 +23,8 @@ import autoTable from "jspdf-autotable";
 import { getServicesData } from "@/data/servicesData";
 import { getLocationsData } from "@/data/locationsData";
 import { blogArticlesEn, blogArticlesEs } from "@/data/blogArticles";
+import en from "@/i18n/locales/en.json";
+import es from "@/i18n/locales/es.json";
 
 interface SeoIssue {
   path: string;
@@ -54,21 +56,21 @@ const getAllRoutes = () => {
 
   const staticRoutes = [
     // English pages
-    { path: "/", title: "Home (EN)", lang: "en" },
-    { path: "/about", title: "About (EN)", lang: "en" },
-    { path: "/services", title: "Services (EN)", lang: "en" },
-    { path: "/technology", title: "Technology (EN)", lang: "en" },
-    { path: "/case-studies", title: "Case Studies (EN)", lang: "en" },
-    { path: "/contact", title: "Contact (EN)", lang: "en" },
-    { path: "/blog", title: "Blog (EN)", lang: "en" },
+    { path: "/", title: "Home (EN)", lang: "en", seo: { title: en.meta.home.title, description: en.meta.home.description } },
+    { path: "/about", title: "About (EN)", lang: "en", seo: { title: en.meta.about.title, description: en.meta.about.description } },
+    { path: "/services", title: "Services (EN)", lang: "en", seo: { title: en.meta.services.title, description: en.meta.services.description } },
+    { path: "/technology", title: "Technology (EN)", lang: "en", seo: { title: en.meta.technology.title, description: en.meta.technology.description } },
+    { path: "/case-studies", title: "Case Studies (EN)", lang: "en", seo: { title: en.meta.caseStudies.title, description: en.meta.caseStudies.description } },
+    { path: "/contact", title: "Contact (EN)", lang: "en", seo: { title: en.meta.contact.title, description: en.meta.contact.description } },
+    { path: "/blog", title: "Blog (EN)", lang: "en", seo: { title: en.meta.blog.title, description: en.meta.blog.description } },
     // Spanish pages
-    { path: "/es", title: "Home (ES)", lang: "es" },
-    { path: "/es/sobre-nosotros", title: "About (ES)", lang: "es" },
-    { path: "/es/servicios", title: "Services (ES)", lang: "es" },
-    { path: "/es/tecnologia", title: "Technology (ES)", lang: "es" },
-    { path: "/es/casos-de-exito", title: "Case Studies (ES)", lang: "es" },
-    { path: "/es/contacto", title: "Contact (ES)", lang: "es" },
-    { path: "/es/blog", title: "Blog (ES)", lang: "es" },
+    { path: "/es", title: "Home (ES)", lang: "es", seo: { title: es.meta.home.title, description: es.meta.home.description } },
+    { path: "/es/sobre-nosotros", title: "About (ES)", lang: "es", seo: { title: es.meta.about.title, description: es.meta.about.description } },
+    { path: "/es/servicios", title: "Services (ES)", lang: "es", seo: { title: es.meta.services.title, description: es.meta.services.description } },
+    { path: "/es/tecnologia", title: "Technology (ES)", lang: "es", seo: { title: es.meta.technology.title, description: es.meta.technology.description } },
+    { path: "/es/casos-de-exito", title: "Case Studies (ES)", lang: "es", seo: { title: es.meta.caseStudies.title, description: es.meta.caseStudies.description } },
+    { path: "/es/contacto", title: "Contact (ES)", lang: "es", seo: { title: es.meta.contact.title, description: es.meta.contact.description } },
+    { path: "/es/blog", title: "Blog (ES)", lang: "es", seo: { title: es.meta.blog.title, description: es.meta.blog.description } },
   ];
 
   // Service routes
