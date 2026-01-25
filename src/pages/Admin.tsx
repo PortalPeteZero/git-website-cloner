@@ -3,12 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { Plus, LogOut, FileText, Image, Settings } from "lucide-react";
+import { Plus, LogOut, FileText, Search } from "lucide-react";
 import { User, Session } from "@supabase/supabase-js";
 import AdminBlogList from "@/components/admin/AdminBlogList";
 import AdminBlogEditor from "@/components/admin/AdminBlogEditor";
+import AdminSeoAudit from "@/components/admin/AdminSeoAudit";
 
-type AdminView = 'list' | 'editor';
+type AdminView = 'list' | 'editor' | 'seo';
 
 const Admin = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -117,11 +118,20 @@ const Admin = () => {
             <button
               onClick={() => setView('list')}
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                view === 'list' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                view === 'list' || view === 'editor' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
               }`}
             >
               <FileText className="h-4 w-4" />
               Blog Posts
+            </button>
+            <button
+              onClick={() => setView('seo')}
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                view === 'seo' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              <Search className="h-4 w-4" />
+              SEO Audit
             </button>
           </div>
         </div>
@@ -147,6 +157,10 @@ const Admin = () => {
             postId={editingPostId} 
             onBack={handleBackToList}
           />
+        )}
+
+        {view === 'seo' && (
+          <AdminSeoAudit />
         )}
       </main>
     </div>
