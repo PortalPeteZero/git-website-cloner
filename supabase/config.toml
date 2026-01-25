@@ -2,3 +2,6 @@ project_id = "efafzkcwzumxphliqgpg"
 
 [functions.sitemap]
 verify_jwt = false
+
+[functions.indexnow-ping]
+verify_jwt = false
