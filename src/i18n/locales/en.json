@@ -1,34 +1,39 @@
 {
   "meta": {
     "home": {
-      "title": "Leak Detection Lanzarote | Pool & Water Leak Repair",
-      "description": "Professional leak detection in Lanzarote. Find water leaks, pool leaks & underground pipes with €80,000+ equipment. No Find, No Fee guarantee.",
+      "title": "Canary Detect | Water & Pool Leak Detection Lanzarote",
+      "description": "Expert leak detection in Lanzarote. Water leaks, pool leaks, underground pipes. Fast response, advanced technology.",
       "keywords": "leak detection Lanzarote, water leak detection, pool leak detection, underground leak detection, pipe detection Lanzarote"
     },
     "services": {
-      "title": "Leak Detection Services Lanzarote | Water, Pool & Pipe Detection",
-      "description": "Professional leak detection and repair services in Lanzarote. Thermal imaging, acoustic sensors, tracer gas technology. No Find, No Fee.",
+      "title": "Leak Detection Services Lanzarote | Canary Detect",
+      "description": "Water leak detection, pool leak detection, underground detection, pipe inspection. Professional services across Lanzarote.",
       "keywords": "leak detection services, water leak repair, pool leak repair, pipe inspection Lanzarote"
     },
     "technology": {
-      "title": "Professional Leak Detection Equipment | Advanced Technology Lanzarote",
-      "description": "€80,000+ in specialist leak detection equipment. Multi-technology approach for centimetre-precision accuracy.",
+      "title": "Leak Detection Technology | Acoustic & Thermal",
+      "description": "Advanced leak detection: acoustic sensors, thermal imaging, ground radar. Professional equipment for accurate results.",
       "keywords": "leak detection technology, thermal imaging, tracer gas, acoustic detection, CCTV inspection"
     },
     "about": {
-      "title": "About Canary Detect | Leak Specialists Lanzarote | Professional Detection",
-      "description": "Leading leak detection company in Lanzarote since 2014. The Leaky Finders - professional service across the island.",
+      "title": "About Canary Detect | Leak Experts Lanzarote",
+      "description": "Professional leak detection team in Lanzarote. Advanced technology, years of experience. Partner with Castle Keep Surveys.",
       "keywords": "Canary Detect, The Leaky Finders, leak detection company Lanzarote"
     },
     "caseStudies": {
-      "title": "Leak Detection Case Studies Lanzarote | Real Results",
-      "description": "See how The Leaky Finders solve leak problems across Lanzarote. Hotels, villas, pools.",
+      "title": "Leak Detection Case Studies | Canary Detect",
+      "description": "Real leak detection cases in Lanzarote. Pool leaks, water leaks, underground pipes. Successful leak repairs.",
       "keywords": "leak detection case studies, pool leak repair, water leak repair Lanzarote"
     },
     "contact": {
-      "title": "Contact Canary Detect | Leak Detection Lanzarote | Emergency Repair",
-      "description": "Contact The Leaky Finders for professional leak detection in Lanzarote. Phone: +34 711 051 071. Island-wide service.",
+      "title": "Contact Canary Detect | Leak Detection Lanzarote",
+      "description": "Contact Canary Detect for leak detection in Lanzarote. Free quotes, fast response. Email, phone, or callback.",
       "keywords": "contact Canary Detect, leak detection quote, emergency leak repair Lanzarote"
+    },
+    "blog": {
+      "title": "Leak Detection Blog | Tips & Guides | Canary Detect",
+      "description": "Leak detection tips and guides for Lanzarote property owners. Water leaks, pool maintenance, prevention advice.",
+      "keywords": "leak detection blog, water leak tips, pool leak guide, Lanzarote property advice"
     }
   },
   "navigation": {

@@ -11,7 +11,7 @@ import { useTranslation } from "@/i18n/LanguageContext";
 const FreeLeakConfirmation = () => {
   const { isSpanish } = useTranslation();
   const canonicalUrl = isSpanish 
-    ? "https://canary-detect.com/es/servicios/test-confirmacion-fugas-gratis"
+    ? "https://canary-detect.com/es/servicios/confirmacion-fugas-gratis"
     : "https://canary-detect.com/services/free-leak-confirmation";
 
   const trustPoints = [
@@ -24,14 +24,14 @@ const FreeLeakConfirmation = () => {
     <Layout>
       <SEOHead
         title={isSpanish 
-          ? "Test de Confirmación de Fugas Gratis Lanzarote | Sin Compromiso | Canary Detect"
-          : "Free Leak Confirmation Test Lanzarote | No Catch | Canary Detect"}
+          ? "Test Confirmación Fugas Gratis | Canary Detect"
+          : "Free Leak Confirmation Test | Canary Detect"}
         description={isSpanish
-          ? "Test de confirmación de fugas GRATIS en Lanzarote. Antes de reservar una inspección completa, confirmaremos si tiene una fuga con un informe profesional - sin coste."
-          : "FREE leak confirmation test in Lanzarote. Before you book a full survey, we'll confirm if you have a leak with a professional report - at no cost. No catch, no obligation."}
+          ? "Test confirmación fugas GRATIS en Lanzarote. Confirmamos si tiene fuga con informe profesional - sin coste."
+          : "FREE leak confirmation test Lanzarote. We confirm if you have a leak with a professional report - no cost."}
         keywords={isSpanish
-          ? "test fugas gratis Lanzarote, confirmación fugas, tengo una fuga, comprobación fugas agua, detección fugas gratis"
-          : "free leak test Lanzarote, leak confirmation Lanzarote, do I have a leak, water leak check, free leak detection, leak assessment Lanzarote"}
+          ? "test fugas gratis Lanzarote, confirmación fugas, comprobación fugas agua, detección fugas gratis"
+          : "free leak test Lanzarote, leak confirmation, water leak check, free leak detection"}
         canonical={canonicalUrl}
         type="service"
       />
