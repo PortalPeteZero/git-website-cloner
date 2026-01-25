@@ -179,12 +179,12 @@ const analyzeRoute = (route: { path: string; title: string; lang: string; seo?: 
       category: "meta",
       message: `Meta title too long (${metaTitleLength} chars, max 60)`,
     });
-  } else if (metaTitleLength < 30) {
+  } else if (metaTitleLength < 20) {
     issues.push({
       path: route.path,
       type: "info",
       category: "meta",
-      message: `Meta title could be longer (${metaTitleLength} chars)`,
+      message: `Meta title very short (${metaTitleLength} chars, aim for 30+)`,
     });
   }
 
@@ -203,12 +203,12 @@ const analyzeRoute = (route: { path: string; title: string; lang: string; seo?: 
       category: "meta",
       message: `Meta description too long (${metaDescLength} chars, max 160)`,
     });
-  } else if (metaDescLength < 120) {
+  } else if (metaDescLength < 80) {
     issues.push({
       path: route.path,
       type: "info",
       category: "meta",
-      message: `Meta description could be longer (${metaDescLength} chars)`,
+      message: `Meta description very short (${metaDescLength} chars, aim for 100+)`,
     });
   }
 
