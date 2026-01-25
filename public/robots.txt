@@ -13,5 +13,5 @@ Allow: /
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://canary-detect.com/sitemap.xml
+# Dynamic sitemap with auto-updating lastmod dates
+Sitemap: https://efafzkcwzumxphliqgpg.supabase.co/functions/v1/sitemap
