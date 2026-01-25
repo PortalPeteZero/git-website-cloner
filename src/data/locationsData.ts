@@ -38,7 +38,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Inspección de Desagües Arrecife", description: "Inspecciones con CCTV de desagües y tuberías en todo Arrecife. 6 sistemas de cámara para todos los tamaños con informes detallados en vídeo.", href: `${serviceBasePath}/deteccion-desagues`, icon: Search },
           { title: "Reparación de Fugas Arrecife", description: "Servicios completos de reparación de fugas en Arrecife. Desde detección hasta reparación - tuberías de agua, tuberías de piscina y sistemas subterráneos.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
         ],
-        seo: { title: "Detección de Fugas Arrecife | Fugas Agua y Piscinas | Canary Detect", description: "Detección profesional de fugas Arrecife. Detección de fugas de agua, piscinas, tuberías subterráneas y reparación en la capital de Lanzarote. Sin Encontrar Sin Pagar. Llame +34 711 051 071", keywords: "detección fugas Arrecife, fugas agua Arrecife, fugas piscina Arrecife, reparación fugas Arrecife, fontanero Arrecife Lanzarote" }
+        seo: { title: "Detección Fugas Arrecife | Agua y Piscinas | Canary Detect", description: "Detección de fugas Arrecife. Fugas de agua, piscinas, tuberías subterráneas. Sin Encontrar Sin Pagar. +34 711 051 071", keywords: "detección fugas Arrecife, fugas agua Arrecife, fugas piscina Arrecife, reparación fugas Arrecife, fontanero Arrecife Lanzarote" }
       },
       "puerto-del-carmen": {
         name: "Puerto del Carmen",
@@ -53,7 +53,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Inspección de Desagües Puerto del Carmen", description: "Inspección CCTV y desatasco de desagües en Puerto del Carmen. Respuesta rápida para hoteles y restaurantes con problemas de drenaje.", href: `${serviceBasePath}/deteccion-desagues`, icon: Search },
           { title: "Reparación de Emergencia Puerto del Carmen", description: "Servicio de reparación de fugas de emergencia en Puerto del Carmen. Respuesta rápida para minimizar daños por agua y molestias a huéspedes.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
         ],
-        seo: { title: "Detección de Fugas Puerto del Carmen | Hoteles y Villas | Canary Detect", description: "Detección profesional de fugas Puerto del Carmen. Fugas de agua para hoteles, villas y apartamentos. Detección en piscinas, reparaciones de emergencia. Respuesta rápida. Llame +34 711 051 071", keywords: "detección fugas Puerto del Carmen, fugas agua Puerto del Carmen, fugas piscina Puerto del Carmen, detección fugas hoteles Lanzarote" }
+        seo: { title: "Detección Fugas Puerto del Carmen | Canary Detect", description: "Detección de fugas Puerto del Carmen. Hoteles, villas, apartamentos. Piscinas, reparaciones emergencia. +34 711 051 071", keywords: "detección fugas Puerto del Carmen, fugas agua Puerto del Carmen, fugas piscina Puerto del Carmen, detección fugas hoteles Lanzarote" }
       },
       "playa-blanca": {
         name: "Playa Blanca",
@@ -68,7 +68,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Detección Subterránea Playa Blanca", description: "Detección de tuberías y cables subterráneos en Playa Blanca. Esencial antes de construcción o jardinería en su propiedad.", href: `${serviceBasePath}/deteccion-subterranea`, icon: Search },
           { title: "Reparación de Fugas Playa Blanca", description: "Servicio local de reparación de fugas en Playa Blanca. Desde detección hasta reparación completa - tuberías, piscinas y desagües.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
         ],
-        seo: { title: "Detección de Fugas Playa Blanca | Expertos Locales | Canary Detect", description: "Detección local de fugas Playa Blanca. ¡Estamos aquí! Detección de fugas de agua, piscinas, subterráneas. Servicio el mismo día. Sin Encontrar Sin Pagar. Llame +34 711 051 071", keywords: "detección fugas Playa Blanca, fugas agua Playa Blanca, fugas piscina Playa Blanca, fontanero Playa Blanca, reparación fugas Playa Blanca Lanzarote" }
+        seo: { title: "Detección Fugas Playa Blanca | Expertos Locales", description: "Detección de fugas Playa Blanca. ¡Estamos aquí! Fugas agua, piscinas, subterráneas. Servicio mismo día. +34 711 051 071", keywords: "detección fugas Playa Blanca, fugas agua Playa Blanca, fugas piscina Playa Blanca, fontanero Playa Blanca, reparación fugas Playa Blanca Lanzarote" }
       },
       "costa-teguise": {
         name: "Costa Teguise",
@@ -83,7 +83,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Inspección de Tuberías Costa Teguise", description: "Inspección CCTV de tuberías para propiedades de Costa Teguise. Evalúe el estado de tuberías envejecidas antes de que los problemas se agraven.", href: `${serviceBasePath}/deteccion-desagues`, icon: Search },
           { title: "Reparación de Fugas Costa Teguise", description: "Servicio profesional de reparación de fugas en Costa Teguise. Soluciones completas para propiedades residenciales y comerciales.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
         ],
-        seo: { title: "Detección de Fugas Costa Teguise | Apartamentos y Villas | Canary Detect", description: "Detección profesional de fugas Costa Teguise. Fugas de agua para apartamentos, villas y piscinas comunitarias. Servicio experto para edificios compartidos. Llame +34 711 051 071", keywords: "detección fugas Costa Teguise, fugas agua Costa Teguise, fugas piscina Costa Teguise, fugas apartamentos Lanzarote" }
+        seo: { title: "Detección Fugas Costa Teguise | Canary Detect", description: "Detección de fugas Costa Teguise. Apartamentos, villas, piscinas comunitarias. Servicio experto. +34 711 051 071", keywords: "detección fugas Costa Teguise, fugas agua Costa Teguise, fugas piscina Costa Teguise, fugas apartamentos Lanzarote" }
       },
       "yaiza": {
         name: "Yaiza",
@@ -98,7 +98,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Detección Subterránea Yaiza", description: "Detección de tuberías y servicios subterráneos para propiedades rurales en Yaiza. Esencial para proyectos de construcción y jardinería.", href: `${serviceBasePath}/deteccion-subterranea`, icon: Search },
           { title: "Reparación de Fugas Yaiza", description: "Servicio profesional de reparación de fugas en todo el municipio de Yaiza. Tuberías de agua, sistemas de piscina y reparaciones subterráneas.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
         ],
-        seo: { title: "Detección de Fugas Yaiza | Villas y Fincas | Canary Detect", description: "Detección profesional de fugas Yaiza. Fugas de agua para villas de lujo, fincas y propiedades rurales. Detección en piscinas. Servicio local rápido. Llame +34 711 051 071", keywords: "detección fugas Yaiza, fugas agua Yaiza, fugas piscina Yaiza, fugas villa Lanzarote, reparación fugas finca Yaiza" }
+        seo: { title: "Detección Fugas Yaiza | Villas y Fincas | Canary Detect", description: "Detección de fugas Yaiza. Villas de lujo, fincas, propiedades rurales. Piscinas. Servicio local. +34 711 051 071", keywords: "detección fugas Yaiza, fugas agua Yaiza, fugas piscina Yaiza, fugas villa Lanzarote, reparación fugas finca Yaiza" }
       },
       "tias": {
         name: "Tías",
@@ -128,7 +128,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Inspección de Tuberías Playa Honda", description: "Inspección CCTV de tuberías para propiedades de Playa Honda. Evalúe el estado de tuberías envejecidas antes de que los problemas se agraven.", href: `${serviceBasePath}/deteccion-desagues`, icon: Search },
           { title: "Reparación de Fugas Playa Honda", description: "Reparación profesional de fugas en Playa Honda. Tuberías de agua, desagües y sistemas subterráneos.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
         ],
-        seo: { title: "Detección de Fugas Playa Honda | Apartamentos y Casas | Canary Detect", description: "Detección profesional de fugas Playa Honda. Fugas de agua para apartamentos, casas y edificios comunitarios. Respuesta rápida. Sin Encontrar Sin Pagar. Llame +34 711 051 071", keywords: "detección fugas Playa Honda, fugas agua Playa Honda, fugas piscina Playa Honda, fontanero Playa Honda, fugas apartamento Playa Honda" }
+        seo: { title: "Detección Fugas Playa Honda | Canary Detect", description: "Detección de fugas Playa Honda. Apartamentos, casas, edificios comunitarios. Respuesta rápida. +34 711 051 071", keywords: "detección fugas Playa Honda, fugas agua Playa Honda, fugas piscina Playa Honda, fontanero Playa Honda, fugas apartamento Playa Honda" }
       },
       "san-bartolome": {
         name: "San Bartolomé",
@@ -143,7 +143,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Detección de Fugas en Piscinas San Bartolomé", description: "Detección de fugas para piscinas privadas en San Bartolomé. Inspección completa con localización de fugas.", href: `${serviceBasePath}/deteccion-fugas-piscinas`, icon: Waves },
           { title: "Reparación de Fugas San Bartolomé", description: "Reparación profesional de fugas en todo San Bartolomé. Tuberías de agua, sistemas subterráneos y reparaciones de piscinas.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
         ],
-        seo: { title: "Detección de Fugas San Bartolomé | Rural y Pueblos | Canary Detect", description: "Detección profesional de fugas San Bartolomé. Fugas de agua para casas de pueblo, fincas y propiedades rurales. Detección de tuberías subterráneas. Llame +34 711 051 071", keywords: "detección fugas San Bartolomé, fugas agua San Bartolomé, fugas subterráneas San Bartolomé, fugas rurales Lanzarote" }
+        seo: { title: "Detección Fugas San Bartolomé | Canary Detect", description: "Detección de fugas San Bartolomé. Casas de pueblo, fincas, propiedades rurales. Tuberías subterráneas. +34 711 051 071", keywords: "detección fugas San Bartolomé, fugas agua San Bartolomé, fugas subterráneas San Bartolomé, fugas rurales Lanzarote" }
       },
       "teguise": {
         name: "Teguise",
@@ -158,7 +158,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Inspección de Desagües Teguise", description: "Inspecciones CCTV de desagües para propiedades de Teguise. Esencial para edificios antiguos con trazados de drenaje desconocidos.", href: `${serviceBasePath}/deteccion-desagues`, icon: Search },
           { title: "Reparación de Fugas Teguise", description: "Reparación profesional de fugas en Teguise. Reparaciones respetuosas para propiedades históricas y soluciones modernas para obras nuevas.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
         ],
-        seo: { title: "Detección de Fugas Teguise | Propiedades Históricas y Rurales | Canary Detect", description: "Detección profesional de fugas Teguise. Servicio especializado para edificios históricos, fincas rurales y propiedades costeras. Métodos no invasivos. Llame +34 711 051 071", keywords: "detección fugas Teguise, fugas agua Teguise, fugas edificios históricos Lanzarote, fugas rurales Teguise, Costa Teguise fugas" }
+        seo: { title: "Detección Fugas Teguise | Históricas y Rurales", description: "Detección de fugas Teguise. Edificios históricos, fincas rurales, propiedades costeras. Métodos no invasivos. +34 711 051 071", keywords: "detección fugas Teguise, fugas agua Teguise, fugas edificios históricos Lanzarote, fugas rurales Teguise, Costa Teguise fugas" }
       }
     };
   }
@@ -178,7 +178,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Drain Detection Arrecife", description: "CCTV drain surveys and pipe inspection throughout Arrecife. 6 camera systems for all pipe sizes with detailed video reports.", href: `${serviceBasePath}/drain-detection`, icon: Search },
         { title: "Leak Repair Arrecife", description: "Complete leak repair services in Arrecife. From detection to repair - water pipes, pool pipes and underground systems.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
       ],
-      seo: { title: "Leak Detection Arrecife | Water & Pool Leak Detection | Canary Detect", description: "Professional leak detection Arrecife. Water leak detection, pool leak detection, underground pipe detection & leak repair in Lanzarote's capital. No Find No Fee. Call +34 711 051 071", keywords: "leak detection Arrecife, water leak detection Arrecife, pool leak detection Arrecife, leak repair Arrecife, plumber Arrecife Lanzarote, hidden water leak Arrecife" }
+      seo: { title: "Leak Detection Arrecife | Water & Pool | Canary Detect", description: "Leak detection Arrecife. Water leaks, pool leaks, underground pipes. No Find No Fee. Call +34 711 051 071", keywords: "leak detection Arrecife, water leak detection Arrecife, pool leak detection Arrecife, leak repair Arrecife, plumber Arrecife Lanzarote, hidden water leak Arrecife" }
     },
     "puerto-del-carmen": {
       name: "Puerto del Carmen",
@@ -193,7 +193,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Drain Detection Puerto del Carmen", description: "CCTV drain inspection and unblocking in Puerto del Carmen. Fast response for hotels and restaurants experiencing drainage issues.", href: `${serviceBasePath}/drain-detection`, icon: Search },
         { title: "Emergency Leak Repair Puerto del Carmen", description: "Emergency leak repair service in Puerto del Carmen. Quick response to minimize water damage and guest disruption.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
       ],
-      seo: { title: "Leak Detection Puerto del Carmen | Hotel & Villa Leak Detection | Canary Detect", description: "Professional leak detection Puerto del Carmen. Water leak detection for hotels, villas & apartments. Pool leak detection, emergency repairs. Fast response. Call +34 711 051 071", keywords: "leak detection Puerto del Carmen, water leak detection Puerto del Carmen, pool leak detection Puerto del Carmen, hotel leak detection Lanzarote, villa leak repair Puerto del Carmen" }
+      seo: { title: "Leak Detection Puerto del Carmen | Canary Detect", description: "Leak detection Puerto del Carmen. Hotels, villas, apartments. Pool leaks, emergency repairs. Call +34 711 051 071", keywords: "leak detection Puerto del Carmen, water leak detection Puerto del Carmen, pool leak detection Puerto del Carmen, hotel leak detection Lanzarote, villa leak repair Puerto del Carmen" }
     },
     "playa-blanca": {
       name: "Playa Blanca",
@@ -208,7 +208,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Underground Detection Playa Blanca", description: "Underground pipe and cable detection in Playa Blanca. Essential before construction or landscaping on your property.", href: `${serviceBasePath}/underground-detection`, icon: Search },
         { title: "Leak Repair Playa Blanca", description: "Local leak repair service in Playa Blanca. From detection through to complete repair—pipes, pools and drains.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
       ],
-      seo: { title: "Leak Detection Playa Blanca | Local Leak Detection Experts | Canary Detect", description: "Local leak detection Playa Blanca. We're based here! Water leak detection, pool leak detection, underground detection. Same-day service. No Find No Fee. Call +34 711 051 071", keywords: "leak detection Playa Blanca, water leak detection Playa Blanca, pool leak detection Playa Blanca, plumber Playa Blanca, leak repair Playa Blanca Lanzarote" }
+      seo: { title: "Leak Detection Playa Blanca | Local Experts", description: "Local leak detection Playa Blanca. We're based here! Water, pool, underground. Same-day service. Call +34 711 051 071", keywords: "leak detection Playa Blanca, water leak detection Playa Blanca, pool leak detection Playa Blanca, plumber Playa Blanca, leak repair Playa Blanca Lanzarote" }
     },
     "costa-teguise": {
       name: "Costa Teguise",
@@ -223,7 +223,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Pipe Inspection Costa Teguise", description: "CCTV pipe inspection for Costa Teguise properties. Assess condition of aging pipework before problems escalate.", href: `${serviceBasePath}/drain-detection`, icon: Search },
         { title: "Leak Repair Costa Teguise", description: "Professional leak repair service in Costa Teguise. Complete solutions for residential and commercial properties.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
       ],
-      seo: { title: "Leak Detection Costa Teguise | Apartment & Villa Leak Detection | Canary Detect", description: "Professional leak detection Costa Teguise. Water leak detection for apartments, villas & community pools. Expert service for shared buildings. Call +34 711 051 071", keywords: "leak detection Costa Teguise, water leak detection Costa Teguise, pool leak detection Costa Teguise, apartment leak detection Lanzarote, community pool leak Costa Teguise" }
+      seo: { title: "Leak Detection Costa Teguise | Canary Detect", description: "Leak detection Costa Teguise. Apartments, villas, community pools. Expert shared building service. Call +34 711 051 071", keywords: "leak detection Costa Teguise, water leak detection Costa Teguise, pool leak detection Costa Teguise, apartment leak detection Lanzarote, community pool leak Costa Teguise" }
     },
     "yaiza": {
       name: "Yaiza",
@@ -238,7 +238,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Underground Detection Yaiza", description: "Underground pipe and utility detection for rural properties in Yaiza. Essential for construction and landscaping projects.", href: `${serviceBasePath}/underground-detection`, icon: Search },
         { title: "Leak Repair Yaiza", description: "Professional leak repair service throughout Yaiza municipality. Water pipes, pool systems and underground repairs.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
       ],
-      seo: { title: "Leak Detection Yaiza | Villa & Finca Leak Detection | Canary Detect", description: "Professional leak detection Yaiza. Water leak detection for luxury villas, fincas & rural properties. Pool leak detection. Fast local service. Call +34 711 051 071", keywords: "leak detection Yaiza, water leak detection Yaiza, pool leak detection Yaiza, villa leak detection Lanzarote, finca leak repair Yaiza" }
+      seo: { title: "Leak Detection Yaiza | Villa & Finca | Canary Detect", description: "Leak detection Yaiza. Luxury villas, fincas, rural properties. Pool leak detection. Fast local service. Call +34 711 051 071", keywords: "leak detection Yaiza, water leak detection Yaiza, pool leak detection Yaiza, villa leak detection Lanzarote, finca leak repair Yaiza" }
     },
     "tias": {
       name: "Tías",
@@ -253,7 +253,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Drain Detection Tías", description: "CCTV drain surveys and pipe inspection in Tías. Identify blockages, damage and drainage issues quickly.", href: `${serviceBasePath}/drain-detection`, icon: Search },
         { title: "Leak Repair Tías", description: "Complete leak repair services in Tías. From detection through to professional repair of all leak types.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
       ],
-      seo: { title: "Leak Detection Tías | Water & Pool Leak Detection | Canary Detect", description: "Professional leak detection Tías. Water leak detection, pool leak detection & drain surveys. Serving Tías and Puerto del Carmen. No Find No Fee. Call +34 711 051 071", keywords: "leak detection Tías, water leak detection Tías, pool leak detection Tías, plumber Tías Lanzarote, leak repair Tías" }
+      seo: { title: "Leak Detection Tías | Water & Pool | Canary Detect", description: "Leak detection Tías. Water leaks, pool leaks, drain surveys. Serving Tías & Puerto del Carmen. Call +34 711 051 071", keywords: "leak detection Tías, water leak detection Tías, pool leak detection Tías, plumber Tías Lanzarote, leak repair Tías" }
     },
     "playa-honda": {
       name: "Playa Honda",
@@ -268,7 +268,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Pipe Inspection Playa Honda", description: "CCTV pipe inspection for Playa Honda properties. Assess aging pipework condition before problems escalate.", href: `${serviceBasePath}/drain-detection`, icon: Search },
         { title: "Leak Repair Playa Honda", description: "Professional leak repair in Playa Honda. Water pipes, drains and underground systems.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
       ],
-      seo: { title: "Leak Detection Playa Honda | Apartment & House Leak Detection | Canary Detect", description: "Professional leak detection Playa Honda. Water leak detection for apartments, houses & community buildings. Fast response. No Find No Fee. Call +34 711 051 071", keywords: "leak detection Playa Honda, water leak detection Playa Honda, pool leak detection Playa Honda, plumber Playa Honda, apartment leak Playa Honda" }
+      seo: { title: "Leak Detection Playa Honda | Canary Detect", description: "Leak detection Playa Honda. Apartments, houses, community buildings. Fast response. No Find No Fee. Call +34 711 051 071", keywords: "leak detection Playa Honda, water leak detection Playa Honda, pool leak detection Playa Honda, plumber Playa Honda, apartment leak Playa Honda" }
     },
     "san-bartolome": {
       name: "San Bartolomé",
@@ -283,7 +283,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Pool Leak Detection San Bartolomé", description: "Pool leak detection for private pools in San Bartolomé. Complete survey with leak pinpointing.", href: `${serviceBasePath}/pool-leak-detection`, icon: Waves },
         { title: "Leak Repair San Bartolomé", description: "Professional leak repair throughout San Bartolomé. Water pipes, underground systems and pool repairs.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
       ],
-      seo: { title: "Leak Detection San Bartolomé | Rural & Village Leak Detection | Canary Detect", description: "Professional leak detection San Bartolomé. Water leak detection for village houses, fincas & rural properties. Underground pipe detection. Call +34 711 051 071", keywords: "leak detection San Bartolomé, water leak detection San Bartolomé, underground leak detection San Bartolomé, rural leak detection Lanzarote" }
+      seo: { title: "Leak Detection San Bartolomé | Canary Detect", description: "Leak detection San Bartolomé. Village houses, fincas, rural properties. Underground pipe detection. Call +34 711 051 071", keywords: "leak detection San Bartolomé, water leak detection San Bartolomé, underground leak detection San Bartolomé, rural leak detection Lanzarote" }
     },
     "teguise": {
       name: "Teguise",
@@ -298,7 +298,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Drain Detection Teguise", description: "CCTV drain surveys for Teguise properties. Essential for older buildings with unknown drainage layouts.", href: `${serviceBasePath}/drain-detection`, icon: Search },
         { title: "Leak Repair Teguise", description: "Professional leak repair in Teguise. Sympathetic repairs for historic properties and modern solutions for new builds.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
       ],
-      seo: { title: "Leak Detection Teguise | Historic & Rural Property Leak Detection | Canary Detect", description: "Professional leak detection Teguise. Specialist service for historic buildings, rural fincas & coastal properties. Non-invasive methods. Call +34 711 051 071", keywords: "leak detection Teguise, water leak detection Teguise, historic building leak detection Lanzarote, rural leak detection Teguise, Costa Teguise leak detection" }
+      seo: { title: "Leak Detection Teguise | Historic & Rural | Canary Detect", description: "Leak detection Teguise. Historic buildings, rural fincas, coastal properties. Non-invasive methods. Call +34 711 051 071", keywords: "leak detection Teguise, water leak detection Teguise, historic building leak detection Lanzarote, rural leak detection Teguise, Costa Teguise leak detection" }
     }
   };
 };

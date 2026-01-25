@@ -237,6 +237,8 @@ const checkInternalLinks = (): SeoIssue[] => {
   validPaths.add("/es");
   validPaths.add("/admin");
   validPaths.add("/admin/login");
+  validPaths.add("/services/free-leak-confirmation");
+  validPaths.add("/es/servicios/confirmacion-fugas-gratis");
 
   // Known internal link targets in the codebase
   const internalLinks = [
