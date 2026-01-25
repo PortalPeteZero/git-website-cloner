@@ -13,8 +13,10 @@ import {
   FileText,
   Image,
   Link,
-  Globe
+  Globe,
+  Download
 } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 import { getServicesData } from "@/data/servicesData";
 import { getLocationsData } from "@/data/locationsData";
 import { blogArticlesEn, blogArticlesEs } from "@/data/blogArticles";
@@ -320,6 +322,45 @@ export default function AdminSeoAudit() {
     }
   };
 
+  const exportToCSV = () => {
+    if (allIssues.length === 0) {
+      toast({
+        title: "No issues to export",
+        description: "Run an audit first to find SEO issues.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const headers = ["Path", "Type", "Category", "Message"];
+    const rows = allIssues.map(issue => [
+      issue.path,
+      issue.type,
+      issue.category,
+      `"${issue.message.replace(/"/g, '""')}"` // Escape quotes for CSV
+    ]);
+
+    const csvContent = [
+      headers.join(","),
+      ...rows.map(row => row.join(","))
+    ].join("\n");
+
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", `seo-audit-${new Date().toISOString().split('T')[0]}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+
+    toast({
+      title: "Export complete",
+      description: `Exported ${allIssues.length} issues to CSV.`,
+    });
+  };
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -330,10 +371,16 @@ export default function AdminSeoAudit() {
             Scan all routes for missing meta tags, broken links, and SEO issues
           </p>
         </div>
-        <Button onClick={runAudit} disabled={isScanning}>
-          <RefreshCw className={`h-4 w-4 mr-2 ${isScanning ? "animate-spin" : ""}`} />
-          {isScanning ? "Scanning..." : "Run Audit"}
-        </Button>
+        <div className="flex gap-2">
+          <Button variant="outline" onClick={exportToCSV} disabled={allIssues.length === 0}>
+            <Download className="h-4 w-4 mr-2" />
+            Export CSV
+          </Button>
+          <Button onClick={runAudit} disabled={isScanning}>
+            <RefreshCw className={`h-4 w-4 mr-2 ${isScanning ? "animate-spin" : ""}`} />
+            {isScanning ? "Scanning..." : "Run Audit"}
+          </Button>
+        </div>
       </div>
 
       {/* Summary Cards */}
