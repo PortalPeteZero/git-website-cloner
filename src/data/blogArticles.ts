@@ -886,8 +886,8 @@ If you suspect hidden leaks in your Lanzarote property, thermal imaging can reve
     author: "Dave Poxon",
     category: "Pool Care",
     image: poolDiverImg,
-    metaTitle: "Swimming Pool Leak Repair Cost Lanzarote | Pool Leak Detection Prices",
-    metaDescription: "What does pool leak detection and repair cost in Lanzarote? Complete guide to swimming pool leak repair prices, from detection to fix. No Find, No Fee guarantee.",
+    metaTitle: "Pool Leak Repair Cost Lanzarote | Pricing Guide",
+    metaDescription: "What does pool leak detection and repair cost in Lanzarote? Complete guide to swimming pool leak repair prices. No Find, No Fee.",
     keywords: "pool leak repair cost, swimming pool leak detection price, pool leak fix cost Lanzarote, pool repair prices, leak detection cost, pool plumbing repair",
     readTime: 7,
     content: `
@@ -1741,8 +1741,8 @@ No adivines la causa de tus paredes húmedas – obtén un diagnóstico profesio
     author: "Pete Ashcroft",
     category: "Tecnología",
     image: thermalUndergroundImg,
-    metaTitle: "Imagen Térmica para Detección de Fugas | Cómo Funciona | Lanzarote",
-    metaDescription: "Aprende cómo las cámaras de imagen térmica encuentran fugas de agua ocultas detrás de paredes y bajo suelos. Tecnología de detección no invasiva explicada por expertos de Lanzarote.",
+    metaTitle: "Imagen Térmica Detección Fugas | Lanzarote",
+    metaDescription: "Cómo las cámaras térmicas encuentran fugas ocultas detrás de paredes y bajo suelos. Tecnología no invasiva por expertos de Lanzarote.",
     keywords: "imagen térmica detección fugas, detección fugas infrarroja, detección fugas no invasiva, encontrar fuga sin daño, cámara térmica fuga agua, tecnología detección fugas",
     readTime: 6,
     content: `
@@ -1889,8 +1889,8 @@ Si sospechas fugas ocultas en tu propiedad de Lanzarote, la imagen térmica pued
     author: "Dave Poxon",
     category: "Cuidado de Piscinas",
     image: poolDiverImg,
-    metaTitle: "Coste Reparación Fuga Piscina Lanzarote | Precios Detección Fugas Piscina",
-    metaDescription: "¿Cuánto cuesta la detección y reparación de fugas de piscina en Lanzarote? Guía completa de precios de reparación de piscinas, desde detección hasta solución. Garantía Sin Encontrar, Sin Pagar.",
+    metaTitle: "Coste Reparación Fuga Piscina Lanzarote",
+    metaDescription: "¿Cuánto cuesta reparar fugas de piscina en Lanzarote? Guía completa de precios. Garantía Sin Encontrar, Sin Pagar.",
     keywords: "coste reparación fuga piscina, precio detección fugas piscina, coste arreglar fuga piscina Lanzarote, precios reparación piscina, coste detección fugas, reparación fontanería piscina",
     readTime: 7,
     content: `
