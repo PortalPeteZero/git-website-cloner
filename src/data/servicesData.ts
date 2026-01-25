@@ -99,8 +99,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         heroImage: drainDetectionImg,
         galleryImages: [drainDetection2, drainDetection3, pipeInspection2, pipeInspection3],
         seo: {
-          title: "Inspección de Desagües y Tuberías Lanzarote | CCTV | Canary Detect",
-          description: "Inspección profesional de desagües y tuberías con CCTV en Lanzarote. 6 sistemas de cámara para todos los tamaños. Trazado, evaluación de estado, detección de obstrucciones e informes detallados.",
+          title: "Inspección Desagües Lanzarote | CCTV | Canary Detect",
+          description: "Inspección profesional de desagües con CCTV en Lanzarote. 6 sistemas de cámara. Trazado, detección de obstrucciones e informes detallados.",
           keywords: "inspección desagües Lanzarote, inspección tuberías Lanzarote, CCTV desagües, evaluación estado tuberías, cámara inspección desagües, inspección precompra Canarias"
         },
         features: [
@@ -122,8 +122,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         heroImage: undergroundDetection1,
         galleryImages: [undergroundDetection1, undergroundDetection2, undergroundDetection3, undergroundDetection4, undergroundDetection5, undergroundDetection6],
         seo: {
-          title: "Detección de Fugas Subterráneas Lanzarote | Localización de Tuberías",
-          description: "Detección de fugas de agua subterráneas y localización de tuberías en Lanzarote. Radar GPR, localizadores electromagnéticos. Encuentre tuberías, cables y servicios enterrados.",
+          title: "Detección Fugas Subterráneas Lanzarote | Canary Detect",
+          description: "Detección de fugas subterráneas y tuberías en Lanzarote. Radar GPR, localizadores electromagnéticos. Localice tuberías enterradas.",
           keywords: "detección fugas subterráneas, localización tuberías enterradas, detección tuberías Lanzarote, localización servicios enterrados, detección cables Canarias"
         },
         features: [
@@ -144,8 +144,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         specialHeroImage: freeLeakConfirmationImg,
         galleryImages: [drainDetection4, drainDetection5, drainDetection6, drainDetection7],
         seo: {
-          title: "Detección de Fugas de Agua Lanzarote | Fugas Ocultas | Sin Encontrar Sin Pagar",
-          description: "Detección profesional de fugas de agua Lanzarote. Encuentre fugas ocultas con precisión centimétrica. ¿Contador en marcha? Imagen térmica, gas trazador, detección acústica. Sin Encontrar Sin Pagar. +€80.000 en equipos.",
+          title: "Detección Fugas Agua Lanzarote | Sin Encontrar Sin Pagar",
+          description: "Detección de fugas de agua Lanzarote. Localice fugas ocultas. ¿Contador en marcha? Imagen térmica, gas trazador, detección acústica. +€80.000 en equipos.",
           keywords: "detección fugas agua Canarias, detección fugas ocultas, contador agua corriendo fuga, reparación fugas tuberías, detección fugas Lanzarote, especialista fugas agua Lanzarote"
         },
         freeLeakSection: {
@@ -183,8 +183,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         heroImage: poolLeak1,
         galleryImages: [poolLeak8, poolLeak7, poolLeak10, poolLeak11, poolLeak9, poolLeak4, poolLeak5, poolLeak6],
         seo: {
-          title: "Detección de Fugas en Piscinas Lanzarote | Piscina Perdiendo Agua | Playa Blanca",
-          description: "Detección profesional de fugas en piscinas Lanzarote. ¿Piscina perdiendo agua? Localizamos la ubicación exacta. Pruebas acústicas, pruebas de presión, inspección CCTV. Servicio de reparación disponible.",
+          title: "Detección Fugas Piscinas Lanzarote | Canary Detect",
+          description: "Detección de fugas en piscinas Lanzarote. ¿Piscina perdiendo agua? Localizamos la ubicación exacta. Pruebas acústicas, presión, CCTV.",
           keywords: "detección fugas piscinas Lanzarote, piscina perdiendo agua fuga, reparación fugas piscina, detección fugas Playa Blanca, servicio reparación piscinas"
         },
         features: [
@@ -207,8 +207,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         heroImage: leakRepairBa4,
         galleryImages: [leakRepairBa1, leakRepairBa2, leakRepairBa3, leakRepairBa4],
         seo: {
-          title: "Reparación de Fugas Lanzarote | Reparación Tuberías | Reparación Piscinas",
-          description: "Reparación profesional de fugas Lanzarote. Reparación de tuberías de agua, reparación de tuberías de piscina, reparación de fugas subterráneas. Servicio de emergencia disponible. Servicio completo de detección a reparación.",
+          title: "Reparación Fugas Lanzarote | Tuberías y Piscinas",
+          description: "Reparación de fugas Lanzarote. Tuberías de agua, piscinas, fugas subterráneas. Servicio de emergencia. De detección a reparación.",
           keywords: "reparación fugas Lanzarote, reparación fugas agua Canarias, reparación tuberías agua, reparación tuberías piscina, reparación fugas subterráneas, reparación emergencia fugas Lanzarote"
         },
         features: [
@@ -228,8 +228,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         heroImage: drainUnblockingImg,
         galleryImages: [drainUnblocking1, drainDetection2],
         seo: {
-          title: "Desatasco de Desagües Lanzarote | Limpieza de Desagües | Servicio de Emergencia",
-          description: "Desatasco profesional de desagües Lanzarote. Desagüe atascado limpiado rápidamente con agua a alta presión. Cocina, baño, desagües principales. Servicio de emergencia disponible. Inspección CCTV incluida.",
+          title: "Desatasco Desagües Lanzarote | Emergencia | Canary Detect",
+          description: "Desatasco de desagües Lanzarote. Desagüe atascado limpiado rápido con agua a presión. Cocina, baño, principales. Emergencia disponible.",
           keywords: "desatasco desagües Lanzarote, desagüe atascado Lanzarote, limpieza desagües, agua a presión desagües, desatasco emergencia, WC atascado, fregadero atascado Canarias"
         },
         features: [
@@ -251,8 +251,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         heroImage: poolLeakRepairImg,
         galleryImages: [poolRepair1, poolRepair2, poolRepair3, poolRepair4, poolRepair5, poolRepair6],
         seo: {
-          title: "Reparación Fugas Piscinas Lanzarote | Reparación Tuberías Piscina | Reparación Vaso",
-          description: "Reparación profesional de fugas en piscinas Lanzarote. Reparación de tuberías, reparación de grietas en el vaso, reemplazo de accesorios. Servicio completo de detección y reparación. Materiales de calidad y reparaciones duraderas.",
+          title: "Reparación Fugas Piscinas Lanzarote | Canary Detect",
+          description: "Reparación de fugas en piscinas Lanzarote. Tuberías, grietas en el vaso, accesorios. Servicio completo de detección y reparación.",
           keywords: "reparación fugas piscina Lanzarote, reparación piscinas, reparación tuberías piscina, reparación vaso piscina, reparación accesorios piscina, arreglo fugas piscina Canarias"
         },
         features: [
@@ -279,8 +279,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       heroImage: drainDetectionImg,
       galleryImages: [drainDetection2, drainDetection3, pipeInspection2, pipeInspection3],
       seo: {
-        title: "Drain & Pipe Surveys Lanzarote | CCTV Inspection | Canary Detect",
-        description: "Professional drain and pipe CCTV inspection in Lanzarote. 6 camera systems for all pipe sizes. Drain tracing, condition assessment, blockage detection & detailed video reports.",
+        title: "Drain & Pipe Surveys Lanzarote | CCTV | Canary Detect",
+        description: "Professional drain and pipe CCTV inspection Lanzarote. 6 camera systems for all pipe sizes. Tracing, blockage detection & video reports.",
         keywords: "drain survey Lanzarote, pipe inspection Lanzarote, CCTV drain survey, pipe condition assessment, drain camera inspection, pre-purchase pipe survey Canary Islands"
       },
       features: [
@@ -302,8 +302,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       heroImage: undergroundDetection1,
       galleryImages: [undergroundDetection1, undergroundDetection2, undergroundDetection3, undergroundDetection4, undergroundDetection5, undergroundDetection6],
       seo: {
-        title: "Underground Water Leak Detection Lanzarote | Find Water Leak Underground",
-        description: "Underground water leak detection and pipe location in Lanzarote. GPR radar, electromagnetic locators. Find buried pipes, cables & utilities. Construction site surveys.",
+        title: "Underground Leak Detection Lanzarote | Pipe Location",
+        description: "Underground water leak detection Lanzarote. GPR radar, electromagnetic locators. Find buried pipes, cables & utilities before digging.",
         keywords: "underground water leak detection, find water leak underground, underground pipe detection Lanzarote, buried pipe location, utility detection Canary Islands, underground leak repair"
       },
       features: [
@@ -324,8 +324,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       specialHeroImage: freeLeakConfirmationImg,
       galleryImages: [drainDetection4, drainDetection5, drainDetection6, drainDetection7],
       seo: {
-        title: "Water Leak Detection Lanzarote | Hidden Water Leak Detection | No Find No Fee",
-        description: "Professional water leak detection Lanzarote. Find hidden water leaks with centimetre accuracy. Water meter running? Thermal imaging, tracer gas, acoustic detection. No Find No Fee. €80,000+ equipment.",
+        title: "Water Leak Detection Lanzarote | No Find No Fee",
+        description: "Water leak detection Lanzarote. Find hidden leaks with cm accuracy. Water meter running? Thermal imaging, tracer gas, acoustic. €80,000+ equipment.",
         keywords: "water leak detection Canary Islands, hidden water leak detection, water meter running leak, water pipe leak detection, water pipe leak repair, leak detection Lanzarote, Lanzarote water leak specialist, accurate leak detection"
       },
       freeLeakSection: {
@@ -363,8 +363,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       heroImage: poolLeak1,
       galleryImages: [poolLeak8, poolLeak7, poolLeak10, poolLeak11, poolLeak9, poolLeak4, poolLeak5, poolLeak6],
       seo: {
-        title: "Pool Leak Detection Lanzarote | Swimming Pool Leak Detection | Playa Blanca",
-        description: "Professional pool leak detection Lanzarote. Pool losing water? We pinpoint the exact leak location. Acoustic testing, pressure testing, CCTV inspection. Pool leak repair service available.",
+        title: "Pool Leak Detection Lanzarote | Swimming Pool Leaks",
+        description: "Pool leak detection Lanzarote. Pool losing water? We pinpoint exact leak location. Acoustic testing, pressure testing, CCTV inspection.",
         keywords: "pool leak detection Lanzarote, swimming pool leak detection, pool losing water leak, pool pipe leak repair, pool leak detection Playa Blanca, pool leak repair service"
       },
       features: [
@@ -387,8 +387,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       heroImage: leakRepairBa4,
       galleryImages: [leakRepairBa1, leakRepairBa2, leakRepairBa3, leakRepairBa4],
       seo: {
-        title: "Leak Repair Lanzarote | Water Pipe Leak Repair | Pool Pipe Leak Repair",
-        description: "Professional leak repair Lanzarote. Water pipe leak repair, pool pipe leak repair, underground leak repair. Emergency leak repair available. Complete detection to repair service.",
+        title: "Leak Repair Lanzarote | Water & Pool Pipe Repair",
+        description: "Leak repair Lanzarote. Water pipe, pool pipe, underground leak repair. Emergency service. Complete detection to repair.",
         keywords: "leak repair Lanzarote, water leak repair Canary Islands, water pipe leak repair, pool pipe leak repair, underground leak repair, emergency leak repair Lanzarote, leak detection and repair"
       },
       features: [
@@ -408,8 +408,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       heroImage: drainUnblockingImg,
       galleryImages: [drainUnblocking1, drainDetection2],
       seo: {
-        title: "Drain Unblocking Lanzarote | Blocked Drain Clearance | Emergency Service",
-        description: "Professional drain unblocking Lanzarote. Blocked drain cleared fast with high-pressure jetting. Kitchen, bathroom, main drains. Emergency drain unblocking available. CCTV inspection included.",
+        title: "Drain Unblocking Lanzarote | Emergency | Canary Detect",
+        description: "Drain unblocking Lanzarote. Blocked drain cleared fast with high-pressure jetting. Kitchen, bathroom, main drains. Emergency available.",
         keywords: "drain unblocking Lanzarote, blocked drain Lanzarote, drain clearance, drain jetting, emergency drain unblocking, blocked toilet, blocked sink Canary Islands"
       },
       features: [
@@ -431,8 +431,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       heroImage: poolLeakRepairImg,
       galleryImages: [poolRepair1, poolRepair2, poolRepair3, poolRepair4, poolRepair5, poolRepair6],
       seo: {
-        title: "Pool Leak Repair Lanzarote | Swimming Pool Pipe Repair | Pool Shell Repair",
-        description: "Professional pool leak repair Lanzarote. Swimming pool pipe repair, shell crack repair, fitting replacement. Complete pool leak detection and repair service. Quality materials & lasting repairs.",
+        title: "Pool Leak Repair Lanzarote | Pipe & Shell Repair",
+        description: "Pool leak repair Lanzarote. Pipe repair, shell crack repair, fitting replacement. Complete detection and repair service.",
         keywords: "pool leak repair Lanzarote, swimming pool repair, pool pipe repair, pool shell repair, pool fitting repair, pool leak fix Canary Islands, pool leak detection and repair"
       },
       features: [
