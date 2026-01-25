@@ -113,7 +113,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Inspección de Desagües Tías", description: "Inspecciones CCTV de desagües e inspección de tuberías en Tías. Identifique obstrucciones, daños y problemas de drenaje rápidamente.", href: `${serviceBasePath}/deteccion-desagues`, icon: Search },
           { title: "Reparación de Fugas Tías", description: "Servicios completos de reparación de fugas en Tías. Desde detección hasta reparación profesional de todo tipo de fugas.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
         ],
-        seo: { title: "Detección de Fugas Tías | Agua y Piscinas | Canary Detect", description: "Detección profesional de fugas Tías. Fugas de agua, piscinas e inspección de desagües. Servicio en Tías y Puerto del Carmen. Sin Encontrar Sin Pagar. Llame +34 711 051 071", keywords: "detección fugas Tías, fugas agua Tías, fugas piscina Tías, fontanero Tías Lanzarote, reparación fugas Tías" }
+        seo: { title: "Detección Fugas Tías | Agua y Piscinas | Canary Detect", description: "Detección de fugas Tías. Agua, piscinas, desagües. Servicio en Tías y Puerto del Carmen. Sin Encontrar Sin Pagar. +34 711 051 071", keywords: "detección fugas Tías, fugas agua Tías, fugas piscina Tías, fontanero Tías Lanzarote, reparación fugas Tías" }
       },
       "playa-honda": {
         name: "Playa Honda",
