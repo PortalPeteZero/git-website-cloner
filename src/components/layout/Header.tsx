@@ -176,7 +176,7 @@ const Header = () => {
             <div className="h-6 w-px bg-border" />
 
             {/* Services Dropdown */}
-            <DropdownMenu open={servicesDropdownOpen} onOpenChange={setServicesDropdownOpen}>
+            <DropdownMenu modal={false} open={servicesDropdownOpen} onOpenChange={setServicesDropdownOpen}>
               <DropdownMenuTrigger asChild>
                 <button 
                   className={`group flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md ${
@@ -251,7 +251,7 @@ const Header = () => {
             </DropdownMenu>
 
             {/* Villa & Pool Leaks Dropdown */}
-            <DropdownMenu open={villaPoolDropdownOpen} onOpenChange={setVillaPoolDropdownOpen}>
+            <DropdownMenu modal={false} open={villaPoolDropdownOpen} onOpenChange={setVillaPoolDropdownOpen}>
               <DropdownMenuTrigger asChild>
                 <button 
                   className="group flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md bg-accent text-white hover:bg-accent/90"
