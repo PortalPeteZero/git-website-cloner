@@ -193,6 +193,7 @@ const Header = () => {
               <DropdownMenuContent 
                 className="bg-background border border-border shadow-xl rounded-xl p-2 min-w-[220px]"
                 align="center"
+                sideOffset={8}
               >
                 <DropdownMenuItem asChild>
                   <Link 
@@ -263,6 +264,7 @@ const Header = () => {
               <DropdownMenuContent 
                 className="bg-background border border-border shadow-xl rounded-xl p-2 min-w-[220px]"
                 align="center"
+                sideOffset={8}
               >
                 <DropdownMenuItem asChild>
                   <a 
