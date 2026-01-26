@@ -1,6 +1,6 @@
 import { BadgeCheck, CheckCircle2, Mail, Phone, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation.png";
+import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation-new.png";
 import LeakConfirmationForm from "./LeakConfirmationForm";
 import { useTranslation } from "@/i18n/LanguageContext";
 
@@ -48,8 +48,8 @@ export default function FreeLeakConfirmationSection({
             <img 
               src={freeLeakConfirmationImg} 
               alt={isSpanish 
-                ? "Test de Confirmación de Fugas Gratis - Nuevo 2026 - 95% de las fugas en Lanzarote están ocultas"
-                : "Free Leak Confirmation Test - New for 2026 - 95% of Lanzarote leaks are hidden"}
+                ? "Test de Confirmación de Fugas Gratis - 95% de las fugas en Lanzarote están ocultas"
+                : "Free Leak Confirmation Test - 95% of Lanzarote leaks are hidden"}
               className="w-full h-auto"
               loading="eager"
               decoding="async"
@@ -61,7 +61,7 @@ export default function FreeLeakConfirmationSection({
         <header className="text-center mb-8 md:mb-10">
           <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
             <Sparkles className="h-4 w-4" />
-            {isSpanish ? "NUEVO SERVICIO 2026" : "NEW SERVICE FOR 2026"}
+            {isSpanish ? "100% GRATIS" : "100% FREE"}
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-canary-white leading-tight">
             {isSpanish ? "Test de Confirmación de Fugas Gratis" : "Free Leak Confirmation Tests"}
