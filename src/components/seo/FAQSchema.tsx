@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, forwardRef } from 'react';
 
 interface FAQItem {
   question: string;
@@ -9,7 +9,7 @@ interface FAQSchemaProps {
   faqs: FAQItem[];
 }
 
-export default function FAQSchema({ faqs }: FAQSchemaProps) {
+const FAQSchema = forwardRef<HTMLDivElement, FAQSchemaProps>(({ faqs }, ref) => {
   useEffect(() => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -46,5 +46,9 @@ export default function FAQSchema({ faqs }: FAQSchemaProps) {
     };
   }, [faqs]);
   
-  return null;
-}
+  return <div ref={ref} style={{ display: 'none' }} />;
+});
+
+FAQSchema.displayName = "FAQSchema";
+
+export default FAQSchema;

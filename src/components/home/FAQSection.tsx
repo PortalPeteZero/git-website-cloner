@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -9,7 +10,7 @@ import { Link } from "react-router-dom";
 import FAQSchema from "@/components/seo/FAQSchema";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const FAQSection = () => {
+const FAQSection = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useLanguage();
 
   const faqs = isSpanish ? [
@@ -110,7 +111,7 @@ const FAQSection = () => {
   const getRoute = (enPath: string, esPath: string) => isSpanish ? esPath : enPath;
 
   return (
-    <section className="py-12 md:py-16 bg-background section-divider">
+    <section ref={ref} className="py-12 md:py-16 bg-background section-divider">
       <FAQSchema faqs={faqs} />
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -158,6 +159,8 @@ const FAQSection = () => {
       </div>
     </section>
   );
-};
+});
+
+FAQSection.displayName = "FAQSection";
 
 export default FAQSection;

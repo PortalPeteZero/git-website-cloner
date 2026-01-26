@@ -10,10 +10,17 @@ import SEOHead from "@/components/seo/SEOHead";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getEnglishSlug, getSpanishSlug, getContactPath, getTechnologyPath, getServicesBasePath } from "@/i18n/routes";
 import { getServicesData, getServiceUIText, waterLeakCarouselImages, undergroundCarouselImages, ServiceData } from "@/data/servicesData";
+import LoadingFallback from "@/components/LoadingFallback";
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const { isSpanish } = useTranslation();
+  const [isHydrated, setIsHydrated] = useState(false);
+  
+  // Mark component as hydrated after first render
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
   
   // Normalize slug to English for data lookup
   const englishSlug = slug ? getEnglishSlug(slug) : null;
@@ -85,6 +92,15 @@ const ServiceDetail = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, [hasHeroCarousel, carouselImages.length]);
+
+  // Show loading state during initial hydration to prevent "Not Found" flash
+  if (!isHydrated) {
+    return (
+      <Layout>
+        <LoadingFallback height="min-h-[60vh]" />
+      </Layout>
+    );
+  }
 
   if (!service) {
     return (
