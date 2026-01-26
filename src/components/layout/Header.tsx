@@ -24,6 +24,8 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [villaPoolOpen, setVillaPoolOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [villaPoolDropdownOpen, setVillaPoolDropdownOpen] = useState(false);
   const location = useLocation();
   const { t, isSpanish } = useTranslation();
 
@@ -174,7 +176,7 @@ const Header = () => {
             <div className="h-6 w-px bg-border" />
 
             {/* Services Dropdown */}
-            <DropdownMenu>
+            <DropdownMenu open={servicesDropdownOpen} onOpenChange={setServicesDropdownOpen}>
               <DropdownMenuTrigger asChild>
                 <button 
                   className={`group flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md ${
@@ -248,7 +250,7 @@ const Header = () => {
             </DropdownMenu>
 
             {/* Villa & Pool Leaks Dropdown */}
-            <DropdownMenu>
+            <DropdownMenu open={villaPoolDropdownOpen} onOpenChange={setVillaPoolDropdownOpen}>
               <DropdownMenuTrigger asChild>
                 <button 
                   className="group flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md bg-accent text-white hover:bg-accent/90"
