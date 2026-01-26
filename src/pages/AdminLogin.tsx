@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Lock, Mail, AlertCircle } from "lucide-react";
-import logoDark from "@/assets/logo-dark-bg.png";
+import logoDark from "@/assets/logo-dark-bg.svg";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");

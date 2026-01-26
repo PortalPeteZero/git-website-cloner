@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram, ArrowRight, Clock, Shield, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import logo from "@/assets/logo-dark-bg.png";
+import logo from "@/assets/logo-dark-bg.svg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const Footer = () => {
