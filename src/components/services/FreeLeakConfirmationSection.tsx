@@ -41,6 +41,25 @@ export default function FreeLeakConfirmationSection({
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 relative z-10">
+        {/* Intro text above banner */}
+        <div className="mb-8 md:mb-10 max-w-4xl mx-auto text-center">
+          <h3 className="font-heading text-2xl md:text-3xl font-bold text-canary-white mb-4">
+            {isSpanish 
+              ? "El Test de Confirmación de Fugas Gratis: Un Éxito Comprobado"
+              : "The Free Leak Confirmation Test: A Proven Success"}
+          </h3>
+          <p className="text-canary-white/90 text-base md:text-lg leading-relaxed mb-4">
+            {isSpanish 
+              ? "En 2024, Canary Detect introdujo un test de confirmación de fugas gratuito para reforzar su compromiso con el servicio al cliente, y ha sido un éxito rotundo. Este servicio está diseñado para propietarios que sospechan de una fuga pero aún no están seguros. En lugar de comprometerse con una inspección completa, los clientes pueden hacer que un profesional evalúe su sistema sin coste alguno."
+              : "In 2024, Canary Detect introduced a free leak confirmation test to further their commitment to customer service, and it has been a resounding success. This service is designed for homeowners who suspect a leak but are not yet certain. Instead of committing to a full survey, customers can have their system assessed by a professional at no cost."}
+          </p>
+          <p className="text-canary-white/80 text-base leading-relaxed">
+            {isSpanish 
+              ? "Esta iniciativa aborda un problema común: clientes que pagan por una inspección completa solo para descubrir que no había fuga. Este enfoque garantiza que los recursos de la empresa se centren en fugas reales, creando una situación beneficiosa tanto para la empresa como para el cliente."
+              : "This initiative addresses a common problem: customers paying for a full survey only to discover there was no leak. This approach ensures that the company's resources are focused on genuine leaks, creating a win-win situation for both the company and the customer."}
+          </p>
+        </div>
+
         {/* Featured promo banner with glow effect */}
         <div className="mb-8 md:mb-10 relative max-w-4xl mx-auto">
           <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-canary-cyan/20 to-primary/20 rounded-3xl blur-xl opacity-60" />
