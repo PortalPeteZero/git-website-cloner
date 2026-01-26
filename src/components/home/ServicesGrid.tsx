@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { Droplets, Search, Cable, Waves, CircleDot, Wrench } from "lucide-react";
 import ServiceCardLite from "./ServiceCardLite";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -30,7 +31,7 @@ import leakRepairBa3 from "@/assets/services/gallery/leak-repair-ba-3.jpg";
 import leakRepairBa4 from "@/assets/services/gallery/leak-repair-ba-4.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
 
-const ServicesGrid = () => {
+const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useLanguage();
 
   const services = [
@@ -97,7 +98,7 @@ const ServicesGrid = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-canary-navy relative overflow-hidden">
+    <section ref={ref} className="py-12 md:py-16 bg-canary-navy relative overflow-hidden">
       {/* Subtle dot pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1.5'/%3E%3C/g%3E%3C/svg%3E")`,
@@ -137,6 +138,8 @@ const ServicesGrid = () => {
       </div>
     </section>
   );
-};
+});
+
+ServicesGrid.displayName = "ServicesGrid";
 
 export default ServicesGrid;

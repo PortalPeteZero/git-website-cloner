@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import { Atom, AudioLines, Thermometer, Mic, Video, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -47,12 +48,12 @@ const getTechnologies = (isSpanish: boolean) => [
   },
 ];
 
-const TechnologySection = () => {
+const TechnologySection = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useTranslation();
   const technologies = getTechnologies(isSpanish);
   
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-br from-slate-900 via-canary-navy to-slate-900 relative overflow-hidden">
+    <section ref={ref} className="py-12 md:py-16 bg-gradient-to-br from-slate-900 via-canary-navy to-slate-900 relative overflow-hidden">
       {/* Gradient orbs for depth */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl" />
@@ -152,6 +153,8 @@ const TechnologySection = () => {
       </div>
     </section>
   );
-};
+});
+
+TechnologySection.displayName = "TechnologySection";
 
 export default TechnologySection;

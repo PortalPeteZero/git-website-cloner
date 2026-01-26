@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -11,11 +12,12 @@ interface ServiceCardLiteProps {
   imageAlt?: string;
 }
 
-const ServiceCardLite = ({ title, description, icon: Icon, href, image, imageAlt }: ServiceCardLiteProps) => {
-  const { isSpanish } = useLanguage();
-  
-  return (
-    <div className="transition-transform duration-300 ease-out hover:-translate-y-1">
+const ServiceCardLite = forwardRef<HTMLDivElement, ServiceCardLiteProps>(
+  ({ title, description, icon: Icon, href, image, imageAlt }, ref) => {
+    const { isSpanish } = useLanguage();
+    
+    return (
+      <div ref={ref} className="transition-transform duration-300 ease-out hover:-translate-y-1">
       <Link
         to={href}
         className="group block bg-white rounded-xl border-2 border-gray-100 shadow-md hover:shadow-xl hover:border-primary/30 transition-all duration-300 ease-out overflow-hidden"
@@ -49,7 +51,10 @@ const ServiceCardLite = ({ title, description, icon: Icon, href, image, imageAlt
         </div>
       </Link>
     </div>
-  );
-};
+    );
+  }
+);
+
+ServiceCardLite.displayName = "ServiceCardLite";
 
 export default ServiceCardLite;

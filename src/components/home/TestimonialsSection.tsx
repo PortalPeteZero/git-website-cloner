@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import { Star, Quote, MapPin } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const TestimonialsSection = () => {
+const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useLanguage();
 
   const testimonials = isSpanish ? [
@@ -74,7 +75,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/50">
+    <section ref={ref} className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/50">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -160,6 +161,8 @@ const TestimonialsSection = () => {
       </div>
     </section>
   );
-};
+});
+
+TestimonialsSection.displayName = "TestimonialsSection";
 
 export default TestimonialsSection;

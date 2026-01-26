@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import { Phone, ClipboardCheck, Search, FileText, Wrench, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const HowItWorksSection = () => {
+const HowItWorksSection = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useLanguage();
 
   const steps = isSpanish ? [
@@ -70,7 +71,7 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-muted to-background overflow-hidden section-divider">
+    <section ref={ref} className="py-12 md:py-16 bg-gradient-to-b from-muted to-background overflow-hidden section-divider">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -192,6 +193,8 @@ const HowItWorksSection = () => {
       </div>
     </section>
   );
-};
+});
+
+HowItWorksSection.displayName = "HowItWorksSection";
 
 export default HowItWorksSection;
