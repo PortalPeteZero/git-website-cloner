@@ -62,7 +62,7 @@ const FreeLeakConfirmation = () => {
             >
               <span className="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
                 <CheckCircle className="h-4 w-4" />
-                {isSpanish ? "NUEVO 2026 — COMPLETAMENTE GRATIS" : "NEW FOR 2026 — COMPLETELY FREE"}
+                {isSpanish ? "100% GRATIS — SIN COMPROMISO" : "100% FREE — NO OBLIGATION"}
               </span>
               
               <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
