@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -7,7 +8,7 @@ import poolLeak1 from "@/assets/case-studies/pool-leak-1.jpg";
 import photo1 from "@/assets/gallery/photo-1.jpg";
 import photo2 from "@/assets/gallery/photo-2.jpg";
 
-const CaseStudiesPreview = () => {
+const CaseStudiesPreview = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useLanguage();
 
   const caseStudies = isSpanish ? [
@@ -64,7 +65,7 @@ const CaseStudiesPreview = () => {
   const getRoute = (enPath: string, esPath: string) => isSpanish ? esPath : enPath;
 
   return (
-    <section className="py-12 md:py-16 bg-muted/50 section-divider">
+    <section ref={ref} className="py-12 md:py-16 bg-muted/50 section-divider">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">
@@ -119,6 +120,8 @@ const CaseStudiesPreview = () => {
       </div>
     </section>
   );
-};
+});
+
+CaseStudiesPreview.displayName = "CaseStudiesPreview";
 
 export default CaseStudiesPreview;

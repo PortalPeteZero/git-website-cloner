@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,7 +11,7 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import { HelpCircle, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const ProblemFAQSection = () => {
+const ProblemFAQSection = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useLanguage();
 
   const problemFaqs = isSpanish ? [
@@ -69,7 +70,7 @@ const ProblemFAQSection = () => {
   const getRoute = (enPath: string, esPath: string) => isSpanish ? esPath : enPath;
 
   return (
-    <section className="py-12 md:py-16 bg-muted/50 section-pattern section-divider">
+    <section ref={ref} className="py-12 md:py-16 bg-muted/50 section-pattern section-divider">
       <FAQSchema faqs={problemFaqs} />
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-5 gap-12 items-start">
@@ -120,6 +121,8 @@ const ProblemFAQSection = () => {
       </div>
     </section>
   );
-};
+});
+
+ProblemFAQSection.displayName = "ProblemFAQSection";
 
 export default ProblemFAQSection;
