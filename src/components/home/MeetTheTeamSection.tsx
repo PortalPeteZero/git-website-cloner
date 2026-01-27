@@ -265,7 +265,7 @@ const MeetTheTeamSection = () => {
                 <Theater className="h-6 w-6 text-primary" />
                 {isSpanish ? "El Lado Divertido" : "The Fun Side"}
               </h3>
-              <p className="text-white/90 text-lg leading-relaxed mb-6 text-justify">
+              <p className="text-white/90 text-xl leading-relaxed mb-6 w-full">
                 {isSpanish ? (
                   <>
                     Cada enero puedes encontrar a Pete y Dave—normalmente vestidos de drag—actuando en la pantomima anual producida por <strong className="text-primary">Finchy Fairytales</strong>, un espectáculo dirigido por voluntarios que dona todas las ganancias a caridad. Para apoyar a las empresas locales, Canary Detect lanzó recientemente <strong className="text-primary">"Spot the Leak"</strong>, una competición gratuita donde los jugadores prueban sus habilidades detectivescas encontrando fugas ocultas para ganar premios.
