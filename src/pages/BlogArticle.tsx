@@ -12,6 +12,7 @@ import rehypeRaw from "rehype-raw";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getBlogPath } from "@/i18n/routes";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
+import VideoPlayer from "@/components/blog/VideoPlayer";
 
 // Some migrated markdown sources can contain accidental paragraph breaks around inline bold terms,
 // e.g. "known as an\n\n**aljibe**\n\n, and ...".
@@ -397,6 +398,15 @@ const BlogArticle = () => {
                   hr: () => (
                     <hr className="my-10 border-t-2 border-border" />
                   ),
+                  video: ({ children, ...props }) => {
+                    // Extract src from source child if present
+                    const sourceChild = Array.isArray(children) 
+                      ? children.find((child: any) => child?.type === 'source')
+                      : null;
+                    const src = sourceChild?.props?.src || (props as any).src || '';
+                    const type = sourceChild?.props?.type || 'video/mp4';
+                    return <VideoPlayer src={src} type={type} />;
+                  },
                 }}
               >
                 {normalizedContent}
