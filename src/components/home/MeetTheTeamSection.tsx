@@ -4,7 +4,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 // Import team images
 import peteDaveMain from "@/assets/team/pete-dave-main.jpg";
-import peteDaveFun from "@/assets/team/pete-dave-fun.jpg";
+import peteDaveSuits from "@/assets/team/pete-dave-suits.png";
 import pantoMatching from "@/assets/team/panto-matching.jpg";
 import daveUnicorn from "@/assets/team/dave-unicorn.jpg";
 import pantoGreen from "@/assets/team/panto-green.jpg";
@@ -94,13 +94,12 @@ const MeetTheTeamSection = () => {
               </div>
             </div>
 
-            {/* Fun secondary image */}
             <div className="relative">
-              <div className="aspect-[16/9] rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
+              <div className="aspect-[3/4] rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5 bg-muted">
                 <img 
-                  src={peteDaveFun}
-                  alt="Pete and Dave having fun in Lanzarote"
-                  className="w-full h-full object-cover"
+                  src={peteDaveSuits}
+                  alt="Pete and Dave in Lanzarote"
+                  className="w-full h-full object-contain"
                   loading="lazy"
                 />
               </div>
