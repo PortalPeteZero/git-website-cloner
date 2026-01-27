@@ -111,7 +111,7 @@ const MeetTheTeamSection = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-6 flex flex-col h-full"
+            className="flex flex-col gap-6 h-full"
           >
             {/* Professional credentials */}
             <div className="bg-white rounded-xl p-6 shadow-lg ring-1 ring-black/5">
