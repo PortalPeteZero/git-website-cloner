@@ -193,6 +193,28 @@ const MeetTheTeamSection = () => {
                   </>
                 )}
               </p>
+              
+              {/* Community Links */}
+              <div className="flex flex-wrap gap-3 mt-4 pt-4 border-t border-white/20">
+                <a 
+                  href="https://www.elatico.org/helping-the-community" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" />
+                  El Atico
+                </a>
+                <a 
+                  href="https://playablanca-5km.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" />
+                  5k Run
+                </a>
+              </div>
             </div>
 
             {/* Stats row */}
