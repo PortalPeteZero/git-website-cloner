@@ -111,7 +111,7 @@ const MeetTheTeamSection = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 flex flex-col h-full"
           >
             {/* Professional credentials */}
             <div className="bg-white rounded-xl p-6 shadow-lg ring-1 ring-black/5">
@@ -174,7 +174,7 @@ const MeetTheTeamSection = () => {
             </div>
 
             {/* Stats row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-auto">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
