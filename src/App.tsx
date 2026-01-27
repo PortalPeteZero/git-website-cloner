@@ -17,6 +17,7 @@ import Technology from "./pages/Technology";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import LocationPage from "./pages/LocationPage";
+import MeetTheTeam from "./pages/MeetTheTeam";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 import NotFound from "./pages/NotFound";
@@ -46,6 +47,7 @@ const App = () => (
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogArticle />} />
               <Route path="/locations/:location" element={<LocationPage />} />
+              <Route path="/meet-the-team" element={<MeetTheTeam />} />
               
               {/* Spanish Routes */}
               <Route path="/es" element={<Index />} />
@@ -59,6 +61,7 @@ const App = () => (
               <Route path="/es/blog" element={<Blog />} />
               <Route path="/es/blog/:slug" element={<BlogArticle />} />
               <Route path="/es/ubicaciones/:location" element={<LocationPage />} />
+              <Route path="/es/equipo" element={<MeetTheTeam />} />
               
               {/* Admin (English only) */}
               <Route path="/admin" element={<Admin />} />
