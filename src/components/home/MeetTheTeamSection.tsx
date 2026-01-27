@@ -81,7 +81,7 @@ const MeetTheTeamSection = () => {
           >
             {/* Main hero image */}
             <div className="relative group">
-              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-2xl ring-1 ring-black/5">
+              <div className="aspect-[16/10] rounded-xl overflow-hidden shadow-2xl ring-1 ring-black/5">
                 <img 
                   src={peteDaveMain}
                   alt="Pete Ashcroft and Dave Poxon - Canary Detect owners"
@@ -95,7 +95,7 @@ const MeetTheTeamSection = () => {
             </div>
 
             <div className="relative">
-              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
+              <div className="aspect-[16/10] rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                 <img 
                   src={peteDaveSuits}
                   alt="Pete and Dave in Lanzarote"
