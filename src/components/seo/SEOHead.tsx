@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { forwardRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from '@/i18n/LanguageContext';
 import { getEquivalentRoute } from '@/i18n/routes';
@@ -12,14 +12,14 @@ interface SEOHeadProps {
   image?: string;
 }
 
-export default function SEOHead({ 
-  title, 
-  description, 
+const SEOHead = forwardRef<unknown, SEOHeadProps>(({
+  title,
+  description,
   keywords,
   canonical,
   type = 'website',
-  image = '/og-image.jpg'
-}: SEOHeadProps) {
+  image = '/og-image.jpg',
+}: SEOHeadProps, _ref) => {
   const location = useLocation();
   const { language, isSpanish } = useTranslation();
 
@@ -121,4 +121,8 @@ export default function SEOHead({
   }, [title, description, keywords, canonical, type, image, language, isSpanish, location.pathname]);
   
   return null;
-}
+});
+
+SEOHead.displayName = 'SEOHead';
+
+export default SEOHead;
