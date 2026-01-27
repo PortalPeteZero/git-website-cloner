@@ -10,6 +10,7 @@ import contactHero from "@/assets/hero/contact-hero.jpg";
 import SEOHead from "@/components/seo/SEOHead";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { t, isSpanish } = useTranslation();
@@ -47,17 +48,44 @@ const Contact = () => {
     if (getFieldError("name") || getFieldError("email") || getFieldError("message")) return;
     
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setSubmitStatus("success");
     
-    // Reset after 3 seconds
-    setTimeout(() => {
-      setSubmitStatus("idle");
-      setFormData({ name: "", phone: "", email: "", service: "", message: "" });
-      setTouched({});
-    }, 3000);
+    try {
+      // Get service label for the email
+      const selectedService = serviceOptions.find(opt => opt.value === formData.service);
+      const serviceLabel = selectedService?.label || "Not specified";
+      
+      const { data, error } = await supabase.functions.invoke('send-leak-enquiry', {
+        body: {
+          name: formData.name,
+          phone: formData.phone || "Not provided",
+          email: formData.email,
+          address: `Service: ${serviceLabel}`,
+          message: formData.message,
+          enquiryType: "Full Leak Survey Request" as const,
+        },
+      });
+
+      if (error) {
+        console.error("Edge function error:", error);
+        throw new Error(error.message || "Failed to send message");
+      }
+
+      console.log("Contact form submitted successfully:", data);
+      setSubmitStatus("success");
+      
+      // Reset after 3 seconds
+      setTimeout(() => {
+        setSubmitStatus("idle");
+        setFormData({ name: "", phone: "", email: "", service: "", message: "" });
+        setTouched({});
+      }, 3000);
+    } catch (error: any) {
+      console.error("Error submitting contact form:", error);
+      setSubmitStatus("error");
+      setTimeout(() => setSubmitStatus("idle"), 3000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const getInputClassName = (field: string) => {
