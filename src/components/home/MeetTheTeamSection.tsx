@@ -71,7 +71,7 @@ const MeetTheTeamSection = () => {
         </motion.div>
 
         {/* Main content grid */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           {/* Left column - Images */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
