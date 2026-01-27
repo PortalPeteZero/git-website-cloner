@@ -1076,11 +1076,9 @@ We serve pool owners in Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza, a
     content: `
 ## Precision • Speed • Results
 
-When a hidden water leak strikes, you need fast, accurate detection and repair. This case study shows how The Leaky Finders completed a full leak detection, repair, and reinstatement in just **one afternoon** — with minimal disruption to the property.
+**The call:** A spinning water meter, no visible signs of a leak, and holiday guests arriving imminently. The customer needed answers — fast.
 
-![Water pooling on floor from hidden leak](/assets/blog/emergency-leak-wet-floor.jpg)
-
-*The initial sign: water seeping onto tiled flooring, indicating a hidden leak beneath the surface.*
+This case study shows how The Leaky Finders detected, located, repaired, and fully reinstated a hidden underground leak in just **one afternoon** — with minimal disruption to the property.
 
 ---
 
@@ -2237,11 +2235,9 @@ Servimos a propietarios de piscinas en Playa Blanca, Puerto del Carmen, Costa Te
     content: `
 ## Precisión • Rapidez • Resultados
 
-Cuando una fuga de agua oculta aparece, necesitas detección y reparación rápida y precisa. Este caso de éxito muestra cómo Los Cazafugas completaron una detección, reparación y restauración completa en solo **una tarde** — con mínima interrupción para la propiedad.
+**La llamada:** Un contador de agua girando sin parar, ninguna señal visible de fuga, y huéspedes de vacaciones a punto de llegar. El cliente necesitaba respuestas — rápido.
 
-![Agua acumulándose en el suelo por fuga oculta](/assets/blog/emergency-leak-wet-floor.jpg)
-
-*La primera señal: agua filtrándose en el suelo de baldosas, indicando una fuga oculta bajo la superficie.*
+Este caso de éxito muestra cómo Los Cazafugas detectaron, localizaron, repararon y restauraron completamente una fuga subterránea oculta en solo **una tarde** — con mínima interrupción para la propiedad.
 
 ---
 
