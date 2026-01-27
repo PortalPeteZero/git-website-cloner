@@ -2410,8 +2410,6 @@ export const getBlogArticles = (isSpanish: boolean): BlogArticle[] => {
   return isSpanish ? blogArticlesEs : blogArticlesEn;
 };
 
-// Legacy export for backwards compatibility
-export const blogArticles = blogArticlesEn;
 
 export function getArticleBySlug(slug: string, isSpanish: boolean = false): BlogArticle | undefined {
   const articles = getBlogArticles(isSpanish);
