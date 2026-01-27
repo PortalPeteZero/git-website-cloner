@@ -19,6 +19,14 @@ import lanzaroteSystemHouseImg from "@/assets/blog/lanzarote-water-system-house.
 import lanzaroteSystemDiagramImg from "@/assets/blog/lanzarote-water-system-diagram.png";
 import lanzaroteMeterLeakImg from "@/assets/blog/lanzarote-water-meter-leak.png";
 
+// Emergency leak detection images
+import emergencyLeakWetFloorImg from "@/assets/blog/emergency-leak-wet-floor.jpg";
+import emergencyLeakAcousticImg from "@/assets/blog/emergency-leak-acoustic-detection.jpg";
+import emergencyLeakExcavationImg from "@/assets/blog/emergency-leak-excavation.jpg";
+import emergencyLeakPipeRepairImg from "@/assets/blog/emergency-leak-pipe-repair.jpg";
+import emergencyLeakHoleImg from "@/assets/blog/emergency-leak-hole.jpg";
+import emergencyLeakCctvImg from "@/assets/blog/emergency-leak-cctv.jpg";
+
 // Helper to create image placeholders for markdown content
 export const BLOG_IMAGES = {
   lanzaroteTraditionalHouse: lanzaroteTraditionalHouseImg,
@@ -27,6 +35,12 @@ export const BLOG_IMAGES = {
   lanzaroteSystemHouse: lanzaroteSystemHouseImg,
   lanzaroteSystemDiagram: lanzaroteSystemDiagramImg,
   lanzaroteMeterLeak: lanzaroteMeterLeakImg,
+  emergencyLeakWetFloor: emergencyLeakWetFloorImg,
+  emergencyLeakAcoustic: emergencyLeakAcousticImg,
+  emergencyLeakExcavation: emergencyLeakExcavationImg,
+  emergencyLeakPipeRepair: emergencyLeakPipeRepairImg,
+  emergencyLeakHole: emergencyLeakHoleImg,
+  emergencyLeakCctv: emergencyLeakCctvImg,
 };
 
 export interface BlogArticle {
@@ -1045,6 +1059,164 @@ We serve pool owners in Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza, a
 
 [Request a pool leak survey →](/contact)
     `
+  },
+  {
+    id: 8,
+    slug: "emergency-leak-detection-repair-lanzarote",
+    title: "Emergency Leak Detection & Repair: Complete in One Afternoon",
+    excerpt: "See how The Leaky Finders detected, located, repaired, and reinstated a hidden water leak in just one afternoon using advanced technology and surgical precision.",
+    date: "2025-01-27",
+    author: "Pete Ashcroft",
+    category: "Case Studies",
+    image: emergencyLeakAcousticImg,
+    metaTitle: "Emergency Leak Detection & Repair Lanzarote | One Afternoon",
+    metaDescription: "Real case study: hidden water leak detected, located, repaired and reinstated in one afternoon. Precision technology, minimal disruption. Canary Detect Lanzarote.",
+    keywords: "emergency leak detection Lanzarote, water leak repair, hidden leak found, pipe leak repair, leak detection case study, Canary Detect",
+    readTime: 6,
+    content: `
+## Precision • Speed • Results
+
+When a hidden water leak strikes, you need fast, accurate detection and repair. This case study shows how The Leaky Finders completed a full leak detection, repair, and reinstatement in just **one afternoon** — with minimal disruption to the property.
+
+![Water pooling on floor from hidden leak](/assets/blog/emergency-leak-wet-floor.jpg)
+
+*The initial sign: water seeping onto tiled flooring, indicating a hidden leak beneath the surface.*
+
+---
+
+## Step 1: Pinpoint Accuracy
+
+### Advanced Technology Locates the Source
+
+Using state-of-the-art **acoustic and trace gas equipment**, we pinpoint the exact location of the leak. This precision eliminates guesswork and unnecessary damage to your property.
+
+![Acoustic leak detection equipment in use](/assets/blog/emergency-leak-acoustic-detection.jpg)
+
+*Our specialist uses advanced acoustic detection equipment to listen for the telltale sounds of water escaping from pressurised pipes.*
+
+**We find it first time, every time.**
+
+---
+
+## Step 2: Internal Camera Evidence
+
+### Precision Location & Depth
+
+Our advanced **CCTV camera head** can be precisely located from the surface with centimetre accuracy, including exact depth measurement. This ensures we know exactly where to dig before breaking ground.
+
+![CCTV internal camera showing pipe crack](/assets/blog/emergency-leak-cctv.jpg)
+
+*Internal camera inspection at 4.39m depth reveals the crack in the pipe — documented evidence for insurance claims.*
+
+**Location accuracy: centimetre precision**
+
+---
+
+## Step 3: Minimal Excavation
+
+### Single Tile Lift Demonstrates Surgical Precision
+
+Our targeted approach means lifting just **one tile** to access the leak. This minimal disruption method protects your property and speeds up the entire process.
+
+![Minimal excavation through single tile](/assets/blog/emergency-leak-hole.jpg)
+
+*Only what's necessary: a single tile lift provides access to the damaged pipe section below.*
+
+**Minimal disruption — only what's necessary**
+
+---
+
+## Step 4: Expose the Leak
+
+### Careful Excavation Reveals the Problem
+
+Once the exact location is confirmed, we carefully excavate to expose the damaged pipe. The controlled approach ensures we can assess and repair the issue efficiently.
+
+![Excavation revealing active water leak](/assets/blog/emergency-leak-excavation.jpg)
+
+*Water actively flowing from the exposed pipe — visual confirmation of the leak we detected from the surface.*
+
+**Controlled access to the damaged section**
+
+---
+
+## Step 5: Leak Confirmed
+
+### Status: Active Leak Identified
+
+The leak is exposed and actively flowing, confirming our detection was accurate. This documentation is **critical for insurance claims**.
+
+<video controls class="w-full rounded-lg shadow-lg my-6">
+  <source src="/videos/emergency-leak-video.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+*Video evidence of the active leak — essential documentation for your insurance submission.*
+
+**Visual evidence supports insurance claim submission**
+
+---
+
+## Step 6: Professional Repair
+
+### Qualified Plumber Completes the Repair
+
+A qualified plumber repairs the damaged pipe section to industry standards. Professional repair ensures the fix is **permanent** and meets all regulatory requirements.
+
+![Repaired pipe with new fittings](/assets/blog/emergency-leak-pipe-repair.jpg)
+
+*New pipe sections and fittings installed to industry standards — a permanent solution.*
+
+**Qualified repair meets insurance and regulatory standards**
+
+---
+
+## Step 7: Complete Reinstatement
+
+### Property Restored to Original Condition
+
+The area is fully reinstated with tiles replaced and grouting completed. **You wouldn't know we were there.**
+
+**Like we were never there.**
+
+---
+
+## All Completed in One Afternoon
+
+| Task | Status |
+|------|--------|
+| Leak detected and pinpointed | ✓ |
+| Internal camera inspection | ✓ |
+| Minimal excavation (single tile lift) | ✓ |
+| Professional repair by qualified plumber | ✓ |
+| Complete reinstatement | ✓ |
+| Full documented report submitted | ✓ |
+
+---
+
+## Why This Matters
+
+Most leak detection companies can find a leak. Few can offer the **complete service** we provide:
+
+- **Detection**: Advanced acoustic and trace gas equipment
+- **Documentation**: CCTV camera evidence for insurance
+- **Minimal disruption**: Surgical precision excavation
+- **Professional repair**: Qualified plumber on-site
+- **Full reinstatement**: Property restored to original condition
+- **Insurance reports**: Comprehensive documentation submitted
+
+---
+
+## Got a Leak? Don't Wait.
+
+Hidden leaks cause **structural damage**, **mould**, and **sky-high water bills**. The longer you wait, the worse it gets.
+
+[Get a free leak confirmation test →](/services/free-leak-confirmation)
+
+**Contact Canary Detect** for emergency leak detection across Lanzarote. We serve Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, Yaiza, and all areas of the island.
+
+[Contact us now →](/contact)
+    `
   }
 ];
 
@@ -2048,6 +2220,164 @@ Servimos a propietarios de piscinas en Playa Blanca, Puerto del Carmen, Costa Te
 
 [Solicita una inspección de fugas de piscina →](/es/contacto)
     `
+  },
+  {
+    id: 8,
+    slug: "deteccion-reparacion-fugas-emergencia-lanzarote",
+    title: "Detección y Reparación de Fugas de Emergencia: Completado en Una Tarde",
+    excerpt: "Descubre cómo Los Cazafugas detectaron, localizaron, repararon y restauraron una fuga de agua oculta en solo una tarde usando tecnología avanzada y precisión quirúrgica.",
+    date: "2025-01-27",
+    author: "Pete Ashcroft",
+    category: "Casos de Éxito",
+    image: emergencyLeakAcousticImg,
+    metaTitle: "Detección y Reparación de Fugas Emergencia Lanzarote",
+    metaDescription: "Caso real: fuga de agua oculta detectada, localizada, reparada y restaurada en una tarde. Tecnología de precisión, mínima interrupción. Canary Detect Lanzarote.",
+    keywords: "detección fugas emergencia Lanzarote, reparación fugas agua, fuga oculta encontrada, reparación tubería, caso de éxito, Canary Detect",
+    readTime: 6,
+    content: `
+## Precisión • Rapidez • Resultados
+
+Cuando una fuga de agua oculta aparece, necesitas detección y reparación rápida y precisa. Este caso de éxito muestra cómo Los Cazafugas completaron una detección, reparación y restauración completa en solo **una tarde** — con mínima interrupción para la propiedad.
+
+![Agua acumulándose en el suelo por fuga oculta](/assets/blog/emergency-leak-wet-floor.jpg)
+
+*La primera señal: agua filtrándose en el suelo de baldosas, indicando una fuga oculta bajo la superficie.*
+
+---
+
+## Paso 1: Precisión Milimétrica
+
+### Tecnología Avanzada Localiza la Fuente
+
+Usando equipos de **detección acústica y gas trazador** de última generación, localizamos la ubicación exacta de la fuga. Esta precisión elimina las conjeturas y el daño innecesario a tu propiedad.
+
+![Equipo de detección acústica de fugas en uso](/assets/blog/emergency-leak-acoustic-detection.jpg)
+
+*Nuestro especialista utiliza equipos de detección acústica avanzados para escuchar los sonidos reveladores del agua escapando de tuberías presurizadas.*
+
+**Lo encontramos a la primera, siempre.**
+
+---
+
+## Paso 2: Evidencia con Cámara Interna
+
+### Localización y Profundidad Precisas
+
+Nuestra avanzada **cámara CCTV** puede localizarse con precisión desde la superficie con exactitud centimétrica, incluyendo medición exacta de profundidad. Esto asegura que sabemos exactamente dónde excavar antes de romper el suelo.
+
+![Cámara interna CCTV mostrando grieta en tubería](/assets/blog/emergency-leak-cctv.jpg)
+
+*Inspección con cámara interna a 4,39m de profundidad revela la grieta en la tubería — evidencia documentada para reclamaciones de seguro.*
+
+**Precisión de localización: exactitud centimétrica**
+
+---
+
+## Paso 3: Excavación Mínima
+
+### Levantar Una Sola Baldosa Demuestra Precisión Quirúrgica
+
+Nuestro enfoque específico significa levantar solo **una baldosa** para acceder a la fuga. Este método de interrupción mínima protege tu propiedad y acelera todo el proceso.
+
+![Excavación mínima a través de una sola baldosa](/assets/blog/emergency-leak-hole.jpg)
+
+*Solo lo necesario: levantar una sola baldosa proporciona acceso a la sección de tubería dañada.*
+
+**Interrupción mínima — solo lo necesario**
+
+---
+
+## Paso 4: Exponer la Fuga
+
+### Excavación Cuidadosa Revela el Problema
+
+Una vez confirmada la ubicación exacta, excavamos cuidadosamente para exponer la tubería dañada. El enfoque controlado asegura que podamos evaluar y reparar el problema eficientemente.
+
+![Excavación revelando fuga de agua activa](/assets/blog/emergency-leak-excavation.jpg)
+
+*Agua fluyendo activamente de la tubería expuesta — confirmación visual de la fuga que detectamos desde la superficie.*
+
+**Acceso controlado a la sección dañada**
+
+---
+
+## Paso 5: Fuga Confirmada
+
+### Estado: Fuga Activa Identificada
+
+La fuga está expuesta y fluyendo activamente, confirmando que nuestra detección fue precisa. Esta documentación es **crítica para reclamaciones de seguro**.
+
+<video controls class="w-full rounded-lg shadow-lg my-6">
+  <source src="/videos/emergency-leak-video.mov" type="video/mp4">
+  Tu navegador no soporta el elemento de video.
+</video>
+
+*Evidencia en video de la fuga activa — documentación esencial para tu reclamación de seguro.*
+
+**La evidencia visual apoya la presentación de reclamaciones de seguro**
+
+---
+
+## Paso 6: Reparación Profesional
+
+### Fontanero Cualificado Completa la Reparación
+
+Un fontanero cualificado repara la sección de tubería dañada según los estándares de la industria. La reparación profesional asegura que la solución sea **permanente** y cumpla todos los requisitos regulatorios.
+
+![Tubería reparada con nuevos accesorios](/assets/blog/emergency-leak-pipe-repair.jpg)
+
+*Nuevas secciones de tubería y accesorios instalados según estándares de la industria — una solución permanente.*
+
+**La reparación cualificada cumple los estándares de seguro y regulatorios**
+
+---
+
+## Paso 7: Restauración Completa
+
+### Propiedad Restaurada a su Condición Original
+
+El área está completamente restaurada con baldosas reemplazadas y lechada completada. **No sabrías que estuvimos allí.**
+
+**Como si nunca hubiéramos estado.**
+
+---
+
+## Todo Completado en Una Tarde
+
+| Tarea | Estado |
+|-------|--------|
+| Fuga detectada y localizada | ✓ |
+| Inspección con cámara interna | ✓ |
+| Excavación mínima (una sola baldosa) | ✓ |
+| Reparación profesional por fontanero cualificado | ✓ |
+| Restauración completa | ✓ |
+| Informe documentado completo enviado | ✓ |
+
+---
+
+## Por Qué Esto Importa
+
+La mayoría de las empresas de detección de fugas pueden encontrar una fuga. Pocas pueden ofrecer el **servicio completo** que proporcionamos:
+
+- **Detección**: Equipos avanzados acústicos y de gas trazador
+- **Documentación**: Evidencia con cámara CCTV para seguros
+- **Interrupción mínima**: Excavación de precisión quirúrgica
+- **Reparación profesional**: Fontanero cualificado en el sitio
+- **Restauración completa**: Propiedad restaurada a condición original
+- **Informes de seguro**: Documentación completa enviada
+
+---
+
+## ¿Tienes una Fuga? No Esperes.
+
+Las fugas ocultas causan **daños estructurales**, **moho** y **facturas de agua altísimas**. Cuanto más esperes, peor será.
+
+[Obtén una prueba de confirmación de fugas gratis →](/es/servicios/confirmacion-fugas-gratis)
+
+**Contacta con Canary Detect** para detección de fugas de emergencia en toda Lanzarote. Servimos Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, Yaiza y todas las áreas de la isla.
+
+[Contáctanos ahora →](/es/contacto)
+    `
   }
 ];
 
@@ -2058,7 +2388,8 @@ export const blogSlugMap: Record<string, string> = {
   "water-meter-running-when-taps-off": "contador-agua-girando-grifos-cerrados",
   "damp-walls-causes-solutions": "paredes-humedas-causas-soluciones",
   "thermal-imaging-leak-detection-explained": "imagen-termica-deteccion-fugas-explicada",
-  "swimming-pool-leak-repair-cost-lanzarote": "coste-reparacion-fugas-piscina-lanzarote"
+  "swimming-pool-leak-repair-cost-lanzarote": "coste-reparacion-fugas-piscina-lanzarote",
+  "emergency-leak-detection-repair-lanzarote": "deteccion-reparacion-fugas-emergencia-lanzarote"
 };
 
 // Reverse slug mapping for Spanish to English
