@@ -410,3 +410,20 @@
 .blog-prose > .video-thumbnail > .video-link > .video-caption {
   @apply block bg-canary-navy text-white text-center py-3 px-4 font-medium text-sm;
 }
+
+/* Completion checklist styling for case studies */
+.blog-prose .completion-checklist {
+  @apply bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl p-6 my-8 border border-primary/20;
+}
+
+.blog-prose .completion-checklist ul {
+  @apply list-none ml-0 space-y-3;
+}
+
+.blog-prose .completion-checklist li {
+  @apply flex items-center gap-3 text-foreground font-medium pl-0 text-base;
+}
+
+.blog-prose .completion-checklist li::before {
+  content: none;
+}
