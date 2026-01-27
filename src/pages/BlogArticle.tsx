@@ -255,7 +255,7 @@ const BlogArticle = () => {
             "name": "Canary Detect",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://canary-detect.com/logo.png"
+              "url": "https://canary-detect.com/favicon.png"
             }
           },
           "datePublished": date,
