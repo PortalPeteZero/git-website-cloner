@@ -9,7 +9,7 @@ import poolLeakDetectionImg from "@/assets/services/pool-leak-detection-hero.jpg
 import leakRepairImg from "@/assets/services/leak-repair.jpg";
 import drainUnblockingImg from "@/assets/services/drain-unblocking.jpg";
 import poolLeakRepairImg from "@/assets/services/pool-leak-repair.jpg";
-import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation.png";
+import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation-new.png";
 
 // Import gallery images
 import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";

@@ -22,7 +22,7 @@ const LocalBusinessSchema = ({ page = "home" }: LocalBusinessSchemaProps) => {
     telephone: "+34711051071",
     email: "info@canary-detect.com",
     image: "https://canary-detect.com/og-image.jpg",
-    logo: "https://canary-detect.com/logo.png",
+    logo: "https://canary-detect.com/favicon.png",
     priceRange: "€€",
     currenciesAccepted: "EUR",
     paymentAccepted: isSpanish ? "Efectivo, Tarjeta de Crédito, Transferencia Bancaria" : "Cash, Credit Card, Bank Transfer",
