@@ -99,7 +99,7 @@ const MeetTheTeamSection = () => {
                 <img 
                   src={peteDaveSuits}
                   alt="Pete and Dave in Lanzarote"
-                  className="w-full h-full object-cover object-[center_25%]"
+                  className="w-full h-full object-cover object-[center_40%]"
                   loading="lazy"
                 />
               </div>
