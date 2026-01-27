@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, Users, Trophy, Theater, Sparkles, Star } from "lucide-react";
+import { Heart, Users, Trophy, Theater, Sparkles, Star, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 // Import team images
@@ -141,6 +141,28 @@ const MeetTheTeamSection = () => {
                   </>
                 )}
               </p>
+              
+              {/* Business Links */}
+              <div className="flex flex-wrap gap-3 mt-4 pt-4 border-t border-muted/50">
+                <a 
+                  href="https://lanzarotepoolandspashop.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" />
+                  Pool & Spa Shop
+                </a>
+                <a 
+                  href="https://www.sygma-solutions.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" />
+                  Sygma Solutions
+                </a>
+              </div>
             </div>
 
             {/* Community involvement */}
