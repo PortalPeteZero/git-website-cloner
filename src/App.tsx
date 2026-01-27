@@ -41,6 +41,19 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/services/free-leak-confirmation" element={<FreeLeakConfirmation />} />
               <Route path="/services/pipe-inspection" element={<Navigate to="/services/drain-detection" replace />} />
+              
+              {/* SEO-friendly redirects for common URL variations */}
+              <Route path="/services/leaking-water-pipe-repair-lanzarote" element={<Navigate to="/services/leak-repair" replace />} />
+              <Route path="/services/water-pipe-leak-repair" element={<Navigate to="/services/leak-repair" replace />} />
+              <Route path="/services/pipe-leak-repair" element={<Navigate to="/services/leak-repair" replace />} />
+              <Route path="/services/swimming-pool-leak-detection" element={<Navigate to="/services/pool-leak-detection" replace />} />
+              <Route path="/services/pool-leak" element={<Navigate to="/services/pool-leak-detection" replace />} />
+              <Route path="/services/underground-leak-detection" element={<Navigate to="/services/underground-detection" replace />} />
+              <Route path="/services/underground-pipe-leak" element={<Navigate to="/services/underground-detection" replace />} />
+              <Route path="/services/water-leak" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/services/drain-survey" element={<Navigate to="/services/drain-detection" replace />} />
+              <Route path="/services/cctv-drain-survey" element={<Navigate to="/services/drain-detection" replace />} />
+              
               <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/case-studies" element={<CaseStudies />} />
