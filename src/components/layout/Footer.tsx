@@ -269,6 +269,10 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
                 Blog
               </Link>
               <span className="text-slate-700">•</span>
+              <Link to={getRoute("/privacy-policy", "/es/politica-de-privacidad")} className="hover:text-primary transition-colors">
+                {isSpanish ? "Privacidad" : "Privacy"}
+              </Link>
+              <span className="text-slate-700">•</span>
               <Link to="/admin/login" className="hover:text-primary transition-colors">
                 Admin
               </Link>

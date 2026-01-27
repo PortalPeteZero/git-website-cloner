@@ -18,6 +18,7 @@ import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import LocationPage from "./pages/LocationPage";
 import MeetTheTeam from "./pages/MeetTheTeam";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 import NotFound from "./pages/NotFound";
@@ -48,6 +49,7 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogArticle />} />
               <Route path="/locations/:location" element={<LocationPage />} />
               <Route path="/meet-the-team" element={<MeetTheTeam />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               
               {/* Spanish Routes */}
               <Route path="/es" element={<Index />} />
@@ -62,6 +64,7 @@ const App = () => (
               <Route path="/es/blog/:slug" element={<BlogArticle />} />
               <Route path="/es/ubicaciones/:location" element={<LocationPage />} />
               <Route path="/es/equipo" element={<MeetTheTeam />} />
+              <Route path="/es/politica-de-privacidad" element={<PrivacyPolicy />} />
               
               {/* Admin (English only) */}
               <Route path="/admin" element={<Admin />} />
