@@ -265,17 +265,27 @@ const MeetTheTeamSection = () => {
                 <Theater className="h-6 w-6 text-primary" />
                 {isSpanish ? "El Lado Divertido" : "The Fun Side"}
               </h3>
-              <p className="text-white/90 text-base leading-relaxed mb-6 columns-2 gap-8">
+              <div className="grid gap-4 md:grid-cols-2 md:gap-8 mb-6 w-full">
                 {isSpanish ? (
                   <>
-                    Cada enero puedes encontrar a Pete y Dave—normalmente vestidos de drag—actuando en la pantomima anual producida por <strong className="text-primary">Finchy Fairytales</strong>, un espectáculo dirigido por voluntarios que dona todas las ganancias a caridad. Para apoyar a las empresas locales, Canary Detect lanzó recientemente <strong className="text-primary">"Spot the Leak"</strong>, una competición gratuita donde los jugadores prueban sus habilidades detectivescas encontrando fugas ocultas para ganar premios.
+                    <p className="text-white/90 text-base leading-relaxed">
+                      Cada enero puedes encontrar a Pete y Dave—normalmente vestidos de drag—actuando en la pantomima anual producida por <strong className="text-primary">Finchy Fairytales</strong>, un espectáculo dirigido por voluntarios que dona todas las ganancias a caridad.
+                    </p>
+                    <p className="text-white/90 text-base leading-relaxed">
+                      Para apoyar a las empresas locales, Canary Detect lanzó recientemente <strong className="text-primary">"Spot the Leak"</strong>, una competición gratuita donde los jugadores prueban sus habilidades detectivescas encontrando fugas ocultas para ganar premios.
+                    </p>
                   </>
                 ) : (
                   <>
-                    Every January you can catch Pete and Dave—usually in drag—performing in the annual pantomime produced by <strong className="text-primary">Finchy Fairytales</strong>, a volunteer-run show that donates all proceeds to charity. To support local businesses, Canary Detect recently launched <strong className="text-primary">"Spot the Leak"</strong>, a free competition where players test their detective skills by finding hidden leaks in various scenarios to win prizes.
+                    <p className="text-white/90 text-base leading-relaxed">
+                      Every January you can catch Pete and Dave—usually in drag—performing in the annual pantomime produced by <strong className="text-primary">Finchy Fairytales</strong>, a volunteer-run show that donates all proceeds to charity.
+                    </p>
+                    <p className="text-white/90 text-base leading-relaxed">
+                      To support local businesses, Canary Detect recently launched <strong className="text-primary">"Spot the Leak"</strong>, a free competition where players test their detective skills by finding hidden leaks in various scenarios to win prizes.
+                    </p>
                   </>
                 )}
-              </p>
+              </div>
 
               {/* Image gallery */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
