@@ -119,7 +119,7 @@ const Header = () => {
               {/* Meet Pete & Dave - colorful CTA */}
               <Link 
                 to={getRoute("/meet-the-team", "/es/equipo")}
-                className="flex items-center gap-1.5 px-3 py-1.5 font-bold text-sm rounded-md transition-all duration-300 bg-gradient-to-r from-primary via-accent to-primary text-white hover:opacity-90 hover:scale-105 shadow-md hover:shadow-lg animate-pulse hover:animate-none"
+                className="flex items-center gap-1.5 px-3 py-1.5 font-bold text-sm rounded-md transition-all duration-300 bg-gradient-to-r from-primary via-accent to-primary text-white hover:opacity-90 hover:scale-105 shadow-md hover:shadow-lg"
               >
                 <Users className="h-4 w-4" />
                 {isSpanish ? "Pete & Dave" : "Meet Pete & Dave"}
