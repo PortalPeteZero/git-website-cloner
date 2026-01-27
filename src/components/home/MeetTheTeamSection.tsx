@@ -272,7 +272,7 @@ const MeetTheTeamSection = () => {
                       Cada enero puedes encontrar a Pete y Dave—normalmente vestidos de drag—actuando en la pantomima anual producida por <strong className="text-primary">Finchy Fairytales</strong>, un espectáculo dirigido por voluntarios que dona todas las ganancias a caridad.
                     </p>
                     <p className="text-white/90 text-base leading-relaxed">
-                      Para apoyar a las empresas locales, Canary Detect lanzó recientemente <a href="https://leak-detective.com/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">"Spot the Leak"</a>, una competición gratuita donde los jugadores prueban sus habilidades detectivescas encontrando fugas ocultas para ganar premios.
+                      Para apoyar a las empresas locales, Canary Detect lanzó recientemente <a href="https://leak-detective.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary font-bold underline underline-offset-2 decoration-2 hover:text-primary/80 transition-colors">"Spot the Leak" ↗</a>, una competición gratuita donde los jugadores prueban sus habilidades detectivescas encontrando fugas ocultas para ganar premios.
                     </p>
                   </>
                 ) : (
@@ -281,7 +281,7 @@ const MeetTheTeamSection = () => {
                       Every January you can catch Pete and Dave—usually in drag—performing in the annual pantomime produced by <strong className="text-primary">Finchy Fairytales</strong>, a volunteer-run show that donates all proceeds to charity.
                     </p>
                     <p className="text-white/90 text-base leading-relaxed">
-                      To support local businesses, Canary Detect recently launched <a href="https://leak-detective.com/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">"Spot the Leak"</a>, a free competition where players test their detective skills by finding hidden leaks in various scenarios to win prizes.
+                      To support local businesses, Canary Detect recently launched <a href="https://leak-detective.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary font-bold underline underline-offset-2 decoration-2 hover:text-primary/80 transition-colors">"Spot the Leak" ↗</a>, a free competition where players test their detective skills by finding hidden leaks in various scenarios to win prizes.
                     </p>
                   </>
                 )}
