@@ -10,27 +10,45 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
+  showError: boolean;
 }
 
 class ErrorBoundary extends Component<Props, State> {
+  private errorTimeout: ReturnType<typeof setTimeout> | null = null;
+
   public state: State = {
-    hasError: false
+    hasError: false,
+    showError: false
   };
 
-  public static getDerivedStateFromError(error: Error): State {
+  public static getDerivedStateFromError(error: Error): Partial<State> {
     return { hasError: true, error };
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    // Only show error UI after a brief delay to avoid flash during hydration
+    this.errorTimeout = setTimeout(() => {
+      if (this.state.hasError) {
+        this.setState({ showError: true });
+      }
+    }, 500);
+  }
+
+  public componentWillUnmount() {
+    if (this.errorTimeout) {
+      clearTimeout(this.errorTimeout);
+    }
   }
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: false, error: undefined, showError: false });
   };
 
   public render() {
-    if (this.state.hasError) {
+    // Only show error UI if error persists beyond initial render
+    if (this.state.hasError && this.state.showError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
@@ -50,6 +68,11 @@ class ErrorBoundary extends Component<Props, State> {
           </Button>
         </div>
       );
+    }
+
+    // During the delay period, just render children (they may recover)
+    if (this.state.hasError && !this.state.showError) {
+      return null; // Don't show anything during the grace period
     }
 
     return this.props.children;
