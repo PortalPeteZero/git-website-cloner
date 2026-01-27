@@ -1,13 +1,14 @@
+import { forwardRef } from "react";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 
-const PrivacyPolicy = () => {
+const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref) => {
   const { isSpanish } = useLanguage();
 
   return (
-    <Layout>
+    <Layout ref={ref}>
       <SEOHead 
         title={isSpanish 
           ? "Política de Privacidad | Canary Detect" 
@@ -233,6 +234,8 @@ const PrivacyPolicy = () => {
       </section>
     </Layout>
   );
-};
+});
+
+PrivacyPolicy.displayName = "PrivacyPolicy";
 
 export default PrivacyPolicy;

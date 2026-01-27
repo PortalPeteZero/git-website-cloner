@@ -1,6 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Button } from '@/components/ui/button';
 import { RefreshCw } from 'lucide-react';
+import LoadingFallback from '@/components/LoadingFallback';
 
 interface Props {
   children: ReactNode;
@@ -72,7 +73,8 @@ class ErrorBoundary extends Component<Props, State> {
 
     // During the delay period, just render children (they may recover)
     if (this.state.hasError && !this.state.showError) {
-      return null; // Don't show anything during the grace period
+      // Don't show a blank gap during the grace period
+      return this.props.fallback ?? <LoadingFallback height="min-h-[200px]" />;
     }
 
     return this.props.children;
