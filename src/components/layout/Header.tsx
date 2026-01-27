@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronRight, ExternalLink, Phone, Droplets, Waves, Wrench, Search, TestTube, Gamepad2 } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, ExternalLink, Phone, Droplets, Waves, Wrench, Search, TestTube, Gamepad2, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -115,6 +115,15 @@ const Header = () => {
               <LanguageSwitcher variant="dark" />
 
               <div className="h-4 w-px bg-white/20 mx-2" />
+
+              {/* Meet Pete & Dave - colorful CTA */}
+              <Link 
+                to={getRoute("/meet-the-team", "/es/equipo")}
+                className="flex items-center gap-1.5 px-3 py-1.5 font-bold text-sm rounded-md transition-all duration-300 bg-gradient-to-r from-primary via-accent to-primary text-white hover:opacity-90 hover:scale-105 shadow-md hover:shadow-lg animate-pulse hover:animate-none"
+              >
+                <Users className="h-4 w-4" />
+                {isSpanish ? "Pete & Dave" : "Meet Pete & Dave"}
+              </Link>
 
               {/* Spot The Leak Game - in blue bar */}
               <a 
@@ -476,6 +485,18 @@ const Header = () => {
                   </Link>
                 </CollapsibleContent>
               </Collapsible>
+
+              <div className="h-px bg-border my-3" />
+
+              {/* Meet Pete & Dave - Mobile CTA */}
+              <Link 
+                to={getRoute("/meet-the-team", "/es/equipo")}
+                className="flex items-center justify-center gap-2 mx-2 px-4 py-3 font-bold text-white rounded-xl bg-gradient-to-r from-primary via-accent to-primary shadow-lg transition-all duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Users className="h-5 w-5" />
+                {isSpanish ? "Conoce a Pete & Dave" : "Meet Pete & Dave"}
+              </Link>
 
               <div className="h-px bg-border my-3" />
               
