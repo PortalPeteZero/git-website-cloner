@@ -100,7 +100,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Canary Detect Website <onboarding@resend.dev>",
-      to: ["info@canary-detect.com"],
+      to: ["pete.ashcroft@sygma-solutions.com"],
       replyTo: email,
       subject: subject,
       html: emailHtml,
