@@ -1147,7 +1147,7 @@ Once the exact location is confirmed, we carefully excavate to expose the damage
 The leak is exposed and actively flowing, confirming our detection was accurate. This documentation is **critical for insurance claims**.
 
 <video controls class="w-full rounded-lg shadow-lg my-6">
-  <source src="/videos/emergency-leak-video.mov" type="video/mp4">
+  <source src="/videos/emergency-leak-video.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -2308,7 +2308,7 @@ Una vez confirmada la ubicación exacta, excavamos cuidadosamente para exponer l
 La fuga está expuesta y fluyendo activamente, confirmando que nuestra detección fue precisa. Esta documentación es **crítica para reclamaciones de seguro**.
 
 <video controls class="w-full rounded-lg shadow-lg my-6">
-  <source src="/videos/emergency-leak-video.mov" type="video/mp4">
+  <source src="/videos/emergency-leak-video.mp4" type="video/mp4">
   Tu navegador no soporta el elemento de video.
 </video>
 

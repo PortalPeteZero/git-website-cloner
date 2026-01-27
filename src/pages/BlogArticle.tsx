@@ -89,12 +89,20 @@ const normalizeMarkdown = (md: string): string => {
 // Map static paths to imported images for markdown content
 const resolveImagePath = (src: string): string => {
   const imageMap: Record<string, string> = {
+    // Lanzarote water system article
     '/assets/blog/lanzarote-traditional-house.jpg': BLOG_IMAGES.lanzaroteTraditionalHouse,
     '/assets/blog/lanzarote-aljibe-cistern.jpg': BLOG_IMAGES.lanzaroteAljibe,
     '/assets/blog/lanzarote-water-tanker.jpg': BLOG_IMAGES.lanzaroteTanker,
     '/assets/blog/lanzarote-water-system-house.png': BLOG_IMAGES.lanzaroteSystemHouse,
     '/assets/blog/lanzarote-water-system-diagram.png': BLOG_IMAGES.lanzaroteSystemDiagram,
     '/assets/blog/lanzarote-water-meter-leak.png': BLOG_IMAGES.lanzaroteMeterLeak,
+    // Emergency leak detection article
+    '/assets/blog/emergency-leak-wet-floor.jpg': BLOG_IMAGES.emergencyLeakWetFloor,
+    '/assets/blog/emergency-leak-acoustic-detection.jpg': BLOG_IMAGES.emergencyLeakAcoustic,
+    '/assets/blog/emergency-leak-excavation.jpg': BLOG_IMAGES.emergencyLeakExcavation,
+    '/assets/blog/emergency-leak-pipe-repair.jpg': BLOG_IMAGES.emergencyLeakPipeRepair,
+    '/assets/blog/emergency-leak-hole.jpg': BLOG_IMAGES.emergencyLeakHole,
+    '/assets/blog/emergency-leak-cctv.jpg': BLOG_IMAGES.emergencyLeakCctv,
   };
   return imageMap[src] || src;
 };
