@@ -3,7 +3,6 @@ import Layout from "@/components/layout/Layout";
 import HeroSlider from "@/components/home/HeroSlider";
 import WelcomeSection from "@/components/home/WelcomeSection";
 import TrustBadgesSection from "@/components/home/TrustBadgesSection";
-import MeetTheTeamSection from "@/components/home/MeetTheTeamSection";
 import SEOHead from "@/components/seo/SEOHead";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
@@ -43,11 +42,7 @@ const Index = () => {
       
       <TrustBadgesSection />
       
-      
       {/* Lazy-loaded below-the-fold sections */}
-      <ErrorBoundary>
-        <MeetTheTeamSection />
-      </ErrorBoundary>
       <ErrorBoundary>
         <Suspense fallback={<LoadingFallback height="min-h-[400px]" />}>
           <ServicesGrid />
