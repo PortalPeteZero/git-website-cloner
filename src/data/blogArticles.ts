@@ -1175,6 +1175,10 @@ A qualified plumber repairs the damaged pipe section to industry standards. Prof
 
 The area is fully reinstated with tiles replaced and grouting completed. **You wouldn't know we were there.**
 
+![Reinstated floor after leak repair](/assets/blog/emergency-leak-wet-floor.jpg)
+
+*Tiles replaced, grouting completed — the property restored to its original condition.*
+
 **Like we were never there.**
 
 ---
@@ -2333,6 +2337,10 @@ Un fontanero cualificado repara la sección de tubería dañada según los está
 ### Propiedad Restaurada a su Condición Original
 
 El área está completamente restaurada con baldosas reemplazadas y lechada completada. **No sabrías que estuvimos allí.**
+
+![Suelo restaurado después de reparación de fuga](/assets/blog/emergency-leak-wet-floor.jpg)
+
+*Baldosas reemplazadas, lechada completada — la propiedad restaurada a su condición original.*
 
 **Como si nunca hubiéramos estado.**
 
