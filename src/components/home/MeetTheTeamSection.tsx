@@ -95,11 +95,11 @@ const MeetTheTeamSection = () => {
             </div>
 
             <div className="relative">
-              <div className="aspect-[3/4] rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5 bg-muted">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                 <img 
                   src={peteDaveSuits}
                   alt="Pete and Dave in Lanzarote"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover object-[center_25%]"
                   loading="lazy"
                 />
               </div>
