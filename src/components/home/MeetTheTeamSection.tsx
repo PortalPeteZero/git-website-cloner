@@ -3,7 +3,7 @@ import { Heart, Users, Trophy, Theater, Sparkles, Star } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 // Import team images
-import peteDaveTogether from "@/assets/team/pete-dave-together.jpg";
+import peteDaveMain from "@/assets/team/pete-dave-main.jpg";
 import peteDaveFun from "@/assets/team/pete-dave-fun.jpg";
 import pantoMatching from "@/assets/team/panto-matching.jpg";
 import daveUnicorn from "@/assets/team/dave-unicorn.jpg";
@@ -83,7 +83,7 @@ const MeetTheTeamSection = () => {
             <div className="relative group">
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-2xl ring-1 ring-black/5">
                 <img 
-                  src={peteDaveTogether}
+                  src={peteDaveMain}
                   alt="Pete Ashcroft and Dave Poxon - Canary Detect owners"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
