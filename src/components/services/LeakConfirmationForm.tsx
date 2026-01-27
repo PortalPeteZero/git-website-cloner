@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "@/i18n/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
 import {
   Dialog,
   DialogContent,
@@ -53,25 +54,52 @@ export default function LeakConfirmationForm() {
   const submitForm = async (enquiryType: "Free Leak Test Enquiry" | "Full Leak Survey Request") => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    console.log("Form submitted:", { ...formData, enquiryType });
-    
-    const enquiryTypeDisplay = isSpanish 
-      ? (enquiryType === "Free Leak Test Enquiry" ? "Solicitud de Test Gratis" : "Solicitud de Inspección Completa")
-      : enquiryType;
-    
-    toast({
-      title: isSpanish ? "¡Solicitud Enviada!" : "Request Sent!",
-      description: isSpanish 
-        ? `Su ${enquiryTypeDisplay} ha sido enviada. Nos pondremos en contacto pronto.`
-        : `Your ${enquiryType} has been submitted. We'll be in touch soon.`,
-    });
-    
-    setFormData({ name: "", phone: "", email: "", address: "", message: "" });
-    setShowConfirmDialog(false);
-    setIsSubmitting(false);
+    try {
+      console.log("Submitting form to edge function:", { ...formData, enquiryType });
+      
+      const { data, error } = await supabase.functions.invoke('send-leak-enquiry', {
+        body: {
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          address: formData.address || undefined,
+          message: formData.message || undefined,
+          enquiryType,
+        },
+      });
+
+      if (error) {
+        console.error("Edge function error:", error);
+        throw new Error(error.message || "Failed to send enquiry");
+      }
+
+      console.log("Form submitted successfully:", data);
+      
+      const enquiryTypeDisplay = isSpanish 
+        ? (enquiryType === "Free Leak Test Enquiry" ? "Solicitud de Test Gratis" : "Solicitud de Inspección Completa")
+        : enquiryType;
+      
+      toast({
+        title: isSpanish ? "¡Solicitud Enviada!" : "Request Sent!",
+        description: isSpanish 
+          ? `Su ${enquiryTypeDisplay} ha sido enviada. Nos pondremos en contacto pronto.`
+          : `Your ${enquiryType} has been submitted. We'll be in touch soon.`,
+      });
+      
+      setFormData({ name: "", phone: "", email: "", address: "", message: "" });
+      setShowConfirmDialog(false);
+    } catch (error: any) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: isSpanish ? "Error al Enviar" : "Failed to Send",
+        description: isSpanish 
+          ? "Hubo un problema al enviar su solicitud. Por favor, inténtelo de nuevo o llámenos directamente."
+          : "There was a problem sending your request. Please try again or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const includesList = isSpanish ? [
