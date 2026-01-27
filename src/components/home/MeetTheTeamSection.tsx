@@ -81,7 +81,7 @@ const MeetTheTeamSection = () => {
           >
             {/* Main hero image */}
             <div className="relative group">
-              <div className="aspect-[16/10] rounded-xl overflow-hidden shadow-2xl ring-1 ring-black/5">
+              <div className="aspect-[16/9] rounded-xl overflow-hidden shadow-2xl ring-1 ring-black/5">
                 <img 
                   src={peteDaveMain}
                   alt="Pete Ashcroft and Dave Poxon - Canary Detect owners"
@@ -95,7 +95,7 @@ const MeetTheTeamSection = () => {
             </div>
 
             <div className="relative">
-              <div className="aspect-[16/10] rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
+              <div className="aspect-[16/9] rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                 <img 
                   src={peteDaveSuits}
                   alt="Pete and Dave in Lanzarote"
@@ -148,18 +148,18 @@ const MeetTheTeamSection = () => {
                   href="https://lanzarotepoolandspashop.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-semibold text-primary bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
                 >
-                  <ExternalLink className="h-3.5 w-3.5" />
+                  <ExternalLink className="h-4 w-4" />
                   Pool & Spa Shop
                 </a>
                 <a 
                   href="https://www.sygma-solutions.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-semibold text-primary bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
                 >
-                  <ExternalLink className="h-3.5 w-3.5" />
+                  <ExternalLink className="h-4 w-4" />
                   Sygma Solutions
                 </a>
               </div>
@@ -200,19 +200,28 @@ const MeetTheTeamSection = () => {
                   href="https://www.elatico.org/helping-the-community" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-semibold text-primary bg-white/80 rounded-full hover:bg-white transition-colors"
                 >
-                  <ExternalLink className="h-3.5 w-3.5" />
+                  <ExternalLink className="h-4 w-4" />
                   El Atico
                 </a>
                 <a 
                   href="https://playablanca-5km.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-semibold text-primary bg-white/80 rounded-full hover:bg-white transition-colors"
                 >
-                  <ExternalLink className="h-3.5 w-3.5" />
+                  <ExternalLink className="h-4 w-4" />
                   5k Run
+                </a>
+                <a 
+                  href="https://www.facebook.com/1stLanzaroteScouts/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-semibold text-primary bg-white/80 rounded-full hover:bg-white transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Lanzarote Scouts
                 </a>
               </div>
             </div>
