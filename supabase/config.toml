@@ -5,3 +5,6 @@ verify_jwt = false
 
 [functions.indexnow-ping]
 verify_jwt = false
+
+[functions.send-leak-enquiry]
+verify_jwt = false
