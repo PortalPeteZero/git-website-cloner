@@ -1185,14 +1185,16 @@ The area is fully reinstated with tiles replaced and grouting completed. **You w
 
 ## All Completed in One Afternoon
 
-| Task | Status |
-|------|--------|
-| Leak detected and pinpointed | ✓ |
-| Internal camera inspection | ✓ |
-| Minimal excavation (single tile lift) | ✓ |
-| Professional repair by qualified plumber | ✓ |
-| Complete reinstatement | ✓ |
-| Full documented report submitted | ✓ |
+<div class="completion-checklist">
+
+- ✅ Leak detected and pinpointed
+- ✅ Internal camera inspection
+- ✅ Minimal excavation (single tile lift)
+- ✅ Professional repair by qualified plumber
+- ✅ Complete reinstatement
+- ✅ Full documented report submitted
+
+</div>
 
 ---
 
@@ -2348,14 +2350,16 @@ El área está completamente restaurada con baldosas reemplazadas y lechada comp
 
 ## Todo Completado en Una Tarde
 
-| Tarea | Estado |
-|-------|--------|
-| Fuga detectada y localizada | ✓ |
-| Inspección con cámara interna | ✓ |
-| Excavación mínima (una sola baldosa) | ✓ |
-| Reparación profesional por fontanero cualificado | ✓ |
-| Restauración completa | ✓ |
-| Informe documentado completo enviado | ✓ |
+<div class="completion-checklist">
+
+- ✅ Fuga detectada y localizada
+- ✅ Inspección con cámara interna
+- ✅ Excavación mínima (una sola baldosa)
+- ✅ Reparación profesional por fontanero cualificado
+- ✅ Restauración completa
+- ✅ Informe documentado completo enviado
+
+</div>
 
 ---
 
