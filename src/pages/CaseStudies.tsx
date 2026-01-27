@@ -12,6 +12,9 @@ import drainDetection1 from "@/assets/case-studies/drain-detection-1.jpg";
 import poolLeak1 from "@/assets/case-studies/pool-leak-1.jpg";
 import pipeInspection1 from "@/assets/case-studies/pipe-inspection-1.jpg";
 
+// Emergency leak case study image
+import emergencyLeakAcousticImg from "@/assets/blog/emergency-leak-acoustic-detection.jpg";
+
 // Import gallery photos for variety
 import photo1 from "@/assets/gallery/photo-1.jpg";
 import photo2 from "@/assets/gallery/photo-2.jpg";
@@ -87,6 +90,17 @@ const CaseStudies = () => {
       image: photo3,
       imageAlt: "Inspección de fugas de piscina resort spa Yaiza",
     },
+    {
+      id: 7,
+      title: "Detección y Reparación de Emergencia en Una Tarde",
+      location: "Lanzarote",
+      description: "Detectamos, localizamos, reparamos y restauramos una fuga de agua oculta en solo una tarde.",
+      fullDescription: "Un propietario nos contactó con agua filtrándose en sus baldosas. Usando equipos acústicos avanzados e inspección con cámara CCTV, localizamos con precisión milimétrica la fuga a 4,39m de profundidad. Levantamos solo una baldosa, expusimos la tubería dañada y un fontanero cualificado completó la reparación. Todo el trabajo—detección, reparación y restauración completa—se completó en una sola tarde.",
+      result: "Detección, reparación y restauración en una tarde",
+      metrics: { time: "1 tarde", savings: "€5.000+" },
+      image: emergencyLeakAcousticImg,
+      imageAlt: "Detección de fugas de emergencia con equipo acústico Lanzarote",
+    },
   ] : [
     {
       id: 1,
@@ -153,6 +167,17 @@ const CaseStudies = () => {
       metrics: { time: "2 days", savings: "€8,000/year" },
       image: photo3,
       imageAlt: "Spa resort swimming pool leak survey Yaiza",
+    },
+    {
+      id: 7,
+      title: "Emergency Detection & Repair in One Afternoon",
+      location: "Lanzarote",
+      description: "We detected, located, repaired, and reinstated a hidden water leak in just one afternoon.",
+      fullDescription: "A property owner contacted us with water seeping onto their floor tiles. Using advanced acoustic equipment and CCTV camera inspection, we pinpointed the leak with centimetre precision at 4.39m depth. We lifted just one tile, exposed the damaged pipe, and a qualified plumber completed the repair. The entire job—detection, repair, and full reinstatement—was completed in a single afternoon.",
+      result: "Detection, repair & reinstatement in one afternoon",
+      metrics: { time: "1 afternoon", savings: "€5,000+" },
+      image: emergencyLeakAcousticImg,
+      imageAlt: "Emergency leak detection using acoustic equipment Lanzarote",
     },
   ];
 

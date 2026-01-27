@@ -42,7 +42,7 @@
     <loc>https://canary-detect.com/case-studies</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/case-studies"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/casos-de-exito"/>
-    <lastmod>2025-01-18</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -117,6 +117,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/lanzarote-water-supply-guide"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/guia-suministro-agua-lanzarote"/>
     <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/blog/emergency-leak-detection-repair-lanzarote</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/emergency-leak-detection-repair-lanzarote"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/deteccion-reparacion-fugas-emergencia-lanzarote"/>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -376,6 +384,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/lanzarote-water-supply-guide"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/guia-suministro-agua-lanzarote"/>
     <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/blog/deteccion-reparacion-fugas-emergencia-lanzarote</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/emergency-leak-detection-repair-lanzarote"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/deteccion-reparacion-fugas-emergencia-lanzarote"/>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
