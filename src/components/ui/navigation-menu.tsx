@@ -7,18 +7,30 @@ import { cn } from "@/lib/utils";
 
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
->(({ className, children, ...props }, ref) => (
-  <NavigationMenuPrimitive.Root
-    ref={ref}
-    delayDuration={0}
-    className={cn("relative z-10 flex max-w-max flex-1 items-center justify-center", className)}
-    {...props}
-  >
-    {children}
-    <NavigationMenuViewport />
-  </NavigationMenuPrimitive.Root>
-));
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root> & {
+    disableHoverOpen?: boolean;
+  }
+>(({ className, children, disableHoverOpen = true, ...props }, ref) => {
+  const [value, setValue] = React.useState<string>("");
+  
+  // If disableHoverOpen is true, we control the value ourselves to prevent hover
+  const controlledProps = disableHoverOpen 
+    ? { value, onValueChange: setValue }
+    : {};
+
+  return (
+    <NavigationMenuPrimitive.Root
+      ref={ref}
+      delayDuration={disableHoverOpen ? 9999999 : 0}
+      className={cn("relative z-10 flex max-w-max flex-1 items-center justify-center", className)}
+      {...controlledProps}
+      {...props}
+    >
+      {children}
+      <NavigationMenuViewport />
+    </NavigationMenuPrimitive.Root>
+  );
+});
 NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
 
 const NavigationMenuList = React.forwardRef<
