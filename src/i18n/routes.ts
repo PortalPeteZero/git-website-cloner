@@ -32,6 +32,7 @@ export const serviceSlugMap: Record<string, string> = {
   'drain-unblocking': 'desbloqueo-desagues',
   'pool-leak-repair': 'reparacion-fugas-piscinas',
   'free-leak-confirmation': 'confirmacion-fugas-gratis',
+  'damp-moisture-mapping': 'mapeo-humedad',
 };
 
 // Reverse service slug map (Spanish to English)

@@ -1,4 +1,4 @@
-import { LucideIcon, Search, Cable, Droplets, Waves, Wrench, Home, HelpCircle, BadgeCheck } from "lucide-react";
+import { LucideIcon, Search, Cable, Droplets, Waves, Wrench, Home, HelpCircle, BadgeCheck, Thermometer } from "lucide-react";
 
 // Import service hero images
 import drainDetectionImg from "@/assets/services/drain-detection.jpg";
@@ -10,6 +10,10 @@ import leakRepairImg from "@/assets/services/leak-repair.jpg";
 import drainUnblockingImg from "@/assets/services/drain-unblocking.jpg";
 import poolLeakRepairImg from "@/assets/services/pool-leak-repair.jpg";
 import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation-new.png";
+
+// Import damp/moisture images
+import risingDampWall from "@/assets/blog/rising-damp-wall.jpg";
+import thermalUndergroundLeak from "@/assets/blog/thermal-underground-leak.jpg";
 
 // Import gallery images
 import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
@@ -267,6 +271,29 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         ],
         content: "Una vez que hemos localizado la fuga de su piscina en Lanzarote, nuestro equipo de reparación experimentado puede arreglarla correctamente. Nos especializamos en todo tipo de reparaciones de fugas en piscinas, asegurando que su piscina quede estanca y lista para usar.\n\nNuestros servicios de reparación de fugas en piscinas incluyen:\n\n**Reparación de Tuberías**: Las tuberías con fugas son a menudo las culpables. Excavamos solo donde es necesario, reparamos o reemplazamos las secciones dañadas, y hacemos prueba de presión para confirmar la reparación.\n\n**Reparación del Vaso**: Las grietas en el vaso de la piscina pueden desarrollarse con el tiempo debido al movimiento del terreno o asentamiento. Utilizamos compuestos de reparación subacuática especializados y técnicas de inyección estructural para reparaciones duraderas.\n\n**Reparación de Accesorios**: Focos, retornos, skimmers y desagües principales todos tienen puntos de posible fuga. Reemplazamos juntas, resellamos accesorios, o reemplazamos componentes según sea necesario.\n\n**Servicio Completo**: Como especialistas en detección de fugas de Lanzarote, ofrecemos un servicio completo de detección a reparación. Esto significa una empresa, una responsabilidad, y sin culpar a otros contratistas.\n\nTodas las reparaciones vienen con nuestra garantía de calidad. Utilizamos materiales de grado profesional diseñados para el clima de Lanzarote y el entorno químico de las piscinas.",
       },
+      "damp-moisture-mapping": {
+        title: "Mapeo de Humedad con Infrarrojos Lanzarote",
+        description: "Detección profesional de humedades en Lanzarote usando cámaras térmicas y medidores de humedad Protimeter. Servicio ideal antes de reformas o decoración. Visita y evaluación GRATUITA.",
+        icon: Thermometer,
+        heroImage: thermalUndergroundLeak,
+        galleryImages: [thermalUndergroundLeak, risingDampWall],
+        seo: {
+          title: "Mapeo Humedad Infrarrojos Lanzarote | Canary Detect",
+          description: "Detección de humedades Lanzarote. Imagen térmica y medidores Protimeter. Humedades por capilaridad, filtraciones, condensación. Visita GRATUITA.",
+          keywords: "detección humedades Lanzarote, mapeo humedad infrarrojos, cámara térmica humedad, medidor humedad Protimeter, humedades por capilaridad, filtraciones agua, condensación paredes Canarias"
+        },
+        features: [
+          "Visita y evaluación GRATUITA",
+          "Cámaras de imagen térmica",
+          "Medidores de humedad Protimeter",
+          "Monitorización ambiental",
+          "Informes detallados por escrito",
+          "Ideal antes de reformas",
+          "Identificación de la fuente exacta",
+          "Evaluación de eficiencia energética",
+        ],
+        content: "**Detección de Humedad Oculta — Ideal Antes de Reformas**\n\nNuestro servicio detecta humedades y filtraciones de agua utilizando tecnología de última generación. Es ideal antes de pintar o decorar, pudiendo detectar tejados con fugas, humedades por capilaridad y problemas de humedad ocultos antes de que se conviertan en problemas graves.\n\n**Nuestra Metodología:**\n\n**Imagen Térmica**: Identifica diferencias de temperatura revelando zonas húmedas no visibles a simple vista, incluso detrás de superficies.\n\n**Medidores de Humedad**: Dispositivos no invasivos (ej. Protimeter) miden los niveles de humedad bajo las superficies (hasta 19mm de profundidad) para mapear las áreas afectadas con precisión.\n\n**Monitorización Ambiental**: Mide la humedad, el flujo de aire y los puntos de rocío para detectar riesgos de condensación.\n\n**Beneficios:**\n\n• Evita reparaciones innecesarias al identificar la fuente exacta y oculta\n• Permite seguir si la humedad se está extendiendo o reduciendo\n• Evalúa la eficiencia energética e identifica zonas que necesitan mejor ventilación o aislamiento\n\n**Causas Comunes Detectadas**: Tuberías con fugas, daños en tejados, condensación por alta humedad.\n\nOfrecemos evaluación y visita a domicilio COMPLETAMENTE GRATUITAS. Nuestro equipo proporciona evaluaciones precisas y no invasivas para proteger su propiedad de daños estructurales costosos y problemas de salud.",
+      },
     };
   }
 
@@ -446,6 +473,29 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         "Quality materials guaranteed",
       ],
       content: "Once we've pinpointed your pool leak in Lanzarote, our experienced repair team can fix it properly. We specialise in all types of swimming pool leak repairs, ensuring your pool is watertight and ready to use.\n\nOur pool leak repair services include:\n\n**Pipe Repairs**: Leaking pool pipes are often the culprit. We excavate only where necessary, repair or replace damaged sections, and pressure test to confirm the fix.\n\n**Shell Repairs**: Cracks in the pool shell can develop over time due to ground movement or settling. We use specialist underwater repair compounds and structural injection techniques for lasting repairs.\n\n**Fitting Repairs**: Lights, returns, skimmers, and main drains all have potential leak points. We replace gaskets, reseal fittings, or replace components as needed.\n\n**Complete Service**: As Lanzarote's leak detection specialists, we offer a complete detection-to-repair service. This means one company, one responsibility, and no finger-pointing between contractors.\n\nAll repairs come with our quality guarantee. We use professional-grade materials designed for the Lanzarote climate and pool chemical environment.",
+    },
+    "damp-moisture-mapping": {
+      title: "Damp & Moisture Mapping Lanzarote",
+      description: "Professional damp detection in Lanzarote using thermal imaging and Protimeter moisture meters. Ideal service before refurbishment or decorating. FREE home visit and assessment.",
+      icon: Thermometer,
+      heroImage: thermalUndergroundLeak,
+      galleryImages: [thermalUndergroundLeak, risingDampWall],
+      seo: {
+        title: "Damp & Moisture Mapping Lanzarote | Canary Detect",
+        description: "Damp detection Lanzarote. Thermal imaging and Protimeter moisture meters. Rising damp, penetrating damp, condensation. FREE home visit.",
+        keywords: "damp detection Lanzarote, moisture mapping infrared, thermal imaging damp, Protimeter moisture meter, rising damp detection, penetrating damp, condensation walls Canary Islands"
+      },
+      features: [
+        "FREE home visit and assessment",
+        "Thermal imaging cameras",
+        "Protimeter moisture meters",
+        "Environmental monitoring",
+        "Detailed written reports",
+        "Ideal before refurbishment",
+        "Exact source identification",
+        "Energy efficiency assessment",
+      ],
+      content: "**Hidden Moisture Detection — Ideal Before Refurbishment**\n\nOur service detects damp moisture and water ingress using state-of-the-art technology. It's ideal before painting or decorating and can spot leaking roofs, rising damp and hidden moisture issues before they become severe problems.\n\n**Our Methodology:**\n\n**Thermal Imaging**: Identifies temperature differences, revealing damp areas not visible to the eye, including behind surfaces.\n\n**Moisture Meters**: Non-invasive devices (e.g., Protimeter) measure moisture levels beneath surfaces (up to 19mm deep) to map exact affected areas.\n\n**Environmental Monitoring**: Measures humidity, airflow, and dew points to detect condensation risks.\n\n**Benefits:**\n\n• Prevents unnecessary repairs by targeting the exact, hidden source\n• Tracks if damp is spreading or shrinking\n• Assesses energy efficiency and identifies areas needing better ventilation or insulation\n\n**Common Causes Found**: Leaking pipes, roof damage, and high-humidity condensation.\n\nWe offer COMPLETELY FREE home visit and assessment. Our team provides accurate non-invasive assessments preventing costly structural damage and health issues.",
     },
   };
 };
