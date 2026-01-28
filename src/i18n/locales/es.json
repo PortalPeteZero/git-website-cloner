@@ -57,7 +57,8 @@
     "drainDetection": "Inspección de Desagües y Tuberías",
     "leakRepair": "Reparación de Fugas",
     "poolLeakRepair": "Reparación de Fugas de Piscinas",
-    "drainUnblocking": "Desbloqueo de Desagües"
+    "drainUnblocking": "Desbloqueo de Desagües",
+    "dampMoistureMapping": "Mapeo de Humedad"
   },
   "services": {
     "drainDetection": {
@@ -92,6 +93,10 @@
     "freeLeakConfirmation": {
       "title": "Test de Confirmación de Fugas Gratis",
       "description": "¿No está seguro si tiene una fuga? Lo confirmamos gratis."
+    },
+    "dampMoistureMapping": {
+      "title": "Mapeo de Humedad",
+      "description": "¿Paredes húmedas? ¿Pintura descascarada? Detectamos humedad oculta con infrarrojos."
     }
   },
   "hero": {

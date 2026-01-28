@@ -57,7 +57,8 @@
     "drainDetection": "Drain & Pipe Surveys",
     "leakRepair": "Leak Repair",
     "poolLeakRepair": "Pool Leak Repair",
-    "drainUnblocking": "Drain Unblocking"
+    "drainUnblocking": "Drain Unblocking",
+    "dampMoistureMapping": "Damp & Moisture Mapping"
   },
   "services": {
     "drainDetection": {
@@ -92,6 +93,10 @@
     "freeLeakConfirmation": {
       "title": "Free Leak Confirmation Test",
       "description": "Not sure if you have a leak? We'll confirm for free."
+    },
+    "dampMoistureMapping": {
+      "title": "Damp & Moisture Mapping",
+      "description": "Damp walls? Peeling paint? Detect hidden moisture with infrared."
     }
   },
   "hero": {
