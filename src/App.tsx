@@ -25,6 +25,7 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// App component with all providers properly nested
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
