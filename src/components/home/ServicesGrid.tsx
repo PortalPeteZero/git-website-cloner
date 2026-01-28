@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { Droplets, Search, Cable, Waves, CircleDot, Wrench } from "lucide-react";
+import { Droplets, Search, Cable, Waves, CircleDot, Wrench, Thermometer } from "lucide-react";
 import ServiceCardLite from "./ServiceCardLite";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -30,6 +30,8 @@ import leakRepairBa2 from "@/assets/services/gallery/leak-repair-ba-2.jpg";
 import leakRepairBa3 from "@/assets/services/gallery/leak-repair-ba-3.jpg";
 import leakRepairBa4 from "@/assets/services/gallery/leak-repair-ba-4.jpg";
 import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
+import thermalUndergroundLeak from "@/assets/blog/thermal-underground-leak.jpg";
+import risingDampWall from "@/assets/blog/rising-damp-wall.jpg";
 
 const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useLanguage();
@@ -94,6 +96,16 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
       href: isSpanish ? "/es/servicios/reparacion-fugas" : "/services/leak-repair",
       images: [leakRepairBa1, leakRepairBa2, leakRepairBa3, leakRepairBa4],
       imageAlt: isSpanish ? "Servicio profesional de reparación de fugas Lanzarote" : "Professional leak repair service Lanzarote",
+    },
+    {
+      title: isSpanish ? "Mapeo de Humedad" : "Damp & Moisture Mapping",
+      description: isSpanish
+        ? "¿Paredes húmedas? ¿Pintura descascarada? Detectamos humedades ocultas con infrarrojos. Ideal antes de reformas. Visita GRATUITA."
+        : "Damp walls? Peeling paint? We detect hidden moisture with infrared. Ideal before refurbishment. FREE home visit.",
+      icon: Thermometer,
+      href: isSpanish ? "/es/servicios/mapeo-humedad" : "/services/damp-moisture-mapping",
+      images: [thermalUndergroundLeak, risingDampWall],
+      imageAlt: isSpanish ? "Detección de humedades con cámara térmica Lanzarote" : "Thermal imaging damp detection Lanzarote",
     },
   ];
 
