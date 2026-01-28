@@ -216,7 +216,7 @@ const Technology = () => {
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground leading-relaxed mt-5">
+                  <p className="text-muted-foreground leading-relaxed mt-5 max-w-none">
                     {tech.description}
                   </p>
                 </div>
@@ -266,7 +266,7 @@ const Technology = () => {
               <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-6">
                 {isSpanish ? "La Ventaja Multi-Tecnología" : "The Multi-Technology Advantage"}
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-muted-foreground leading-relaxed mb-6 max-w-none">
                 {isSpanish 
                   ? "Cada fuga presenta desafíos únicos. Las condiciones del terreno, materiales de tuberías, ruido de fondo y construcción de la propiedad afectan qué método funciona mejor. Usando múltiples tecnologías, podemos:"
                   : "Every leak presents unique challenges. Ground conditions, pipe materials, background noise, and property construction all affect which detection method works best. By using multiple technologies, we can:"}

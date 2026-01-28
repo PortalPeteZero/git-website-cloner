@@ -65,7 +65,7 @@ const About = () => {
               <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-6">
                 {isSpanish ? "Dedicados a Encontrar Soluciones" : "Dedicated to Finding Solutions"}
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 max-w-none">
                 {isSpanish ? (
                   <>
                     Canary Detect es el nombre comercial de Camello Blanco S.L., una empresa con sede en Lanzarote establecida en 2014. Nos fundamos con una misión simple: proporcionar a Lanzarote 
@@ -80,7 +80,7 @@ const About = () => {
                   </>
                 )}
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 max-w-none">
                 {isSpanish ? (
                   <>
                     Nuestro equipo reúne años de experiencia en fontanería, construcción y 
@@ -95,7 +95,7 @@ const About = () => {
                   </>
                 )}
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed max-w-none">
                 {isSpanish 
                   ? "Nos enorgullecemos de nuestro enfoque no invasivo - utilizando tecnología acústica, térmica y de cámara avanzada para encontrar fugas sin daños innecesarios a su propiedad."
                   : "We take pride in our non-invasive approach - using advanced acoustic, thermal, and camera technology to find leaks without unnecessary damage to your property."}

@@ -303,7 +303,7 @@ const Contact = () => {
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
                 {t('contact.contactInfo')}
               </h2>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground mb-8 max-w-none">
                 {t('contact.contactDescription')}
               </p>
 

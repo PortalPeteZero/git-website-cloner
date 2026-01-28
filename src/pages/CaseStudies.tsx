@@ -279,7 +279,7 @@ const CaseStudies = () => {
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6 max-w-none">
                     {study.fullDescription}
                   </p>
 
