@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronRight, ExternalLink, Phone, Droplets, Waves, Wrench, Search, TestTube, Gamepad2, Users } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, ExternalLink, Phone, Droplets, Waves, Wrench, Search, TestTube, Gamepad2, Users, Thermometer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -249,6 +249,16 @@ const Header = () => {
                           </Link>
                         </NavigationMenuLink>
                       </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link 
+                            to={getRoute("/services/damp-moisture-mapping", "/es/servicios/mapeo-humedad")} 
+                            className="block cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-lg transition-colors py-2.5 px-3"
+                          >
+                            {isSpanish ? "Mapeo de Humedad" : "Damp & Moisture Mapping"}
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
                       <li className="border-t border-border my-1"></li>
                       <li>
                         <NavigationMenuLink asChild>
@@ -413,6 +423,14 @@ const Header = () => {
                   >
                     <ChevronRight className="h-4 w-4 text-primary/60" />
                     {isSpanish ? "Detección Subterránea" : "Underground Location"}
+                  </Link>
+                  <Link 
+                    to={getRoute("/services/damp-moisture-mapping", "/es/servicios/mapeo-humedad")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2 px-4 py-2.5 text-foreground/80 font-medium hover:text-primary hover:bg-primary/5 rounded-lg transition-all"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary/60" />
+                    {isSpanish ? "Mapeo de Humedad" : "Damp & Moisture Mapping"}
                   </Link>
                   <a 
                     href="https://canary-detect-coatings.es/" 
