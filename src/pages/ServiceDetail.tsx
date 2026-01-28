@@ -102,6 +102,15 @@ const ServiceDetail = () => {
     );
   }
 
+  // Some browsers/environments can fail to trigger IntersectionObserver-based
+  // `whileInView` animations, leaving sections stuck at `opacity: 0`.
+  // For Service Detail pages, we prefer content to always render reliably.
+  const revealOnMount = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.45, ease: "easeOut" as const },
+  };
+
   if (!service) {
     return (
       <Layout>
@@ -266,9 +275,7 @@ const ServiceDetail = () => {
           
           {/* CTA Banner - Full Width at Top */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            {...revealOnMount}
             className="bg-gradient-to-r from-canary-navy to-slate-800 rounded-xl p-6 md:p-8 shadow-xl mb-8"
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -306,9 +313,7 @@ const ServiceDetail = () => {
           {/* No Find, No Fee Banner - Water Leak Detection (full-width within content container) */}
           {englishSlug === "water-leak-detection" && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              {...revealOnMount}
               className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw] max-w-[100vw] mb-8 bg-gradient-to-r from-primary via-accent to-primary shadow-lg overflow-hidden"
             >
               <div className="container mx-auto px-4 py-6 md:py-8">
@@ -339,9 +344,7 @@ const ServiceDetail = () => {
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Left Column - Description (takes more space) */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              {...revealOnMount}
               className="lg:col-span-3"
             >
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
@@ -401,9 +404,7 @@ const ServiceDetail = () => {
 
             {/* Right Column - What's Included + Gallery for short content */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              {...revealOnMount}
               className="lg:col-span-2 space-y-6"
             >
               <div className="bg-gradient-to-br from-slate-50 to-muted/30 rounded-2xl p-6 border border-border">
@@ -497,9 +498,7 @@ const ServiceDetail = () => {
 
           {galleryImages.length > 0 && (englishSlug === 'underground-detection' || (englishSlug !== 'drain-unblocking' && service.content.length >= 600)) && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              {...revealOnMount}
               className="mt-10"
             >
               <h3 className="font-heading text-xl font-bold mb-4">
