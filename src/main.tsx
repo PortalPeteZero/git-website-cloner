@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 
-// Render with StrictMode for development best practices
+// Application bootstrap - renders the complete React tree with providers
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
