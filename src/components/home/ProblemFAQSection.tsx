@@ -110,7 +110,7 @@ const ProblemFAQSection = forwardRef<HTMLElement>((_, ref) => {
                   <AccordionTrigger className="text-left font-heading font-semibold text-foreground hover:text-primary py-5">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5 max-w-none">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

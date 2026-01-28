@@ -148,7 +148,7 @@ const FAQSection = forwardRef<HTMLElement>((_, ref) => {
                   <AccordionTrigger className="text-left font-heading font-semibold hover:text-primary">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                  <AccordionContent className="text-muted-foreground leading-relaxed max-w-none">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

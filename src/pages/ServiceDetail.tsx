@@ -360,7 +360,7 @@ const ServiceDetail = () => {
                   <div className="space-y-4">
                     {contentParagraphs.map((paragraph, idx) => (
                       <Fragment key={idx}>
-                        <p className="text-muted-foreground leading-relaxed">{paragraph}</p>
+                        <p className="text-muted-foreground leading-relaxed max-w-none">{paragraph}</p>
 
                         {/* Water Leak Detection: insert the tech card mid-content so it lines up with the right-side CTA */}
                         {englishSlug === "water-leak-detection" && idx === 1 && (

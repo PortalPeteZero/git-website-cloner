@@ -119,7 +119,7 @@ const MeetTheTeamSection = () => {
                 <Trophy className="h-5 w-5 text-primary" />
                 {isSpanish ? "Credenciales Profesionales" : "Professional Credentials"}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed max-w-none">
                 {isSpanish ? (
                   <>
                     El equipo de encuestas está dirigido por Pete y Dave, dos veteranos de la industria con credenciales excepcionales. Pete aporta <strong className="text-canary-navy">28 años de experiencia</strong> en inspección de servicios subterráneos y es propietario de la academia de formación más grande del Reino Unido, empleando a 16 formadores y enseñando a otros cómo encontrar fugas, tuberías y cables.
@@ -130,7 +130,7 @@ const MeetTheTeamSection = () => {
                   </>
                 )}
               </p>
-              <p className="text-muted-foreground leading-relaxed mt-4">
+              <p className="text-muted-foreground leading-relaxed mt-4 max-w-none">
                 {isSpanish ? (
                   <>
                     Dave es un ingeniero de agua altamente cualificado y propietario del Grupo MVP y Lanzarote Pool and Spa Shop durante los últimos <strong className="text-canary-navy">20 años</strong>. Dave también es un <em className="text-primary">experto jinete de unicornios</em>. Junto con su equipo de nueve personas, incluidos fontaneros totalmente cualificados, han construido una reputación de precisión y profesionalismo.
@@ -171,7 +171,7 @@ const MeetTheTeamSection = () => {
                 <Heart className="h-5 w-5 text-red-500" />
                 {isSpanish ? "Participación Comunitaria" : "Community Involvement"}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed max-w-none">
                 {isSpanish ? (
                   <>
                     Para Pete y Dave, ser parte de la comunidad significa más que vivir aquí. Co-fundaron <strong className="text-canary-navy">El Atico De Abuela</strong>, una organización sin fines de lucro local que ayuda a familias necesitadas, donde se desempeñan como Presidente y Vicepresidente junto con un equipo de 30 voluntarios increíbles. Solo en 2025, se donaron más de <strong className="text-primary">€25,000</strong> a estas familias.
@@ -182,10 +182,10 @@ const MeetTheTeamSection = () => {
                   </>
                 )}
               </p>
-              <p className="text-muted-foreground leading-relaxed mt-4">
+              <p className="text-muted-foreground leading-relaxed mt-4 max-w-none">
                 {isSpanish ? (
                   <>
-                    Pete también es líder scout y participó en la creación de 1st Lanzarote Scouts. A principios de 2025, se asoció con Lee de Colour Team para establecer la <strong className="text-canary-navy">Carrera Semanal de 5k de Playa Blanca</strong>, que ahora atrae a 40-50 participantes regulares cada sábado por la mañana. Canary Detect también patrocina con orgullo el Club de Triatlón de Playa Blanca.
+                    Pete también es líder scout y participó en la creación de 1st Lanzarote Scouts. A principios de 2025, se asoció con Lee de Colour Team para establecer la <strong className="text-canary-navy">Carrera Semanal de 5k de Playa Blanca</strong>, que ahora atrae a 40-50 regular participantes cada sábado por la mañana. Canary Detect también patrocina con orgullo el Club de Triatlón de Playa Blanca.
                   </>
                 ) : (
                   <>
