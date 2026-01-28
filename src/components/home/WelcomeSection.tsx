@@ -43,7 +43,7 @@ const WelcomeSection = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="break-words"
+            className="min-w-0"
           >
             <span className="text-primary font-semibold uppercase tracking-wide text-sm">
               {isSpanish ? "Bienvenido a Canary Detect" : "Welcome to Canary Detect"}
@@ -56,7 +56,7 @@ const WelcomeSection = () => {
             <p className="text-primary font-semibold italic mb-6">
               {isSpanish ? '"Los Cazafugas"' : '"The Leaky Finders"'}
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed mb-6 max-w-none">
               {isSpanish ? (
                 <>
                   Canary Detect ofrece <Link to="/es/servicios" className="text-primary hover:underline">servicios profesionales de detección de fugas</Link> en toda Lanzarote.
@@ -71,7 +71,7 @@ const WelcomeSection = () => {
                 </>
               )}
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-8 max-w-none">
               {isSpanish ? (
                 <>
                   Ya sea que tenga una <Link to="/es/servicios/deteccion-fugas-piscinas" className="text-primary hover:underline">fuga de piscina</Link>, <Link to="/es/servicios/deteccion-fugas-agua" className="text-primary hover:underline">fuga de tubería de agua</Link>, o necesite <Link to="/es/servicios/deteccion-subterranea" className="text-primary hover:underline">detección de tuberías subterráneas</Link>, 
