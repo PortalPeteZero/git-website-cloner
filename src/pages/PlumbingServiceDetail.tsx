@@ -92,7 +92,7 @@ const PlumbingServiceDetail = () => {
                   {content.getQuote}
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+              <Button asChild size="lg" variant="secondary" className="bg-white text-black hover:bg-white/90">
                 <a href="tel:+34928123456">
                   {content.callNow}
                 </a>
