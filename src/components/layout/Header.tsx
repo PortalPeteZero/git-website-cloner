@@ -362,6 +362,15 @@ const Header = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
+            {/* NEW Plumbing Services CTA */}
+            <Link to={getRoute("/plumbing-services", "/es/servicios-fontaneria")}>
+              <button className="flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-md hover:shadow-lg bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white hover:opacity-90 animate-pulse hover:animate-none">
+                <span className="bg-white/20 px-1.5 py-0.5 rounded text-xs font-black">NEW</span>
+                <Wrench className="h-4 w-4" />
+                {isSpanish ? "Fontanería" : "Plumbing"}
+              </button>
+            </Link>
+
             {/* Free Test CTA */}
             <Link to={getRoute("/services/free-leak-confirmation", "/es/servicios/confirmacion-fugas-gratis")}>
               <button className="flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-md bg-gradient-to-r from-primary to-accent text-white hover:opacity-90">
