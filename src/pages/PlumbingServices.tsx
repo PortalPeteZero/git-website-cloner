@@ -252,60 +252,66 @@ const PlumbingServices = () => {
       {/* Services Grid */}
       <section className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((service, index) => {
               const ServiceIcon = service.icon;
               return (
                 <motion.div
                   key={service.slug}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.4, delay: index * 0.08 }}
                   viewport={{ once: true }}
                 >
-                  <Link to={getServicePath(service.slug)} className="group block">
-                    <Card className="overflow-hidden h-full hover:shadow-xl transition-all duration-300 border-2 border-border hover:border-primary/30">
-                      {/* Compact image with overlay title */}
-                      <div className="relative aspect-[2/1] overflow-hidden">
+                  <Link to={getServicePath(service.slug)} className="group block h-full">
+                    <div className="relative h-full rounded-xl overflow-hidden bg-gradient-to-br from-canary-navy to-canary-navy/90 border border-border/50 hover:border-primary/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                      {/* Background image with strong overlay */}
+                      <div className="absolute inset-0">
                         <img 
                           src={service.heroImage} 
                           alt={isSpanish ? service.titleEs : service.title}
-                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-110 transition-all duration-500"
                           loading="lazy"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
-                        <div className="absolute bottom-3 left-3 right-3 flex items-center gap-2.5">
-                          <div className="p-2 rounded-lg bg-primary text-primary-foreground shadow-lg flex-shrink-0">
-                            <ServiceIcon className="h-5 w-5" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-canary-navy via-canary-navy/80 to-canary-navy/60" />
+                      </div>
+                      
+                      {/* Content overlay */}
+                      <div className="relative p-5 flex flex-col h-full min-h-[220px]">
+                        {/* Icon + Title */}
+                        <div className="flex items-start gap-3 mb-3">
+                          <div className="p-2.5 rounded-xl bg-primary text-primary-foreground shadow-lg flex-shrink-0">
+                            <ServiceIcon className="h-6 w-6" />
                           </div>
-                          <h2 className="text-lg md:text-xl font-bold text-white drop-shadow-lg leading-tight">
+                          <h2 className="text-xl font-bold text-white leading-tight pt-1">
                             {isSpanish ? service.titleEs : service.title}
                           </h2>
                         </div>
-                      </div>
-                      
-                      {/* Compact content area */}
-                      <CardContent className="p-4 bg-muted/30">
-                        <p className="text-base text-foreground mb-3 leading-snug font-medium">
+                        
+                        {/* Description */}
+                        <p className="text-white/80 text-base leading-relaxed mb-4 flex-grow">
                           {isSpanish ? service.descriptionEs : service.description}
                         </p>
-                        <div className="flex flex-wrap gap-2">
+                        
+                        {/* Service tags */}
+                        <div className="flex flex-wrap gap-1.5 mb-4">
                           {service.services.slice(0, 3).map((item, idx) => (
                             <span 
                               key={idx} 
-                              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold"
+                              className="px-2.5 py-1 bg-white/10 text-white/90 rounded-md text-xs font-medium backdrop-blur-sm"
                             >
-                              <ArrowRight className="h-3.5 w-3.5" />
                               {isSpanish ? item.nameEs : item.name}
                             </span>
                           ))}
                         </div>
-                        <div className="mt-4 flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
+                        
+                        {/* CTA */}
+                        <div className="flex items-center gap-2 text-primary font-bold text-base group-hover:gap-3 transition-all">
                           <span>{content.learnMore}</span>
-                          <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                         </div>
-                      </CardContent>
-                    </Card>
+                      </div>
+                    </div>
                   </Link>
                 </motion.div>
               );
