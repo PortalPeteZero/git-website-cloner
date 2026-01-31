@@ -102,6 +102,28 @@ const PlumbingServices = () => {
 
   const currentImage = heroImages[currentSlide];
 
+  // JSON-LD structured data for plumbing services
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": content.title,
+    "description": content.metaDescription,
+    "itemListElement": services.map((service, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Service",
+        "name": isSpanish ? service.titleEs : service.title,
+        "description": isSpanish ? service.descriptionEs : service.description,
+        "url": `https://canary-detect.com${getServicePath(service.slug)}`,
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Canary Detect"
+        }
+      }
+    }))
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -110,6 +132,17 @@ const PlumbingServices = () => {
         <link rel="canonical" href={isSpanish ? "https://canary-detect.com/es/servicios-fontaneria" : "https://canary-detect.com/plumbing-services"} />
         <link rel="alternate" hrefLang="en" href="https://canary-detect.com/plumbing-services" />
         <link rel="alternate" hrefLang="es" href="https://canary-detect.com/es/servicios-fontaneria" />
+        <meta property="og:title" content={content.metaTitle} />
+        <meta property="og:description" content={content.metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={isSpanish ? "https://canary-detect.com/es/servicios-fontaneria" : "https://canary-detect.com/plumbing-services"} />
+        <meta property="og:image" content="https://canary-detect.com/og-image.jpg?v=2" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={content.metaTitle} />
+        <meta name="twitter:description" content={content.metaDescription} />
+        <script type="application/ld+json">
+          {JSON.stringify(servicesSchema)}
+        </script>
       </Helmet>
 
       {/* Hero Section with Carousel */}
@@ -137,25 +170,27 @@ const PlumbingServices = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
         
-        <div className="container mx-auto px-4 relative z-10 text-center py-16 md:py-20">
+        <div className="container mx-auto px-4 relative z-10 text-center py-12 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-primary font-semibold text-lg mb-2 block drop-shadow-lg">{content.subtitle}</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+            <span className="text-primary font-semibold text-base md:text-lg mb-2 block drop-shadow-lg">{content.subtitle}</span>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 drop-shadow-lg px-2">
               {content.title}
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8 drop-shadow-md">
+            <p className="text-base md:text-xl text-white/90 max-w-3xl mx-auto mb-6 md:mb-8 drop-shadow-md px-4">
               {content.description}
             </p>
-            <Button asChild size="lg" className="gap-2 shadow-xl">
-              <Link to={isSpanish ? "/es/contacto" : "/contact"}>
-                <Phone className="h-5 w-5" />
-                {content.cta}
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center px-4">
+              <Button asChild size="lg" className="gap-2 shadow-xl w-full sm:w-auto">
+                <Link to={isSpanish ? "/es/contacto" : "/contact"}>
+                  <Phone className="h-5 w-5" />
+                  {content.cta}
+                </Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
         
@@ -215,9 +250,9 @@ const PlumbingServices = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {services.map((service, index) => {
               const ServiceIcon = service.icon;
               return (
@@ -228,7 +263,7 @@ const PlumbingServices = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="group overflow-hidden h-full hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-primary/30">
+                  <Card className="group overflow-hidden h-full hover:shadow-xl transition-all duration-300 border-2 border-border hover:border-primary/30">
                     <div className="relative aspect-[16/9] overflow-hidden">
                       <img 
                         src={service.heroImage} 
@@ -276,23 +311,23 @@ const PlumbingServices = () => {
       {/* CTA Section */}
       <section className="py-10 md:py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3">
             {isSpanish ? "¿Necesita Ayuda con Fontanería?" : "Need Plumbing Help?"}
           </h2>
-          <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg opacity-90 mb-6 max-w-2xl mx-auto">
             {isSpanish 
               ? "Desde un grifo goteando hasta una renovación completa de la sala de bombas, estamos aquí para ayudar."
               : "From a dripping tap to a complete pump room overhaul, we're here to help."}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary" className="gap-2">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center px-4">
+            <Button asChild size="lg" variant="secondary" className="gap-2 w-full sm:w-auto">
               <Link to={isSpanish ? "/es/contacto" : "/contact"}>
                 <Phone className="h-5 w-5" />
                 {content.cta}
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <a href="tel:+34928123456">
+            <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary w-full sm:w-auto">
+              <a href="tel:+34711051071">
                 {isSpanish ? "Llamar Ahora" : "Call Now"}
               </a>
             </Button>
