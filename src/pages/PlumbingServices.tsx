@@ -264,41 +264,38 @@ const PlumbingServices = () => {
                   viewport={{ once: true }}
                 >
                   <Link to={getServicePath(service.slug)} className="group block h-full">
-                    <div className="relative h-full rounded-xl overflow-hidden bg-gradient-to-br from-canary-navy to-canary-navy/90 border border-border/50 hover:border-primary/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                      {/* Background image with strong overlay */}
-                      <div className="absolute inset-0">
+                    <div className="h-full rounded-xl overflow-hidden bg-canary-navy border border-border/50 hover:border-primary/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                      {/* Visible image section */}
+                      <div className="relative aspect-[16/10] overflow-hidden">
                         <img 
                           src={service.heroImage} 
                           alt={isSpanish ? service.titleEs : service.title}
-                          className="w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-110 transition-all duration-500"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                           loading="lazy"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-canary-navy via-canary-navy/80 to-canary-navy/60" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-canary-navy via-transparent to-transparent" />
+                        {/* Icon badge */}
+                        <div className="absolute top-3 left-3 p-2 rounded-lg bg-primary text-primary-foreground shadow-lg">
+                          <ServiceIcon className="h-5 w-5" />
+                        </div>
                       </div>
                       
-                      {/* Content overlay */}
-                      <div className="relative p-5 flex flex-col h-full min-h-[220px]">
-                        {/* Icon + Title */}
-                        <div className="flex items-start gap-3 mb-3">
-                          <div className="p-2.5 rounded-xl bg-primary text-primary-foreground shadow-lg flex-shrink-0">
-                            <ServiceIcon className="h-6 w-6" />
-                          </div>
-                          <h2 className="text-xl font-bold text-white leading-tight pt-1">
-                            {isSpanish ? service.titleEs : service.title}
-                          </h2>
-                        </div>
+                      {/* Content section */}
+                      <div className="p-4">
+                        <h2 className="text-lg font-bold text-white mb-2 leading-tight">
+                          {isSpanish ? service.titleEs : service.title}
+                        </h2>
                         
-                        {/* Description */}
-                        <p className="text-white/80 text-base leading-relaxed mb-4 flex-grow">
+                        <p className="text-white/70 text-sm leading-relaxed mb-3 line-clamp-2">
                           {isSpanish ? service.descriptionEs : service.description}
                         </p>
                         
                         {/* Service tags */}
-                        <div className="flex flex-wrap gap-1.5 mb-4">
+                        <div className="flex flex-wrap gap-1.5 mb-3">
                           {service.services.slice(0, 3).map((item, idx) => (
                             <span 
                               key={idx} 
-                              className="px-2.5 py-1 bg-white/10 text-white/90 rounded-md text-xs font-medium backdrop-blur-sm"
+                              className="px-2 py-0.5 bg-white/10 text-white/80 rounded text-xs font-medium"
                             >
                               {isSpanish ? item.nameEs : item.name}
                             </span>
@@ -306,9 +303,9 @@ const PlumbingServices = () => {
                         </div>
                         
                         {/* CTA */}
-                        <div className="flex items-center gap-2 text-primary font-bold text-base group-hover:gap-3 transition-all">
+                        <div className="flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all">
                           <span>{content.learnMore}</span>
-                          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                          <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </div>
                       </div>
                     </div>
