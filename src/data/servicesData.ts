@@ -14,6 +14,7 @@ import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation-ne
 // Import damp/moisture images
 import risingDampWall from "@/assets/blog/rising-damp-wall.jpg";
 import thermalUndergroundLeak from "@/assets/blog/thermal-underground-leak.jpg";
+import moistureMeterWall from "@/assets/services/moisture-meter-wall.jpg";
 
 // Import gallery images
 import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
@@ -478,8 +479,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       title: "Damp & Moisture Mapping Lanzarote",
       description: "Professional damp detection in Lanzarote using thermal imaging and Protimeter moisture meters. Ideal service before refurbishment or decorating. FREE home visit and assessment.",
       icon: Thermometer,
-      heroImage: thermalUndergroundLeak,
-      galleryImages: [thermalUndergroundLeak, risingDampWall],
+      heroImage: moistureMeterWall,
+      galleryImages: [moistureMeterWall, thermalUndergroundLeak, risingDampWall],
       seo: {
         title: "Damp & Moisture Mapping Lanzarote | Canary Detect",
         description: "Damp detection Lanzarote. Thermal imaging and Protimeter moisture meters. Rising damp, penetrating damp, condensation. FREE home visit.",

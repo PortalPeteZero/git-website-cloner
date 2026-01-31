@@ -25,6 +25,8 @@ import manifoldBeforeAfter from "@/assets/plumbing/manifold/manifold-before-afte
 import manifoldHiddenPipework from "@/assets/plumbing/manifold/manifold-hidden-pipework.jpg";
 import manifoldOldWorn from "@/assets/plumbing/manifold/manifold-old-worn.jpg";
 import manifoldNewBrass from "@/assets/plumbing/manifold/manifold-new-brass.jpg";
+import brandedBrassValve from "@/assets/plumbing/manifold/branded-brass-valve.jpg";
+import villaGardenIrrigation from "@/assets/services/villa-garden-irrigation.jpg";
 
 export interface PlumbingServiceItem {
   name: string;
@@ -151,6 +153,7 @@ export const plumbingServicesData: Record<string, PlumbingService> = {
     galleryImages: [
       { src: boilerInstallationWall, alt: "Professional plumbing installation in Lanzarote villa", altEs: "Instalación profesional de fontanería en villa de Lanzarote" },
       { src: boilerPipeworkManifold, alt: "Clean pipework installation with isolation valves", altEs: "Instalación limpia de tuberías con válvulas de aislamiento" },
+      { src: villaGardenIrrigation, alt: "Canary Detect van at Lanzarote villa with irrigation system work", altEs: "Furgoneta de Canary Detect en villa de Lanzarote con trabajo de sistema de riego" },
       { src: boilerOutdoorSetup, alt: "Outdoor plumbing setup with boiler enclosure", altEs: "Instalación de fontanería exterior con carcasa de caldera" },
       { src: boilerCustomHousing, alt: "Custom plumbing housing solution", altEs: "Solución de carcasa de fontanería personalizada" }
     ],
@@ -562,6 +565,7 @@ export const plumbingServicesData: Record<string, PlumbingService> = {
     ],
     galleryImages: [
       { src: manifoldNewBrass, alt: "New brass Genebre valve manifold installation with quality fittings", altEs: "Instalación de colector con válvulas Genebre de latón de calidad" },
+      { src: brandedBrassValve, alt: "Canary Detect branded brass ball valve installation", altEs: "Instalación de válvula de bola de latón con marca Canary Detect" },
       { src: manifoldHiddenPipework, alt: "Hidden manifold behind wall tiles during renovation work", altEs: "Colector oculto detrás de azulejos durante trabajo de renovación" },
       { src: manifoldOldWorn, alt: "Old worn manifold in wall cavity showing corrosion and deterioration", altEs: "Colector antiguo y desgastado en cavidad de pared mostrando corrosión y deterioro" }
     ],
