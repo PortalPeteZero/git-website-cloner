@@ -22,6 +22,7 @@ export const routeMap: Record<string, string> = {
   '/plumbing-services/system-upgrades': '/es/servicios-fontaneria/mejoras-sistema',
   '/plumbing-services/manifold-upgrades': '/es/servicios-fontaneria/mejoras-colectores',
   '/plumbing-services/pool-plumbing': '/es/servicios-fontaneria/fontaneria-piscinas',
+  '/plumbing-services/pool-repairs': '/es/servicios-fontaneria/reparaciones-piscinas',
 };
 
 // Reverse map for Spanish to English
@@ -49,6 +50,7 @@ export const plumbingSlugMap: Record<string, string> = {
   'system-upgrades': 'mejoras-sistema',
   'manifold-upgrades': 'mejoras-colectores',
   'pool-plumbing': 'fontaneria-piscinas',
+  'pool-repairs': 'reparaciones-piscinas',
 };
 
 // Reverse plumbing slug map (Spanish to English)
