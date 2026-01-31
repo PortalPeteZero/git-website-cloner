@@ -20,6 +20,12 @@ import customHousingBuild from "@/assets/plumbing/boiler/custom-housing-build.jp
 import waterHeaterEnclosure from "@/assets/plumbing/boiler/water-heater-enclosure.jpg";
 import tekaWaterHeater from "@/assets/plumbing/boiler/teka-water-heater.jpg";
 
+// Manifold images
+import manifoldBeforeAfter from "@/assets/plumbing/manifold/manifold-before-after.jpg";
+import manifoldHiddenPipework from "@/assets/plumbing/manifold/manifold-hidden-pipework.jpg";
+import manifoldOldWorn from "@/assets/plumbing/manifold/manifold-old-worn.jpg";
+import manifoldNewBrass from "@/assets/plumbing/manifold/manifold-new-brass.jpg";
+
 export interface PlumbingServiceItem {
   name: string;
   nameEs: string;
@@ -451,6 +457,140 @@ export const plumbingServicesData: Record<string, PlumbingService> = {
         titleEs: "Diseño a Prueba de Futuro",
         text: "Our manifold systems allow for easy expansion and modification as your property needs change.",
         textEs: "Nuestros sistemas de colectores permiten fácil expansión y modificación según cambien las necesidades de su propiedad."
+      }
+    ]
+  },
+
+  "manifold-upgrades": {
+    slug: "manifold-upgrades",
+    slugEs: "mejoras-colectores",
+    title: "Manifold Upgrades & Refurbishment",
+    titleEs: "Mejoras y Renovación de Colectores",
+    metaTitle: "Manifold Upgrades Lanzarote | Valve Replacement | Canary Detect",
+    metaTitleEs: "Mejoras de Colectores Lanzarote | Reemplazo Válvulas | Canary Detect",
+    metaDescription: "Professional manifold upgrades and refurbishment in Lanzarote. Replace rusted valves and worn connections with modern, reliable systems. 2-Year Guarantee.",
+    metaDescriptionEs: "Mejoras y renovación profesional de colectores en Lanzarote. Reemplace válvulas oxidadas y conexiones desgastadas con sistemas modernos y fiables. Garantía 2 años.",
+    description: "Replace rusted valves and worn connections with modern, reliable manifold systems.",
+    descriptionEs: "Reemplace válvulas oxidadas y conexiones desgastadas con sistemas de colectores modernos y fiables.",
+    icon: GitBranch,
+    heroImage: manifoldNewBrass,
+    introTitle: "Transform Your Water Distribution System",
+    introTitleEs: "Transforme Su Sistema de Distribución de Agua",
+    introText: "Over time, manifolds deteriorate. Valves seize up from limescale and corrosion. Connections weep and drip. Handles snap off. What was once a convenient way to control your water supply becomes a source of constant frustration—and potentially costly water damage.\\n\\nAt Canary Detect, we specialise in breathing new life into tired manifold systems. Whether your property has a domestic water manifold, a pool plant room distribution system, or irrigation controls, we can strip out the old, corroded components and replace them with quality brass valves, modern fittings, and reliable connections that will serve you for decades to come.\\n\\nOur manifold refurbishment work is meticulous. We don't just swap a few valves—we assess the entire system, replace all suspect components, and ensure every connection is watertight. The result? A manifold that looks professional, operates smoothly, and gives you complete confidence in your water supply.",
+    introTextEs: "Con el tiempo, los colectores se deterioran. Las válvulas se atascan por cal y corrosión. Las conexiones gotean. Las manetas se rompen. Lo que antes era una forma conveniente de controlar el suministro de agua se convierte en una fuente de frustración constante—y potencialmente de costosos daños por agua.\\n\\nEn Canary Detect, nos especializamos en dar nueva vida a sistemas de colectores desgastados. Ya sea que su propiedad tenga un colector de agua doméstica, un sistema de distribución de sala de máquinas de piscina, o controles de riego, podemos eliminar los componentes viejos y corroídos y reemplazarlos con válvulas de latón de calidad, accesorios modernos y conexiones fiables que le servirán durante décadas.\\n\\nNuestro trabajo de renovación de colectores es meticuloso. No solo cambiamos algunas válvulas—evaluamos todo el sistema, reemplazamos todos los componentes sospechosos y aseguramos que cada conexión sea hermética. ¿El resultado? Un colector que se ve profesional, opera suavemente y le da total confianza en su suministro de agua.",
+    services: [
+      {
+        name: "Complete Manifold Refurbishment",
+        nameEs: "Renovación Completa de Colectores",
+        items: [
+          "Full system assessment and condition report",
+          "Removal of corroded valves and fittings",
+          "Replacement with quality brass ball valves",
+          "New compression fittings throughout",
+          "Pressure testing after completion",
+          "Clean, professional finish"
+        ],
+        itemsEs: [
+          "Evaluación completa del sistema e informe de estado",
+          "Eliminación de válvulas y accesorios corroídos",
+          "Reemplazo con válvulas de bola de latón de calidad",
+          "Nuevos racores de compresión en todo el sistema",
+          "Prueba de presión después de completar",
+          "Acabado limpio y profesional"
+        ]
+      },
+      {
+        name: "Valve Replacement",
+        nameEs: "Reemplazo de Válvulas",
+        items: [
+          "Seized valve replacement",
+          "Gate valve to ball valve upgrades",
+          "Individual outlet isolation valves",
+          "Main supply isolation points",
+          "Non-return valve installations",
+          "Lever handle upgrades for easier operation"
+        ],
+        itemsEs: [
+          "Reemplazo de válvulas atascadas",
+          "Mejoras de válvula de compuerta a válvula de bola",
+          "Válvulas de aislamiento de salida individual",
+          "Puntos de aislamiento del suministro principal",
+          "Instalación de válvulas de retención",
+          "Mejoras de manetas para operación más fácil"
+        ]
+      },
+      {
+        name: "Connection Renewals",
+        nameEs: "Renovación de Conexiones",
+        items: [
+          "Replacement of corroded brass fittings",
+          "Flexible hose to rigid pipe conversions",
+          "Push-fit to compression upgrades",
+          "Thread sealant and PTFE renewal",
+          "Union joint installations for future access",
+          "Leak repair and prevention"
+        ],
+        itemsEs: [
+          "Reemplazo de accesorios de latón corroídos",
+          "Conversiones de manguera flexible a tubería rígida",
+          "Mejoras de push-fit a compresión",
+          "Renovación de sellador de roscas y PTFE",
+          "Instalación de juntas de unión para acceso futuro",
+          "Reparación y prevención de fugas"
+        ]
+      },
+      {
+        name: "System Improvements",
+        nameEs: "Mejoras del Sistema",
+        items: [
+          "Adding isolation points for individual outlets",
+          "Pressure gauge installations",
+          "System redesign for better access",
+          "Labelling of all supply lines",
+          "Insulation for outdoor installations",
+          "Access panel improvements"
+        ],
+        itemsEs: [
+          "Adición de puntos de aislamiento para salidas individuales",
+          "Instalación de manómetros",
+          "Rediseño del sistema para mejor acceso",
+          "Etiquetado de todas las líneas de suministro",
+          "Aislamiento para instalaciones exteriores",
+          "Mejoras de paneles de acceso"
+        ]
+      }
+    ],
+    galleryImages: [
+      { src: manifoldNewBrass, alt: "New brass Genebre valve manifold installation with quality fittings", altEs: "Instalación de colector con válvulas Genebre de latón de calidad" },
+      { src: manifoldHiddenPipework, alt: "Hidden manifold behind wall tiles during renovation work", altEs: "Colector oculto detrás de azulejos durante trabajo de renovación" },
+      { src: manifoldOldWorn, alt: "Old worn manifold in wall cavity showing corrosion and deterioration", altEs: "Colector antiguo y desgastado en cavidad de pared mostrando corrosión y deterioro" }
+    ],
+    beforeAfterImage: {
+      src: manifoldBeforeAfter,
+      caption: "BEFORE: Corroded valves, rusted fittings, and weeping connections. AFTER: Quality brass ball valves, new compression fittings, and a system that works like new.",
+      captionEs: "ANTES: Válvulas corroídas, accesorios oxidados y conexiones que gotean. DESPUÉS: Válvulas de bola de latón de calidad, nuevos racores de compresión y un sistema que funciona como nuevo."
+    },
+    whyChooseUs: [
+      {
+        icon: Shield,
+        title: "2-Year Guarantee",
+        titleEs: "Garantía de 2 Años",
+        text: "Every manifold upgrade we complete is covered by our comprehensive 2-Year Guarantee. We stand behind our work.",
+        textEs: "Cada mejora de colector que completamos está cubierta por nuestra Garantía completa de 2 Años. Respaldamos nuestro trabajo."
+      },
+      {
+        icon: Search,
+        title: "Leak Detection Expertise",
+        titleEs: "Experiencia en Detección de Fugas",
+        text: "As Lanzarote's leak specialists, we understand how failing manifolds cause water damage. We fix problems before they become disasters.",
+        textEs: "Como especialistas en fugas de Lanzarote, entendemos cómo los colectores defectuosos causan daños por agua. Arreglamos problemas antes de que se conviertan en desastres."
+      },
+      {
+        icon: BadgeCheck,
+        title: "Quality Components Only",
+        titleEs: "Solo Componentes de Calidad",
+        text: "We use trusted brands like Genebre and ATUSA—quality brass valves and fittings that resist Lanzarote's hard water conditions.",
+        textEs: "Usamos marcas de confianza como Genebre y ATUSA—válvulas y accesorios de latón de calidad que resisten las condiciones de agua dura de Lanzarote."
       }
     ]
   },
