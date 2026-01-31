@@ -598,7 +598,9 @@ export const plumbingServicesData: Record<string, PlumbingService> = {
       { src: poolEquipmentBox, alt: "Underground pipe connections to pump equipment box", altEs: "Conexiones de tuberías subterráneas a caja de equipos de bombeo" },
       { src: poolPipeRerouting, alt: "New pressure-rated pipework installation for swimming pool", altEs: "Nueva instalación de tuberías a presión para piscina" },
       { src: poolValveManifoldWall, alt: "Wall-mounted valve manifold with individual line isolation", altEs: "Colector de válvulas en pared con aislamiento de líneas individuales" },
-      { src: poolComplexPipework, alt: "Professional pipework layout for optimal flow and serviceability", altEs: "Diseño profesional de tuberías para flujo óptimo y servicio" }
+      { src: poolComplexPipework, alt: "Professional pipework layout for optimal flow and serviceability", altEs: "Diseño profesional de tuberías para flujo óptimo y servicio" },
+      { src: poolValvesMoisture, alt: "Pool valve replacement showing moisture damage repair", altEs: "Reemplazo de válvulas de piscina mostrando reparación de daños por humedad" },
+      { src: poolBeforeAfter, alt: "Before and after pool plumbing renovation with new valves", altEs: "Antes y después de renovación de fontanería de piscina con nuevas válvulas" }
     ],
     beforeAfterImage: {
       src: poolBeforeAfter,
