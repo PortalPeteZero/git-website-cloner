@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -6,15 +7,62 @@ import { plumbingServicesData, getAllPlumbingServices } from "@/data/plumbingSer
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Shield, Wrench, Clock } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
-// Hero image
-import heroImage from "@/assets/plumbing/boiler/boiler-outdoor-setup.jpg";
+// Hero carousel images - professional plumbing work
+import poolPumpRoomComplete from "@/assets/plumbing/pool/pool-pump-room-complete.jpg";
+import poolComplexPipework from "@/assets/plumbing/pool/pool-complex-pipework.jpg";
+import tekaWaterHeater from "@/assets/plumbing/boiler/teka-water-heater.jpg";
+import manifoldNewBrass from "@/assets/plumbing/manifold/manifold-new-brass.jpg";
+import villaGardenIrrigation from "@/assets/services/villa-garden-irrigation.jpg";
+import boilerPipeworkManifold from "@/assets/plumbing/boiler/boiler-pipework-manifold.jpg";
+
+const heroImages = [
+  { 
+    src: villaGardenIrrigation, 
+    alt: "Canary Detect plumbing services van at Lanzarote villa",
+    altEs: "Furgoneta de servicios de fontanería Canary Detect en villa de Lanzarote"
+  },
+  { 
+    src: poolPumpRoomComplete, 
+    alt: "Professional pool pump room installation Lanzarote",
+    altEs: "Instalación profesional de sala de bombas de piscina Lanzarote"
+  },
+  { 
+    src: manifoldNewBrass, 
+    alt: "Quality brass manifold and valve installation",
+    altEs: "Instalación de colector de latón y válvulas de calidad"
+  },
+  { 
+    src: poolComplexPipework, 
+    alt: "Complex pool plumbing pipework installation",
+    altEs: "Instalación de tuberías complejas de piscina"
+  },
+  { 
+    src: tekaWaterHeater, 
+    alt: "Teka water heater professional installation",
+    altEs: "Instalación profesional de calentador Teka"
+  },
+  { 
+    src: boilerPipeworkManifold, 
+    alt: "Professional pipework and manifold system",
+    altEs: "Sistema profesional de tuberías y colectores"
+  }
+];
 
 const PlumbingServices = () => {
   const { isSpanish } = useLanguage();
+  const [currentSlide, setCurrentSlide] = useState(0);
   
   const services = getAllPlumbingServices();
+  
+  // Hero carousel auto-advance
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
   
   const getServicePath = (slug: string) => {
     const service = plumbingServicesData[slug];
@@ -52,6 +100,8 @@ const PlumbingServices = () => {
       : "Our leak detection background means we understand plumbing systems better than most."
   };
 
+  const currentImage = heroImages[currentSlide];
+
   return (
     <Layout>
       <Helmet>
@@ -62,31 +112,45 @@ const PlumbingServices = () => {
         <link rel="alternate" hrefLang="es" href="https://canary-detect.com/es/servicios-fontaneria" />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={heroImage} 
-            alt={isSpanish ? "Servicios de fontanería profesional Lanzarote" : "Professional plumbing services Lanzarote"}
-            className="w-full h-full object-cover opacity-60"
-          />
-          <div className="absolute inset-0 bg-black/70" />
-        </div>
+      {/* Hero Section with Carousel */}
+      <section className="relative min-h-[55vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* Background carousel images */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="absolute inset-0"
+          >
+            <img 
+              src={currentImage.src} 
+              alt={isSpanish ? currentImage.altEs : currentImage.alt}
+              className="w-full h-full object-cover brightness-90"
+              fetchPriority="high"
+            />
+          </motion.div>
+        </AnimatePresence>
         
-        <div className="container mx-auto px-4 relative z-10 text-center py-20">
+        {/* Gradient overlays for text readability while keeping image bright */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+        
+        <div className="container mx-auto px-4 relative z-10 text-center py-16 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-primary font-semibold text-lg mb-2 block">{content.subtitle}</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <span className="text-primary font-semibold text-lg mb-2 block drop-shadow-lg">{content.subtitle}</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
               {content.title}
             </h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8 drop-shadow-md">
               {content.description}
             </p>
-            <Button asChild size="lg" className="gap-2">
+            <Button asChild size="lg" className="gap-2 shadow-xl">
               <Link to={isSpanish ? "/es/contacto" : "/contact"}>
                 <Phone className="h-5 w-5" />
                 {content.cta}
@@ -94,6 +158,25 @@ const PlumbingServices = () => {
             </Button>
           </motion.div>
         </div>
+        
+        {/* Slide indicators */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+          {heroImages.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentSlide(idx)}
+              className={`h-2 rounded-full transition-all duration-500 ${
+                idx === currentSlide 
+                  ? "bg-primary w-8" 
+                  : "bg-white/50 w-2 hover:bg-white/80"
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+        
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
       </section>
 
       {/* Trust Badges */}
