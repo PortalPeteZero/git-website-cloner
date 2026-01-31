@@ -274,12 +274,12 @@ const PlumbingServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      <section className="py-10 md:py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
             {isSpanish ? "¿Necesita Ayuda con Fontanería?" : "Need Plumbing Help?"}
           </h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
             {isSpanish 
               ? "Desde un grifo goteando hasta una renovación completa de la sala de bombas, estamos aquí para ayudar."
               : "From a dripping tap to a complete pump room overhaul, we're here to help."}
