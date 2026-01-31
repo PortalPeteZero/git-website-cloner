@@ -145,39 +145,40 @@ const PlumbingServices = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="overflow-hidden h-full hover:shadow-lg transition-shadow">
-                    <div className="relative h-48">
+                  <Card className="group overflow-hidden h-full hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-primary/30">
+                    <div className="relative aspect-[16/9] overflow-hidden">
                       <img 
                         src={service.heroImage} 
                         alt={isSpanish ? service.titleEs : service.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                      <div className="absolute bottom-4 left-4 flex items-center gap-3">
-                        <div className="p-2 rounded-lg bg-primary text-primary-foreground">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                      <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
+                        <div className="p-2.5 rounded-xl bg-primary text-primary-foreground shadow-lg">
                           <ServiceIcon className="h-6 w-6" />
                         </div>
-                        <h2 className="text-xl font-bold text-white">
+                        <h2 className="text-xl font-bold text-white drop-shadow-md">
                           {isSpanish ? service.titleEs : service.title}
                         </h2>
                       </div>
                     </div>
-                    <CardContent className="p-6">
-                      <p className="text-muted-foreground mb-4">
+                    <CardContent className="p-6 flex flex-col h-full">
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
                         {isSpanish ? service.descriptionEs : service.description}
                       </p>
-                      <ul className="space-y-2 mb-6">
+                      <ul className="space-y-2.5 mb-6 flex-grow">
                         {service.services.slice(0, 3).map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm">
+                          <li key={idx} className="flex items-start gap-2.5 text-sm font-medium">
                             <ArrowRight className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                             <span>{isSpanish ? item.nameEs : item.name}</span>
                           </li>
                         ))}
                       </ul>
-                      <Button asChild variant="outline" className="w-full">
+                      <Button asChild variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors">
                         <Link to={getServicePath(service.slug)}>
                           {content.learnMore}
-                          <ArrowRight className="ml-2 h-4 w-4" />
+                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
                       </Button>
                     </CardContent>
