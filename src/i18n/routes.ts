@@ -20,6 +20,7 @@ export const routeMap: Record<string, string> = {
   '/plumbing-services/general-repairs': '/es/servicios-fontaneria/reparaciones-generales',
   '/plumbing-services/boiler-services': '/es/servicios-fontaneria/servicios-calderas',
   '/plumbing-services/system-upgrades': '/es/servicios-fontaneria/mejoras-sistema',
+  '/plumbing-services/manifold-upgrades': '/es/servicios-fontaneria/mejoras-colectores',
   '/plumbing-services/pool-plumbing': '/es/servicios-fontaneria/fontaneria-piscinas',
 };
 
@@ -46,6 +47,7 @@ export const plumbingSlugMap: Record<string, string> = {
   'general-repairs': 'reparaciones-generales',
   'boiler-services': 'servicios-calderas',
   'system-upgrades': 'mejoras-sistema',
+  'manifold-upgrades': 'mejoras-colectores',
   'pool-plumbing': 'fontaneria-piscinas',
 };
 
