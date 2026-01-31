@@ -16,6 +16,11 @@ export const routeMap: Record<string, string> = {
   '/case-studies': '/es/casos-de-exito',
   '/contact': '/es/contacto',
   '/blog': '/es/blog',
+  '/plumbing-services': '/es/servicios-fontaneria',
+  '/plumbing-services/general-repairs': '/es/servicios-fontaneria/reparaciones-generales',
+  '/plumbing-services/boiler-services': '/es/servicios-fontaneria/servicios-calderas',
+  '/plumbing-services/system-upgrades': '/es/servicios-fontaneria/mejoras-sistema',
+  '/plumbing-services/pool-plumbing': '/es/servicios-fontaneria/fontaneria-piscinas',
 };
 
 // Reverse map for Spanish to English
@@ -35,6 +40,19 @@ export const serviceSlugMap: Record<string, string> = {
   'free-leak-confirmation': 'confirmacion-fugas-gratis',
   'damp-moisture-mapping': 'mapeo-humedad',
 };
+
+// Plumbing service slug translations (English to Spanish)
+export const plumbingSlugMap: Record<string, string> = {
+  'general-repairs': 'reparaciones-generales',
+  'boiler-services': 'servicios-calderas',
+  'system-upgrades': 'mejoras-sistema',
+  'pool-plumbing': 'fontaneria-piscinas',
+};
+
+// Reverse plumbing slug map (Spanish to English)
+export const reversePlumbingSlugMap: Record<string, string> = Object.fromEntries(
+  Object.entries(plumbingSlugMap).map(([en, es]) => [es, en])
+);
 
 // Reverse service slug map (Spanish to English)
 export const reverseServiceSlugMap: Record<string, string> = Object.fromEntries(
@@ -79,6 +97,15 @@ export const getEquivalentRoute = (currentPath: string, targetLang: 'en' | 'es')
       return `/es/servicios/${serviceSlugMap[serviceMatch[1]]}`;
     }
     
+    // Handle plumbing service routes
+    const plumbingMatch = currentPath.match(/^\/plumbing-services\/(.+)$/);
+    if (plumbingMatch && plumbingSlugMap[plumbingMatch[1]]) {
+      return `/es/servicios-fontaneria/${plumbingSlugMap[plumbingMatch[1]]}`;
+    }
+    if (currentPath === '/plumbing-services') {
+      return '/es/servicios-fontaneria';
+    }
+    
     // Handle blog routes
     const blogMatch = currentPath.match(/^\/blog\/(.+)$/);
     if (blogMatch) {
@@ -102,6 +129,15 @@ export const getEquivalentRoute = (currentPath: string, targetLang: 'en' | 'es')
     const serviceMatch = currentPath.match(/^\/es\/servicios\/(.+)$/);
     if (serviceMatch && reverseServiceSlugMap[serviceMatch[1]]) {
       return `/services/${reverseServiceSlugMap[serviceMatch[1]]}`;
+    }
+    
+    // Handle plumbing service routes
+    const plumbingMatch = currentPath.match(/^\/es\/servicios-fontaneria\/(.+)$/);
+    if (plumbingMatch && reversePlumbingSlugMap[plumbingMatch[1]]) {
+      return `/plumbing-services/${reversePlumbingSlugMap[plumbingMatch[1]]}`;
+    }
+    if (currentPath === '/es/servicios-fontaneria') {
+      return '/plumbing-services';
     }
     
     // Handle blog routes
@@ -177,4 +213,15 @@ export const getSpanishBlogSlug = (slug: string): string => {
 // Helper to get home path
 export const getHomePath = (isSpanish: boolean): string => {
   return isSpanish ? '/es' : '/';
+};
+
+// Helper to get plumbing services path
+export const getPlumbingServicesPath = (isSpanish: boolean): string => {
+  return isSpanish ? '/es/servicios-fontaneria' : '/plumbing-services';
+};
+
+// Helper to get plumbing service detail path
+export const getPlumbingServicePath = (slug: string, isSpanish: boolean): string => {
+  const finalSlug = isSpanish ? (plumbingSlugMap[slug] || slug) : slug;
+  return isSpanish ? `/es/servicios-fontaneria/${finalSlug}` : `/plumbing-services/${slug}`;
 };

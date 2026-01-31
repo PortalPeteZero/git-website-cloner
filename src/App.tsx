@@ -22,6 +22,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 import NotFound from "./pages/NotFound";
+import PlumbingServices from "./pages/PlumbingServices";
+import PlumbingServiceDetail from "./pages/PlumbingServiceDetail";
 
 const queryClient = new QueryClient();
 
@@ -64,6 +66,8 @@ const App = () => (
               <Route path="/locations/:location" element={<LocationPage />} />
               <Route path="/meet-the-team" element={<MeetTheTeam />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/plumbing-services" element={<PlumbingServices />} />
+              <Route path="/plumbing-services/:slug" element={<PlumbingServiceDetail />} />
               
               {/* Spanish Routes */}
               <Route path="/es" element={<Index />} />
@@ -79,6 +83,8 @@ const App = () => (
               <Route path="/es/ubicaciones/:location" element={<LocationPage />} />
               <Route path="/es/equipo" element={<MeetTheTeam />} />
               <Route path="/es/politica-de-privacidad" element={<PrivacyPolicy />} />
+              <Route path="/es/servicios-fontaneria" element={<PlumbingServices />} />
+              <Route path="/es/servicios-fontaneria/:slug" element={<PlumbingServiceDetail />} />
               
               {/* Admin (English only) */}
               <Route path="/admin" element={<Admin />} />
