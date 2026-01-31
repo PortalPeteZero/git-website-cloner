@@ -35,6 +35,7 @@ const plumbingPages = [
   { en: "/plumbing-services/general-repairs", es: "/es/servicios-fontaneria/reparaciones-generales", priority: "0.7", changefreq: "monthly" },
   { en: "/plumbing-services/boiler-services", es: "/es/servicios-fontaneria/servicios-calderas", priority: "0.7", changefreq: "monthly" },
   { en: "/plumbing-services/system-upgrades", es: "/es/servicios-fontaneria/mejoras-sistema", priority: "0.7", changefreq: "monthly" },
+  { en: "/plumbing-services/manifold-upgrades", es: "/es/servicios-fontaneria/mejoras-colectores", priority: "0.7", changefreq: "monthly" },
   { en: "/plumbing-services/pool-plumbing", es: "/es/servicios-fontaneria/fontaneria-piscinas", priority: "0.7", changefreq: "monthly" },
 ];
 
