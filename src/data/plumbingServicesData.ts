@@ -15,6 +15,10 @@ import boilerCustomHousing from "@/assets/plumbing/boiler/boiler-custom-housing.
 import boilerInstallationWall from "@/assets/plumbing/boiler/boiler-installation-wall.jpg";
 import boilerOutdoorSetup from "@/assets/plumbing/boiler/boiler-outdoor-setup.jpg";
 import boilerPipeworkManifold from "@/assets/plumbing/boiler/boiler-pipework-manifold.jpg";
+import waterHeaterWallMount from "@/assets/plumbing/boiler/water-heater-wall-mount.jpg";
+import customHousingBuild from "@/assets/plumbing/boiler/custom-housing-build.jpg";
+import waterHeaterEnclosure from "@/assets/plumbing/boiler/water-heater-enclosure.jpg";
+import tekaWaterHeater from "@/assets/plumbing/boiler/teka-water-heater.jpg";
 
 export interface PlumbingServiceItem {
   name: string;
@@ -290,6 +294,10 @@ export const plumbingServicesData: Record<string, PlumbingService> = {
     ],
     galleryImages: [
       { src: boilerOutdoorSetup, alt: "Outdoor boiler installation with custom protective housing Lanzarote", altEs: "Instalación de caldera exterior con carcasa protectora personalizada Lanzarote" },
+      { src: customHousingBuild, alt: "Building custom wooden frame enclosure for water heater Lanzarote", altEs: "Construcción de carcasa de madera personalizada para calentador de agua Lanzarote" },
+      { src: waterHeaterEnclosure, alt: "Teka water heater installed in custom built-in enclosure", altEs: "Calentador Teka instalado en carcasa empotrada personalizada" },
+      { src: tekaWaterHeater, alt: "Wall-mounted Teka water heater with pipework connections", altEs: "Calentador de agua Teka en pared con conexiones de tuberías" },
+      { src: waterHeaterWallMount, alt: "Electric water heater wall installation with valves", altEs: "Instalación de calentador eléctrico en pared con válvulas" },
       { src: boilerCustomHousing, alt: "Custom-built boiler enclosure for weather protection", altEs: "Carcasa de caldera personalizada para protección climática" },
       { src: boilerInstallationWall, alt: "Wall-mounted boiler installation with organized pipework", altEs: "Instalación de caldera en pared con tuberías organizadas" },
       { src: boilerPipeworkManifold, alt: "Professional boiler pipework manifold installation", altEs: "Instalación profesional de colector de tuberías de caldera" }
