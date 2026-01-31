@@ -1,4 +1,4 @@
-import { LucideIcon, Wrench, Flame, Settings, Droplets, Gauge, Thermometer, PenTool, GitBranch, Search, Zap, Shield, BadgeCheck, Home } from "lucide-react";
+import { LucideIcon, Wrench, Flame, Settings, Droplets, Gauge, Thermometer, PenTool, GitBranch, Search, Zap, Shield, BadgeCheck, Home, Paintbrush } from "lucide-react";
 
 // Pool plumbing images
 import poolValvesMoisture from "@/assets/plumbing/pool/pool-valves-moisture.jpg";
@@ -9,6 +9,14 @@ import poolPumpRoomComplete from "@/assets/plumbing/pool/pool-pump-room-complete
 import poolValveCloseup from "@/assets/plumbing/pool/pool-valve-closeup.jpg";
 import poolBeforeAfter from "@/assets/plumbing/pool/pool-before-after.jpg";
 import poolComplexPipework from "@/assets/plumbing/pool/pool-complex-pipework.jpg";
+
+// Pool repair gallery images
+import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
+import poolRepair2 from "@/assets/services/gallery/pool-repair-2.jpg";
+import poolRepair3 from "@/assets/services/gallery/pool-repair-3.jpg";
+import poolRepair4 from "@/assets/services/gallery/pool-repair-4.jpg";
+import poolRepair5 from "@/assets/services/gallery/pool-repair-5.jpg";
+import poolRepair6 from "@/assets/services/gallery/pool-repair-6.jpg";
 
 // Boiler images
 import boilerCustomHousing from "@/assets/plumbing/boiler/boiler-custom-housing.jpg";
@@ -602,20 +610,20 @@ export const plumbingServicesData: Record<string, PlumbingService> = {
   "pool-plumbing": {
     slug: "pool-plumbing",
     slugEs: "fontaneria-piscinas",
-    title: "Swimming Pool Plumbing",
-    titleEs: "Fontanería para Piscinas",
-    metaTitle: "Pool Plumbing Lanzarote | Valves Pumps | Canary Detect",
-    metaTitleEs: "Fontanería Piscinas Lanzarote | Válvulas Bombas",
-    metaDescription: "Professional pool plumbing services in Lanzarote. Valve replacements, pipe repairs, pump upgrades, heater installations, pressure testing. 2-Year Guarantee.",
-    metaDescriptionEs: "Servicios profesionales de fontanería para piscinas en Lanzarote. Válvulas, reparación de tuberías, bombas, calentadores, pruebas de presión. Garantía 2 años.",
-    description: "Valves, pipes, pumps, heaters—complete pool plumbing.",
-    descriptionEs: "Válvulas, tuberías, bombas, calentadores—fontanería completa de piscinas.",
+    title: "Pool Pipework & Valves",
+    titleEs: "Tuberías y Válvulas de Piscina",
+    metaTitle: "Pool Pipework & Valves Lanzarote | Canary Detect",
+    metaTitleEs: "Tuberías y Válvulas Piscina Lanzarote | Canary Detect",
+    metaDescription: "Professional pool pipework and valve services in Lanzarote. Pipe repairs, valve replacements, pressure testing, plant room upgrades. 2-Year Guarantee.",
+    metaDescriptionEs: "Servicios profesionales de tuberías y válvulas de piscina en Lanzarote. Reparación de tuberías, sustitución de válvulas, pruebas de presión. Garantía 2 años.",
+    description: "Pipes, valves, and plant room plumbing.",
+    descriptionEs: "Tuberías, válvulas y fontanería de sala de máquinas.",
     icon: Droplets,
     heroImage: poolPumpRoomComplete,
-    introTitle: "Complete Pool Plumbing Solutions",
-    introTitleEs: "Soluciones Completas de Fontanería para Piscinas",
-    introText: "Your swimming pool relies on a complex network of pipes, valves, pumps, and heating systems working together seamlessly. When any component fails or underperforms, it affects water circulation, heating efficiency, and ultimately your enjoyment of the pool.\n\nAt Canary Detect, we bring our diagnostic expertise and professional plumbing skills to every aspect of pool infrastructure. Whether you need a simple valve replacement, complete pipework rerouting, or a full pump room upgrade, we deliver lasting solutions backed by our 2-Year Guarantee.\n\nAs Lanzarote's leading leak detection specialists, we understand pool systems inside and out. We don't just fix problems; we identify the root cause and ensure your pool equipment operates at peak efficiency.",
-    introTextEs: "Su piscina depende de una red compleja de tuberías, válvulas, bombas y sistemas de calefacción trabajando juntos sin problemas. Cuando cualquier componente falla o rinde por debajo de lo esperado, afecta la circulación del agua, la eficiencia de calefacción y, en última instancia, su disfrute de la piscina.\n\nEn Canary Detect, aportamos nuestra experiencia diagnóstica y habilidades profesionales de fontanería a cada aspecto de la infraestructura de piscinas. Ya sea que necesite un simple reemplazo de válvula, redirección completa de tuberías o una actualización completa de la sala de bombas, ofrecemos soluciones duraderas respaldadas por nuestra Garantía de 2 Años.\n\nComo los principales especialistas en detección de fugas de Lanzarote, entendemos los sistemas de piscinas por dentro y por fuera. No solo arreglamos problemas; identificamos la causa raíz y aseguramos que su equipo de piscina opere con máxima eficiencia.",
+    introTitle: "Expert Pool Pipework & Valve Services",
+    introTitleEs: "Servicios Expertos de Tuberías y Válvulas de Piscina",
+    introText: "Your swimming pool relies on a complex network of pipes and valves working together seamlessly. When any component fails, leaks, or underperforms, it affects water circulation and your enjoyment of the pool.\n\nAt Canary Detect, we bring our diagnostic expertise and professional plumbing skills to every aspect of pool pipework. Whether you need a simple valve replacement, complete pipework rerouting, or a full plant room reorganisation, we deliver lasting solutions backed by our 2-Year Guarantee.",
+    introTextEs: "Su piscina depende de una red compleja de tuberías y válvulas trabajando juntas sin problemas. Cuando cualquier componente falla, tiene fugas o rinde por debajo de lo esperado, afecta la circulación del agua y su disfrute de la piscina.\n\nEn Canary Detect, aportamos nuestra experiencia diagnóstica y habilidades profesionales de fontanería a cada aspecto de las tuberías de piscina. Ya sea que necesite un simple reemplazo de válvula, redirección completa de tuberías o una reorganización completa de la sala de máquinas, ofrecemos soluciones duraderas respaldadas por nuestra Garantía de 2 Años.",
     services: [
       {
         name: "Valve Replacements",
@@ -643,23 +651,21 @@ export const plumbingServicesData: Record<string, PlumbingService> = {
           "Complete pipe section renewals",
           "Rigid PVC pressure pipe installations",
           "Flexible pipe-to-rigid conversions",
-          "Underground pipe replacements",
-          "Pipe insulation for heat retention"
+          "Underground pipe replacements"
         ],
         itemsEs: [
           "Reparación de tuberías agrietadas y con fugas",
           "Renovación completa de secciones de tubería",
           "Instalaciones de tuberías de PVC rígido a presión",
           "Conversiones de tuberías flexibles a rígidas",
-          "Sustitución de tuberías subterráneas",
-          "Aislamiento de tuberías para retención de calor"
+          "Sustitución de tuberías subterráneas"
         ]
       },
       {
-        name: "Pipe Rerouting & Redesign",
-        nameEs: "Rediseño y Redirección de Tuberías",
+        name: "Plant Room Redesign",
+        nameEs: "Rediseño de Sala de Máquinas",
         items: [
-          "Complete plant room reorganization",
+          "Complete plant room reorganisation",
           "Pipe rerouting for improved flow",
           "Access improvement modifications",
           "Bypass installations for equipment servicing",
@@ -681,47 +687,101 @@ export const plumbingServicesData: Record<string, PlumbingService> = {
           "Individual line isolation and testing",
           "Underground leak location",
           "Return line and skimmer testing",
-          "Pipe tracing and mapping",
-          "Leak confirmation and reporting"
+          "Pipe tracing and mapping"
         ],
         itemsEs: [
           "Pruebas de presión del sistema completo",
           "Aislamiento y prueba de líneas individuales",
           "Localización de fugas subterráneas",
           "Pruebas de líneas de retorno y skimmers",
-          "Trazado y mapeo de tuberías",
-          "Confirmación e informe de fugas"
+          "Trazado y mapeo de tuberías"
         ]
+      }
+    ],
+    galleryImages: [
+      { src: poolPumpRoomComplete, alt: "Complete pump room installation with organised valve manifold", altEs: "Instalación completa de sala de bombas con colector de válvulas organizado" },
+      { src: poolValveCloseup, alt: "Quality ball valves for reliable isolation and flow control", altEs: "Válvulas de bola de calidad para aislamiento y control de flujo fiables" },
+      { src: poolEquipmentBox, alt: "Underground pipe connections to pump equipment box", altEs: "Conexiones de tuberías subterráneas a caja de equipos" },
+      { src: poolPipeRerouting, alt: "New pressure-rated pipework installation for pool", altEs: "Nueva instalación de tuberías a presión para piscina" },
+      { src: poolValveManifoldWall, alt: "Wall-mounted valve manifold with individual line isolation", altEs: "Colector de válvulas en pared con aislamiento de líneas individuales" },
+      { src: poolComplexPipework, alt: "Professional pipework layout for optimal flow", altEs: "Diseño profesional de tuberías para flujo óptimo" }
+    ],
+    beforeAfterImage: {
+      src: poolBeforeAfter,
+      caption: "Complete pool valve system renewal - from tired, corroded pipework to a modern, serviceable installation.",
+      captionEs: "Renovación completa del sistema de válvulas de piscina - de tuberías corroídas a una instalación moderna."
+    },
+    whyChooseUs: [
+      {
+        icon: Search,
+        title: "Leak Detection Expertise",
+        titleEs: "Experiencia en Detección de Fugas",
+        text: "As Lanzarote's premier leak detection company, we find pipe problems others miss and fix them properly the first time.",
+        textEs: "Como la principal empresa de detección de fugas de Lanzarote, encontramos problemas de tuberías que otros pasan por alto."
       },
       {
-        name: "Pool Heater Installations",
-        nameEs: "Instalación de Calentadores de Piscina",
+        icon: Shield,
+        title: "2-Year Guarantee",
+        titleEs: "Garantía de 2 Años",
+        text: "Every pool plumbing job we complete is backed by our industry-leading 2-Year Guarantee.",
+        textEs: "Cada trabajo de fontanería de piscinas está respaldado por nuestra Garantía de 2 Años."
+      },
+      {
+        icon: BadgeCheck,
+        title: "Quality Components",
+        titleEs: "Componentes de Calidad",
+        text: "We use pool-grade PVC pressure pipe and quality ball valves. No shortcuts, just reliable solutions.",
+        textEs: "Usamos tuberías de PVC a presión y válvulas de bola de calidad. Sin atajos, solo soluciones fiables."
+      }
+    ]
+  },
+
+  "pool-repairs": {
+    slug: "pool-repairs",
+    slugEs: "reparaciones-piscinas",
+    title: "Pool Repairs & Upgrades",
+    titleEs: "Reparaciones y Mejoras de Piscinas",
+    metaTitle: "Pool Repairs Lanzarote | Pumps Heaters Coatings | Canary Detect",
+    metaTitleEs: "Reparaciones Piscinas Lanzarote | Bombas Calentadores",
+    metaDescription: "Swimming pool repairs and upgrades in Lanzarote. Shell repairs, refibreglass, pool coatings, heater installations, pump replacements, salt chlorinators. 2-Year Guarantee.",
+    metaDescriptionEs: "Reparaciones y mejoras de piscinas en Lanzarote. Reparación de vaso, fibra de vidrio, revestimientos, calentadores, bombas, cloradores salinos. Garantía 2 años.",
+    description: "Shell repairs, pumps, heaters, coatings & more.",
+    descriptionEs: "Reparación de vaso, bombas, calentadores, revestimientos y más.",
+    icon: Paintbrush,
+    heroImage: poolRepair1,
+    introTitle: "Complete Pool Repairs & Upgrades",
+    introTitleEs: "Reparaciones y Mejoras Completas de Piscinas",
+    introText: "Beyond pipework, your swimming pool has many components that need expert attention—from the shell itself to pumps, heaters, and water treatment systems. Whether you're dealing with a cracked shell, failing pump, or outdated equipment, we provide comprehensive repair and upgrade services.\n\nOur leak detection background means we understand pool systems inside and out. We don't just replace parts; we diagnose the root cause and ensure your pool operates at peak efficiency. All work is backed by our 2-Year Guarantee.",
+    introTextEs: "Más allá de las tuberías, su piscina tiene muchos componentes que necesitan atención experta—desde el vaso hasta las bombas, calentadores y sistemas de tratamiento de agua. Ya sea que tenga un vaso agrietado, una bomba fallando o equipos obsoletos, ofrecemos servicios completos de reparación y mejora.\n\nNuestra experiencia en detección de fugas significa que entendemos los sistemas de piscinas por dentro y por fuera. No solo reemplazamos piezas; diagnosticamos la causa raíz y aseguramos que su piscina opere con máxima eficiencia. Todo el trabajo está respaldado por nuestra Garantía de 2 Años.",
+    services: [
+      {
+        name: "Shell Repairs & Coatings",
+        nameEs: "Reparación de Vaso y Revestimientos",
         items: [
-          "Heat pump installations",
-          "Electric heater installations",
-          "Solar heating system installations",
-          "Heater repairs and servicing",
-          "Bypass valve installations for heaters",
-          "Thermostat and controller upgrades"
+          "Crack and leak repairs in pool shell",
+          "Fibreglass repairs and refibreglass",
+          "Pool painting and repainting",
+          "ECO Finish pool coatings",
+          "Tile and grout repairs",
+          "Structural repairs"
         ],
         itemsEs: [
-          "Instalación de bombas de calor",
-          "Instalación de calentadores eléctricos",
-          "Instalación de sistemas de calefacción solar",
-          "Reparación y mantenimiento de calentadores",
-          "Instalación de válvulas de bypass para calentadores",
-          "Actualizaciones de termostatos y controladores"
+          "Reparación de grietas y fugas en el vaso",
+          "Reparaciones de fibra de vidrio",
+          "Pintura y repintado de piscinas",
+          "Revestimientos ECO Finish",
+          "Reparación de azulejos y lechada",
+          "Reparaciones estructurales"
         ]
       },
       {
-        name: "Pump Repairs & Upgrades",
-        nameEs: "Reparaciones y Mejoras de Bombas",
+        name: "Pump Services",
+        nameEs: "Servicios de Bombas",
         items: [
           "Pump motor repairs",
           "Seal and impeller replacements",
           "Complete pump replacements",
           "Variable-speed pump upgrades",
-          "Pump sizing consultations",
           "Energy efficiency improvements",
           "Pump priming and air leak repairs"
         ],
@@ -730,48 +790,80 @@ export const plumbingServicesData: Record<string, PlumbingService> = {
           "Sustitución de sellos e impulsores",
           "Sustitución completa de bombas",
           "Mejoras a bombas de velocidad variable",
-          "Consultas de dimensionamiento de bombas",
           "Mejoras de eficiencia energética",
-          "Cebado de bombas y reparación de fugas de aire"
+          "Cebado y reparación de fugas de aire"
+        ]
+      },
+      {
+        name: "Heater Services",
+        nameEs: "Servicios de Calentadores",
+        items: [
+          "Heat pump installations",
+          "Electric heater installations",
+          "Solar heating system installations",
+          "Heater repairs and servicing",
+          "Thermostat and controller upgrades",
+          "Bypass valve installations"
+        ],
+        itemsEs: [
+          "Instalación de bombas de calor",
+          "Instalación de calentadores eléctricos",
+          "Instalación de calefacción solar",
+          "Reparación y mantenimiento de calentadores",
+          "Actualizaciones de termostatos y controladores",
+          "Instalación de válvulas de bypass"
+        ]
+      },
+      {
+        name: "Water Treatment",
+        nameEs: "Tratamiento de Agua",
+        items: [
+          "Salt chlorinator installations",
+          "Chlorinator cell replacements",
+          "UV and ozone systems",
+          "Dosing pump installations",
+          "Filter sand replacements",
+          "Water chemistry balancing"
+        ],
+        itemsEs: [
+          "Instalación de cloradores salinos",
+          "Sustitución de células de clorador",
+          "Sistemas UV y ozono",
+          "Instalación de bombas dosificadoras",
+          "Cambio de arena del filtro",
+          "Equilibrado de química del agua"
         ]
       }
     ],
     galleryImages: [
-      { src: poolPumpRoomComplete, alt: "Complete pump room installation with sand filter and organized valve manifold Lanzarote", altEs: "Instalación completa de sala de bombas con filtro de arena y colector de válvulas organizado Lanzarote" },
-      { src: poolValveCloseup, alt: "Quality ball valves for reliable isolation and flow control", altEs: "Válvulas de bola de calidad para aislamiento y control de flujo fiables" },
-      { src: poolEquipmentBox, alt: "Underground pipe connections to pump equipment box", altEs: "Conexiones de tuberías subterráneas a caja de equipos de bombeo" },
-      { src: poolPipeRerouting, alt: "New pressure-rated pipework installation for swimming pool", altEs: "Nueva instalación de tuberías a presión para piscina" },
-      { src: poolValveManifoldWall, alt: "Wall-mounted valve manifold with individual line isolation", altEs: "Colector de válvulas en pared con aislamiento de líneas individuales" },
-      { src: poolComplexPipework, alt: "Professional pipework layout for optimal flow and serviceability", altEs: "Diseño profesional de tuberías para flujo óptimo y servicio" },
-      { src: poolValvesMoisture, alt: "Pool valve replacement showing moisture damage repair", altEs: "Reemplazo de válvulas de piscina mostrando reparación de daños por humedad" },
-      { src: poolBeforeAfter, alt: "Before and after pool plumbing renovation with new valves", altEs: "Antes y después de renovación de fontanería de piscina con nuevas válvulas" }
+      { src: poolRepair1, alt: "Swimming pool shell repair and coating work Lanzarote", altEs: "Trabajo de reparación y revestimiento de vaso de piscina Lanzarote" },
+      { src: poolRepair2, alt: "Pool pump replacement and installation", altEs: "Sustitución e instalación de bomba de piscina" },
+      { src: poolRepair3, alt: "Professional pool heater installation", altEs: "Instalación profesional de calentador de piscina" },
+      { src: poolRepair4, alt: "Pool equipment upgrade and modernisation", altEs: "Actualización y modernización de equipos de piscina" },
+      { src: poolRepair5, alt: "Salt chlorinator system installation", altEs: "Instalación de sistema de clorador salino" },
+      { src: poolRepair6, alt: "Complete pool renovation and upgrade", altEs: "Renovación y mejora completa de piscina" }
     ],
-    beforeAfterImage: {
-      src: poolBeforeAfter,
-      caption: "Complete pool valve system renewal - from tired, corroded pipework to a modern, serviceable installation with individual isolation valves.",
-      captionEs: "Renovación completa del sistema de válvulas de piscina - de tuberías cansadas y corroídas a una instalación moderna y fácil de mantener con válvulas de aislamiento individuales."
-    },
     whyChooseUs: [
       {
         icon: Search,
         title: "Diagnostic Expertise",
         titleEs: "Experiencia Diagnóstica",
-        text: "As Lanzarote's premier leak detection company, we understand pool systems at a deeper level. We find problems others miss and fix them properly the first time.",
-        textEs: "Como la principal empresa de detección de fugas de Lanzarote, entendemos los sistemas de piscinas a un nivel más profundo. Encontramos problemas que otros pasan por alto y los arreglamos correctamente la primera vez."
+        text: "As leak detection specialists, we understand pool systems at a deeper level. We find the root cause, not just the symptom.",
+        textEs: "Como especialistas en detección de fugas, entendemos los sistemas de piscinas a un nivel más profundo. Encontramos la causa raíz."
       },
       {
         icon: Shield,
         title: "2-Year Guarantee",
         titleEs: "Garantía de 2 Años",
-        text: "Every pool plumbing job we complete is backed by our industry-leading 2-Year Guarantee. We're confident in our workmanship because we do the job right.",
-        textEs: "Cada trabajo de fontanería de piscinas que completamos está respaldado por nuestra Garantía de 2 Años líder en la industria. Confiamos en nuestro trabajo porque lo hacemos bien."
+        text: "Every repair and upgrade is backed by our industry-leading 2-Year Guarantee. We stand behind our work.",
+        textEs: "Cada reparación y mejora está respaldada por nuestra Garantía de 2 Años. Respaldamos nuestro trabajo."
       },
       {
-        icon: BadgeCheck,
-        title: "Quality Components",
-        titleEs: "Componentes de Calidad",
-        text: "We use pool-grade PVC pressure pipe, quality ball valves, and trusted pump brands. No shortcuts, no cheap fittings, just reliable solutions.",
-        textEs: "Usamos tuberías de PVC a presión de grado piscina, válvulas de bola de calidad y marcas de bombas de confianza. Sin atajos, sin accesorios baratos, solo soluciones fiables."
+        icon: Zap,
+        title: "One-Stop Service",
+        titleEs: "Servicio Integral",
+        text: "From shell repairs to equipment upgrades, we handle everything. No need to coordinate multiple contractors.",
+        textEs: "Desde reparaciones del vaso hasta mejoras de equipos, manejamos todo. Sin necesidad de coordinar múltiples contratistas."
       }
     ]
   }
