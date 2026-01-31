@@ -28,6 +28,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
     { to: getRoute("/services/drain-detection", "/es/servicios/deteccion-desagues"), label: isSpanish ? "Inspección de Desagües" : "Drain & Pipe Surveys" },
     { to: getRoute("/services/leak-repair", "/es/servicios/reparacion-fugas"), label: isSpanish ? "Reparación de Fugas" : "Leak Repair" },
     { to: getRoute("/services/pool-leak-repair", "/es/servicios/reparacion-fugas-piscinas"), label: isSpanish ? "Reparación Fugas Piscinas" : "Pool Leak Repair" },
+    { to: getRoute("/plumbing-services", "/es/servicios-fontaneria"), label: isSpanish ? "Fontanería y Mantenimiento" : "Plumbing & Maintenance" },
   ];
 
   return (

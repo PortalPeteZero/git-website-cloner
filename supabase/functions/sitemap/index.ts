@@ -30,6 +30,14 @@ const servicePages = [
   { en: "/services/free-leak-confirmation", es: "/es/servicios/confirmacion-fugas-gratis", priority: "0.8", changefreq: "monthly" },
 ];
 
+const plumbingPages = [
+  { en: "/plumbing-services", es: "/es/servicios-fontaneria", priority: "0.8", changefreq: "monthly" },
+  { en: "/plumbing-services/general-repairs", es: "/es/servicios-fontaneria/reparaciones-generales", priority: "0.7", changefreq: "monthly" },
+  { en: "/plumbing-services/boiler-services", es: "/es/servicios-fontaneria/servicios-calderas", priority: "0.7", changefreq: "monthly" },
+  { en: "/plumbing-services/system-upgrades", es: "/es/servicios-fontaneria/mejoras-sistema", priority: "0.7", changefreq: "monthly" },
+  { en: "/plumbing-services/pool-plumbing", es: "/es/servicios-fontaneria/fontaneria-piscinas", priority: "0.7", changefreq: "monthly" },
+];
+
 const locationPages = [
   { en: "/locations/arrecife", es: "/es/ubicaciones/arrecife" },
   { en: "/locations/puerto-del-carmen", es: "/es/ubicaciones/puerto-del-carmen" },
@@ -177,6 +185,13 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Generate plumbing page entries (English)
+    for (const page of plumbingPages) {
+      urlEntries.push(
+        generateUrlEntry(page.en, page.es, now, page.priority, page.changefreq)
+      );
+    }
+
     // Generate Spanish versions of all pages
     for (const page of staticPages) {
       const lastmod = page.en === "/blog" ? latestBlogUpdate : now;
@@ -212,6 +227,13 @@ Deno.serve(async (req) => {
     for (const page of locationPages) {
       urlEntries.push(
         generateSpanishUrlEntry(page.en, page.es, now, "0.8", "monthly")
+      );
+    }
+
+    // Generate Spanish plumbing page entries
+    for (const page of plumbingPages) {
+      urlEntries.push(
+        generateSpanishUrlEntry(page.en, page.es, now, page.priority, page.changefreq)
       );
     }
 
