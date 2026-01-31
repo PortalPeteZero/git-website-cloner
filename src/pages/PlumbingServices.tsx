@@ -335,7 +335,12 @@ const PlumbingServices = () => {
                 {content.cta}
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary w-full sm:w-auto">
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary w-full sm:w-auto"
+            >
               <a href="tel:+34711051071">
                 {isSpanish ? "Llamar Ahora" : "Call Now"}
               </a>
