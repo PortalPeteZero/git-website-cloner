@@ -252,7 +252,7 @@ const PlumbingServices = () => {
       {/* Services Grid */}
       <section className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
             {services.map((service, index) => {
               const ServiceIcon = service.icon;
               return (
@@ -263,44 +263,50 @@ const PlumbingServices = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="group overflow-hidden h-full hover:shadow-xl transition-all duration-300 border-2 border-border hover:border-primary/30">
-                    <div className="relative aspect-[16/9] overflow-hidden">
-                      <img 
-                        src={service.heroImage} 
-                        alt={isSpanish ? service.titleEs : service.title}
-                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                      <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
-                        <div className="p-2.5 rounded-xl bg-primary text-primary-foreground shadow-lg">
-                          <ServiceIcon className="h-6 w-6" />
+                  <Link to={getServicePath(service.slug)} className="group block">
+                    <Card className="overflow-hidden h-full hover:shadow-xl transition-all duration-300 border-2 border-border hover:border-primary/30">
+                      {/* Compact image with overlay title */}
+                      <div className="relative aspect-[2/1] overflow-hidden">
+                        <img 
+                          src={service.heroImage} 
+                          alt={isSpanish ? service.titleEs : service.title}
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
+                        <div className="absolute bottom-3 left-3 right-3 flex items-center gap-2.5">
+                          <div className="p-2 rounded-lg bg-primary text-primary-foreground shadow-lg flex-shrink-0">
+                            <ServiceIcon className="h-5 w-5" />
+                          </div>
+                          <h2 className="text-lg md:text-xl font-bold text-white drop-shadow-lg leading-tight">
+                            {isSpanish ? service.titleEs : service.title}
+                          </h2>
                         </div>
-                        <h2 className="text-xl font-bold text-white drop-shadow-md">
-                          {isSpanish ? service.titleEs : service.title}
-                        </h2>
                       </div>
-                    </div>
-                    <CardContent className="p-6 flex flex-col h-full">
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
-                        {isSpanish ? service.descriptionEs : service.description}
-                      </p>
-                      <ul className="space-y-2.5 mb-6 flex-grow">
-                        {service.services.slice(0, 3).map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-2.5 text-sm font-medium">
-                            <ArrowRight className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                            <span>{isSpanish ? item.nameEs : item.name}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <Button asChild variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors">
-                        <Link to={getServicePath(service.slug)}>
-                          {content.learnMore}
-                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
+                      
+                      {/* Compact content area */}
+                      <CardContent className="p-4 bg-muted/30">
+                        <p className="text-base text-foreground mb-3 leading-snug font-medium">
+                          {isSpanish ? service.descriptionEs : service.description}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {service.services.slice(0, 3).map((item, idx) => (
+                            <span 
+                              key={idx} 
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold"
+                            >
+                              <ArrowRight className="h-3.5 w-3.5" />
+                              {isSpanish ? item.nameEs : item.name}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="mt-4 flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
+                          <span>{content.learnMore}</span>
+                          <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 </motion.div>
               );
             })}
