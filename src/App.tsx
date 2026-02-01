@@ -61,6 +61,15 @@ const App = () => (
               <Route path="/leak-from-your-swimming-pool-can-costs-thousands-of-euros" element={<Navigate to="/blog/swimming-pool-leak-repair-cost-lanzarote" replace />} />
               <Route path="/leak-detection-water-pipe" element={<Navigate to="/services/water-leak-detection" replace />} />
               <Route path="/pipe-leaks-in-lanzarote-can-be-very-difficult-to-locate" element={<Navigate to="/services/underground-detection" replace />} />
+              <Route path="/water-leaks-can-cause-serious-issues-for-lanzarote-homeowners" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/suffering-from-a-leaking-water-pipe-but-dont-know-where-the-leak-is-we-can-help" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/category/case-studies" element={<Navigate to="/case-studies" replace />} />
+              <Route path="/detecting-a-pool-leak-is-not-necessarily-a-straightforward-task" element={<Navigate to="/services/pool-leak-detection" replace />} />
+              <Route path="/how-do-we-locate-problems-in-underground-pipes-that-you-cannot-see" element={<Navigate to="/technology" replace />} />
+              <Route path="/cable-detection-is-essential-before-commencing-any-construction-project" element={<Navigate to="/services/drain-detection" replace />} />
+              <Route path="/five-reasons-to-invest-in-water-leak-detection" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/diy-tips-how-to-detect-pool-leaks" element={<Navigate to="/blog/how-to-check-for-pool-leaks-lanzarote" replace />} />
+              <Route path="/leak-detection-and-repair-pool" element={<Navigate to="/services/pool-leak-repair" replace />} />
               
               <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/contact" element={<Contact />} />
