@@ -71,6 +71,22 @@ const App = () => (
               <Route path="/diy-tips-how-to-detect-pool-leaks" element={<Navigate to="/blog/how-to-check-for-pool-leaks-lanzarote" replace />} />
               <Route path="/leak-detection-and-repair-pool" element={<Navigate to="/services/pool-leak-repair" replace />} />
               
+              {/* Additional legacy WordPress URL redirects from GSC */}
+              <Route path="/every-pool-owner-dreads-the-thought-of-a-leak" element={<Navigate to="/services/pool-leak-detection" replace />} />
+              <Route path="/products/pool-leak-detection" element={<Navigate to="/services/pool-leak-detection" replace />} />
+              <Route path="/category/blog" element={<Navigate to="/blog" replace />} />
+              <Route path="/why-is-pipe-detection-in-lanzarote-important" element={<Navigate to="/technology" replace />} />
+              <Route path="/there-can-be-many-reasons-for-a-leak-in-your-pool-in-lanzarote" element={<Navigate to="/services/pool-leak-detection" replace />} />
+              <Route path="/pipe-leak-detection-in-lanzarote-the-easy-way" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/all-our-utilities-run-underground-the-problem-is-that-you-dont-know-where" element={<Navigate to="/services/underground-detection" replace />} />
+              <Route path="/suffering-a-leak-from-your-pool-we-can-find-it-and-fix-it-for-you" element={<Navigate to="/services/pool-leak-repair" replace />} />
+              <Route path="/locating-underground-services-what-you-need-to-know" element={<Navigate to="/services/underground-detection" replace />} />
+              
+              {/* Date archive redirects */}
+              <Route path="/2023/04" element={<Navigate to="/blog" replace />} />
+              <Route path="/2021/08" element={<Navigate to="/blog" replace />} />
+              <Route path="/2022/12" element={<Navigate to="/blog" replace />} />
+              
               <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/case-studies" element={<CaseStudies />} />
