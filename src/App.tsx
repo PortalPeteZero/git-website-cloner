@@ -57,8 +57,10 @@ const App = () => (
               <Route path="/services/drain-survey" element={<Navigate to="/services/drain-detection" replace />} />
               <Route path="/services/cctv-drain-survey" element={<Navigate to="/services/drain-detection" replace />} />
               
-              {/* Legacy blog URL redirects */}
+              {/* Legacy WordPress URL redirects */}
               <Route path="/leak-from-your-swimming-pool-can-costs-thousands-of-euros" element={<Navigate to="/blog/swimming-pool-leak-repair-cost-lanzarote" replace />} />
+              <Route path="/leak-detection-water-pipe" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/pipe-leaks-in-lanzarote-can-be-very-difficult-to-locate" element={<Navigate to="/services/underground-detection" replace />} />
               
               <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/contact" element={<Contact />} />
