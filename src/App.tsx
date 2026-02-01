@@ -57,6 +57,9 @@ const App = () => (
               <Route path="/services/drain-survey" element={<Navigate to="/services/drain-detection" replace />} />
               <Route path="/services/cctv-drain-survey" element={<Navigate to="/services/drain-detection" replace />} />
               
+              {/* Legacy blog URL redirects */}
+              <Route path="/leak-from-your-swimming-pool-can-costs-thousands-of-euros" element={<Navigate to="/blog/swimming-pool-leak-repair-cost-lanzarote" replace />} />
+              
               <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/case-studies" element={<CaseStudies />} />
