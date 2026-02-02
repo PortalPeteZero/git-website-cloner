@@ -4,14 +4,21 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-// CRITICAL: Only import FIRST hero image eagerly for LCP
+// CRITICAL: Import FIRST hero image eagerly for LCP - with responsive variants
 import hqScene from "@/assets/hero/carousel-hq-scene.jpg";
+// Mobile-optimized: smaller width for faster mobile LCP
+import hqSceneMobile from "@/assets/hero/carousel-hq-scene.jpg?w=800&format=webp&quality=75";
+import hqSceneTablet from "@/assets/hero/carousel-hq-scene.jpg?w=1200&format=webp&quality=80";
+import hqSceneDesktop from "@/assets/hero/carousel-hq-scene.jpg?w=1920&format=webp&quality=85";
 
 // Slide content data (text only - images loaded separately)
 const getHeroSlidesData = (lazyImages: string[]) => ({
   en: [
     {
       image: hqScene,
+      imageMobile: hqSceneMobile,
+      imageTablet: hqSceneTablet,
+      imageDesktop: hqSceneDesktop,
       alt: "Canary Detect - The Leaky Finders headquarters with technicians and van in Lanzarote",
       title: "The Leaky Finders.",
       subtitle: "No Find, No Fee.",
@@ -70,6 +77,9 @@ const getHeroSlidesData = (lazyImages: string[]) => ({
   es: [
     {
       image: hqScene,
+      imageMobile: hqSceneMobile,
+      imageTablet: hqSceneTablet,
+      imageDesktop: hqSceneDesktop,
       alt: "Canary Detect - Los Cazafugas sede con técnicos y furgoneta en Lanzarote",
       title: "Los Cazafugas.",
       subtitle: "Sin Encontrar, Sin Pagar.",
@@ -127,20 +137,70 @@ const getHeroSlidesData = (lazyImages: string[]) => ({
   ]
 });
 
-// Memoized hero image component for performance
-const HeroImage = memo(({ src, alt, isFirst }: { src: string; alt: string; isFirst: boolean }) => (
-  <img 
-    src={src} 
-    alt={alt} 
-    className="w-full h-full object-cover"
-    // Critical LCP image gets priority loading
-    fetchPriority={isFirst ? "high" : "low"}
-    loading={isFirst ? "eager" : "lazy"}
-    decoding={isFirst ? "sync" : "async"}
-    // Responsive sizing hints for browser
-    sizes="100vw"
-  />
-));
+// Memoized hero image component with responsive srcset for LCP optimization
+const HeroImage = memo(({ 
+  src, 
+  srcMobile, 
+  srcTablet, 
+  srcDesktop, 
+  alt, 
+  isFirst 
+}: { 
+  src: string; 
+  srcMobile?: string;
+  srcTablet?: string;
+  srcDesktop?: string;
+  alt: string; 
+  isFirst: boolean;
+}) => {
+  // For first slide, use picture element with responsive sources
+  if (isFirst && srcMobile && srcTablet && srcDesktop) {
+    return (
+      <picture>
+        {/* Mobile: up to 640px - smallest, fastest loading */}
+        <source 
+          media="(max-width: 640px)" 
+          srcSet={srcMobile}
+          type="image/webp"
+        />
+        {/* Tablet: 641px to 1024px */}
+        <source 
+          media="(max-width: 1024px)" 
+          srcSet={srcTablet}
+          type="image/webp"
+        />
+        {/* Desktop: 1025px and up */}
+        <source 
+          media="(min-width: 1025px)" 
+          srcSet={srcDesktop}
+          type="image/webp"
+        />
+        <img 
+          src={src} 
+          alt={alt} 
+          className="w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
+          decoding="sync"
+          sizes="100vw"
+        />
+      </picture>
+    );
+  }
+
+  // For non-first slides, use simple img tag with lazy loading
+  return (
+    <img 
+      src={src} 
+      alt={alt} 
+      className="w-full h-full object-cover"
+      fetchPriority="low"
+      loading="lazy"
+      decoding="async"
+      sizes="100vw"
+    />
+  );
+});
 
 HeroImage.displayName = "HeroImage";
 
@@ -219,6 +279,9 @@ const HeroSlider = () => {
         >
           <HeroImage 
             src={slide.image} 
+            srcMobile={'imageMobile' in slide ? slide.imageMobile : undefined}
+            srcTablet={'imageTablet' in slide ? slide.imageTablet : undefined}
+            srcDesktop={'imageDesktop' in slide ? slide.imageDesktop : undefined}
             alt={slide.alt}
             isFirst={currentSlide === 0}
           />
