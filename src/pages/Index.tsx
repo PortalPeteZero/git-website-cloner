@@ -4,6 +4,7 @@ import HeroSlider from "@/components/home/HeroSlider";
 import WelcomeSection from "@/components/home/WelcomeSection";
 import TrustBadgesSection from "@/components/home/TrustBadgesSection";
 import SEOHead from "@/components/seo/SEOHead";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
 import ErrorBoundary from "@/components/ErrorBoundary";
@@ -30,6 +31,7 @@ const Index = () => {
         canonical={isSpanish ? "https://canary-detect.com/es" : "https://canary-detect.com"}
       />
       <LocalBusinessSchema page="home" />
+      <ServiceSchema />
       
       {/* Critical above-the-fold content */}
       <ErrorBoundary>
