@@ -17,16 +17,19 @@ const staticPages = [
   { en: "/case-studies", es: "/es/casos-de-exito", priority: "0.7", changefreq: "monthly" },
   { en: "/contact", es: "/es/contacto", priority: "0.8", changefreq: "monthly" },
   { en: "/blog", es: "/es/blog", priority: "0.7", changefreq: "weekly" },
+  { en: "/meet-the-team", es: "/es/equipo", priority: "0.6", changefreq: "monthly" },
+  { en: "/privacy-policy", es: "/es/politica-de-privacidad", priority: "0.3", changefreq: "yearly" },
 ];
 
+// Fixed slug consistency - matching routes.ts exactly
 const servicePages = [
   { en: "/services/water-leak-detection", es: "/es/servicios/deteccion-fugas-agua", priority: "0.9", changefreq: "weekly" },
-  { en: "/services/pool-leak-detection", es: "/es/servicios/deteccion-fugas-piscina", priority: "0.9", changefreq: "weekly" },
+  { en: "/services/pool-leak-detection", es: "/es/servicios/deteccion-fugas-piscinas", priority: "0.9", changefreq: "weekly" },
   { en: "/services/underground-detection", es: "/es/servicios/deteccion-subterranea", priority: "0.8", changefreq: "monthly" },
   { en: "/services/drain-detection", es: "/es/servicios/deteccion-desagues", priority: "0.8", changefreq: "monthly" },
   { en: "/services/leak-repair", es: "/es/servicios/reparacion-fugas", priority: "0.8", changefreq: "monthly" },
-  { en: "/services/drain-unblocking", es: "/es/servicios/desatasco-desagues", priority: "0.8", changefreq: "monthly" },
-  { en: "/services/pool-leak-repair", es: "/es/servicios/reparacion-fugas-piscina", priority: "0.8", changefreq: "monthly" },
+  { en: "/services/drain-unblocking", es: "/es/servicios/desbloqueo-desagues", priority: "0.8", changefreq: "monthly" },
+  { en: "/services/pool-leak-repair", es: "/es/servicios/reparacion-fugas-piscinas", priority: "0.8", changefreq: "monthly" },
   { en: "/services/free-leak-confirmation", es: "/es/servicios/confirmacion-fugas-gratis", priority: "0.8", changefreq: "monthly" },
 ];
 
@@ -38,8 +41,6 @@ const plumbingPages = [
   { en: "/plumbing-services/manifold-upgrades", es: "/es/servicios-fontaneria/mejoras-colectores", priority: "0.7", changefreq: "monthly" },
   { en: "/plumbing-services/pool-plumbing", es: "/es/servicios-fontaneria/fontaneria-piscinas", priority: "0.7", changefreq: "monthly" },
   { en: "/plumbing-services/pool-repairs", es: "/es/servicios-fontaneria/reparaciones-piscinas", priority: "0.7", changefreq: "monthly" },
-  { en: "/meet-the-team", es: "/es/equipo", priority: "0.6", changefreq: "monthly" },
-  { en: "/privacy-policy", es: "/es/politica-de-privacidad", priority: "0.3", changefreq: "yearly" },
 ];
 
 const locationPages = [
@@ -54,15 +55,26 @@ const locationPages = [
   { en: "/locations/teguise", es: "/es/ubicaciones/teguise" },
 ];
 
-// Blog slug mappings for bilingual support
+// Static blog articles (always included) - these are defined in blogArticles.ts
+const staticBlogArticles = [
+  { slug: "master-your-lanzarote-water-system", esSlug: "domina-tu-sistema-de-agua-lanzarote", date: "2026-01-22" },
+  { slug: "how-to-check-for-pool-leaks-lanzarote", esSlug: "como-detectar-fugas-en-piscinas-lanzarote", date: "2026-01-15" },
+  { slug: "signs-of-underground-water-leak", esSlug: "senales-fuga-agua-subterranea", date: "2026-01-10" },
+  { slug: "water-meter-running-when-taps-off", esSlug: "contador-agua-girando-grifos-cerrados", date: "2025-12-05" },
+  { slug: "damp-walls-causes-solutions", esSlug: "paredes-humedas-causas-soluciones", date: "2025-11-20" },
+  { slug: "thermal-imaging-leak-detection-explained", esSlug: "imagen-termica-deteccion-fugas-explicada", date: "2025-11-15" },
+  { slug: "swimming-pool-leak-repair-cost-lanzarote", esSlug: "coste-reparacion-fugas-piscina-lanzarote", date: "2025-10-01" },
+];
+
+// Blog slug mappings for bilingual support (legacy - kept for DB posts)
 const blogSlugMappings: Record<string, string> = {
+  "master-your-lanzarote-water-system": "domina-tu-sistema-de-agua-lanzarote",
   "how-to-check-for-pool-leaks-lanzarote": "como-detectar-fugas-en-piscinas-lanzarote",
   "signs-of-underground-water-leak": "senales-fuga-agua-subterranea",
   "water-meter-running-when-taps-off": "contador-agua-girando-grifos-cerrados",
   "damp-walls-causes-solutions": "paredes-humedas-causas-soluciones",
   "thermal-imaging-leak-detection-explained": "imagen-termica-deteccion-fugas-explicada",
   "swimming-pool-leak-repair-cost-lanzarote": "coste-reparacion-fugas-piscina-lanzarote",
-  "lanzarote-water-supply-guide": "guia-suministro-agua-lanzarote",
 };
 
 function formatDate(date: Date | string): string {
@@ -144,9 +156,30 @@ Deno.serve(async (req) => {
 
     const now = formatDate(new Date());
     
+    // Combine database posts with static blog articles
+    // Static articles are the source of truth if DB is empty
+    const dbSlugs = new Set(blogPosts?.map(p => p.slug) || []);
+    const allBlogArticles = [
+      // Add database posts first
+      ...(blogPosts || []).map(post => ({
+        slug: post.slug,
+        esSlug: blogSlugMappings[post.slug] || post.slug,
+        lastmod: formatDate(post.updated_at),
+      })),
+      // Add static articles that aren't in the database
+      ...staticBlogArticles
+        .filter(article => !dbSlugs.has(article.slug))
+        .map(article => ({
+          slug: article.slug,
+          esSlug: article.esSlug,
+          lastmod: formatDate(article.date),
+        })),
+    ];
+    
     // Find most recent blog update for the blog index page
-    const latestBlogUpdate = blogPosts && blogPosts.length > 0 
-      ? formatDate(blogPosts[0].updated_at) 
+    const latestBlogUpdate = allBlogArticles.length > 0 
+      ? allBlogArticles.reduce((latest, article) => 
+          article.lastmod > latest ? article.lastmod : latest, allBlogArticles[0].lastmod)
       : now;
 
     const urlEntries: string[] = [];
@@ -159,20 +192,17 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Generate blog article entries (English)
-    if (blogPosts) {
-      for (const post of blogPosts) {
-        const esSlug = blogSlugMappings[post.slug] || post.slug;
-        urlEntries.push(
-          generateUrlEntry(
-            `/blog/${post.slug}`,
-            `/es/blog/${esSlug}`,
-            formatDate(post.updated_at),
-            "0.6",
-            "monthly"
-          )
-        );
-      }
+    // Generate blog article entries (English) - includes both DB and static articles
+    for (const article of allBlogArticles) {
+      urlEntries.push(
+        generateUrlEntry(
+          `/blog/${article.slug}`,
+          `/es/blog/${article.esSlug}`,
+          article.lastmod,
+          "0.6",
+          "monthly"
+        )
+      );
     }
 
     // Generate service page entries (English)
@@ -204,20 +234,17 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Generate Spanish blog article entries
-    if (blogPosts) {
-      for (const post of blogPosts) {
-        const esSlug = blogSlugMappings[post.slug] || post.slug;
-        urlEntries.push(
-          generateSpanishUrlEntry(
-            `/blog/${post.slug}`,
-            `/es/blog/${esSlug}`,
-            formatDate(post.updated_at),
-            "0.6",
-            "monthly"
-          )
-        );
-      }
+    // Generate Spanish blog article entries - includes both DB and static articles
+    for (const article of allBlogArticles) {
+      urlEntries.push(
+        generateSpanishUrlEntry(
+          `/blog/${article.slug}`,
+          `/es/blog/${article.esSlug}`,
+          article.lastmod,
+          "0.6",
+          "monthly"
+        )
+      );
     }
 
     // Generate Spanish service page entries
