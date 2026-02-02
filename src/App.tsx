@@ -112,6 +112,10 @@ const App = () => (
               <Route path="/plumbing-services" element={<PlumbingServices />} />
               <Route path="/plumbing-services/:slug" element={<PlumbingServiceDetail />} />
               
+              {/* Spanish URL Redirects */}
+              <Route path="/es/services" element={<Navigate to="/es/servicios" replace />} />
+              <Route path="/es/services/" element={<Navigate to="/es/servicios" replace />} />
+              
               {/* Spanish Routes */}
               <Route path="/es" element={<Index />} />
               <Route path="/es/sobre-nosotros" element={<About />} />
