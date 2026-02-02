@@ -69,7 +69,11 @@ export const blogSlugMap: Record<string, string> = {
   "water-meter-running-when-taps-off": "contador-agua-girando-grifos-cerrados",
   "damp-walls-causes-solutions": "paredes-humedas-causas-soluciones",
   "thermal-imaging-leak-detection-explained": "imagen-termica-deteccion-fugas-explicada",
-  "swimming-pool-leak-repair-cost-lanzarote": "coste-reparacion-fugas-piscina-lanzarote"
+  "swimming-pool-leak-repair-cost-lanzarote": "coste-reparacion-fugas-piscina-lanzarote",
+  "emergency-leak-detection-repair-lanzarote": "deteccion-reparacion-fugas-emergencia-lanzarote",
+  "how-to-tell-if-pool-has-leak-lanzarote": "como-saber-si-piscina-tiene-fuga-lanzarote",
+  "signs-water-leak-villa-lanzarote": "senales-fuga-agua-villa-lanzarote",
+  "high-water-bills-lanzarote-causes": "facturas-agua-altas-lanzarote-causas"
 };
 
 // Reverse blog slug map (Spanish to English)
