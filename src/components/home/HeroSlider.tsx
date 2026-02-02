@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, memo } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-// Import hero images from gallery
+// Import hero images - first image is critical for LCP
+import hqScene from "@/assets/hero/carousel-hq-scene.jpg";
+import terraceScene from "@/assets/hero/carousel-terrace.jpg";
 import photo1 from "@/assets/gallery/photo-1.jpg";
 import photo2 from "@/assets/gallery/photo-2.jpg";
 import photo3 from "@/assets/gallery/photo-3.jpg";
 import photo4 from "@/assets/gallery/photo-4.jpg";
 import photo5 from "@/assets/gallery/photo-5.jpg";
-import hqScene from "@/assets/hero/carousel-hq-scene.jpg";
-import terraceScene from "@/assets/hero/carousel-terrace.jpg";
 
 const heroSlidesData = {
   en: [
@@ -132,23 +132,64 @@ const heroSlidesData = {
   ]
 };
 
+// Memoized hero image component for performance
+const HeroImage = memo(({ src, alt, isFirst }: { src: string; alt: string; isFirst: boolean }) => (
+  <img 
+    src={src} 
+    alt={alt} 
+    className="w-full h-full object-cover"
+    // Critical LCP image gets priority loading
+    fetchPriority={isFirst ? "high" : "low"}
+    loading={isFirst ? "eager" : "lazy"}
+    decoding={isFirst ? "sync" : "async"}
+    // Responsive sizing hints for browser
+    sizes="100vw"
+  />
+));
+
+HeroImage.displayName = "HeroImage";
+
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [imagesPreloaded, setImagesPreloaded] = useState(false);
   const { isSpanish } = useLanguage();
   
   const heroSlides = isSpanish ? heroSlidesData.es : heroSlidesData.en;
 
+  // Preload next slides in background after initial render
+  useEffect(() => {
+    if (imagesPreloaded) return;
+    
+    // Wait for first paint, then preload other images
+    const preloadTimer = setTimeout(() => {
+      const imagesToPreload = [terraceScene, photo1, photo2, photo3, photo4, photo5];
+      imagesToPreload.forEach((src) => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+      });
+      setImagesPreloaded(true);
+    }, 2000); // Delay prefetching to prioritize LCP
+    
+    return () => clearTimeout(preloadTimer);
+  }, [imagesPreloaded]);
+
+  // Auto-advance slides
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 7000); // Slower transitions for better performance
+    }, 7000);
     
     return () => clearInterval(timer);
   }, [heroSlides.length]);
 
-  const slide = heroSlides[currentSlide];
+  const handleSlideChange = useCallback((idx: number) => {
+    setCurrentSlide(idx);
+  }, []);
 
-  // Helper for language-aware routes
+  const slide = heroSlides[currentSlide];
   const getRoute = (enPath: string, esPath: string) => isSpanish ? esPath : enPath;
 
   return (
@@ -163,12 +204,10 @@ const HeroSlider = () => {
           transition={{ duration: 0.5 }}
           className="absolute inset-0"
         >
-          <img 
+          <HeroImage 
             src={slide.image} 
-            alt={slide.alt} 
-            className="w-full h-full object-cover"
-            fetchPriority="high"
-            decoding="async"
+            alt={slide.alt}
+            isFirst={currentSlide === 0}
           />
         </motion.div>
       </AnimatePresence>
@@ -223,7 +262,7 @@ const HeroSlider = () => {
         {heroSlides.map((_, idx) => (
           <button
             key={idx}
-            onClick={() => setCurrentSlide(idx)}
+            onClick={() => handleSlideChange(idx)}
             className={`h-2 rounded-full transition-all duration-500 ${
               idx === currentSlide 
                 ? "bg-primary w-12" 
@@ -240,4 +279,4 @@ const HeroSlider = () => {
   );
 };
 
-export default HeroSlider;
+export default memo(HeroSlider);

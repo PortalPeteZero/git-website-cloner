@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,26 +7,38 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import ScrollToTop from "./components/ScrollToTop";
+import LoadingFallback from "./components/LoadingFallback";
+
+// Critical path - loaded immediately
 import Index from "./pages/Index";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import ServiceDetail from "./pages/ServiceDetail";
-import FreeLeakConfirmation from "./pages/FreeLeakConfirmation";
-import Contact from "./pages/Contact";
-import CaseStudies from "./pages/CaseStudies";
-import Technology from "./pages/Technology";
-import Blog from "./pages/Blog";
-import BlogArticle from "./pages/BlogArticle";
-import LocationPage from "./pages/LocationPage";
-import MeetTheTeam from "./pages/MeetTheTeam";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Admin from "./pages/Admin";
-import AdminLogin from "./pages/AdminLogin";
-import NotFound from "./pages/NotFound";
-import PlumbingServices from "./pages/PlumbingServices";
-import PlumbingServiceDetail from "./pages/PlumbingServiceDetail";
+
+// Lazy load all other pages for better initial load performance
+const About = lazy(() => import("./pages/About"));
+const Services = lazy(() => import("./pages/Services"));
+const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
+const FreeLeakConfirmation = lazy(() => import("./pages/FreeLeakConfirmation"));
+const Contact = lazy(() => import("./pages/Contact"));
+const CaseStudies = lazy(() => import("./pages/CaseStudies"));
+const Technology = lazy(() => import("./pages/Technology"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogArticle = lazy(() => import("./pages/BlogArticle"));
+const LocationPage = lazy(() => import("./pages/LocationPage"));
+const MeetTheTeam = lazy(() => import("./pages/MeetTheTeam"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Admin = lazy(() => import("./pages/Admin"));
+const AdminLogin = lazy(() => import("./pages/AdminLogin"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const PlumbingServices = lazy(() => import("./pages/PlumbingServices"));
+const PlumbingServiceDetail = lazy(() => import("./pages/PlumbingServiceDetail"));
 
 const queryClient = new QueryClient();
+
+// Wrapper for lazy-loaded routes
+const LazyRoute = ({ children }: { children: React.ReactNode }) => (
+  <Suspense fallback={<LoadingFallback height="min-h-screen" />}>
+    {children}
+  </Suspense>
+);
 
 // Main App component - LanguageProvider must be inside BrowserRouter
 const App = () => (
@@ -40,9 +53,9 @@ const App = () => (
             <Routes>
               {/* English Routes */}
               <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/services/free-leak-confirmation" element={<FreeLeakConfirmation />} />
+              <Route path="/about" element={<LazyRoute><About /></LazyRoute>} />
+              <Route path="/services" element={<LazyRoute><Services /></LazyRoute>} />
+              <Route path="/services/free-leak-confirmation" element={<LazyRoute><FreeLeakConfirmation /></LazyRoute>} />
               <Route path="/services/pipe-inspection" element={<Navigate to="/services/drain-detection" replace />} />
               
               {/* SEO-friendly redirects for common URL variations */}
@@ -100,17 +113,17 @@ const App = () => (
               <Route path="/2021/08" element={<Navigate to="/blog" replace />} />
               <Route path="/2022/12" element={<Navigate to="/blog" replace />} />
               
-              <Route path="/services/:slug" element={<ServiceDetail />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/case-studies" element={<CaseStudies />} />
-              <Route path="/technology" element={<Technology />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogArticle />} />
-              <Route path="/locations/:location" element={<LocationPage />} />
-              <Route path="/meet-the-team" element={<MeetTheTeam />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/plumbing-services" element={<PlumbingServices />} />
-              <Route path="/plumbing-services/:slug" element={<PlumbingServiceDetail />} />
+              <Route path="/services/:slug" element={<LazyRoute><ServiceDetail /></LazyRoute>} />
+              <Route path="/contact" element={<LazyRoute><Contact /></LazyRoute>} />
+              <Route path="/case-studies" element={<LazyRoute><CaseStudies /></LazyRoute>} />
+              <Route path="/technology" element={<LazyRoute><Technology /></LazyRoute>} />
+              <Route path="/blog" element={<LazyRoute><Blog /></LazyRoute>} />
+              <Route path="/blog/:slug" element={<LazyRoute><BlogArticle /></LazyRoute>} />
+              <Route path="/locations/:location" element={<LazyRoute><LocationPage /></LazyRoute>} />
+              <Route path="/meet-the-team" element={<LazyRoute><MeetTheTeam /></LazyRoute>} />
+              <Route path="/privacy-policy" element={<LazyRoute><PrivacyPolicy /></LazyRoute>} />
+              <Route path="/plumbing-services" element={<LazyRoute><PlumbingServices /></LazyRoute>} />
+              <Route path="/plumbing-services/:slug" element={<LazyRoute><PlumbingServiceDetail /></LazyRoute>} />
               
               {/* Spanish URL Redirects */}
               <Route path="/es/services" element={<Navigate to="/es/servicios" replace />} />
@@ -118,26 +131,26 @@ const App = () => (
               
               {/* Spanish Routes */}
               <Route path="/es" element={<Index />} />
-              <Route path="/es/sobre-nosotros" element={<About />} />
-              <Route path="/es/servicios" element={<Services />} />
-              <Route path="/es/servicios/confirmacion-fugas-gratis" element={<FreeLeakConfirmation />} />
-              <Route path="/es/servicios/:slug" element={<ServiceDetail />} />
-              <Route path="/es/contacto" element={<Contact />} />
-              <Route path="/es/casos-de-exito" element={<CaseStudies />} />
-              <Route path="/es/tecnologia" element={<Technology />} />
-              <Route path="/es/blog" element={<Blog />} />
-              <Route path="/es/blog/:slug" element={<BlogArticle />} />
-              <Route path="/es/ubicaciones/:location" element={<LocationPage />} />
-              <Route path="/es/equipo" element={<MeetTheTeam />} />
-              <Route path="/es/politica-de-privacidad" element={<PrivacyPolicy />} />
-              <Route path="/es/servicios-fontaneria" element={<PlumbingServices />} />
-              <Route path="/es/servicios-fontaneria/:slug" element={<PlumbingServiceDetail />} />
+              <Route path="/es/sobre-nosotros" element={<LazyRoute><About /></LazyRoute>} />
+              <Route path="/es/servicios" element={<LazyRoute><Services /></LazyRoute>} />
+              <Route path="/es/servicios/confirmacion-fugas-gratis" element={<LazyRoute><FreeLeakConfirmation /></LazyRoute>} />
+              <Route path="/es/servicios/:slug" element={<LazyRoute><ServiceDetail /></LazyRoute>} />
+              <Route path="/es/contacto" element={<LazyRoute><Contact /></LazyRoute>} />
+              <Route path="/es/casos-de-exito" element={<LazyRoute><CaseStudies /></LazyRoute>} />
+              <Route path="/es/tecnologia" element={<LazyRoute><Technology /></LazyRoute>} />
+              <Route path="/es/blog" element={<LazyRoute><Blog /></LazyRoute>} />
+              <Route path="/es/blog/:slug" element={<LazyRoute><BlogArticle /></LazyRoute>} />
+              <Route path="/es/ubicaciones/:location" element={<LazyRoute><LocationPage /></LazyRoute>} />
+              <Route path="/es/equipo" element={<LazyRoute><MeetTheTeam /></LazyRoute>} />
+              <Route path="/es/politica-de-privacidad" element={<LazyRoute><PrivacyPolicy /></LazyRoute>} />
+              <Route path="/es/servicios-fontaneria" element={<LazyRoute><PlumbingServices /></LazyRoute>} />
+              <Route path="/es/servicios-fontaneria/:slug" element={<LazyRoute><PlumbingServiceDetail /></LazyRoute>} />
               
               {/* Admin (English only) */}
-              <Route path="/admin" element={<Admin />} />
-              <Route path="/admin/login" element={<AdminLogin />} />
+              <Route path="/admin" element={<LazyRoute><Admin /></LazyRoute>} />
+              <Route path="/admin/login" element={<LazyRoute><AdminLogin /></LazyRoute>} />
               
-              <Route path="*" element={<NotFound />} />
+              <Route path="*" element={<LazyRoute><NotFound /></LazyRoute>} />
             </Routes>
           </TooltipProvider>
         </LanguageProvider>
