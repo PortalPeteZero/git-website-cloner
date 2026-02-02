@@ -49,6 +49,10 @@ const App = () => (
               <Route path="/services/leaking-water-pipe-repair-lanzarote" element={<Navigate to="/services/leak-repair" replace />} />
               <Route path="/services/water-pipe-leak-repair" element={<Navigate to="/services/leak-repair" replace />} />
               <Route path="/services/pipe-leak-repair" element={<Navigate to="/services/leak-repair" replace />} />
+              <Route path="/services/water-leak-detection-lanzarote" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/services/water-leak-detection-lanzarote/" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/services/water-pipe-leak-detection" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/services/water-pipe-leak-detection/" element={<Navigate to="/services/water-leak-detection" replace />} />
               <Route path="/services/swimming-pool-leak-detection" element={<Navigate to="/services/pool-leak-detection" replace />} />
               <Route path="/services/pool-leak" element={<Navigate to="/services/pool-leak-detection" replace />} />
               <Route path="/services/underground-leak-detection" element={<Navigate to="/services/underground-detection" replace />} />
