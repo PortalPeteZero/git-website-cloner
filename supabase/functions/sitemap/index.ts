@@ -64,6 +64,10 @@ const staticBlogArticles = [
   { slug: "damp-walls-causes-solutions", esSlug: "paredes-humedas-causas-soluciones", date: "2025-11-20" },
   { slug: "thermal-imaging-leak-detection-explained", esSlug: "imagen-termica-deteccion-fugas-explicada", date: "2025-11-15" },
   { slug: "swimming-pool-leak-repair-cost-lanzarote", esSlug: "coste-reparacion-fugas-piscina-lanzarote", date: "2025-10-01" },
+  { slug: "emergency-leak-detection-repair-lanzarote", esSlug: "deteccion-reparacion-fugas-emergencia-lanzarote", date: "2026-01-28" },
+  { slug: "how-to-tell-if-pool-has-leak-lanzarote", esSlug: "como-saber-si-piscina-tiene-fuga-lanzarote", date: "2026-02-01" },
+  { slug: "signs-water-leak-villa-lanzarote", esSlug: "senales-fuga-agua-villa-lanzarote", date: "2026-02-01" },
+  { slug: "high-water-bills-lanzarote-causes", esSlug: "facturas-agua-altas-lanzarote-causas", date: "2026-02-01" },
 ];
 
 // Blog slug mappings for bilingual support (legacy - kept for DB posts)
@@ -75,6 +79,10 @@ const blogSlugMappings: Record<string, string> = {
   "damp-walls-causes-solutions": "paredes-humedas-causas-soluciones",
   "thermal-imaging-leak-detection-explained": "imagen-termica-deteccion-fugas-explicada",
   "swimming-pool-leak-repair-cost-lanzarote": "coste-reparacion-fugas-piscina-lanzarote",
+  "emergency-leak-detection-repair-lanzarote": "deteccion-reparacion-fugas-emergencia-lanzarote",
+  "how-to-tell-if-pool-has-leak-lanzarote": "como-saber-si-piscina-tiene-fuga-lanzarote",
+  "signs-water-leak-villa-lanzarote": "senales-fuga-agua-villa-lanzarote",
+  "high-water-bills-lanzarote-causes": "facturas-agua-altas-lanzarote-causas",
 };
 
 function formatDate(date: Date | string): string {
