@@ -1221,6 +1221,601 @@ Hidden leaks cause **structural damage**, **mould**, and **sky-high water bills*
 
 [Contact us now →](/contact)
     `
+  },
+  {
+    id: 9,
+    slug: "how-to-tell-if-pool-has-leak-lanzarote",
+    title: "How to Tell If Your Pool Has a Leak: 7 Warning Signs for Lanzarote Pool Owners",
+    excerpt: "Is your swimming pool losing water faster than normal? Learn the 7 telltale signs of a pool leak and what to do about it in Lanzarote's unique climate.",
+    date: "2026-02-01",
+    author: "Pete Ashcroft",
+    category: "Pool Care",
+    image: poolLeakImg,
+    metaTitle: "How to Tell If Pool Has a Leak | 7 Warning Signs",
+    metaDescription: "Discover the 7 warning signs your swimming pool has a leak. Expert pool leak detection advice from Lanzarote specialists.",
+    keywords: "how to tell if pool has leak, pool leak signs, swimming pool losing water Lanzarote, pool leak symptoms, pool water loss, pool leak detection Lanzarote",
+    readTime: 7,
+    content: `
+## Is Your Lanzarote Pool Losing Water?
+
+Swimming pool ownership in Lanzarote comes with unique challenges. Between the intense sun, trade winds, and volcanic soil, pool maintenance requires constant attention. But how do you know if your pool is simply evaporating water—or if you have a genuine leak?
+
+After 10+ years detecting pool leaks across Lanzarote, we've identified the **7 most reliable warning signs** that indicate your pool has a leak.
+
+## 1. Water Level Drops More Than 5cm Per Week
+
+Some water loss is normal in Lanzarote's climate:
+- **Evaporation**: 3-7mm per day during summer
+- **Splash-out**: Active use causes minor loss
+- **Backwash**: Filter cleaning uses water
+
+But if you're losing **more than 5cm per week**, you almost certainly have a leak.
+
+### The Bucket Test
+
+Place a bucket on your pool step, fill it to match the pool water level, and mark both levels. Wait 24 hours. If the pool drops more than the bucket, you have a leak—not evaporation.
+
+## 2. Constant Refilling from Aljibe or Mains
+
+In Lanzarote, most pools are topped up from an **aljibe** (underground water tank) or directly from the mains. Warning signs include:
+
+- Aljibe emptying faster than usual
+- Water delivery trucks needed more frequently
+- Mains water meter spinning even when pool pump is off
+- Higher than normal water bills
+
+If you're refilling more than once a week in peak summer, investigate further.
+
+## 3. Cracks in Pool Shell or Tiles
+
+Visual signs of damage often indicate leak points:
+
+- **Hairline cracks** in plaster or fiberglass
+- **Loose or missing tiles** around waterline
+- **Hollow sounds** when tapping tiles (indicating debonding)
+- **Staining patterns** that follow crack lines
+- **Efflorescence** (white mineral deposits) around cracks
+
+Lanzarote's volcanic soil can shift, causing structural movement that leads to cracks.
+
+## 4. Wet Spots Around Pool Area
+
+Look for unexplained moisture:
+
+- **Soggy grass** or muddy areas near pool
+- **Wet patches** on pool deck that don't dry
+- **Green algae growth** on surrounding walls
+- **Erosion** or sinkholes near pool equipment
+- **Water pooling** around pump room
+
+These indicate water is escaping below ground and surfacing nearby.
+
+## 5. Chemical Imbalance Problems
+
+Leaking pools struggle to maintain chemistry:
+
+- **Chlorine disappears** faster than normal
+- **pH fluctuates** constantly despite treatment
+- **Algae blooms** despite adequate sanitizer
+- **Calcium hardness drops** unexpectedly
+- Need to add **more chemicals** than usual
+
+Fresh water entering through leaks dilutes your chemicals continuously.
+
+## 6. Air Bubbles in Return Jets
+
+When air enters your plumbing system:
+
+- **Bubbles stream** from return jets
+- **Pump struggles** to prime or loses prime
+- **Gurgling sounds** in pipes
+- **Fluctuating pressure** gauge readings
+
+Air bubbles often indicate a crack in the suction side of your plumbing—a common leak location.
+
+## 7. Pool Equipment Running Constantly
+
+Your pump works harder to compensate for water loss:
+
+- **Pump runs more hours** than scheduled
+- **Auto-fill valve** activates frequently
+- **Pressure fluctuations** in filter system
+- **Unusual noises** from pump or plumbing
+
+This increased workload also raises electricity bills.
+
+---
+
+## What to Do If You Spot These Signs
+
+### Step 1: Perform the Bucket Test
+
+This simple test confirms whether you have a leak or just evaporation. [Learn how to do the bucket test properly →](/blog/how-to-check-for-pool-leaks-lanzarote)
+
+### Step 2: Check Equipment First
+
+Before calling professionals, inspect:
+- **Pool light niches** (common leak point)
+- **Skimmer connections** (check for cracks)
+- **Return fittings** (ensure tight seal)
+- **Main drain** (visible damage)
+
+### Step 3: Get Professional Detection
+
+If DIY checks don't find the leak, you need **specialist equipment**:
+
+- **Pressure testing** of plumbing lines
+- **Dye testing** around fittings and cracks
+- **Acoustic detection** for underground pipes
+- **Thermal imaging** for hidden pipe runs
+
+---
+
+## Why Lanzarote Pools Are Prone to Leaks
+
+### Volcanic Soil Movement
+
+Lanzarote's volcanic substrate expands and contracts with temperature and moisture changes, stressing pool structures.
+
+### Hard Water Deposits
+
+Desalinated mains water in Lanzarote contains minerals that deposit on pipes and fittings, causing degradation over time.
+
+### Intense UV Exposure
+
+Constant sun degrades rubber seals, plastic fittings, and flexible pipe sections faster than in cooler climates.
+
+### Trade Wind Evaporation
+
+Strong winds accelerate evaporation, making it harder to distinguish between natural loss and leaks.
+
+---
+
+## Don't Ignore Pool Leaks
+
+A small leak wastes **thousands of litres** per month, damages your property, and costs money in:
+- Water bills
+- Chemical costs
+- Electricity for refilling pumps
+- Eventual structural repairs
+
+**The longer you wait, the worse it gets.**
+
+---
+
+## Free Leak Confirmation
+
+Before paying for a full survey, confirm you actually have a leak with our **Free Leak Confirmation Test**.
+
+[Get your free leak confirmation →](/services/free-leak-confirmation)
+
+**Contact Canary Detect** for professional swimming pool leak detection across Lanzarote. We serve Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza, and all areas of the island.
+
+[Contact us now →](/contact)
+    `
+  },
+  {
+    id: 10,
+    slug: "signs-water-leak-villa-lanzarote",
+    title: "Signs of a Water Leak in Your Villa: What Every Lanzarote Homeowner Should Know",
+    excerpt: "Damp walls, high water bills, or a spinning meter? Learn the warning signs of hidden water leaks in Lanzarote villas and apartments.",
+    date: "2026-02-01",
+    author: "Canary Detect",
+    category: "Leak Detection",
+    image: waterLeakImg,
+    metaTitle: "Signs of Water Leak in Villa | Lanzarote Leak Detection",
+    metaDescription: "Discover the warning signs of hidden water leaks in your Lanzarote villa. Damp walls, high bills, spinning meter - what they mean.",
+    keywords: "signs of water leak, water leak villa Lanzarote, damp walls Lanzarote, hidden water leak, water damage signs, leak detection villa",
+    readTime: 8,
+    content: `
+## Hidden Leaks in Lanzarote Villas
+
+Water leaks in Lanzarote properties are often **invisible for months** before causing obvious damage. By the time you see damp patches or mould, significant damage may have already occurred behind walls and under floors.
+
+At Canary Detect, we find that **95% of leaks are hidden**—no visible drips, no obvious signs. This guide helps you spot the early warning signs before expensive damage occurs.
+
+## The 10 Warning Signs of a Hidden Water Leak
+
+### 1. Water Meter Spinning When Taps Are Off
+
+The clearest sign of a leak is a spinning meter with all water outlets closed:
+
+1. Turn off **all taps, showers, and appliances**
+2. Check your water meter
+3. Look at the small red dial or digital display
+4. If it's moving, water is flowing somewhere
+
+**Important for Lanzarote**: If you have an **aljibe** (water tank) system, meter behaviour is more complex. [Learn about aljibe systems and leak detection →](/blog/master-your-lanzarote-water-system)
+
+### 2. Unexpectedly High Water Bills
+
+Compare your bills over time:
+- Sudden spikes without usage changes
+- Gradual increase over several months
+- Bills much higher than neighbours with similar properties
+
+In Lanzarote, a small hidden leak can waste **€200-500 per year** in water costs alone.
+
+### 3. Damp or Discoloured Patches on Walls
+
+Look for:
+- **Damp patches** that appear without rain
+- **Tide marks** or waterlines on walls
+- **Paint bubbling** or peeling
+- **Wallpaper lifting** from walls
+- **Discolouration** (yellow, brown stains)
+
+These signs indicate water travelling behind the wall surface.
+
+### 4. Musty or Mouldy Smells
+
+Hidden moisture creates distinctive odours:
+- **Musty, earthy smell** (like a damp cellar)
+- **Mouldy odour** in specific rooms
+- Smells that **get stronger** after closing the house
+
+If the smell appears after returning from a trip, moisture has been accumulating.
+
+### 5. Visible Mould Growth
+
+Mould indicates sustained moisture:
+- **Black spots** in corners or behind furniture
+- **Green or grey patches** on walls
+- **Mould on textiles** (curtains, upholstery)
+- **Mould reappearing** after cleaning
+
+Mould only grows where humidity exceeds 60-70% for extended periods.
+
+### 6. Warm or Cold Spots on Floors
+
+Temperature anomalies reveal hidden pipes:
+- **Warm patches** indicate hot water pipe leaks
+- **Cold patches** may indicate cold water escaping
+- **Tiles that feel different** temperatures
+
+Walk barefoot on tile floors—you'll notice temperature differences more easily.
+
+### 7. Sound of Running Water
+
+Listen carefully when the house is quiet:
+- **Hissing** sounds in walls
+- **Dripping** noises behind fixtures
+- **Running water** sounds with taps off
+
+These sounds may be intermittent if connected to the aljibe system.
+
+### 8. Decreased Water Pressure
+
+A leak reduces system pressure:
+- **Weak shower flow** compared to before
+- **Slow-filling toilets**
+- **Taps taking longer** to run hot
+- **Pump running more frequently** (if you have one)
+
+If pressure dropped suddenly, the leak may be significant.
+
+### 9. Cracks in Walls or Foundations
+
+Water damage causes structural movement:
+- **Diagonal cracks** from corners of doors/windows
+- **Cracks following grout lines** in tiles
+- **Foundation cracks** near plumbing routes
+- **Doors/windows sticking** that didn't before
+
+Lanzarote's volcanic soil amplifies this—wet soil swells and shifts.
+
+### 10. Pooling Water Outside
+
+External signs of underground leaks:
+- **Wet patches** on driveway or garden
+- **Green, lush grass** in dry areas
+- **Erosion or sinkholes** near building
+- **Rising damp** on external walls
+
+These indicate water escaping below ground and surfacing.
+
+---
+
+## Where Leaks Hide in Lanzarote Villas
+
+### Bathrooms
+
+Most common leak locations:
+- **Behind shower trays** (failed waterproofing)
+- **Toilet connections** (worn seals)
+- **Basin pipework** (hidden in cabinets)
+- **Underfloor heating connections** (if installed)
+
+### Kitchens
+
+Common culprits:
+- **Dishwasher connections** (hidden leaks for months)
+- **Under-sink pipework** (slow drips)
+- **Fridge water lines** (ice makers)
+- **Waste pipes** (cause smell rather than wet patches)
+
+### Flat Roofs
+
+Lanzarote's flat roof architecture is vulnerable:
+- **Waterproofing failure** around edges
+- **Cracks in roof screed** from thermal movement
+- **Blocked drainage** causing ponding
+- **Terrace tile joints** allowing water penetration
+
+### Underground Pipes
+
+Garden and supply pipes:
+- **Mains supply between meter and house**
+- **Irrigation system connections**
+- **Pool plumbing** (common in Lanzarote)
+- **Hot water circulating pipes**
+
+---
+
+## What to Do If You Suspect a Leak
+
+### Step 1: Monitor Your Meter
+
+Record meter readings morning and evening for a week. Even small changes indicate a leak.
+
+### Step 2: Visual Inspection
+
+Check accessible areas:
+- Under all sinks
+- Around toilet bases
+- Behind washing machines
+- In utility cupboards
+
+### Step 3: Listen Carefully
+
+At night when the house is quiet, listen at walls, especially near bathrooms and kitchens.
+
+### Step 4: Get Professional Help
+
+If you find evidence of a leak but can't locate it, you need **specialist equipment**:
+- **Acoustic detection** to hear leaks through walls
+- **Thermal imaging** to see temperature anomalies
+- **Tracer gas** to find pinhole leaks
+- **Moisture mapping** to trace water paths
+
+---
+
+## Why DIY Leak Detection Often Fails
+
+Many homeowners spend weeks:
+- Opening up walls in wrong locations
+- Paying plumbers to "investigate"
+- Making the damage worse
+
+**95% of leaks** cannot be found without specialist equipment. Professional detection **costs less** than exploratory damage.
+
+---
+
+## Free Leak Confirmation
+
+Not sure if you have a leak? Our **Free Leak Confirmation Test** gives you a definitive answer before committing to a full survey.
+
+[Get your free leak confirmation →](/services/free-leak-confirmation)
+
+**Contact Canary Detect** for professional leak detection across Lanzarote. We serve Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, Yaiza, and all areas of the island.
+
+[Contact us now →](/contact)
+    `
+  },
+  {
+    id: 11,
+    slug: "high-water-bills-lanzarote-causes",
+    title: "What Causes High Water Bills in Lanzarote? 8 Reasons Your Bill Is Too High",
+    excerpt: "Shocked by your water bill? Discover the 8 common causes of high water bills in Lanzarote—from hidden leaks to faulty float valves.",
+    date: "2026-02-01",
+    author: "Canary Detect",
+    category: "Water Saving",
+    image: waterMeterImg,
+    metaTitle: "High Water Bills Lanzarote | 8 Common Causes",
+    metaDescription: "Why is your water bill so high? Discover 8 causes of expensive water bills in Lanzarote—hidden leaks, faulty valves, and more.",
+    keywords: "high water bills Lanzarote, expensive water bill causes, water bill too high, water meter spinning, leak causing high bill, reduce water bill Lanzarote",
+    readTime: 9,
+    content: `
+## Why Is My Water Bill So High?
+
+Opening an unexpectedly high water bill is stressful. In Lanzarote, where water is precious and expensive, a spike in your bill demands immediate investigation.
+
+After 10+ years helping Lanzarote homeowners, we've identified the **8 most common causes** of high water bills—and what you can do about each one.
+
+## 1. Hidden Water Leaks (Most Common)
+
+The #1 cause of high water bills is a **leak you can't see**:
+
+- **Underground pipe leaks** (between meter and house)
+- **Leaks behind walls** (bathroom and kitchen pipes)
+- **Under-floor leaks** (especially in properties with underfloor heating)
+- **Swimming pool leaks** (extremely common in Lanzarote)
+
+### How Much Can a Leak Cost?
+
+| Leak Size | Litres Lost/Day | Monthly Cost (approx) |
+|-----------|-----------------|----------------------|
+| Dripping tap | 20L | €5 |
+| Running toilet | 400L | €100 |
+| 1mm pipe crack | 1,000L | €250 |
+| Burst pipe | 5,000L+ | €1,000+ |
+
+**A single hidden leak can double or triple your bill.**
+
+### The Meter Test
+
+1. Turn off all water outlets
+2. Check your meter's leak indicator (small dial)
+3. If it's moving, you have a leak
+
+[Learn more about water meter behaviour →](/blog/water-meter-running-when-taps-off)
+
+## 2. Faulty Aljibe Float Valve
+
+In Lanzarote, most homes use an **aljibe** (underground water tank) with a float valve. When this valve fails:
+
+- Water continuously flows into the tank
+- Excess overflows into the ground (invisibly)
+- Your meter runs constantly
+- Your bill skyrockets
+
+### Signs of a Faulty Float Valve
+
+- Water meter spinning even when house is empty
+- Aljibe always full but meter still running
+- Wet ground near aljibe location
+- Pump not needed as often (tank stays full)
+
+This is often **misdiagnosed as a pipe leak**. [Understand your aljibe system →](/blog/master-your-lanzarote-water-system)
+
+## 3. Leaking or Running Toilets
+
+Toilets are silent water wasters:
+
+- **Flapper valve failure** (most common)
+- **Continuous trickle** into bowl
+- **Phantom flushes** (toilet refilling on its own)
+- **Fill valve stuck open**
+
+### The Toilet Dye Test
+
+1. Add food colouring to the cistern
+2. Wait 10 minutes without flushing
+3. If colour appears in the bowl, the flapper is leaking
+
+A running toilet wastes **10,000-50,000 litres per month**.
+
+## 4. Swimming Pool Leaks
+
+Lanzarote has thousands of private pools, and **pool leaks are extremely common**:
+
+- Shell cracks from ground movement
+- Plumbing joint failures
+- Light niche seal failures
+- Skimmer connection leaks
+
+### Pool Leak Signs
+
+- Refilling more than once a week
+- Chemical consumption increasing
+- Wet spots around pool area
+- Pump losing prime or showing air bubbles
+
+[Learn how to check for pool leaks →](/blog/how-to-check-for-pool-leaks-lanzarote)
+
+## 5. Irrigation System Leaks
+
+Garden irrigation systems often leak unnoticed:
+
+- **Broken sprinkler heads** (buried by plants)
+- **Cracked drip lines** (degraded by sun)
+- **Failed connections** at control valves
+- **Main line leaks** underground
+
+### Warning Signs
+
+- Brown patches alternating with very green areas
+- Soggy spots in lawn when not irrigating
+- Pressure drop in irrigation zones
+- Controller showing shorter run times than scheduled
+
+## 6. Appliance Leaks
+
+Household appliances can leak slowly:
+
+- **Washing machines** (inlet hose connections)
+- **Dishwashers** (drain connections)
+- **Water heaters** (pressure relief valves)
+- **Refrigerator ice makers** (water line)
+
+These often leak into hidden spaces—under floors or behind units.
+
+## 7. Dripping Taps and Showers
+
+Easy to ignore but costly over time:
+
+- A tap dripping once per second = **20 litres per day**
+- Mixer showers often drip from cartridge failure
+- Outside taps frequently forgotten
+
+### Quick Fix
+
+Replace tap washers or cartridges—usually a €5-20 repair that can save €50+ per year.
+
+## 8. Meter Reading Errors or Billing Issues
+
+Sometimes the problem isn't your water usage:
+
+- **Estimated bills** that overcharge
+- **Meter reading mistakes**
+- **Faulty water meter** (rare but possible)
+- **Rate changes** you weren't notified about
+
+### What to Do
+
+1. Compare your meter reading with the bill
+2. Request a meter accuracy test if suspicious
+3. Check for rate changes on Canal Gestión website
+
+---
+
+## How to Investigate High Bills
+
+### Step 1: Check Your Meter
+
+Record the reading, use no water for 2 hours, check again. Any change = leak.
+
+### Step 2: Inspect Visible Areas
+
+- Check all taps, toilets, and visible pipes
+- Look under sinks and behind appliances
+- Inspect outdoor taps and irrigation
+
+### Step 3: Check Your Pool (If Applicable)
+
+Perform the bucket test to rule out pool leaks.
+
+### Step 4: Consider Your Aljibe
+
+If you have an aljibe system, the float valve is a prime suspect.
+
+### Step 5: Get Professional Detection
+
+If you can't find the cause, you need specialist equipment:
+- **Acoustic detection** for pipe leaks
+- **Thermal imaging** for hidden water paths
+- **Pressure testing** for plumbing systems
+
+---
+
+## Prevention Tips
+
+### Regular Maintenance
+
+- **Annually**: Check aljibe float valve
+- **Monthly**: Walk around property looking for wet spots
+- **Weekly**: Check water meter reading
+
+### Monitor Your Bills
+
+Keep a record of monthly usage—you'll spot anomalies quickly.
+
+### Fix Small Issues Promptly
+
+Dripping taps and running toilets only get worse.
+
+---
+
+## Free Leak Confirmation
+
+If you suspect a hidden leak is causing high bills, get certainty with our **Free Leak Confirmation Test**.
+
+[Get your free leak confirmation →](/services/free-leak-confirmation)
+
+**Contact Canary Detect** for professional leak detection across Lanzarote. We serve Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, Yaiza, and all areas of the island.
+
+[Contact us now →](/contact)
+    `
   }
 ];
 
@@ -2386,6 +2981,601 @@ Las fugas ocultas causan **daños estructurales**, **moho** y **facturas de agua
 
 [Contáctanos ahora →](/es/contacto)
     `
+  },
+  {
+    id: 9,
+    slug: "como-saber-si-piscina-tiene-fuga-lanzarote",
+    title: "Cómo Saber Si Tu Piscina Tiene una Fuga: 7 Señales de Alerta para Propietarios en Lanzarote",
+    excerpt: "¿Tu piscina pierde agua más rápido de lo normal? Aprende las 7 señales reveladoras de una fuga en piscina y qué hacer al respecto en el clima único de Lanzarote.",
+    date: "2026-02-01",
+    author: "Pete Ashcroft",
+    category: "Cuidado de Piscinas",
+    image: poolLeakImg,
+    metaTitle: "Cómo Saber Si Tu Piscina Tiene Fuga | 7 Señales",
+    metaDescription: "Descubre las 7 señales de advertencia de que tu piscina tiene una fuga. Consejos expertos de detección de fugas de piscinas de especialistas en Lanzarote.",
+    keywords: "como saber si piscina tiene fuga, señales fuga piscina, piscina pierde agua Lanzarote, síntomas fuga piscina, pérdida agua piscina, detección fugas piscina Lanzarote",
+    readTime: 7,
+    content: `
+## ¿Tu Piscina en Lanzarote Pierde Agua?
+
+Ser propietario de una piscina en Lanzarote conlleva desafíos únicos. Entre el sol intenso, los vientos alisios y el suelo volcánico, el mantenimiento de la piscina requiere atención constante. Pero, ¿cómo sabes si tu piscina simplemente evapora agua—o si tienes una fuga genuina?
+
+Después de más de 10 años detectando fugas de piscinas en toda Lanzarote, hemos identificado las **7 señales de advertencia más fiables** que indican que tu piscina tiene una fuga.
+
+## 1. El Nivel del Agua Baja Más de 5cm por Semana
+
+Cierta pérdida de agua es normal en el clima de Lanzarote:
+- **Evaporación**: 3-7mm por día durante el verano
+- **Salpicaduras**: El uso activo causa pérdidas menores
+- **Contralavado**: La limpieza del filtro usa agua
+
+Pero si pierdes **más de 5cm por semana**, casi seguro que tienes una fuga.
+
+### La Prueba del Cubo
+
+Coloca un cubo en el escalón de tu piscina, llénalo hasta igualar el nivel del agua de la piscina y marca ambos niveles. Espera 24 horas. Si la piscina baja más que el cubo, tienes una fuga—no es evaporación.
+
+## 2. Rellenado Constante desde el Aljibe o Red
+
+En Lanzarote, la mayoría de las piscinas se rellenan desde un **aljibe** o directamente de la red. Las señales de advertencia incluyen:
+
+- El aljibe se vacía más rápido de lo habitual
+- Los camiones cisterna se necesitan con más frecuencia
+- El contador de agua gira incluso cuando la bomba de la piscina está apagada
+- Facturas de agua más altas de lo normal
+
+Si rellenas más de una vez a la semana en pleno verano, investiga más.
+
+## 3. Grietas en el Vaso o Azulejos de la Piscina
+
+Las señales visuales de daño a menudo indican puntos de fuga:
+
+- **Grietas capilares** en el enlucido o fibra de vidrio
+- **Azulejos sueltos o faltantes** alrededor de la línea de agua
+- **Sonidos huecos** al golpear azulejos (indicando despegue)
+- **Patrones de manchas** que siguen las líneas de grietas
+- **Eflorescencia** (depósitos minerales blancos) alrededor de grietas
+
+El suelo volcánico de Lanzarote puede moverse, causando movimiento estructural que produce grietas.
+
+## 4. Manchas Húmedas Alrededor del Área de la Piscina
+
+Busca humedad inexplicable:
+
+- **Césped empapado** o áreas fangosas cerca de la piscina
+- **Manchas húmedas** en la terraza que no se secan
+- **Crecimiento de algas verdes** en paredes circundantes
+- **Erosión** o hundimientos cerca del equipo de la piscina
+- **Agua estancada** alrededor de la sala de bombas
+
+Esto indica que el agua está escapando bajo tierra y emergiendo cerca.
+
+## 5. Problemas de Desequilibrio Químico
+
+Las piscinas con fugas tienen dificultades para mantener la química:
+
+- El **cloro desaparece** más rápido de lo normal
+- El **pH fluctúa** constantemente a pesar del tratamiento
+- **Floraciones de algas** a pesar de tener suficiente desinfectante
+- La **dureza del calcio baja** inesperadamente
+- Necesidad de añadir **más productos químicos** de lo habitual
+
+El agua fresca que entra por las fugas diluye continuamente tus productos químicos.
+
+## 6. Burbujas de Aire en los Retornos
+
+Cuando el aire entra en tu sistema de fontanería:
+
+- **Burbujas salen** de los retornos
+- La **bomba tiene dificultades** para cebarse o pierde el cebado
+- **Sonidos de gorgoteo** en las tuberías
+- Lecturas del **manómetro fluctuantes**
+
+Las burbujas de aire a menudo indican una grieta en el lado de succión de tu fontanería—una ubicación común de fugas.
+
+## 7. El Equipo de la Piscina Funciona Constantemente
+
+Tu bomba trabaja más para compensar la pérdida de agua:
+
+- La **bomba funciona más horas** de lo programado
+- La **válvula de llenado automático** se activa frecuentemente
+- **Fluctuaciones de presión** en el sistema del filtro
+- **Ruidos inusuales** de la bomba o fontanería
+
+Esta carga de trabajo aumentada también eleva las facturas de electricidad.
+
+---
+
+## Qué Hacer Si Detectas Estas Señales
+
+### Paso 1: Realiza la Prueba del Cubo
+
+Esta simple prueba confirma si tienes una fuga o solo evaporación. [Aprende a hacer la prueba del cubo correctamente →](/es/blog/como-detectar-fugas-en-piscinas-lanzarote)
+
+### Paso 2: Revisa Primero el Equipo
+
+Antes de llamar a profesionales, inspecciona:
+- **Nichos de focos** (punto común de fugas)
+- **Conexiones del skimmer** (busca grietas)
+- **Accesorios de retorno** (asegura sello hermético)
+- **Desagüe principal** (daños visibles)
+
+### Paso 3: Obtén Detección Profesional
+
+Si las comprobaciones DIY no encuentran la fuga, necesitas **equipo especializado**:
+
+- **Pruebas de presión** de líneas de fontanería
+- **Pruebas de tinte** alrededor de accesorios y grietas
+- **Detección acústica** para tuberías subterráneas
+- **Imagen térmica** para trazados de tuberías ocultas
+
+---
+
+## Por Qué las Piscinas en Lanzarote Son Propensas a Fugas
+
+### Movimiento del Suelo Volcánico
+
+El sustrato volcánico de Lanzarote se expande y contrae con los cambios de temperatura y humedad, tensionando las estructuras de las piscinas.
+
+### Depósitos de Agua Dura
+
+El agua de red desalinizada en Lanzarote contiene minerales que se depositan en tuberías y accesorios, causando degradación con el tiempo.
+
+### Exposición Intensa a UV
+
+El sol constante degrada los sellos de goma, accesorios de plástico y secciones de tubería flexible más rápido que en climas más fríos.
+
+### Evaporación por Vientos Alisios
+
+Los vientos fuertes aceleran la evaporación, dificultando distinguir entre pérdida natural y fugas.
+
+---
+
+## No Ignores las Fugas de Piscina
+
+Una pequeña fuga desperdicia **miles de litros** al mes, daña tu propiedad y cuesta dinero en:
+- Facturas de agua
+- Costes de productos químicos
+- Electricidad para bombas de llenado
+- Reparaciones estructurales eventuales
+
+**Cuanto más esperes, peor será.**
+
+---
+
+## Confirmación de Fugas Gratis
+
+Antes de pagar por un estudio completo, confirma que realmente tienes una fuga con nuestra **Prueba de Confirmación de Fugas Gratis**.
+
+[Obtén tu confirmación de fugas gratis →](/es/servicios/confirmacion-fugas-gratis)
+
+**Contacta con Canary Detect** para detección profesional de fugas de piscinas en toda Lanzarote. Servimos Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza y todas las áreas de la isla.
+
+[Contáctanos ahora →](/es/contacto)
+    `
+  },
+  {
+    id: 10,
+    slug: "senales-fuga-agua-villa-lanzarote",
+    title: "Señales de Fuga de Agua en Tu Villa: Lo Que Todo Propietario en Lanzarote Debe Saber",
+    excerpt: "¿Paredes húmedas, facturas de agua altas o un contador girando? Aprende las señales de advertencia de fugas de agua ocultas en villas y apartamentos de Lanzarote.",
+    date: "2026-02-01",
+    author: "Canary Detect",
+    category: "Detección de Fugas",
+    image: waterLeakImg,
+    metaTitle: "Señales de Fuga de Agua en Villa | Detección Fugas Lanzarote",
+    metaDescription: "Descubre las señales de advertencia de fugas de agua ocultas en tu villa de Lanzarote. Paredes húmedas, facturas altas, contador girando - qué significan.",
+    keywords: "señales fuga agua, fuga agua villa Lanzarote, paredes húmedas Lanzarote, fuga agua oculta, señales daño por agua, detección fugas villa",
+    readTime: 8,
+    content: `
+## Fugas Ocultas en Villas de Lanzarote
+
+Las fugas de agua en propiedades de Lanzarote son a menudo **invisibles durante meses** antes de causar daños obvios. Para cuando ves manchas de humedad o moho, ya puede haber ocurrido un daño significativo detrás de las paredes y bajo los suelos.
+
+En Canary Detect, encontramos que el **95% de las fugas están ocultas**—sin goteos visibles, sin señales obvias. Esta guía te ayuda a detectar las señales de advertencia tempranas antes de que ocurran daños costosos.
+
+## Las 10 Señales de Advertencia de una Fuga de Agua Oculta
+
+### 1. Contador de Agua Girando con los Grifos Cerrados
+
+La señal más clara de una fuga es un contador girando con todas las salidas de agua cerradas:
+
+1. Cierra **todos los grifos, duchas y electrodomésticos**
+2. Revisa tu contador de agua
+3. Mira el pequeño dial rojo o la pantalla digital
+4. Si se mueve, el agua está fluyendo a alguna parte
+
+**Importante para Lanzarote**: Si tienes un sistema de **aljibe** (tanque de agua), el comportamiento del contador es más complejo. [Aprende sobre sistemas de aljibe y detección de fugas →](/es/blog/domina-tu-sistema-de-agua-lanzarote)
+
+### 2. Facturas de Agua Inesperadamente Altas
+
+Compara tus facturas a lo largo del tiempo:
+- Picos repentinos sin cambios en el uso
+- Aumento gradual durante varios meses
+- Facturas mucho más altas que vecinos con propiedades similares
+
+En Lanzarote, una pequeña fuga oculta puede desperdiciar **€200-500 al año** solo en costes de agua.
+
+### 3. Manchas Húmedas o Decoloradas en Paredes
+
+Busca:
+- **Manchas de humedad** que aparecen sin lluvia
+- **Marcas de marea** o líneas de agua en paredes
+- **Pintura burbujeante** o descascarillada
+- **Papel pintado despegándose** de las paredes
+- **Decoloración** (manchas amarillas, marrones)
+
+Estas señales indican que el agua está viajando detrás de la superficie de la pared.
+
+### 4. Olores Mohosos o a Moho
+
+La humedad oculta crea olores distintivos:
+- **Olor mohoso, terroso** (como un sótano húmedo)
+- **Olor a moho** en habitaciones específicas
+- Olores que **se intensifican** después de cerrar la casa
+
+Si el olor aparece después de volver de un viaje, la humedad ha estado acumulándose.
+
+### 5. Crecimiento Visible de Moho
+
+El moho indica humedad sostenida:
+- **Manchas negras** en esquinas o detrás de muebles
+- **Parches verdes o grises** en paredes
+- **Moho en textiles** (cortinas, tapicería)
+- **Moho que reaparece** después de limpiarlo
+
+El moho solo crece donde la humedad supera el 60-70% durante períodos prolongados.
+
+### 6. Puntos Calientes o Fríos en Suelos
+
+Las anomalías de temperatura revelan tuberías ocultas:
+- **Parches calientes** indican fugas de tuberías de agua caliente
+- **Parches fríos** pueden indicar escape de agua fría
+- **Baldosas que se sienten a diferentes temperaturas**
+
+Camina descalzo por los suelos de baldosa—notarás las diferencias de temperatura más fácilmente.
+
+### 7. Sonido de Agua Corriendo
+
+Escucha atentamente cuando la casa está en silencio:
+- Sonidos de **silbido** en paredes
+- Ruidos de **goteo** detrás de accesorios
+- Sonidos de **agua corriendo** con los grifos cerrados
+
+Estos sonidos pueden ser intermitentes si están conectados al sistema del aljibe.
+
+### 8. Disminución de la Presión del Agua
+
+Una fuga reduce la presión del sistema:
+- **Flujo de ducha débil** comparado con antes
+- **Inodoros que tardan en llenarse**
+- **Grifos que tardan más** en calentarse
+- **Bomba funcionando más frecuentemente** (si tienes una)
+
+Si la presión bajó repentinamente, la fuga puede ser significativa.
+
+### 9. Grietas en Paredes o Cimientos
+
+El daño por agua causa movimiento estructural:
+- **Grietas diagonales** desde esquinas de puertas/ventanas
+- **Grietas siguiendo líneas de lechada** en azulejos
+- **Grietas en cimientos** cerca de rutas de fontanería
+- **Puertas/ventanas que se atascan** cuando antes no lo hacían
+
+El suelo volcánico de Lanzarote amplifica esto—el suelo mojado se hincha y se mueve.
+
+### 10. Agua Acumulada en el Exterior
+
+Señales externas de fugas subterráneas:
+- **Manchas húmedas** en el camino de entrada o jardín
+- **Césped verde y exuberante** en áreas secas
+- **Erosión o hundimientos** cerca del edificio
+- **Humedad ascendente** en paredes exteriores
+
+Esto indica que el agua está escapando bajo tierra y emergiendo en la superficie.
+
+---
+
+## Dónde Se Esconden las Fugas en Villas de Lanzarote
+
+### Baños
+
+Ubicaciones de fugas más comunes:
+- **Detrás de platos de ducha** (impermeabilización fallida)
+- **Conexiones del inodoro** (juntas desgastadas)
+- **Fontanería del lavabo** (oculta en armarios)
+- **Conexiones de suelo radiante** (si está instalado)
+
+### Cocinas
+
+Culpables comunes:
+- **Conexiones del lavavajillas** (fugas ocultas durante meses)
+- **Fontanería bajo el fregadero** (goteos lentos)
+- **Líneas de agua del frigorífico** (fabricadores de hielo)
+- **Tuberías de desagüe** (causan olor más que manchas húmedas)
+
+### Techos Planos
+
+La arquitectura de techos planos de Lanzarote es vulnerable:
+- **Fallo de impermeabilización** alrededor de bordes
+- **Grietas en la solera del techo** por movimiento térmico
+- **Drenaje bloqueado** causando encharcamiento
+- **Juntas de baldosas de terraza** permitiendo penetración de agua
+
+### Tuberías Subterráneas
+
+Tuberías de jardín y suministro:
+- **Suministro de red entre contador y casa**
+- **Conexiones del sistema de riego**
+- **Fontanería de piscina** (común en Lanzarote)
+- **Tuberías de recirculación de agua caliente**
+
+---
+
+## Qué Hacer Si Sospechas una Fuga
+
+### Paso 1: Monitoriza Tu Contador
+
+Registra las lecturas del contador por la mañana y por la noche durante una semana. Incluso pequeños cambios indican una fuga.
+
+### Paso 2: Inspección Visual
+
+Revisa áreas accesibles:
+- Bajo todos los fregaderos
+- Alrededor de bases de inodoros
+- Detrás de lavadoras
+- En armarios de servicios
+
+### Paso 3: Escucha Atentamente
+
+Por la noche cuando la casa está en silencio, escucha en las paredes, especialmente cerca de baños y cocinas.
+
+### Paso 4: Obtén Ayuda Profesional
+
+Si encuentras evidencia de una fuga pero no puedes localizarla, necesitas **equipo especializado**:
+- **Detección acústica** para escuchar fugas a través de paredes
+- **Imagen térmica** para ver anomalías de temperatura
+- **Gas trazador** para encontrar fugas de agujeros pequeños
+- **Mapeo de humedad** para trazar caminos del agua
+
+---
+
+## Por Qué la Detección DIY A Menudo Falla
+
+Muchos propietarios pasan semanas:
+- Abriendo paredes en ubicaciones incorrectas
+- Pagando a fontaneros para "investigar"
+- Empeorando el daño
+
+El **95% de las fugas** no pueden encontrarse sin equipo especializado. La detección profesional **cuesta menos** que el daño exploratorio.
+
+---
+
+## Confirmación de Fugas Gratis
+
+¿No estás seguro de si tienes una fuga? Nuestra **Prueba de Confirmación de Fugas Gratis** te da una respuesta definitiva antes de comprometerte con un estudio completo.
+
+[Obtén tu confirmación de fugas gratis →](/es/servicios/confirmacion-fugas-gratis)
+
+**Contacta con Canary Detect** para detección profesional de fugas en toda Lanzarote. Servimos Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, Yaiza y todas las áreas de la isla.
+
+[Contáctanos ahora →](/es/contacto)
+    `
+  },
+  {
+    id: 11,
+    slug: "facturas-agua-altas-lanzarote-causas",
+    title: "¿Qué Causa las Facturas de Agua Altas en Lanzarote? 8 Razones Por Las Que Tu Factura Es Tan Alta",
+    excerpt: "¿Sorprendido por tu factura de agua? Descubre las 8 causas comunes de facturas de agua altas en Lanzarote—desde fugas ocultas hasta válvulas de flotador defectuosas.",
+    date: "2026-02-01",
+    author: "Canary Detect",
+    category: "Ahorro de Agua",
+    image: waterMeterImg,
+    metaTitle: "Facturas de Agua Altas Lanzarote | 8 Causas Comunes",
+    metaDescription: "¿Por qué es tan alta tu factura de agua? Descubre 8 causas de facturas de agua caras en Lanzarote—fugas ocultas, válvulas defectuosas y más.",
+    keywords: "facturas agua altas Lanzarote, causas factura agua cara, factura agua demasiado alta, contador agua girando, fuga causando factura alta, reducir factura agua Lanzarote",
+    readTime: 9,
+    content: `
+## ¿Por Qué Es Tan Alta Mi Factura de Agua?
+
+Abrir una factura de agua inesperadamente alta es estresante. En Lanzarote, donde el agua es preciosa y cara, un pico en tu factura exige investigación inmediata.
+
+Después de más de 10 años ayudando a propietarios en Lanzarote, hemos identificado las **8 causas más comunes** de facturas de agua altas—y qué puedes hacer con cada una.
+
+## 1. Fugas de Agua Ocultas (Lo Más Común)
+
+La causa #1 de facturas de agua altas es una **fuga que no puedes ver**:
+
+- **Fugas de tuberías subterráneas** (entre contador y casa)
+- **Fugas detrás de paredes** (tuberías de baño y cocina)
+- **Fugas bajo suelo** (especialmente en propiedades con suelo radiante)
+- **Fugas de piscina** (extremadamente comunes en Lanzarote)
+
+### ¿Cuánto Puede Costar una Fuga?
+
+| Tamaño de Fuga | Litros Perdidos/Día | Coste Mensual (aprox) |
+|----------------|---------------------|----------------------|
+| Grifo goteando | 20L | €5 |
+| Inodoro corriendo | 400L | €100 |
+| Grieta de 1mm en tubería | 1.000L | €250 |
+| Tubería rota | 5.000L+ | €1.000+ |
+
+**Una sola fuga oculta puede duplicar o triplicar tu factura.**
+
+### La Prueba del Contador
+
+1. Cierra todas las salidas de agua
+2. Revisa el indicador de fugas de tu contador (dial pequeño)
+3. Si se mueve, tienes una fuga
+
+[Aprende más sobre el comportamiento del contador de agua →](/es/blog/contador-agua-girando-grifos-cerrados)
+
+## 2. Válvula de Flotador del Aljibe Defectuosa
+
+En Lanzarote, la mayoría de los hogares usan un **aljibe** (tanque de agua subterráneo) con una válvula de flotador. Cuando esta válvula falla:
+
+- El agua fluye continuamente al tanque
+- El exceso se desborda al suelo (de forma invisible)
+- Tu contador funciona constantemente
+- Tu factura se dispara
+
+### Señales de una Válvula de Flotador Defectuosa
+
+- Contador de agua girando incluso cuando la casa está vacía
+- Aljibe siempre lleno pero el contador sigue funcionando
+- Suelo húmedo cerca de la ubicación del aljibe
+- La bomba no se necesita tan a menudo (el tanque se mantiene lleno)
+
+Esto a menudo se **diagnostica erróneamente como una fuga en tuberías**. [Entiende tu sistema de aljibe →](/es/blog/domina-tu-sistema-de-agua-lanzarote)
+
+## 3. Inodoros con Fugas o Corriendo
+
+Los inodoros son desperdiciadores de agua silenciosos:
+
+- **Fallo de la válvula de descarga** (lo más común)
+- **Goteo continuo** hacia la taza
+- **Descargas fantasma** (el inodoro se rellena solo)
+- **Válvula de llenado atascada abierta**
+
+### La Prueba del Tinte del Inodoro
+
+1. Añade colorante alimentario a la cisterna
+2. Espera 10 minutos sin tirar de la cadena
+3. Si aparece color en la taza, la válvula de descarga está fugando
+
+Un inodoro corriendo desperdicia **10.000-50.000 litros al mes**.
+
+## 4. Fugas de Piscina
+
+Lanzarote tiene miles de piscinas privadas, y las **fugas de piscina son extremadamente comunes**:
+
+- Grietas en el vaso por movimiento del suelo
+- Fallos en juntas de fontanería
+- Fallos en sellos de nichos de focos
+- Fugas en conexiones del skimmer
+
+### Señales de Fuga de Piscina
+
+- Rellenar más de una vez a la semana
+- Aumento del consumo de productos químicos
+- Manchas húmedas alrededor del área de la piscina
+- Bomba perdiendo cebado o mostrando burbujas de aire
+
+[Aprende cómo comprobar fugas de piscina →](/es/blog/como-detectar-fugas-en-piscinas-lanzarote)
+
+## 5. Fugas en Sistema de Riego
+
+Los sistemas de riego de jardín a menudo fugan sin ser notados:
+
+- **Cabezales de aspersores rotos** (enterrados por plantas)
+- **Líneas de goteo agrietadas** (degradadas por el sol)
+- **Conexiones fallidas** en válvulas de control
+- **Fugas en línea principal** subterránea
+
+### Señales de Advertencia
+
+- Parches marrones alternando con áreas muy verdes
+- Puntos empapados en el césped cuando no estás regando
+- Caída de presión en zonas de riego
+- Controlador mostrando tiempos de funcionamiento más cortos de lo programado
+
+## 6. Fugas de Electrodomésticos
+
+Los electrodomésticos del hogar pueden fugar lentamente:
+
+- **Lavadoras** (conexiones de manguera de entrada)
+- **Lavavajillas** (conexiones de desagüe)
+- **Calentadores de agua** (válvulas de alivio de presión)
+- **Fabricadores de hielo del frigorífico** (línea de agua)
+
+Estos a menudo fugan hacia espacios ocultos—bajo suelos o detrás de muebles.
+
+## 7. Grifos y Duchas Goteando
+
+Fácil de ignorar pero costoso con el tiempo:
+
+- Un grifo goteando una vez por segundo = **20 litros al día**
+- Las duchas mezcladoras a menudo gotean por fallo del cartucho
+- Los grifos exteriores frecuentemente se olvidan
+
+### Solución Rápida
+
+Reemplaza las arandelas o cartuchos del grifo—normalmente una reparación de €5-20 que puede ahorrar €50+ al año.
+
+## 8. Errores de Lectura del Contador o Problemas de Facturación
+
+A veces el problema no es tu consumo de agua:
+
+- **Facturas estimadas** que cobran de más
+- **Errores en la lectura del contador**
+- **Contador de agua defectuoso** (raro pero posible)
+- **Cambios de tarifa** de los que no te notificaron
+
+### Qué Hacer
+
+1. Compara tu lectura del contador con la factura
+2. Solicita una prueba de precisión del contador si sospechas
+3. Comprueba cambios de tarifa en la web de Canal Gestión
+
+---
+
+## Cómo Investigar Facturas Altas
+
+### Paso 1: Revisa Tu Contador
+
+Registra la lectura, no uses agua durante 2 horas, comprueba de nuevo. Cualquier cambio = fuga.
+
+### Paso 2: Inspecciona Áreas Visibles
+
+- Revisa todos los grifos, inodoros y tuberías visibles
+- Mira bajo fregaderos y detrás de electrodomésticos
+- Inspecciona grifos exteriores y riego
+
+### Paso 3: Revisa Tu Piscina (Si Aplica)
+
+Realiza la prueba del cubo para descartar fugas de piscina.
+
+### Paso 4: Considera Tu Aljibe
+
+Si tienes un sistema de aljibe, la válvula de flotador es un sospechoso principal.
+
+### Paso 5: Obtén Detección Profesional
+
+Si no puedes encontrar la causa, necesitas equipo especializado:
+- **Detección acústica** para fugas de tuberías
+- **Imagen térmica** para caminos de agua ocultos
+- **Pruebas de presión** para sistemas de fontanería
+
+---
+
+## Consejos de Prevención
+
+### Mantenimiento Regular
+
+- **Anualmente**: Revisa la válvula de flotador del aljibe
+- **Mensualmente**: Camina alrededor de la propiedad buscando manchas húmedas
+- **Semanalmente**: Comprueba la lectura del contador de agua
+
+### Monitoriza Tus Facturas
+
+Mantén un registro del uso mensual—detectarás anomalías rápidamente.
+
+### Arregla Pequeños Problemas Rápidamente
+
+Los grifos goteando e inodoros corriendo solo empeoran.
+
+---
+
+## Confirmación de Fugas Gratis
+
+Si sospechas que una fuga oculta está causando facturas altas, obtén certeza con nuestra **Prueba de Confirmación de Fugas Gratis**.
+
+[Obtén tu confirmación de fugas gratis →](/es/servicios/confirmacion-fugas-gratis)
+
+**Contacta con Canary Detect** para detección profesional de fugas en toda Lanzarote. Servimos Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, Yaiza y todas las áreas de la isla.
+
+[Contáctanos ahora →](/es/contacto)
+    `
   }
 ];
 
@@ -2397,7 +3587,10 @@ export const blogSlugMap: Record<string, string> = {
   "damp-walls-causes-solutions": "paredes-humedas-causas-soluciones",
   "thermal-imaging-leak-detection-explained": "imagen-termica-deteccion-fugas-explicada",
   "swimming-pool-leak-repair-cost-lanzarote": "coste-reparacion-fugas-piscina-lanzarote",
-  "emergency-leak-detection-repair-lanzarote": "deteccion-reparacion-fugas-emergencia-lanzarote"
+  "emergency-leak-detection-repair-lanzarote": "deteccion-reparacion-fugas-emergencia-lanzarote",
+  "how-to-tell-if-pool-has-leak-lanzarote": "como-saber-si-piscina-tiene-fuga-lanzarote",
+  "signs-water-leak-villa-lanzarote": "senales-fuga-agua-villa-lanzarote",
+  "high-water-bills-lanzarote-causes": "facturas-agua-altas-lanzarote-causas"
 };
 
 // Reverse slug mapping for Spanish to English
