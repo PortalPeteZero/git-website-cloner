@@ -18,8 +18,11 @@
     <link rel="manifest" href="/manifest.webmanifest">
     <meta name="theme-color" content="#0f172a">
     
-    <!-- Preload critical hero image for LCP optimization -->
-    <link rel="preload" as="image" href="/src/assets/hero/carousel-hq-scene.jpg" type="image/jpeg" fetchpriority="high">
+    <!-- 
+      NOTE: Hero image preload is handled dynamically by HeroSlider component.
+      Static preload removed because Vite transforms image paths at build time.
+      The HeroImage component uses fetchpriority="high" and loading="eager" for LCP.
+    -->
     
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
