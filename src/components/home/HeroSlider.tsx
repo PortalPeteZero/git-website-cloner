@@ -4,16 +4,11 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-// Import hero images - first image is critical for LCP
+// CRITICAL: Only import FIRST hero image eagerly for LCP
 import hqScene from "@/assets/hero/carousel-hq-scene.jpg";
-import terraceScene from "@/assets/hero/carousel-terrace.jpg";
-import photo1 from "@/assets/gallery/photo-1.jpg";
-import photo2 from "@/assets/gallery/photo-2.jpg";
-import photo3 from "@/assets/gallery/photo-3.jpg";
-import photo4 from "@/assets/gallery/photo-4.jpg";
-import photo5 from "@/assets/gallery/photo-5.jpg";
 
-const heroSlidesData = {
+// Slide content data (text only - images loaded separately)
+const getHeroSlidesData = (lazyImages: string[]) => ({
   en: [
     {
       image: hqScene,
@@ -24,7 +19,7 @@ const heroSlidesData = {
       subtext: "Is your pool losing water? Water meter running? Damp walls? We find and fix leaks fast."
     },
     {
-      image: terraceScene,
+      image: lazyImages[0] || hqScene,
       alt: "The Leaky Finders at villa terrace with pool in Lanzarote",
       title: "Villa & Pool Specialists.",
       subtitle: "The Leaky Finders.",
@@ -32,7 +27,7 @@ const heroSlidesData = {
       subtext: ""
     },
     {
-      image: photo1,
+      image: lazyImages[1] || hqScene,
       alt: "Leak detection equipment and technician Lanzarote",
       title: "Advanced Technology.",
       subtitle: "Precision Detection.",
@@ -40,7 +35,7 @@ const heroSlidesData = {
       subtext: ""
     },
     {
-      image: photo2,
+      image: lazyImages[2] || hqScene,
       alt: "Swimming pool leak detection Playa Blanca Lanzarote",
       title: "Swimming Pool Leak Detection.",
       subtitle: "Pool Losing Water?",
@@ -48,7 +43,7 @@ const heroSlidesData = {
       subtext: ""
     },
     {
-      image: photo3,
+      image: lazyImages[3] || hqScene,
       alt: "Underground pipe detection using ground-penetrating radar",
       title: "Underground Leak Detection.",
       subtitle: "Find Water Leaks Fast.",
@@ -56,7 +51,7 @@ const heroSlidesData = {
       subtext: ""
     },
     {
-      image: photo4,
+      image: lazyImages[4] || hqScene,
       alt: "Thermal imaging camera detecting hidden water leak",
       title: "Water Pipe Leak Detection.",
       subtitle: "Hidden Leak Specialists.",
@@ -64,7 +59,7 @@ const heroSlidesData = {
       subtext: ""
     },
     {
-      image: photo5,
+      image: lazyImages[5] || hqScene,
       alt: "Professional leak repair service Lanzarote",
       title: "Leak Repair Lanzarote.",
       subtitle: "Detection to Repair.",
@@ -82,7 +77,7 @@ const heroSlidesData = {
       subtext: "¿Su piscina pierde agua? ¿Contador corriendo? ¿Paredes húmedas? Encontramos y reparamos fugas rápidamente."
     },
     {
-      image: terraceScene,
+      image: lazyImages[0] || hqScene,
       alt: "Los Cazafugas en terraza de villa con piscina en Lanzarote",
       title: "Especialistas en Villas y Piscinas.",
       subtitle: "Los Cazafugas.",
@@ -90,7 +85,7 @@ const heroSlidesData = {
       subtext: ""
     },
     {
-      image: photo1,
+      image: lazyImages[1] || hqScene,
       alt: "Equipo de detección de fugas y técnico en Lanzarote",
       title: "Tecnología Avanzada.",
       subtitle: "Detección de Precisión.",
@@ -98,7 +93,7 @@ const heroSlidesData = {
       subtext: ""
     },
     {
-      image: photo2,
+      image: lazyImages[2] || hqScene,
       alt: "Detección de fugas de piscina Playa Blanca Lanzarote",
       title: "Detección de Fugas de Piscinas.",
       subtitle: "¿Su Piscina Pierde Agua?",
@@ -106,7 +101,7 @@ const heroSlidesData = {
       subtext: ""
     },
     {
-      image: photo3,
+      image: lazyImages[3] || hqScene,
       alt: "Detección de tuberías subterráneas usando radar de penetración terrestre",
       title: "Detección de Fugas Subterráneas.",
       subtitle: "Encuentre Fugas de Agua Rápido.",
@@ -114,7 +109,7 @@ const heroSlidesData = {
       subtext: ""
     },
     {
-      image: photo4,
+      image: lazyImages[4] || hqScene,
       alt: "Cámara de imagen térmica detectando fuga de agua oculta",
       title: "Detección de Fugas de Tuberías de Agua.",
       subtitle: "Especialistas en Fugas Ocultas.",
@@ -122,7 +117,7 @@ const heroSlidesData = {
       subtext: ""
     },
     {
-      image: photo5,
+      image: lazyImages[5] || hqScene,
       alt: "Servicio profesional de reparación de fugas Lanzarote",
       title: "Reparación de Fugas Lanzarote.",
       subtitle: "De la Detección a la Reparación.",
@@ -130,7 +125,7 @@ const heroSlidesData = {
       subtext: ""
     }
   ]
-};
+});
 
 // Memoized hero image component for performance
 const HeroImage = memo(({ src, alt, isFirst }: { src: string; alt: string; isFirst: boolean }) => (
@@ -151,30 +146,48 @@ HeroImage.displayName = "HeroImage";
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [imagesPreloaded, setImagesPreloaded] = useState(false);
+  const [lazyImages, setLazyImages] = useState<string[]>([]);
   const { isSpanish } = useLanguage();
   
-  const heroSlides = isSpanish ? heroSlidesData.es : heroSlidesData.en;
-
-  // Preload next slides in background after initial render
+  // Load additional images after first paint (LCP optimization)
   useEffect(() => {
-    if (imagesPreloaded) return;
+    // Delay loading non-critical images to prioritize LCP
+    const loadTimer = setTimeout(async () => {
+      try {
+        const [
+          terraceModule,
+          photo1Module,
+          photo2Module,
+          photo3Module,
+          photo4Module,
+          photo5Module
+        ] = await Promise.all([
+          import("@/assets/hero/carousel-terrace.jpg"),
+          import("@/assets/gallery/photo-1.jpg"),
+          import("@/assets/gallery/photo-2.jpg"),
+          import("@/assets/gallery/photo-3.jpg"),
+          import("@/assets/gallery/photo-4.jpg"),
+          import("@/assets/gallery/photo-5.jpg"),
+        ]);
+        
+        setLazyImages([
+          terraceModule.default,
+          photo1Module.default,
+          photo2Module.default,
+          photo3Module.default,
+          photo4Module.default,
+          photo5Module.default,
+        ]);
+      } catch (error) {
+        console.warn("Failed to load hero images:", error);
+      }
+    }, 1500); // Delay loading to prioritize first paint
     
-    // Wait for first paint, then preload other images
-    const preloadTimer = setTimeout(() => {
-      const imagesToPreload = [terraceScene, photo1, photo2, photo3, photo4, photo5];
-      imagesToPreload.forEach((src) => {
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.as = 'image';
-        link.href = src;
-        document.head.appendChild(link);
-      });
-      setImagesPreloaded(true);
-    }, 2000); // Delay prefetching to prioritize LCP
-    
-    return () => clearTimeout(preloadTimer);
-  }, [imagesPreloaded]);
+    return () => clearTimeout(loadTimer);
+  }, []);
+  
+  const heroSlidesData = getHeroSlidesData(lazyImages);
+  const heroSlides = isSpanish ? heroSlidesData.es : heroSlidesData.en;
 
   // Auto-advance slides
   useEffect(() => {
@@ -236,13 +249,13 @@ const HeroSlider = () => {
                   <br />
                   <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">{slide.subtitle}</span>
                 </h1>
-                <p className="text-slate-100 text-lg md:text-xl mb-10 leading-relaxed max-w-xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
+                <p className="text-white/90 text-lg md:text-xl mb-10 leading-relaxed max-w-xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
                   {slide.description}
                 </p>
               </motion.div>
             </AnimatePresence>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all" asChild>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all" asChild>
                 <Link to={getRoute("/contact", "/es/contacto")}>
                   {isSpanish ? "Solicitar Presupuesto Gratis" : "Get a Free Quote"}
                 </Link>

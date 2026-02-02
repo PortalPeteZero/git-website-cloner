@@ -3,39 +3,21 @@ import { Droplets, Search, Cable, Waves, CircleDot, Wrench, Thermometer } from "
 import ServiceCardLite from "./ServiceCardLite";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-// Import service hero images
+// Only import FIRST image per service for initial render (LCP optimization)
+// Gallery images are loaded lazily on service detail pages
 import drainDetectionImg from "@/assets/services/drain-detection.jpg";
 import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg";
 import undergroundDetectionImg from "@/assets/services/underground-detection.jpg";
-import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg";
 import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg";
 import leakRepairImg from "@/assets/services/leak-repair.jpg";
-
-// Import gallery images for carousels
-import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
-import drainDetection3 from "@/assets/services/gallery/drain-detection-3.jpg";
-import drainDetection4 from "@/assets/services/gallery/drain-detection-4.jpg";
-import drainDetection5 from "@/assets/services/gallery/drain-detection-5.jpg";
-import drainDetection6 from "@/assets/services/gallery/drain-detection-6.jpg";
-import drainDetection7 from "@/assets/services/gallery/drain-detection-7.jpg";
-import drainDetection8 from "@/assets/services/gallery/drain-detection-8.jpg";
-import pipeInspection2 from "@/assets/services/gallery/pipe-inspection-2.jpg";
-import pipeInspection3 from "@/assets/services/gallery/pipe-inspection-3.jpg";
-import poolLeak7 from "@/assets/services/gallery/pool-leak-7.jpg";
-import poolLeak8 from "@/assets/services/gallery/pool-leak-8.jpg";
-import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
-import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
-import leakRepairBa1 from "@/assets/services/gallery/leak-repair-ba-1.jpg";
-import leakRepairBa2 from "@/assets/services/gallery/leak-repair-ba-2.jpg";
-import leakRepairBa3 from "@/assets/services/gallery/leak-repair-ba-3.jpg";
-import leakRepairBa4 from "@/assets/services/gallery/leak-repair-ba-4.jpg";
-import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
 import thermalUndergroundLeak from "@/assets/blog/thermal-underground-leak.jpg";
-import risingDampWall from "@/assets/blog/rising-damp-wall.jpg";
+// Use drain-detection-4.jpg for water leak as it shows acoustic detection
+import waterLeakImg from "@/assets/services/gallery/drain-detection-4.jpg";
 
 const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useLanguage();
 
+  // Simplified service data with single image per card (LCP optimization)
   const services = [
     {
       title: isSpanish ? "Detección de Desagües" : "Drain Detection",
@@ -44,7 +26,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
         : "Locate and identify drainage issues using advanced camera inspection and tracing technology.",
       icon: Search,
       href: isSpanish ? "/es/servicios/deteccion-desagues" : "/services/drain-detection",
-      images: [drainDetectionImg, drainDetection2, drainDetection3],
+      image: drainDetectionImg,
       imageAlt: isSpanish ? "Inspección de desagües con cámara CCTV Lanzarote" : "CCTV drain inspection camera Lanzarote",
     },
     {
@@ -54,7 +36,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
         : "CCTV pipe inspection to assess the condition of your pipes and identify blockages or damage.",
       icon: CircleDot,
       href: isSpanish ? "/es/servicios/inspeccion-tuberias" : "/services/pipe-inspection",
-      images: [pipeInspectionImg, pipeInspection2, pipeInspection3],
+      image: pipeInspectionImg,
       imageAlt: isSpanish ? "Equipo de inspección de tuberías con cámara" : "Pipe inspection camera equipment",
     },
     {
@@ -64,7 +46,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
         : "Need to find buried pipes before digging? Locate underground pipes, cables, and utilities with ground-penetrating radar.",
       icon: Cable,
       href: isSpanish ? "/es/servicios/deteccion-subterranea" : "/services/underground-detection",
-      images: [undergroundDetectionImg, undergroundDetection6],
+      image: undergroundDetectionImg,
       imageAlt: isSpanish ? "Detección de tuberías con radar de penetración terrestre" : "Ground penetrating radar pipe detection",
     },
     {
@@ -74,7 +56,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
         : "Damp walls? High water bills? Meter running when taps are off? Find hidden water leaks using acoustic and thermal imaging.",
       icon: Droplets,
       href: isSpanish ? "/es/servicios/deteccion-fugas-agua" : "/services/water-leak-detection",
-      images: [drainDetection4, drainDetection5, drainDetection6, drainDetection7, drainDetection8],
+      image: waterLeakImg,
       imageAlt: isSpanish ? "Dispositivo de escucha para detección acústica de fugas" : "Acoustic leak detection listening device",
     },
     {
@@ -84,7 +66,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
         : "Is your swimming pool losing water every day? Constant refilling? We'll find the leak and stop the water loss.",
       icon: Waves,
       href: isSpanish ? "/es/servicios/deteccion-fugas-piscinas" : "/services/pool-leak-detection",
-      images: [poolLeakDetectionImg, poolLeak8, poolLeak7],
+      image: poolLeakDetectionImg,
       imageAlt: isSpanish ? "Prueba de presión para detección de fugas de piscinas" : "Swimming pool leak detection pressure testing",
     },
     {
@@ -94,7 +76,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
         : "Found a leak? We'll fix it fast. Professional leak repair services once we've located the problem.",
       icon: Wrench,
       href: isSpanish ? "/es/servicios/reparacion-fugas" : "/services/leak-repair",
-      images: [leakRepairBa1, leakRepairBa2, leakRepairBa3, leakRepairBa4],
+      image: leakRepairImg,
       imageAlt: isSpanish ? "Servicio profesional de reparación de fugas Lanzarote" : "Professional leak repair service Lanzarote",
     },
     {
@@ -104,7 +86,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
         : "Damp walls? Peeling paint? We detect hidden moisture with infrared. Ideal before refurbishment. FREE home visit.",
       icon: Thermometer,
       href: isSpanish ? "/es/servicios/mapeo-humedad" : "/services/damp-moisture-mapping",
-      images: [thermalUndergroundLeak, risingDampWall],
+      image: thermalUndergroundLeak,
       imageAlt: isSpanish ? "Detección de humedades con cámara térmica Lanzarote" : "Thermal imaging damp detection Lanzarote",
     },
   ];
@@ -142,7 +124,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
               description={service.description}
               icon={service.icon}
               href={service.href}
-              image={service.images?.[0]}
+              image={service.image}
               imageAlt={service.imageAlt}
             />
           ))}
