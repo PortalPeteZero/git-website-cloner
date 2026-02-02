@@ -72,12 +72,15 @@ const SEOHead = forwardRef<unknown, SEOHeadProps>(({
     if (twitterImage) twitterImage.setAttribute('content', image.startsWith('http') ? image : `https://canary-detect.com${image}?v=2`);
     if (twitterUrl && canonical) twitterUrl.setAttribute('content', canonical);
     
-    // Update canonical if provided
+    // Update or create canonical tag
     if (canonical) {
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (canonicalLink) {
-        canonicalLink.setAttribute('href', canonical);
+      let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+      if (!canonicalLink) {
+        canonicalLink = document.createElement('link');
+        canonicalLink.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonicalLink);
       }
+      canonicalLink.setAttribute('href', canonical);
     }
 
     // Add/update hreflang tags
