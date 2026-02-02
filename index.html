@@ -18,6 +18,13 @@
     <link rel="manifest" href="/manifest.webmanifest">
     <meta name="theme-color" content="#0f172a">
     
+    <!-- Preload critical hero image for LCP optimization -->
+    <link rel="preload" as="image" href="/src/assets/hero/carousel-hq-scene.jpg" type="image/jpeg" fetchpriority="high">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <!-- Inline Critical CSS for instant first paint -->
     <style>
       /* Prevent flash of unstyled content and show instant loading state */
