@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
+import SEOHead from "@/components/seo/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 import { plumbingServicesData, getAllPlumbingServices } from "@/data/plumbingServicesData";
@@ -81,8 +82,11 @@ const PlumbingServices = () => {
       : "Looking for a plumber in Lanzarote? Canary Detect offers complete plumbing services: repairs, boilers, pool systems, and maintenance. 2-Year Guarantee on all work.",
     // Meta optimized for search: "Plumber Lanzarote" / "Fontanero Lanzarote"
     metaTitle: isSpanish 
-      ? "Fontanero Lanzarote | Servicios de Fontanería Profesional" 
-      : "Plumber Lanzarote | Professional Plumbing Services",
+      ? "Fontanero Lanzarote | Servicios de Fontanería | Canary Detect" 
+      : "Plumber Lanzarote | Plumbing Services | Canary Detect",
+    canonical: isSpanish 
+      ? "https://canary-detect.com/es/servicios-fontaneria" 
+      : "https://canary-detect.com/plumbing-services",
     metaDescription: isSpanish
       ? "Fontanero profesional en Lanzarote. Reparaciones urgentes, calderas, fontanería de piscinas, mejoras de sistema. Garantía 2 años. Llámenos: 711 051 071."
       : "Professional plumber in Lanzarote. Emergency repairs, boilers, pool plumbing, system upgrades. 2-Year Guarantee. Call us: 711 051 071.",
@@ -128,20 +132,13 @@ const PlumbingServices = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title={content.metaTitle}
+        description={content.metaDescription}
+        canonical={content.canonical}
+        type="service"
+      />
       <Helmet>
-        <title>{content.metaTitle}</title>
-        <meta name="description" content={content.metaDescription} />
-        <link rel="canonical" href={isSpanish ? "https://canary-detect.com/es/servicios-fontaneria" : "https://canary-detect.com/plumbing-services"} />
-        <link rel="alternate" hrefLang="en" href="https://canary-detect.com/plumbing-services" />
-        <link rel="alternate" hrefLang="es" href="https://canary-detect.com/es/servicios-fontaneria" />
-        <meta property="og:title" content={content.metaTitle} />
-        <meta property="og:description" content={content.metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={isSpanish ? "https://canary-detect.com/es/servicios-fontaneria" : "https://canary-detect.com/plumbing-services"} />
-        <meta property="og:image" content="https://canary-detect.com/og-image.jpg?v=2" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={content.metaTitle} />
-        <meta name="twitter:description" content={content.metaDescription} />
         <script type="application/ld+json">
           {JSON.stringify(servicesSchema)}
         </script>
