@@ -73,17 +73,19 @@ const PlumbingServices = () => {
   };
   
   const content = {
-    title: isSpanish ? "Servicios de Fontanería y Mantenimiento" : "Plumbing & Maintenance Services",
-    subtitle: isSpanish ? "Más Allá de la Detección de Fugas" : "Beyond Leak Detection",
+    // H1 optimized for "Plumber Lanzarote" / "Fontanero Lanzarote" keywords
+    title: isSpanish ? "Fontanero en Lanzarote" : "Plumber in Lanzarote",
+    subtitle: isSpanish ? "Servicios Profesionales de Fontanería" : "Professional Plumbing Services",
     description: isSpanish 
-      ? "Canary Detect no solo encuentra fugas—las reparamos y realizamos una gama completa de trabajos de fontanería y mantenimiento en toda Lanzarote. Respaldados por nuestra Garantía de 2 Años."
-      : "Canary Detect doesn't just find leaks—we fix them and carry out a full range of plumbing and maintenance work across Lanzarote. Backed by our 2-Year Guarantee.",
+      ? "¿Busca un fontanero en Lanzarote? Canary Detect ofrece servicios completos de fontanería: reparaciones, calderas, sistemas de piscinas y mantenimiento. Garantía de 2 años en todos los trabajos."
+      : "Looking for a plumber in Lanzarote? Canary Detect offers complete plumbing services: repairs, boilers, pool systems, and maintenance. 2-Year Guarantee on all work.",
+    // Meta optimized for search: "Plumber Lanzarote" / "Fontanero Lanzarote"
     metaTitle: isSpanish 
-      ? "Servicios Fontanería Lanzarote | Canary Detect" 
-      : "Plumbing Services Lanzarote | Canary Detect",
+      ? "Fontanero Lanzarote | Servicios de Fontanería Profesional" 
+      : "Plumber Lanzarote | Professional Plumbing Services",
     metaDescription: isSpanish
-      ? "Servicios profesionales de fontanería en Lanzarote. Reparaciones, calderas, mejoras de sistema, fontanería de piscinas. Garantía 2 años."
-      : "Professional plumbing services in Lanzarote. Repairs, boilers, system upgrades, pool plumbing. 2-Year Guarantee.",
+      ? "Fontanero profesional en Lanzarote. Reparaciones urgentes, calderas, fontanería de piscinas, mejoras de sistema. Garantía 2 años. Llámenos: 711 051 071."
+      : "Professional plumber in Lanzarote. Emergency repairs, boilers, pool plumbing, system upgrades. 2-Year Guarantee. Call us: 711 051 071.",
     cta: isSpanish ? "Solicitar Presupuesto" : "Get a Quote",
     learnMore: isSpanish ? "Más Información" : "Learn More",
     guaranteeTitle: isSpanish ? "Garantía de 2 Años" : "2-Year Guarantee",
@@ -92,12 +94,12 @@ const PlumbingServices = () => {
       : "All our plumbing work is backed by a comprehensive 2-year guarantee.",
     fastResponseTitle: isSpanish ? "Respuesta Rápida" : "Fast Response",
     fastResponseText: isSpanish
-      ? "Servicio de emergencia disponible en todo Lanzarote para problemas urgentes de fontanería."
-      : "Emergency service available across Lanzarote for urgent plumbing issues.",
+      ? "Fontanero de emergencia disponible en todo Lanzarote para problemas urgentes."
+      : "Emergency plumber available across Lanzarote for urgent issues.",
     expertTitle: isSpanish ? "Experiencia en Detección de Fugas" : "Leak Detection Expertise",
     expertText: isSpanish
-      ? "Nuestra formación en detección de fugas significa que entendemos los sistemas de fontanería mejor que la mayoría."
-      : "Our leak detection background means we understand plumbing systems better than most."
+      ? "Nuestra formación en detección de fugas significa que entendemos los sistemas de fontanería mejor que la mayoría de fontaneros."
+      : "Our leak detection background means we understand plumbing systems better than most plumbers."
   };
 
   const currentImage = heroImages[currentSlide];
