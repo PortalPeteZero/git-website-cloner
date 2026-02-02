@@ -4,13 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle, Search, CircleDot, Atom, AudioLines, Thermometer, Mic, Shield, FileText, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { CheckCircle, Search, CircleDot, Atom, AudioLines, Thermometer, Mic, Shield, FileText, X, ChevronLeft, ChevronRight, HelpCircle } from "lucide-react";
 import FreeLeakConfirmationSection from "@/components/services/FreeLeakConfirmationSection";
 import SEOHead from "@/components/seo/SEOHead";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getEnglishSlug, getSpanishSlug, getContactPath, getTechnologyPath, getServicesBasePath } from "@/i18n/routes";
 import { getServicesData, getServiceUIText, waterLeakCarouselImages, undergroundCarouselImages, ServiceData } from "@/data/servicesData";
+import { getServiceFaqs } from "@/data/serviceFaqsData";
 import LoadingFallback from "@/components/LoadingFallback";
+import FAQSchema from "@/components/seo/FAQSchema";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -533,6 +536,59 @@ const ServiceDetail = () => {
           )}
         </div>
       </section>
+
+      {/* Service FAQ Section */}
+      {(() => {
+        const serviceFaqs = getServiceFaqs(englishSlug || '', isSpanish);
+        if (serviceFaqs.length === 0) return null;
+        
+        return (
+          <section className="py-12 md:py-16 bg-muted section-divider">
+            <FAQSchema faqs={serviceFaqs} />
+            <div className="container mx-auto px-4">
+              <motion.div {...revealOnMount} className="max-w-3xl mx-auto">
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-widest mb-2">
+                    <HelpCircle className="h-4 w-4" />
+                    {isSpanish ? "Preguntas Frecuentes" : "FAQ"}
+                  </div>
+                  <h2 className="font-heading text-2xl md:text-3xl font-bold">
+                    {isSpanish 
+                      ? `Preguntas sobre ${service.title}`
+                      : `Questions about ${service.title}`}
+                  </h2>
+                </div>
+                
+                <Accordion type="single" collapsible className="w-full">
+                  {serviceFaqs.map((faq, index) => (
+                    <AccordionItem key={index} value={`faq-${index}`}>
+                      <AccordionTrigger className="text-left font-heading font-semibold hover:text-primary">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground leading-relaxed">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+                
+                <div className="text-center mt-8">
+                  <p className="text-muted-foreground mb-4">
+                    {isSpanish 
+                      ? "¿Tiene más preguntas? Estamos aquí para ayudar."
+                      : "Have more questions? We're here to help."}
+                  </p>
+                  <Button asChild>
+                    <Link to={getContactPath(isSpanish)}>
+                      {isSpanish ? "Contáctenos" : "Contact Us"}
+                    </Link>
+                  </Button>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* Lightbox Modal */}
       <AnimatePresence>
