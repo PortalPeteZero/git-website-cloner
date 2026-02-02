@@ -24,11 +24,14 @@
       The HeroImage component uses fetchpriority="high" and loading="eager" for LCP.
     -->
     
-    <!-- Preconnect to external resources -->
+    <!-- Preconnect to external resources - prioritize fonts for LCP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Inline Critical CSS for instant first paint -->
+    <!-- DNS prefetch for analytics if used -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Inline Critical CSS for instant first paint + font-display optimization -->
     <style>
       /* Prevent flash of unstyled content and show instant loading state */
       body { 
