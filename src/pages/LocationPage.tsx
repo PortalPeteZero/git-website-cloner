@@ -81,6 +81,16 @@ const LocationPage = () => {
                 <span className="text-primary font-semibold text-sm uppercase tracking-widest">{uiText.sections.localExperts}</span>
                 <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-6">{uiText.sections.servicesIn(locationData.name)}</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">{locationData.areaDescription}</p>
+                
+                {/* Local Challenges - NEW expanded content */}
+                <div className="bg-muted/50 border border-border rounded-lg p-5 mb-6">
+                  <h3 className="font-heading font-bold text-lg mb-3 flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-primary" />
+                    {uiText.sections.localChallenges}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">{locationData.localChallenges}</p>
+                </div>
+
                 <div className="grid sm:grid-cols-2 gap-4 mt-8">
                   {[uiText.features.noFindNoFee, uiText.features.equipment, uiText.features.accuracy, uiText.features.reports].map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
@@ -99,10 +109,26 @@ const LocationPage = () => {
                   <div className="flex items-center gap-3"><Phone className="h-5 w-5 text-primary" /><a href="tel:+34711051071" className="hover:text-primary transition-colors">+34 711 051 071</a></div>
                   <div className="flex items-center gap-3"><Clock className="h-5 w-5 text-primary" /><span className="text-sm">{uiText.sections.hours}</span></div>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-3 mb-6">
                   <Button className="w-full" asChild><Link to={getContactPath(isSpanish)}>{uiText.cta.requestQuote}</Link></Button>
                   <Button variant="outline" className="w-full" asChild><a href="tel:+34711051071">{uiText.cta.callNow}</a></Button>
                 </div>
+                
+                {/* Related Articles - NEW internal links */}
+                {locationData.relatedLinks && locationData.relatedLinks.length > 0 && (
+                  <div className="border-t pt-5">
+                    <h4 className="font-semibold text-sm mb-3">{uiText.sections.relatedArticles}</h4>
+                    <ul className="space-y-2">
+                      {locationData.relatedLinks.map((link, idx) => (
+                        <li key={idx}>
+                          <Link to={link.href} className="text-sm text-primary hover:underline">
+                            → {link.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </motion.div>
             </div>
           </div>
