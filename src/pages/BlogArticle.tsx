@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
@@ -194,14 +195,49 @@ const BlogArticle = () => {
     );
   }
 
+  // Return true 404 page for invalid blog slugs (not a redirect which causes soft 404)
   if (notFound && !staticArticle) {
-    return <Navigate to={blogBasePath} replace />;
+    return (
+      <Layout>
+        <SEOHead
+          title={isSpanish ? "Artículo no encontrado | Canary Detect" : "Article Not Found | Canary Detect"}
+          description={isSpanish ? "El artículo que busca no existe." : "The article you're looking for doesn't exist."}
+          canonical={`https://canary-detect.com${blogBasePath}`}
+        />
+        <div className="min-h-[60vh] flex flex-col items-center justify-center bg-muted px-4">
+          <h1 className="text-4xl font-bold mb-4">404</h1>
+          <p className="text-xl text-muted-foreground mb-6 text-center">
+            {isSpanish ? 'Artículo no encontrado' : 'Article not found'}
+          </p>
+          <Link to={blogBasePath} className="text-primary underline hover:text-primary/90">
+            {isSpanish ? 'Ver todos los artículos' : 'View all articles'}
+          </Link>
+        </div>
+      </Layout>
+    );
   }
 
   // Use static article or database post
   const article = staticArticle || dbPost;
   if (!article) {
-    return <Navigate to={blogBasePath} replace />;
+    return (
+      <Layout>
+        <SEOHead
+          title={isSpanish ? "Artículo no encontrado | Canary Detect" : "Article Not Found | Canary Detect"}
+          description={isSpanish ? "El artículo que busca no existe." : "The article you're looking for doesn't exist."}
+          canonical={`https://canary-detect.com${blogBasePath}`}
+        />
+        <div className="min-h-[60vh] flex flex-col items-center justify-center bg-muted px-4">
+          <h1 className="text-4xl font-bold mb-4">404</h1>
+          <p className="text-xl text-muted-foreground mb-6 text-center">
+            {isSpanish ? 'Artículo no encontrado' : 'Article not found'}
+          </p>
+          <Link to={blogBasePath} className="text-primary underline hover:text-primary/90">
+            {isSpanish ? 'Ver todos los artículos' : 'View all articles'}
+          </Link>
+        </div>
+      </Layout>
+    );
   }
 
   const isStatic = !!staticArticle;
@@ -239,33 +275,65 @@ const BlogArticle = () => {
       />
 
       {/* Article Schema */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": title,
-          "description": metaDescription,
-          "image": image,
-          "author": {
-            "@type": "Person",
-            "name": author
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Canary Detect",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://canary-detect.com/favicon.png"
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": title,
+            "description": metaDescription,
+            "image": image,
+            "author": {
+              "@type": "Person",
+              "name": author
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Canary Detect",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://canary-detect.com/favicon.png"
+              }
+            },
+            "datePublished": date,
+            "dateModified": date,
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": canonicalUrl
             }
-          },
-          "datePublished": date,
-          "dateModified": date,
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": canonicalUrl
-          }
-        })}
-      </script>
+          })}
+        </script>
+      </Helmet>
+
+      {/* Video Schema for articles with embedded videos */}
+      {content.includes('/videos/emergency-leak-video.mp4') && (
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "VideoObject",
+              "name": isSpanish 
+                ? "Detección de Fugas de Emergencia en Lanzarote - Canary Detect" 
+                : "Emergency Leak Detection in Lanzarote - Canary Detect",
+              "description": isSpanish
+                ? "Vea cómo nuestro equipo localiza y repara fugas de agua de emergencia en Lanzarote usando tecnología acústica avanzada."
+                : "Watch how our team locates and repairs emergency water leaks in Lanzarote using advanced acoustic technology.",
+              "thumbnailUrl": "https://canary-detect.com/og-image.jpg",
+              "uploadDate": "2026-01-28",
+              "contentUrl": "https://canary-detect.com/videos/emergency-leak-video.mp4",
+              "duration": "PT1M30S",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Canary Detect",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://canary-detect.com/favicon.png"
+                }
+              }
+            })}
+          </script>
+        </Helmet>
+      )}
 
       {/* Hero Section */}
       <section className="relative min-h-[40vh] md:min-h-[50vh] flex items-start overflow-hidden">

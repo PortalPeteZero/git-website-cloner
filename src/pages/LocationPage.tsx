@@ -1,11 +1,12 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone, MapPin, Clock } from "lucide-react";
 import SEOHead from "@/components/seo/SEOHead";
 import { useTranslation } from "@/i18n/LanguageContext";
-import { getContactPath } from "@/i18n/routes";
+import { getContactPath, getHomePath } from "@/i18n/routes";
 import { getLocationsData, getLocationUIText } from "@/data/locationsData";
 import titleBg from "@/assets/title-bg.jpg";
 
@@ -21,15 +22,34 @@ const LocationPage = () => {
     ? `https://canary-detect.com/es/ubicaciones/${location}`
     : `https://canary-detect.com/locations/${location}`;
 
+  // Return proper 404 page for invalid location slugs
   if (!locationData) {
+    const notFoundContent = {
+      title: isSpanish ? "Ubicación no encontrada | Canary Detect" : "Location Not Found | Canary Detect",
+      description: isSpanish 
+        ? "La ubicación que busca no existe. Damos servicio a todo Lanzarote."
+        : "The location you're looking for doesn't exist. We serve all of Lanzarote.",
+    };
+    
     return (
       <Layout>
+        <Helmet>
+          <title>{notFoundContent.title}</title>
+          <meta name="description" content={notFoundContent.description} />
+          <meta name="robots" content="noindex, follow" />
+        </Helmet>
         <div className="container mx-auto px-4 py-24 text-center">
-          <h1 className="font-heading text-4xl font-bold mb-4">{uiText.notFound.title}</h1>
+          <h1 className="text-6xl font-bold text-primary mb-2">404</h1>
+          <h2 className="font-heading text-2xl font-bold mb-4">{uiText.notFound.title}</h2>
           <p className="text-muted-foreground mb-8">{uiText.notFound.description}</p>
-          <Button asChild>
-            <Link to={getContactPath(isSpanish)}>{uiText.notFound.button}</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild>
+              <Link to={getContactPath(isSpanish)}>{uiText.notFound.button}</Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link to={getHomePath(isSpanish)}>{isSpanish ? 'Volver al Inicio' : 'Return Home'}</Link>
+            </Button>
+          </div>
         </div>
       </Layout>
     );
