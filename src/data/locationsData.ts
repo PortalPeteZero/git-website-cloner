@@ -219,6 +219,132 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Paredes húmedas en casas antiguas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
         seo: { title: "Detección Fugas Teguise | Históricas y Rurales", description: "Detección de fugas Teguise. Edificios históricos, fincas rurales, propiedades costeras. Métodos no invasivos. +34 711 051 071", keywords: "detección fugas Teguise, fugas agua Teguise, fugas edificios históricos Lanzarote, fugas rurales Teguise, Costa Teguise fugas" }
+      },
+      "puerto-calero": {
+        name: "Puerto Calero",
+        slug: "puerto-calero",
+        description: "Servicios profesionales de detección de fugas en Puerto Calero, la exclusiva zona de marina de Lanzarote.",
+        heroText: "Las villas de lujo y propiedades de marina de Puerto Calero necesitan detección de fugas fiable. Proporcionamos servicios especializados para este prestigioso desarrollo.",
+        areaDescription: "Puerto Calero es el desarrollo de marina más exclusivo de Lanzarote, con villas de alta gama, apartamentos y propiedades comerciales. Las propiedades de la marina suelen tener sistemas de fontanería complejos incluyendo piscinas, spas y riego. Nuestra proximidad y equipo profesional garantizan tiempos de respuesta rápidos.",
+        localChallenges: "Las propiedades de marina de Puerto Calero enfrentan desafíos únicos: proximidad al agua salada que acelera la corrosión en tuberías de cobre y accesorios de latón; sistemas complejos de piscina y spa con múltiples bombas de circulación; riego subterráneo para jardines cuidados; y clientes prestigiosos que requieren servicio discreto y con mínima interrupción. Las propiedades de alta gama a menudo tienen sistemas de calefacción por suelo radiante donde la detección de fugas requiere experiencia en imagen térmica.",
+        nearbyAreas: ["Puerto del Carmen", "Tías", "Playa Blanca", "Arrecife"],
+        services: [
+          { title: "Detección de Fugas de Agua Puerto Calero", description: "Detección experta de fugas para las villas de lujo de Puerto Calero. Métodos no invasivos con imagen térmica y acústica.", href: `${serviceBasePath}/deteccion-fugas-agua`, icon: Droplets },
+          { title: "Detección de Fugas en Piscinas Puerto Calero", description: "Detección de fugas en piscinas y spas de Puerto Calero. Localización completa con informes profesionales.", href: `${serviceBasePath}/deteccion-fugas-piscinas`, icon: Waves },
+          { title: "Detección Subterránea Puerto Calero", description: "Detección de tuberías y servicios subterráneos en propiedades de marina. Esencial antes de jardinería o construcción.", href: `${serviceBasePath}/deteccion-subterranea`, icon: Search },
+          { title: "Reparación de Fugas Puerto Calero", description: "Reparación profesional de fugas para villas de Puerto Calero. Servicio discreto para propiedades prestigiosas.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
+        ],
+        relatedLinks: [
+          { title: "Guía detección fugas en piscinas", href: `${blogBasePath}/como-detectar-fugas-en-piscinas-lanzarote` },
+          { title: "Coste reparación fugas piscina", href: `${blogBasePath}/coste-reparacion-fugas-piscina-lanzarote` },
+          { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
+        ],
+        seo: { title: "Detección Fugas Puerto Calero | Marina | Canary Detect", description: "Detección de fugas Puerto Calero. Villas de lujo marina, piscinas, spas. Servicio profesional discreto. +34 711 051 071", keywords: "detección fugas Puerto Calero, fugas agua Puerto Calero, fugas piscina marina Puerto Calero, fugas villa Lanzarote" }
+      },
+      "femes": {
+        name: "Femés",
+        slug: "femes",
+        description: "Servicios profesionales de detección de fugas en Femés, un pueblo tradicional de montaña en el sur de Lanzarote.",
+        heroText: "Femés y las propiedades rurales circundantes necesitan detección de fugas especializada. Nuestro conocimiento local y equipo profesional dan servicio a este pintoresco pueblo.",
+        areaDescription: "Femés es un pequeño pueblo tradicional situado en las montañas de Ajaches sobre Playa Blanca. La zona cuenta con casas canarias tradicionales, fincas rurales y propiedades renovadas con vistas impresionantes. Muchas propiedades tienen sistemas de fontanería antiguos y dependen de aljibes para almacenamiento de agua. Nuestra proximidad (base en Playa Blanca) significa tiempos de respuesta rápidos.",
+        localChallenges: "Las propiedades de Femés presentan desafíos rurales: largas tuberías de suministro de agua desde la red creando problemas de presión; aljibes tradicionales de piedra con grietas capilares; acceso limitado por carreteras para vehículos de servicio; y propiedades a menudo vacías durante períodos prolongados permitiendo que pequeñas fugas causen daños significativos. El microclima de montaña trae más humedad que las zonas costeras, haciendo el diagnóstico de humedad más complejo.",
+        nearbyAreas: ["Playa Blanca", "Yaiza", "Las Breñas", "Uga"],
+        services: [
+          { title: "Detección de Fugas de Agua Femés", description: "Detección especializada de fugas para propiedades del pueblo de Femés. Servicio experto para casas tradicionales y fincas.", href: `${serviceBasePath}/deteccion-fugas-agua`, icon: Droplets },
+          { title: "Detección Subterránea Femés", description: "Detección de tuberías subterráneas para propiedades rurales de Femés. Localice tuberías enterradas antes de excavar.", href: `${serviceBasePath}/deteccion-subterranea`, icon: Search },
+          { title: "Detección de Fugas en Piscinas Femés", description: "Detección de fugas en piscinas privadas de la zona de Femés. Servicio completo de localización.", href: `${serviceBasePath}/deteccion-fugas-piscinas`, icon: Waves },
+          { title: "Reparación de Fugas Femés", description: "Reparación profesional de fugas en Femés. Tuberías de agua, aljibes y sistemas subterráneos.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
+        ],
+        relatedLinks: [
+          { title: "Guía de aljibes y cisternas", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
+          { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
+          { title: "Paredes húmedas en casas antiguas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
+        ],
+        seo: { title: "Detección Fugas Femés | Propiedades Rurales | Canary Detect", description: "Detección de fugas Femés. Casas tradicionales, fincas, aljibes. Expertos locales. +34 711 051 071", keywords: "detección fugas Femés, fugas agua Femés Lanzarote, detección fugas finca, detección fugas rural Lanzarote" }
+      },
+      "las-brenas": {
+        name: "Las Breñas",
+        slug: "las-brenas",
+        description: "Detección profesional de fugas en Las Breñas, un tranquilo pueblo agrícola cerca de Yaiza.",
+        heroText: "Las Breñas y las propiedades rurales cercanas necesitan detección de fugas fiable. Proporcionamos servicios expertos para esta pacífica comunidad agrícola.",
+        areaDescription: "Las Breñas es un pequeño pueblo agrícola entre Yaiza y Femés, conocido por su herencia agrícola tradicional. Las propiedades incluyen casas de pueblo tradicionales, fincas rurales y casas de campo renovadas. Muchas dependen de cisternas y tienen largas tuberías de suministro que requieren detección especializada.",
+        localChallenges: "Las propiedades de Las Breñas enfrentan desafíos de zona agrícola: sistemas de riego por goteo para cultivos y jardines con múltiples pequeños puntos de fuga; sistemas de suministro de agua compartidos entre propiedades vecinas; infraestructura envejecida con tuberías galvanizadas propensas a corrosión; y propiedades de uso estacional que requieren inspección antes y después de los períodos de cierre.",
+        nearbyAreas: ["Yaiza", "Femés", "Playa Blanca", "Uga"],
+        services: [
+          { title: "Detección de Fugas de Agua Las Breñas", description: "Detección experta de fugas para el pueblo de Las Breñas y propiedades rurales. Casas tradicionales y fincas.", href: `${serviceBasePath}/deteccion-fugas-agua`, icon: Droplets },
+          { title: "Detección Subterránea Las Breñas", description: "Detección de tuberías subterráneas para propiedades de Las Breñas. Esencial para sistemas de riego y suministro de agua.", href: `${serviceBasePath}/deteccion-subterranea`, icon: Search },
+          { title: "Detección de Fugas en Piscinas Las Breñas", description: "Detección de fugas en piscinas privadas de la zona de Las Breñas. Servicio profesional de localización.", href: `${serviceBasePath}/deteccion-fugas-piscinas`, icon: Waves },
+          { title: "Reparación de Fugas Las Breñas", description: "Reparación profesional de fugas en Las Breñas. Tuberías, sistemas de riego y reparaciones subterráneas.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
+        ],
+        relatedLinks: [
+          { title: "Guía sistema de agua Lanzarote", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
+          { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
+          { title: "Contador de agua corriendo sin usar grifos", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
+        ],
+        seo: { title: "Detección Fugas Las Breñas | Canary Detect", description: "Detección de fugas Las Breñas. Casas de pueblo, fincas, sistemas de riego. +34 711 051 071", keywords: "detección fugas Las Breñas, fugas agua Las Breñas Lanzarote, detección fugas rural, fugas finca Las Breñas" }
+      },
+      "uga": {
+        name: "Uga",
+        slug: "uga",
+        description: "Servicios profesionales de detección de fugas en Uga, un pueblo tradicional en la zona vinícola de Lanzarote.",
+        heroText: "Las propiedades tradicionales y fincas de Uga necesitan detección de fugas especializada. Proporcionamos servicios expertos en este encantador pueblo cerca de La Geria.",
+        areaDescription: "Uga es un pintoresco pueblo en el borde de la región vinícola de La Geria, conocido por su arquitectura canaria tradicional y estación de camellos. Las propiedades incluyen casas históricas de pueblo, fincas renovadas y bodegas. La herencia agrícola de la zona significa que muchas propiedades tienen sistemas complejos de riego y almacenamiento de agua.",
+        localChallenges: "Las propiedades de Uga presentan desafíos de zona vinícola: bodegas con refrigeración que crea humedad enmascarando fugas de agua; construcciones tradicionales de piedra con paredes gruesas que ocultan tuberías; riego por goteo para viñas y jardines con múltiples puntos potenciales de fuga; y edificios históricos que requieren métodos de detección cuidadosos y no invasivos para preservar su carácter.",
+        nearbyAreas: ["Yaiza", "Femés", "La Geria", "Tías", "Mácher"],
+        services: [
+          { title: "Detección de Fugas de Agua Uga", description: "Detección experta de fugas para propiedades del pueblo de Uga. Casas tradicionales, fincas y bodegas.", href: `${serviceBasePath}/deteccion-fugas-agua`, icon: Droplets },
+          { title: "Detección Subterránea Uga", description: "Detección de tuberías subterráneas y sistemas de riego en Uga. Esencial para viñedos y jardines.", href: `${serviceBasePath}/deteccion-subterranea`, icon: Search },
+          { title: "Detección de Fugas en Piscinas Uga", description: "Detección de fugas en piscinas privadas de la zona de Uga. Inspección completa con localización.", href: `${serviceBasePath}/deteccion-fugas-piscinas`, icon: Waves },
+          { title: "Reparación de Fugas Uga", description: "Reparación profesional de fugas en Uga. Reparaciones respetuosas para propiedades tradicionales.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
+        ],
+        relatedLinks: [
+          { title: "Sistemas de agua tradicionales Lanzarote", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
+          { title: "Imagen térmica para edificios antiguos", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
+          { title: "Detección de fugas subterráneas", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
+        ],
+        seo: { title: "Detección Fugas Uga | La Geria | Canary Detect", description: "Detección de fugas Uga. Pueblo tradicional, fincas, bodegas. Especialistas zona vinícola. +34 711 051 071", keywords: "detección fugas Uga, fugas agua Uga Lanzarote, detección fugas bodega, detección fugas La Geria" }
+      },
+      "tahiche": {
+        name: "Tahiche",
+        slug: "tahiche",
+        description: "Servicios profesionales de detección de fugas en Tahiche, hogar de la Fundación César Manrique.",
+        heroText: "Las propiedades residenciales y villas de Tahiche necesitan detección de fugas fiable. Proporcionamos servicios expertos en esta ubicación central de Lanzarote.",
+        areaDescription: "Tahiche es un pueblo residencial entre Costa Teguise y Arrecife, famoso como hogar de la antigua residencia de César Manrique (ahora fundación). La zona cuenta con una mezcla de casas canarias tradicionales y villas modernas. Su ubicación central significa que las propiedades conectan con la infraestructura principal de agua, aunque las propiedades más antiguas pueden tener tuberías envejecidas.",
+        localChallenges: "Las propiedades de Tahiche enfrentan desafíos del centro de la isla: casas tradicionales con fontanería adaptada creando rutas de tuberías complejas; propiedades sobre roca volcánica donde la excavación es difícil y costosa; villas modernas con sistemas de calefacción por suelo radiante que requieren experiencia en imagen térmica; y sistemas de agua comunitarios que sirven a múltiples propiedades donde aislar fugas individuales requiere experiencia.",
+        nearbyAreas: ["Costa Teguise", "Arrecife", "Teguise", "Guatiza"],
+        services: [
+          { title: "Detección de Fugas de Agua Tahiche", description: "Detección experta de fugas para propiedades de Tahiche. Casas tradicionales y villas modernas.", href: `${serviceBasePath}/deteccion-fugas-agua`, icon: Droplets },
+          { title: "Detección de Fugas en Piscinas Tahiche", description: "Detección de fugas en piscinas para villas de Tahiche. Servicio profesional con localización completa.", href: `${serviceBasePath}/deteccion-fugas-piscinas`, icon: Waves },
+          { title: "Inspección de Desagües Tahiche", description: "Inspecciones CCTV de desagües para propiedades de Tahiche. Identifique bloqueos y estado de tuberías.", href: `${serviceBasePath}/deteccion-desagues`, icon: Search },
+          { title: "Reparación de Fugas Tahiche", description: "Reparación profesional de fugas en Tahiche. Tuberías de agua, piscinas y sistemas de drenaje.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
+        ],
+        relatedLinks: [
+          { title: "Contador de agua corriendo constantemente", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
+          { title: "Imagen térmica para fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
+          { title: "Diagnóstico paredes húmedas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
+        ],
+        seo: { title: "Detección Fugas Tahiche | Canary Detect", description: "Detección de fugas Tahiche. Propiedades residenciales, villas, casas tradicionales. Centro Lanzarote. +34 711 051 071", keywords: "detección fugas Tahiche, fugas agua Tahiche Lanzarote, fugas villa Tahiche, fontanero Tahiche" }
+      },
+      "guatiza": {
+        name: "Guatiza",
+        slug: "guatiza",
+        description: "Servicios profesionales de detección de fugas en Guatiza, famosa por su Jardín de Cactus.",
+        heroText: "Guatiza y las zonas agrícolas circundantes necesitan detección de fugas especializada. Proporcionamos servicios expertos para este tradicional pueblo del noreste de Lanzarote.",
+        areaDescription: "Guatiza es un pueblo agrícola tradicional en el noreste de Lanzarote, famoso por sus plantaciones de cactus y el Jardín de Cactus diseñado por César Manrique. Las propiedades incluyen casas de pueblo tradicionales, fincas rurales y casas de campo renovadas. La herencia agrícola de la zona significa extensos sistemas de riego.",
+        localChallenges: "Las propiedades de Guatiza enfrentan desafíos de zona agrícola: extenso riego de plantaciones de cactus con sistemas de goteo subterráneos; casas tradicionales de piedra con paredes gruesas que ocultan la fontanería; desarrollo limitado significando infraestructura más antigua; y propiedades con sistemas de captación de agua de lluvia (maretas) que requieren inspección especializada. La ubicación noreste trae más humedad afectando el diagnóstico de humedades.",
+        nearbyAreas: ["Teguise", "Costa Teguise", "Arrieta", "Mala", "Tahiche"],
+        services: [
+          { title: "Detección de Fugas de Agua Guatiza", description: "Detección experta de fugas para el pueblo de Guatiza y propiedades rurales. Agrícola y residencial.", href: `${serviceBasePath}/deteccion-fugas-agua`, icon: Droplets },
+          { title: "Detección Subterránea Guatiza", description: "Detección de riego subterráneo y tuberías en Guatiza. Esencial para fincas de cactus y jardines.", href: `${serviceBasePath}/deteccion-subterranea`, icon: Search },
+          { title: "Detección de Fugas en Piscinas Guatiza", description: "Detección de fugas en piscinas privadas de la zona de Guatiza. Localización profesional.", href: `${serviceBasePath}/deteccion-fugas-piscinas`, icon: Waves },
+          { title: "Reparación de Fugas Guatiza", description: "Reparación profesional de fugas en Guatiza. Tuberías, riego y sistemas subterráneos.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
+        ],
+        relatedLinks: [
+          { title: "Guía sistemas de agua Lanzarote", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
+          { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
+          { title: "Paredes húmedas en casas antiguas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
+        ],
+        seo: { title: "Detección Fugas Guatiza | Canary Detect", description: "Detección de fugas Guatiza. Casas de pueblo, fincas de cactus, sistemas de riego. +34 711 051 071", keywords: "detección fugas Guatiza, fugas agua Guatiza Lanzarote, fugas finca cactus, fugas riego Guatiza" }
       }
     };
   }
@@ -413,6 +539,132 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Damp walls in old houses", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
       seo: { title: "Leak Detection Teguise | Historic & Rural | Canary Detect", description: "Leak detection Teguise. Historic buildings, rural fincas, coastal properties. Non-invasive methods. Call +34 711 051 071", keywords: "leak detection Teguise, water leak detection Teguise, historic building leak Lanzarote, rural leak Teguise, Costa Teguise leak" }
+    },
+    "puerto-calero": {
+      name: "Puerto Calero",
+      slug: "puerto-calero",
+      description: "Professional leak detection services in Puerto Calero, Lanzarote's exclusive marina village.",
+      heroText: "Puerto Calero's luxury villas and marina properties need reliable leak detection. We provide specialist services for this prestigious development.",
+      areaDescription: "Puerto Calero is Lanzarote's premier marina development, featuring high-end villas, apartments and commercial properties. The marina's luxurious properties often have complex plumbing systems including pools, spas and irrigation. Our proximity and professional equipment mean fast response times for this exclusive area.",
+      localChallenges: "Puerto Calero's marina properties face unique challenges: saltwater proximity accelerating corrosion on copper pipes and brass fittings; complex pool and spa systems with multiple circulation pumps; underground irrigation for manicured gardens; and prestigious clients requiring discreet, minimal-disruption service. The high-spec properties often have underfloor heating systems where leak detection requires thermal imaging expertise.",
+      nearbyAreas: ["Puerto del Carmen", "Tías", "Playa Blanca", "Arrecife"],
+      services: [
+        { title: "Water Leak Detection Puerto Calero", description: "Expert leak detection for Puerto Calero's luxury villas. Non-invasive thermal imaging and acoustic methods.", href: `${serviceBasePath}/water-leak-detection`, icon: Droplets },
+        { title: "Pool Leak Detection Puerto Calero", description: "Pool and spa leak detection for Puerto Calero properties. Complete pinpointing with professional reports.", href: `${serviceBasePath}/pool-leak-detection`, icon: Waves },
+        { title: "Underground Detection Puerto Calero", description: "Underground pipe and utility detection for marina properties. Essential before landscaping or construction.", href: `${serviceBasePath}/underground-detection`, icon: Search },
+        { title: "Leak Repair Puerto Calero", description: "Professional leak repair for Puerto Calero villas. Discreet service for prestigious properties.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
+      ],
+      relatedLinks: [
+        { title: "Pool leak detection guide", href: `${blogBasePath}/how-to-check-for-pool-leaks-lanzarote` },
+        { title: "Pool leak repair costs", href: `${blogBasePath}/swimming-pool-leak-repair-cost-lanzarote` },
+        { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
+      ],
+      seo: { title: "Leak Detection Puerto Calero | Marina Villas | Canary Detect", description: "Leak detection Puerto Calero. Luxury marina villas, pools, spas. Professional discreet service. Call +34 711 051 071", keywords: "leak detection Puerto Calero, water leak Puerto Calero, pool leak Puerto Calero marina, villa leak Lanzarote" }
+    },
+    "femes": {
+      name: "Femés",
+      slug: "femes",
+      description: "Professional leak detection services in Femés, a traditional mountain village in southern Lanzarote.",
+      heroText: "Femés and surrounding rural properties need specialist leak detection. Our local knowledge and professional equipment serve this picturesque village.",
+      areaDescription: "Femés is a small traditional village perched in the Ajaches mountains above Playa Blanca. The area features traditional Canarian houses, rural fincas and renovated properties with stunning views. Many properties have older plumbing systems and rely on aljibes for water storage. Our proximity (based in Playa Blanca) means fast response times.",
+      localChallenges: "Femés properties present rural challenges: long water supply pipes from the mains creating pressure issues; traditional stone aljibes (cisterns) with hairline cracks; limited access roads for service vehicles; and properties often empty for extended periods allowing small leaks to cause significant damage. The mountain microclimate brings more moisture than coastal areas, making dampness diagnosis more complex.",
+      nearbyAreas: ["Playa Blanca", "Yaiza", "Las Breñas", "Uga"],
+      services: [
+        { title: "Water Leak Detection Femés", description: "Specialist leak detection for Femés village properties. Expert service for traditional houses and fincas.", href: `${serviceBasePath}/water-leak-detection`, icon: Droplets },
+        { title: "Underground Detection Femés", description: "Underground pipe detection for Femés rural properties. Locate buried pipes before excavation.", href: `${serviceBasePath}/underground-detection`, icon: Search },
+        { title: "Pool Leak Detection Femés", description: "Pool leak detection for private pools in Femés area. Complete pinpointing service.", href: `${serviceBasePath}/pool-leak-detection`, icon: Waves },
+        { title: "Leak Repair Femés", description: "Professional leak repair in Femés. Water pipes, aljibes and underground systems.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
+      ],
+      relatedLinks: [
+        { title: "Aljibes & cisterns guide", href: `${blogBasePath}/master-your-lanzarote-water-system` },
+        { title: "Underground leak signs", href: `${blogBasePath}/signs-of-underground-water-leak` },
+        { title: "Damp walls in old houses", href: `${blogBasePath}/damp-walls-causes-solutions` },
+      ],
+      seo: { title: "Leak Detection Femés | Rural Properties | Canary Detect", description: "Leak detection Femés. Traditional village houses, fincas, aljibes. Local experts. Call +34 711 051 071", keywords: "leak detection Femés, water leak Femés Lanzarote, finca leak detection, rural leak detection Lanzarote" }
+    },
+    "las-brenas": {
+      name: "Las Breñas",
+      slug: "las-brenas",
+      description: "Professional leak detection in Las Breñas, a quiet agricultural village near Yaiza.",
+      heroText: "Las Breñas and nearby rural properties need reliable leak detection. We provide expert services for this peaceful farming community.",
+      areaDescription: "Las Breñas is a small agricultural village between Yaiza and Femés, known for its traditional farming heritage. Properties include traditional village houses, rural fincas and renovated country homes. Many rely on cisterns and have long supply pipes requiring specialist detection.",
+      localChallenges: "Las Breñas properties face agricultural-zone challenges: drip irrigation systems for crops and gardens with multiple small leak points; shared water supply systems between neighbouring properties; aging infrastructure with galvanised pipes prone to corrosion; and properties often used seasonally requiring inspection before and after closure periods.",
+      nearbyAreas: ["Yaiza", "Femés", "Playa Blanca", "Uga"],
+      services: [
+        { title: "Water Leak Detection Las Breñas", description: "Expert leak detection for Las Breñas village and rural properties. Traditional houses and fincas.", href: `${serviceBasePath}/water-leak-detection`, icon: Droplets },
+        { title: "Underground Detection Las Breñas", description: "Underground pipe detection for Las Breñas properties. Essential for irrigation and water supply systems.", href: `${serviceBasePath}/underground-detection`, icon: Search },
+        { title: "Pool Leak Detection Las Breñas", description: "Pool leak detection for private pools in Las Breñas area. Professional pinpointing service.", href: `${serviceBasePath}/pool-leak-detection`, icon: Waves },
+        { title: "Leak Repair Las Breñas", description: "Professional leak repair in Las Breñas. Pipes, irrigation systems and underground repairs.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
+      ],
+      relatedLinks: [
+        { title: "Lanzarote water system guide", href: `${blogBasePath}/master-your-lanzarote-water-system` },
+        { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
+        { title: "Water meter running with taps off", href: `${blogBasePath}/water-meter-running-when-taps-off` },
+      ],
+      seo: { title: "Leak Detection Las Breñas | Canary Detect", description: "Leak detection Las Breñas. Village houses, fincas, irrigation systems. Call +34 711 051 071", keywords: "leak detection Las Breñas, water leak Las Breñas Lanzarote, rural leak detection, finca leak Las Breñas" }
+    },
+    "uga": {
+      name: "Uga",
+      slug: "uga",
+      description: "Professional leak detection services in Uga, a traditional village in Lanzarote's wine country.",
+      heroText: "Uga's traditional properties and fincas need specialist leak detection. We provide expert services in this charming village near La Geria.",
+      areaDescription: "Uga is a picturesque village on the edge of La Geria wine region, known for its traditional Canarian architecture and camel station. Properties include historic village houses, renovated fincas and bodegas. The area's agricultural heritage means many properties have complex irrigation and water storage systems.",
+      localChallenges: "Uga properties present wine-country challenges: bodegas with refrigeration creating moisture that masks water leaks; traditional stone constructions with thick walls hiding pipes; drip irrigation for vines and gardens with multiple potential leak points; and historic buildings requiring careful, non-invasive detection methods to preserve character.",
+      nearbyAreas: ["Yaiza", "Femés", "La Geria", "Tías", "Mácher"],
+      services: [
+        { title: "Water Leak Detection Uga", description: "Expert leak detection for Uga village properties. Traditional houses, fincas and bodegas.", href: `${serviceBasePath}/water-leak-detection`, icon: Droplets },
+        { title: "Underground Detection Uga", description: "Underground pipe and irrigation system detection in Uga. Essential for vineyards and gardens.", href: `${serviceBasePath}/underground-detection`, icon: Search },
+        { title: "Pool Leak Detection Uga", description: "Pool leak detection for private pools in Uga area. Complete survey with pinpointing.", href: `${serviceBasePath}/pool-leak-detection`, icon: Waves },
+        { title: "Leak Repair Uga", description: "Professional leak repair in Uga. Sympathetic repairs for traditional properties.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
+      ],
+      relatedLinks: [
+        { title: "Traditional water systems Lanzarote", href: `${blogBasePath}/master-your-lanzarote-water-system` },
+        { title: "Thermal imaging for old buildings", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
+        { title: "Underground leak detection", href: `${blogBasePath}/signs-of-underground-water-leak` },
+      ],
+      seo: { title: "Leak Detection Uga | La Geria | Canary Detect", description: "Leak detection Uga. Traditional village, fincas, bodegas. Wine country specialists. Call +34 711 051 071", keywords: "leak detection Uga, water leak Uga Lanzarote, bodega leak detection, La Geria leak detection" }
+    },
+    "tahiche": {
+      name: "Tahiche",
+      slug: "tahiche",
+      description: "Professional leak detection services in Tahiche, home to the César Manrique Foundation.",
+      heroText: "Tahiche's residential properties and villas need reliable leak detection. We provide expert services in this central Lanzarote location.",
+      areaDescription: "Tahiche is a residential village between Costa Teguise and Arrecife, famous as the home of César Manrique's former residence (now a foundation). The area features a mix of traditional Canarian houses and modern villas. Its central location means properties connect to main water infrastructure, though older properties may have aging pipes.",
+      localChallenges: "Tahiche properties face central-island challenges: traditional houses with retrofitted plumbing creating complex pipe routes; properties on volcanic rock where excavation is difficult and expensive; modern villas with underfloor heating systems requiring thermal imaging expertise; and community water systems serving multiple properties where isolating individual leaks requires expertise.",
+      nearbyAreas: ["Costa Teguise", "Arrecife", "Teguise", "Guatiza"],
+      services: [
+        { title: "Water Leak Detection Tahiche", description: "Expert leak detection for Tahiche properties. Traditional houses and modern villas.", href: `${serviceBasePath}/water-leak-detection`, icon: Droplets },
+        { title: "Pool Leak Detection Tahiche", description: "Pool leak detection for Tahiche villas. Professional service with complete pinpointing.", href: `${serviceBasePath}/pool-leak-detection`, icon: Waves },
+        { title: "Drain Detection Tahiche", description: "CCTV drain surveys for Tahiche properties. Identify blockages and pipe condition.", href: `${serviceBasePath}/drain-detection`, icon: Search },
+        { title: "Leak Repair Tahiche", description: "Professional leak repair in Tahiche. Water pipes, pools and drainage systems.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
+      ],
+      relatedLinks: [
+        { title: "Water meter running constantly", href: `${blogBasePath}/water-meter-running-when-taps-off` },
+        { title: "Thermal imaging for leaks", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
+        { title: "Damp walls diagnosis", href: `${blogBasePath}/damp-walls-causes-solutions` },
+      ],
+      seo: { title: "Leak Detection Tahiche | Canary Detect", description: "Leak detection Tahiche. Residential properties, villas, traditional houses. Central Lanzarote. Call +34 711 051 071", keywords: "leak detection Tahiche, water leak Tahiche Lanzarote, villa leak Tahiche, plumber Tahiche" }
+    },
+    "guatiza": {
+      name: "Guatiza",
+      slug: "guatiza",
+      description: "Professional leak detection services in Guatiza, famous for its Cactus Garden.",
+      heroText: "Guatiza and surrounding agricultural areas need specialist leak detection. We provide expert services for this traditional northeast Lanzarote village.",
+      areaDescription: "Guatiza is a traditional agricultural village in northeast Lanzarote, famous for its cactus plantations and the Jardín de Cactus designed by César Manrique. Properties include traditional village houses, rural fincas and renovated country homes. The area's agricultural heritage means extensive irrigation systems.",
+      localChallenges: "Guatiza properties face agricultural-zone challenges: extensive cactus plantation irrigation with underground drip systems; traditional stone houses with thick walls hiding plumbing; limited development meaning older infrastructure; and properties with rainwater harvesting systems (maretas) requiring specialist inspection. The northeast location brings more humidity affecting dampness diagnosis.",
+      nearbyAreas: ["Teguise", "Costa Teguise", "Arrieta", "Mala", "Tahiche"],
+      services: [
+        { title: "Water Leak Detection Guatiza", description: "Expert leak detection for Guatiza village and rural properties. Agricultural and residential.", href: `${serviceBasePath}/water-leak-detection`, icon: Droplets },
+        { title: "Underground Detection Guatiza", description: "Underground irrigation and pipe detection in Guatiza. Essential for cactus fincas and gardens.", href: `${serviceBasePath}/underground-detection`, icon: Search },
+        { title: "Pool Leak Detection Guatiza", description: "Pool leak detection for private pools in Guatiza area. Professional pinpointing.", href: `${serviceBasePath}/pool-leak-detection`, icon: Waves },
+        { title: "Leak Repair Guatiza", description: "Professional leak repair in Guatiza. Pipes, irrigation and underground systems.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
+      ],
+      relatedLinks: [
+        { title: "Lanzarote water systems guide", href: `${blogBasePath}/master-your-lanzarote-water-system` },
+        { title: "Underground leak signs", href: `${blogBasePath}/signs-of-underground-water-leak` },
+        { title: "Damp walls in old houses", href: `${blogBasePath}/damp-walls-causes-solutions` },
+      ],
+      seo: { title: "Leak Detection Guatiza | Canary Detect", description: "Leak detection Guatiza. Village houses, cactus fincas, irrigation systems. Call +34 711 051 071", keywords: "leak detection Guatiza, water leak Guatiza Lanzarote, cactus finca leak, irrigation leak Guatiza" }
     }
   };
 };

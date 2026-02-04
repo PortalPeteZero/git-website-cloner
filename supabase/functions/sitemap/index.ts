@@ -53,6 +53,12 @@ const locationPages = [
   { en: "/locations/playa-honda", es: "/es/ubicaciones/playa-honda" },
   { en: "/locations/san-bartolome", es: "/es/ubicaciones/san-bartolome" },
   { en: "/locations/teguise", es: "/es/ubicaciones/teguise" },
+  { en: "/locations/puerto-calero", es: "/es/ubicaciones/puerto-calero" },
+  { en: "/locations/femes", es: "/es/ubicaciones/femes" },
+  { en: "/locations/las-brenas", es: "/es/ubicaciones/las-brenas" },
+  { en: "/locations/uga", es: "/es/ubicaciones/uga" },
+  { en: "/locations/tahiche", es: "/es/ubicaciones/tahiche" },
+  { en: "/locations/guatiza", es: "/es/ubicaciones/guatiza" },
 ];
 
 // Static blog articles (always included) - these are defined in blogArticles.ts
