@@ -31,6 +31,7 @@ const servicePages = [
   { en: "/services/drain-unblocking", es: "/es/servicios/desbloqueo-desagues", priority: "0.8", changefreq: "monthly" },
   { en: "/services/pool-leak-repair", es: "/es/servicios/reparacion-fugas-piscinas", priority: "0.8", changefreq: "monthly" },
   { en: "/services/free-leak-confirmation", es: "/es/servicios/confirmacion-fugas-gratis", priority: "0.8", changefreq: "monthly" },
+  { en: "/services/damp-moisture-mapping", es: "/es/servicios/mapeo-humedad", priority: "0.8", changefreq: "monthly" },
 ];
 
 const plumbingPages = [

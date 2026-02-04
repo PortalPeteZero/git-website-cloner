@@ -10,6 +10,7 @@ export const routeMap: Record<string, string> = {
   '/services/drain-unblocking': '/es/servicios/desbloqueo-desagues',
   '/services/pool-leak-repair': '/es/servicios/reparacion-fugas-piscinas',
   '/services/free-leak-confirmation': '/es/servicios/confirmacion-fugas-gratis',
+  '/services/damp-moisture-mapping': '/es/servicios/mapeo-humedad',
   '/technology': '/es/tecnologia',
   '/about': '/es/sobre-nosotros',
   '/case-studies': '/es/casos-de-exito',
@@ -39,6 +40,7 @@ export const serviceSlugMap: Record<string, string> = {
   'drain-unblocking': 'desbloqueo-desagues',
   'pool-leak-repair': 'reparacion-fugas-piscinas',
   'free-leak-confirmation': 'confirmacion-fugas-gratis',
+  'damp-moisture-mapping': 'mapeo-humedad',
 };
 
 // Plumbing service slug translations (English to Spanish)
