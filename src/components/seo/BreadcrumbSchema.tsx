@@ -21,8 +21,10 @@ const BreadcrumbSchema = ({ items }: BreadcrumbSchemaProps) => {
       "itemListElement": items.map((item, index) => ({
         "@type": "ListItem",
         "position": index + 1,
-        "name": item.name,
-        "item": item.url
+        "item": {
+          "@id": item.url,
+          "name": item.name
+        }
       }))
     };
     
