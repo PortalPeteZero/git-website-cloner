@@ -14,6 +14,8 @@ import { getServiceFaqs } from "@/data/serviceFaqsData";
 import LoadingFallback from "@/components/LoadingFallback";
 import FAQSchema from "@/components/seo/FAQSchema";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import RelatedServices from "@/components/internal-links/RelatedServices";
+import ServiceAreas from "@/components/internal-links/ServiceAreas";
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -603,6 +605,12 @@ const ServiceDetail = () => {
           </section>
         );
       })()}
+
+      {/* Related Services Section */}
+      <RelatedServices currentServiceSlug={englishSlug || ''} isSpanish={isSpanish} />
+
+      {/* Service Areas Section */}
+      <ServiceAreas isSpanish={isSpanish} serviceName={service.title} />
 
       {/* Lightbox Modal */}
       <AnimatePresence>
