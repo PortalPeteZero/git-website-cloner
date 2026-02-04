@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone, MapPin, Clock } from "lucide-react";
 import SEOHead from "@/components/seo/SEOHead";
 import LocationLocalBusinessSchema from "@/components/seo/LocationLocalBusinessSchema";
+import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getHomePath } from "@/i18n/routes";
 import { getLocationsData, getLocationUIText } from "@/data/locationsData";
@@ -162,30 +163,8 @@ const LocationPage = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-14 md:py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-primary font-semibold text-sm uppercase tracking-widest">{uiText.sections.ourServices}</span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">{uiText.sections.servicesAvailable(locationData.name)}</h2>
-          </motion.div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {locationData.services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <motion.div key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}>
-                  <Link to={service.href} className="block bg-card rounded-xl p-6 border border-border hover:border-primary/50 hover:shadow-lg transition-all h-full">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><Icon className="h-6 w-6 text-primary" /></div>
-                      <div><h3 className="font-heading font-bold text-lg mb-2">{service.title}</h3><p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p></div>
-                    </div>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* All Services Grid - Full comprehensive list */}
+      <AllServicesGrid isSpanish={isSpanish} locationName={locationData.name} />
 
       {/* Nearby Areas */}
       <section className="py-14 md:py-20 bg-background">

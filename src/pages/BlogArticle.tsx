@@ -14,6 +14,7 @@ import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getBlogPath } from "@/i18n/routes";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
 import VideoPlayer from "@/components/blog/VideoPlayer";
+import BlogServicesCallout from "@/components/internal-links/BlogServicesCallout";
 
 // Some migrated markdown sources can contain accidental paragraph breaks around inline bold terms,
 // e.g. "known as an\n\n**aljibe**\n\n, and ...".
@@ -479,6 +480,9 @@ const BlogArticle = () => {
               >
                 {normalizedContent}
               </ReactMarkdown>
+
+              {/* Services Callout - Internal Links */}
+              <BlogServicesCallout isSpanish={isSpanish} />
             </motion.div>
 
             {/* CTA Section */}

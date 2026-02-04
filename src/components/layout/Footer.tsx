@@ -28,6 +28,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
     { to: getRoute("/services/drain-detection", "/es/servicios/deteccion-desagues"), label: isSpanish ? "Inspección de Desagües" : "Drain & Pipe Surveys" },
     { to: getRoute("/services/leak-repair", "/es/servicios/reparacion-fugas"), label: isSpanish ? "Reparación de Fugas" : "Leak Repair" },
     { to: getRoute("/services/pool-leak-repair", "/es/servicios/reparacion-fugas-piscinas"), label: isSpanish ? "Reparación Fugas Piscinas" : "Pool Leak Repair" },
+    { to: getRoute("/services/damp-moisture-mapping", "/es/servicios/mapeo-humedad"), label: isSpanish ? "Mapeo de Humedad" : "Damp Mapping" },
     { to: getRoute("/plumbing-services", "/es/servicios-fontaneria"), label: isSpanish ? "Fontanería y Mantenimiento" : "Plumbing & Maintenance" },
   ];
 
@@ -200,15 +201,23 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
               </h4>
               <ul className="space-y-2">
                 {[
-                  "Arrecife", "Puerto del Carmen", "Playa Blanca", 
-                  "Costa Teguise", "Yaiza", "Tías", "Playa Honda"
+                  { name: "Arrecife", slug: "arrecife" },
+                  { name: "Puerto del Carmen", slug: "puerto-del-carmen" },
+                  { name: "Playa Blanca", slug: "playa-blanca" },
+                  { name: "Costa Teguise", slug: "costa-teguise" },
+                  { name: "Yaiza", slug: "yaiza" },
+                  { name: "Tías", slug: "tias" },
+                  { name: "Playa Honda", slug: "playa-honda" },
+                  { name: "Teguise", slug: "teguise" },
+                  { name: "San Bartolomé", slug: "san-bartolome" },
+                  { name: "Puerto Calero", slug: "puerto-calero" },
                 ].map(area => (
-                  <li key={area}>
+                  <li key={area.slug}>
                     <Link 
-                      to={`${isSpanish ? '/es/ubicaciones' : '/locations'}/${area.toLowerCase().replace(/ /g, '-')}`}
+                      to={`${isSpanish ? '/es/ubicaciones' : '/locations'}/${area.slug}`}
                       className="text-slate-400 hover:text-primary transition-colors text-sm"
                     >
-                      {area}
+                      {area.name}
                     </Link>
                   </li>
                 ))}
