@@ -6,10 +6,11 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone, MapPin, Clock, Droplets, AlertTriangle, Shield, Zap, Building, Home } from "lucide-react";
 import SEOHead from "@/components/seo/SEOHead";
 import LocationLocalBusinessSchema from "@/components/seo/LocationLocalBusinessSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
 import RelatedServices from "@/components/internal-links/RelatedServices";
 import { useTranslation } from "@/i18n/LanguageContext";
-import { getContactPath, getHomePath } from "@/i18n/routes";
+import { getContactPath, getHomePath, getLocationsBasePath } from "@/i18n/routes";
 import { getLocationsData, getLocationUIText } from "@/data/locationsData";
 import titleBg from "@/assets/title-bg.jpg";
 
@@ -72,7 +73,13 @@ const LocationPage = () => {
         canonicalUrl={canonicalUrl}
         isSpanish={isSpanish}
       />
-
+      <BreadcrumbSchema 
+        items={[
+          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
+          { name: isSpanish ? "Ubicaciones" : "Locations", url: `https://canary-detect.com${getLocationsBasePath(isSpanish)}` },
+          { name: locationData.name, url: canonicalUrl }
+        ]} 
+      />
       {/* Hero Section */}
       <section className="relative min-h-[50vh] md:min-h-[55vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
