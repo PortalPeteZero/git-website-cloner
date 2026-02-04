@@ -223,6 +223,16 @@ export const getHomePath = (isSpanish: boolean): string => {
   return isSpanish ? '/es' : '/';
 };
 
+// Helper to get locations base path
+export const getLocationsBasePath = (isSpanish: boolean): string => {
+  return isSpanish ? '/es/ubicaciones' : '/locations';
+};
+
+// Helper to get location detail path
+export const getLocationPath = (slug: string, isSpanish: boolean): string => {
+  return isSpanish ? `/es/ubicaciones/${slug}` : `/locations/${slug}`;
+};
+
 // Helper to get plumbing services path
 export const getPlumbingServicesPath = (isSpanish: boolean): string => {
   return isSpanish ? '/es/servicios-fontaneria' : '/plumbing-services';

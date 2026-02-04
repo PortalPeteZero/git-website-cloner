@@ -8,11 +8,13 @@ import { CheckCircle, Search, CircleDot, Atom, AudioLines, Thermometer, Mic, Shi
 import FreeLeakConfirmationSection from "@/components/services/FreeLeakConfirmationSection";
 import SEOHead from "@/components/seo/SEOHead";
 import { useTranslation } from "@/i18n/LanguageContext";
-import { getEnglishSlug, getSpanishSlug, getContactPath, getTechnologyPath, getServicesBasePath } from "@/i18n/routes";
+import { getEnglishSlug, getSpanishSlug, getContactPath, getTechnologyPath, getServicesBasePath, getHomePath } from "@/i18n/routes";
 import { getServicesData, getServiceUIText, waterLeakCarouselImages, undergroundCarouselImages, ServiceData } from "@/data/servicesData";
 import { getServiceFaqs } from "@/data/serviceFaqsData";
 import LoadingFallback from "@/components/LoadingFallback";
 import FAQSchema from "@/components/seo/FAQSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import ServiceDetailSchema from "@/components/seo/ServiceDetailSchema";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import RelatedServices from "@/components/internal-links/RelatedServices";
 import ServiceAreas from "@/components/internal-links/ServiceAreas";
@@ -154,6 +156,19 @@ const ServiceDetail = () => {
         keywords={service.seo.keywords}
         canonical={canonicalUrl}
         type="service"
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
+          { name: isSpanish ? "Servicios" : "Services", url: `https://canary-detect.com${getServicesBasePath(isSpanish)}` },
+          { name: service.title, url: canonicalUrl }
+        ]} 
+      />
+      <ServiceDetailSchema
+        serviceName={service.title}
+        serviceDescription={service.seo.description}
+        serviceUrl={canonicalUrl}
+        isSpanish={isSpanish}
       />
       {/* Hero Section - Collage for underground, Carousel for water leak, standard for others */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-start overflow-hidden z-0">

@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, Clock, ArrowLeft, ArrowRight } from "lucide-react";
 import { getArticleBySlug, getRelatedArticles, BLOG_IMAGES } from "@/data/blogArticles";
@@ -11,7 +12,7 @@ import { supabase } from "@/integrations/supabase/client";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { useTranslation } from "@/i18n/LanguageContext";
-import { getContactPath, getBlogPath } from "@/i18n/routes";
+import { getContactPath, getBlogPath, getHomePath } from "@/i18n/routes";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
 import VideoPlayer from "@/components/blog/VideoPlayer";
 import BlogServicesCallout from "@/components/internal-links/BlogServicesCallout";
@@ -273,6 +274,13 @@ const BlogArticle = () => {
         canonical={canonicalUrl}
         type="article"
         image={image}
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
+          { name: "Blog", url: `https://canary-detect.com${getBlogPath(isSpanish)}` },
+          { name: title, url: canonicalUrl }
+        ]} 
       />
 
       {/* Article Schema */}
