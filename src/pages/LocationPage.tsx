@@ -5,6 +5,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone, MapPin, Clock } from "lucide-react";
 import SEOHead from "@/components/seo/SEOHead";
+import LocationLocalBusinessSchema from "@/components/seo/LocationLocalBusinessSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getHomePath } from "@/i18n/routes";
 import { getLocationsData, getLocationUIText } from "@/data/locationsData";
@@ -62,6 +63,12 @@ const LocationPage = () => {
         description={locationData.seo.description}
         keywords={locationData.seo.keywords}
         canonical={canonicalUrl}
+      />
+      <LocationLocalBusinessSchema
+        locationName={locationData.name}
+        locationDescription={locationData.seo.description}
+        canonicalUrl={canonicalUrl}
+        isSpanish={isSpanish}
       />
 
       {/* Hero Section */}
