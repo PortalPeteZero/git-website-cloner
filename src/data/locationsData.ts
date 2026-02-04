@@ -7,6 +7,21 @@ export interface LocationData {
   heroText: string;
   areaDescription: string;
   localChallenges: string;
+  // New expanded content sections
+  aboutLocation?: string;
+  landmarks?: string[];
+  neighborhoods?: string[];
+  commonWaterIssues?: {
+    title: string;
+    description: string;
+  }[];
+  serviceCoverage?: string;
+  whyChooseUs?: string[];
+  emergencyResponse?: {
+    responseTime: string;
+    availability: string;
+    description: string;
+  };
   nearbyAreas: string[];
   services: {
     title: string;
@@ -37,6 +52,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         description: "Servicios profesionales de detección de fugas en Arrecife, la capital de Lanzarote.",
         heroText: "La capital de Lanzarote merece detección de fugas experta. Damos servicio a propiedades residenciales, hoteles y edificios comerciales en todo Arrecife con nuestra gama completa de servicios de detección y reparación de fugas de agua.",
         areaDescription: "Como la ciudad más grande de Lanzarote y puerto principal, Arrecife tiene una mezcla de propiedades antiguas y desarrollos modernos. La infraestructura de tuberías envejecida, combinada con el agua dura de la isla, hace que las fugas de agua sean comunes. Nuestro equipo proporciona tiempos de respuesta rápidos en Arrecife, normalmente entre 24-48 horas para citas estándar y el mismo día para emergencias.",
+        aboutLocation: "Arrecife, la vibrante capital de Lanzarote, es una ciudad portuaria con más de 60.000 habitantes que combina historia, comercio y vida moderna. Fundada en el siglo XV como puerto pesquero, la ciudad ha evolucionado hasta convertirse en el centro administrativo, comercial y cultural de la isla. El paseo marítimo de Arrecife ofrece vistas espectaculares del Atlántico, mientras que el casco histórico mantiene el encanto arquitectónico tradicional canario con sus casas encaladas y balcones de madera. La ciudad alberga importantes instituciones culturales, centros comerciales modernos y una próspera comunidad local que convive con visitantes de todo el mundo.",
+        landmarks: ["Charco de San Ginés", "Castillo de San Gabriel", "Marina Lanzarote", "Calle Real", "Playa del Reducto", "El Almacén Centro de Arte"],
+        neighborhoods: ["Centro Histórico", "San Ginés", "Los Alonso", "Argana Alta", "Altavista", "Titerroy", "Maneje"],
+        commonWaterIssues: [
+          { title: "Tuberías de Hierro Fundido Corroídas", description: "Los edificios construidos entre 1960-1980 tienen tuberías de hierro fundido con décadas de corrosión interna. El agua dura de Lanzarote acelera este deterioro, causando fugas en uniones y codos." },
+          { title: "Humedad por Capilaridad", description: "Las propiedades cerca del Charco de San Ginés y la zona portuaria sufren humedad ascendente debido a la proximidad del nivel freático y el ambiente salino del océano." },
+          { title: "Fugas en Sistemas Centralizados", description: "Los bloques de apartamentos del centro tienen sistemas de fontanería compartidos donde una sola fuga puede afectar a múltiples viviendas y disparar las facturas de la comunidad." },
+          { title: "Problemas de Presión de Agua", description: "Las zonas altas de Arrecife como Argana y Altavista experimentan fluctuaciones de presión que estresan las tuberías antiguas, causando micro-fugas difíciles de detectar." }
+        ],
+        serviceCoverage: "Damos cobertura completa a toda la ciudad de Arrecife y sus barrios: desde el centro histórico con sus edificios tradicionales, pasando por las urbanizaciones residenciales de Argana Alta y Altavista, hasta las zonas comerciales cerca del puerto y el paseo marítimo. Nuestro servicio incluye propiedades residenciales, comunidades de vecinos, hoteles, oficinas y locales comerciales. También damos servicio a las zonas industriales del polígono y las urbanizaciones más nuevas de la periferia.",
+        whyChooseUs: [
+          "Conocimiento profundo de los estilos constructivos típicos de Arrecife y sus problemas de fontanería específicos",
+          "Respuesta rápida desde nuestra base en el sur—llegamos a Arrecife en menos de 45 minutos",
+          "Equipos de €80.000+ incluyendo cámaras termográficas, detectores acústicos y equipos de gas trazador",
+          "Experiencia específica con edificios históricos del casco antiguo que requieren técnicas no invasivas",
+          "Garantía Sin Encontrar, Sin Pagar—solo paga cuando localizamos su fuga con precisión",
+          "Informes profesionales válidos para seguros y comunidades de propietarios"
+        ],
+        emergencyResponse: {
+          responseTime: "2-4 horas",
+          availability: "24/7 Emergencias",
+          description: "Entendemos que las fugas de agua en Arrecife requieren atención urgente, especialmente en edificios de apartamentos donde el agua puede filtrarse a viviendas inferiores. Nuestro servicio de emergencia está disponible las 24 horas. Llegamos a cualquier punto de Arrecife en 2-4 horas para emergencias, equipados con todo lo necesario para localizar y aislar la fuga inmediatamente."
+        },
         localChallenges: "Los edificios del centro histórico de Arrecife presentan desafíos únicos: tuberías de hierro fundido de los años 60-70 con corrosión avanzada, sistemas de alcantarillado compartidos entre edificios antiguos, y acceso difícil en calles estrechas del casco viejo. Las propiedades cerca del Charco de San Ginés sufren especialmente de humedad por capilaridad debido a la proximidad al mar. Los bloques de apartamentos de la zona portuaria tienen sistemas de fontanería centralizados donde localizar la fuga exacta evita molestar a múltiples vecinos.",
         nearbyAreas: ["San Bartolomé", "Playa Honda", "Tías", "Puerto del Carmen"],
         services: [
@@ -50,7 +88,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Cómo funciona el sistema de agua en Lanzarote", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
         ],
-        seo: { title: "Detección Fugas Arrecife | Agua y Piscinas | Canary Detect", description: "Detección de fugas Arrecife. Fugas de agua, piscinas, tuberías subterráneas. Sin Encontrar Sin Pagar. +34 711 051 071", keywords: "detección fugas Arrecife, fugas agua Arrecife, fugas piscina Arrecife, reparación fugas Arrecife, fontanero Arrecife Lanzarote" }
+        seo: { title: "Detección Fugas Arrecife | Expertos en Fugas de Agua y Piscinas", description: "Detección profesional de fugas en Arrecife, capital de Lanzarote. Fugas de agua ocultas, piscinas, tuberías subterráneas. Sin Encontrar, Sin Pagar. Emergencias 24h. +34 711 051 071", keywords: "detección fugas Arrecife, fugas agua Arrecife, fugas piscina Arrecife, reparación fugas Arrecife, fontanero Arrecife Lanzarote, fugas ocultas Arrecife" }
       },
       "puerto-del-carmen": {
         name: "Puerto del Carmen",
@@ -58,6 +96,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         description: "Servicios expertos de detección de fugas en Puerto del Carmen, el centro turístico más concurrido de Lanzarote.",
         heroText: "Los hoteles, apartamentos y villas de Puerto del Carmen necesitan detección de fugas fiable. Proporcionamos un servicio rápido y profesional para minimizar las molestias a huéspedes y residentes.",
         areaDescription: "Como el destino turístico principal de Lanzarote, Puerto del Carmen tiene una alta concentración de hoteles, apartamentos de vacaciones y villas de alquiler. Las fugas de agua pueden ser costosas para los propietarios, tanto en facturas de agua como en posibles daños a la experiencia de los huéspedes. Ofrecemos servicio prioritario para propiedades comerciales y llamadas de emergencia para hoteles con fugas activas.",
+        aboutLocation: "Puerto del Carmen es el corazón turístico de Lanzarote, una vibrante zona costera que se extiende a lo largo de 6 kilómetros de playas doradas. Lo que comenzó como un pequeño pueblo pesquero en los años 60 se ha transformado en el resort más popular de la isla, albergando más de la mitad de las camas turísticas de Lanzarote. El pueblo viejo conserva su encanto tradicional con restaurantes de pescado fresco junto al puerto, mientras que la Avenida de las Playas ofrece kilómetros de paseo marítimo con tiendas, restaurantes y bares. Puerto del Carmen atrae a millones de visitantes cada año, desde familias británicas y alemanas hasta nómadas digitales que trabajan desde sus apartamentos con vistas al mar.",
+        landmarks: ["Playa Grande", "Playa Chica", "Avenida de las Playas", "Puerto Viejo", "Centro Comercial Biosfera", "Los Fariones"],
+        neighborhoods: ["Puerto Viejo", "La Tiñosa", "Los Pocillos", "Matagorda", "Playa de los Pocillos", "La Peñita"],
+        commonWaterIssues: [
+          { title: "Fugas en Piscinas de Hoteles", description: "Los complejos hoteleros tienen sistemas de piscinas con múltiples componentes—jacuzzis, cascadas, circuitos de recirculación—cada uno una posible fuente de fuga que aumenta costes operativos." },
+          { title: "Tuberías Degradadas por el Sol", description: "Las azoteas de los complejos de los años 80 tienen tuberías de polietileno expuestas a décadas de sol intenso. El plástico se vuelve quebradizo y desarrolla micro-fisuras." },
+          { title: "Corrosión por Ambiente Marino", description: "Las propiedades en primera línea de playa sufren corrosión acelerada. El aire salino ataca conexiones metálicas y acelera el deterioro de tuberías de cobre y hierro." },
+          { title: "Fugas Ocultas en Apartamentos Turísticos", description: "Con alta rotación de huéspedes, las fugas pequeñas pueden pasar meses sin detectarse. El propietario descubre el problema al recibir facturas de agua extraordinarias." }
+        ],
+        serviceCoverage: "Cubrimos toda la extensión de Puerto del Carmen: desde el tranquilo Puerto Viejo con sus restaurantes tradicionales, pasando por la animada zona de La Tiñosa y la Avenida de las Playas, hasta las zonas residenciales más tranquilas de Los Pocillos y Matagorda. Damos servicio tanto a propiedades turísticas (hoteles, apartamentos de alquiler vacacional, complejos) como a viviendas de residentes permanentes. También cubrimos las urbanizaciones en la ladera como Risco Prieto y Puerto del Carmen Alto.",
+        whyChooseUs: [
+          "Experiencia específica con propiedades turísticas—entendemos la urgencia de resolver problemas sin afectar huéspedes",
+          "Disponibilidad de servicio de emergencia para hoteles con fugas activas que amenazan habitaciones ocupadas",
+          "Informes profesionales en inglés y español para propietarios extranjeros y administradores de fincas",
+          "Técnicas no invasivas que permiten continuar con la actividad hotelera mientras localizamos fugas",
+          "Conocimiento profundo de los sistemas de fontanería típicos de los complejos turísticos de la zona",
+          "Garantía Sin Encontrar, Sin Pagar—especialmente importante para propietarios que gestionan remotamente"
+        ],
+        emergencyResponse: {
+          responseTime: "1-3 horas",
+          availability: "24/7 Emergencias",
+          description: "En Puerto del Carmen, una fuga de agua activa puede significar habitaciones de hotel fuera de servicio o apartamentos turísticos inhabilitados—costes que se multiplican cada hora. Nuestro equipo de emergencia puede estar en cualquier punto de Puerto del Carmen en 1-3 horas, incluso fuera de horario laboral. Llegamos con todo el equipo necesario para localizar la fuga y, si es posible, realizar la reparación inmediata."
+        },
         localChallenges: "Puerto del Carmen presenta desafíos específicos del sector turístico: hoteles con sistemas de piscinas complejos que incluyen jacuzzis, fuentes y cascadas; apartamentos con alta rotación donde las fugas pueden pasar desapercibidas durante meses; y la presión de resolver problemas rápidamente para no afectar a los huéspedes. Las propiedades en primera línea de Playa Grande sufren corrosión acelerada por el ambiente salino. Los complejos de los años 80 en la Avenida de las Playas tienen tuberías de polietileno degradadas por el sol y calor extremo de las azoteas.",
         nearbyAreas: ["Tías", "Playa Honda", "Arrecife", "Puerto Calero"],
         services: [
@@ -71,7 +132,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Coste de reparación de fugas en piscinas", href: `${blogBasePath}/coste-reparacion-fugas-piscina-lanzarote` },
           { title: "Paredes húmedas: causas y soluciones", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Puerto del Carmen | Canary Detect", description: "Detección de fugas Puerto del Carmen. Hoteles, villas, apartamentos. Piscinas, reparaciones emergencia. +34 711 051 071", keywords: "detección fugas Puerto del Carmen, fugas agua Puerto del Carmen, fugas piscina Puerto del Carmen, detección fugas hoteles Lanzarote" }
+        seo: { title: "Detección Fugas Puerto del Carmen | Hoteles y Villas", description: "Detección profesional de fugas en Puerto del Carmen. Hoteles, villas, apartamentos turísticos. Piscinas y emergencias 24h. Sin Encontrar, Sin Pagar. +34 711 051 071", keywords: "detección fugas Puerto del Carmen, fugas agua Puerto del Carmen, fugas piscina Puerto del Carmen, fugas hotel Lanzarote, reparación urgente fugas" }
       },
       "playa-blanca": {
         name: "Playa Blanca",
@@ -79,6 +140,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         description: "Expertos locales en detección de fugas con base en Playa Blanca, dando servicio al sur de Lanzarote.",
         heroText: "Estamos ubicados aquí mismo en Playa Blanca, sus especialistas locales en detección de fugas. Con más de €80.000 en equipos profesionales, damos servicio a todo el sur de la isla con disponibilidad el mismo día.",
         areaDescription: "Playa Blanca es nuestra base, lo que significa que podemos ofrecer los tiempos de respuesta más rápidos en el sur de Lanzarote. Las villas de lujo y propiedades de la marina a menudo cuentan con sistemas de fontanería complejos y piscinas que requieren detección especializada. Conocemos los estilos de construcción locales y los problemas comunes, dándonos ventaja a la hora de encontrar y reparar fugas rápidamente.",
+        aboutLocation: "Playa Blanca es el resort más meridional de Lanzarote, una zona que ha experimentado un espectacular desarrollo en las últimas tres décadas. Lo que comenzó como un tranquilo pueblo pesquero se ha transformado en un destino de lujo con la exclusiva Marina Rubicón, playas de arena blanca y urbanizaciones de alto standing. A diferencia de Puerto del Carmen, Playa Blanca mantiene un ritmo más relajado y atrae a un público que busca tranquilidad y calidad. La zona ofrece acceso por ferry a Fuerteventura, algunas de las mejores playas de la isla como Papagayo, y vistas impresionantes hacia los islotes de Lobos y Fuerteventura.",
+        landmarks: ["Marina Rubicón", "Playas de Papagayo", "Faro de Pechiguera", "Castillo de las Coloradas", "Centro Comercial Rubicón", "Puerto Deportivo"],
+        neighborhoods: ["Centro Playa Blanca", "Las Coloradas", "Montaña Roja", "Marina Rubicón", "Faro Park", "Los Limones", "Playa Flamingo"],
+        commonWaterIssues: [
+          { title: "Fugas en Piscinas de Villas de Lujo", description: "Las villas de alta gama tienen piscinas infinity, spas integrados y sistemas de climatización que multiplican los posibles puntos de fuga. Cada componente requiere inspección especializada." },
+          { title: "Sistemas de Riego Complejos", description: "Los jardines tropicales de las villas cuentan con múltiples zonas de riego automático. Las fugas en tuberías enterradas pueden pasar desapercibidas durante meses, disparando las facturas de agua." },
+          { title: "Problemas con Aljibes Tradicionales", description: "Las propiedades más antiguas de Las Coloradas tienen depósitos de agua subterráneos (aljibes) con muros de piedra que pueden desarrollar filtraciones difíciles de localizar." },
+          { title: "Terreno Volcánico Problemático", description: "El suelo volcánico del sur de Lanzarote hace que la excavación sea extremadamente costosa. Nuestra detección precisa minimiza el área a excavar, ahorrando miles de euros." }
+        ],
+        serviceCoverage: "Como empresa local con base en Playa Blanca, cubrimos toda la zona sur con los tiempos de respuesta más rápidos de la isla. Nuestro servicio abarca desde el centro histórico junto al puerto hasta las urbanizaciones de lujo de Marina Rubicón, Montaña Roja y Faro Park. También damos servicio a las zonas residenciales de Las Coloradas, Los Limones y las propiedades más alejadas hacia Papagayo. Cubrimos tanto villas individuales como comunidades de propietarios, hoteles boutique y apartamentos turísticos.",
+        whyChooseUs: [
+          "Somos locales—nuestra oficina está aquí en Playa Blanca, lo que significa respuesta inmediata sin tiempos de desplazamiento",
+          "Conocimiento profundo de las construcciones típicas de la zona sur, desde villas de lujo hasta casas tradicionales",
+          "Experiencia específica con los sistemas de piscinas infinity y spas comunes en las propiedades de alto standing",
+          "Relaciones establecidas con constructores, arquitectos y administradores de fincas locales",
+          "Disponibilidad para emergencias—podemos estar en su propiedad en minutos, no horas",
+          "Entendemos los desafíos del terreno volcánico y la importancia de la detección precisa"
+        ],
+        emergencyResponse: {
+          responseTime: "30 min - 1 hora",
+          availability: "24/7 Emergencias",
+          description: "Como residentes de Playa Blanca, ofrecemos el tiempo de respuesta más rápido del sur de la isla. Para emergencias en Playa Blanca y alrededores, podemos estar en su propiedad en 30 minutos a 1 hora, cualquier día de la semana. Esto es crucial cuando una fuga amenaza con dañar una villa de lujo o cuando hay huéspedes esperando en una propiedad de alquiler."
+        },
         localChallenges: "Las villas de lujo de Marina Rubicón y Montaña Roja presentan sistemas de fontanería de alta gama con múltiples zonas de riego, piscinas infinity con bordes rebosaderos, y spas integrados—todos posibles puntos de fuga. El terreno volcánico del sur de Lanzarote dificulta la excavación tradicional, haciendo que nuestra detección precisa sea aún más valiosa. Las propiedades más antiguas de Las Coloradas tienen sistemas de aljibe (depósitos de agua) que requieren inspección especializada para detectar fugas en sus muros de piedra.",
         nearbyAreas: ["Yaiza", "Femés", "Las Breñas", "El Golfo"],
         services: [
@@ -92,7 +176,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Imagen térmica para detección de fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
         ],
-        seo: { title: "Detección Fugas Playa Blanca | Expertos Locales", description: "Detección de fugas Playa Blanca. ¡Estamos aquí! Fugas agua, piscinas, subterráneas. Servicio mismo día. +34 711 051 071", keywords: "detección fugas Playa Blanca, fugas agua Playa Blanca, fugas piscina Playa Blanca, fontanero Playa Blanca, reparación fugas Playa Blanca Lanzarote" }
+        seo: { title: "Detección Fugas Playa Blanca | ¡Somos Locales!", description: "Expertos locales en detección de fugas en Playa Blanca. Villas de lujo, piscinas, fugas subterráneas. Respuesta inmediata. Sin Encontrar, Sin Pagar. +34 711 051 071", keywords: "detección fugas Playa Blanca, fugas agua Playa Blanca, fugas piscina Playa Blanca, fontanero Playa Blanca, reparación fugas Playa Blanca Lanzarote" }
       },
       "costa-teguise": {
         name: "Costa Teguise",
@@ -100,6 +184,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         description: "Servicios profesionales de detección de fugas en Costa Teguise, el resort familiar de Lanzarote.",
         heroText: "Los apartamentos, villas y propiedades comerciales de Costa Teguise necesitan detección de fugas fiable. Damos servicio a toda la zona con servicios profesionales de detección no invasiva.",
         areaDescription: "Costa Teguise es conocida por sus urbanizaciones construidas a propósito, muchas de los años 80 y 90. Estas propiedades a menudo tienen sistemas de fontanería compartidos complejos donde localizar la ubicación exacta de una fuga es crucial para evitar excavaciones innecesarias. Nuestro enfoque multi-tecnológico es perfecto para los bloques de apartamentos y piscinas comunitarias de Costa Teguise.",
+        aboutLocation: "Costa Teguise es el segundo resort más grande de Lanzarote, diseñado originalmente por el célebre artista César Manrique en los años 70. A diferencia del desarrollo orgánico de Puerto del Carmen, Costa Teguise fue planificada desde cero como un destino turístico de calidad. El resultado es un resort con calles amplias, zonas verdes bien cuidadas y una arquitectura que respeta el estilo tradicional canario. La zona atrae principalmente a familias europeas, ofreciendo playas seguras, un paseo marítimo animado y el único campo de golf de la isla. La mezcla de turistas y residentes permanentes—muchos jubilados europeos—crea una comunidad diversa con necesidades variadas.",
+        landmarks: ["Playa de las Cucharas", "Pueblo Marinero", "Campo de Golf Costa Teguise", "Aquarium Lanzarote", "Playa de los Charcos", "Centro Comercial Las Cucharas"],
+        neighborhoods: ["Playa de las Cucharas", "Playa de los Charcos", "Pueblo Marinero", "Jardín del Mar", "Oasis de Nazaret", "El Jablillo"],
+        commonWaterIssues: [
+          { title: "Sistemas de Fontanería Envejecidos", description: "Los complejos de los años 80 tienen tuberías de más de 40 años con múltiples puntos de distribución. La corrosión interna y las juntas deterioradas causan fugas en ubicaciones inesperadas." },
+          { title: "Piscinas Comunitarias Problemáticas", description: "Las grandes piscinas comunitarias tienen redes de tuberías extensas. Una fuga puede estar a 50 metros del punto visible de pérdida de agua, requiriendo experiencia para aislar la sección afectada." },
+          { title: "Confusión Evaporación vs Fuga", description: "Los vientos alisios constantes del noreste aceleran la evaporación de piscinas. Nuestras pruebas de presión distinguen definitivamente entre pérdida por evaporación y fugas reales." },
+          { title: "Fugas en Sistemas de Riego del Golf", description: "Las propiedades cercanas al campo de golf tienen sistemas de riego extensos. Las fugas subterráneas pueden enmascararse durante meses, aumentando silenciosamente las facturas de agua." }
+        ],
+        serviceCoverage: "Cubrimos toda Costa Teguise desde el animado paseo marítimo de Las Cucharas hasta las urbanizaciones más tranquilas del interior. Nuestro servicio incluye los grandes complejos turísticos como Sands Beach, Los Zocos, Oasis Lanz y Barceló Teguise Beach, así como las comunidades residenciales de Jardín del Mar, El Jablillo y Oasis de Nazaret. También damos servicio a las propiedades cerca del campo de golf y las zonas residenciales de residentes permanentes.",
+        whyChooseUs: [
+          "Experiencia específica con los sistemas de fontanería centralizados típicos de los complejos de Costa Teguise",
+          "Capacidad para trabajar con comunidades de propietarios y administradores de fincas en múltiples idiomas",
+          "Pruebas de presión profesionales para distinguir fugas reales de pérdida por evaporación",
+          "Técnicas no invasivas ideales para edificios compartidos—mínima molestia a vecinos",
+          "Informes detallados válidos para reclamaciones de seguros y reuniones de comunidades",
+          "Conocimiento de los desafíos específicos de las construcciones de los años 80-90 de la zona"
+        ],
+        emergencyResponse: {
+          responseTime: "2-3 horas",
+          availability: "24/7 Emergencias",
+          description: "En Costa Teguise, donde muchas propiedades son apartamentos con vecinos arriba y abajo, una fuga puede convertirse rápidamente en un problema para múltiples viviendas. Ofrecemos servicio de emergencia para aislar fugas activas y minimizar daños. Llegamos a cualquier punto de Costa Teguise en 2-3 horas, equipados para diagnóstico inmediato y, si es posible, reparación temporal para contener el problema."
+        },
         localChallenges: "Los complejos turísticos de Costa Teguise como Sands Beach, Los Zocos y Oasis Lanz tienen sistemas de fontanería centralizados de más de 30 años con múltiples puntos de distribución. Las piscinas comunitarias con sus extensas redes de tuberías requieren experiencia específica para aislar la sección con fuga. El viento constante del noreste acelera la evaporación, haciendo difícil distinguir entre pérdida por evaporación y fugas reales—nuestras pruebas de presión eliminan esta duda. Las propiedades cerca del campo de golf tienen sistemas de riego extensos que pueden enmascarar fugas subterráneas.",
         nearbyAreas: ["Teguise", "Tahiche", "Guatiza", "Arrecife"],
         services: [
@@ -113,7 +220,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "¿Contador de agua corriendo sin usar grifos?", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
           { title: "Paredes húmedas en apartamentos", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Costa Teguise | Canary Detect", description: "Detección de fugas Costa Teguise. Apartamentos, villas, piscinas comunitarias. Servicio experto. +34 711 051 071", keywords: "detección fugas Costa Teguise, fugas agua Costa Teguise, fugas piscina Costa Teguise, fugas apartamentos Lanzarote" }
+        seo: { title: "Detección Fugas Costa Teguise | Apartamentos y Piscinas", description: "Detección profesional de fugas en Costa Teguise. Apartamentos, complejos turísticos, piscinas comunitarias. Expertos en edificios compartidos. Sin Encontrar, Sin Pagar. +34 711 051 071", keywords: "detección fugas Costa Teguise, fugas agua Costa Teguise, fugas piscina Costa Teguise, fugas apartamentos Lanzarote, piscina comunitaria fuga" }
       },
       "yaiza": {
         name: "Yaiza",
@@ -121,6 +228,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         description: "Servicios profesionales de detección de fugas en Yaiza, uno de los municipios más pintorescos de Lanzarote.",
         heroText: "Las villas de lujo, fincas rurales y propiedades tradicionales de Yaiza merecen detección de fugas experta. Proporcionamos servicios especializados en todo este hermoso municipio.",
         areaDescription: "El municipio de Yaiza cubre el suroeste de Lanzarote incluyendo Playa Blanca, El Golfo y la impresionante zona del Parque Nacional de Timanfaya. La región cuenta con muchas propiedades de alta gama con sistemas de agua complejos y piscinas. Nuestra proximidad a Yaiza (estamos basados en Playa Blanca) significa tiempos de respuesta rápidos y conocimiento local de estilos de construcción y problemas comunes de fontanería.",
+        aboutLocation: "Yaiza es uno de los municipios más extensos y diversos de Lanzarote, abarcando desde el bullicioso resort de Playa Blanca hasta los tranquilos pueblos agrícolas del interior. El casco histórico de Yaiza, con sus casas blancas inmaculadas y palmeras canarias, ha sido reconocido como uno de los pueblos más bonitos de España. El municipio incluye joyas naturales como El Golfo con su laguna verde, las playas vírgenes de Papagayo y el impresionante Parque Nacional de Timanfaya. La zona atrae tanto a turistas como a residentes que buscan la combinación perfecta de tranquilidad rural y acceso a servicios modernos.",
+        landmarks: ["Pueblo de Yaiza", "El Golfo", "Parque Nacional Timanfaya", "Playas de Papagayo", "La Geria viñedos", "Salinas de Janubio"],
+        neighborhoods: ["Yaiza pueblo", "Uga", "Femés", "Las Breñas", "La Geria", "El Golfo", "Las Casitas de Femés"],
+        commonWaterIssues: [
+          { title: "Fugas en Aljibes Tradicionales", description: "Las fincas rurales tienen depósitos de agua subterráneos (aljibes) con muros de piedra que pueden desarrollar filtraciones. Localizar la fuga exacta en estas estructuras requiere experiencia especializada." },
+          { title: "Sistemas de Riego para Viñedos", description: "Las bodegas de La Geria tienen kilómetros de tuberías de riego por goteo enterradas. Las micro-fugas múltiples son comunes y difíciles de detectar sin equipamiento profesional." },
+          { title: "Tuberías de Suministro Largas", description: "Las propiedades rurales alejadas de la red principal tienen tuberías de suministro de cientos de metros. Una fuga en cualquier punto puede representar pérdidas significativas de agua y presión." },
+          { title: "Restricciones de Excavación", description: "Las propiedades cerca del Parque Nacional tienen restricciones estrictas sobre excavación. Nuestra detección precisa es esencial para minimizar el impacto medioambiental de las reparaciones." }
+        ],
+        serviceCoverage: "Cubrimos todo el extenso municipio de Yaiza: desde el pueblo histórico de Yaiza hasta las fincas de Uga y La Geria, pasando por los pequeños núcleos de Femés, Las Breñas y Las Casitas. También damos servicio a las propiedades de El Golfo y las zonas rurales hacia Timanfaya. Como empresa basada en Playa Blanca (que pertenece al municipio de Yaiza), conocemos íntimamente la zona y sus peculiaridades constructivas.",
+        whyChooseUs: [
+          "Conocimiento especializado de los sistemas de agua rurales: aljibes, pozos, y tuberías de suministro largas",
+          "Experiencia con las restricciones de excavación cerca del Parque Nacional de Timanfaya",
+          "Capacidad para detectar fugas en sistemas de riego de viñedos y fincas agrícolas",
+          "Tiempo de respuesta rápido gracias a nuestra ubicación en Playa Blanca, dentro del municipio",
+          "Comprensión de la arquitectura tradicional canaria y sus desafíos de fontanería únicos",
+          "Equipo capaz de acceder a propiedades rurales alejadas de carreteras principales"
+        ],
+        emergencyResponse: {
+          responseTime: "1-2 horas",
+          availability: "24/7 Emergencias",
+          description: "Como expertos locales del municipio de Yaiza, ofrecemos tiempos de respuesta rápidos para emergencias en toda la zona. Para propiedades en Yaiza pueblo, Uga, o La Geria, podemos estar allí en 1-2 horas. Para El Golfo o zonas más alejadas, nos adaptamos a la urgencia de la situación. Entendemos que en propiedades rurales, una fuga puede significar quedarse sin agua—actuamos con la urgencia necesaria."
+        },
         localChallenges: "Las fincas rurales de Yaiza y Uga tienen sistemas de agua únicos: aljibes tradicionales (depósitos subterráneos de agua de lluvia), pozos artesanos, y largas tuberías de suministro desde la red principal. Detectar fugas en estos sistemas extensos requiere experiencia específica. Las bodegas y restaurantes de La Geria tienen sistemas de riego por goteo para sus viñedos que pueden desarrollar múltiples fugas microscópicas difíciles de detectar visualmente. Las propiedades cerca del Parque Nacional tienen restricciones de excavación que hacen la detección precisa aún más crítica.",
         nearbyAreas: ["Playa Blanca", "El Golfo", "Femés", "Uga", "Las Breñas"],
         services: [
@@ -134,7 +264,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea en fincas", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Imagen térmica para detección de fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
         ],
-        seo: { title: "Detección Fugas Yaiza | Villas y Fincas | Canary Detect", description: "Detección de fugas Yaiza. Villas de lujo, fincas, propiedades rurales. Piscinas. Servicio local. +34 711 051 071", keywords: "detección fugas Yaiza, fugas agua Yaiza, fugas piscina Yaiza, fugas villa Lanzarote, reparación fugas finca Yaiza" }
+        seo: { title: "Detección Fugas Yaiza | Villas, Fincas y Propiedades Rurales", description: "Detección profesional de fugas en el municipio de Yaiza. Villas de lujo, fincas rurales, viñedos de La Geria. Expertos en sistemas de agua tradicionales. +34 711 051 071", keywords: "detección fugas Yaiza, fugas agua Yaiza, fugas piscina Yaiza, fugas villa Lanzarote, reparación fugas finca Yaiza, fugas aljibe" }
       },
       "tias": {
         name: "Tías",
@@ -357,6 +487,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Professional leak detection services in Arrecife, Lanzarote's capital city.",
       heroText: "Lanzarote's capital city deserves expert leak detection. We serve residential properties, hotels, and commercial buildings throughout Arrecife with our comprehensive range of water leak detection and repair services.",
       areaDescription: "As Lanzarote's largest town and main port, Arrecife has a mix of older properties and modern developments. Aging pipe infrastructure, combined with the island's hard water, means water leaks are common. Our team provides fast response times to Arrecife, typically within 24-48 hours for standard appointments and same-day for emergencies.",
+      aboutLocation: "Arrecife, the vibrant capital of Lanzarote, is a port city of over 60,000 residents that blends history, commerce, and modern life. Founded in the 15th century as a fishing port, the city has evolved into the island's administrative, commercial, and cultural centre. Arrecife's waterfront promenade offers spectacular Atlantic views, while the historic centre maintains traditional Canarian architectural charm with whitewashed houses and wooden balconies. The city hosts important cultural institutions, modern shopping centres, and a thriving local community that coexists with visitors from around the world.",
+      landmarks: ["Charco de San Ginés", "Castillo de San Gabriel", "Marina Lanzarote", "Calle Real", "Playa del Reducto", "El Almacén Art Centre"],
+      neighborhoods: ["Historic Centre", "San Ginés", "Los Alonso", "Argana Alta", "Altavista", "Titerroy", "Maneje"],
+      commonWaterIssues: [
+        { title: "Corroded Cast Iron Pipes", description: "Buildings constructed between 1960-1980 have cast iron pipes with decades of internal corrosion. Lanzarote's hard water accelerates this deterioration, causing leaks at joints and elbows." },
+        { title: "Rising Damp", description: "Properties near Charco de San Ginés and the port area suffer from rising damp due to proximity to the water table and the salty ocean environment." },
+        { title: "Leaks in Centralised Systems", description: "Apartment blocks in the centre have shared plumbing systems where a single leak can affect multiple homes and spike community water bills." },
+        { title: "Water Pressure Problems", description: "Higher areas of Arrecife like Argana and Altavista experience pressure fluctuations that stress older pipes, causing micro-leaks difficult to detect." }
+      ],
+      serviceCoverage: "We provide complete coverage across the entire city of Arrecife and its neighbourhoods: from the historic centre with its traditional buildings, through the residential developments of Argana Alta and Altavista, to the commercial zones near the port and waterfront. Our service includes residential properties, apartment communities, hotels, offices, and commercial premises. We also serve the industrial areas and newer developments on the outskirts.",
+      whyChooseUs: [
+        "Deep knowledge of typical Arrecife building styles and their specific plumbing challenges",
+        "Fast response from our base in the south—we reach Arrecife in under 45 minutes",
+        "€80,000+ in equipment including thermal imaging cameras, acoustic detectors, and tracer gas equipment",
+        "Specific experience with historic buildings in the old town that require non-invasive techniques",
+        "No Find, No Fee guarantee—you only pay when we pinpoint your leak with precision",
+        "Professional reports valid for insurance claims and property management companies"
+      ],
+      emergencyResponse: {
+        responseTime: "2-4 hours",
+        availability: "24/7 Emergency",
+        description: "We understand that water leaks in Arrecife require urgent attention, especially in apartment buildings where water can seep into lower floors. Our emergency service is available 24 hours. We arrive anywhere in Arrecife within 2-4 hours for emergencies, equipped with everything needed to locate and isolate the leak immediately."
+      },
       localChallenges: "Arrecife's historic centre presents unique challenges: cast iron pipes from the 1960s-70s with advanced corrosion, shared sewage systems between old buildings, and difficult access in narrow streets of the old town. Properties near the Charco de San Ginés lagoon particularly suffer from rising damp due to proximity to the sea. Apartment blocks in the port area have centralised plumbing systems where pinpointing the exact leak avoids disturbing multiple neighbours.",
       nearbyAreas: ["San Bartolomé", "Playa Honda", "Tías", "Puerto del Carmen"],
       services: [
@@ -370,7 +523,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "How Lanzarote's water system works", href: `${blogBasePath}/master-your-lanzarote-water-system` },
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
       ],
-      seo: { title: "Leak Detection Arrecife | Water & Pool | Canary Detect", description: "Leak detection Arrecife. Water leaks, pool leaks, underground pipes. No Find No Fee. Call +34 711 051 071", keywords: "leak detection Arrecife, water leak detection Arrecife, pool leak detection Arrecife, leak repair Arrecife, plumber Arrecife Lanzarote, hidden water leak Arrecife" }
+      seo: { title: "Leak Detection Arrecife | Water & Pool Experts Lanzarote", description: "Professional leak detection in Arrecife, Lanzarote's capital. Hidden water leaks, pool leaks, underground pipes. No Find, No Fee. 24h emergencies. +34 711 051 071", keywords: "leak detection Arrecife, water leak detection Arrecife, pool leak detection Arrecife, leak repair Arrecife, plumber Arrecife Lanzarote, hidden water leak Arrecife" }
     },
     "puerto-del-carmen": {
       name: "Puerto del Carmen",
@@ -378,6 +531,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Expert leak detection services in Puerto del Carmen, Lanzarote's busiest tourist resort.",
       heroText: "Puerto del Carmen's hotels, apartments and villas need reliable leak detection. We provide fast, professional service to minimize disruption to guests and residents alike.",
       areaDescription: "As Lanzarote's premier tourist destination, Puerto del Carmen has a high concentration of hotels, holiday apartments and rental villas. Water leaks can be costly for property owners—both in water bills and potential damage to guest experiences. We offer priority service for commercial properties and emergency call-outs for hotels experiencing active leaks.",
+      aboutLocation: "Puerto del Carmen is the tourist heart of Lanzarote, a vibrant coastal area stretching along 6 kilometres of golden beaches. What began as a small fishing village in the 1960s has transformed into the island's most popular resort, hosting more than half of Lanzarote's tourist beds. The old town retains its traditional charm with fresh fish restaurants by the harbour, while Avenida de las Playas offers kilometres of seafront promenade with shops, restaurants, and bars. Puerto del Carmen attracts millions of visitors each year, from British and German families to digital nomads working from apartments with sea views.",
+      landmarks: ["Playa Grande", "Playa Chica", "Avenida de las Playas", "Old Harbour", "Biosfera Shopping Centre", "Los Fariones"],
+      neighborhoods: ["Old Town", "La Tiñosa", "Los Pocillos", "Matagorda", "Playa de los Pocillos", "La Peñita"],
+      commonWaterIssues: [
+        { title: "Hotel Pool System Leaks", description: "Hotel complexes have pool systems with multiple components—jacuzzis, waterfalls, recirculation circuits—each a potential leak source increasing operating costs." },
+        { title: "Sun-Degraded Pipes", description: "1980s complex rooftops have polyethylene pipes exposed to decades of intense sun. The plastic becomes brittle and develops micro-cracks." },
+        { title: "Marine Environment Corrosion", description: "Beachfront properties suffer accelerated corrosion. Salty air attacks metal connections and accelerates deterioration of copper and iron pipes." },
+        { title: "Hidden Leaks in Holiday Apartments", description: "With high guest turnover, small leaks can go undetected for months. Owners discover the problem when receiving extraordinary water bills." }
+      ],
+      serviceCoverage: "We cover the entire length of Puerto del Carmen: from the quiet Old Town with its traditional restaurants, through the lively La Tiñosa area and Avenida de las Playas, to the quieter residential zones of Los Pocillos and Matagorda. We serve both tourist properties (hotels, holiday rental apartments, complexes) and permanent resident homes. We also cover hillside developments like Risco Prieto and Puerto del Carmen Alto.",
+      whyChooseUs: [
+        "Specific experience with tourist properties—we understand the urgency of resolving issues without affecting guests",
+        "Emergency service availability for hotels with active leaks threatening occupied rooms",
+        "Professional reports in English and Spanish for foreign owners and property managers",
+        "Non-invasive techniques that allow hotel operations to continue while we locate leaks",
+        "Deep knowledge of typical plumbing systems in the area's tourist complexes",
+        "No Find, No Fee guarantee—especially important for owners managing remotely"
+      ],
+      emergencyResponse: {
+        responseTime: "1-3 hours",
+        availability: "24/7 Emergency",
+        description: "In Puerto del Carmen, an active water leak can mean hotel rooms out of service or tourist apartments unusable—costs that multiply every hour. Our emergency team can be anywhere in Puerto del Carmen within 1-3 hours, even outside business hours. We arrive with all equipment needed to locate the leak and, if possible, perform immediate repair."
+      },
       localChallenges: "Puerto del Carmen presents tourism-specific challenges: hotels with complex pool systems including jacuzzis, fountains and waterfalls; apartments with high turnover where leaks can go unnoticed for months; and pressure to resolve issues quickly to avoid affecting guests. Beachfront properties along Playa Grande suffer accelerated corrosion from the salty environment. 1980s complexes along Avenida de las Playas have polyethylene pipes degraded by sun and extreme rooftop heat.",
       nearbyAreas: ["Tías", "Playa Honda", "Arrecife", "Puerto Calero"],
       services: [
@@ -391,7 +567,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Pool leak repair costs Lanzarote", href: `${blogBasePath}/swimming-pool-leak-repair-cost-lanzarote` },
         { title: "Damp walls: causes & solutions", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Puerto del Carmen | Canary Detect", description: "Leak detection Puerto del Carmen. Hotels, villas, apartments. Pool leaks, emergency repairs. Call +34 711 051 071", keywords: "leak detection Puerto del Carmen, water leak detection Puerto del Carmen, pool leak detection Puerto del Carmen, hotel leak detection Lanzarote, villa leak repair Puerto del Carmen" }
+      seo: { title: "Leak Detection Puerto del Carmen | Hotels & Villas", description: "Professional leak detection in Puerto del Carmen. Hotels, villas, tourist apartments. Pool leaks and 24h emergencies. No Find, No Fee. +34 711 051 071", keywords: "leak detection Puerto del Carmen, water leak detection Puerto del Carmen, pool leak detection Puerto del Carmen, hotel leak detection Lanzarote, villa leak repair Puerto del Carmen" }
     },
     "playa-blanca": {
       name: "Playa Blanca",
@@ -399,6 +575,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Local leak detection experts based in Playa Blanca, serving the south of Lanzarote.",
       heroText: "We're based right here in Playa Blanca—your local leak detection specialists. With €80,000+ of professional equipment, we serve the entire south of the island with same-day availability.",
       areaDescription: "Playa Blanca is our home base, meaning we can offer the fastest response times in the south of Lanzarote. The area's luxury villas and marina properties often feature complex plumbing systems and swimming pools that require specialist leak detection. We know the local building styles and common issues, giving us an edge when it comes to finding and fixing leaks quickly.",
+      aboutLocation: "Playa Blanca is Lanzarote's southernmost resort, an area that has experienced spectacular development over the past three decades. What began as a quiet fishing village has transformed into a luxury destination with the exclusive Marina Rubicón, white sand beaches, and high-end developments. Unlike Puerto del Carmen, Playa Blanca maintains a more relaxed pace and attracts visitors seeking tranquillity and quality. The area offers ferry access to Fuerteventura, some of the island's best beaches like Papagayo, and stunning views towards Lobos Island and Fuerteventura.",
+      landmarks: ["Marina Rubicón", "Papagayo Beaches", "Pechiguera Lighthouse", "Las Coloradas Castle", "Rubicón Shopping Centre", "Marina"],
+      neighborhoods: ["Playa Blanca Centre", "Las Coloradas", "Montaña Roja", "Marina Rubicón", "Faro Park", "Los Limones", "Playa Flamingo"],
+      commonWaterIssues: [
+        { title: "Luxury Villa Pool Leaks", description: "High-end villas have infinity pools, integrated spas, and climate control systems that multiply potential leak points. Each component requires specialist inspection." },
+        { title: "Complex Irrigation Systems", description: "Tropical villa gardens have multiple automatic irrigation zones. Leaks in buried pipes can go undetected for months, driving up water bills." },
+        { title: "Traditional Aljibe Problems", description: "Older properties in Las Coloradas have underground water tanks (aljibes) with stone walls that can develop difficult-to-locate seepage." },
+        { title: "Volcanic Terrain Challenges", description: "Southern Lanzarote's volcanic soil makes excavation extremely expensive. Our precise detection minimises the area to dig, saving thousands of euros." }
+      ],
+      serviceCoverage: "As a local company based in Playa Blanca, we cover the entire south with the fastest response times on the island. Our service spans from the historic centre by the port to the luxury developments of Marina Rubicón, Montaña Roja, and Faro Park. We also serve the residential areas of Las Coloradas, Los Limones, and properties further toward Papagayo. We cover individual villas as well as owner communities, boutique hotels, and tourist apartments.",
+      whyChooseUs: [
+        "We're local—our office is right here in Playa Blanca, meaning immediate response with no travel time",
+        "Deep knowledge of typical southern zone construction, from luxury villas to traditional houses",
+        "Specific experience with infinity pool and spa systems common in high-end properties",
+        "Established relationships with local builders, architects, and property managers",
+        "Emergency availability—we can be at your property in minutes, not hours",
+        "We understand volcanic terrain challenges and the importance of precise detection"
+      ],
+      emergencyResponse: {
+        responseTime: "30 min - 1 hour",
+        availability: "24/7 Emergency",
+        description: "As Playa Blanca residents, we offer the fastest response time in the south of the island. For emergencies in Playa Blanca and surroundings, we can be at your property in 30 minutes to 1 hour, any day of the week. This is crucial when a leak threatens to damage a luxury villa or when guests are waiting at a rental property."
+      },
       localChallenges: "The luxury villas of Marina Rubicón and Montaña Roja feature high-end plumbing systems with multiple irrigation zones, infinity pools with overflow edges, and integrated spas—all potential leak points. The volcanic terrain of southern Lanzarote makes traditional excavation difficult, making our precise detection even more valuable. Older properties in Las Coloradas have aljibe (water tank) systems requiring specialist inspection to detect leaks in their stone walls.",
       nearbyAreas: ["Yaiza", "Femés", "Las Breñas", "El Golfo"],
       services: [
@@ -412,7 +611,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Thermal imaging for leak detection", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
       ],
-      seo: { title: "Leak Detection Playa Blanca | Local Experts", description: "Local leak detection Playa Blanca. We're based here! Water, pool, underground. Same-day service. Call +34 711 051 071", keywords: "leak detection Playa Blanca, water leak detection Playa Blanca, pool leak detection Playa Blanca, plumber Playa Blanca, leak repair Playa Blanca Lanzarote" }
+      seo: { title: "Leak Detection Playa Blanca | We're Local!", description: "Local leak detection experts in Playa Blanca. Luxury villas, pools, underground leaks. Immediate response. No Find, No Fee. +34 711 051 071", keywords: "leak detection Playa Blanca, water leak detection Playa Blanca, pool leak detection Playa Blanca, plumber Playa Blanca, leak repair Playa Blanca Lanzarote" }
     },
     "costa-teguise": {
       name: "Costa Teguise",
@@ -420,6 +619,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Professional leak detection services in Costa Teguise, Lanzarote's family-friendly resort.",
       heroText: "Costa Teguise's apartments, villas and commercial properties need reliable leak detection. We serve the whole area with professional, non-invasive leak detection services.",
       areaDescription: "Costa Teguise is known for its purpose-built resort developments, many dating from the 1980s and 90s. These properties often have complex shared plumbing systems where pinpointing a leak's exact location is crucial to avoid unnecessary excavation. Our multi-technology approach is perfect for Costa Teguise's apartment blocks and community pools.",
+      aboutLocation: "Costa Teguise is Lanzarote's second-largest resort, originally designed by the celebrated artist César Manrique in the 1970s. Unlike the organic development of Puerto del Carmen, Costa Teguise was planned from scratch as a quality tourist destination. The result is a resort with wide streets, well-maintained green areas, and architecture that respects traditional Canarian style. The area mainly attracts European families, offering safe beaches, a lively promenade, and the island's only golf course. The mix of tourists and permanent residents—many European retirees—creates a diverse community with varied needs.",
+      landmarks: ["Playa de las Cucharas", "Pueblo Marinero", "Costa Teguise Golf Course", "Aquarium Lanzarote", "Playa de los Charcos", "Las Cucharas Shopping Centre"],
+      neighborhoods: ["Playa de las Cucharas", "Playa de los Charcos", "Pueblo Marinero", "Jardín del Mar", "Oasis de Nazaret", "El Jablillo"],
+      commonWaterIssues: [
+        { title: "Aging Plumbing Systems", description: "1980s complexes have 40+ year old pipes with multiple distribution points. Internal corrosion and deteriorated joints cause leaks in unexpected locations." },
+        { title: "Problematic Community Pools", description: "Large community pools have extensive pipe networks. A leak can be 50 metres from the visible water loss point, requiring expertise to isolate the affected section." },
+        { title: "Evaporation vs Leak Confusion", description: "Constant northeast trade winds accelerate pool evaporation. Our pressure tests definitively distinguish between evaporation loss and actual leaks." },
+        { title: "Golf Course Irrigation Leaks", description: "Properties near the golf course have extensive irrigation systems. Underground leaks can be masked for months, silently increasing water bills." }
+      ],
+      serviceCoverage: "We cover all of Costa Teguise from the lively Las Cucharas promenade to the quieter inland developments. Our service includes large tourist complexes like Sands Beach, Los Zocos, Oasis Lanz, and Barceló Teguise Beach, as well as residential communities in Jardín del Mar, El Jablillo, and Oasis de Nazaret. We also serve properties near the golf course and permanent resident areas.",
+      whyChooseUs: [
+        "Specific experience with the centralised plumbing systems typical of Costa Teguise complexes",
+        "Ability to work with property communities and managers in multiple languages",
+        "Professional pressure tests to distinguish real leaks from evaporation loss",
+        "Non-invasive techniques ideal for shared buildings—minimal disturbance to neighbours",
+        "Detailed reports valid for insurance claims and community meetings",
+        "Knowledge of specific challenges in 1980s-90s construction in the area"
+      ],
+      emergencyResponse: {
+        responseTime: "2-3 hours",
+        availability: "24/7 Emergency",
+        description: "In Costa Teguise, where many properties are apartments with neighbours above and below, a leak can quickly become a problem for multiple homes. We offer emergency service to isolate active leaks and minimise damage. We arrive anywhere in Costa Teguise within 2-3 hours, equipped for immediate diagnosis and, if possible, temporary repair to contain the problem."
+      },
       localChallenges: "Costa Teguise's resort complexes like Sands Beach, Los Zocos and Oasis Lanz have centralised plumbing systems over 30 years old with multiple distribution points. Community pools with their extensive pipe networks require specific expertise to isolate the leaking section. The constant northeast wind accelerates evaporation, making it difficult to distinguish between evaporation loss and actual leaks—our pressure tests eliminate this doubt. Properties near the golf course have extensive irrigation systems that can mask underground leaks.",
       nearbyAreas: ["Teguise", "Tahiche", "Guatiza", "Arrecife"],
       services: [
@@ -433,7 +655,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Water meter running with taps off?", href: `${blogBasePath}/water-meter-running-when-taps-off` },
         { title: "Damp walls in apartments", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Costa Teguise | Canary Detect", description: "Leak detection Costa Teguise. Apartments, villas, community pools. Expert shared building service. Call +34 711 051 071", keywords: "leak detection Costa Teguise, water leak detection Costa Teguise, pool leak detection Costa Teguise, apartment leak detection Lanzarote, community pool leak Costa Teguise" }
+      seo: { title: "Leak Detection Costa Teguise | Apartments & Pools", description: "Professional leak detection in Costa Teguise. Apartments, tourist complexes, community pools. Shared building experts. No Find, No Fee. +34 711 051 071", keywords: "leak detection Costa Teguise, water leak detection Costa Teguise, pool leak detection Costa Teguise, apartment leak detection Lanzarote, community pool leak Costa Teguise" }
     },
     "yaiza": {
       name: "Yaiza",
@@ -441,6 +663,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Professional leak detection services in Yaiza, one of Lanzarote's most picturesque municipalities.",
       heroText: "Yaiza's luxury villas, rural fincas and traditional properties deserve expert leak detection. We provide specialist services throughout this beautiful municipality.",
       areaDescription: "Yaiza municipality covers the southwest of Lanzarote including Playa Blanca, El Golfo, and the stunning Timanfaya National Park area. The region features many high-end properties with complex water systems and swimming pools. Our proximity to Yaiza (we're based in Playa Blanca) means fast response times and local knowledge of building styles and common plumbing issues in the area.",
+      aboutLocation: "Yaiza is one of Lanzarote's most extensive and diverse municipalities, spanning from the bustling Playa Blanca resort to the tranquil farming villages of the interior. The historic centre of Yaiza, with its immaculate white houses and Canarian palm trees, has been recognised as one of Spain's most beautiful villages. The municipality includes natural gems like El Golfo with its green lagoon, the pristine Papagayo beaches, and the stunning Timanfaya National Park. The area attracts both tourists and residents seeking the perfect combination of rural tranquillity and access to modern amenities.",
+      landmarks: ["Yaiza Village", "El Golfo", "Timanfaya National Park", "Papagayo Beaches", "La Geria Vineyards", "Janubio Salt Flats"],
+      neighborhoods: ["Yaiza Village", "Uga", "Femés", "Las Breñas", "La Geria", "El Golfo", "Las Casitas de Femés"],
+      commonWaterIssues: [
+        { title: "Traditional Aljibe Leaks", description: "Rural fincas have underground water tanks (aljibes) with stone walls that can develop seepage. Locating the exact leak in these structures requires specialised expertise." },
+        { title: "Vineyard Irrigation Systems", description: "La Geria wineries have kilometres of buried drip irrigation pipes. Multiple micro-leaks are common and difficult to detect without professional equipment." },
+        { title: "Long Supply Pipes", description: "Rural properties far from the mains have supply pipes hundreds of metres long. A leak anywhere along the line can mean significant water and pressure losses." },
+        { title: "Excavation Restrictions", description: "Properties near the National Park have strict excavation restrictions. Our precise detection is essential to minimise the environmental impact of repairs." }
+      ],
+      serviceCoverage: "We cover the entire extensive Yaiza municipality: from the historic Yaiza village to the fincas of Uga and La Geria, through the small settlements of Femés, Las Breñas, and Las Casitas. We also serve properties in El Golfo and rural areas towards Timanfaya. As a company based in Playa Blanca (which belongs to Yaiza municipality), we intimately know the area and its construction peculiarities.",
+      whyChooseUs: [
+        "Specialised knowledge of rural water systems: aljibes, wells, and long supply pipes",
+        "Experience with excavation restrictions near Timanfaya National Park",
+        "Ability to detect leaks in vineyard and agricultural irrigation systems",
+        "Fast response time thanks to our location in Playa Blanca, within the municipality",
+        "Understanding of traditional Canarian architecture and its unique plumbing challenges",
+        "Equipment capable of accessing rural properties far from main roads"
+      ],
+      emergencyResponse: {
+        responseTime: "1-2 hours",
+        availability: "24/7 Emergency",
+        description: "As local experts in Yaiza municipality, we offer fast response times for emergencies throughout the area. For properties in Yaiza village, Uga, or La Geria, we can be there in 1-2 hours. For El Golfo or more remote areas, we adapt to the urgency of the situation. We understand that in rural properties, a leak can mean running out of water—we act with the necessary urgency."
+      },
       localChallenges: "Yaiza and Uga's rural fincas have unique water systems: traditional aljibes (underground rainwater tanks), artesian wells, and long supply pipes from the mains network. Detecting leaks in these extensive systems requires specific expertise. The wineries and restaurants of La Geria have drip irrigation systems for their vineyards that can develop multiple microscopic leaks difficult to detect visually. Properties near the National Park have excavation restrictions making precise detection even more critical.",
       nearbyAreas: ["Playa Blanca", "El Golfo", "Femés", "Uga", "Las Breñas"],
       services: [
@@ -454,7 +699,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Underground leak signs on fincas", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Thermal imaging for leak detection", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
       ],
-      seo: { title: "Leak Detection Yaiza | Villa & Finca | Canary Detect", description: "Leak detection Yaiza. Luxury villas, fincas, rural properties. Pool leak detection. Fast local service. Call +34 711 051 071", keywords: "leak detection Yaiza, water leak detection Yaiza, pool leak detection Yaiza, villa leak detection Lanzarote, finca leak repair Yaiza" }
+      seo: { title: "Leak Detection Yaiza | Villas, Fincas & Rural Properties", description: "Professional leak detection in Yaiza municipality. Luxury villas, rural fincas, La Geria vineyards. Traditional water system experts. +34 711 051 071", keywords: "leak detection Yaiza, water leak detection Yaiza, pool leak detection Yaiza, villa leak detection Lanzarote, finca leak repair Yaiza, aljibe leak" }
     },
     "tias": {
       name: "Tías",

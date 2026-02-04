@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Phone, MapPin, Clock } from "lucide-react";
+import { CheckCircle, Phone, MapPin, Clock, Droplets, AlertTriangle, Shield, Zap, Building, Home } from "lucide-react";
 import SEOHead from "@/components/seo/SEOHead";
 import LocationLocalBusinessSchema from "@/components/seo/LocationLocalBusinessSchema";
 import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
+import RelatedServices from "@/components/internal-links/RelatedServices";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getHomePath } from "@/i18n/routes";
 import { getLocationsData, getLocationUIText } from "@/data/locationsData";
@@ -100,7 +101,7 @@ const LocationPage = () => {
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
       </section>
 
-      {/* About This Area */}
+      {/* About This Location - Expanded */}
       <section className="py-14 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-10">
@@ -110,7 +111,42 @@ const LocationPage = () => {
                 <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-6">{uiText.sections.servicesIn(locationData.name)}</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">{locationData.areaDescription}</p>
                 
-                {/* Local Challenges - NEW expanded content */}
+                {/* About Location - NEW expanded section */}
+                {locationData.aboutLocation && (
+                  <div className="mb-8">
+                    <h3 className="font-heading text-2xl font-bold mb-4 flex items-center gap-2">
+                      <Building className="h-6 w-6 text-primary" />
+                      {isSpanish ? `Sobre ${locationData.name}` : `About ${locationData.name}`}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">{locationData.aboutLocation}</p>
+                    
+                    {/* Landmarks */}
+                    {locationData.landmarks && locationData.landmarks.length > 0 && (
+                      <div className="bg-muted/30 border border-border rounded-lg p-4 mb-4">
+                        <h4 className="font-semibold mb-2">{isSpanish ? 'Puntos de Referencia:' : 'Key Landmarks:'}</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {locationData.landmarks.map((landmark, idx) => (
+                            <span key={idx} className="bg-background px-3 py-1 rounded-full text-sm border border-border">{landmark}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    
+                    {/* Neighborhoods */}
+                    {locationData.neighborhoods && locationData.neighborhoods.length > 0 && (
+                      <div className="bg-muted/30 border border-border rounded-lg p-4">
+                        <h4 className="font-semibold mb-2">{isSpanish ? 'Barrios y Zonas:' : 'Neighborhoods & Areas:'}</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {locationData.neighborhoods.map((neighborhood, idx) => (
+                            <span key={idx} className="bg-background px-3 py-1 rounded-full text-sm border border-border">{neighborhood}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+                
+                {/* Local Challenges */}
                 <div className="bg-muted/50 border border-border rounded-lg p-5 mb-6">
                   <h3 className="font-heading font-bold text-lg mb-3 flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
@@ -118,6 +154,79 @@ const LocationPage = () => {
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">{locationData.localChallenges}</p>
                 </div>
+
+                {/* Common Water Issues - NEW section */}
+                {locationData.commonWaterIssues && locationData.commonWaterIssues.length > 0 && (
+                  <div className="mb-8">
+                    <h3 className="font-heading text-2xl font-bold mb-4 flex items-center gap-2">
+                      <AlertTriangle className="h-6 w-6 text-primary" />
+                      {isSpanish ? `Problemas Comunes de Agua en ${locationData.name}` : `Common Water Issues in ${locationData.name}`}
+                    </h3>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      {locationData.commonWaterIssues.map((issue, idx) => (
+                        <div key={idx} className="bg-card border border-border rounded-lg p-4">
+                          <div className="flex items-start gap-3">
+                            <Droplets className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                            <div>
+                              <h4 className="font-semibold mb-1">{issue.title}</h4>
+                              <p className="text-sm text-muted-foreground">{issue.description}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Service Coverage - NEW section */}
+                {locationData.serviceCoverage && (
+                  <div className="mb-8">
+                    <h3 className="font-heading text-2xl font-bold mb-4 flex items-center gap-2">
+                      <MapPin className="h-6 w-6 text-primary" />
+                      {isSpanish ? `Nuestra Cobertura en ${locationData.name}` : `Our Service Coverage in ${locationData.name}`}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">{locationData.serviceCoverage}</p>
+                  </div>
+                )}
+
+                {/* Why Choose Us - NEW section */}
+                {locationData.whyChooseUs && locationData.whyChooseUs.length > 0 && (
+                  <div className="mb-8">
+                    <h3 className="font-heading text-2xl font-bold mb-4 flex items-center gap-2">
+                      <Shield className="h-6 w-6 text-primary" />
+                      {isSpanish ? `Por Qué Elegir Canary Detect en ${locationData.name}` : `Why Choose Canary Detect in ${locationData.name}`}
+                    </h3>
+                    <div className="space-y-3">
+                      {locationData.whyChooseUs.map((reason, idx) => (
+                        <div key={idx} className="flex items-start gap-3">
+                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <p className="text-muted-foreground">{reason}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Emergency Response - NEW section */}
+                {locationData.emergencyResponse && (
+                  <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mb-8">
+                    <h3 className="font-heading text-2xl font-bold mb-4 flex items-center gap-2">
+                      <Zap className="h-6 w-6 text-primary" />
+                      {isSpanish ? `Respuesta de Emergencia en ${locationData.name}` : `Emergency Response in ${locationData.name}`}
+                    </h3>
+                    <div className="grid sm:grid-cols-2 gap-4 mb-4">
+                      <div className="bg-background rounded-lg p-4 border border-border">
+                        <p className="text-sm text-muted-foreground mb-1">{isSpanish ? 'Tiempo de Respuesta' : 'Response Time'}</p>
+                        <p className="font-bold text-lg">{locationData.emergencyResponse.responseTime}</p>
+                      </div>
+                      <div className="bg-background rounded-lg p-4 border border-border">
+                        <p className="text-sm text-muted-foreground mb-1">{isSpanish ? 'Disponibilidad' : 'Availability'}</p>
+                        <p className="font-bold text-lg">{locationData.emergencyResponse.availability}</p>
+                      </div>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">{locationData.emergencyResponse.description}</p>
+                  </div>
+                )}
 
                 <div className="grid sm:grid-cols-2 gap-4 mt-8">
                   {[uiText.features.noFindNoFee, uiText.features.equipment, uiText.features.accuracy, uiText.features.reports].map((feature, idx) => (
@@ -142,7 +251,7 @@ const LocationPage = () => {
                   <Button variant="outline" className="w-full" asChild><a href="tel:+34711051071">{uiText.cta.callNow}</a></Button>
                 </div>
                 
-                {/* Related Articles - NEW internal links */}
+                {/* Related Articles - Internal links */}
                 {locationData.relatedLinks && locationData.relatedLinks.length > 0 && (
                   <div className="border-t pt-5">
                     <h4 className="font-semibold text-sm mb-3">{uiText.sections.relatedArticles}</h4>
