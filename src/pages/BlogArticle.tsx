@@ -199,11 +199,11 @@ const BlogArticle = () => {
   if (notFound && !staticArticle) {
     return (
       <Layout>
-        <SEOHead
-          title={isSpanish ? "Artículo no encontrado | Canary Detect" : "Article Not Found | Canary Detect"}
-          description={isSpanish ? "El artículo que busca no existe." : "The article you're looking for doesn't exist."}
-          canonical={`https://canary-detect.com${blogBasePath}`}
-        />
+        <Helmet>
+          <title>{isSpanish ? "Artículo no encontrado | Canary Detect" : "Article Not Found | Canary Detect"}</title>
+          <meta name="description" content={isSpanish ? "El artículo que busca no existe." : "The article you're looking for doesn't exist."} />
+          <meta name="robots" content="noindex, follow" />
+        </Helmet>
         <div className="min-h-[60vh] flex flex-col items-center justify-center bg-muted px-4">
           <h1 className="text-4xl font-bold mb-4">404</h1>
           <p className="text-xl text-muted-foreground mb-6 text-center">
@@ -222,11 +222,11 @@ const BlogArticle = () => {
   if (!article) {
     return (
       <Layout>
-        <SEOHead
-          title={isSpanish ? "Artículo no encontrado | Canary Detect" : "Article Not Found | Canary Detect"}
-          description={isSpanish ? "El artículo que busca no existe." : "The article you're looking for doesn't exist."}
-          canonical={`https://canary-detect.com${blogBasePath}`}
-        />
+        <Helmet>
+          <title>{isSpanish ? "Artículo no encontrado | Canary Detect" : "Article Not Found | Canary Detect"}</title>
+          <meta name="description" content={isSpanish ? "El artículo que busca no existe." : "The article you're looking for doesn't exist."} />
+          <meta name="robots" content="noindex, follow" />
+        </Helmet>
         <div className="min-h-[60vh] flex flex-col items-center justify-center bg-muted px-4">
           <h1 className="text-4xl font-bold mb-4">404</h1>
           <p className="text-xl text-muted-foreground mb-6 text-center">
