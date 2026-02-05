@@ -707,6 +707,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Expert leak detection services in Tías, serving one of Lanzarote's fastest-growing municipalities.",
       heroText: "Tías municipality, home to Puerto del Carmen, needs reliable leak detection services. We serve residential, commercial and tourist properties throughout the area.",
       areaDescription: "Tías is one of Lanzarote's most populous municipalities, encompassing Puerto del Carmen and surrounding residential areas. The mix of older Spanish properties and newer tourist developments means varied plumbing systems and different types of leak challenges. Our multi-technology approach is ideal for accurately locating leaks in any property type.",
+      aboutLocation: "Tías is a vibrant municipality in central-southern Lanzarote that has transformed from a quiet agricultural village into one of the island's most dynamic areas. The historic village of Tías sits on a hillside with panoramic views over Puerto del Carmen and the ocean, while the lower slopes have developed into thriving residential communities. The municipality is home to a diverse population including long-term Spanish residents, European expatriates, and seasonal workers in the tourism industry. The weekly Sunday market, excellent restaurants, and proximity to both the beach and the island's interior make Tías popular with those seeking the best of both worlds.",
+      landmarks: ["Tías Village Centre", "Church of Nuestra Señora de la Candelaria", "Finca de la Florida", "Los Lirios Community", "Mácher Village", "La Asomada"],
+      neighborhoods: ["Tías Village", "La Cuesta", "Las Vegas", "Mácher", "Conil", "La Asomada", "Los Lirios"],
+      commonWaterIssues: [
+        { title: "Hillside Pressure Issues", description: "The elevation difference between upper Tías and lower areas creates significant water pressure variations that stress older pipes and can cause joint failures." },
+        { title: "Aging Lead Pipes", description: "Some traditional Tías village houses still have original lead pipes from the 1960s. These require careful assessment and often replacement." },
+        { title: "Garden Irrigation Leaks", description: "Many Tías properties have extensive gardens with automated irrigation. Underground leaks in these systems often go unnoticed until water bills spike." },
+        { title: "Holiday Home Issues", description: "Properties left empty for months can develop leaks that go undetected. We offer pre-arrival checks for holiday homeowners." }
+      ],
+      serviceCoverage: "We cover the entire Tías municipality from the historic village centre down through the residential developments of La Cuesta and Las Vegas to the farming villages of Mácher and Conil. Our service includes traditional Canarian houses, modern villas, apartment complexes, and commercial properties. We also serve the quieter inland areas of La Asomada and surrounding fincas.",
+      whyChooseUs: [
+        "Deep knowledge of Tías municipality's varied building styles and plumbing systems",
+        "Experience with the unique challenges of hillside properties and pressure variations",
+        "Professional service for both permanent residents and holiday homeowners",
+        "Fast response times from our base in southern Lanzarote",
+        "Non-invasive detection protects tile work and decorative finishes",
+        "Reports available in English and Spanish for international clients"
+      ],
+      emergencyResponse: {
+        responseTime: "2-3 hours",
+        availability: "24/7 Emergency",
+        description: "Water emergencies in Tías require fast response. Whether you're in a village house with water flooding through the ceiling or a villa with a burst pipe under the garden, we can be with you in 2-3 hours. Our emergency service includes immediate leak location and, where possible, temporary isolation to prevent further damage."
+      },
       localChallenges: "The hillside village of Tías has traditional Canarian homes with plumbing systems over 50 years old, many with original lead pipes requiring upgrade. The altitude difference between Tías village and Puerto del Carmen creates water pressure variations that stress older pipes. Urbanisations in Mácher and Conil have extensive garden irrigation systems that can develop invisible leaks under lawns. Rural properties often rely on pressure pumps and tanks adding complexity to leak diagnosis.",
       nearbyAreas: ["Puerto del Carmen", "Mácher", "La Asomada", "Conil", "Arrecife"],
       services: [
@@ -728,6 +751,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Professional leak detection in Playa Honda, Lanzarote's second-largest town.",
       heroText: "Playa Honda's residential properties and commercial buildings need reliable leak detection. We provide fast, professional service to this growing community.",
       areaDescription: "Playa Honda is Lanzarote's second-largest population centre, located between Arrecife and the airport. The town has a mix of apartment blocks, townhouses and commercial properties. Many buildings date from the 1980s and 90s, meaning aging pipework is common. Our leak detection technology can pinpoint leaks in these older systems without unnecessary excavation.",
+      aboutLocation: "Playa Honda is a working-class town that has grown significantly since the 1980s, now home to around 12,000 residents. Located between the capital Arrecife and the airport, it serves as a residential hub for many who work across the island. The town has excellent facilities including sports centres, schools, and a long golden beach. Unlike the tourist resorts, Playa Honda offers an authentic glimpse of everyday life in Lanzarote, with local shops, tapas bars, and a strong community spirit.",
+      landmarks: ["Playa Honda Beach", "Centro Comercial Deiland", "Sports Complex", "Industrial Estate", "Marine Promenade", "El Cable Area"],
+      neighborhoods: ["Playa Honda Centro", "El Cable", "La Concha", "Near Airport Zone", "Industrial Area", "Beachfront"],
+      commonWaterIssues: [
+        { title: "Shared Building Systems", description: "Apartment blocks have shared downpipe and supply systems. A leak on one floor can cause damp on another, requiring expert diagnosis to find the true source." },
+        { title: "Sea Air Corrosion", description: "Properties near the beach experience accelerated corrosion from sea breeze, especially affecting copper connections and brass valves." },
+        { title: "1980s Infrastructure", description: "Many buildings from the 1980s-90s have aging galvanised pipes with internal scaling that restricts flow and develops pinhole leaks." },
+        { title: "Commercial High-Flow Systems", description: "The industrial zone has buildings with high-flow plumbing designed for commercial use, requiring different detection approaches." }
+      ],
+      serviceCoverage: "We cover all of Playa Honda from the beach promenade through the residential centre to the industrial estate near the airport. Our service includes private apartments, community buildings, commercial properties, and the newer developments along the coast. We work with property managers, community administrators, and individual homeowners.",
+      whyChooseUs: [
+        "Experience with Playa Honda's apartment blocks and shared plumbing systems",
+        "Understanding of 1980s-90s construction methods typical in the area",
+        "Fast response from our southern Lanzarote base",
+        "Bilingual reports for property communities and administrators",
+        "Non-invasive methods minimise disruption to neighbours",
+        "Fair pricing for working families and community budgets"
+      ],
+      emergencyResponse: {
+        responseTime: "2-4 hours",
+        availability: "24/7 Emergency",
+        description: "In Playa Honda's apartment buildings, a leak can quickly affect multiple homes. We offer emergency response to locate and isolate leaks fast, minimising damage to your property and your neighbours'. Our team can be anywhere in Playa Honda within 2-4 hours, equipped to handle any emergency."
+      },
       localChallenges: "Playa Honda's apartment blocks have shared downpipe systems where a leak on one floor can manifest as damp on another—requiring expert diagnosis to identify the true source. The industrial zone near the airport has commercial buildings with high-flow plumbing systems designed for industrial use. Properties near the beach experience accelerated corrosion from sea breeze, especially on copper connections and brass valves.",
       nearbyAreas: ["Arrecife", "San Bartolomé", "Tías", "Puerto del Carmen"],
       services: [
@@ -749,6 +795,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Expert leak detection services in San Bartolomé, in the heart of Lanzarote.",
       heroText: "San Bartolomé's residential properties and rural fincas need specialist leak detection. We provide professional services throughout this central municipality.",
       areaDescription: "San Bartolomé sits at Lanzarote's geographical centre, making it easily accessible from our base. The municipality includes traditional villages and rural properties as well as more modern developments. Underground water supply systems are common in rural areas, requiring specialist detection equipment to locate leaks accurately.",
+      aboutLocation: "San Bartolomé is Lanzarote's geographical and cultural heart, home to the island's main agricultural museum (Museo Tanit) and surrounded by traditional farming communities. The municipality encompasses the historic centre of San Bartolomé village, the nearby hamlet of Güime, and the wine-growing area of Montaña Blanca. The area has experienced steady growth as families seek quieter alternatives to tourist zones while remaining close to all amenities. The weekly farmers' market showcases local produce including goat cheese, mojo sauces, and wines from nearby La Geria.",
+      landmarks: ["Museo Tanit", "San Bartolomé Church", "Casa Mayor Guerra", "Monumento al Campesino", "Güime Village", "Montaña Blanca"],
+      neighborhoods: ["San Bartolomé Centro", "Güime", "Montaña Blanca", "Mozaga", "El Islote", "La Florida"],
+      commonWaterIssues: [
+        { title: "Historic Stone Houses", description: "Traditional stone houses have retrofitted plumbing creating complex pipe mazes that are difficult to trace without specialist equipment." },
+        { title: "Aljibe Problems", description: "Rural fincas rely on aljibes (underground cisterns) with stone walls susceptible to invisible hairline cracks causing gradual water loss." },
+        { title: "Heritage Restrictions", description: "Historic properties near museums have strict modification restrictions—precise detection is essential to minimise intervention." },
+        { title: "Agricultural Water Systems", description: "Wine bodegas and farms have refrigeration and humidification systems that can mask or be confused with water leaks." }
+      ],
+      serviceCoverage: "We provide complete coverage across San Bartolomé municipality including the main village, Güime, Mozaga, Montaña Blanca, and surrounding fincas. Our service extends to historic properties, modern homes, agricultural buildings, and commercial properties. We understand the unique requirements of heritage buildings requiring minimal intervention.",
+      whyChooseUs: [
+        "Central location means we can reach San Bartolomé quickly from anywhere on island",
+        "Experience with traditional stone construction and retrofitted plumbing systems",
+        "Specialist expertise in aljibe and cistern leak detection",
+        "Non-invasive methods protect historic fabric and decorative finishes",
+        "Understanding of agricultural water systems common in the area",
+        "Professional reports for heritage building applications if needed"
+      ],
+      emergencyResponse: {
+        responseTime: "2-3 hours",
+        availability: "24/7 Emergency",
+        description: "San Bartolomé's central location means we can respond quickly to emergencies anywhere in the municipality. For rural fincas where water supply is limited, a leak can mean running out of water entirely—we understand the urgency and respond accordingly with full equipment to locate and advise on the problem immediately."
+      },
       localChallenges: "San Bartolomé's historic centre has traditional stone houses with retrofitted plumbing systems creating mazes of pipes difficult to trace. Rural fincas in Montaña Blanca and Güime rely on aljibes and cisterns with stone walls susceptible to invisible cracks. The Tanit Museum and other historic properties require especially delicate detection methods to avoid damaging heritage structures. Wine bodegas in the area have refrigeration and humidification systems that can mask water leaks.",
       nearbyAreas: ["Arrecife", "Playa Honda", "Tías", "Teguise", "Mozaga"],
       services: [
@@ -770,6 +839,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Professional leak detection in Teguise, Lanzarote's historic former capital.",
       heroText: "Teguise's historic buildings and surrounding villages need specialist leak detection. We provide expert services for traditional properties and modern developments alike.",
       areaDescription: "Teguise is Lanzarote's largest municipality by area, stretching from Costa Teguise on the coast to the historic town of Teguise inland. The area includes traditional Canarian architecture, rural fincas, and modern coastal developments. Historic properties often have complex or unusual plumbing systems requiring careful, non-invasive detection methods.",
+      aboutLocation: "Teguise was Lanzarote's capital for over 400 years until 1852, and its historic centre remains one of the island's most important cultural treasures. The municipality is vast, encompassing not just the historic town but also Costa Teguise resort, the artistic hub of Tahiche (César Manrique's home), the fishing village of Arrieta, and the cactus gardens of Guatiza. The Sunday market in Teguise's cobbled plaza is the island's largest and most famous. The area attracts history enthusiasts, art lovers, and those seeking authentic Canarian culture away from tourist beaches.",
+      landmarks: ["Historic Teguise Plaza", "Castillo de Santa Bárbara", "Convento de Santo Domingo", "Palacio Spínola", "Fundación César Manrique (Tahiche)", "Jardín de Cactus"],
+      neighborhoods: ["Teguise Historic Centre", "Los Valles", "Teseguite", "Mozaga", "Soo", "Caleta de Famara"],
+      commonWaterIssues: [
+        { title: "Heritage Building Restrictions", description: "Teguise's historic centre is a Protected Cultural Asset with strict excavation and modification restrictions—precise detection is absolutely essential." },
+        { title: "Thick Volcanic Walls", description: "16th-18th century manor houses have volcanic stone walls up to 80cm thick that can hide leaks for years before visible damage appears." },
+        { title: "Traditional Rainwater Systems", description: "Villages like Guatiza have traditional rainwater capture systems requiring specialist inspection to distinguish structural water from leaks." },
+        { title: "Unmapped Irrigation", description: "Cactus fincas for cochineal production have extensive underground irrigation systems installed decades ago without plans or documentation." }
+      ],
+      serviceCoverage: "We cover the entire Teguise municipality from the historic capital to the northern coast. Our service includes the protected buildings of the historic centre, rural fincas in Los Valles and Soo, the surfing community of Caleta de Famara, and properties in Guatiza and Arrieta. We also serve the important cultural sites requiring particularly careful, non-invasive approaches.",
+      whyChooseUs: [
+        "Extensive experience with protected heritage buildings requiring non-invasive detection",
+        "Understanding of traditional Canarian construction methods and materials",
+        "Thermal imaging ideal for thick stone walls that hide conventional leak signs",
+        "Respectful approach to historic fabric and original features",
+        "Knowledge of the municipality's varied building types from 16th century to modern",
+        "Reports suitable for heritage building applications and planning permissions"
+      ],
+      emergencyResponse: {
+        responseTime: "2-4 hours",
+        availability: "24/7 Emergency",
+        description: "Heritage buildings require careful emergency response that protects historic fabric while addressing urgent problems. Our team understands how to work in protected buildings without causing additional damage. For properties in Teguise's historic centre, we work with particular care while still responding with appropriate urgency."
+      },
       localChallenges: "Teguise's historic centre is a Protected Cultural Asset with strict restrictions on excavation and modifications—making precise detection absolutely essential. 16th-18th century manor houses have volcanic stone walls up to 80cm thick that can hide leaks for years. The villages of Guatiza and Arrieta near Jameos del Agua have traditional rainwater capture systems requiring specialist inspection. Cactus fincas for cochineal have extensive underground irrigation systems installed decades ago without plans.",
       nearbyAreas: ["Costa Teguise", "Tahiche", "Guatiza", "Haría", "Arrecife"],
       services: [
@@ -791,6 +883,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Professional leak detection services in Puerto Calero, Lanzarote's exclusive marina village.",
       heroText: "Puerto Calero's luxury villas and marina properties need reliable leak detection. We provide specialist services for this prestigious development.",
       areaDescription: "Puerto Calero is Lanzarote's premier marina development, featuring high-end villas, apartments and commercial properties. The marina's luxurious properties often have complex plumbing systems including pools, spas and irrigation. Our proximity and professional equipment mean fast response times for this exclusive area.",
+      aboutLocation: "Puerto Calero is Lanzarote's most exclusive marina development, conceived and built by José Calero in the 1980s as a high-end alternative to the busier resorts. The marina has evolved into a prestigious address featuring superyachts, luxury villas, fine dining restaurants, and boutique shops. The development maintains strict architectural standards ensuring a cohesive aesthetic. Many properties are second homes for wealthy Europeans, while others serve as luxury holiday rentals. The marina hosts yacht races, regattas, and cultural events throughout the year.",
+      landmarks: ["Marina Puerto Calero", "Submarine Safari", "Marina Promenade", "Yacht Club", "Amura Restaurant", "Casa del Vino"],
+      neighborhoods: ["Marina Apartments", "Hillside Villas", "La Pechiguera", "Waterfront Properties", "Golf Course Area"],
+      commonWaterIssues: [
+        { title: "Saltwater Corrosion", description: "Marina proximity accelerates corrosion on copper pipes and brass fittings. Regular inspection prevents expensive failures." },
+        { title: "Complex Pool & Spa Systems", description: "Luxury villas have pools with spas, waterfalls, and multiple circulation systems—each a potential leak source requiring expert diagnosis." },
+        { title: "Underfloor Heating Leaks", description: "High-spec properties often have underfloor heating where leaks require thermal imaging expertise to locate without damaging finishes." },
+        { title: "Irrigation Systems", description: "Manicured gardens with extensive irrigation can develop underground leaks that go unnoticed until water bills arrive." }
+      ],
+      serviceCoverage: "We provide complete coverage for Puerto Calero's exclusive properties from the marina apartments to the hillside villas with ocean views. Our service includes residential villas, holiday rental properties, commercial premises on the marina, and the surrounding La Pechiguera area. We understand the need for discreet, professional service in this prestigious community.",
+      whyChooseUs: [
+        "Discreet professional service appropriate for exclusive properties",
+        "Experience with complex pool, spa, and underfloor heating systems",
+        "Thermal imaging expertise for high-spec finishes that can't be damaged",
+        "Understanding of holiday rental timing and minimal disruption requirements",
+        "Reports in multiple languages for international property owners",
+        "Access to specialist parts and materials for luxury installations"
+      ],
+      emergencyResponse: {
+        responseTime: "1-3 hours",
+        availability: "24/7 Emergency",
+        description: "Puerto Calero properties demand fast, discreet emergency response. A leak in a luxury villa can cause significant damage to valuable finishes and furnishings. We respond within 1-3 hours with full equipment, working efficiently to minimise disruption to your property and, for rental properties, your guests."
+      },
       localChallenges: "Puerto Calero's marina properties face unique challenges: saltwater proximity accelerating corrosion on copper pipes and brass fittings; complex pool and spa systems with multiple circulation pumps; underground irrigation for manicured gardens; and prestigious clients requiring discreet, minimal-disruption service. The high-spec properties often have underfloor heating systems where leak detection requires thermal imaging expertise.",
       nearbyAreas: ["Puerto del Carmen", "Tías", "Playa Blanca", "Arrecife"],
       services: [

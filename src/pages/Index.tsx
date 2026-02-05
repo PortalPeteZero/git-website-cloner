@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useMemo } from "react";
 import Layout from "@/components/layout/Layout";
 import HeroSlider from "@/components/home/HeroSlider";
 import WelcomeSection from "@/components/home/WelcomeSection";
@@ -18,6 +18,8 @@ const TestimonialsSection = lazy(() => import("@/components/home/TestimonialsSec
 const CaseStudiesPreview = lazy(() => import("@/components/home/CaseStudiesPreview"));
 const FAQSection = lazy(() => import("@/components/home/FAQSection"));
 const ProblemFAQSection = lazy(() => import("@/components/home/ProblemFAQSection"));
+const PopularGuidesSection = lazy(() => import("@/components/home/PopularGuidesSection"));
+const ServiceAreasSection = lazy(() => import("@/components/home/ServiceAreasSection"));
 
 const Index = () => {
   const { t, isSpanish } = useTranslation();
@@ -84,6 +86,18 @@ const Index = () => {
       <ErrorBoundary>
         <Suspense fallback={<LoadingFallback height="min-h-[300px]" />}>
           <FAQSection />
+        </Suspense>
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <Suspense fallback={<LoadingFallback height="min-h-[400px]" />}>
+          <PopularGuidesSection isSpanish={isSpanish} />
+        </Suspense>
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <Suspense fallback={<LoadingFallback height="min-h-[300px]" />}>
+          <ServiceAreasSection isSpanish={isSpanish} />
         </Suspense>
       </ErrorBoundary>
     </Layout>

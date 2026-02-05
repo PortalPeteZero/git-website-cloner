@@ -10,6 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getBlogPath } from "@/i18n/routes";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
+import BlogCrossLinks from "@/components/internal-links/BlogCrossLinks";
 
 // Hero carousel images
 import heroHqScene from "@/assets/hero/blog-hq-scene.jpg";
@@ -352,6 +353,9 @@ const Blog = () => {
           )}
         </div>
       </section>
+
+      {/* Cross-links to Services and Locations */}
+      <BlogCrossLinks isSpanish={isSpanish} />
 
       {/* Newsletter CTA */}
       <section className="py-16 md:py-24 bg-background">
