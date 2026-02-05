@@ -15,38 +15,92 @@ export const serviceFaqs: Record<string, ServiceFaqData> = {
   "water-leak-detection": {
     en: [
       {
-        question: "How do I know if I have a hidden water leak?",
-        answer: "Common signs include: water meter running when all taps are off, unexplained high water bills, damp patches on walls or floors, musty smells, or the sound of running water when nothing is on. If you notice any of these, contact us for a FREE leak confirmation test."
+        question: "What are the signs of a hidden water leak I can't see?",
+        answer: "The most reliable sign is your water meter spinning when all taps and appliances are off. Other indicators include: unexplained high water bills, damp or warm patches on floors, musty smells with no visible source, paint bubbling or wallpaper peeling, or hearing running water when nothing is in use."
       },
       {
-        question: "Will you need to break walls to find my leak?",
-        answer: "No—our detection methods are non-invasive. We use thermal imaging, acoustic sensors, and tracer gas to locate leaks precisely without causing damage. Only if repair access is needed would any work be required on walls or floors."
+        question: "How does thermal imaging find hidden leaks?",
+        answer: "Thermal cameras detect temperature differences invisible to the naked eye. When water leaks behind walls or under floors, it creates cooler zones that show up clearly on our thermal images. This allows us to 'see' moisture patterns without any drilling or damage to your property."
       },
       {
-        question: "How accurate is your water leak detection?",
-        answer: "We achieve centimetre accuracy in 95% of cases. By using at least two independent technologies to confirm each leak location, we minimise repair costs and disruption to your property."
+        question: "What is tracer gas detection and how does it work?",
+        answer: "We pressurise your pipes with a safe mixture of nitrogen and hydrogen gas (95%/5%). This gas is lighter than air and escapes through even tiny cracks, rising through any surface material. Our ultra-sensitive detectors then pinpoint exactly where the gas is escaping—marking the leak location."
       },
       {
-        question: "How long does a water leak detection survey take?",
-        answer: "Most residential surveys take 2-4 hours depending on property size and complexity. We work efficiently but thoroughly to ensure we find all leaks, not just the obvious ones."
+        question: "What does 'No Find, No Fee' actually mean?",
+        answer: "If we confirm you have an active leak but cannot locate its exact position, you pay nothing. It's that simple. This guarantee reflects our confidence in our €80,000+ worth of detection equipment and our experienced team."
+      },
+      {
+        question: "How long does a hidden leak survey take?",
+        answer: "Most residential surveys take 2-4 hours depending on property size and system complexity. We never rush—our systematic approach ensures we find all leaks, not just the obvious ones, and confirm each location with multiple technologies."
       },
     ],
     es: [
       {
-        question: "¿Cómo sé si tengo una fuga de agua oculta?",
-        answer: "Las señales más comunes incluyen: contador de agua girando con todos los grifos cerrados, facturas de agua inexplicablemente altas, manchas de humedad en paredes o suelos, olores a moho, o sonido de agua corriendo sin usar grifos. Si nota alguna de estas señales, contáctenos para una prueba de confirmación de fugas GRATIS."
+        question: "¿Cuáles son las señales de una fuga de agua oculta?",
+        answer: "La señal más fiable es ver el contador de agua girando cuando todos los grifos y electrodomésticos están cerrados. Otros indicadores incluyen: facturas de agua inexplicablemente altas, manchas húmedas o calientes en suelos, olores a moho sin fuente visible, pintura burbujeando o papel pintado despegándose, o escuchar agua corriendo cuando nada está en uso."
       },
       {
-        question: "¿Necesitarán romper paredes para encontrar mi fuga?",
-        answer: "No—nuestros métodos de detección no son invasivos. Usamos imagen térmica, sensores acústicos y gas trazador para localizar fugas con precisión sin causar daños. Solo si se necesita acceso para la reparación se requeriría algún trabajo en paredes o suelos."
+        question: "¿Cómo encuentra fugas ocultas la imagen térmica?",
+        answer: "Las cámaras térmicas detectan diferencias de temperatura invisibles al ojo humano. Cuando el agua se fuga detrás de paredes o bajo suelos, crea zonas más frías que aparecen claramente en nuestras imágenes térmicas. Esto nos permite 'ver' patrones de humedad sin ningún taladro ni daño a su propiedad."
       },
       {
-        question: "¿Qué precisión tiene su detección de fugas de agua?",
-        answer: "Conseguimos precisión centimétrica en el 95% de los casos. Al usar al menos dos tecnologías independientes para confirmar cada ubicación de fuga, minimizamos los costes de reparación y las molestias a su propiedad."
+        question: "¿Qué es la detección con gas trazador y cómo funciona?",
+        answer: "Presurizamos sus tuberías con una mezcla segura de nitrógeno e hidrógeno (95%/5%). Este gas es más ligero que el aire y escapa incluso por grietas diminutas, emergiendo a través de cualquier material de superficie. Nuestros detectores ultrasensibles localizan exactamente dónde está escapando el gas—marcando la ubicación de la fuga."
       },
       {
-        question: "¿Cuánto tiempo dura una inspección de detección de fugas?",
-        answer: "La mayoría de las inspecciones residenciales duran 2-4 horas dependiendo del tamaño y complejidad de la propiedad. Trabajamos de forma eficiente pero minuciosa para asegurar que encontramos todas las fugas, no solo las obvias."
+        question: "¿Qué significa realmente 'Sin Encontrar, Sin Pagar'?",
+        answer: "Si confirmamos que tiene una fuga activa pero no podemos localizar su posición exacta, no paga nada. Así de simple. Esta garantía refleja nuestra confianza en nuestros más de €80.000 en equipos de detección y nuestro equipo experimentado."
+      },
+      {
+        question: "¿Cuánto tiempo dura una inspección de fugas ocultas?",
+        answer: "La mayoría de las inspecciones residenciales duran 2-4 horas dependiendo del tamaño de la propiedad y complejidad del sistema. Nunca nos precipitamos—nuestro enfoque sistemático garantiza que encontramos todas las fugas, no solo las obvias, y confirmamos cada ubicación con múltiples tecnologías."
+      },
+    ]
+  },
+  "water-pipe-leak-detection": {
+    en: [
+      {
+        question: "How do I know which type of pipes I have in my property?",
+        answer: "You can identify pipe materials at visible points (under sinks, water heater connections, meter entry). Copper is reddish-brown metal, PVC/CPVC is white or cream plastic, polyethylene is black flexible plastic (usually underground), and galvanised iron is grey metal that may show rust. We can map your entire system during our survey."
+      },
+      {
+        question: "Why do copper pipes leak in Lanzarote?",
+        answer: "Copper pipe failures in Lanzarote often result from: galvanic corrosion when copper meets dissimilar metals (brass fittings), pinhole corrosion from aggressive water chemistry, stress fatigue at elbows from thermal expansion, or poor original soldering. Our thermal imaging is excellent at finding copper leaks behind walls."
+      },
+      {
+        question: "Can you detect leaks in underground pipes from the meter?",
+        answer: "Yes—underground supply pipe leaks are our speciality. We use tracer gas injection, electromagnetic locators, and ground-penetrating radar to find leaks in buried pipes whether they're metal or plastic. These leaks often go unnoticed for years, causing significant water loss."
+      },
+      {
+        question: "What is a pipe pressure test?",
+        answer: "We isolate sections of your plumbing system and pressurise them to test for leaks. By monitoring pressure over time, we can detect even tiny leaks that wouldn't show obvious signs. This is particularly useful for finding multiple leaks or confirming a system is leak-free after repairs."
+      },
+      {
+        question: "Do you repair the pipes you find leaking?",
+        answer: "Yes, we offer complete leak repair services. After locating the leak, we can repair or replace the affected pipe section. However, you're never obligated to use our repair team—we provide detailed reports that any qualified plumber can use."
+      },
+    ],
+    es: [
+      {
+        question: "¿Cómo sé qué tipo de tuberías tengo en mi propiedad?",
+        answer: "Puede identificar los materiales de las tuberías en puntos visibles (bajo fregaderos, conexiones del calentador, entrada del contador). El cobre es metal marrón rojizo, el PVC/CPVC es plástico blanco o crema, el polietileno es plástico negro flexible (normalmente subterráneo), y el hierro galvanizado es metal gris que puede mostrar óxido. Podemos mapear todo su sistema durante nuestra inspección."
+      },
+      {
+        question: "¿Por qué pierden las tuberías de cobre en Lanzarote?",
+        answer: "Los fallos de tuberías de cobre en Lanzarote a menudo resultan de: corrosión galvánica cuando el cobre entra en contacto con metales diferentes (accesorios de latón), corrosión por picadura por química agresiva del agua, fatiga por estrés en codos por expansión térmica, o soldadura original deficiente. Nuestra imagen térmica es excelente para encontrar fugas de cobre detrás de paredes."
+      },
+      {
+        question: "¿Pueden detectar fugas en tuberías subterráneas desde el contador?",
+        answer: "Sí—las fugas en tuberías de suministro subterráneas son nuestra especialidad. Usamos inyección de gas trazador, localizadores electromagnéticos y radar de penetración para encontrar fugas en tuberías enterradas, sean de metal o plástico. Estas fugas a menudo pasan desapercibidas durante años, causando pérdidas significativas de agua."
+      },
+      {
+        question: "¿Qué es una prueba de presión de tuberías?",
+        answer: "Aislamos secciones de su sistema de fontanería y las presurizamos para detectar fugas. Monitorizando la presión a lo largo del tiempo, podemos detectar incluso fugas diminutas que no mostrarían señales obvias. Esto es particularmente útil para encontrar múltiples fugas o confirmar que un sistema está libre de fugas después de reparaciones."
+      },
+      {
+        question: "¿Reparan las tuberías que encuentran con fugas?",
+        answer: "Sí, ofrecemos servicios completos de reparación de fugas. Después de localizar la fuga, podemos reparar o reemplazar la sección de tubería afectada. Sin embargo, nunca está obligado a usar nuestro equipo de reparación—proporcionamos informes detallados que cualquier fontanero cualificado puede utilizar."
       },
     ]
   },

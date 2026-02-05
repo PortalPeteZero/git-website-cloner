@@ -142,16 +142,16 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         content: "Antes de cualquier trabajo de excavación, es esencial saber qué hay enterrado bajo la superficie. Nuestro servicio de detección subterránea en Lanzarote utiliza radar de penetración (GPR) y equipos de localización electromagnética para identificar la posición y profundidad de tuberías, cables y otros servicios enterrados.\n\nPara tuberías y cables metálicos, utilizamos localizadores electromagnéticos de precisión que pueden trazar rutas y estimar profundidad. Combinado con GPR, este enfoque de doble tecnología garantiza que encontremos tanto servicios metálicos como no metálicos.\n\nYa sea que esté planificando obras de construcción, jardinería, o necesite localizar una tubería específica, nuestros estudios previenen daños accidentales costosos y posibles peligros de seguridad.",
       },
       "water-leak-detection": {
-        title: "Detección de Fugas de Agua Lanzarote",
-        description: "Detección de fugas de agua ocultas en Lanzarote con precisión centimétrica usando nuestro enfoque multi-tecnológico y más de €80.000 en equipos especializados. ¿Contador de agua en marcha? Encontraremos la fuga.",
+      title: "Detección de Fugas de Agua Ocultas Lanzarote",
+      description: "¿Contador de agua corriendo sin explicación? Especialistas en localización de fugas ocultas en Lanzarote usando imagen térmica, gas trazador y detección acústica. Garantía Sin Encontrar, Sin Pagar.",
         icon: Droplets,
         heroImage: waterLeakDetectionImg,
         specialHeroImage: freeLeakConfirmationImg,
         galleryImages: [drainDetection4, drainDetection5, drainDetection6, drainDetection7],
         seo: {
-          title: "Detección Fugas Agua Lanzarote | Sin Encontrar Sin Pagar",
-          description: "Detección de fugas de agua Lanzarote. Localice fugas ocultas. ¿Contador en marcha? Imagen térmica, gas trazador, detección acústica. +€80.000 en equipos.",
-          keywords: "detección fugas agua Canarias, detección fugas ocultas, contador agua corriendo fuga, reparación fugas tuberías, detección fugas Lanzarote, especialista fugas agua Lanzarote"
+        title: "Detección Fugas Agua Ocultas Lanzarote | Sin Encontrar Sin Pagar",
+        description: "¿Contador de agua corriendo? Detección profesional de fugas ocultas en Lanzarote. Imagen térmica, gas trazador, sensores acústicos. Garantía Sin Encontrar, Sin Pagar.",
+        keywords: "detección fugas agua Canarias, fugas agua ocultas, contador agua corriendo fuga, imagen térmica fugas, gas trazador fugas, detectar fugas sin romper, especialista fugas agua Lanzarote"
         },
         freeLeakSection: {
           enabled: true,
@@ -171,15 +171,39 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         },
         features: [
           "Garantía Sin Encontrar, Sin Pagar",
-          "Precisión centimétrica",
-          "Confirmación multi-tecnológica",
           "Cámaras de imagen térmica",
           "Detección de gas trazador (GASENSE)",
-          "Geófonos acústicos y micrófonos de tubería",
+        "Geófonos acústicos de alta sensibilidad",
+        "Micrófonos de tubería para precisión cm",
           "Métodos no invasivos",
+        "Confirmación multi-tecnológica",
           "Informes para aseguradoras",
+        "Mapeo digital de ubicaciones",
         ],
-        content: "Canary Detect cuenta con más de €80.000 en equipos de última generación para detección de fugas, permitiéndonos ofrecer un servicio verdaderamente premium de detección de fugas de agua en Lanzarote. Ninguna tecnología es 100% precisa por sí sola, por eso siempre confirmamos la ubicación de una fuga usando al menos dos tecnologías independientes.\n\nNuestros métodos incluyen: detección de gas trazador GASENSE donde presurizamos las tuberías con una mezcla segura de nitrógeno/hidrógeno y detectamos el gas que escapa a nivel de superficie; geófonos acústicos que detectan el sonido del agua escapando de tuberías presurizadas; imagen térmica infrarroja para identificar diferencias de temperatura causadas por el agua fugándose; y micrófonos de tubería insertados directamente en las tuberías para posicionamiento con precisión centimétrica.\n\nOperamos con garantía Sin Encontrar, Sin Pagar - si confirmamos que tiene una fuga pero no podemos localizarla, no hay cargo. Nuestras inspecciones incluyen informes profesionales detallados adecuados para reclamaciones de seguros.",
+      content: "**¿Por Qué Elegir Detección Profesional de Fugas Ocultas?**\n\nLas fugas de agua ocultas son uno de los problemas más frustrantes para los propietarios en Lanzarote. Puede ver el contador girando, recibir facturas de agua elevadas, pero no encontrar ninguna señal visible de dónde está escapando el agua. Aquí es donde nuestro servicio especializado de detección marca la diferencia.\n\nCanary Detect invierte continuamente en tecnología de vanguardia—actualmente más de €80.000 en equipos especializados—porque entendemos que encontrar fugas invisibles requiere las herramientas adecuadas en manos expertas.\n\n**Nuestro Proceso de Detección Multi-Tecnológico**\n\nNinguna tecnología individual es 100% fiable en todas las situaciones. Por eso siempre utilizamos múltiples métodos para confirmar cada ubicación de fuga:\n\n**1. Imagen Térmica Infrarroja**: Nuestras cámaras térmicas de alta resolución detectan diferencias de temperatura mínimas causadas por agua fugándose detrás de paredes, bajo suelos o en techos. El agua enfría las superficies de forma característica, creando patrones térmicos distintivos invisibles al ojo humano.\n\n**2. Detección de Gas Trazador (GASENSE)**: Presurizamos sus tuberías con una mezcla segura de nitrógeno/hidrógeno (95%/5%). Este gas es más ligero que el aire y penetra incluso las grietas más pequeñas, emergiendo a través de cualquier material de superficie. Nuestros detectores ultrasensibles localizan exactamente dónde escapa el gas.\n\n**3. Detección Acústica**: Los geófonos de alta sensibilidad amplifican el sonido del agua escapando de tuberías presurizadas. Diferentes tipos de fugas producen firmas sonoras distintas—aprendemos a distinguir entre una junta defectuosa, una tubería agrietada o un accesorio suelto.\n\n**4. Micrófonos de Tubería**: Para la máxima precisión, insertamos micrófonos especializados directamente en las tuberías. Esto nos permite escuchar el flujo de agua dentro del sistema y triangular la posición exacta de la fuga con precisión centimétrica.\n\n**El Proceso de Inspección Paso a Paso**\n\nCuando llegamos a su propiedad, seguimos un proceso sistemático:\n\n• Primero confirmamos que existe una fuga mediante pruebas del contador y comprobación del sistema\n• Aislamos diferentes secciones para determinar qué zona está afectada\n• Aplicamos tecnologías de detección secuencialmente, empezando por las menos invasivas\n• Siempre confirmamos con al menos dos tecnologías independientes antes de marcar una ubicación\n• Documentamos todo con fotografías térmicas, mediciones y coordenadas precisas\n\n**Garantía Sin Encontrar, Sin Pagar**\n\nOperamos con total confianza en nuestras capacidades. Si confirmamos que tiene una fuga activa pero no conseguimos localizarla, no hay cargo. Sin riesgos, sin sorpresas. Nuestros informes profesionales detallados son aceptados por todas las compañías de seguros para reclamaciones.",
+    },
+    "water-pipe-leak-detection": {
+      title: "Detección de Fugas en Tuberías Lanzarote",
+      description: "Especialistas en fugas de tuberías de agua en Lanzarote. Localizamos fugas en tuberías de cobre, PVC, polietileno y hierro galvanizado. Inspección CCTV interna y pruebas de presión.",
+      icon: Droplets,
+      heroImage: pipeInspectionImg,
+      galleryImages: [pipeInspection2, pipeInspection3, drainDetection2, drainDetection3],
+      seo: {
+        title: "Detección Fugas Tuberías Agua Lanzarote | Canary Detect",
+        description: "Fugas en tuberías de agua Lanzarote. Cobre, PVC, polietileno, hierro galvanizado. Inspección CCTV, pruebas presión, detección subterránea.",
+        keywords: "fugas tuberías agua Lanzarote, fuga tubería cobre, fuga tubería PVC, reparación tuberías agua, inspección tuberías CCTV, prueba presión tuberías, fontanero fugas Lanzarote"
+      },
+      features: [
+        "Inspección CCTV de tuberías",
+        "Pruebas de presión estática",
+        "Detección de tuberías subterráneas",
+        "Diagnóstico por material de tubería",
+        "Mapeo del sistema de fontanería",
+        "Evaluación del estado de tuberías",
+        "Localización de juntas defectuosas",
+        "Informes técnicos detallados",
+      ],
+      content: "**Especialistas en Fugas de Tuberías de Agua**\n\nNo todas las fugas son iguales. La forma de localizar y reparar una fuga depende enormemente del tipo de tubería afectada, su ubicación y su edad. En Canary Detect, nos especializamos en el diagnóstico y detección de fugas específicas de tuberías, proporcionando soluciones adaptadas a cada material y situación.\n\n**Entendiendo su Sistema de Tuberías en Lanzarote**\n\nLas propiedades en Lanzarote utilizan diversos materiales de tubería, cada uno con sus propios patrones de fallo característicos:\n\n**Tuberías de Cobre**: Comunes en instalaciones de calidad, las tuberías de cobre pueden desarrollar fugas por corrosión galvánica (especialmente cerca de accesorios de latón), fatiga por vibración en codos, o daños por agua agresiva. Nuestras cámaras térmicas son particularmente efectivas para localizar fugas de cobre detrás de paredes.\n\n**Tuberías de PVC/CPVC**: Populares en instalaciones modernas, las tuberías de plástico suelen fallar en las uniones adhesivadas, especialmente si la instalación original fue defectuosa. La exposición UV en secciones exteriores también causa degradación. Utilizamos pruebas de presión específicas para aislar secciones con problemas.\n\n**Tuberías de Polietileno (PE)**: Utilizadas frecuentemente para conexiones subterráneas desde el contador hasta la vivienda, las tuberías PE pueden sufrir daños por herramientas de jardinería, raíces de árboles, o movimiento del terreno. Nuestra tecnología de gas trazador es ideal para localizar estas fugas enterradas.\n\n**Hierro Galvanizado**: Presente en construcciones antiguas de Lanzarote, estas tuberías desarrollan corrosión interna que reduce el flujo y eventualmente perfora. La inspección CCTV interna revela el estado real de estas tuberías y ayuda a planificar la renovación.\n\n**Pruebas de Presión Profesionales**\n\nLas pruebas de presión son fundamentales para determinar la integridad del sistema de tuberías:\n\n• **Prueba estática**: Aislamos secciones y monitorizamos la presión durante tiempo prolongado para detectar incluso las fugas más pequeñas\n• **Prueba diferencial**: Comparamos el consumo real con el teórico para cuantificar las pérdidas\n• **Prueba de aislamiento**: Identificamos exactamente qué tramo del sistema está afectado\n\n**Inspección CCTV Interna de Tuberías**\n\nNuestras micro-cámaras pueden introducirse en tuberías desde 25mm de diámetro, proporcionando imágenes de alta definición del interior:\n\n• Visualización directa de grietas, corrosión y depósitos\n• Localización precisa de juntas defectuosas\n• Evaluación del estado general para planificación de mantenimiento\n• Documentación en vídeo para informes de seguros\n\n**Detección de Tuberías Subterráneas**\n\nMuchas fugas graves ocurren en tuberías enterradas entre el contador y la vivienda. Utilizamos:\n\n• Localizadores electromagnéticos para tuberías metálicas\n• Radar de penetración (GPR) para tuberías no metálicas\n• Gas trazador para localización precisa de la fuga\n• Correladores acústicos para triangulación de posición\n\n**Informe Técnico Completo**\n\nCada inspección incluye un informe profesional detallando: tipo de tubería afectada, ubicación exacta de la fuga, causa probable del fallo, opciones de reparación recomendadas, y presupuesto estimado. Este informe es aceptado por aseguradoras y útil para obtener presupuestos de reparación comparativos.",
       },
       "pool-leak-detection": {
         title: "Detección de Fugas en Piscinas Lanzarote",
@@ -345,16 +369,16 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       content: "Before any excavation work, it's essential to know what's buried beneath the surface. Our underground detection service in Lanzarote uses ground-penetrating radar (GPR) and electromagnetic locating equipment to identify the position and depth of buried pipes, cables, and other utilities.\n\nFor metallic pipes and cables, we use precision electromagnetic locators that can trace routes and estimate depth. Combined with GPR, this dual-technology approach ensures we find both metallic and non-metallic utilities.\n\nWhether you're planning construction work, landscaping, or need to locate a specific pipe run, our surveys prevent costly accidental damage and potential safety hazards.",
     },
     "water-leak-detection": {
-      title: "Water Pipe Leak Detection Lanzarote",
-      description: "Hidden water leak detection in Lanzarote with centimetre accuracy using our multi-technology approach and €80,000+ of specialist equipment. Water meter running? We'll find the leak.",
+      title: "Hidden Water Leak Detection Lanzarote",
+      description: "Water meter running with no explanation? Specialists in locating hidden leaks in Lanzarote using thermal imaging, tracer gas and acoustic detection. No Find, No Fee guarantee.",
       icon: Droplets,
       heroImage: waterLeakDetectionImg,
       specialHeroImage: freeLeakConfirmationImg,
       galleryImages: [drainDetection4, drainDetection5, drainDetection6, drainDetection7],
       seo: {
-        title: "Water Leak Detection Lanzarote | No Find No Fee",
-        description: "Water leak detection Lanzarote. Find hidden leaks with cm accuracy. Water meter running? Thermal imaging, tracer gas, acoustic. €80,000+ equipment.",
-        keywords: "water leak detection Canary Islands, hidden water leak detection, water meter running leak, water pipe leak detection, water pipe leak repair, leak detection Lanzarote, Lanzarote water leak specialist, accurate leak detection"
+        title: "Hidden Water Leak Detection Lanzarote | No Find No Fee",
+        description: "Water meter running? Professional hidden leak detection in Lanzarote. Thermal imaging, tracer gas, acoustic sensors. No Find, No Fee guarantee.",
+        keywords: "water leak detection Canary Islands, hidden water leak detection, water meter running leak, thermal imaging leaks, tracer gas detection, find leaks without damage, Lanzarote water leak specialist"
       },
       freeLeakSection: {
         enabled: true,
@@ -374,15 +398,39 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       },
       features: [
         "No Find, No Fee guarantee",
-        "Centimetre accuracy",
-        "Multi-technology confirmation",
         "Thermal imaging cameras",
         "Tracer gas detection (GASENSE)",
-        "Acoustic geophones & pipe mics",
+        "High-sensitivity acoustic geophones",
+        "Pipe microphones for cm accuracy",
         "Non-invasive methods",
+        "Multi-technology confirmation",
         "Insurance-ready reports",
+        "Digital location mapping",
       ],
-      content: "Canary Detect carries over €80,000 worth of the latest leak-detection equipment, enabling us to offer a truly premium water leak detection service in Lanzarote. No single technology is 100% accurate, which is why we always confirm a leak location using at least two independent technologies.\n\nOur methods include: GASENSE tracer gas detection where we pressurise pipes with a safe nitrogen/hydrogen mixture and detect escaping gas at surface level; acoustic geophones that detect the sound of water escaping from pressurised pipes; infrared thermal imaging to identify temperature differences caused by leaking water; and pipe microphones inserted directly into pipework for centimetre-accurate positioning.\n\nWe operate on a No Find, No Fee basis - if we confirm you have a leak but cannot locate it, there is no charge. Our surveys include detailed professional reports suitable for insurance claims.",
+      content: "**Why Choose Professional Hidden Leak Detection?**\n\nHidden water leaks are one of the most frustrating problems for property owners in Lanzarote. You can see the meter spinning, receive elevated water bills, yet find no visible sign of where water is escaping. This is where our specialist detection service makes the difference.\n\nCanary Detect continuously invests in cutting-edge technology—currently over €80,000 in specialist equipment—because we understand that finding invisible leaks requires the right tools in expert hands.\n\n**Our Multi-Technology Detection Process**\n\nNo single technology is 100% reliable in all situations. That's why we always use multiple methods to confirm each leak location:\n\n**1. Infrared Thermal Imaging**: Our high-resolution thermal cameras detect minute temperature differences caused by leaking water behind walls, under floors, or in ceilings. Water cools surfaces in characteristic ways, creating distinctive thermal patterns invisible to the naked eye.\n\n**2. Tracer Gas Detection (GASENSE)**: We pressurise your pipes with a safe nitrogen/hydrogen mixture (95%/5%). This gas is lighter than air and penetrates even the smallest cracks, emerging through any surface material. Our ultra-sensitive detectors pinpoint exactly where gas escapes.\n\n**3. Acoustic Detection**: High-sensitivity geophones amplify the sound of water escaping from pressurised pipes. Different leak types produce distinct sound signatures—we learn to distinguish between a faulty joint, a cracked pipe, or a loose fitting.\n\n**4. Pipe Microphones**: For maximum accuracy, we insert specialised microphones directly into pipes. This allows us to hear water flow within the system and triangulate the exact leak position with centimetre precision.\n\n**The Step-by-Step Survey Process**\n\nWhen we arrive at your property, we follow a systematic process:\n\n• First we confirm a leak exists through meter testing and system checks\n• We isolate different sections to determine which area is affected\n• We apply detection technologies sequentially, starting with the least invasive\n• We always confirm with at least two independent technologies before marking a location\n• We document everything with thermal photographs, measurements, and precise coordinates\n\n**No Find, No Fee Guarantee**\n\nWe operate with complete confidence in our capabilities. If we confirm you have an active leak but fail to locate it, there is no charge. No risk, no surprises. Our detailed professional reports are accepted by all insurance companies for claims.",
+    },
+    "water-pipe-leak-detection": {
+      title: "Water Pipe Leak Detection Lanzarote",
+      description: "Specialists in water pipe leaks in Lanzarote. We locate leaks in copper, PVC, polyethylene and galvanised iron pipes. Internal CCTV inspection and pressure testing.",
+      icon: Droplets,
+      heroImage: pipeInspectionImg,
+      galleryImages: [pipeInspection2, pipeInspection3, drainDetection2, drainDetection3],
+      seo: {
+        title: "Water Pipe Leak Detection Lanzarote | Canary Detect",
+        description: "Water pipe leaks Lanzarote. Copper, PVC, polyethylene, galvanised iron. CCTV inspection, pressure testing, underground detection.",
+        keywords: "water pipe leak Lanzarote, copper pipe leak, PVC pipe leak, water pipe repair, CCTV pipe inspection, pipe pressure testing, plumber leaks Lanzarote"
+      },
+      features: [
+        "Internal CCTV pipe inspection",
+        "Static pressure testing",
+        "Underground pipe detection",
+        "Pipe material diagnostics",
+        "Plumbing system mapping",
+        "Pipe condition assessment",
+        "Faulty joint location",
+        "Detailed technical reports",
+      ],
+      content: "**Specialists in Water Pipe Leaks**\n\nNot all leaks are equal. How you locate and repair a leak depends enormously on the type of pipe affected, its location, and its age. At Canary Detect, we specialise in pipe-specific leak diagnosis and detection, providing solutions tailored to each material and situation.\n\n**Understanding Your Pipe System in Lanzarote**\n\nProperties in Lanzarote use various pipe materials, each with their own characteristic failure patterns:\n\n**Copper Pipes**: Common in quality installations, copper pipes can develop leaks from galvanic corrosion (especially near brass fittings), vibration fatigue at elbows, or damage from aggressive water. Our thermal cameras are particularly effective at locating copper leaks behind walls.\n\n**PVC/CPVC Pipes**: Popular in modern installations, plastic pipes typically fail at adhesive joints, especially if the original installation was faulty. UV exposure on exterior sections also causes degradation. We use specific pressure tests to isolate problem sections.\n\n**Polyethylene (PE) Pipes**: Frequently used for underground connections from the meter to the house, PE pipes can suffer damage from gardening tools, tree roots, or ground movement. Our tracer gas technology is ideal for locating these buried leaks.\n\n**Galvanised Iron**: Found in older Lanzarote constructions, these pipes develop internal corrosion that reduces flow and eventually perforates. Internal CCTV inspection reveals the true condition of these pipes and helps plan renovation.\n\n**Professional Pressure Testing**\n\nPressure testing is fundamental to determining pipe system integrity:\n\n• **Static test**: We isolate sections and monitor pressure over extended periods to detect even the smallest leaks\n• **Differential test**: We compare actual consumption with theoretical to quantify losses\n• **Isolation test**: We identify exactly which section of the system is affected\n\n**Internal CCTV Pipe Inspection**\n\nOur micro-cameras can enter pipes from 25mm diameter, providing high-definition internal images:\n\n• Direct visualisation of cracks, corrosion and deposits\n• Precise location of faulty joints\n• General condition assessment for maintenance planning\n• Video documentation for insurance reports\n\n**Underground Pipe Detection**\n\nMany serious leaks occur in buried pipes between the meter and house. We use:\n\n• Electromagnetic locators for metallic pipes\n• Ground-penetrating radar (GPR) for non-metallic pipes\n• Tracer gas for precise leak location\n• Acoustic correlators for position triangulation\n\n**Complete Technical Report**\n\nEvery inspection includes a professional report detailing: type of pipe affected, exact leak location, probable cause of failure, recommended repair options, and estimated budget. This report is accepted by insurers and useful for obtaining comparative repair quotes.",
     },
     "pool-leak-detection": {
       title: "Pool Leak Detection Lanzarote",
