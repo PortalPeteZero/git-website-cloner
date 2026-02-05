@@ -101,7 +101,7 @@ const Contact = () => {
   const serviceOptions = isSpanish ? [
     { value: "", label: "Seleccione un servicio..." },
     { value: "drain-detection", label: "Detección de Desagües" },
-    { value: "pipe-inspection", label: "Inspección de Tuberías" },
+    { value: "water-pipe-leak-detection", label: "Fugas en Tuberías" },
     { value: "underground-detection", label: "Detección Subterránea" },
     { value: "water-leak", label: "Detección de Fugas de Agua" },
     { value: "pool-leak", label: "Detección de Fugas de Piscinas" },
@@ -110,7 +110,7 @@ const Contact = () => {
   ] : [
     { value: "", label: "Select a service..." },
     { value: "drain-detection", label: "Drain Detection" },
-    { value: "pipe-inspection", label: "Pipe Inspection" },
+    { value: "water-pipe-leak-detection", label: "Water Pipe Leaks" },
     { value: "underground-detection", label: "Underground Detection" },
     { value: "water-leak", label: "Water Leak Detection" },
     { value: "pool-leak", label: "Pool Leak Detection" },
