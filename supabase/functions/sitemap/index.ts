@@ -24,6 +24,7 @@ const staticPages = [
 // Fixed slug consistency - matching routes.ts exactly
 const servicePages = [
   { en: "/services/water-leak-detection", es: "/es/servicios/deteccion-fugas-agua", priority: "0.9", changefreq: "weekly" },
+  { en: "/services/water-pipe-leak-detection", es: "/es/servicios/deteccion-fugas-tuberias", priority: "0.9", changefreq: "weekly" },
   { en: "/services/pool-leak-detection", es: "/es/servicios/deteccion-fugas-piscinas", priority: "0.9", changefreq: "weekly" },
   { en: "/services/underground-detection", es: "/es/servicios/deteccion-subterranea", priority: "0.8", changefreq: "monthly" },
   { en: "/services/drain-detection", es: "/es/servicios/deteccion-desagues", priority: "0.8", changefreq: "monthly" },
