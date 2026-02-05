@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -15,41 +15,13 @@ const PlumbingServiceDetail = () => {
   const plumbingBasePath = isSpanish ? "/es/servicios-fontaneria" : "/plumbing-services";
   
   if (!slug) {
-    return (
-      <Layout>
-        <Helmet>
-          <title>{isSpanish ? "Servicio no encontrado | Canary Detect" : "Service Not Found | Canary Detect"}</title>
-          <meta name="robots" content="noindex, follow" />
-        </Helmet>
-        <div className="container mx-auto px-4 py-24 text-center">
-          <h1 className="text-6xl font-bold text-primary mb-2">404</h1>
-          <p className="text-muted-foreground mb-8">{isSpanish ? 'Servicio no encontrado' : 'Service not found'}</p>
-          <Button asChild>
-            <Link to={plumbingBasePath}>{isSpanish ? 'Ver todos los servicios' : 'View all services'}</Link>
-          </Button>
-        </div>
-      </Layout>
-    );
+    return <Navigate to="/404-not-found" replace />;
   }
   
   const service = getPlumbingServiceBySlug(slug, isSpanish);
   
   if (!service) {
-    return (
-      <Layout>
-        <Helmet>
-          <title>{isSpanish ? "Servicio no encontrado | Canary Detect" : "Service Not Found | Canary Detect"}</title>
-          <meta name="robots" content="noindex, follow" />
-        </Helmet>
-        <div className="container mx-auto px-4 py-24 text-center">
-          <h1 className="text-6xl font-bold text-primary mb-2">404</h1>
-          <p className="text-muted-foreground mb-8">{isSpanish ? 'Servicio de fontanería no encontrado' : 'Plumbing service not found'}</p>
-          <Button asChild>
-            <Link to={plumbingBasePath}>{isSpanish ? 'Ver todos los servicios' : 'View all services'}</Link>
-          </Button>
-        </div>
-      </Layout>
-    );
+    return <Navigate to="/404-not-found" replace />;
   }
   
   const title = isSpanish ? service.titleEs : service.title;

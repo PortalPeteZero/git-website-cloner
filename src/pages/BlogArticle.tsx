@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
@@ -199,47 +199,15 @@ const BlogArticle = () => {
 
   // Return true 404 page for invalid blog slugs (not a redirect which causes soft 404)
   if (notFound && !staticArticle) {
-    return (
-      <Layout>
-        <Helmet>
-          <title>{isSpanish ? "Artículo no encontrado | Canary Detect" : "Article Not Found | Canary Detect"}</title>
-          <meta name="description" content={isSpanish ? "El artículo que busca no existe." : "The article you're looking for doesn't exist."} />
-          <meta name="robots" content="noindex, follow" />
-        </Helmet>
-        <div className="min-h-[60vh] flex flex-col items-center justify-center bg-muted px-4">
-          <h1 className="text-4xl font-bold mb-4">404</h1>
-          <p className="text-xl text-muted-foreground mb-6 text-center">
-            {isSpanish ? 'Artículo no encontrado' : 'Article not found'}
-          </p>
-          <Link to={blogBasePath} className="text-primary underline hover:text-primary/90">
-            {isSpanish ? 'Ver todos los artículos' : 'View all articles'}
-          </Link>
-        </div>
-      </Layout>
-    );
+    // Redirect to global 404 to avoid soft 404 issues
+    return <Navigate to="/404-not-found" replace />;
   }
 
   // Use static article or database post
   const article = staticArticle || dbPost;
   if (!article) {
-    return (
-      <Layout>
-        <Helmet>
-          <title>{isSpanish ? "Artículo no encontrado | Canary Detect" : "Article Not Found | Canary Detect"}</title>
-          <meta name="description" content={isSpanish ? "El artículo que busca no existe." : "The article you're looking for doesn't exist."} />
-          <meta name="robots" content="noindex, follow" />
-        </Helmet>
-        <div className="min-h-[60vh] flex flex-col items-center justify-center bg-muted px-4">
-          <h1 className="text-4xl font-bold mb-4">404</h1>
-          <p className="text-xl text-muted-foreground mb-6 text-center">
-            {isSpanish ? 'Artículo no encontrado' : 'Article not found'}
-          </p>
-          <Link to={blogBasePath} className="text-primary underline hover:text-primary/90">
-            {isSpanish ? 'Ver todos los artículos' : 'View all articles'}
-          </Link>
-        </div>
-      </Layout>
-    );
+    // Redirect to global 404 to avoid soft 404 issues
+    return <Navigate to="/404-not-found" replace />;
   }
 
   const isStatic = !!staticArticle;
