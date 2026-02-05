@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { useState, useEffect, Fragment } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
@@ -120,30 +120,8 @@ const ServiceDetail = () => {
 
   // Return proper 404 page for invalid service slugs (not a soft redirect)
   if (!service) {
-    const notFoundContent = {
-      title: isSpanish ? "Servicio no encontrado | Canary Detect" : "Service Not Found | Canary Detect",
-      description: isSpanish 
-        ? "El servicio que busca no existe. Vea todos nuestros servicios de detección de fugas en Lanzarote."
-        : "The service you're looking for doesn't exist. View all our leak detection services in Lanzarote.",
-    };
-    
-    return (
-      <Layout>
-        <Helmet>
-          <title>{notFoundContent.title}</title>
-          <meta name="description" content={notFoundContent.description} />
-          <meta name="robots" content="noindex, follow" />
-        </Helmet>
-        <div className="container mx-auto px-4 py-24 text-center">
-          <h1 className="text-6xl font-bold text-primary mb-2">404</h1>
-          <h2 className="font-heading text-2xl font-bold mb-4">{uiText.serviceNotFound.title}</h2>
-          <p className="text-muted-foreground mb-8">{uiText.serviceNotFound.description}</p>
-          <Button asChild>
-            <Link to={getServicesBasePath(isSpanish)}>{uiText.serviceNotFound.button}</Link>
-          </Button>
-        </div>
-      </Layout>
-    );
+    // Redirect to the global 404 page to return proper status for crawlers
+    return <Navigate to="/404-not-found" replace />;
   }
 
   const Icon = service.icon;

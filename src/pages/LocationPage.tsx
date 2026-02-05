@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
@@ -28,35 +28,8 @@ const LocationPage = () => {
 
   // Return proper 404 page for invalid location slugs
   if (!locationData) {
-    const notFoundContent = {
-      title: isSpanish ? "Ubicación no encontrada | Canary Detect" : "Location Not Found | Canary Detect",
-      description: isSpanish 
-        ? "La ubicación que busca no existe. Damos servicio a todo Lanzarote."
-        : "The location you're looking for doesn't exist. We serve all of Lanzarote.",
-    };
-    
-    return (
-      <Layout>
-        <Helmet>
-          <title>{notFoundContent.title}</title>
-          <meta name="description" content={notFoundContent.description} />
-          <meta name="robots" content="noindex, follow" />
-        </Helmet>
-        <div className="container mx-auto px-4 py-24 text-center">
-          <h1 className="text-6xl font-bold text-primary mb-2">404</h1>
-          <h2 className="font-heading text-2xl font-bold mb-4">{uiText.notFound.title}</h2>
-          <p className="text-muted-foreground mb-8">{uiText.notFound.description}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild>
-              <Link to={getContactPath(isSpanish)}>{uiText.notFound.button}</Link>
-            </Button>
-            <Button variant="outline" asChild>
-              <Link to={getHomePath(isSpanish)}>{isSpanish ? 'Volver al Inicio' : 'Return Home'}</Link>
-            </Button>
-          </div>
-        </div>
-      </Layout>
-    );
+    // Redirect to global 404 page to avoid soft 404 issues
+    return <Navigate to="/404-not-found" replace />;
   }
 
   return (
