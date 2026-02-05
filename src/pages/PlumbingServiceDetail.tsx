@@ -1,5 +1,4 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { getPlumbingServiceBySlug, plumbingServicesData } from "@/data/plumbingServicesData";
@@ -7,6 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import SEOHead from "@/components/seo/SEOHead";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import ServiceDetailSchema from "@/components/seo/ServiceDetailSchema";
+import { getHomePath, getPlumbingServicesPath } from "@/i18n/routes";
+import { Helmet } from "react-helmet-async";
 
 const PlumbingServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -33,6 +37,10 @@ const PlumbingServiceDetail = () => {
   const canonicalPath = isSpanish 
     ? `https://canary-detect.com/es/servicios-fontaneria/${service.slugEs}`
     : `https://canary-detect.com/plumbing-services/${service.slug}`;
+  
+  const keywords = isSpanish
+    ? `fontanero lanzarote, ${title.toLowerCase()}, servicios fontanería lanzarote`
+    : `plumber lanzarote, ${title.toLowerCase()}, plumbing services lanzarote`;
 
   const content = {
     getQuote: isSpanish ? "Solicitar Presupuesto" : "Get a Quote",
@@ -88,20 +96,27 @@ const PlumbingServiceDetail = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title={metaTitle}
+        description={metaDescription}
+        keywords={keywords}
+        canonical={canonicalPath}
+        type="service"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
+          { name: isSpanish ? "Fontanería" : "Plumbing", url: `https://canary-detect.com${getPlumbingServicesPath(isSpanish)}` },
+          { name: title, url: canonicalPath }
+        ]}
+      />
+      <ServiceDetailSchema
+        serviceName={title}
+        serviceDescription={metaDescription}
+        serviceUrl={canonicalPath}
+        isSpanish={isSpanish}
+      />
       <Helmet>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <link rel="canonical" href={canonicalPath} />
-        <link rel="alternate" hrefLang="en" href={`https://canary-detect.com/plumbing-services/${service.slug}`} />
-        <link rel="alternate" hrefLang="es" href={`https://canary-detect.com/es/servicios-fontaneria/${service.slugEs}`} />
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={canonicalPath} />
-        <meta property="og:image" content="https://canary-detect.com/og-image.jpg?v=2" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metaTitle} />
-        <meta name="twitter:description" content={metaDescription} />
         <script type="application/ld+json">
           {JSON.stringify(serviceSchema)}
         </script>
