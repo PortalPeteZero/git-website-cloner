@@ -47,15 +47,18 @@
  
    // All locations for full linking
    const allLocations = [
-     { name: "Yaiza", slug: "yaiza" },
-     { name: "Tías", slug: "tias" },
-     { name: "Playa Honda", slug: "playa-honda" },
-     { name: "Teguise", slug: "teguise" },
-     { name: "San Bartolomé", slug: "san-bartolome" },
-     { name: "Puerto Calero", slug: "puerto-calero" },
-     { name: "Tahiche", slug: "tahiche" },
-     { name: "Guatiza", slug: "guatiza" },
-   ];
+    { name: "Yaiza", slug: "yaiza" },
+      { name: "Tías", slug: "tias" },
+      { name: "Playa Honda", slug: "playa-honda" },
+      { name: "Teguise", slug: "teguise" },
+      { name: "San Bartolomé", slug: "san-bartolome" },
+      { name: "Puerto Calero", slug: "puerto-calero" },
+      { name: "Tahiche", slug: "tahiche" },
+      { name: "Guatiza", slug: "guatiza" },
+      { name: "Femés", slug: "femes" },
+      { name: "Uga", slug: "uga" },
+      { name: "Las Breñas", slug: "las-brenas" },
+    ];
  
    const content = {
      tagline: isSpanish ? "Cobertura en Toda la Isla" : "Island-Wide Coverage",

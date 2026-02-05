@@ -377,6 +377,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         description: "Servicios profesionales de detección de fugas en Femés, un pueblo tradicional de montaña en el sur de Lanzarote.",
         heroText: "Femés y las propiedades rurales circundantes necesitan detección de fugas especializada. Nuestro conocimiento local y equipo profesional dan servicio a este pintoresco pueblo.",
         areaDescription: "Femés es un pequeño pueblo tradicional situado en las montañas de Ajaches sobre Playa Blanca. La zona cuenta con casas canarias tradicionales, fincas rurales y propiedades renovadas con vistas impresionantes. Muchas propiedades tienen sistemas de fontanería antiguos y dependen de aljibes para almacenamiento de agua. Nuestra proximidad (base en Playa Blanca) significa tiempos de respuesta rápidos.",
+        aboutLocation: "Femés es un encantador pueblo de montaña situado a 350 metros de altitud en el macizo de Ajaches, ofreciendo vistas espectaculares hacia Fuerteventura y la costa sur. Este asentamiento tradicional de casas encaladas data del siglo XV y fue un importante punto de parada en la ruta entre la costa y el interior. Hoy, Femés atrae visitantes a sus aclamados restaurantes y a quienes buscan la auténtica experiencia rural de Lanzarote. El pueblo mantiene una pequeña población permanente de agricultores y artesanos, con muchas propiedades ahora restauradas como retiros vacacionales o segundas residencias para compradores europeos que buscan la tranquilidad de la montaña.",
+        landmarks: ["Balcón de Femés", "Iglesia de San Marcial", "Mirador de Femés", "Restaurantes Tradicionales", "Casa Emiliano", "Rutas de Senderismo Ajaches"],
+        neighborhoods: ["Femés Centro", "Las Casitas de Femés", "Maciot", "El Púlpito", "Los Corrales"],
+        commonWaterIssues: [
+          { title: "Largas Tuberías de Suministro", description: "Las propiedades rurales tienen tuberías de suministro de agua que recorren cientos de metros desde la red, con múltiples puntos potenciales de fuga invisibles bajo tierra." },
+          { title: "Filtraciones en Aljibes de Piedra", description: "Las cisternas tradicionales de piedra desarrollan grietas capilares a lo largo de décadas. La pérdida de agua es gradual pero acumulativa, a menudo solo se nota por tanques vacíos o facturas altas." },
+          { title: "Humedad del Microclima de Montaña", description: "Femés recibe más lluvia y niebla que las zonas costeras. Distinguir la humedad ascendente de las fugas de agua requiere un diagnóstico experto." },
+          { title: "Problemas en Propiedades Estacionales", description: "Las propiedades vacías durante meses pueden desarrollar fugas por ciclos de temperatura y estrés en las tuberías. Los propietarios que regresan a menudo descubren daños ocultos extensos." }
+        ],
+        serviceCoverage: "Proporcionamos cobertura completa para el pueblo de Femés y la zona montañosa de Ajaches circundante. Esto incluye el centro del pueblo, las casitas y fincas dispersas en las laderas, y las propiedades en los caseríos cercanos de Maciot y Las Casitas de Femés. Como empresa con base en Playa Blanca a solo 15 minutos, podemos responder más rápido que cualquier otro servicio de detección de fugas.",
+        whyChooseUs: [
+          "Base a solo 15 minutos en Playa Blanca—el tiempo de respuesta más rápido a Femés en la isla",
+          "Amplia experiencia con construcción tradicional de piedra y fontanería adaptada",
+          "Experiencia especializada en detección de fugas en aljibes y cisternas",
+          "Comprensión de propiedades de montaña con líneas de suministro de agua extendidas",
+          "Métodos no invasivos que protegen la valiosa arquitectura tradicional",
+          "Precios justos tanto para residentes permanentes como para propietarios estacionales"
+        ],
+        emergencyResponse: {
+          responseTime: "30 min - 1 hora",
+          availability: "24/7 Emergencias",
+          description: "Como su servicio de detección de fugas profesional más cercano, podemos llegar a propiedades de Femés en 30 minutos a 1 hora. Esto es crítico para propiedades de montaña donde una fuga importante puede vaciar su aljibe completamente, dejándole sin agua hasta la próxima entrega de cisterna. Llegamos con equipo completo para localizar y asesorar sobre aislamiento inmediato."
+        },
         localChallenges: "Las propiedades de Femés presentan desafíos rurales: largas tuberías de suministro de agua desde la red creando problemas de presión; aljibes tradicionales de piedra con grietas capilares; acceso limitado por carreteras para vehículos de servicio; y propiedades a menudo vacías durante períodos prolongados permitiendo que pequeñas fugas causen daños significativos. El microclima de montaña trae más humedad que las zonas costeras, haciendo el diagnóstico de humedad más complejo.",
         nearbyAreas: ["Playa Blanca", "Yaiza", "Las Breñas", "Uga"],
         services: [
@@ -390,7 +413,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Paredes húmedas en casas antiguas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Femés | Propiedades Rurales | Canary Detect", description: "Detección de fugas Femés. Casas tradicionales, fincas, aljibes. Expertos locales. +34 711 051 071", keywords: "detección fugas Femés, fugas agua Femés Lanzarote, detección fugas finca, detección fugas rural Lanzarote" }
+        seo: { title: "Detección Fugas Femés | Propiedades Rurales | Canary Detect", description: "Detección de fugas Femés. Casas tradicionales, fincas, aljibes. Expertos locales a 15 min. +34 711 051 071", keywords: "detección fugas Femés, fugas agua Femés Lanzarote, detección fugas finca, detección fugas rural Lanzarote, fugas aljibe Femés" }
       },
       "las-brenas": {
         name: "Las Breñas",
@@ -398,6 +421,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         description: "Detección profesional de fugas en Las Breñas, un tranquilo pueblo agrícola cerca de Yaiza.",
         heroText: "Las Breñas y las propiedades rurales cercanas necesitan detección de fugas fiable. Proporcionamos servicios expertos para esta pacífica comunidad agrícola.",
         areaDescription: "Las Breñas es un pequeño pueblo agrícola entre Yaiza y Femés, conocido por su herencia agrícola tradicional. Las propiedades incluyen casas de pueblo tradicionales, fincas rurales y casas de campo renovadas. Muchas dependen de cisternas y tienen largas tuberías de suministro que requieren detección especializada.",
+        aboutLocation: "Las Breñas es un tranquilo caserío agrícola situado entre Yaiza y Femés, encarnando el carácter agrícola tradicional del sur de Lanzarote. El pueblo está rodeado del distintivo paisaje volcánico oscuro, con pequeñas parcelas cultivadas usando técnicas tradicionales incluyendo zocos (refugios de piedra contra el viento para viñas y hortalizas). La comunidad mantiene fuertes tradiciones agrícolas, produciendo queso de cabra, verduras y vinos. Las Breñas ha atraído a quienes buscan una vida rural auténtica, con muchas casas tradicionales ahora renovadas como viviendas permanentes o retiros vacacionales, preservando su carácter original.",
+        landmarks: ["Iglesia de Las Breñas", "Parcelas Agrícolas Tradicionales", "Vistas de La Geria", "Pozo de Agua Histórico", "Campos de Picón Volcánico"],
+        neighborhoods: ["Las Breñas Centro", "El Rincón", "La Atalaya", "Los Llanos"],
+        commonWaterIssues: [
+          { title: "Fugas en Riego Agrícola", description: "Los sistemas de riego por goteo para cultivos y jardines tienen múltiples puntos de unión que pueden desarrollar fugas lentas, desperdiciando agua y afectando la salud de las plantas." },
+          { title: "Sistemas de Suministro Compartidos", description: "Algunas propiedades vecinas comparten infraestructura de suministro de agua. Aislar qué propiedad tiene la fuga requiere pruebas de presión cuidadosas." },
+          { title: "Corrosión de Tuberías Galvanizadas", description: "Las tuberías galvanizadas envejecidas comunes en propiedades rurales desarrollan incrustaciones internas y fugas por agujeros que reducen la presión del agua antes de ser visibles." },
+          { title: "Inspecciones de Propiedades Estacionales", description: "Las propiedades cerradas por períodos prolongados necesitan inspección antes y después, ya que el agua estancada y los ciclos de temperatura estresan las uniones de fontanería." }
+        ],
+        serviceCoverage: "Cubrimos el pueblo de Las Breñas y la zona agrícola circundante incluyendo El Rincón, La Atalaya, y las propiedades que se extienden hacia Yaiza y Femés. Nuestro servicio incluye casas de pueblo tradicionales, fincas renovadas, construcciones rurales modernas y propiedades agrícolas con extensos sistemas de riego.",
+        whyChooseUs: [
+          "Conocimiento local de Las Breñas y el municipio de Yaiza circundante",
+          "Experiencia con sistemas de riego agrícola comunes en la zona",
+          "Comprensión de sistemas de suministro de agua compartidos entre propiedades",
+          "Respuesta rápida desde nuestra base en Playa Blanca—a solo 20 minutos",
+          "Detección no invasiva que protege las valiosas características tradicionales",
+          "Asesoramiento práctico para propietarios estacionales sobre prevención"
+        ],
+        emergencyResponse: {
+          responseTime: "45 min - 1.5 horas",
+          availability: "24/7 Emergencias",
+          description: "Las Breñas está a solo 20 minutos de nuestra base en Playa Blanca. Para emergencias, podemos estar en el sitio en 45 minutos a 1.5 horas, equipados para localizar y aislar fugas activas. Para propiedades que dependen de agua de tanque, entendemos la urgencia de prevenir la pérdida total de agua."
+        },
         localChallenges: "Las propiedades de Las Breñas enfrentan desafíos de zona agrícola: sistemas de riego por goteo para cultivos y jardines con múltiples pequeños puntos de fuga; sistemas de suministro de agua compartidos entre propiedades vecinas; infraestructura envejecida con tuberías galvanizadas propensas a corrosión; y propiedades de uso estacional que requieren inspección antes y después de los períodos de cierre.",
         nearbyAreas: ["Yaiza", "Femés", "Playa Blanca", "Uga"],
         services: [
@@ -411,7 +457,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Contador de agua corriendo sin usar grifos", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
         ],
-        seo: { title: "Detección Fugas Las Breñas | Canary Detect", description: "Detección de fugas Las Breñas. Casas de pueblo, fincas, sistemas de riego. +34 711 051 071", keywords: "detección fugas Las Breñas, fugas agua Las Breñas Lanzarote, detección fugas rural, fugas finca Las Breñas" }
+        seo: { title: "Detección Fugas Las Breñas | Canary Detect", description: "Detección de fugas Las Breñas. Casas de pueblo, fincas, sistemas de riego. Respuesta rápida desde base local. +34 711 051 071", keywords: "detección fugas Las Breñas, fugas agua Las Breñas Lanzarote, detección fugas rural, fugas finca Las Breñas, fugas riego" }
       },
       "uga": {
         name: "Uga",
@@ -419,6 +465,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         description: "Servicios profesionales de detección de fugas en Uga, un pueblo tradicional en la zona vinícola de Lanzarote.",
         heroText: "Las propiedades tradicionales y fincas de Uga necesitan detección de fugas especializada. Proporcionamos servicios expertos en este encantador pueblo cerca de La Geria.",
         areaDescription: "Uga es un pintoresco pueblo en el borde de la región vinícola de La Geria, conocido por su arquitectura canaria tradicional y estación de camellos. Las propiedades incluyen casas históricas de pueblo, fincas renovadas y bodegas. La herencia agrícola de la zona significa que muchas propiedades tienen sistemas complejos de riego y almacenamiento de agua.",
+        aboutLocation: "Uga es quizás el pueblo tradicional mejor conservado del sur de Lanzarote, con casas encaladas inmaculadas, palmeras y la famosa estación de camellos que sirve como punto de partida para las excursiones al Timanfaya. Situado a las puertas de la región vinícola de La Geria, el pueblo está rodeado del icónico paisaje negro volcánico donde se producen los vinos locales usando métodos únicos de cultivo en cráteres. Uga se ha vuelto popular entre compradores exigentes que buscan el auténtico carácter canario, resultando en muchas propiedades restauradas con sensibilidad. El pueblo cuenta con varios excelentes restaurantes y mantiene fuertes tradiciones incluyendo la fiesta anual de septiembre.",
+        landmarks: ["Estación de Camellos de Uga", "Iglesia de San Isidro", "Región Vinícola de La Geria", "Plaza Tradicional del Pueblo", "Bodega Uga", "Vistas del Timanfaya"],
+        neighborhoods: ["Uga Centro", "La Bodega", "El Drago", "Camino de La Geria", "Las Hoyas"],
+        commonWaterIssues: [
+          { title: "Humedad de Refrigeración en Bodegas", description: "Las áreas de almacenamiento de vino tienen sistemas de refrigeración y humidificación que crean humedad fácilmente confundida con fugas de agua. El diagnóstico experto distingue ambas." },
+          { title: "Ocultación en Muros de Piedra Gruesos", description: "La construcción tradicional de piedra volcánica con muros de más de 60cm de grosor puede ocultar tuberías y enmascarar fugas durante años antes de que aparezcan daños visibles." },
+          { title: "Riego por Goteo de Viñedos", description: "Las propiedades que lindan con La Geria tienen extenso riego por goteo para las viñas. Múltiples micro-fugas a lo largo de cientos de metros de tubería enterrada son comunes." },
+          { title: "Restricciones en Propiedades Históricas", description: "Los edificios tradicionales protegidos requieren métodos de detección de mínima intervención para preservar el carácter arquitectónico y cumplir con las regulaciones patrimoniales." }
+        ],
+        serviceCoverage: "Proporcionamos cobertura en todo el pueblo de Uga y la región vinícola de La Geria circundante. Esto incluye el centro histórico del pueblo, propiedades a lo largo del camino a La Geria, fincas y bodegas en los viñedos circundantes, y las propiedades rurales que se extienden hacia Yaiza y Mácher. Entendemos los requisitos particulares de trabajar en este hermoso paisaje protegido.",
+        whyChooseUs: [
+          "Comprensión de entornos de bodega y humedad de refrigeración vs. fugas de agua",
+          "Experiencia con la gruesa construcción de piedra volcánica típica de Uga",
+          "Métodos no invasivos esenciales para propiedades tradicionales protegidas",
+          "Conocimiento de sistemas de riego de viñedos en la región de La Geria",
+          "Enfoque respetuoso con el tejido histórico y las características originales",
+          "Informes profesionales adecuados para solicitudes de propiedades patrimoniales"
+        ],
+        emergencyResponse: {
+          responseTime: "45 min - 1.5 horas",
+          availability: "24/7 Emergencias",
+          description: "Uga está aproximadamente a 25 minutos de nuestra base. Para emergencias en propiedades tradicionales donde los daños por agua amenazan el tejido histórico irremplazable, respondemos con la urgencia apropiada. Entendemos la necesidad de un trabajo cuidadoso y respetuoso incluso en situaciones de emergencia."
+        },
         localChallenges: "Las propiedades de Uga presentan desafíos de zona vinícola: bodegas con refrigeración que crea humedad enmascarando fugas de agua; construcciones tradicionales de piedra con paredes gruesas que ocultan tuberías; riego por goteo para viñas y jardines con múltiples puntos potenciales de fuga; y edificios históricos que requieren métodos de detección cuidadosos y no invasivos para preservar su carácter.",
         nearbyAreas: ["Yaiza", "Femés", "La Geria", "Tías", "Mácher"],
         services: [
@@ -432,7 +501,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Imagen térmica para edificios antiguos", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
           { title: "Detección de fugas subterráneas", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
         ],
-        seo: { title: "Detección Fugas Uga | La Geria | Canary Detect", description: "Detección de fugas Uga. Pueblo tradicional, fincas, bodegas. Especialistas zona vinícola. +34 711 051 071", keywords: "detección fugas Uga, fugas agua Uga Lanzarote, detección fugas bodega, detección fugas La Geria" }
+        seo: { title: "Detección Fugas Uga | Zona Vinícola La Geria | Canary Detect", description: "Detección de fugas Uga. Pueblo tradicional, fincas, bodegas, viñedos La Geria. Especialistas en propiedades patrimoniales. +34 711 051 071", keywords: "detección fugas Uga, fugas agua Uga Lanzarote, detección fugas bodega, detección fugas La Geria, fugas propiedades tradicionales" }
       },
       "tahiche": {
         name: "Tahiche",
@@ -440,6 +509,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         description: "Servicios profesionales de detección de fugas en Tahiche, hogar de la Fundación César Manrique.",
         heroText: "Las propiedades residenciales y villas de Tahiche necesitan detección de fugas fiable. Proporcionamos servicios expertos en esta ubicación central de Lanzarote.",
         areaDescription: "Tahiche es un pueblo residencial entre Costa Teguise y Arrecife, famoso como hogar de la antigua residencia de César Manrique (ahora fundación). La zona cuenta con una mezcla de casas canarias tradicionales y villas modernas. Su ubicación central significa que las propiedades conectan con la infraestructura principal de agua, aunque las propiedades más antiguas pueden tener tuberías envejecidas.",
+        aboutLocation: "Tahiche es mejor conocido como el hogar de César Manrique, el artista más famoso de Lanzarote cuya antigua residencia—construida en burbujas volcánicas—es ahora una fundación imprescindible. Más allá de este hito cultural, Tahiche se ha desarrollado como una zona residencial deseable que ofrece una ubicación central conveniente entre la capital Arrecife y el resort de Costa Teguise. El pueblo combina casas canarias tradicionales en el núcleo histórico con villas modernas y urbanizaciones en las afueras. Muchos residentes europeos han elegido Tahiche por su carácter auténtico mientras permanecen cerca de servicios, aeropuerto y playas.",
+        landmarks: ["Fundación César Manrique", "Iglesia de Tahiche", "Cuevas de Burbujas Volcánicas", "Centro Tradicional del Pueblo", "Mirador de Mozaga", "Campo de Golf (cercano)"],
+        neighborhoods: ["Tahiche Centro", "Urbanización Manrique", "La Montaña", "Los Dises", "Caserío"],
+        commonWaterIssues: [
+          { title: "Problemas de Cimientos sobre Roca Volcánica", description: "Muchas propiedades de Tahiche están construidas sobre roca volcánica donde las tuberías pueden estresarse por movimientos del terreno y son difíciles de acceder cuando se necesitan reparaciones." },
+          { title: "Fugas en Suelo Radiante", description: "Las villas modernas a menudo tienen sistemas de calefacción por suelo radiante. Las fugas en tuberías empotradas requieren imagen térmica para localizarlas sin destruir acabados costosos." },
+          { title: "Infraestructura de Diferentes Épocas", description: "El pueblo tiene propiedades de diferentes épocas con materiales de fontanería mezclados. Conectar galvanizado antiguo con plástico nuevo crea potenciales puntos de fallo." },
+          { title: "Sistemas de Agua Comunitarios", description: "Algunas urbanizaciones comparten infraestructura de agua comunitaria. Aislar fugas de propiedades individuales de problemas del sistema comunal requiere pruebas de presión sistemáticas." }
+        ],
+        serviceCoverage: "Cubrimos todo Tahiche desde el centro histórico del pueblo hasta las urbanizaciones modernas y villas en las afueras. Nuestro servicio incluye casas tradicionales, villas contemporáneas, urbanizaciones comunitarias y propiedades en las zonas rurales circundantes. También cubrimos la cercana Mozaga y podemos llegar a cualquier punto del centro de Lanzarote rápidamente.",
+        whyChooseUs: [
+          "Ubicación central para respuesta rápida en cualquier lugar de Tahiche y alrededores",
+          "Experiencia en imagen térmica para detección de fugas en suelo radiante",
+          "Comprensión de la construcción sobre roca volcánica y sus desafíos",
+          "Experiencia con infraestructura de diferentes épocas y problemas de compatibilidad",
+          "Servicio profesional tanto para residentes como para propietarios vacacionales",
+          "Informes en inglés y español para clientes internacionales"
+        ],
+        emergencyResponse: {
+          responseTime: "2-3 horas",
+          availability: "24/7 Emergencias",
+          description: "La ubicación central de Tahiche significa que podemos llegar a emergencias desde cualquier dirección. Para fugas activas que amenazan propiedades o donde un fallo de suelo radiante arriesga inundaciones, respondemos en 2-3 horas con equipo completo de imagen térmica y acústica."
+        },
         localChallenges: "Las propiedades de Tahiche enfrentan desafíos del centro de la isla: casas tradicionales con fontanería adaptada creando rutas de tuberías complejas; propiedades sobre roca volcánica donde la excavación es difícil y costosa; villas modernas con sistemas de calefacción por suelo radiante que requieren experiencia en imagen térmica; y sistemas de agua comunitarios que sirven a múltiples propiedades donde aislar fugas individuales requiere experiencia.",
         nearbyAreas: ["Costa Teguise", "Arrecife", "Teguise", "Guatiza"],
         services: [
@@ -453,7 +545,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Imagen térmica para fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
           { title: "Diagnóstico paredes húmedas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Tahiche | Canary Detect", description: "Detección de fugas Tahiche. Propiedades residenciales, villas, casas tradicionales. Centro Lanzarote. +34 711 051 071", keywords: "detección fugas Tahiche, fugas agua Tahiche Lanzarote, fugas villa Tahiche, fontanero Tahiche" }
+        seo: { title: "Detección Fugas Tahiche | Zona Fundación César Manrique | Canary Detect", description: "Detección de fugas Tahiche. Propiedades residenciales, villas, casas tradicionales. Expertos centro Lanzarote. +34 711 051 071", keywords: "detección fugas Tahiche, fugas agua Tahiche Lanzarote, fugas villa Tahiche, fontanero Tahiche, detección fugas centro Lanzarote" }
       },
       "guatiza": {
         name: "Guatiza",
@@ -461,7 +553,30 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         description: "Servicios profesionales de detección de fugas en Guatiza, famosa por su Jardín de Cactus.",
         heroText: "Guatiza y las zonas agrícolas circundantes necesitan detección de fugas especializada. Proporcionamos servicios expertos para este tradicional pueblo del noreste de Lanzarote.",
         areaDescription: "Guatiza es un pueblo agrícola tradicional en el noreste de Lanzarote, famoso por sus plantaciones de cactus y el Jardín de Cactus diseñado por César Manrique. Las propiedades incluyen casas de pueblo tradicionales, fincas rurales y casas de campo renovadas. La herencia agrícola de la zona significa extensos sistemas de riego.",
-        localChallenges: "Las propiedades de Guatiza enfrentan desafíos de zona agrícola: extenso riego de plantaciones de cactus con sistemas de goteo subterráneos; casas tradicionales de piedra con paredes gruesas que ocultan la fontanería; desarrollo limitado significando infraestructura más antigua; y propiedades con sistemas de captación de agua de lluvia (maretas) que requieren inspección especializada. La ubicación noreste trae más humedad afectando el diagnóstico de humedades.",
+        aboutLocation: "Guatiza es el corazón de la histórica industria de la cochinilla de Lanzarote, rodeado de vastos campos de chumberas cultivadas para los insectos productores de tinte rojo. La atracción más famosa del pueblo es el Jardín de Cactus, el impresionante jardín botánico de César Manrique construido en una antigua cantera. Guatiza y la vecina Mala han mantenido su carácter agrícola, con una mezcla de casas de pueblo tradicionales y fincas trabajadas por familias durante generaciones. La zona ha atraído a compradores que buscan propiedades rurales auténticas lejos de las zonas turísticas, con muchas casas tradicionales ahora cuidadosamente restauradas. La ubicación en la costa noreste trae más humedad y nubosidad que las zonas del sur.",
+        landmarks: ["Jardín de Cactus", "Campos de Cactus de Cochinilla", "Iglesia de Guatiza", "Plaza Tradicional del Pueblo", "Playa de Mala (cercana)", "Cantera de Piedra Volcánica"],
+        neighborhoods: ["Guatiza Centro", "Los Cocoteros", "El Cercado", "Camino de Mala", "La Caleta"],
+        commonWaterIssues: [
+          { title: "Riego de Plantaciones de Cactus", description: "Los campos comerciales de cactus tienen extenso riego por goteo subterráneo instalado hace décadas. Encontrar fugas en sistemas sin mapear requiere métodos de trazador especializado." },
+          { title: "Captación de Agua de Lluvia Tradicional", description: "Las propiedades usan maretas (estanques de agua de lluvia revestidos de piedra) y sistemas de captación tradicionales. Distinguir el agua estructural de las fugas requiere experiencia local." },
+          { title: "Problemas de Humedad del Noreste", description: "El microclima de Guatiza trae más humedad y niebla. La humedad ascendente y la condensación son más comunes, requiriendo un diagnóstico cuidadoso para identificar fugas verdaderas." },
+          { title: "Ocultación en Muros Gruesos", description: "Las casas tradicionales de piedra volcánica tienen muros de hasta 70cm de grosor que pueden ocultar rutas de fontanería y enmascarar fugas durante períodos prolongados." }
+        ],
+        serviceCoverage: "Cubrimos el pueblo de Guatiza, la vecina Mala, y la zona agrícola circundante. Nuestro servicio incluye casas de pueblo tradicionales, fincas de cactus, propiedades rurales renovadas y construcciones modernas en la zona. También cubrimos Arrieta en la costa y propiedades hacia Teguise y Haría.",
+        whyChooseUs: [
+          "Comprensión de los sistemas tradicionales de captación de agua de lluvia (maretas) de la zona",
+          "Experiencia con sistemas de riego sin mapear en propiedades agrícolas",
+          "Conocimiento de los patrones de humedad del noreste que afectan el diagnóstico de fugas",
+          "Métodos no invasivos que protegen la valiosa construcción tradicional",
+          "Cobertura de toda la costa noreste y pueblos del interior",
+          "Asesoramiento práctico sobre mantenimiento de propiedades en zonas de mayor humedad"
+        ],
+        emergencyResponse: {
+          responseTime: "2-4 horas",
+          availability: "24/7 Emergencias",
+          description: "Guatiza está más lejos de nuestra base pero mantenemos cobertura de emergencia para toda la isla. Para situaciones urgentes en Guatiza y el noreste, podemos responder en 2-4 horas con equipo completo para diagnóstico y asesoramiento inmediato."
+        },
+        localChallenges: "Las propiedades de Guatiza enfrentan desafíos de zona agrícola: extenso riego de plantaciones de cactus con sistemas de goteo subterráneos instalados hace décadas sin planos; casas tradicionales de piedra con paredes gruesas que ocultan la fontanería; sistemas tradicionales de captación de agua de lluvia (maretas) que requieren inspección especializada; y una ubicación noreste que trae más humedad afectando el diagnóstico de humedades.",
         nearbyAreas: ["Teguise", "Costa Teguise", "Arrieta", "Mala", "Tahiche"],
         services: [
           { title: "Detección de Fugas de Agua Guatiza", description: "Detección experta de fugas para el pueblo de Guatiza y propiedades rurales. Agrícola y residencial.", href: `${serviceBasePath}/deteccion-fugas-agua`, icon: Droplets },
@@ -474,7 +589,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Paredes húmedas en casas antiguas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Guatiza | Canary Detect", description: "Detección de fugas Guatiza. Casas de pueblo, fincas de cactus, sistemas de riego. +34 711 051 071", keywords: "detección fugas Guatiza, fugas agua Guatiza Lanzarote, fugas finca cactus, fugas riego Guatiza" }
+        seo: { title: "Detección Fugas Guatiza | Zona Jardín de Cactus | Canary Detect", description: "Detección de fugas Guatiza. Casas de pueblo, fincas de cactus, riego tradicional. Especialistas noreste Lanzarote. +34 711 051 071", keywords: "detección fugas Guatiza, fugas agua Guatiza Lanzarote, fugas finca cactus, fugas riego Guatiza, fontanero noreste Lanzarote" }
       }
     };
   }
@@ -927,6 +1042,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Professional leak detection services in Femés, a traditional mountain village in southern Lanzarote.",
       heroText: "Femés and surrounding rural properties need specialist leak detection. Our local knowledge and professional equipment serve this picturesque village.",
       areaDescription: "Femés is a small traditional village perched in the Ajaches mountains above Playa Blanca. The area features traditional Canarian houses, rural fincas and renovated properties with stunning views. Many properties have older plumbing systems and rely on aljibes for water storage. Our proximity (based in Playa Blanca) means fast response times.",
+      aboutLocation: "Femés is a charming mountain village perched at 350 metres altitude in the Ajaches massif, offering spectacular views across to Fuerteventura and the southern coastline. This traditional settlement of whitewashed houses dates back to the 15th century and was once an important stopping point on the route between the coast and the interior. Today, Femés attracts visitors to its acclaimed restaurants and those seeking the authentic rural Lanzarote experience. The village maintains a small permanent population of farmers and artisans, with many properties now restored as holiday retreats or second homes for European buyers seeking mountain tranquillity.",
+      landmarks: ["Balcón de Femés", "Church of San Marcial", "Mirador de Femés", "Traditional Restaurants", "Casa Emiliano", "Ajaches Walking Trails"],
+      neighborhoods: ["Femés Centro", "Las Casitas de Femés", "Maciot", "El Púlpito", "Los Corrales"],
+      commonWaterIssues: [
+        { title: "Long Supply Pipe Runs", description: "Rural properties have water supply pipes running hundreds of metres from the mains, with multiple potential leak points invisible underground." },
+        { title: "Stone Aljibe Seepage", description: "Traditional stone cisterns develop hairline cracks over decades. Water loss is gradual but cumulative, often only noticed through empty tanks or high bills." },
+        { title: "Mountain Microclimate Moisture", description: "Femés receives more rainfall and mist than coastal areas. Distinguishing rising damp from water leaks requires expert diagnosis." },
+        { title: "Seasonal Property Issues", description: "Properties empty for months can develop leaks from temperature cycling and pipe stress. Returning owners often discover extensive hidden damage." }
+      ],
+      serviceCoverage: "We provide complete coverage for Femés village and the surrounding Ajaches mountain area. This includes the village centre, the scattered casitas and fincas on the hillsides, and properties in the nearby hamlets of Maciot and Las Casitas de Femés. As a company based in Playa Blanca just 15 minutes away, we can respond faster than any other leak detection service.",
+      whyChooseUs: [
+        "Based just 15 minutes away in Playa Blanca—fastest response time to Femés on the island",
+        "Extensive experience with traditional stone construction and retrofitted plumbing",
+        "Specialist expertise in aljibe and cistern leak detection",
+        "Understanding of mountain properties with extended water supply lines",
+        "Non-invasive methods protect valuable traditional architecture",
+        "Fair pricing for permanent residents and seasonal homeowners alike"
+      ],
+      emergencyResponse: {
+        responseTime: "30 min - 1 hour",
+        availability: "24/7 Emergency",
+        description: "As your closest professional leak detection service, we can reach Femés properties within 30 minutes to 1 hour. This is critical for mountain properties where a major leak can empty your aljibe completely, leaving you without water until the next tank delivery. We arrive with full equipment to locate and advise on immediate isolation."
+      },
       localChallenges: "Femés properties present rural challenges: long water supply pipes from the mains creating pressure issues; traditional stone aljibes (cisterns) with hairline cracks; limited access roads for service vehicles; and properties often empty for extended periods allowing small leaks to cause significant damage. The mountain microclimate brings more moisture than coastal areas, making dampness diagnosis more complex.",
       nearbyAreas: ["Playa Blanca", "Yaiza", "Las Breñas", "Uga"],
       services: [
@@ -940,7 +1078,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Underground leak signs", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Damp walls in old houses", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Femés | Rural Properties | Canary Detect", description: "Leak detection Femés. Traditional village houses, fincas, aljibes. Local experts. Call +34 711 051 071", keywords: "leak detection Femés, water leak Femés Lanzarote, finca leak detection, rural leak detection Lanzarote" }
+      seo: { title: "Leak Detection Femés | Rural Properties | Canary Detect", description: "Leak detection Femés. Traditional village houses, fincas, aljibes. Local experts based 15 mins away. +34 711 051 071", keywords: "leak detection Femés, water leak Femés Lanzarote, finca leak detection, rural leak detection Lanzarote, aljibe leak Femés" }
     },
     "las-brenas": {
       name: "Las Breñas",
@@ -948,6 +1086,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Professional leak detection in Las Breñas, a quiet agricultural village near Yaiza.",
       heroText: "Las Breñas and nearby rural properties need reliable leak detection. We provide expert services for this peaceful farming community.",
       areaDescription: "Las Breñas is a small agricultural village between Yaiza and Femés, known for its traditional farming heritage. Properties include traditional village houses, rural fincas and renovated country homes. Many rely on cisterns and have long supply pipes requiring specialist detection.",
+      aboutLocation: "Las Breñas is a tranquil agricultural hamlet nestled between Yaiza and Femés, embodying the traditional farming character of southern Lanzarote. The village is surrounded by the distinctive dark volcanic landscape, with small plots cultivated using traditional techniques including zocos (stone wind shelters for vines and vegetables). The community maintains strong agricultural traditions, producing goat cheese, vegetables, and wines. Las Breñas has attracted those seeking authentic rural living, with many traditional houses renovated as permanent homes or holiday retreats while preserving their original character.",
+      landmarks: ["Las Breñas Church", "Traditional Farming Plots", "La Geria Views", "Historic Water Well", "Volcanic Picón Fields"],
+      neighborhoods: ["Las Breñas Centro", "El Rincón", "La Atalaya", "Los Llanos"],
+      commonWaterIssues: [
+        { title: "Agricultural Irrigation Leaks", description: "Drip irrigation systems for crops and gardens have multiple junction points that can develop slow leaks, wasting water and affecting plant health." },
+        { title: "Shared Supply Systems", description: "Some neighbouring properties share water supply infrastructure. Isolating which property has the leak requires careful pressure testing." },
+        { title: "Galvanised Pipe Corrosion", description: "Aging galvanised pipes common in rural properties develop internal scaling and pinhole leaks that reduce water pressure before becoming visible." },
+        { title: "Seasonal Property Checks", description: "Properties closed for extended periods need inspection before and after, as stagnant water and temperature cycling stress plumbing joints." }
+      ],
+      serviceCoverage: "We cover Las Breñas village and the surrounding agricultural zone including El Rincón, La Atalaya, and properties extending toward Yaiza and Femés. Our service includes traditional village houses, renovated fincas, modern rural builds, and agricultural properties with extensive irrigation systems.",
+      whyChooseUs: [
+        "Local knowledge of Las Breñas and the surrounding Yaiza municipality",
+        "Experience with agricultural irrigation systems common in the area",
+        "Understanding of shared water supply systems between properties",
+        "Fast response from our Playa Blanca base—just 20 minutes away",
+        "Non-invasive detection protects valuable traditional features",
+        "Practical advice for seasonal property owners on prevention"
+      ],
+      emergencyResponse: {
+        responseTime: "45 min - 1.5 hours",
+        availability: "24/7 Emergency",
+        description: "Las Breñas is just 20 minutes from our Playa Blanca base. For emergencies, we can be on-site within 45 minutes to 1.5 hours, equipped to locate and isolate active leaks. For properties relying on tank water, we understand the urgency of preventing complete water loss."
+      },
       localChallenges: "Las Breñas properties face agricultural-zone challenges: drip irrigation systems for crops and gardens with multiple small leak points; shared water supply systems between neighbouring properties; aging infrastructure with galvanised pipes prone to corrosion; and properties often used seasonally requiring inspection before and after closure periods.",
       nearbyAreas: ["Yaiza", "Femés", "Playa Blanca", "Uga"],
       services: [
@@ -961,7 +1122,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Water meter running with taps off", href: `${blogBasePath}/water-meter-running-when-taps-off` },
       ],
-      seo: { title: "Leak Detection Las Breñas | Canary Detect", description: "Leak detection Las Breñas. Village houses, fincas, irrigation systems. Call +34 711 051 071", keywords: "leak detection Las Breñas, water leak Las Breñas Lanzarote, rural leak detection, finca leak Las Breñas" }
+      seo: { title: "Leak Detection Las Breñas | Canary Detect", description: "Leak detection Las Breñas. Village houses, fincas, irrigation systems. Fast response from local base. +34 711 051 071", keywords: "leak detection Las Breñas, water leak Las Breñas Lanzarote, rural leak detection, finca leak Las Breñas, irrigation leak" }
     },
     "uga": {
       name: "Uga",
@@ -969,6 +1130,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Professional leak detection services in Uga, a traditional village in Lanzarote's wine country.",
       heroText: "Uga's traditional properties and fincas need specialist leak detection. We provide expert services in this charming village near La Geria.",
       areaDescription: "Uga is a picturesque village on the edge of La Geria wine region, known for its traditional Canarian architecture and camel station. Properties include historic village houses, renovated fincas and bodegas. The area's agricultural heritage means many properties have complex irrigation and water storage systems.",
+      aboutLocation: "Uga is perhaps the most perfectly preserved traditional village in southern Lanzarote, with immaculate whitewashed houses, palm trees, and the famous camel station that serves as the starting point for Timanfaya excursions. Positioned at the gateway to La Geria wine region, the village is surrounded by the iconic black volcanic landscape where local wines are produced using unique crater cultivation methods. Uga has become popular with discerning buyers seeking authentic Canarian character, resulting in many sympathetically restored properties. The village supports several excellent restaurants and maintains strong traditions including the annual September fiesta.",
+      landmarks: ["Uga Camel Station", "Church of San Isidro", "La Geria Wine Region", "Traditional Village Square", "Bodega Uga", "Timanfaya Views"],
+      neighborhoods: ["Uga Centro", "La Bodega", "El Drago", "Camino de La Geria", "Las Hoyas"],
+      commonWaterIssues: [
+        { title: "Bodega Refrigeration Moisture", description: "Wine storage areas have refrigeration and humidification systems that create moisture easily confused with water leaks. Expert diagnosis distinguishes the two." },
+        { title: "Thick Stone Wall Concealment", description: "Traditional volcanic stone construction with walls 60cm+ thick can hide plumbing and mask leaks for years before visible damage appears." },
+        { title: "Vineyard Drip Irrigation", description: "Properties bordering La Geria have extensive drip irrigation for vines. Multiple micro-leaks across hundreds of metres of buried tubing are common." },
+        { title: "Historic Property Restrictions", description: "Protected traditional buildings require minimal-intervention detection methods to preserve architectural character and meet heritage regulations." }
+      ],
+      serviceCoverage: "We provide coverage throughout Uga village and the surrounding La Geria wine region. This includes the historic village centre, properties along the road to La Geria, fincas and bodegas in the surrounding vineyards, and the rural properties extending toward Yaiza and Mácher. We understand the particular requirements of working in this beautiful, protected landscape.",
+      whyChooseUs: [
+        "Understanding of bodega environments and refrigeration moisture vs. water leaks",
+        "Experience with thick volcanic stone construction typical of Uga",
+        "Non-invasive methods essential for protected traditional properties",
+        "Knowledge of vineyard irrigation systems in the La Geria region",
+        "Respectful approach to historic fabric and original features",
+        "Professional reports suitable for heritage property applications"
+      ],
+      emergencyResponse: {
+        responseTime: "45 min - 1.5 hours",
+        availability: "24/7 Emergency",
+        description: "Uga is approximately 25 minutes from our base. For emergencies in traditional properties where water damage threatens irreplaceable historic fabric, we respond with appropriate urgency. We understand the need for careful, respectful work even in emergency situations."
+      },
       localChallenges: "Uga properties present wine-country challenges: bodegas with refrigeration creating moisture that masks water leaks; traditional stone constructions with thick walls hiding pipes; drip irrigation for vines and gardens with multiple potential leak points; and historic buildings requiring careful, non-invasive detection methods to preserve character.",
       nearbyAreas: ["Yaiza", "Femés", "La Geria", "Tías", "Mácher"],
       services: [
@@ -982,7 +1166,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Thermal imaging for old buildings", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
         { title: "Underground leak detection", href: `${blogBasePath}/signs-of-underground-water-leak` },
       ],
-      seo: { title: "Leak Detection Uga | La Geria | Canary Detect", description: "Leak detection Uga. Traditional village, fincas, bodegas. Wine country specialists. Call +34 711 051 071", keywords: "leak detection Uga, water leak Uga Lanzarote, bodega leak detection, La Geria leak detection" }
+      seo: { title: "Leak Detection Uga | La Geria Wine Country | Canary Detect", description: "Leak detection Uga. Traditional village, fincas, bodegas, La Geria vineyards. Heritage property specialists. +34 711 051 071", keywords: "leak detection Uga, water leak Uga Lanzarote, bodega leak detection, La Geria leak detection, traditional property leak" }
     },
     "tahiche": {
       name: "Tahiche",
@@ -990,6 +1174,29 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Professional leak detection services in Tahiche, home to the César Manrique Foundation.",
       heroText: "Tahiche's residential properties and villas need reliable leak detection. We provide expert services in this central Lanzarote location.",
       areaDescription: "Tahiche is a residential village between Costa Teguise and Arrecife, famous as the home of César Manrique's former residence (now a foundation). The area features a mix of traditional Canarian houses and modern villas. Its central location means properties connect to main water infrastructure, though older properties may have aging pipes.",
+      aboutLocation: "Tahiche is best known as the home of César Manrique, Lanzarote's most famous artist whose former residence—built into volcanic bubbles—is now a must-visit foundation. Beyond this cultural landmark, Tahiche has developed as a desirable residential area offering a convenient central location between the capital Arrecife and the resort of Costa Teguise. The village combines traditional Canarian houses in the historic core with modern villas and developments on the outskirts. Many European residents have chosen Tahiche for its authentic character while remaining close to amenities, airport, and beaches.",
+      landmarks: ["Fundación César Manrique", "Tahiche Church", "Volcanic Bubble Caves", "Traditional Village Centre", "Mozaga Viewpoint", "Golf Course (nearby)"],
+      neighborhoods: ["Tahiche Centro", "Urbanización Manrique", "La Montaña", "Los Dises", "Caserio"],
+      commonWaterIssues: [
+        { title: "Volcanic Rock Foundation Issues", description: "Many Tahiche properties are built on volcanic rock where pipes can be stressed by ground movement and difficult to access when repairs are needed." },
+        { title: "Underfloor Heating Leaks", description: "Modern villas often have underfloor heating systems. Leaks in embedded pipes require thermal imaging to locate without destroying expensive floor finishes." },
+        { title: "Mixed-Age Infrastructure", description: "The village has properties from different eras with mixed plumbing materials. Connecting old galvanised to new plastic creates potential failure points." },
+        { title: "Community Water Systems", description: "Some developments share community water infrastructure. Isolating individual property leaks from communal system issues requires systematic pressure testing." }
+      ],
+      serviceCoverage: "We cover all of Tahiche from the historic village centre to the modern developments and villas on the outskirts. Our service includes traditional houses, contemporary villas, community developments, and properties in the surrounding rural areas. We also cover nearby Mozaga and can reach anywhere in central Lanzarote quickly.",
+      whyChooseUs: [
+        "Central location for fast response anywhere in Tahiche and surroundings",
+        "Thermal imaging expertise for underfloor heating leak detection",
+        "Understanding of volcanic rock construction and its challenges",
+        "Experience with mixed-age infrastructure and compatibility issues",
+        "Professional service for both residents and holiday property owners",
+        "Reports in English and Spanish for international clients"
+      ],
+      emergencyResponse: {
+        responseTime: "2-3 hours",
+        availability: "24/7 Emergency",
+        description: "Tahiche's central location means we can reach emergencies from any direction. For active leaks threatening property or where underfloor heating failure risks flooding, we respond within 2-3 hours with full thermal imaging and acoustic equipment."
+      },
       localChallenges: "Tahiche properties face central-island challenges: traditional houses with retrofitted plumbing creating complex pipe routes; properties on volcanic rock where excavation is difficult and expensive; modern villas with underfloor heating systems requiring thermal imaging expertise; and community water systems serving multiple properties where isolating individual leaks requires expertise.",
       nearbyAreas: ["Costa Teguise", "Arrecife", "Teguise", "Guatiza"],
       services: [
@@ -1003,7 +1210,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Thermal imaging for leaks", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
         { title: "Damp walls diagnosis", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Tahiche | Canary Detect", description: "Leak detection Tahiche. Residential properties, villas, traditional houses. Central Lanzarote. Call +34 711 051 071", keywords: "leak detection Tahiche, water leak Tahiche Lanzarote, villa leak Tahiche, plumber Tahiche" }
+      seo: { title: "Leak Detection Tahiche | César Manrique Foundation Area | Canary Detect", description: "Leak detection Tahiche. Residential properties, villas, traditional houses. Central Lanzarote experts. +34 711 051 071", keywords: "leak detection Tahiche, water leak Tahiche Lanzarote, villa leak Tahiche, plumber Tahiche, central Lanzarote leak detection" }
     },
     "guatiza": {
       name: "Guatiza",
@@ -1011,7 +1218,30 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
       description: "Professional leak detection services in Guatiza, famous for its Cactus Garden.",
       heroText: "Guatiza and surrounding agricultural areas need specialist leak detection. We provide expert services for this traditional northeast Lanzarote village.",
       areaDescription: "Guatiza is a traditional agricultural village in northeast Lanzarote, famous for its cactus plantations and the Jardín de Cactus designed by César Manrique. Properties include traditional village houses, rural fincas and renovated country homes. The area's agricultural heritage means extensive irrigation systems.",
-      localChallenges: "Guatiza properties face agricultural-zone challenges: extensive cactus plantation irrigation with underground drip systems; traditional stone houses with thick walls hiding plumbing; limited development meaning older infrastructure; and properties with rainwater harvesting systems (maretas) requiring specialist inspection. The northeast location brings more humidity affecting dampness diagnosis.",
+      aboutLocation: "Guatiza is the heart of Lanzarote's historic cochineal industry, surrounded by vast fields of prickly pear cacti cultivated for the red dye-producing insects. The village's most famous attraction is the Jardín de Cactus, César Manrique's stunning botanical garden built in an old quarry. Guatiza and neighbouring Mala have maintained their agricultural character, with a mix of traditional village houses and fincas worked by families for generations. The area has attracted buyers seeking authentic rural properties away from tourist zones, with many traditional houses now carefully restored. The northeast coast location brings more humidity and cloud cover than southern areas.",
+      landmarks: ["Jardín de Cactus", "Cochineal Cactus Fields", "Guatiza Church", "Traditional Village Square", "Mala Beach (nearby)", "Volcanic Stone Quarry"],
+      neighborhoods: ["Guatiza Centro", "Los Cocoteros", "El Cercado", "Camino de Mala", "La Caleta"],
+      commonWaterIssues: [
+        { title: "Cactus Plantation Irrigation", description: "Commercial cactus fields have extensive underground drip irrigation installed decades ago. Finding leaks in unmapped systems requires specialist tracer methods." },
+        { title: "Traditional Rainwater Harvesting", description: "Properties use maretas (stone-lined rainwater ponds) and traditional collection systems. Distinguishing structural water from leaks requires local expertise." },
+        { title: "Northeast Humidity Issues", description: "The Guatiza microclimate brings more moisture and mist. Rising damp and condensation are more common, requiring careful diagnosis to identify true leaks." },
+        { title: "Thick Wall Concealment", description: "Traditional volcanic stone houses have walls up to 70cm thick that can hide plumbing routes and mask leaks for extended periods." }
+      ],
+      serviceCoverage: "We cover Guatiza village, neighbouring Mala, and the surrounding agricultural zone. Our service includes traditional village houses, cactus fincas, renovated rural properties, and modern builds in the area. We also cover Arrieta on the coast and properties toward Teguise and Haría.",
+      whyChooseUs: [
+        "Understanding of traditional rainwater harvesting systems (maretas) in the area",
+        "Experience with unmapped irrigation systems on agricultural properties",
+        "Knowledge of northeast humidity patterns affecting leak diagnosis",
+        "Non-invasive methods protect valuable traditional construction",
+        "Coverage of the entire northeast coast and inland villages",
+        "Practical advice on maintaining properties in higher-humidity zones"
+      ],
+      emergencyResponse: {
+        responseTime: "2-4 hours",
+        availability: "24/7 Emergency",
+        description: "Guatiza is further from our base but we maintain emergency coverage for the entire island. For urgent situations in Guatiza and the northeast, we can respond within 2-4 hours with full equipment for immediate diagnosis and advice."
+      },
+      localChallenges: "Guatiza properties face agricultural-zone challenges: extensive cactus plantation irrigation with underground drip systems installed decades ago without plans; traditional stone houses with thick walls hiding plumbing; traditional rainwater harvesting systems (maretas) requiring specialist inspection; and a northeast location bringing more humidity affecting dampness diagnosis.",
       nearbyAreas: ["Teguise", "Costa Teguise", "Arrieta", "Mala", "Tahiche"],
       services: [
         { title: "Water Leak Detection Guatiza", description: "Expert leak detection for Guatiza village and rural properties. Agricultural and residential.", href: `${serviceBasePath}/water-leak-detection`, icon: Droplets },
@@ -1024,7 +1254,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Underground leak signs", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Damp walls in old houses", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Guatiza | Canary Detect", description: "Leak detection Guatiza. Village houses, cactus fincas, irrigation systems. Call +34 711 051 071", keywords: "leak detection Guatiza, water leak Guatiza Lanzarote, cactus finca leak, irrigation leak Guatiza" }
+      seo: { title: "Leak Detection Guatiza | Cactus Garden Area | Canary Detect", description: "Leak detection Guatiza. Village houses, cactus fincas, traditional irrigation. Northeast Lanzarote specialists. +34 711 051 071", keywords: "leak detection Guatiza, water leak Guatiza Lanzarote, cactus finca leak, irrigation leak Guatiza, northeast Lanzarote plumber" }
     }
   };
 };

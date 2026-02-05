@@ -211,6 +211,11 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
                   { name: "Teguise", slug: "teguise" },
                   { name: "San Bartolomé", slug: "san-bartolome" },
                   { name: "Puerto Calero", slug: "puerto-calero" },
+                  { name: "Femés", slug: "femes" },
+                  { name: "Uga", slug: "uga" },
+                  { name: "Tahiche", slug: "tahiche" },
+                  { name: "Guatiza", slug: "guatiza" },
+                  { name: "Las Breñas", slug: "las-brenas" },
                 ].map(area => (
                   <li key={area.slug}>
                     <Link 
