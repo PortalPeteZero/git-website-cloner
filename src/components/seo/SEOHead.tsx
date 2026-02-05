@@ -24,6 +24,11 @@ const SEOHead = forwardRef<unknown, SEOHeadProps>(({
   const { language, isSpanish } = useTranslation();
 
   useEffect(() => {
+    const baseUrl = 'https://canary-detect.com';
+    
+    // Calculate canonical URL - use provided or self-reference
+    const effectiveCanonical = canonical || `${baseUrl}${location.pathname}`;
+    
     // Set html lang attribute
     document.documentElement.lang = language;
     
@@ -59,7 +64,7 @@ const SEOHead = forwardRef<unknown, SEOHeadProps>(({
     if (ogType) ogType.setAttribute('content', type);
     if (ogLocale) ogLocale.setAttribute('content', isSpanish ? 'es_ES' : 'en_GB');
     if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', isSpanish ? 'en_GB' : 'es_ES');
-    if (ogUrl && canonical) ogUrl.setAttribute('content', canonical);
+    if (ogUrl) ogUrl.setAttribute('content', effectiveCanonical);
     
     // Update Twitter tags
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
@@ -70,21 +75,18 @@ const SEOHead = forwardRef<unknown, SEOHeadProps>(({
     if (twitterTitle) twitterTitle.setAttribute('content', title);
     if (twitterDescription) twitterDescription.setAttribute('content', description);
     if (twitterImage) twitterImage.setAttribute('content', image.startsWith('http') ? image : `https://canary-detect.com${image}?v=2`);
-    if (twitterUrl && canonical) twitterUrl.setAttribute('content', canonical);
+    if (twitterUrl) twitterUrl.setAttribute('content', effectiveCanonical);
     
-    // Update or create canonical tag
-    if (canonical) {
-      let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute('href', canonical);
+    // Always update or create canonical tag (self-referencing if not provided)
+    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
     }
+    canonicalLink.setAttribute('href', effectiveCanonical);
 
     // Add/update hreflang tags
-    const baseUrl = 'https://canary-detect.com';
     const enUrl = isSpanish 
       ? `${baseUrl}${getEquivalentRoute(location.pathname, 'en')}`
       : `${baseUrl}${location.pathname}`;
