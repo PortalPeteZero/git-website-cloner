@@ -30,14 +30,14 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
       imageAlt: isSpanish ? "Inspección de desagües con cámara CCTV Lanzarote" : "CCTV drain inspection camera Lanzarote",
     },
     {
-      title: isSpanish ? "Inspección de Tuberías" : "Pipe Inspection",
+      title: isSpanish ? "Fugas en Tuberías" : "Water Pipe Leaks",
       description: isSpanish
-        ? "Inspección CCTV de tuberías para evaluar el estado de sus tuberías e identificar bloqueos o daños."
-        : "CCTV pipe inspection to assess the condition of your pipes and identify blockages or damage.",
+        ? "¿Tubería rota o con fuga? Detectamos fugas en tuberías de cobre, PVC, polietileno y acero con precisión centimétrica."
+        : "Broken or leaking pipe? We detect leaks in copper, PVC, polyethylene and steel pipes with pinpoint accuracy.",
       icon: CircleDot,
-      href: isSpanish ? "/es/servicios/inspeccion-tuberias" : "/services/pipe-inspection",
+      href: isSpanish ? "/es/servicios/deteccion-fugas-tuberias" : "/services/water-pipe-leak-detection",
       image: pipeInspectionImg,
-      imageAlt: isSpanish ? "Equipo de inspección de tuberías con cámara" : "Pipe inspection camera equipment",
+      imageAlt: isSpanish ? "Detección de fugas en tuberías enterradas" : "Underground pipe leak detection",
     },
     {
       title: isSpanish ? "Detección Subterránea" : "Underground Detection",
