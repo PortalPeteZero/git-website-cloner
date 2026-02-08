@@ -1,10 +1,16 @@
 import Layout from "@/components/layout/Layout";
 import MeetTheTeamSection from "@/components/home/MeetTheTeamSection";
 import SEOHead from "@/components/seo/SEOHead";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { getHomePath } from "@/i18n/routes";
 
 const MeetTheTeam = () => {
   const { isSpanish } = useLanguage();
+  
+  const canonicalUrl = isSpanish 
+    ? "https://canary-detect.com/es/equipo" 
+    : "https://canary-detect.com/meet-the-team";
 
   return (
     <Layout>
@@ -18,9 +24,13 @@ const MeetTheTeam = () => {
         keywords={isSpanish
           ? "equipo canary detect, pete ashcroft, dave poxon, detección fugas lanzarote, los cazafugas"
           : "canary detect team, pete ashcroft, dave poxon, leak detection lanzarote, the leaky finders"}
-        canonical={isSpanish 
-          ? "https://canary-detect.com/es/equipo" 
-          : "https://canary-detect.com/meet-the-team"}
+        canonical={canonicalUrl}
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
+          { name: isSpanish ? "Conoce al Equipo" : "Meet the Team", url: canonicalUrl }
+        ]} 
       />
       
       <MeetTheTeamSection />

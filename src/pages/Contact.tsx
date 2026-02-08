@@ -8,8 +8,10 @@ import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import contactHero from "@/assets/hero/contact-hero.jpg";
 import SEOHead from "@/components/seo/SEOHead";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
+import { getHomePath, getContactPath } from "@/i18n/routes";
 import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
@@ -118,13 +120,23 @@ const Contact = () => {
     { value: "other", label: "Other" },
   ];
 
+  const canonicalUrl = isSpanish 
+    ? "https://canary-detect.com/es/contacto" 
+    : "https://canary-detect.com/contact";
+
   return (
     <Layout>
       <SEOHead 
         title={t('meta.contact.title')}
         description={t('meta.contact.description')}
         keywords={t('meta.contact.keywords')}
-        canonical={isSpanish ? "https://canary-detect.com/es/contacto" : "https://canary-detect.com/contact"}
+        canonical={canonicalUrl}
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
+          { name: isSpanish ? "Contacto" : "Contact", url: canonicalUrl }
+        ]} 
       />
       <LocalBusinessSchema page="contact" />
       {/* Hero Section */}

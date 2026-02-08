@@ -5,10 +5,17 @@ import { Link } from "react-router-dom";
 import welcomeImg from "@/assets/welcome.jpg";
 import aboutHero from "@/assets/hero/about-hero.jpg";
 import SEOHead from "@/components/seo/SEOHead";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
+import { getHomePath, getAboutPath } from "@/i18n/routes";
 
 const About = () => {
   const { t, isSpanish } = useTranslation();
+  
+  const canonicalUrl = isSpanish 
+    ? "https://canary-detect.com/es/sobre-nosotros" 
+    : "https://canary-detect.com/about";
 
   return (
     <Layout>
@@ -16,8 +23,15 @@ const About = () => {
         title={t('meta.about.title')}
         description={t('meta.about.description')}
         keywords={t('meta.about.keywords')}
-        canonical={isSpanish ? "https://canary-detect.com/es/sobre-nosotros" : "https://canary-detect.com/about"}
+        canonical={canonicalUrl}
       />
+      <BreadcrumbSchema 
+        items={[
+          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
+          { name: isSpanish ? "Sobre Nosotros" : "About", url: canonicalUrl }
+        ]} 
+      />
+      <LocalBusinessSchema />
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
