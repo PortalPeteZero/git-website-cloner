@@ -1,11 +1,17 @@
 import { forwardRef } from "react";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { getHomePath } from "@/i18n/routes";
 import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 
 const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref) => {
   const { isSpanish } = useLanguage();
+  
+  const canonicalUrl = isSpanish 
+    ? "https://canary-detect.com/es/politica-de-privacidad" 
+    : "https://canary-detect.com/privacy-policy";
 
   return (
     <Layout ref={ref}>
@@ -16,9 +22,13 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
         description={isSpanish
           ? "Política de Privacidad de Canary Detect - Descubra cómo recopilamos, usamos y protegemos sus datos personales de acuerdo con el RGPD."
           : "Privacy Policy for Canary Detect - Learn how we collect, use, and protect your personal data in accordance with GDPR."}
-        canonical={isSpanish 
-          ? "https://canary-detect.com/es/politica-de-privacidad" 
-          : "https://canary-detect.com/privacy-policy"}
+        canonical={canonicalUrl}
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
+          { name: isSpanish ? "Política de Privacidad" : "Privacy Policy", url: canonicalUrl }
+        ]} 
       />
       
       <div className="bg-gradient-to-b from-canary-navy to-canary-navy/95 py-16 md:py-20">

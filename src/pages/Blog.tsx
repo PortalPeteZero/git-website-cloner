@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, ArrowRight, Clock } from "lucide-react";
 import { getBlogArticles, BlogArticle as StaticBlogArticle } from "@/data/blogArticles";
 import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "@/i18n/LanguageContext";
-import { getContactPath, getBlogPath } from "@/i18n/routes";
+import { getContactPath, getBlogPath, getHomePath } from "@/i18n/routes";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
 import BlogCrossLinks from "@/components/internal-links/BlogCrossLinks";
 
@@ -161,6 +162,10 @@ const Blog = () => {
   };
 
   const blogBasePath = getBlogPath(isSpanish);
+  
+  const canonicalUrl = isSpanish 
+    ? "https://canary-detect.com/es/blog" 
+    : "https://canary-detect.com/blog";
 
   return (
     <Layout>
@@ -168,7 +173,13 @@ const Blog = () => {
         title={uiText.seo.title}
         description={uiText.seo.description}
         keywords={uiText.seo.keywords}
-        canonical={isSpanish ? "https://canary-detect.com/es/blog" : "https://canary-detect.com/blog"}
+        canonical={canonicalUrl}
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
+          { name: "Blog", url: canonicalUrl }
+        ]} 
       />
 
       {/* Hero Section with Carousel */}

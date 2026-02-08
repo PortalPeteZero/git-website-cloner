@@ -4,9 +4,11 @@ import HeroSlider from "@/components/home/HeroSlider";
 import WelcomeSection from "@/components/home/WelcomeSection";
 import TrustBadgesSection from "@/components/home/TrustBadgesSection";
 import SEOHead from "@/components/seo/SEOHead";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
+import { getHomePath } from "@/i18n/routes";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import LoadingFallback from "@/components/LoadingFallback";
 
@@ -24,13 +26,22 @@ const ServiceAreasSection = lazy(() => import("@/components/home/ServiceAreasSec
 const Index = () => {
   const { t, isSpanish } = useTranslation();
   
+  const canonicalUrl = isSpanish 
+    ? "https://canary-detect.com/es" 
+    : "https://canary-detect.com";
+  
   return (
     <Layout>
       <SEOHead 
         title={t('meta.home.title')}
         description={t('meta.home.description')}
         keywords={t('meta.home.keywords')}
-        canonical={isSpanish ? "https://canary-detect.com/es" : "https://canary-detect.com"}
+        canonical={canonicalUrl}
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` }
+        ]} 
       />
       <LocalBusinessSchema page="home" />
       <ServiceSchema />
