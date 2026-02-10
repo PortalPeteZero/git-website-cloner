@@ -61,6 +61,7 @@ const App = () => (
               {/* SEO-friendly redirects for common URL variations */}
               <Route path="/services/leaking-water-pipe-repair-lanzarote" element={<Navigate to="/services/leak-repair" replace />} />
               <Route path="/services/water-pipe-leak-repair" element={<Navigate to="/services/leak-repair" replace />} />
+              <Route path="/services/water-pipe-leak-detection" element={<Navigate to="/services/water-leak-detection" replace />} />
               <Route path="/services/pipe-leak-repair" element={<Navigate to="/services/leak-repair" replace />} />
               <Route path="/services/water-leak-detection-lanzarote" element={<Navigate to="/services/water-leak-detection" replace />} />
               <Route path="/services/water-leak-detection-lanzarote/" element={<Navigate to="/services/water-leak-detection" replace />} />
@@ -112,6 +113,7 @@ const App = () => (
               
               {/* Date archive redirects */}
               <Route path="/2023/04" element={<Navigate to="/blog" replace />} />
+              <Route path="/2022/01" element={<Navigate to="/blog" replace />} />
               <Route path="/2021/08" element={<Navigate to="/blog" replace />} />
               <Route path="/2022/12" element={<Navigate to="/blog" replace />} />
               
