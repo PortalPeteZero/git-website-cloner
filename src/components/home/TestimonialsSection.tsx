@@ -85,13 +85,6 @@ const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
       "@type": "LocalBusiness",
       "@id": "https://canary-detect.com/#business",
       "name": "Canary Detect",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": testimonials.length.toString(),
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "review": testimonials.map(t => ({
         "@type": "Review",
         "author": {
