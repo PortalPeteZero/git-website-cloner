@@ -96,6 +96,9 @@ const App = () => (
               <Route path="/products/pool-leak-detection" element={<Navigate to="/services/pool-leak-detection" replace />} />
               <Route path="/category/blog" element={<Navigate to="/blog" replace />} />
               <Route path="/category/blog/" element={<Navigate to="/blog" replace />} />
+              {/* Legacy WordPress date archive redirects */}
+              <Route path="/2022/:slug" element={<Navigate to="/blog" replace />} />
+              <Route path="/2022/:slug/" element={<Navigate to="/blog" replace />} />
               <Route path="/why-is-pipe-detection-in-lanzarote-important" element={<Navigate to="/technology" replace />} />
               <Route path="/why-is-pipe-detection-in-lanzarote-important/" element={<Navigate to="/technology" replace />} />
               <Route path="/there-can-be-many-reasons-for-a-leak-in-your-pool-in-lanzarote" element={<Navigate to="/services/pool-leak-detection" replace />} />
