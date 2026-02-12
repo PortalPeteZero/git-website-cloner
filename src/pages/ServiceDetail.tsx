@@ -1,6 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { useState, useEffect, Fragment } from "react";
-import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";

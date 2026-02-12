@@ -44,9 +44,12 @@ const SEOHead = forwardRef<unknown, SEOHeadProps>(({
     // Update keywords if provided
     if (keywords) {
       let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) {
-        metaKeywords.setAttribute('content', keywords);
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKeywords);
       }
+      metaKeywords.setAttribute('content', keywords);
     }
     
     // Update OG tags

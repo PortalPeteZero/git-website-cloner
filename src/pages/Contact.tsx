@@ -142,7 +142,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
-          <img src={contactHero} alt="" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
+          <img src={contactHero} alt={isSpanish ? "Oficina de Canary Detect en Playa Blanca, Lanzarote" : "Canary Detect office in Playa Blanca, Lanzarote"} className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.35)]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] via-transparent to-transparent" />
         </div>
