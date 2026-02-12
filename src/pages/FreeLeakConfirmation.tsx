@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import FreeLeakConfirmationSection from "@/components/services/FreeLeakConfirmationSection";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -7,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, CheckCircle, FileCheck, Clock, Shield } from "lucide-react";
 import heroImage from "@/assets/hero/free-leak-hero.jpg";
 import { useTranslation } from "@/i18n/LanguageContext";
+import { getHomePath, getServicesBasePath } from "@/i18n/routes";
 
 const FreeLeakConfirmation = () => {
   const { isSpanish } = useTranslation();
@@ -34,6 +36,13 @@ const FreeLeakConfirmation = () => {
           : "free leak test Lanzarote, leak confirmation, water leak check, free leak detection"}
         canonical={canonicalUrl}
         type="service"
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
+          { name: isSpanish ? "Servicios" : "Services", url: `https://canary-detect.com${getServicesBasePath(isSpanish)}` },
+          { name: isSpanish ? "Confirmación Fugas Gratis" : "Free Leak Confirmation", url: canonicalUrl }
+        ]} 
       />
 
       {/* Hero Section - Full Width Background */}

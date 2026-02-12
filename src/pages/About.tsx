@@ -229,7 +229,7 @@ const About = () => {
                   : "Known locally as \"The Leaky Finders,\" they've built a reputation for thoroughness, honesty, and a good sense of humour. Whether it's a pool leak in Playa Blanca or a burst pipe under a villa in Puerto del Carmen, Pete and Dave will find it."}
               </p>
               <Button asChild variant="outline">
-                <Link to={isSpanish ? "/es/conoce-al-equipo" : "/meet-the-team"}>
+                <Link to={isSpanish ? "/es/equipo" : "/meet-the-team"}>
                   {isSpanish ? "Más Sobre el Equipo" : "More About the Team"} →
                 </Link>
               </Button>
