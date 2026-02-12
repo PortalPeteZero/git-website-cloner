@@ -25,6 +25,7 @@ export const routeMap: Record<string, string> = {
   '/plumbing-services/pool-plumbing': '/es/servicios-fontaneria/fontaneria-piscinas',
   '/plumbing-services/pool-repairs': '/es/servicios-fontaneria/reparaciones-piscinas',
   '/meet-the-team': '/es/equipo',
+  '/locations': '/es/ubicaciones',
 };
 
 // Reverse map for Spanish to English
