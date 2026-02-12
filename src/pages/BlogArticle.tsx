@@ -107,6 +107,11 @@ const resolveImagePath = (src: string): string => {
     '/assets/blog/emergency-leak-pipe-repair.jpg': BLOG_IMAGES.emergencyLeakPipeRepair,
     '/assets/blog/emergency-leak-hole.jpg': BLOG_IMAGES.emergencyLeakHole,
     '/assets/blog/emergency-leak-cctv.jpg': BLOG_IMAGES.emergencyLeakCctv,
+    // All The Gear, No Idea article
+    '/assets/blog/all-gear-monkey-paintbrush.png': BLOG_IMAGES.allGearMonkey,
+    '/assets/blog/all-gear-water-bill-shock.png': BLOG_IMAGES.allGearWaterBill,
+    '/assets/blog/all-gear-leaky-finders.png': BLOG_IMAGES.allGearLeakyFinders,
+    '/assets/blog/all-gear-job-done.png': BLOG_IMAGES.allGearJobDone,
   };
   return imageMap[src] || src;
 };
