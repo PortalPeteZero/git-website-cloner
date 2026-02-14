@@ -296,7 +296,7 @@ const ServiceDetail = () => {
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
-                <h3 className="font-heading text-xl font-bold text-white">{uiText.cta.freeQuoteTitle}</h3>
+                <p className="font-heading text-xl font-bold text-white">{uiText.cta.freeQuoteTitle}</p>
                 <p className="text-white text-sm mt-1">
                   {uiText.cta.freeQuoteDesc(service.title)}
                 </p>
