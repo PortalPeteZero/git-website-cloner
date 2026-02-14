@@ -108,37 +108,61 @@ export const serviceFaqs: Record<string, ServiceFaqData> = {
     en: [
       {
         question: "How can I tell if my pool has a leak or just evaporation?",
-        answer: "Do the bucket test: fill a bucket, mark the water level, place it on the pool step, and mark the pool level. After 24 hours, compare the levels. If the pool dropped more than the bucket, you likely have a leak. Contact us for professional confirmation."
+        answer: "The Bucket Test is a reliable DIY method to determine if your pool is leaking or just evaporating water. To perform the bucket test, fill a 5-gallon bucket with pool water, place it on a pool step, and mark the water levels inside and outside the bucket. After 24 hours, compare the water loss in the bucket to the pool. If the pool loses more water than the bucket, you likely have a leak."
       },
       {
         question: "Do you just confirm leaks or actually find where they are?",
-        answer: "We pinpoint the exact location. Unlike some companies that only confirm 'you have a leak somewhere', we use pressure testing, acoustic detection, and CCTV inspection to locate precisely where the leak is—saving you money on unnecessary excavation."
+        answer: "We don't just confirm leaks—we use advanced technology to pinpoint the exact location, so repairs can be made quickly and efficiently."
       },
       {
         question: "Can you detect leaks while the pool is full?",
-        answer: "Yes, most of our detection methods work with the pool full. For certain pipe tests, we may need to lower the water level slightly, but we'll discuss this before starting."
+        answer: "Yes, our methods allow us to detect leaks even when the pool is full, using non-invasive techniques."
       },
       {
         question: "How much water loss indicates a pool leak?",
-        answer: "Normal evaporation in Lanzarote's climate is about 5-10mm per day. If you're losing more than 25mm daily, or need to top up more than twice per week, you likely have a leak that needs investigation."
+        answer: "If your pool loses more than 1/4 inch of water per day, this is a key sign of a swimming pool leak."
+      },
+      {
+        question: "What is the bucket test?",
+        answer: "The Bucket Test is a reliable DIY method to determine if your pool is leaking or just evaporating water. Place a bucket filled with pool water on a pool step, mark the water levels, and compare the loss after 24 hours."
+      },
+      {
+        question: "What is the dye test?",
+        answer: "The Dye Test is a precise method to pinpoint the exact location of pool leaks. By adding a small amount of colored dye near suspected leak areas, you can observe if the dye is drawn into a crack or hole, confirming the presence and location of a leak."
+      },
+      {
+        question: "What is pressure testing?",
+        answer: "Pressure testing involves pressurizing the pool's plumbing lines and monitoring the pressure gauge. A drop in the pressure gauge during plumbing pressure testing confirms a leak in that specific line."
       },
     ],
     es: [
       {
         question: "¿Cómo puedo saber si mi piscina tiene una fuga o es solo evaporación?",
-        answer: "Haga la prueba del cubo: llene un cubo, marque el nivel del agua, colóquelo en el escalón de la piscina, y marque el nivel de la piscina. Después de 24 horas, compare los niveles. Si la piscina bajó más que el cubo, probablemente tiene una fuga. Contáctenos para confirmación profesional."
+        answer: "La Prueba del Cubo es un método fiable para determinar si su piscina tiene una fuga o simplemente evapora agua. Llene un cubo con agua de la piscina, colóquelo en un escalón y marque los niveles. Después de 24 horas, compare la pérdida. Si la piscina perdió más que el cubo, probablemente tiene una fuga."
       },
       {
         question: "¿Solo confirman las fugas o realmente encuentran dónde están?",
-        answer: "Localizamos la ubicación exacta. A diferencia de algunas empresas que solo confirman 'tiene una fuga en algún lugar', usamos pruebas de presión, detección acústica e inspección CCTV para localizar exactamente dónde está la fuga—ahorrándole dinero en excavaciones innecesarias."
+        answer: "No solo confirmamos fugas—usamos tecnología avanzada para localizar la ubicación exacta, para que las reparaciones se realicen rápida y eficientemente."
       },
       {
         question: "¿Pueden detectar fugas con la piscina llena?",
-        answer: "Sí, la mayoría de nuestros métodos de detección funcionan con la piscina llena. Para ciertas pruebas de tuberías, puede que necesitemos bajar el nivel del agua ligeramente, pero lo discutiremos antes de empezar."
+        answer: "Sí, nuestros métodos nos permiten detectar fugas incluso con la piscina llena, usando técnicas no invasivas."
       },
       {
         question: "¿Cuánta pérdida de agua indica una fuga en la piscina?",
-        answer: "La evaporación normal en el clima de Lanzarote es de unos 5-10mm por día. Si está perdiendo más de 25mm diarios, o necesita rellenar más de dos veces por semana, probablemente tiene una fuga que necesita investigación."
+        answer: "Si su piscina pierde más de 6mm de agua por día, esto es una señal clave de una fuga en la piscina."
+      },
+      {
+        question: "¿Qué es la prueba del cubo?",
+        answer: "La Prueba del Cubo es un método fiable para determinar si su piscina tiene una fuga o simplemente evapora agua. Coloque un cubo lleno de agua de la piscina en un escalón, marque los niveles y compare la pérdida después de 24 horas."
+      },
+      {
+        question: "¿Qué es la prueba de tinte?",
+        answer: "La Prueba de Tinte es un método preciso para localizar la ubicación exacta de fugas en piscinas. Al añadir una pequeña cantidad de tinte coloreado cerca de áreas sospechosas, puede observar si el tinte es atraído hacia una grieta o agujero, confirmando la presencia y ubicación de una fuga."
+      },
+      {
+        question: "¿Qué es la prueba de presión?",
+        answer: "La prueba de presión implica presurizar las líneas de fontanería de la piscina y monitorear el manómetro. Una caída en el manómetro durante la prueba de presión confirma una fuga en esa línea específica."
       },
     ]
   },
