@@ -456,23 +456,23 @@ const BlogArticle = () => {
               {/* Table of Contents */}
               {tocItems.length > 2 && (
                 <Collapsible defaultOpen className="my-8 border border-border rounded-xl bg-card p-5">
-                  <CollapsibleTrigger className="flex items-center justify-between w-full group">
+                  <CollapsibleTrigger className="flex items-center justify-between w-full group" aria-label={isSpanish ? "Abrir o cerrar índice de contenidos" : "Toggle table of contents"}>
                     <div className="flex items-center gap-2">
-                      <List className="h-5 w-5 text-primary" />
+                      <List className="h-5 w-5 text-primary" aria-hidden="true" />
                       <span className="font-heading font-bold text-lg">
                         {isSpanish ? "Índice de Contenidos" : "Table of Contents"}
                       </span>
                     </div>
-                    <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
+                    <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" aria-hidden="true" />
                   </CollapsibleTrigger>
                   <CollapsibleContent className="mt-4">
-                    <nav>
-                      <ol className="space-y-2 list-decimal list-inside">
+                    <nav aria-label={isSpanish ? "Índice de contenidos del artículo" : "Article table of contents"}>
+                      <ol className="space-y-1 list-decimal list-inside">
                         {tocItems.map((item) => (
                           <li key={item.id}>
                             <a
                               href={`#${item.id}`}
-                              className="text-primary hover:underline text-base font-medium"
+                              className="text-primary hover:underline text-base font-medium inline-block py-2"
                               onClick={(e) => {
                                 e.preventDefault();
                                 document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -560,8 +560,8 @@ const BlogArticle = () => {
                     <blockquote className="border-l-4 border-primary bg-primary/5 py-4 px-6 my-8 rounded-r-lg italic text-foreground/80 not-italic">{children}</blockquote>
                   ),
                   table: ({ children }) => (
-                    <div className="overflow-x-auto my-8 rounded-lg border border-border">
-                      <table className="w-full border-collapse">{children}</table>
+                    <div className="overflow-x-auto my-8 rounded-lg border border-border -mx-4 px-4 sm:mx-0 sm:px-0" role="region" aria-label={isSpanish ? "Tabla de datos" : "Data table"} tabIndex={0}>
+                      <table className="w-full border-collapse min-w-[500px]">{children}</table>
                     </div>
                   ),
                   thead: ({ children }) => (
