@@ -133,7 +133,8 @@ const ServiceDetail = () => {
         description={service.seo.description}
         keywords={service.seo.keywords}
         canonical={canonicalUrl}
-        type="service"
+        type="website"
+        image={service.heroImage}
       />
       <BreadcrumbSchema 
         items={[

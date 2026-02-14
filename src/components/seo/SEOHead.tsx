@@ -65,7 +65,7 @@ const SEOHead = forwardRef<unknown, SEOHeadProps>(({
     if (ogDescription) ogDescription.setAttribute('content', description);
     if (ogImage) ogImage.setAttribute('content', image.startsWith('http') ? image : `https://canary-detect.com${image}?v=2`);
     if (ogType) ogType.setAttribute('content', type);
-    if (ogLocale) ogLocale.setAttribute('content', isSpanish ? 'es_ES' : 'en_GB');
+    if (ogLocale) ogLocale.setAttribute('content', isSpanish ? 'es_ES' : 'en_ES');
     if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', isSpanish ? 'en_GB' : 'es_ES');
     if (ogUrl) ogUrl.setAttribute('content', effectiveCanonical);
     

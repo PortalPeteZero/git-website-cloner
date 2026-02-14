@@ -440,8 +440,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       heroImage: poolLeak1,
       galleryImages: [poolLeak8, poolLeak7, poolLeak10, poolLeak11, poolLeak9, poolLeak4, poolLeak5, poolLeak6],
       seo: {
-        title: "Pool Leak Detection Lanzarote | Swimming Pool Leaks",
-        description: "Pool leak detection Lanzarote. Pool losing water? We pinpoint exact leak location. Acoustic testing, pressure testing, CCTV inspection.",
+        title: "Pool Leak Detection Lanzarote | Canary Detect",
+        description: "Professional pool leak detection in Lanzarote. Non-invasive technology to find swimming pool leaks fast. Serving Arrecife, Costa Teguise & Playa Blanca.",
         keywords: "pool leak detection Lanzarote, swimming pool leak detection, pool losing water leak, pool pipe leak repair, pool leak detection Playa Blanca, pool leak repair service"
       },
       features: [
