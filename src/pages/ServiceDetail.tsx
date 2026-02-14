@@ -202,8 +202,10 @@ const ServiceDetail = () => {
           ) : (
             <img 
               src={service.heroImage} 
-              alt={service.title}
+              alt={isSpanish ? `${service.title} - servicio profesional en Lanzarote` : `${service.title} - professional service in Lanzarote`}
               className="w-full h-full object-cover"
+              width={1920}
+              height={1080}
               fetchPriority="high"
               decoding="async"
             />
@@ -529,8 +531,10 @@ const ServiceDetail = () => {
                       >
                         <img 
                           src={img} 
-                          alt={`${service.title} ${index + 1}`}
+                          alt={isSpanish ? `${service.title} - ejemplo ${index + 1} en Lanzarote` : `${service.title} - example ${index + 1} in Lanzarote`}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          width={640}
+                          height={480}
                           loading="lazy"
                           decoding="async"
                         />
@@ -567,8 +571,10 @@ const ServiceDetail = () => {
                   >
                     <img 
                       src={img} 
-                      alt={`${service.title} ${index + 1}`}
+                      alt={isSpanish ? `${service.title} - imagen ${index + 1} del servicio en Lanzarote` : `${service.title} - service image ${index + 1} in Lanzarote`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      width={640}
+                      height={480}
                       loading="lazy"
                       decoding="async"
                     />
@@ -677,7 +683,7 @@ const ServiceDetail = () => {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2 }}
               src={lightboxImages[lightboxIndex]}
-              alt={`${service.title} ${lightboxIndex + 1}`}
+              alt={isSpanish ? `${service.title} - vista ampliada ${lightboxIndex + 1}` : `${service.title} - enlarged view ${lightboxIndex + 1}`}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />
