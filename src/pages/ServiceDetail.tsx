@@ -359,8 +359,7 @@ const ServiceDetail = () => {
           {/* Two Column Layout - Description + What's Included & Gallery */}
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Left Column - Description (takes more space) */}
-            <motion.div
-              {...revealOnMount}
+            <div
               className="lg:col-span-3"
             >
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
@@ -448,11 +447,10 @@ const ServiceDetail = () => {
               </>
               )}
 
-            </motion.div>
+            </div>
 
             {/* Right Column - What's Included + Gallery for short content */}
-            <motion.div
-              {...revealOnMount}
+            <div
               className="lg:col-span-2 space-y-6"
             >
               <div className="bg-gradient-to-br from-slate-50 to-muted/30 rounded-2xl p-6 border border-border">
@@ -543,12 +541,11 @@ const ServiceDetail = () => {
                   </div>
                 </div>
               )}
-            </motion.div>
+            </div>
           </div>
 
           {galleryImages.length > 0 && (englishSlug === 'underground-detection' || (englishSlug !== 'drain-unblocking' && service.content.length >= 600)) && (
-            <motion.div
-              {...revealOnMount}
+            <div
               className="mt-10"
             >
               <h3 className="font-heading text-xl font-bold mb-4">
@@ -581,7 +578,7 @@ const ServiceDetail = () => {
                   </button>
                 ))}
               </div>
-            </motion.div>
+            </div>
           )}
         </div>
       </section>
@@ -595,7 +592,7 @@ const ServiceDetail = () => {
           <section className="py-12 md:py-16 bg-muted section-divider">
             <FAQSchema faqs={serviceFaqs} />
             <div className="container mx-auto px-4">
-              <motion.div {...revealOnMount} className="max-w-3xl mx-auto">
+              <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-widest mb-2">
                     <HelpCircle className="h-4 w-4" />
@@ -633,7 +630,7 @@ const ServiceDetail = () => {
                     </Link>
                   </Button>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </section>
         );
