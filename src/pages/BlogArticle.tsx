@@ -317,6 +317,60 @@ const BlogArticle = () => {
         </Helmet>
       )}
 
+      {/* FAQ Schema for articles with FAQ sections */}
+      {slug === 'how-to-detect-underground-pipes-lanzarote' && (
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How deep are underground water pipes usually buried in Lanzarote?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Lanzarote's warm climate means domestic water pipes typically run between 30-60 cm below finished ground level. However, significant variation exists. Some older or improvised installations place pipes just beneath tiles or thin concrete screeds, while shared community mains running under roads may sit deeper for protection from traffic loads. Always verify depth with proper locating methods rather than assuming a standard."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I use a normal metal detector to find my plastic water pipes?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Standard hobby metal detectors respond only to metallic materials, so they cannot detect pure PVC or polyethylene pipes directly. While they might pick up metal fittings, clamps, or reinforcing mesh in nearby concrete, these signals can be misleading without experience interpreting them in context. For plastic pipe detection, dedicated utility locators, GPR equipment, or professional services like Canary Detect provide reliable results."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does volcanic rock interfere with ground-penetrating radar?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Certain dense or highly mineralised lava layers can reduce GPR penetration depth or produce strong reflections requiring expert interpretation. However, many sites with dry, granular picón backfill actually provide excellent GPR conditions—better than heavy clay soils found elsewhere. Experienced operators familiar with local geology adjust antenna frequencies, survey direction, and data processing to achieve usable results even in challenging areas."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long does a typical pipe detection survey take for a villa?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A straightforward villa with one pool and garden within an urbanisation typically requires around 2-4 hours for comprehensive coverage. More complex properties with suspected multiple leaks, extensive gardens, older construction without documentation, or numerous separate pipe networks can extend to most of a working day. Canary Detect usually provides an estimated duration after an initial phone consultation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is it possible to locate pipes under a tiled terrace without breaking tiles?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In most cases, yes. GPR scanning, acoustic listening through surface contact, and sometimes tracer gas detection allow accurate locating and leak pinpointing under tiles, stamped concrete, or decorative stone without immediate demolition. Once the target location is narrowed to a small area, only a focused opening is typically needed—often just a few tiles rather than metres of terrace."
+                  }
+                }
+              ]
+            })}
+          </script>
+        </Helmet>
+      )}
+
       {/* Hero Section */}
       <section className="relative min-h-[40vh] md:min-h-[50vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
