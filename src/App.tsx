@@ -62,8 +62,8 @@ const App = () => (
               {/* SEO-friendly redirects for common URL variations */}
               <Route path="/services/leaking-water-pipe-repair-lanzarote" element={<Navigate to="/services/leak-repair" replace />} />
               <Route path="/services/water-pipe-leak-repair" element={<Navigate to="/services/leak-repair" replace />} />
-              <Route path="/services/water-pipe-leak-detection" element={<Navigate to="/services/water-leak-detection" replace />} />
-              <Route path="/services/water-pipe-leak-detection/" element={<Navigate to="/services/water-leak-detection" replace />} />
+              {/* Trailing slash redirects for indexed service pages */}
+              <Route path="/services/water-pipe-leak-detection/" element={<Navigate to="/services/water-pipe-leak-detection" replace />} />
               <Route path="/services/pipe-leak-repair" element={<Navigate to="/services/leak-repair" replace />} />
               <Route path="/services/water-leak-detection-lanzarote" element={<Navigate to="/services/water-leak-detection" replace />} />
               <Route path="/services/water-leak-detection-lanzarote/" element={<Navigate to="/services/water-leak-detection" replace />} />
@@ -115,6 +115,33 @@ const App = () => (
               {/* Legacy about page redirects */}
               <Route path="/about-us" element={<Navigate to="/about" replace />} />
               <Route path="/about-us/" element={<Navigate to="/about" replace />} />
+              
+              {/* Trailing slash redirects for core pages */}
+              <Route path="/contact/" element={<Navigate to="/contact" replace />} />
+              <Route path="/about/" element={<Navigate to="/about" replace />} />
+              <Route path="/services/" element={<Navigate to="/services" replace />} />
+              <Route path="/blog/" element={<Navigate to="/blog" replace />} />
+              <Route path="/technology/" element={<Navigate to="/technology" replace />} />
+              <Route path="/case-studies/" element={<Navigate to="/case-studies" replace />} />
+              <Route path="/meet-the-team/" element={<Navigate to="/meet-the-team" replace />} />
+              <Route path="/privacy-policy/" element={<Navigate to="/privacy-policy" replace />} />
+              <Route path="/plumbing-services/" element={<Navigate to="/plumbing-services" replace />} />
+              <Route path="/locations/" element={<Navigate to="/locations" replace />} />
+              
+              {/* Legacy trailing slash redirects for GSC-tracked URLs */}
+              <Route path="/every-pool-owner-dreads-the-thought-of-a-leak/" element={<Navigate to="/services/pool-leak-detection" replace />} />
+              <Route path="/leak-from-your-swimming-pool-can-costs-thousands-of-euros/" element={<Navigate to="/blog/swimming-pool-leak-repair-cost-lanzarote" replace />} />
+              <Route path="/pipe-leaks-in-lanzarote-can-be-very-difficult-to-locate/" element={<Navigate to="/services/underground-detection" replace />} />
+              <Route path="/pipe-leak-detection-in-lanzarote-the-easy-way/" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/water-leaks-can-cause-serious-issues-for-lanzarote-homeowners/" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/suffering-from-a-leaking-water-pipe-but-dont-know-where-the-leak-is-we-can-help/" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/all-our-utilities-run-underground-the-problem-is-that-you-dont-know-where/" element={<Navigate to="/services/underground-detection" replace />} />
+              <Route path="/five-reasons-to-invest-in-water-leak-detection/" element={<Navigate to="/services/water-leak-detection" replace />} />
+              <Route path="/cable-detection-is-essential-before-commencing-any-construction-project/" element={<Navigate to="/services/drain-detection" replace />} />
+              <Route path="/how-do-we-locate-problems-in-underground-pipes-that-you-cannot-see/" element={<Navigate to="/technology" replace />} />
+              <Route path="/locating-underground-services-what-you-need-to-know/" element={<Navigate to="/services/underground-detection" replace />} />
+              <Route path="/suffering-a-leak-from-your-pool-we-can-find-it-and-fix-it-for-you/" element={<Navigate to="/services/pool-leak-repair" replace />} />
+              <Route path="/products/pool-leak-detection/" element={<Navigate to="/services/pool-leak-detection" replace />} />
               
               {/* Date archive redirects */}
               <Route path="/2023/04" element={<Navigate to="/blog" replace />} />
