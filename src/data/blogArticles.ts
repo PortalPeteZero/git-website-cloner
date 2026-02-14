@@ -1904,7 +1904,7 @@ Why wait for a disaster? Find out for sure. [Contact Canary Detect today →](/s
     category: "Essential Guides",
     image: undergroundImg,
     metaTitle: "How to Detect Underground Pipes in Lanzarote's Volcanic Ground",
-    metaDescription: "Learn how to locate underground pipes in Lanzarote's volcanic terrain. Expert guide covering GPR, acoustic detection, tracer gas & more.",
+    metaDescription: "Learn how to detect underground pipes in Lanzarote's volcanic ground. Expert guide covering GPR, acoustic detection, electromagnetic locating and more. Call Canary Detect.",
     keywords: "detect underground pipes Lanzarote, find underground pipes, GPR pipe detection, locate buried pipes volcanic ground, underground pipe detection, pipe locator Lanzarote",
     readTime: 18,
     content: `
