@@ -1,5 +1,6 @@
-import { useParams, Link, Navigate } from "react-router-dom";
-import { useState, useEffect, Fragment } from "react";
+import { useParams, Link, Navigate, useNavigate } from "react-router-dom";
+import { useState, useEffect, Fragment, useMemo } from "react";
+import ReactMarkdown from "react-markdown";
 import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -362,6 +363,36 @@ const ServiceDetail = () => {
                 {uiText.sections.aboutService}
               </h2>
               
+              {service.richContent ? (
+                <div className="max-w-none space-y-1">
+                  <ReactMarkdown
+                    components={{
+                      a: ({ href, children, ...props }) => {
+                        const isInternal = href && (href.startsWith('/') || href.startsWith('https://canary-detect.com'));
+                        const cleanHref = href?.replace('https://canary-detect.com', '') || '#';
+                        if (isInternal) {
+                          return <Link to={cleanHref} className="text-primary hover:underline font-medium">{children}</Link>;
+                        }
+                        return <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" {...props}>{children}</a>;
+                      },
+                      h1: ({ children }) => <h2 className="font-heading text-2xl md:text-3xl font-bold mt-10 mb-4 pb-3 border-b border-border text-foreground">{children}</h2>,
+                      h2: ({ children }) => <h2 className="font-heading text-2xl md:text-3xl font-bold mt-10 mb-4 pb-3 border-b border-border text-foreground">{children}</h2>,
+                      h3: ({ children }) => <h3 className="font-heading text-xl font-bold mt-8 mb-4 text-primary">{children}</h3>,
+                      h4: ({ children }) => <h4 className="font-heading text-lg font-semibold mt-6 mb-3 text-foreground/90">{children}</h4>,
+                      p: ({ children }) => <p className="text-muted-foreground leading-relaxed mb-5">{children}</p>,
+                      ul: ({ children }) => <ul className="my-5 pl-6 space-y-2 list-disc">{children}</ul>,
+                      ol: ({ children }) => <ol className="my-5 pl-6 space-y-2 list-decimal">{children}</ol>,
+                      li: ({ children }) => <li className="text-muted-foreground leading-relaxed">{children}</li>,
+                      strong: ({ children }) => <strong className="text-foreground font-semibold">{children}</strong>,
+                      hr: () => <hr className="my-8 border-border" />,
+                      img: () => null,
+                    }}
+                  >
+                    {service.content}
+                  </ReactMarkdown>
+                </div>
+              ) : (
+              <>
               {/* Split content into paragraphs with better formatting */}
               {(() => {
                 const paragraphs = service.content.split("\n\n");
@@ -410,6 +441,8 @@ const ServiceDetail = () => {
                   </div>
                 );
               })()}
+              </>
+              )}
 
             </motion.div>
 
