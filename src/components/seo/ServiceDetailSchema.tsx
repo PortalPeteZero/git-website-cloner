@@ -5,13 +5,15 @@ interface ServiceDetailSchemaProps {
   serviceDescription: string;
   serviceUrl: string;
   isSpanish?: boolean;
+  serviceType?: string;
 }
 
 const ServiceDetailSchema = ({ 
   serviceName, 
   serviceDescription, 
   serviceUrl,
-  isSpanish = false 
+  isSpanish = false,
+  serviceType,
 }: ServiceDetailSchemaProps) => {
   useEffect(() => {
     const script = document.createElement('script');
@@ -46,7 +48,7 @@ const ServiceDetailSchema = ({
         "@type": "Place",
         "name": "Lanzarote, Canary Islands, Spain"
       },
-      "serviceType": isSpanish ? "Detección de Fugas" : "Leak Detection",
+      "serviceType": serviceType || (isSpanish ? "Detección de Fugas" : "Leak Detection"),
       "termsOfService": "https://canary-detect.com/privacy-policy",
       "availableChannel": {
         "@type": "ServiceChannel",

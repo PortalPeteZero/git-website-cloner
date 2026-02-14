@@ -143,10 +143,11 @@ const ServiceDetail = () => {
         ]} 
       />
       <ServiceDetailSchema
-        serviceName={service.title}
+        serviceName={service.seo.title.split('|')[0].trim()}
         serviceDescription={service.seo.description}
         serviceUrl={canonicalUrl}
         isSpanish={isSpanish}
+        serviceType={englishSlug === "pool-leak-detection" ? (isSpanish ? "Detección de Fugas de Piscinas" : "Pool Leak Detection") : undefined}
       />
       {/* Hero Section - Collage for underground, Carousel for water leak, standard for others */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-start overflow-hidden z-0">
