@@ -377,6 +377,8 @@ const BlogArticle = () => {
           <img 
             src={image} 
             alt={title}
+            width={1920}
+            height={1080}
             className="w-full h-full object-cover" 
             fetchPriority="high" 
             decoding="async" 
@@ -471,17 +473,34 @@ const BlogArticle = () => {
                   strong: ({ children }) => (
                     <strong className="text-foreground font-semibold">{children}</strong>
                   ),
-                  img: ({ src, alt }) => (
-                    <figure className="my-8">
-                      <img 
-                        src={resolveImagePath(src || '')} 
-                        alt={alt || ''} 
-                        className="w-full rounded-lg shadow-md"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </figure>
-                  ),
+                  img: (() => {
+                    let imgIndex = 0;
+                    return ({ src, alt }: { src?: string; alt?: string }) => {
+                      const isFirst = imgIndex === 0;
+                      imgIndex++;
+                      const resolvedSrc = resolveImagePath(src || '');
+                      const altText = alt || 'Blog article image';
+                      return (
+                        <figure className="my-8">
+                          <img 
+                            src={resolvedSrc} 
+                            alt={altText} 
+                            width={800}
+                            height={450}
+                            className="w-full rounded-lg shadow-md"
+                            loading={isFirst ? "eager" : "lazy"}
+                            fetchPriority={isFirst ? "high" : undefined}
+                            decoding="async"
+                          />
+                          {alt && (
+                            <figcaption className="text-sm text-muted-foreground mt-3 text-center italic">
+                              {alt}
+                            </figcaption>
+                          )}
+                        </figure>
+                      );
+                    };
+                  })(),
                   blockquote: ({ children }) => (
                     <blockquote className="border-l-4 border-primary bg-primary/5 py-4 px-6 my-8 rounded-r-lg italic text-foreground/80 not-italic">{children}</blockquote>
                   ),
