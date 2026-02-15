@@ -105,6 +105,8 @@ const App = () => (
               <Route path="/all-our-utilities-run-underground-the-problem-is-that-you-dont-know-where" element={<Navigate to="/services/underground-detection" replace />} />
               <Route path="/suffering-a-leak-from-your-pool-we-can-find-it-and-fix-it-for-you" element={<Navigate to="/services/pool-leak-repair" replace />} />
               <Route path="/locating-underground-services-what-you-need-to-know" element={<Navigate to="/services/underground-detection" replace />} />
+              <Route path="/accurate-drain-pipe-detection" element={<Navigate to="/services/drain-detection" replace />} />
+              <Route path="/accurate-drain-pipe-detection/" element={<Navigate to="/services/drain-detection" replace />} />
               
               {/* Date archive redirects */}
               <Route path="/2023/04" element={<Navigate to="/blog" replace />} />
