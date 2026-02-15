@@ -88,7 +88,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Cómo funciona el sistema de agua en Lanzarote", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
         ],
-        seo: { title: "Detección Fugas Arrecife | Expertos en Fugas de Agua y Piscinas", description: "Detección profesional de fugas en Arrecife, capital de Lanzarote. Fugas de agua ocultas, piscinas, tuberías subterráneas. Sin Encontrar, Sin Pagar. Emergencias 24h. +34 711 051 071", keywords: "detección fugas Arrecife, fugas agua Arrecife, fugas piscina Arrecife, reparación fugas Arrecife, fontanero Arrecife Lanzarote, fugas ocultas Arrecife" }
+        seo: { title: "Detección Fugas Arrecife | Agua y Piscinas", description: "Detección profesional fugas Arrecife, capital Lanzarote. Agua, piscinas, tuberías subterráneas. Sin Encontrar, Sin Pagar. 24h. +34 711 051 071", keywords: "detección fugas Arrecife, fugas agua Arrecife, fugas piscina Arrecife, reparación fugas Arrecife, fontanero Arrecife Lanzarote, fugas ocultas Arrecife" }
       },
       "puerto-del-carmen": {
         name: "Puerto del Carmen",
@@ -132,7 +132,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Coste de reparación de fugas en piscinas", href: `${blogBasePath}/coste-reparacion-fugas-piscina-lanzarote` },
           { title: "Paredes húmedas: causas y soluciones", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Puerto del Carmen | Hoteles y Villas", description: "Detección profesional de fugas en Puerto del Carmen. Hoteles, villas, apartamentos turísticos. Piscinas y emergencias 24h. Sin Encontrar, Sin Pagar. +34 711 051 071", keywords: "detección fugas Puerto del Carmen, fugas agua Puerto del Carmen, fugas piscina Puerto del Carmen, fugas hotel Lanzarote, reparación urgente fugas" }
+        seo: { title: "Detección Fugas Puerto del Carmen | Hoteles y Villas", description: "Detección profesional fugas Puerto del Carmen. Hoteles, villas, apartamentos turísticos. Piscinas, emergencias 24h. Sin Encontrar, Sin Pagar. 711 051 071", keywords: "detección fugas Puerto del Carmen, fugas agua Puerto del Carmen, fugas piscina Puerto del Carmen, fugas hotel Lanzarote, reparación urgente fugas" }
       },
       "playa-blanca": {
         name: "Playa Blanca",
@@ -523,7 +523,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "How Lanzarote's water system works", href: `${blogBasePath}/master-your-lanzarote-water-system` },
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
       ],
-      seo: { title: "Leak Detection Arrecife | Water & Pool Experts Lanzarote", description: "Professional leak detection in Arrecife, Lanzarote's capital. Hidden water leaks, pool leaks, underground pipes. No Find, No Fee. 24h emergencies. +34 711 051 071", keywords: "leak detection Arrecife, water leak detection Arrecife, pool leak detection Arrecife, leak repair Arrecife, plumber Arrecife Lanzarote, hidden water leak Arrecife" }
+      seo: { title: "Leak Detection Arrecife | Water & Pool Experts Lanzarote", description: "Professional leak detection in Arrecife, Lanzarote's capital. Water leaks, pool leaks, underground pipes. No Find, No Fee. 24h. +34 711 051 071", keywords: "leak detection Arrecife, water leak detection Arrecife, pool leak detection Arrecife, leak repair Arrecife, plumber Arrecife Lanzarote, hidden water leak Arrecife" }
     },
     "puerto-del-carmen": {
       name: "Puerto del Carmen",

@@ -150,8 +150,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         specialHeroImage: freeLeakConfirmationImg,
         galleryImages: [drainDetection4, drainDetection5, drainDetection6, drainDetection7],
         seo: {
-        title: "Detección Fugas Agua Ocultas Lanzarote | Sin Encontrar Sin Pagar",
-        description: "¿Contador de agua corriendo? Detección profesional de fugas ocultas en Lanzarote. Imagen térmica, gas trazador, sensores acústicos. Garantía Sin Encontrar, Sin Pagar.",
+        title: "Detección Fugas Agua Lanzarote | Sin Encontrar Sin Pagar",
+        description: "¿Contador corriendo? Detección profesional fugas ocultas Lanzarote. Imagen térmica, gas trazador, acústica. Sin Encontrar, Sin Pagar.",
         keywords: "detección fugas agua Canarias, fugas agua ocultas, contador agua corriendo fuga, imagen térmica fugas, gas trazador fugas, detectar fugas sin romper, especialista fugas agua Lanzarote"
         },
         freeLeakSection: {
