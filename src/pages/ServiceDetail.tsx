@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Search, CircleDot, Atom, AudioLines, Thermometer, Mic, Shield, FileText, X, ChevronLeft, ChevronRight, HelpCircle } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import BreadcrumbNav from "@/components/ui/breadcrumb-nav";
 import FreeLeakConfirmationSection from "@/components/services/FreeLeakConfirmationSection";
 import SEOHead from "@/components/seo/SEOHead";
@@ -379,80 +381,104 @@ const ServiceDetail = () => {
             <div
               className="lg:col-span-3"
             >
-              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
-                {uiText.sections.aboutService}
-              </h2>
+              {!service.richContent && (
+                <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
+                  {uiText.sections.aboutService}
+                </h2>
+              )}
               
-              {/* Split content into paragraphs with better formatting */}
-              {(() => {
-                const paragraphs = service.content.split("\n\n");
-                // For water-leak-detection, the last paragraph is the "No Find, No Fee" - we'll render it as a banner separately
-                const contentParagraphs = englishSlug === "water-leak-detection" ? paragraphs.slice(0, -1) : paragraphs;
-                
-                // Helper: parse markdown links [text](url) into React elements
-                const renderWithLinks = (text: string) => {
-                  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-                  const parts: (string | JSX.Element)[] = [];
-                  let lastIndex = 0;
-                  let match;
-                  while ((match = linkRegex.exec(text)) !== null) {
-                    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
-                    const href = match[2];
-                    const isInternal = href.startsWith("/");
-                    parts.push(
-                      isInternal
-                        ? <Link key={match.index} to={href} className="text-primary hover:underline font-medium">{match[1]}</Link>
-                        : <a key={match.index} href={href} className="text-primary hover:underline font-medium" target="_blank" rel="noopener noreferrer">{match[1]}</a>
-                    );
-                    lastIndex = match.index + match[0].length;
-                  }
-                  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
-                  return parts.length > 0 ? parts : text;
-                };
-                
-                return (
-                  <div className="space-y-4">
-                    {contentParagraphs.map((paragraph, idx) => (
-                      <Fragment key={idx}>
-                        <p className="text-muted-foreground leading-relaxed max-w-none">{renderWithLinks(paragraph)}</p>
+              {service.richContent ? (
+                <div className="prose prose-lg max-w-none prose-headings:font-heading prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:font-bold prose-h3:mt-8 prose-h3:mb-3 prose-p:text-muted-foreground prose-p:leading-relaxed prose-li:text-muted-foreground prose-strong:text-foreground prose-blockquote:border-l-primary prose-blockquote:bg-muted/50 prose-blockquote:rounded-r-lg prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:italic prose-blockquote:text-muted-foreground prose-a:text-primary prose-a:font-medium hover:prose-a:underline">
+                  <ReactMarkdown
+                    rehypePlugins={[rehypeRaw]}
+                    components={{
+                      a: ({ href, children, ...props }) => {
+                        const isInternal = href?.startsWith("/");
+                        if (isInternal && href) {
+                          return <Link to={href} className="text-primary hover:underline font-medium">{children}</Link>;
+                        }
+                        return <a href={href} className="text-primary hover:underline font-medium" target="_blank" rel="noopener noreferrer" {...props}>{children}</a>;
+                      },
+                      img: () => null, // Suppress markdown images per instructions
+                    }}
+                  >
+                    {service.content}
+                  </ReactMarkdown>
+                </div>
+              ) : (
+                <>
+                  {/* Split content into paragraphs with better formatting */}
+                  {(() => {
+                    const paragraphs = service.content.split("\n\n");
+                    // For water-leak-detection, the last paragraph is the "No Find, No Fee" - we'll render it as a banner separately
+                    const contentParagraphs = englishSlug === "water-leak-detection" ? paragraphs.slice(0, -1) : paragraphs;
+                    
+                    // Helper: parse markdown links [text](url) into React elements
+                    const renderWithLinks = (text: string) => {
+                      const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+                      const parts: (string | JSX.Element)[] = [];
+                      let lastIndex = 0;
+                      let match;
+                      while ((match = linkRegex.exec(text)) !== null) {
+                        if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+                        const href = match[2];
+                        const isInternal = href.startsWith("/");
+                        parts.push(
+                          isInternal
+                            ? <Link key={match.index} to={href} className="text-primary hover:underline font-medium">{match[1]}</Link>
+                            : <a key={match.index} href={href} className="text-primary hover:underline font-medium" target="_blank" rel="noopener noreferrer">{match[1]}</a>
+                        );
+                        lastIndex = match.index + match[0].length;
+                      }
+                      if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+                      return parts.length > 0 ? parts : text;
+                    };
+                    
+                    return (
+                      <div className="space-y-4">
+                        {contentParagraphs.map((paragraph, idx) => (
+                          <Fragment key={idx}>
+                            <p className="text-muted-foreground leading-relaxed max-w-none">{renderWithLinks(paragraph)}</p>
 
-                        {/* Water Leak Detection: insert the tech card mid-content so it lines up with the right-side CTA */}
-                        {englishSlug === "water-leak-detection" && idx === 1 && (
-                          <div className="bg-gradient-to-br from-slate-50 to-muted/50 rounded-2xl p-6 md:p-8 border border-border">
-                            <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-3">
-                              <div className="w-10 h-10 bg-canary-navy rounded-lg flex items-center justify-center">
-                                <Search className="h-5 w-5 text-white" />
-                              </div>
-                              {uiText.sections.detectionTech}
-                            </h3>
-                            <div className="grid sm:grid-cols-2 gap-4">
-                              {[
-                                { icon: Atom, ...uiText.techCards.gasense },
-                                { icon: AudioLines, ...uiText.techCards.geophones },
-                                { icon: Thermometer, ...uiText.techCards.thermal },
-                                { icon: Mic, ...uiText.techCards.pipeMic },
-                              ].map((tech, tIdx) => (
-                                <div
-                                  key={tIdx}
-                                  className="flex items-start gap-3 p-3 bg-white rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-sm transition-all"
-                                >
-                                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <tech.icon className="h-5 w-5 text-primary" />
+                            {/* Water Leak Detection: insert the tech card mid-content so it lines up with the right-side CTA */}
+                            {englishSlug === "water-leak-detection" && idx === 1 && (
+                              <div className="bg-gradient-to-br from-slate-50 to-muted/50 rounded-2xl p-6 md:p-8 border border-border">
+                                <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-3">
+                                  <div className="w-10 h-10 bg-canary-navy rounded-lg flex items-center justify-center">
+                                    <Search className="h-5 w-5 text-white" />
                                   </div>
-                                  <div>
-                                    <p className="font-semibold text-foreground">{tech.name}</p>
-                                    <p className="text-sm text-foreground/80">{tech.desc}</p>
-                                  </div>
+                                  {uiText.sections.detectionTech}
+                                </h3>
+                                <div className="grid sm:grid-cols-2 gap-4">
+                                  {[
+                                    { icon: Atom, ...uiText.techCards.gasense },
+                                    { icon: AudioLines, ...uiText.techCards.geophones },
+                                    { icon: Thermometer, ...uiText.techCards.thermal },
+                                    { icon: Mic, ...uiText.techCards.pipeMic },
+                                  ].map((tech, tIdx) => (
+                                    <div
+                                      key={tIdx}
+                                      className="flex items-start gap-3 p-3 bg-white rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-sm transition-all"
+                                    >
+                                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <tech.icon className="h-5 w-5 text-primary" />
+                                      </div>
+                                      <div>
+                                        <p className="font-semibold text-foreground">{tech.name}</p>
+                                        <p className="text-sm text-foreground/80">{tech.desc}</p>
+                                      </div>
+                                    </div>
+                                  ))}
                                 </div>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </Fragment>
-                    ))}
-                  </div>
-                );
-              })()}
+                              </div>
+                            )}
+                          </Fragment>
+                        ))}
+                      </div>
+                    );
+                  })()}
+                </>
+              )}
 
             </div>
 
