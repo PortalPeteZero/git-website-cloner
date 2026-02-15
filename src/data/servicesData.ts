@@ -207,14 +207,14 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       },
       "pool-leak-detection": {
         title: "Detección de Fugas en Piscinas Lanzarote",
-        description: "Detección de fugas en piscinas en Lanzarote - no solo confirmamos una fuga, localizamos su ubicación exacta. ¿Su piscina pierde agua? Descubriremos por qué.",
+        description: "¿Su piscina pierde agua? Detección profesional de fugas en piscinas en Lanzarote — no solo confirmamos una fuga, localizamos su ubicación exacta con pruebas acústicas, CCTV y gas trazador.",
         icon: Waves,
         heroImage: poolLeak1,
         galleryImages: [poolLeak8, poolLeak7, poolLeak10, poolLeak11, poolLeak9, poolLeak4, poolLeak5, poolLeak6],
         seo: {
           title: "Detección Fugas Piscinas Lanzarote | Canary Detect",
-          description: "Detección de fugas en piscinas Lanzarote. ¿Piscina perdiendo agua? Localizamos la ubicación exacta. Pruebas acústicas, presión, CCTV.",
-          keywords: "detección fugas piscinas Lanzarote, piscina perdiendo agua fuga, reparación fugas piscina, detección fugas Playa Blanca, servicio reparación piscinas"
+          description: "¿Piscina perdiendo agua? Detección profesional de fugas en piscinas en Lanzarote. Pruebas acústicas, presión, CCTV e inspección subacuática.",
+          keywords: "detección fugas piscinas Lanzarote, piscina perdiendo agua, reparación fugas piscina, detección fugas Playa Blanca, servicio reparación piscinas, fuga piscina Canarias"
         },
         features: [
           "Pruebas acústicas de todos los accesorios",
@@ -433,15 +433,15 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       content: "**Specialists in Water Pipe Leaks**\n\nNot all leaks are equal. How you locate and repair a leak depends enormously on the type of pipe affected, its location, and its age. At Canary Detect, we specialise in pipe-specific leak diagnosis and detection, providing solutions tailored to each material and situation.\n\n**Understanding Your Pipe System in Lanzarote**\n\nProperties in Lanzarote use various pipe materials, each with their own characteristic failure patterns:\n\n**Copper Pipes**: Common in quality installations, copper pipes can develop leaks from galvanic corrosion (especially near brass fittings), vibration fatigue at elbows, or damage from aggressive water. Our thermal cameras are particularly effective at locating copper leaks behind walls.\n\n**PVC/CPVC Pipes**: Popular in modern installations, plastic pipes typically fail at adhesive joints, especially if the original installation was faulty. UV exposure on exterior sections also causes degradation. We use specific pressure tests to isolate problem sections.\n\n**Polyethylene (PE) Pipes**: Frequently used for underground connections from the meter to the house, PE pipes can suffer damage from gardening tools, tree roots, or ground movement. Our tracer gas technology is ideal for locating these buried leaks.\n\n**Galvanised Iron**: Found in older Lanzarote constructions, these pipes develop internal corrosion that reduces flow and eventually perforates. Internal CCTV inspection reveals the true condition of these pipes and helps plan renovation.\n\n**Professional Pressure Testing**\n\nPressure testing is fundamental to determining pipe system integrity:\n\n• **Static test**: We isolate sections and monitor pressure over extended periods to detect even the smallest leaks\n• **Differential test**: We compare actual consumption with theoretical to quantify losses\n• **Isolation test**: We identify exactly which section of the system is affected\n\n**Internal CCTV Pipe Inspection**\n\nOur micro-cameras can enter pipes from 25mm diameter, providing high-definition internal images:\n\n• Direct visualisation of cracks, corrosion and deposits\n• Precise location of faulty joints\n• General condition assessment for maintenance planning\n• Video documentation for insurance reports\n\n**Underground Pipe Detection**\n\nMany serious leaks occur in buried pipes between the meter and house. We use:\n\n• Electromagnetic locators for metallic pipes\n• Ground-penetrating radar (GPR) for non-metallic pipes\n• Tracer gas for precise leak location\n• Acoustic correlators for position triangulation\n\n**Complete Technical Report**\n\nEvery inspection includes a professional report detailing: type of pipe affected, exact leak location, probable cause of failure, recommended repair options, and estimated budget. This report is accepted by insurers and useful for obtaining comparative repair quotes.",
     },
     "pool-leak-detection": {
-      title: "Pool Leak Detection Lanzarote",
-      description: "Swimming pool leak detection in Lanzarote - we don't just confirm a leak, we pinpoint its exact location. Pool losing water? We'll find why.",
+      title: "Swimming Pool Leak Detection Lanzarote",
+      description: "Pool losing water? Professional swimming pool leak detection in Lanzarote — we don't just confirm a leak, we pinpoint its exact location using acoustic, CCTV, and tracer gas technology.",
       icon: Waves,
       heroImage: poolLeak1,
       galleryImages: [poolLeak8, poolLeak7, poolLeak10, poolLeak11, poolLeak9, poolLeak4, poolLeak5, poolLeak6],
       seo: {
-        title: "Pool Leak Detection Lanzarote | Swimming Pool Leaks",
-        description: "Pool leak detection Lanzarote. Pool losing water? We pinpoint exact leak location. Acoustic testing, pressure testing, CCTV inspection.",
-        keywords: "pool leak detection Lanzarote, swimming pool leak detection, pool losing water leak, pool pipe leak repair, pool leak detection Playa Blanca, pool leak repair service"
+        title: "Swimming Pool Leak Detection Lanzarote | Canary Detect",
+        description: "Pool losing water? Professional swimming pool leak detection in Lanzarote. Acoustic, pressure & CCTV testing to pinpoint exact leak location.",
+        keywords: "swimming pool leak detection Lanzarote, pool losing water, pool leak detection Canary Islands, pool pipe leak, pool shell leak, pool leak Playa Blanca, pool leak repair service"
       },
       features: [
         "Acoustic testing of all fittings",
@@ -454,7 +454,7 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
         "H2/N2 gas detection",
         "Insurance-ready reports",
       ],
-      content: "Unlike some companies, our pool leak detection surveys in Lanzarote not only confirm a leak is present and identify which section is affected, but we then go on to pinpoint the exact position of the leak.\n\nOur comprehensive survey tests every aspect of your pool including: acoustic testing around all fittings, pool shell, and lights; testing of pump, filter, and fittings in the pump housing; pressure testing of all pipework; and electronic testing of the pool shell.\n\nOnce a leaking section is found, we pinpoint the leak using CCTV cameras for internal pipe inspection, internal pipe hydrophones, external geophones, vacuum leak location, and H2/N2 gas insertion and detection.\n\nEvery survey includes a detailed professional report for your insurance company. Please note: for complete testing, the pool should be clean and filled to halfway up the skimmers. You're free to use your own contractor for repairs - you're not obligated to use our repair team.",
+      content: "Unlike some companies, our swimming pool leak detection surveys in Lanzarote not only confirm a leak is present and identify which section is affected, but we then go on to pinpoint the exact position of the leak.\n\nOur comprehensive survey tests every aspect of your pool including: acoustic testing around all fittings, pool shell, and lights; testing of pump, filter, and fittings in the pump housing; pressure testing of all pipework; and electronic testing of the pool shell.\n\nOnce a leaking section is found, we pinpoint the leak using CCTV cameras for internal pipe inspection, internal pipe hydrophones, external geophones, vacuum leak location, and H2/N2 gas insertion and detection.\n\nEvery survey includes a detailed professional report for your insurance company. Please note: for complete testing, the pool should be clean and filled to halfway up the skimmers. You're free to use your own contractor for repairs — you're not obligated to use our repair team.",
     },
     "leak-repair": {
       title: "Leak Repair Lanzarote",
