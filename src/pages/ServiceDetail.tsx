@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Search, CircleDot, Atom, AudioLines, Thermometer, Mic, Shield, FileText, X, ChevronLeft, ChevronRight, HelpCircle } from "lucide-react";
+import BreadcrumbNav from "@/components/ui/breadcrumb-nav";
 import FreeLeakConfirmationSection from "@/components/services/FreeLeakConfirmationSection";
 import SEOHead from "@/components/seo/SEOHead";
 import { useTranslation } from "@/i18n/LanguageContext";
@@ -165,6 +166,7 @@ const ServiceDetail = () => {
         isSpanish={isSpanish}
       />
       {/* Hero Section - Collage for underground, Carousel for water leak, standard for others */}
+      {/* Visible breadcrumb is rendered inside the hero overlay below */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-start overflow-hidden z-0">
         <div className="absolute inset-0 overflow-hidden">
           {isUndergroundPage && carouselImages.length >= 3 ? (
@@ -226,7 +228,12 @@ const ServiceDetail = () => {
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
         
-        <div className="container mx-auto px-4 relative z-10 pt-12 pb-10 md:pt-16 md:pb-14">
+        <div className="container mx-auto px-4 relative z-10 pt-8 pb-10 md:pt-10 md:pb-14">
+          <BreadcrumbNav items={[
+            { label: isSpanish ? "Inicio" : "Home", href: getHomePath(isSpanish) },
+            { label: isSpanish ? "Servicios" : "Services", href: getServicesBasePath(isSpanish) },
+            { label: service.title },
+          ]} />
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
