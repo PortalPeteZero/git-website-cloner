@@ -381,11 +381,33 @@ const ServiceDetail = () => {
                 const paragraphs = service.content.split("\n\n");
                 // For water-leak-detection, the last paragraph is the "No Find, No Fee" - we'll render it as a banner separately
                 const contentParagraphs = englishSlug === "water-leak-detection" ? paragraphs.slice(0, -1) : paragraphs;
+                
+                // Helper: parse markdown links [text](url) into React elements
+                const renderWithLinks = (text: string) => {
+                  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+                  const parts: (string | JSX.Element)[] = [];
+                  let lastIndex = 0;
+                  let match;
+                  while ((match = linkRegex.exec(text)) !== null) {
+                    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+                    const href = match[2];
+                    const isInternal = href.startsWith("/");
+                    parts.push(
+                      isInternal
+                        ? <Link key={match.index} to={href} className="text-primary hover:underline font-medium">{match[1]}</Link>
+                        : <a key={match.index} href={href} className="text-primary hover:underline font-medium" target="_blank" rel="noopener noreferrer">{match[1]}</a>
+                    );
+                    lastIndex = match.index + match[0].length;
+                  }
+                  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+                  return parts.length > 0 ? parts : text;
+                };
+                
                 return (
                   <div className="space-y-4">
                     {contentParagraphs.map((paragraph, idx) => (
                       <Fragment key={idx}>
-                        <p className="text-muted-foreground leading-relaxed max-w-none">{paragraph}</p>
+                        <p className="text-muted-foreground leading-relaxed max-w-none">{renderWithLinks(paragraph)}</p>
 
                         {/* Water Leak Detection: insert the tech card mid-content so it lines up with the right-side CTA */}
                         {englishSlug === "water-leak-detection" && idx === 1 && (
