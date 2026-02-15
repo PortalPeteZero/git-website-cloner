@@ -41,7 +41,7 @@ const LazyRoute = ({ children }: { children: React.ReactNode }) => (
   </Suspense>
 );
 
-// Main App component - LanguageProvider must be inside BrowserRouter
+// Main App component
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
