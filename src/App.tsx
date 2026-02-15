@@ -108,8 +108,13 @@ const App = () => (
               
               {/* Date archive redirects */}
               <Route path="/2023/04" element={<Navigate to="/blog" replace />} />
+              <Route path="/2023/04/" element={<Navigate to="/blog" replace />} />
               <Route path="/2021/08" element={<Navigate to="/blog" replace />} />
+              <Route path="/2021/08/" element={<Navigate to="/blog" replace />} />
+              <Route path="/2022/01" element={<Navigate to="/blog" replace />} />
+              <Route path="/2022/01/" element={<Navigate to="/blog" replace />} />
               <Route path="/2022/12" element={<Navigate to="/blog" replace />} />
+              <Route path="/2022/12/" element={<Navigate to="/blog" replace />} />
               
               <Route path="/services/:slug" element={<LazyRoute><ServiceDetail /></LazyRoute>} />
               <Route path="/contact" element={<LazyRoute><Contact /></LazyRoute>} />
