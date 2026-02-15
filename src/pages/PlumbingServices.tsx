@@ -316,6 +316,41 @@ const PlumbingServices = () => {
         </div>
       </section>
 
+      {/* Related Leak Detection Services */}
+      <section className="py-10 md:py-14 bg-muted border-t">
+        <div className="container mx-auto px-4">
+          <h2 className="text-xl md:text-2xl font-bold text-center mb-6">
+            {isSpanish ? "Servicios de Detección de Fugas" : "Leak Detection Services"}
+          </h2>
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-8">
+            {isSpanish
+              ? "Además de fontanería, somos los especialistas nº1 en detección de fugas en Lanzarote."
+              : "Beyond plumbing, we're Lanzarote's #1 leak detection specialists."}
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { name: isSpanish ? "Detección Fugas Agua" : "Water Leak Detection", path: isSpanish ? "/es/servicios/deteccion-fugas-agua" : "/services/water-leak-detection" },
+              { name: isSpanish ? "Fugas de Piscinas" : "Pool Leak Detection", path: isSpanish ? "/es/servicios/deteccion-fugas-piscinas" : "/services/pool-leak-detection" },
+              { name: isSpanish ? "Detección Subterránea" : "Underground Detection", path: isSpanish ? "/es/servicios/deteccion-subterranea" : "/services/underground-detection" },
+              { name: isSpanish ? "Reparación de Fugas" : "Leak Repair", path: isSpanish ? "/es/servicios/reparacion-fugas" : "/services/leak-repair" },
+              { name: isSpanish ? "Inspección Desagües" : "Drain Detection", path: isSpanish ? "/es/servicios/deteccion-desagues" : "/services/drain-detection" },
+              { name: isSpanish ? "Reparación Piscinas" : "Pool Leak Repair", path: isSpanish ? "/es/servicios/reparacion-fugas-piscinas" : "/services/pool-leak-repair" },
+              { name: isSpanish ? "Nuestra Tecnología" : "Our Technology", path: isSpanish ? "/es/tecnologia" : "/technology" },
+              { name: isSpanish ? "Casos de Éxito" : "Case Studies", path: isSpanish ? "/es/casos-de-exito" : "/case-studies" },
+            ].map((service) => (
+              <Link
+                key={service.path}
+                to={service.path}
+                className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border hover:border-primary/30 hover:shadow-sm transition-all text-sm group"
+              >
+                <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                <span className="text-muted-foreground group-hover:text-foreground">{service.name}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-10 md:py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">

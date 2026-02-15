@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Heart, Users, Trophy, Theater, Sparkles, Star, ExternalLink } from "lucide-react";
+import { Heart, Users, Trophy, Theater, Sparkles, Star, ExternalLink, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 // Import team images
@@ -37,10 +38,10 @@ const MeetTheTeamSection = () => {
   ];
 
   const galleryImages = [
-    { src: pantoMatching, alt: "Pete and Dave in matching pantomime costumes" },
-    { src: pantoGreen, alt: "Pete and Dave in pantomime costumes backstage" },
-    { src: daveUnicorn, alt: "Dave the expert unicorn rider" },
-    { src: pantoGroup, alt: "Finchy Fairytales pantomime cast" },
+    { src: pantoMatching, alt: "Pete and Dave in matching pantomime costumes on stage in Lanzarote", altEs: "Pete y Dave con disfraces de pantomima a juego en el escenario en Lanzarote" },
+    { src: pantoGreen, alt: "Pete and Dave in green pantomime costumes backstage at Finchy Fairytales", altEs: "Pete y Dave con disfraces verdes de pantomima entre bastidores en Finchy Fairytales" },
+    { src: daveUnicorn, alt: "Dave Poxon the expert unicorn rider at Lanzarote charity event", altEs: "Dave Poxon el jinete experto de unicornios en evento benéfico de Lanzarote" },
+    { src: pantoGroup, alt: "Finchy Fairytales pantomime cast group photo Lanzarote charity show", altEs: "Foto de grupo del elenco de pantomima Finchy Fairytales espectáculo benéfico Lanzarote" },
   ];
 
   return (
@@ -62,9 +63,9 @@ const MeetTheTeamSection = () => {
             {isSpanish ? "Conoce a los Propietarios" : "Meet the Owners"}
             <Sparkles className="h-4 w-4" />
           </span>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 text-canary-navy">
+          <h1 className="font-heading text-3xl md:text-4xl font-bold mt-2 text-canary-navy">
             Pete Ashcroft & Dave Poxon
-          </h2>
+          </h1>
           <p className="text-muted-foreground mt-2 text-lg italic">
             {isSpanish ? "Los Cazafugas" : "The Leaky Finders"}
           </p>
@@ -301,7 +302,7 @@ const MeetTheTeamSection = () => {
                     <div className="aspect-square rounded-lg overflow-hidden ring-2 ring-white/20 group-hover:ring-primary transition-all duration-300">
                       <img 
                         src={image.src}
-                        alt={image.alt}
+                        alt={isSpanish ? image.altEs : image.alt}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
@@ -309,6 +310,41 @@ const MeetTheTeamSection = () => {
                   </motion.div>
                 ))}
               </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Internal Links Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12"
+        >
+          <div className="bg-white rounded-xl p-6 shadow-lg ring-1 ring-black/5">
+            <h2 className="font-heading text-xl font-bold text-canary-navy mb-4">
+              {isSpanish ? "Nuestros Servicios" : "Our Services"}
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {[
+                { name: isSpanish ? "Detección de Fugas de Agua" : "Water Leak Detection", path: isSpanish ? "/es/servicios/deteccion-fugas-agua" : "/services/water-leak-detection" },
+                { name: isSpanish ? "Fugas de Piscinas" : "Pool Leak Detection", path: isSpanish ? "/es/servicios/deteccion-fugas-piscinas" : "/services/pool-leak-detection" },
+                { name: isSpanish ? "Detección Subterránea" : "Underground Detection", path: isSpanish ? "/es/servicios/deteccion-subterranea" : "/services/underground-detection" },
+                { name: isSpanish ? "Reparación de Fugas" : "Leak Repair", path: isSpanish ? "/es/servicios/reparacion-fugas" : "/services/leak-repair" },
+                { name: isSpanish ? "Inspección de Desagües" : "Drain Detection", path: isSpanish ? "/es/servicios/deteccion-desagues" : "/services/drain-detection" },
+                { name: isSpanish ? "Reparación Piscinas" : "Pool Leak Repair", path: isSpanish ? "/es/servicios/reparacion-fugas-piscinas" : "/services/pool-leak-repair" },
+                { name: isSpanish ? "Servicios Fontanería" : "Plumbing Services", path: isSpanish ? "/es/servicios-fontaneria" : "/plumbing-services" },
+                { name: isSpanish ? "Tecnología" : "Our Technology", path: isSpanish ? "/es/tecnologia" : "/technology" },
+              ].map((service) => (
+                <Link
+                  key={service.path}
+                  to={service.path}
+                  className="flex items-center gap-2 p-3 rounded-lg hover:bg-muted transition-colors group text-sm"
+                >
+                  <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                  <span className="text-muted-foreground group-hover:text-foreground">{service.name}</span>
+                </Link>
+              ))}
             </div>
           </div>
         </motion.div>
