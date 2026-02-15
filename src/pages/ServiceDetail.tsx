@@ -1,6 +1,6 @@
-import { useParams, Link, Navigate, useNavigate } from "react-router-dom";
-import { useState, useEffect, Fragment, useMemo } from "react";
-import ReactMarkdown from "react-markdown";
+import { useParams, Link } from "react-router-dom";
+import { useState, useEffect, Fragment } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -120,8 +120,30 @@ const ServiceDetail = () => {
 
   // Return proper 404 page for invalid service slugs (not a soft redirect)
   if (!service) {
-    // Redirect to the global 404 page to return proper status for crawlers
-    return <Navigate to="/404-not-found" replace />;
+    const notFoundContent = {
+      title: isSpanish ? "Servicio no encontrado | Canary Detect" : "Service Not Found | Canary Detect",
+      description: isSpanish 
+        ? "El servicio que busca no existe. Vea todos nuestros servicios de detección de fugas en Lanzarote."
+        : "The service you're looking for doesn't exist. View all our leak detection services in Lanzarote.",
+    };
+    
+    return (
+      <Layout>
+        <Helmet>
+          <title>{notFoundContent.title}</title>
+          <meta name="description" content={notFoundContent.description} />
+          <meta name="robots" content="noindex, follow" />
+        </Helmet>
+        <div className="container mx-auto px-4 py-24 text-center">
+          <h1 className="text-6xl font-bold text-primary mb-2">404</h1>
+          <h2 className="font-heading text-2xl font-bold mb-4">{uiText.serviceNotFound.title}</h2>
+          <p className="text-muted-foreground mb-8">{uiText.serviceNotFound.description}</p>
+          <Button asChild>
+            <Link to={getServicesBasePath(isSpanish)}>{uiText.serviceNotFound.button}</Link>
+          </Button>
+        </div>
+      </Layout>
+    );
   }
 
   const Icon = service.icon;
@@ -133,8 +155,7 @@ const ServiceDetail = () => {
         description={service.seo.description}
         keywords={service.seo.keywords}
         canonical={canonicalUrl}
-        type="website"
-        image={service.heroImage}
+        type="service"
       />
       <BreadcrumbSchema 
         items={[
@@ -144,11 +165,10 @@ const ServiceDetail = () => {
         ]} 
       />
       <ServiceDetailSchema
-        serviceName={service.seo.title.split('|')[0].trim()}
+        serviceName={service.title}
         serviceDescription={service.seo.description}
         serviceUrl={canonicalUrl}
         isSpanish={isSpanish}
-        serviceType={englishSlug === "pool-leak-detection" ? (isSpanish ? "Detección de Fugas de Piscinas" : "Pool Leak Detection") : undefined}
       />
       {/* Hero Section - Collage for underground, Carousel for water leak, standard for others */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-start overflow-hidden z-0">
@@ -202,10 +222,8 @@ const ServiceDetail = () => {
           ) : (
             <img 
               src={service.heroImage} 
-              alt={isSpanish ? `${service.title} - servicio profesional en Lanzarote` : `${service.title} - professional service in Lanzarote`}
+              alt={service.title}
               className="w-full h-full object-cover"
-              width={1920}
-              height={1080}
               fetchPriority="high"
               decoding="async"
             />
@@ -296,7 +314,7 @@ const ServiceDetail = () => {
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
-                <p className="font-heading text-xl font-bold text-white">{uiText.cta.freeQuoteTitle}</p>
+                <h3 className="font-heading text-xl font-bold text-white">{uiText.cta.freeQuoteTitle}</h3>
                 <p className="text-white text-sm mt-1">
                   {uiText.cta.freeQuoteDesc(service.title)}
                 </p>
@@ -359,43 +377,14 @@ const ServiceDetail = () => {
           {/* Two Column Layout - Description + What's Included & Gallery */}
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Left Column - Description (takes more space) */}
-            <div
+            <motion.div
+              {...revealOnMount}
               className="lg:col-span-3"
             >
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
                 {uiText.sections.aboutService}
               </h2>
               
-              {service.richContent ? (
-                <div className="max-w-none space-y-1">
-                  <ReactMarkdown
-                    components={{
-                      a: ({ href, children, ...props }) => {
-                        const isInternal = href && (href.startsWith('/') || href.startsWith('https://canary-detect.com'));
-                        const cleanHref = href?.replace('https://canary-detect.com', '') || '#';
-                        if (isInternal) {
-                          return <Link to={cleanHref} className="text-primary hover:underline font-medium">{children}</Link>;
-                        }
-                        return <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" {...props}>{children}</a>;
-                      },
-                      h1: ({ children }) => <h2 className="font-heading text-2xl md:text-3xl font-bold mt-10 mb-4 pb-3 border-b border-border text-foreground">{children}</h2>,
-                      h2: ({ children }) => <h2 className="font-heading text-2xl md:text-3xl font-bold mt-10 mb-4 pb-3 border-b border-border text-foreground">{children}</h2>,
-                      h3: ({ children }) => <h3 className="font-heading text-xl font-bold mt-8 mb-4 text-primary">{children}</h3>,
-                      h4: ({ children }) => <h4 className="font-heading text-lg font-semibold mt-6 mb-3 text-foreground/90">{children}</h4>,
-                      p: ({ children }) => <p className="text-muted-foreground leading-relaxed mb-5">{children}</p>,
-                      ul: ({ children }) => <ul className="my-5 pl-6 space-y-2 list-disc">{children}</ul>,
-                      ol: ({ children }) => <ol className="my-5 pl-6 space-y-2 list-decimal">{children}</ol>,
-                      li: ({ children }) => <li className="text-muted-foreground leading-relaxed">{children}</li>,
-                      strong: ({ children }) => <strong className="text-foreground font-semibold">{children}</strong>,
-                      hr: () => <hr className="my-8 border-border" />,
-                      img: () => null,
-                    }}
-                  >
-                    {service.content}
-                  </ReactMarkdown>
-                </div>
-              ) : (
-              <>
               {/* Split content into paragraphs with better formatting */}
               {(() => {
                 const paragraphs = service.content.split("\n\n");
@@ -444,13 +433,12 @@ const ServiceDetail = () => {
                   </div>
                 );
               })()}
-              </>
-              )}
 
-            </div>
+            </motion.div>
 
             {/* Right Column - What's Included + Gallery for short content */}
-            <div
+            <motion.div
+              {...revealOnMount}
               className="lg:col-span-2 space-y-6"
             >
               <div className="bg-gradient-to-br from-slate-50 to-muted/30 rounded-2xl p-6 border border-border">
@@ -529,10 +517,8 @@ const ServiceDetail = () => {
                       >
                         <img 
                           src={img} 
-                          alt={isSpanish ? `${service.title} - ejemplo ${index + 1} en Lanzarote` : `${service.title} - example ${index + 1} in Lanzarote`}
+                          alt={`${service.title} ${index + 1}`}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          width={640}
-                          height={480}
                           loading="lazy"
                           decoding="async"
                         />
@@ -541,11 +527,12 @@ const ServiceDetail = () => {
                   </div>
                 </div>
               )}
-            </div>
+            </motion.div>
           </div>
 
           {galleryImages.length > 0 && (englishSlug === 'underground-detection' || (englishSlug !== 'drain-unblocking' && service.content.length >= 600)) && (
-            <div
+            <motion.div
+              {...revealOnMount}
               className="mt-10"
             >
               <h3 className="font-heading text-xl font-bold mb-4">
@@ -568,17 +555,15 @@ const ServiceDetail = () => {
                   >
                     <img 
                       src={img} 
-                      alt={isSpanish ? `${service.title} - imagen ${index + 1} del servicio en Lanzarote` : `${service.title} - service image ${index + 1} in Lanzarote`}
+                      alt={`${service.title} ${index + 1}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      width={640}
-                      height={480}
                       loading="lazy"
                       decoding="async"
                     />
                   </button>
                 ))}
               </div>
-            </div>
+            </motion.div>
           )}
         </div>
       </section>
@@ -592,7 +577,7 @@ const ServiceDetail = () => {
           <section className="py-12 md:py-16 bg-muted section-divider">
             <FAQSchema faqs={serviceFaqs} />
             <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto">
+              <motion.div {...revealOnMount} className="max-w-3xl mx-auto">
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-widest mb-2">
                     <HelpCircle className="h-4 w-4" />
@@ -630,7 +615,7 @@ const ServiceDetail = () => {
                     </Link>
                   </Button>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </section>
         );
@@ -680,7 +665,7 @@ const ServiceDetail = () => {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2 }}
               src={lightboxImages[lightboxIndex]}
-              alt={isSpanish ? `${service.title} - vista ampliada ${lightboxIndex + 1}` : `${service.title} - enlarged view ${lightboxIndex + 1}`}
+              alt={`${service.title} ${lightboxIndex + 1}`}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />

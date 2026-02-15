@@ -5,12 +5,10 @@ import { Droplets, Search, Cable, Waves, CircleDot, Wrench, MapPin, Award, Clock
 import { Shield } from "lucide-react";
 import ServiceCard from "@/components/home/ServiceCard";
 import SEOHead from "@/components/seo/SEOHead";
-import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import PricingSection from "@/components/services/PricingSection";
 import { useTranslation } from "@/i18n/LanguageContext";
-import { getHomePath, getServicesBasePath } from "@/i18n/routes";
 
 // Import service hero images
 import drainDetectionImg from "@/assets/services/drain-detection.jpg";
@@ -105,23 +103,13 @@ const Services = () => {
     },
   ];
 
-  const canonicalUrl = isSpanish 
-    ? "https://canary-detect.com/es/servicios" 
-    : "https://canary-detect.com/services";
-
   return (
     <Layout>
       <SEOHead 
         title={t('meta.services.title')}
         description={t('meta.services.description')}
         keywords={t('meta.services.keywords')}
-        canonical={canonicalUrl}
-      />
-      <BreadcrumbSchema 
-        items={[
-          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
-          { name: isSpanish ? "Servicios" : "Services", url: canonicalUrl }
-        ]} 
+        canonical={isSpanish ? "https://canary-detect.com/es/servicios" : "https://canary-detect.com/services"}
       />
       <ServiceSchema />
       {/* Hero Section with Background Image */}

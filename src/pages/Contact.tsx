@@ -8,10 +8,8 @@ import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import contactHero from "@/assets/hero/contact-hero.jpg";
 import SEOHead from "@/components/seo/SEOHead";
-import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
-import { getHomePath, getContactPath } from "@/i18n/routes";
 import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
@@ -120,29 +118,19 @@ const Contact = () => {
     { value: "other", label: "Other" },
   ];
 
-  const canonicalUrl = isSpanish 
-    ? "https://canary-detect.com/es/contacto" 
-    : "https://canary-detect.com/contact";
-
   return (
     <Layout>
       <SEOHead 
         title={t('meta.contact.title')}
         description={t('meta.contact.description')}
         keywords={t('meta.contact.keywords')}
-        canonical={canonicalUrl}
-      />
-      <BreadcrumbSchema 
-        items={[
-          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
-          { name: isSpanish ? "Contacto" : "Contact", url: canonicalUrl }
-        ]} 
+        canonical={isSpanish ? "https://canary-detect.com/es/contacto" : "https://canary-detect.com/contact"}
       />
       <LocalBusinessSchema page="contact" />
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
-          <img src={contactHero} alt={isSpanish ? "Oficina de Canary Detect en Playa Blanca, Lanzarote" : "Canary Detect office in Playa Blanca, Lanzarote"} className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
+          <img src={contactHero} alt="" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.35)]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] via-transparent to-transparent" />
         </div>

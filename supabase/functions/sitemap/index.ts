@@ -76,8 +76,6 @@ const staticBlogArticles = [
   { slug: "how-to-tell-if-pool-has-leak-lanzarote", esSlug: "como-saber-si-piscina-tiene-fuga-lanzarote", date: "2026-02-01" },
   { slug: "signs-water-leak-villa-lanzarote", esSlug: "senales-fuga-agua-villa-lanzarote", date: "2026-02-01" },
   { slug: "high-water-bills-lanzarote-causes", esSlug: "facturas-agua-altas-lanzarote-causas", date: "2026-02-01" },
-  { slug: "all-the-gear-no-idea-leak-detection", esSlug: "todo-el-equipo-sin-idea-deteccion-fugas", date: "2026-02-01" },
-  { slug: "how-to-detect-underground-pipes-lanzarote", esSlug: "como-detectar-tuberias-subterraneas-lanzarote", date: "2026-02-14" },
 ];
 
 // Blog slug mappings for bilingual support (legacy - kept for DB posts)
@@ -93,8 +91,6 @@ const blogSlugMappings: Record<string, string> = {
   "how-to-tell-if-pool-has-leak-lanzarote": "como-saber-si-piscina-tiene-fuga-lanzarote",
   "signs-water-leak-villa-lanzarote": "senales-fuga-agua-villa-lanzarote",
   "high-water-bills-lanzarote-causes": "facturas-agua-altas-lanzarote-causas",
-  "all-the-gear-no-idea-leak-detection": "todo-el-equipo-sin-idea-deteccion-fugas",
-  "how-to-detect-underground-pipes-lanzarote": "como-detectar-tuberias-subterraneas-lanzarote",
 };
 
 function formatDate(date: Date | string): string {

@@ -24,8 +24,6 @@ export const routeMap: Record<string, string> = {
   '/plumbing-services/manifold-upgrades': '/es/servicios-fontaneria/mejoras-colectores',
   '/plumbing-services/pool-plumbing': '/es/servicios-fontaneria/fontaneria-piscinas',
   '/plumbing-services/pool-repairs': '/es/servicios-fontaneria/reparaciones-piscinas',
-  '/meet-the-team': '/es/equipo',
-  '/locations': '/es/ubicaciones',
 };
 
 // Reverse map for Spanish to English
@@ -79,9 +77,7 @@ export const blogSlugMap: Record<string, string> = {
   "emergency-leak-detection-repair-lanzarote": "deteccion-reparacion-fugas-emergencia-lanzarote",
   "how-to-tell-if-pool-has-leak-lanzarote": "como-saber-si-piscina-tiene-fuga-lanzarote",
   "signs-water-leak-villa-lanzarote": "senales-fuga-agua-villa-lanzarote",
-  "high-water-bills-lanzarote-causes": "facturas-agua-altas-lanzarote-causas",
-  "all-the-gear-no-idea-leak-detection": "todo-el-equipo-sin-idea-deteccion-fugas",
-  "how-to-detect-underground-pipes-lanzarote": "como-detectar-tuberias-subterraneas-lanzarote"
+  "high-water-bills-lanzarote-causes": "facturas-agua-altas-lanzarote-causas"
 };
 
 // Reverse blog slug map (Spanish to English)

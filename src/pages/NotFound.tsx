@@ -1,6 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
-import SEOHead from "@/components/seo/SEOHead";
+import { Helmet } from "react-helmet-async";
 import { getHomePath, getServicesBasePath, getBlogPath, getContactPath } from "@/i18n/routes";
 
 const NotFound = () => {
@@ -28,11 +28,11 @@ const NotFound = () => {
 
   return (
     <>
-      <SEOHead
-        title={content.title}
-        description={content.description}
-        noIndex
-      />
+      <Helmet>
+        <title>{content.title}</title>
+        <meta name="description" content={content.description} />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <div className="flex min-h-screen items-center justify-center bg-muted px-4">
         <div className="text-center max-w-md">
           <h1 className="mb-2 text-6xl font-bold text-primary">404</h1>

@@ -54,32 +54,16 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
                 {isSpanish ? "Le devolveremos la llamada en 24 horas" : "We'll call you back within 24 hours"}
               </p>
             </div>
-            <form 
-              className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto"
-              onSubmit={(e) => {
-                e.preventDefault();
-                const formData = new FormData(e.currentTarget);
-                const name = formData.get('name') as string;
-                const phone = formData.get('phone') as string;
-                if (name && phone) {
-                  window.open(`https://wa.me/34711051071?text=${encodeURIComponent(`Hi, my name is ${name}. Please call me back on ${phone}.`)}`, '_blank');
-                  e.currentTarget.reset();
-                }
-              }}
-            >
+            <form className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
               <Input 
                 type="text" 
-                name="name"
                 placeholder={isSpanish ? "Su Nombre" : "Your Name"}
                 className="bg-white/95 text-slate-900 border-0 h-11 min-w-[180px] placeholder:text-slate-500"
-                required
               />
               <Input 
                 type="tel" 
-                name="phone"
                 placeholder={isSpanish ? "Número de Teléfono" : "Phone Number"}
                 className="bg-white/95 text-slate-900 border-0 h-11 min-w-[180px] placeholder:text-slate-500"
-                required
               />
               <Button 
                 type="submit" 
@@ -227,11 +211,6 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
                   { name: "Teguise", slug: "teguise" },
                   { name: "San Bartolomé", slug: "san-bartolome" },
                   { name: "Puerto Calero", slug: "puerto-calero" },
-                  { name: "Femés", slug: "femes" },
-                  { name: "Uga", slug: "uga" },
-                  { name: "Tahiche", slug: "tahiche" },
-                  { name: "Guatiza", slug: "guatiza" },
-                  { name: "Las Breñas", slug: "las-brenas" },
                 ].map(area => (
                   <li key={area.slug}>
                     <Link 

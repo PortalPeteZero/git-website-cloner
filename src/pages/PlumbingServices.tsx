@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
-import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { getHomePath, getPlumbingServicesPath } from "@/i18n/routes";
 import { Link } from "react-router-dom";
 import { plumbingServicesData, getAllPlumbingServices } from "@/data/plumbingServicesData";
 import { Card, CardContent } from "@/components/ui/card";
@@ -139,12 +137,6 @@ const PlumbingServices = () => {
         description={content.metaDescription}
         canonical={content.canonical}
         type="service"
-      />
-      <BreadcrumbSchema 
-        items={[
-          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
-          { name: isSpanish ? "Servicios de Fontanería" : "Plumbing Services", url: content.canonical }
-        ]} 
       />
       <Helmet>
         <script type="application/ld+json">

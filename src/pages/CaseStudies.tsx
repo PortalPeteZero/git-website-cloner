@@ -4,9 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, CheckCircle, Clock, TrendingUp } from "lucide-react";
 import SEOHead from "@/components/seo/SEOHead";
-import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
-import { getHomePath, getCaseStudiesPath } from "@/i18n/routes";
 
 // Import hero and case study images
 import caseStudiesHero from "@/assets/hero/case-studies-hero.jpg";
@@ -24,10 +22,6 @@ import photo3 from "@/assets/gallery/photo-3.jpg";
 
 const CaseStudies = () => {
   const { t, isSpanish } = useTranslation();
-  
-  const canonicalUrl = isSpanish 
-    ? "https://canary-detect.com/es/casos-de-exito" 
-    : "https://canary-detect.com/case-studies";
 
   const caseStudies = isSpanish ? [
     {
@@ -193,13 +187,7 @@ const CaseStudies = () => {
         title={t('meta.caseStudies.title')}
         description={t('meta.caseStudies.description')}
         keywords={t('meta.caseStudies.keywords')}
-        canonical={canonicalUrl}
-      />
-      <BreadcrumbSchema 
-        items={[
-          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
-          { name: isSpanish ? "Casos de Éxito" : "Case Studies", url: canonicalUrl }
-        ]} 
+        canonical={isSpanish ? "https://canary-detect.com/es/casos-de-exito" : "https://canary-detect.com/case-studies"}
       />
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-start overflow-hidden">

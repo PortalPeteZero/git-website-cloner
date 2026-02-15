@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 import { Atom, AudioLines, Thermometer, Mic, Video, CheckCircle, AlertCircle, Sparkles } from "lucide-react";
 import technologyHero from "@/assets/hero/technology-hero.jpg";
 import SEOHead from "@/components/seo/SEOHead";
-import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
-import { getHomePath, getTechnologyPath } from "@/i18n/routes";
 // Before & After images
 import leakRepairBa1 from "@/assets/services/gallery/leak-repair-ba-1.jpg";
 import leakRepairBa2 from "@/assets/services/gallery/leak-repair-ba-2.jpg";
@@ -94,23 +92,13 @@ const Technology = () => {
   const technologies = getTechnologies(isSpanish);
   const beforeAfterImages = getBeforeAfterImages(isSpanish);
   
-  const canonicalUrl = isSpanish 
-    ? "https://canary-detect.com/es/tecnologia" 
-    : "https://canary-detect.com/technology";
-  
   return (
     <Layout>
       <SEOHead 
         title={t('meta.technology.title')}
         description={t('meta.technology.description')}
         keywords={t('meta.technology.keywords')}
-        canonical={canonicalUrl}
-      />
-      <BreadcrumbSchema 
-        items={[
-          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` },
-          { name: isSpanish ? "Tecnología" : "Technology", url: canonicalUrl }
-        ]} 
+        canonical={isSpanish ? "https://canary-detect.com/es/tecnologia" : "https://canary-detect.com/technology"}
       />
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-start overflow-hidden">

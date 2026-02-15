@@ -129,15 +129,6 @@
     <priority>0.6</priority>
   </url>
 
-  <url>
-    <loc>https://canary-detect.com/blog/all-the-gear-no-idea-leak-detection</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/all-the-gear-no-idea-leak-detection"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/todo-el-equipo-sin-idea-deteccion-fugas"/>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
   <!-- English Service Pages -->
   <url>
     <loc>https://canary-detect.com/services/water-leak-detection</loc>
@@ -409,15 +400,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/emergency-leak-detection-repair-lanzarote"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/deteccion-reparacion-fugas-emergencia-lanzarote"/>
     <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://canary-detect.com/es/blog/todo-el-equipo-sin-idea-deteccion-fugas</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/all-the-gear-no-idea-leak-detection"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/todo-el-equipo-sin-idea-deteccion-fugas"/>
-    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

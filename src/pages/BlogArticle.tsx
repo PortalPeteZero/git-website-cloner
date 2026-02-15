@@ -1,13 +1,12 @@
-import { useState, useEffect, useMemo } from "react";
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
-import { Calendar, User, Clock, ArrowLeft, ArrowRight, List, ChevronDown, Phone } from "lucide-react";
+import { Calendar, User, Clock, ArrowLeft, ArrowRight } from "lucide-react";
 import { getArticleBySlug, getRelatedArticles, BLOG_IMAGES } from "@/data/blogArticles";
 import { supabase } from "@/integrations/supabase/client";
 import ReactMarkdown from "react-markdown";
@@ -108,11 +107,6 @@ const resolveImagePath = (src: string): string => {
     '/assets/blog/emergency-leak-pipe-repair.jpg': BLOG_IMAGES.emergencyLeakPipeRepair,
     '/assets/blog/emergency-leak-hole.jpg': BLOG_IMAGES.emergencyLeakHole,
     '/assets/blog/emergency-leak-cctv.jpg': BLOG_IMAGES.emergencyLeakCctv,
-    // All The Gear, No Idea article
-    '/assets/blog/all-gear-monkey-paintbrush.png': BLOG_IMAGES.allGearMonkey,
-    '/assets/blog/all-gear-water-bill-shock.png': BLOG_IMAGES.allGearWaterBill,
-    '/assets/blog/all-gear-leaky-finders.png': BLOG_IMAGES.allGearLeakyFinders,
-    '/assets/blog/all-gear-job-done.png': BLOG_IMAGES.allGearJobDone,
   };
   return imageMap[src] || src;
 };
@@ -143,21 +137,6 @@ const BlogArticle = () => {
   // Check static articles first - this is synchronous and immediate
   const staticArticle = slug ? getArticleBySlug(slug, isSpanish) : undefined;
   const relatedArticles = slug ? getRelatedArticles(slug, isSpanish, 3) : [];
-
-  // Extract H2 headings for Table of Contents (must be before early returns)
-  const rawContent = staticArticle?.content || dbPost?.content || '';
-  const normalizedContent = useMemo(() => normalizeMarkdown(rawContent), [rawContent]);
-  const tocItems = useMemo(() => {
-    const headingRegex = /^## (.+)$/gm;
-    const items: { text: string; id: string }[] = [];
-    let match;
-    while ((match = headingRegex.exec(normalizedContent)) !== null) {
-      const text = match[1].replace(/\*\*/g, '').replace(/<[^>]+>/g, '').trim();
-      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      items.push({ text, id });
-    }
-    return items;
-  }, [normalizedContent]);
 
   const blogBasePath = getBlogPath(isSpanish);
 
@@ -220,15 +199,47 @@ const BlogArticle = () => {
 
   // Return true 404 page for invalid blog slugs (not a redirect which causes soft 404)
   if (notFound && !staticArticle) {
-    // Redirect to global 404 to avoid soft 404 issues
-    return <Navigate to="/404-not-found" replace />;
+    return (
+      <Layout>
+        <Helmet>
+          <title>{isSpanish ? "Artículo no encontrado | Canary Detect" : "Article Not Found | Canary Detect"}</title>
+          <meta name="description" content={isSpanish ? "El artículo que busca no existe." : "The article you're looking for doesn't exist."} />
+          <meta name="robots" content="noindex, follow" />
+        </Helmet>
+        <div className="min-h-[60vh] flex flex-col items-center justify-center bg-muted px-4">
+          <h1 className="text-4xl font-bold mb-4">404</h1>
+          <p className="text-xl text-muted-foreground mb-6 text-center">
+            {isSpanish ? 'Artículo no encontrado' : 'Article not found'}
+          </p>
+          <Link to={blogBasePath} className="text-primary underline hover:text-primary/90">
+            {isSpanish ? 'Ver todos los artículos' : 'View all articles'}
+          </Link>
+        </div>
+      </Layout>
+    );
   }
 
   // Use static article or database post
   const article = staticArticle || dbPost;
   if (!article) {
-    // Redirect to global 404 to avoid soft 404 issues
-    return <Navigate to="/404-not-found" replace />;
+    return (
+      <Layout>
+        <Helmet>
+          <title>{isSpanish ? "Artículo no encontrado | Canary Detect" : "Article Not Found | Canary Detect"}</title>
+          <meta name="description" content={isSpanish ? "El artículo que busca no existe." : "The article you're looking for doesn't exist."} />
+          <meta name="robots" content="noindex, follow" />
+        </Helmet>
+        <div className="min-h-[60vh] flex flex-col items-center justify-center bg-muted px-4">
+          <h1 className="text-4xl font-bold mb-4">404</h1>
+          <p className="text-xl text-muted-foreground mb-6 text-center">
+            {isSpanish ? 'Artículo no encontrado' : 'Article not found'}
+          </p>
+          <Link to={blogBasePath} className="text-primary underline hover:text-primary/90">
+            {isSpanish ? 'Ver todos los artículos' : 'View all articles'}
+          </Link>
+        </div>
+      </Layout>
+    );
   }
 
   const isStatic = !!staticArticle;
@@ -243,6 +254,7 @@ const BlogArticle = () => {
   const date = isStatic ? staticArticle.date : dbPost!.created_at;
   const image = isStatic ? staticArticle.image : (dbPost!.featured_image || waterLeakImg);
 
+  const normalizedContent = normalizeMarkdown(content);
 
   const formatDate = (dateString: string) => {
     const dateObj = new Date(dateString);
@@ -332,68 +344,12 @@ const BlogArticle = () => {
         </Helmet>
       )}
 
-      {/* FAQ Schema for articles with FAQ sections */}
-      {slug === 'how-to-detect-underground-pipes-lanzarote' && (
-        <Helmet>
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "How deep are underground water pipes usually buried in Lanzarote?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Lanzarote's warm climate means domestic water pipes typically run between 30-60 cm below finished ground level. However, significant variation exists. Some older or improvised installations place pipes just beneath tiles or thin concrete screeds, while shared community mains running under roads may sit deeper for protection from traffic loads. Always verify depth with proper locating methods rather than assuming a standard."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Can I use a normal metal detector to find my plastic water pipes?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Standard hobby metal detectors respond only to metallic materials, so they cannot detect pure PVC or polyethylene pipes directly. While they might pick up metal fittings, clamps, or reinforcing mesh in nearby concrete, these signals can be misleading without experience interpreting them in context. For plastic pipe detection, dedicated utility locators, GPR equipment, or professional services like Canary Detect provide reliable results."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Does volcanic rock interfere with ground-penetrating radar?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Certain dense or highly mineralised lava layers can reduce GPR penetration depth or produce strong reflections requiring expert interpretation. However, many sites with dry, granular picón backfill actually provide excellent GPR conditions—better than heavy clay soils found elsewhere. Experienced operators familiar with local geology adjust antenna frequencies, survey direction, and data processing to achieve usable results even in challenging areas."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How long does a typical pipe detection survey take for a villa?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "A straightforward villa with one pool and garden within an urbanisation typically requires around 2-4 hours for comprehensive coverage. More complex properties with suspected multiple leaks, extensive gardens, older construction without documentation, or numerous separate pipe networks can extend to most of a working day. Canary Detect usually provides an estimated duration after an initial phone consultation."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Is it possible to locate pipes under a tiled terrace without breaking tiles?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "In most cases, yes. GPR scanning, acoustic listening through surface contact, and sometimes tracer gas detection allow accurate locating and leak pinpointing under tiles, stamped concrete, or decorative stone without immediate demolition. Once the target location is narrowed to a small area, only a focused opening is typically needed—often just a few tiles rather than metres of terrace."
-                  }
-                }
-              ]
-            })}
-          </script>
-        </Helmet>
-      )}
-
       {/* Hero Section */}
       <section className="relative min-h-[40vh] md:min-h-[50vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={image} 
             alt={title}
-            width={1920}
-            height={1080}
             className="w-full h-full object-cover" 
             fetchPriority="high" 
             decoding="async" 
@@ -453,41 +409,6 @@ const BlogArticle = () => {
               transition={{ delay: 0.2 }}
               className="blog-prose prose prose-lg max-w-none [&_.video-embed]:my-8 [&_.video-embed]:rounded-xl [&_.video-embed]:overflow-hidden [&_.video-embed]:shadow-lg [&_iframe]:w-full [&_iframe]:aspect-video [&_iframe]:rounded-xl"
             >
-              {/* Table of Contents */}
-              {tocItems.length > 2 && (
-                <Collapsible defaultOpen className="my-8 border border-border rounded-xl bg-card p-5">
-                  <CollapsibleTrigger className="flex items-center justify-between w-full group" aria-label={isSpanish ? "Abrir o cerrar índice de contenidos" : "Toggle table of contents"}>
-                    <div className="flex items-center gap-2">
-                      <List className="h-5 w-5 text-primary" aria-hidden="true" />
-                      <span className="font-heading font-bold text-lg">
-                        {isSpanish ? "Índice de Contenidos" : "Table of Contents"}
-                      </span>
-                    </div>
-                    <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" aria-hidden="true" />
-                  </CollapsibleTrigger>
-                  <CollapsibleContent className="mt-4">
-                    <nav aria-label={isSpanish ? "Índice de contenidos del artículo" : "Article table of contents"}>
-                      <ol className="space-y-1 list-decimal list-inside">
-                        {tocItems.map((item) => (
-                          <li key={item.id}>
-                            <a
-                              href={`#${item.id}`}
-                              className="text-primary hover:underline text-base font-medium inline-block py-2"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                              }}
-                            >
-                              {item.text}
-                            </a>
-                          </li>
-                        ))}
-                      </ol>
-                    </nav>
-                  </CollapsibleContent>
-                </Collapsible>
-              )}
-
               <ReactMarkdown
                 rehypePlugins={[rehypeRaw]}
                 components={{
@@ -499,14 +420,9 @@ const BlogArticle = () => {
                     }
                     return <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">{children}</a>;
                   },
-                  h2: ({ children }) => {
-                    const text = typeof children === 'string' ? children : 
-                      Array.isArray(children) ? children.map(c => typeof c === 'string' ? c : '').join('') : '';
-                    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                    return (
-                      <h2 id={id} className="text-2xl font-bold mt-12 mb-6 pb-3 border-b border-border text-foreground font-heading first:mt-0 scroll-mt-24">{children}</h2>
-                    );
-                  },
+                  h2: ({ children }) => (
+                    <h2 className="text-2xl font-bold mt-12 mb-6 pb-3 border-b border-border text-foreground font-heading first:mt-0">{children}</h2>
+                  ),
                   h3: ({ children }) => (
                     <h3 className="text-xl font-bold mt-10 mb-4 text-primary font-heading">{children}</h3>
                   ),
@@ -528,40 +444,23 @@ const BlogArticle = () => {
                   strong: ({ children }) => (
                     <strong className="text-foreground font-semibold">{children}</strong>
                   ),
-                  img: (() => {
-                    let imgIndex = 0;
-                    return ({ src, alt }: { src?: string; alt?: string }) => {
-                      const isFirst = imgIndex === 0;
-                      imgIndex++;
-                      const resolvedSrc = resolveImagePath(src || '');
-                      const altText = alt || 'Blog article image';
-                      return (
-                        <figure className="my-8">
-                          <img 
-                            src={resolvedSrc} 
-                            alt={altText} 
-                            width={800}
-                            height={450}
-                            className="w-full rounded-lg shadow-md"
-                            loading={isFirst ? "eager" : "lazy"}
-                            fetchPriority={isFirst ? "high" : undefined}
-                            decoding="async"
-                          />
-                          {alt && (
-                            <figcaption className="text-sm text-muted-foreground mt-3 text-center italic">
-                              {alt}
-                            </figcaption>
-                          )}
-                        </figure>
-                      );
-                    };
-                  })(),
+                  img: ({ src, alt }) => (
+                    <figure className="my-8">
+                      <img 
+                        src={resolveImagePath(src || '')} 
+                        alt={alt || ''} 
+                        className="w-full rounded-lg shadow-md"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </figure>
+                  ),
                   blockquote: ({ children }) => (
                     <blockquote className="border-l-4 border-primary bg-primary/5 py-4 px-6 my-8 rounded-r-lg italic text-foreground/80 not-italic">{children}</blockquote>
                   ),
                   table: ({ children }) => (
-                    <div className="overflow-x-auto my-8 rounded-lg border border-border -mx-4 px-4 sm:mx-0 sm:px-0" role="region" aria-label={isSpanish ? "Tabla de datos" : "Data table"} tabIndex={0}>
-                      <table className="w-full border-collapse min-w-[500px]">{children}</table>
+                    <div className="overflow-x-auto my-8 rounded-lg border border-border">
+                      <table className="w-full border-collapse">{children}</table>
                     </div>
                   ),
                   thead: ({ children }) => (
@@ -594,25 +493,18 @@ const BlogArticle = () => {
               <BlogServicesCallout isSpanish={isSpanish} />
             </motion.div>
 
-            {/* Article-specific CTA */}
+            {/* CTA Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mt-12 p-8 bg-canary-navy rounded-xl text-white"
+              className="mt-12 p-8 bg-canary-navy rounded-xl text-white text-center"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 rounded-lg bg-primary/20">
-                  <Phone className="h-5 w-5 text-primary" />
-                </div>
-                <h3 className="font-heading text-2xl font-bold">
-                  {isSpanish ? "¿Necesita Ayuda para Detectar Tuberías Subterráneas?" : "Need Help Detecting Underground Pipes?"}
-                </h3>
-              </div>
-              <p className="text-white/80 mb-6 max-w-2xl">
-                {isSpanish 
-                  ? "Nuestro equipo en Lanzarote utiliza GPR, detección acústica y tecnología de gas trazador para localizar cualquier tubería enterrada. Contáctenos para una consulta gratuita."
-                  : "Our Lanzarote-based team uses GPR, acoustic detection, and tracer gas technology to locate any buried pipe. Contact us for a free consultation."}
+              <h3 className="font-heading text-2xl font-bold mb-4">
+                {uiText.ctaTitle}
+              </h3>
+              <p className="text-white/80 mb-6 max-w-lg mx-auto">
+                {uiText.ctaDescription}
               </p>
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link to={getContactPath(isSpanish)}>
@@ -647,8 +539,6 @@ const BlogArticle = () => {
                       <img
                         src={post.image}
                         alt={post.title}
-                        width={640}
-                        height={360}
                         loading="lazy"
                         decoding="async"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

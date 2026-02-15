@@ -1,4 +1,4 @@
-import { forwardRef, useEffect } from "react";
+import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import { Star, Quote, MapPin } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -73,45 +73,6 @@ const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
       initials: "ST",
     },
   ];
-
-  // Add Review schema for rich snippets
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'review-schema';
-    
-    const reviewSchema = {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://canary-detect.com/#business",
-      "name": "Canary Detect",
-      "review": testimonials.map(t => ({
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": t.name
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": t.rating.toString(),
-          "bestRating": "5"
-        },
-        "reviewBody": t.text
-      }))
-    };
-    
-    script.textContent = JSON.stringify(reviewSchema);
-    
-    const existing = document.getElementById('review-schema');
-    if (existing) existing.remove();
-    
-    document.head.appendChild(script);
-    
-    return () => {
-      const scriptToRemove = document.getElementById('review-schema');
-      if (scriptToRemove) scriptToRemove.remove();
-    };
-  }, [testimonials]);
 
   return (
     <section ref={ref} className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/50">

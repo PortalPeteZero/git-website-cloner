@@ -1,14 +1,12 @@
-import { lazy, Suspense, useMemo } from "react";
+import { lazy, Suspense } from "react";
 import Layout from "@/components/layout/Layout";
 import HeroSlider from "@/components/home/HeroSlider";
 import WelcomeSection from "@/components/home/WelcomeSection";
 import TrustBadgesSection from "@/components/home/TrustBadgesSection";
 import SEOHead from "@/components/seo/SEOHead";
-import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
-import { getHomePath } from "@/i18n/routes";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import LoadingFallback from "@/components/LoadingFallback";
 
@@ -20,15 +18,9 @@ const TestimonialsSection = lazy(() => import("@/components/home/TestimonialsSec
 const CaseStudiesPreview = lazy(() => import("@/components/home/CaseStudiesPreview"));
 const FAQSection = lazy(() => import("@/components/home/FAQSection"));
 const ProblemFAQSection = lazy(() => import("@/components/home/ProblemFAQSection"));
-const PopularGuidesSection = lazy(() => import("@/components/home/PopularGuidesSection"));
-const ServiceAreasSection = lazy(() => import("@/components/home/ServiceAreasSection"));
 
 const Index = () => {
   const { t, isSpanish } = useTranslation();
-  
-  const canonicalUrl = isSpanish 
-    ? "https://canary-detect.com/es" 
-    : "https://canary-detect.com";
   
   return (
     <Layout>
@@ -36,12 +28,7 @@ const Index = () => {
         title={t('meta.home.title')}
         description={t('meta.home.description')}
         keywords={t('meta.home.keywords')}
-        canonical={canonicalUrl}
-      />
-      <BreadcrumbSchema 
-        items={[
-          { name: isSpanish ? "Inicio" : "Home", url: `https://canary-detect.com${getHomePath(isSpanish)}` }
-        ]} 
+        canonical={isSpanish ? "https://canary-detect.com/es" : "https://canary-detect.com"}
       />
       <LocalBusinessSchema page="home" />
       <ServiceSchema />
@@ -97,18 +84,6 @@ const Index = () => {
       <ErrorBoundary>
         <Suspense fallback={<LoadingFallback height="min-h-[300px]" />}>
           <FAQSection />
-        </Suspense>
-      </ErrorBoundary>
-      
-      <ErrorBoundary>
-        <Suspense fallback={<LoadingFallback height="min-h-[400px]" />}>
-          <PopularGuidesSection isSpanish={isSpanish} />
-        </Suspense>
-      </ErrorBoundary>
-      
-      <ErrorBoundary>
-        <Suspense fallback={<LoadingFallback height="min-h-[300px]" />}>
-          <ServiceAreasSection isSpanish={isSpanish} />
         </Suspense>
       </ErrorBoundary>
     </Layout>
