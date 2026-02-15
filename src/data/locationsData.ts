@@ -545,7 +545,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Imagen térmica para fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
           { title: "Diagnóstico paredes húmedas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Tahiche | Zona Fundación César Manrique | Canary Detect", description: "Detección de fugas Tahiche. Propiedades residenciales, villas, casas tradicionales. Expertos centro Lanzarote. +34 711 051 071", keywords: "detección fugas Tahiche, fugas agua Tahiche Lanzarote, fugas villa Tahiche, fontanero Tahiche, detección fugas centro Lanzarote" }
+        seo: { title: "Detección Fugas Tahiche | Centro Lanzarote", description: "Detección de fugas Tahiche. Propiedades residenciales, villas, casas tradicionales. Expertos centro Lanzarote. +34 711 051 071", keywords: "detección fugas Tahiche, fugas agua Tahiche Lanzarote, fugas villa Tahiche, fontanero Tahiche, detección fugas centro Lanzarote" }
       },
       "guatiza": {
         name: "Guatiza",
@@ -1210,7 +1210,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Thermal imaging for leaks", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
         { title: "Damp walls diagnosis", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Tahiche | César Manrique Foundation Area | Canary Detect", description: "Leak detection Tahiche. Residential properties, villas, traditional houses. Central Lanzarote experts. +34 711 051 071", keywords: "leak detection Tahiche, water leak Tahiche Lanzarote, villa leak Tahiche, plumber Tahiche, central Lanzarote leak detection" }
+      seo: { title: "Leak Detection Tahiche | Central Lanzarote", description: "Leak detection Tahiche. Residential properties, villas, traditional houses. Central Lanzarote experts. +34 711 051 071", keywords: "leak detection Tahiche, water leak Tahiche Lanzarote, villa leak Tahiche, plumber Tahiche, central Lanzarote leak detection" }
     },
     "guatiza": {
       name: "Guatiza",
