@@ -382,16 +382,16 @@ const Services = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {[
-                { name: "Arrecife", link: "/es/fontanero-arrecife" },
-                { name: "Playa Blanca", link: "/es/fontanero-playa-blanca" },
-                { name: "Puerto del Carmen", link: "/es/fontanero-puerto-del-carmen" },
-                { name: "Costa Teguise", link: "/es/fontanero-costa-teguise" },
-                { name: "Yaiza", link: "/es/fontanero-yaiza" },
-                { name: "Tías", link: "/es/fontanero-tias" },
-                { name: "Teguise", link: "/es/fontanero-teguise" },
-                { name: "San Bartolomé", link: "/es/fontanero-san-bartolome" },
-                { name: "Haría", link: "/es/fontanero-haria" },
-                { name: "Tinajo", link: "/es/fontanero-tinajo" },
+                { name: "Arrecife", link: "/es/ubicaciones/arrecife" },
+                { name: "Playa Blanca", link: "/es/ubicaciones/playa-blanca" },
+                { name: "Puerto del Carmen", link: "/es/ubicaciones/puerto-del-carmen" },
+                { name: "Costa Teguise", link: "/es/ubicaciones/costa-teguise" },
+                { name: "Yaiza", link: "/es/ubicaciones/yaiza" },
+                { name: "Tías", link: "/es/ubicaciones/tias" },
+                { name: "Teguise", link: "/es/ubicaciones/teguise" },
+                { name: "San Bartolomé", link: "/es/ubicaciones/san-bartolome" },
+                { name: "Haría", link: "/es/ubicaciones/haria" },
+                { name: "Tinajo", link: "/es/ubicaciones/tinajo" },
               ].map((location, index) => (
                 <motion.div
                   key={location.name}

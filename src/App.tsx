@@ -132,6 +132,18 @@ const App = () => (
               <Route path="/es/services" element={<Navigate to="/es/servicios" replace />} />
               <Route path="/es/services/" element={<Navigate to="/es/servicios" replace />} />
               
+              {/* Legacy fontanero location redirects → plumbing services hub */}
+              <Route path="/es/fontanero-arrecife" element={<Navigate to="/es/servicios-fontaneria" replace />} />
+              <Route path="/es/fontanero-playa-blanca" element={<Navigate to="/es/servicios-fontaneria" replace />} />
+              <Route path="/es/fontanero-puerto-del-carmen" element={<Navigate to="/es/servicios-fontaneria" replace />} />
+              <Route path="/es/fontanero-costa-teguise" element={<Navigate to="/es/servicios-fontaneria" replace />} />
+              <Route path="/es/fontanero-yaiza" element={<Navigate to="/es/servicios-fontaneria" replace />} />
+              <Route path="/es/fontanero-tias" element={<Navigate to="/es/servicios-fontaneria" replace />} />
+              <Route path="/es/fontanero-teguise" element={<Navigate to="/es/servicios-fontaneria" replace />} />
+              <Route path="/es/fontanero-san-bartolome" element={<Navigate to="/es/servicios-fontaneria" replace />} />
+              <Route path="/es/fontanero-haria" element={<Navigate to="/es/servicios-fontaneria" replace />} />
+              <Route path="/es/fontanero-tinajo" element={<Navigate to="/es/servicios-fontaneria" replace />} />
+              
               {/* Spanish Routes */}
               <Route path="/es" element={<Index />} />
               <Route path="/es/sobre-nosotros" element={<LazyRoute><About /></LazyRoute>} />
