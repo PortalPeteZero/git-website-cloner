@@ -220,7 +220,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "¿Contador de agua corriendo sin usar grifos?", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
           { title: "Paredes húmedas en apartamentos", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Costa Teguise | Apartamentos y Piscinas", description: "Detección profesional de fugas en Costa Teguise. Apartamentos, complejos turísticos, piscinas comunitarias. Expertos en edificios compartidos. Sin Encontrar, Sin Pagar. +34 711 051 071", keywords: "detección fugas Costa Teguise, fugas agua Costa Teguise, fugas piscina Costa Teguise, fugas apartamentos Lanzarote, piscina comunitaria fuga" }
+        seo: { title: "Detección Fugas Costa Teguise | Apartamentos y Piscinas", description: "Detección profesional fugas Costa Teguise. Apartamentos, complejos turísticos, piscinas comunitarias. Sin Encontrar, Sin Pagar. +34 711 051 071", keywords: "detección fugas Costa Teguise, fugas agua Costa Teguise, fugas piscina Costa Teguise, fugas apartamentos Lanzarote, piscina comunitaria fuga" }
       },
       "yaiza": {
         name: "Yaiza",
@@ -264,7 +264,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea en fincas", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Imagen térmica para detección de fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
         ],
-        seo: { title: "Detección Fugas Yaiza | Villas, Fincas y Propiedades Rurales", description: "Detección profesional de fugas en el municipio de Yaiza. Villas de lujo, fincas rurales, viñedos de La Geria. Expertos en sistemas de agua tradicionales. +34 711 051 071", keywords: "detección fugas Yaiza, fugas agua Yaiza, fugas piscina Yaiza, fugas villa Lanzarote, reparación fugas finca Yaiza, fugas aljibe" }
+        seo: { title: "Detección Fugas Yaiza | Villas, Fincas y Propiedades Rurales", description: "Detección profesional fugas municipio Yaiza. Villas, fincas rurales, viñedos La Geria. Expertos sistemas agua tradicionales. +34 711 051 071", keywords: "detección fugas Yaiza, fugas agua Yaiza, fugas piscina Yaiza, fugas villa Lanzarote, reparación fugas finca Yaiza, fugas aljibe" }
       },
       "tias": {
         name: "Tías",
