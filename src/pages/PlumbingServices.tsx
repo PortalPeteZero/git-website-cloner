@@ -82,14 +82,14 @@ const PlumbingServices = () => {
       : "Looking for a plumber in Lanzarote? Canary Detect offers complete plumbing services: repairs, boilers, pool systems, and maintenance. 2-Year Guarantee on all work.",
     // Meta optimized for search: "Plumber Lanzarote" / "Fontanero Lanzarote"
     metaTitle: isSpanish 
-      ? "Fontanero Lanzarote | Fontanería | Canary Detect" 
-      : "Plumber Lanzarote | Plumbing Services | Canary Detect",
+      ? "Fontanero Lanzarote | Servicios Fontanería | Canary Detect" 
+      : "Plumber Lanzarote | Professional Plumbing | Canary Detect",
     canonical: isSpanish 
       ? "https://canary-detect.com/es/servicios-fontaneria" 
       : "https://canary-detect.com/plumbing-services",
     metaDescription: isSpanish
-      ? "Fontanero profesional en Lanzarote. Reparaciones urgentes, calderas, fontanería de piscinas, mejoras de sistema. Garantía 2 años. Llámenos: 711 051 071."
-      : "Professional plumber in Lanzarote. Emergency repairs, boilers, pool plumbing, system upgrades. 2-Year Guarantee. Call us: 711 051 071.",
+      ? "Fontanero profesional en Lanzarote. Reparaciones urgentes, calderas, fontanería de piscinas y mejoras de sistema. Garantía 2 años. Llámenos: +34 711 051 071."
+      : "Professional plumber in Lanzarote. Emergency repairs, boilers, pool plumbing and system upgrades. 2-Year Guarantee on all work. Call: +34 711 051 071.",
     cta: isSpanish ? "Solicitar Presupuesto" : "Get a Quote",
     learnMore: isSpanish ? "Más Información" : "Learn More",
     guaranteeTitle: isSpanish ? "Garantía de 2 Años" : "2-Year Guarantee",
@@ -316,7 +316,44 @@ const PlumbingServices = () => {
         </div>
       </section>
 
-      {/* Related Leak Detection Services */}
+      {/* Why Choose Our Plumbing Services - content depth section */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+              {isSpanish ? "¿Por Qué Elegir Canary Detect para Fontanería?" : "Why Choose Canary Detect for Plumbing?"}
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
+              <div>
+                <p className="mb-4">
+                  {isSpanish
+                    ? "A diferencia de fontaneros tradicionales, nuestro equipo combina más de 40 años de experiencia en detección de fugas con servicios completos de fontanería. Esto significa que no solo reparamos el problema visible — diagnosticamos la causa raíz utilizando tecnología avanzada valorada en más de €80.000, incluyendo cámaras termográficas, detectores acústicos y equipos de gas trazador."
+                    : "Unlike traditional plumbers, our team combines over 40 years of leak detection experience with comprehensive plumbing services. This means we don't just fix the visible problem — we diagnose the root cause using advanced technology worth over €80,000, including thermal imaging cameras, acoustic detectors, and tracer gas equipment."}
+                </p>
+                <p>
+                  {isSpanish
+                    ? "Entendemos los desafíos únicos de la fontanería en Lanzarote: tuberías expuestas al sol intenso, sistemas de agua afectados por la alta mineralización, y la complejidad de las instalaciones en propiedades volcánicas. Nuestros fontaneros están cualificados y tienen experiencia directa con estos problemas específicos de la isla."
+                    : "We understand the unique plumbing challenges in Lanzarote: pipes exposed to intense sun, water systems affected by high mineralisation, and the complexity of installations in volcanic properties. Our plumbers are fully qualified and have direct experience with these island-specific issues."}
+                </p>
+              </div>
+              <div>
+                <p className="mb-4">
+                  {isSpanish
+                    ? "Todos nuestros trabajos de fontanería incluyen una garantía de 2 años, lo que le da tranquilidad total. Ya sea una reparación de emergencia, una instalación de caldera, mantenimiento de piscinas o una actualización completa del sistema, aplicamos el mismo nivel de profesionalismo y atención al detalle."
+                    : "All our plumbing work comes with a 2-year guarantee, giving you complete peace of mind. Whether it's an emergency repair, boiler installation, pool maintenance, or a complete system upgrade, we apply the same level of professionalism and attention to detail."}
+                </p>
+                <p>
+                  {isSpanish
+                    ? "Servimos toda la isla de Lanzarote, desde Playa Blanca en el sur hasta Haría en el norte. Con tiempos de respuesta rápidos y precios transparentes sin costes ocultos, somos la opción preferida para propietarios, comunidades y administradores de fincas en todo Lanzarote."
+                    : "We serve the entire island of Lanzarote, from Playa Blanca in the south to Haría in the north. With fast response times and transparent pricing with no hidden costs, we're the preferred choice for homeowners, communities, and property managers across all of Lanzarote."}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Leak Detection Services + Locations */}
       <section className="py-10 md:py-14 bg-muted border-t">
         <div className="container mx-auto px-4">
           <h2 className="text-xl md:text-2xl font-bold text-center mb-6">
@@ -345,6 +382,34 @@ const PlumbingServices = () => {
               >
                 <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
                 <span className="text-muted-foreground group-hover:text-foreground">{service.name}</span>
+              </Link>
+            ))}
+          </div>
+
+          {/* Location links */}
+          <h3 className="text-lg font-bold text-center mt-8 mb-4">
+            {isSpanish ? "Áreas de Servicio en Lanzarote" : "Service Areas Across Lanzarote"}
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
+            {[
+              { name: "Playa Blanca", slug: "playa-blanca" },
+              { name: "Puerto del Carmen", slug: "puerto-del-carmen" },
+              { name: "Costa Teguise", slug: "costa-teguise" },
+              { name: "Arrecife", slug: "arrecife" },
+              { name: "Yaiza", slug: "yaiza" },
+              { name: "Tías", slug: "tias" },
+              { name: "Teguise", slug: "teguise" },
+              { name: "San Bartolomé", slug: "san-bartolome" },
+              { name: "Haría", slug: "haria" },
+              { name: "Tinajo", slug: "tinajo" },
+            ].map((loc) => (
+              <Link
+                key={loc.slug}
+                to={isSpanish ? `/es/ubicaciones/${loc.slug}` : `/locations/${loc.slug}`}
+                className="flex items-center gap-2 p-2 bg-background rounded-lg border border-border hover:border-primary/30 transition-all text-sm group"
+              >
+                <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                <span className="text-muted-foreground group-hover:text-foreground">{loc.name}</span>
               </Link>
             ))}
           </div>
