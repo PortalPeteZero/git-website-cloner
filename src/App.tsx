@@ -41,7 +41,7 @@ const LazyRoute = ({ children }: { children: React.ReactNode }) => (
   </Suspense>
 );
 
-// Main App component
+// Main App component - LanguageProvider must be inside BrowserRouter
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -62,7 +62,6 @@ const App = () => (
               {/* SEO-friendly redirects for common URL variations */}
               <Route path="/services/leaking-water-pipe-repair-lanzarote" element={<Navigate to="/services/leak-repair" replace />} />
               <Route path="/services/water-pipe-leak-repair" element={<Navigate to="/services/leak-repair" replace />} />
-              {/* Trailing slash redirects for indexed service pages */}
               <Route path="/services/water-pipe-leak-detection/" element={<Navigate to="/services/water-pipe-leak-detection" replace />} />
               <Route path="/services/pipe-leak-repair" element={<Navigate to="/services/leak-repair" replace />} />
               <Route path="/services/water-leak-detection-lanzarote" element={<Navigate to="/services/water-leak-detection" replace />} />
@@ -98,7 +97,6 @@ const App = () => (
               <Route path="/products/pool-leak-detection" element={<Navigate to="/services/pool-leak-detection" replace />} />
               <Route path="/category/blog" element={<Navigate to="/blog" replace />} />
               <Route path="/category/blog/" element={<Navigate to="/blog" replace />} />
-              {/* Legacy WordPress date archive redirects */}
               <Route path="/2022/:slug" element={<Navigate to="/blog" replace />} />
               <Route path="/2022/:slug/" element={<Navigate to="/blog" replace />} />
               <Route path="/why-is-pipe-detection-in-lanzarote-important" element={<Navigate to="/technology" replace />} />
