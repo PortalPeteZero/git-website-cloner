@@ -77,7 +77,8 @@ export const blogSlugMap: Record<string, string> = {
   "emergency-leak-detection-repair-lanzarote": "deteccion-reparacion-fugas-emergencia-lanzarote",
   "how-to-tell-if-pool-has-leak-lanzarote": "como-saber-si-piscina-tiene-fuga-lanzarote",
   "signs-water-leak-villa-lanzarote": "senales-fuga-agua-villa-lanzarote",
-  "high-water-bills-lanzarote-causes": "facturas-agua-altas-lanzarote-causas"
+  "high-water-bills-lanzarote-causes": "facturas-agua-altas-lanzarote-causas",
+  "how-to-detect-underground-pipes-lanzarote": "como-detectar-tuberias-subterraneas-lanzarote"
 };
 
 // Reverse blog slug map (Spanish to English)
