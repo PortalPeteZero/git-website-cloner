@@ -45,6 +45,19 @@ const plumbingPages = [
   { en: "/plumbing-services/pool-repairs", es: "/es/servicios-fontaneria/reparaciones-piscinas", priority: "0.7", changefreq: "monthly" },
 ];
 
+const fontaneroPages = [
+  "/es/fontanero-arrecife",
+  "/es/fontanero-playa-blanca",
+  "/es/fontanero-puerto-del-carmen",
+  "/es/fontanero-costa-teguise",
+  "/es/fontanero-yaiza",
+  "/es/fontanero-tias",
+  "/es/fontanero-teguise",
+  "/es/fontanero-san-bartolome",
+  "/es/fontanero-haria",
+  "/es/fontanero-tinajo",
+];
+
 const locationPages = [
   { en: "/locations/arrecife", es: "/es/ubicaciones/arrecife" },
   { en: "/locations/puerto-del-carmen", es: "/es/ubicaciones/puerto-del-carmen" },
@@ -282,6 +295,16 @@ Deno.serve(async (req) => {
       urlEntries.push(
         generateSpanishUrlEntry(page.en, page.es, now, page.priority, page.changefreq)
       );
+    }
+
+    // Generate fontanero location page entries (Spanish-only pages)
+    for (const path of fontaneroPages) {
+      urlEntries.push(`  <url>
+    <loc>${BASE_URL}${path}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`);
     }
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
