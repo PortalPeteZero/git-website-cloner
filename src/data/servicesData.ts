@@ -357,8 +357,8 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       galleryImages: [undergroundDetection1, undergroundDetection2, undergroundDetection3, undergroundDetection4, undergroundDetection5, undergroundDetection6],
       richContent: true,
       seo: {
-        title: "Leak Detection Lanzarote | Underground Pipe & Cable Detection",
-        description: "Expert leak detection in Lanzarote. Advanced underground pipe & cable detection using GPR, electromagnetic locators, thermal imaging & acoustic sensors.",
+        title: "Underground Leak Detection Lanzarote | Pipe Location",
+        description: "Underground water leak detection Lanzarote. GPR radar, electromagnetic locators. Find buried pipes, cables & utilities before digging.",
         keywords: "leak detection Lanzarote, underground pipe detection, cable detection Lanzarote, GPR Lanzarote, water leak detection, buried pipe location, utility detection Canary Islands, underground leak repair"
       },
       features: [
