@@ -176,15 +176,15 @@ export const serviceFaqs: Record<string, ServiceFaqData> = {
     en: [
       {
         question: "Can you detect non-metallic pipes underground?",
-        answer: "Yes—our ground-penetrating radar (GPR) can detect both metallic and non-metallic pipes, including plastic and concrete. Electromagnetic locators are used specifically for metallic pipes and cables."
+        answer: "Yes, our ground-penetrating radar and other non-invasive technologies can locate both metallic and non-metallic pipes."
       },
       {
         question: "How deep can you detect underground pipes?",
-        answer: "Our equipment can typically detect pipes and utilities up to 3 metres deep, though this varies depending on soil conditions and pipe material. Volcanic terrain in Lanzarote can be challenging but our technology handles it well."
+        answer: "Our equipment can detect pipes and cables at various depths, depending on the technology used and ground conditions."
       },
       {
         question: "Do I need underground detection before building work?",
-        answer: "Absolutely. Hitting an unknown pipe or cable during excavation can be dangerous and expensive. We strongly recommend a utility survey before any digging, whether for construction, landscaping, or pool installation."
+        answer: "Absolutely. Identifying buried utilities before construction or landscaping prevents costly accidental damage and potential safety hazards."
       },
     ],
     es: [
