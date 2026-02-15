@@ -1,4 +1,4 @@
-import { forwardRef, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from '@/i18n/LanguageContext';
 import { getEquivalentRoute } from '@/i18n/routes';
@@ -10,127 +10,75 @@ interface SEOHeadProps {
   canonical?: string;
   type?: 'website' | 'article' | 'service';
   image?: string;
+  noIndex?: boolean;
+  schemaJson?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const SEOHead = forwardRef<unknown, SEOHeadProps>(({
+const SEOHead = ({
   title,
   description,
   keywords,
   canonical,
   type = 'website',
   image = '/og-image.jpg',
-}: SEOHeadProps, _ref) => {
+  noIndex = false,
+  schemaJson,
+}: SEOHeadProps) => {
   const location = useLocation();
   const { language, isSpanish } = useTranslation();
+  const baseUrl = 'https://canary-detect.com';
 
-  useEffect(() => {
-    const baseUrl = 'https://canary-detect.com';
-    
-    // Calculate canonical URL - use provided or self-reference
-    const effectiveCanonical = canonical || `${baseUrl}${location.pathname}`;
-    
-    // Set html lang attribute
-    document.documentElement.lang = language;
-    
-    // Update document title
-    document.title = title;
-    
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', description);
-    }
-    
-    // Update keywords if provided
-    if (keywords) {
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (!metaKeywords) {
-        metaKeywords = document.createElement('meta');
-        metaKeywords.setAttribute('name', 'keywords');
-        document.head.appendChild(metaKeywords);
-      }
-      metaKeywords.setAttribute('content', keywords);
-    }
-    
-    // Update OG tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    const ogType = document.querySelector('meta[property="og:type"]');
-    const ogLocale = document.querySelector('meta[property="og:locale"]');
-    const ogLocaleAlt = document.querySelector('meta[property="og:locale:alternate"]');
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    
-    if (ogTitle) ogTitle.setAttribute('content', title);
-    if (ogDescription) ogDescription.setAttribute('content', description);
-    if (ogImage) ogImage.setAttribute('content', image.startsWith('http') ? image : `https://canary-detect.com${image}?v=2`);
-    if (ogType) ogType.setAttribute('content', type);
-    if (ogLocale) ogLocale.setAttribute('content', isSpanish ? 'es_ES' : 'en_ES');
-    if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', isSpanish ? 'en_GB' : 'es_ES');
-    if (ogUrl) ogUrl.setAttribute('content', effectiveCanonical);
-    
-    // Update Twitter tags
-    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-    const twitterImage = document.querySelector('meta[name="twitter:image"]');
-    const twitterUrl = document.querySelector('meta[name="twitter:url"]');
-    
-    if (twitterTitle) twitterTitle.setAttribute('content', title);
-    if (twitterDescription) twitterDescription.setAttribute('content', description);
-    if (twitterImage) twitterImage.setAttribute('content', image.startsWith('http') ? image : `https://canary-detect.com${image}?v=2`);
-    if (twitterUrl) twitterUrl.setAttribute('content', effectiveCanonical);
-    
-    // Always update or create canonical tag (self-referencing if not provided)
-    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink);
-    }
-    canonicalLink.setAttribute('href', effectiveCanonical);
+  const effectiveCanonical = canonical || `${baseUrl}${location.pathname}`;
+  const resolvedImage = image.startsWith('http') ? image : `${baseUrl}${image}?v=2`;
 
-    // Add/update hreflang tags
-    const enUrl = isSpanish 
-      ? `${baseUrl}${getEquivalentRoute(location.pathname, 'en')}`
-      : `${baseUrl}${location.pathname}`;
-    const esUrl = isSpanish
-      ? `${baseUrl}${location.pathname}`
-      : `${baseUrl}${getEquivalentRoute(location.pathname, 'es')}`;
+  const enUrl = isSpanish
+    ? `${baseUrl}${getEquivalentRoute(location.pathname, 'en')}`
+    : `${baseUrl}${location.pathname}`;
+  const esUrl = isSpanish
+    ? `${baseUrl}${location.pathname}`
+    : `${baseUrl}${getEquivalentRoute(location.pathname, 'es')}`;
 
-    // Manage hreflang link tags
-    let hreflangEn = document.querySelector('link[hreflang="en"]') as HTMLLinkElement;
-    let hreflangEs = document.querySelector('link[hreflang="es"]') as HTMLLinkElement;
-    let hreflangDefault = document.querySelector('link[hreflang="x-default"]') as HTMLLinkElement;
+  return (
+    <Helmet>
+      <html lang={language} />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
+      <link rel="canonical" href={effectiveCanonical} />
 
-    if (!hreflangEn) {
-      hreflangEn = document.createElement('link');
-      hreflangEn.setAttribute('rel', 'alternate');
-      hreflangEn.setAttribute('hreflang', 'en');
-      document.head.appendChild(hreflangEn);
-    }
-    hreflangEn.setAttribute('href', enUrl);
+      {/* Open Graph */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={effectiveCanonical} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={resolvedImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:locale" content={isSpanish ? 'es_ES' : 'en_ES'} />
+      <meta property="og:locale:alternate" content={isSpanish ? 'en_GB' : 'es_ES'} />
+      <meta property="og:site_name" content="Canary Detect" />
 
-    if (!hreflangEs) {
-      hreflangEs = document.createElement('link');
-      hreflangEs.setAttribute('rel', 'alternate');
-      hreflangEs.setAttribute('hreflang', 'es');
-      document.head.appendChild(hreflangEs);
-    }
-    hreflangEs.setAttribute('href', esUrl);
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={effectiveCanonical} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={resolvedImage} />
 
-    if (!hreflangDefault) {
-      hreflangDefault = document.createElement('link');
-      hreflangDefault.setAttribute('rel', 'alternate');
-      hreflangDefault.setAttribute('hreflang', 'x-default');
-      document.head.appendChild(hreflangDefault);
-    }
-    hreflangDefault.setAttribute('href', enUrl);
+      {/* Hreflang */}
+      <link rel="alternate" hrefLang="en" href={enUrl} />
+      <link rel="alternate" hrefLang="es" href={esUrl} />
+      <link rel="alternate" hrefLang="x-default" href={enUrl} />
 
-  }, [title, description, keywords, canonical, type, image, language, isSpanish, location.pathname]);
-  
-  return null;
-});
-
-SEOHead.displayName = 'SEOHead';
+      {/* Schema JSON-LD */}
+      {schemaJson && (
+        <script type="application/ld+json">
+          {JSON.stringify(Array.isArray(schemaJson) ? schemaJson : schemaJson)}
+        </script>
+      )}
+    </Helmet>
+  );
+};
 
 export default SEOHead;
