@@ -64,8 +64,11 @@ const MeetTheTeamSection = () => {
             <Sparkles className="h-4 w-4" />
           </span>
           <h1 className="font-heading text-3xl md:text-4xl font-bold mt-2 text-canary-navy">
-            Pete Ashcroft & Dave Poxon
+            {isSpanish ? "Conoce a Nuestro Equipo en Lanzarote" : "Meet Our Leak Detection Team in Lanzarote"}
           </h1>
+          <p className="font-heading text-xl md:text-2xl font-semibold mt-1 text-canary-navy/80">
+            Pete Ashcroft & Dave Poxon
+          </p>
           <p className="text-muted-foreground mt-2 text-lg italic">
             {isSpanish ? "Los Cazafugas" : "The Leaky Finders"}
           </p>
