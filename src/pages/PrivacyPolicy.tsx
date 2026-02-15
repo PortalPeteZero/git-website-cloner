@@ -1,8 +1,9 @@
 import { forwardRef } from "react";
+import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink, ArrowRight } from "lucide-react";
 
 const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref) => {
   const { isSpanish } = useLanguage();
@@ -229,6 +230,40 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
                 </ul>
               </>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Links Section */}
+      <section className="py-12 md:py-16 bg-muted/30">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-heading text-2xl font-bold text-canary-navy mb-6">
+              {isSpanish ? "Nuestros Servicios" : "Our Services"}
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {[
+                { name: isSpanish ? "Detección Fugas Agua" : "Water Leak Detection", path: isSpanish ? "/es/servicios/deteccion-fugas-agua" : "/services/water-leak-detection" },
+                { name: isSpanish ? "Fugas de Piscinas" : "Pool Leak Detection", path: isSpanish ? "/es/servicios/deteccion-fugas-piscinas" : "/services/pool-leak-detection" },
+                { name: isSpanish ? "Detección Subterránea" : "Underground Detection", path: isSpanish ? "/es/servicios/deteccion-subterranea" : "/services/underground-detection" },
+                { name: isSpanish ? "Reparación de Fugas" : "Leak Repair", path: isSpanish ? "/es/servicios/reparacion-fugas" : "/services/leak-repair" },
+                { name: isSpanish ? "Inspección Desagües" : "Drain Detection", path: isSpanish ? "/es/servicios/deteccion-desagues" : "/services/drain-detection" },
+                { name: isSpanish ? "Reparación Piscinas" : "Pool Leak Repair", path: isSpanish ? "/es/servicios/reparacion-fugas-piscinas" : "/services/pool-leak-repair" },
+                { name: isSpanish ? "Servicios Fontanería" : "Plumbing Services", path: isSpanish ? "/es/servicios-fontaneria" : "/plumbing-services" },
+                { name: isSpanish ? "Contacto" : "Contact Us", path: isSpanish ? "/es/contacto" : "/contact" },
+                { name: isSpanish ? "Conoce al Equipo" : "Meet the Team", path: isSpanish ? "/es/equipo" : "/meet-the-team" },
+                { name: isSpanish ? "Tecnología" : "Our Technology", path: isSpanish ? "/es/tecnologia" : "/technology" },
+              ].map((service) => (
+                <Link
+                  key={service.path}
+                  to={service.path}
+                  className="flex items-center gap-2 p-3 rounded-lg hover:bg-background transition-colors group text-sm"
+                >
+                  <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                  <span className="text-muted-foreground group-hover:text-foreground">{service.name}</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
