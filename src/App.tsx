@@ -23,6 +23,7 @@ const Technology = lazy(() => import("./pages/Technology"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogArticle = lazy(() => import("./pages/BlogArticle"));
 const LocationPage = lazy(() => import("./pages/LocationPage"));
+const Locations = lazy(() => import("./pages/Locations"));
 const MeetTheTeam = lazy(() => import("./pages/MeetTheTeam"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const Admin = lazy(() => import("./pages/Admin"));
@@ -124,6 +125,7 @@ const App = () => (
               <Route path="/technology" element={<LazyRoute><Technology /></LazyRoute>} />
               <Route path="/blog" element={<LazyRoute><Blog /></LazyRoute>} />
               <Route path="/blog/:slug" element={<LazyRoute><BlogArticle /></LazyRoute>} />
+              <Route path="/locations" element={<LazyRoute><Locations /></LazyRoute>} />
               <Route path="/locations/:location" element={<LazyRoute><LocationPage /></LazyRoute>} />
               <Route path="/meet-the-team" element={<LazyRoute><MeetTheTeam /></LazyRoute>} />
               <Route path="/privacy-policy" element={<LazyRoute><PrivacyPolicy /></LazyRoute>} />
@@ -150,6 +152,7 @@ const App = () => (
               <Route path="/es/tecnologia" element={<LazyRoute><Technology /></LazyRoute>} />
               <Route path="/es/blog" element={<LazyRoute><Blog /></LazyRoute>} />
               <Route path="/es/blog/:slug" element={<LazyRoute><BlogArticle /></LazyRoute>} />
+              <Route path="/es/ubicaciones" element={<LazyRoute><Locations /></LazyRoute>} />
               <Route path="/es/ubicaciones/:location" element={<LazyRoute><LocationPage /></LazyRoute>} />
               <Route path="/es/equipo" element={<LazyRoute><MeetTheTeam /></LazyRoute>} />
               <Route path="/es/politica-de-privacidad" element={<LazyRoute><PrivacyPolicy /></LazyRoute>} />
