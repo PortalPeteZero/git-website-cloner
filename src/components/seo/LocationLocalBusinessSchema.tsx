@@ -33,7 +33,7 @@ const LocationLocalBusinessSchema = ({
       : "Cash, Credit Card, Bank Transfer",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Zona Industrial, 1",
+      streetAddress: "C. las Maretas 12",
       addressLocality: "Playa Blanca",
       addressRegion: "Lanzarote",
       postalCode: "35580",

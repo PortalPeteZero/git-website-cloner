@@ -256,7 +256,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
                     <MapPin className="h-4 w-4 text-primary" />
                   </div>
                   <span className="text-slate-400 text-sm leading-relaxed">
-                    Zona Industrial, 1<br />
+                    C. las Maretas 12<br />
                     35580 Playa Blanca<br />
                     Lanzarote
                   </span>
