@@ -82,7 +82,7 @@ const PlumbingServices = () => {
       : "Looking for a plumber in Lanzarote? Canary Detect offers complete plumbing services: repairs, boilers, pool systems, and maintenance. 2-Year Guarantee on all work.",
     // Meta optimized for search: "Plumber Lanzarote" / "Fontanero Lanzarote"
     metaTitle: isSpanish 
-      ? "Fontanero Lanzarote | Servicios de Fontanería | Canary Detect" 
+      ? "Fontanero Lanzarote | Fontanería | Canary Detect" 
       : "Plumber Lanzarote | Plumbing Services | Canary Detect",
     canonical: isSpanish 
       ? "https://canary-detect.com/es/servicios-fontaneria" 
