@@ -30,7 +30,7 @@ const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const PlumbingServices = lazy(() => import("./pages/PlumbingServices"));
 const PlumbingServiceDetail = lazy(() => import("./pages/PlumbingServiceDetail"));
-
+const FontaneroLocationPage = lazy(() => import("./pages/FontaneroLocationPage"));
 const queryClient = new QueryClient();
 
 // Wrapper for lazy-loaded routes
@@ -132,17 +132,10 @@ const App = () => (
               <Route path="/es/services" element={<Navigate to="/es/servicios" replace />} />
               <Route path="/es/services/" element={<Navigate to="/es/servicios" replace />} />
               
-              {/* Legacy fontanero location redirects → plumbing services hub */}
-              <Route path="/es/fontanero-arrecife" element={<Navigate to="/es/servicios-fontaneria" replace />} />
-              <Route path="/es/fontanero-playa-blanca" element={<Navigate to="/es/servicios-fontaneria" replace />} />
-              <Route path="/es/fontanero-puerto-del-carmen" element={<Navigate to="/es/servicios-fontaneria" replace />} />
-              <Route path="/es/fontanero-costa-teguise" element={<Navigate to="/es/servicios-fontaneria" replace />} />
-              <Route path="/es/fontanero-yaiza" element={<Navigate to="/es/servicios-fontaneria" replace />} />
-              <Route path="/es/fontanero-tias" element={<Navigate to="/es/servicios-fontaneria" replace />} />
-              <Route path="/es/fontanero-teguise" element={<Navigate to="/es/servicios-fontaneria" replace />} />
-              <Route path="/es/fontanero-san-bartolome" element={<Navigate to="/es/servicios-fontaneria" replace />} />
-              <Route path="/es/fontanero-haria" element={<Navigate to="/es/servicios-fontaneria" replace />} />
-              <Route path="/es/fontanero-tinajo" element={<Navigate to="/es/servicios-fontaneria" replace />} />
+              {/* Fontanero location pages */}
+              {["arrecife","playa-blanca","puerto-del-carmen","costa-teguise","yaiza","tias","teguise","san-bartolome","haria","tinajo"].map(loc => (
+                <Route key={loc} path={`/es/fontanero-${loc}`} element={<LazyRoute><FontaneroLocationPage /></LazyRoute>} />
+              ))}
               
               {/* Spanish Routes */}
               <Route path="/es" element={<Index />} />
