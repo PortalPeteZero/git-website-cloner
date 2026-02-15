@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import SEOHead from "@/components/seo/SEOHead";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -90,6 +91,7 @@ const Admin = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Admin Dashboard | Canary Detect" description="Admin dashboard for Canary Detect blog management." noIndex />
       {/* Header */}
       <header className="bg-canary-navy text-white border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
