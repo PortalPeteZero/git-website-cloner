@@ -339,7 +339,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-heading font-bold mb-1">{t('contact.office')}</h3>
                     <p className="text-muted-foreground">
-                      Zona Industrial, 1<br />
+                      C. las Maretas 12<br />
                       35580 Playa Blanca, Lanzarote
                     </p>
                     <p className="text-muted-foreground text-sm mt-2 whitespace-pre-line">
@@ -364,7 +364,7 @@ const Contact = () => {
               {/* Map - Playa Blanca Office */}
               <div className="mt-8 aspect-video bg-muted rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.5!2d-13.8267!3d28.8608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc462a0e0e0e0e0e%3A0x0!2sZona%20Industrial%2C%20Playa%20Blanca!5e0!3m2!1sen!2ses!4v1700000000000!5m2!1sen!2ses"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.5!2d-13.8267!3d28.8608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc462a0e0e0e0e0e%3A0x0!2sC.%20las%20Maretas%2012%2C%20Playa%20Blanca!5e0!3m2!1sen!2ses!4v1700000000000!5m2!1sen!2ses"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
