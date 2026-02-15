@@ -475,6 +475,138 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Paredes húmedas en casas antiguas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
         seo: { title: "Detección Fugas Guatiza | Canary Detect", description: "Detección de fugas Guatiza. Casas de pueblo, fincas de cactus, sistemas de riego. +34 711 051 071", keywords: "detección fugas Guatiza, fugas agua Guatiza Lanzarote, fugas finca cactus, fugas riego Guatiza" }
+      },
+      "la-santa": {
+        name: "La Santa",
+        slug: "la-santa",
+        description: "Servicios profesionales de detección de fugas en La Santa, el famoso pueblo deportivo de Lanzarote.",
+        heroText: "La Santa y sus propiedades costeras necesitan detección de fugas especializada. Desde apartamentos deportivos hasta casas de pescadores tradicionales, proporcionamos servicios expertos en esta zona única del noroeste de Lanzarote.",
+        areaDescription: "La Santa es un pequeño pueblo costero en el noroeste de Lanzarote, conocido mundialmente por el antiguo Club La Santa y sus condiciones deportivas excepcionales. La zona cuenta con una mezcla de casas de pescadores tradicionales, apartamentos turísticos y propiedades residenciales modernas. Su ubicación costera expuesta significa que las propiedades enfrentan condiciones especialmente duras de viento, sal y humedad.",
+        aboutLocation: "La Santa es una joya costera en el municipio de Tinajo, famosa internacionalmente por sus condiciones deportivas y su laguna natural (Charco de La Santa). Este pequeño pueblo pesquero conserva su carácter auténtico canario mientras atrae a deportistas y turistas de todo el mundo. La costa volcánica ofrece paisajes dramáticos con piscinas naturales formadas por la lava. Las propiedades van desde casas tradicionales de pescadores hasta modernos apartamentos de vacaciones, muchos con vistas directas al Atlántico.",
+        landmarks: ["Charco de La Santa", "Club La Santa (histórico)", "Piscinas naturales", "Puerto pesquero", "Montaña Tenésara"],
+        neighborhoods: ["La Santa pueblo", "La Caleta de La Santa", "Zona residencial norte", "Urbanización La Santa Sport"],
+        commonWaterIssues: [
+          { title: "Corrosión Marina Severa", description: "La exposición directa al Atlántico causa corrosión acelerada en todas las tuberías metálicas. Los accesorios de cobre y hierro se deterioran mucho más rápido que en zonas interiores." },
+          { title: "Daño por Viento y Sal", description: "Los vientos constantes del noroeste depositan sal en superficies exteriores, afectando conexiones de tuberías expuestas, válvulas de piscina y sistemas de riego." },
+          { title: "Tuberías Subterráneas Antiguas", description: "Muchas propiedades tienen tuberías enterradas instaladas hace décadas sin documentación. Encontrar y reparar fugas requiere detección especializada con gas trazador." },
+          { title: "Problemas en Apartamentos Turísticos", description: "Los complejos de apartamentos deportivos tienen alta rotación y uso intensivo de duchas, lo que acelera el desgaste de la fontanería y genera fugas recurrentes." }
+        ],
+        serviceCoverage: "Cubrimos todo La Santa y sus alrededores: el pueblo costero con sus casas tradicionales, las urbanizaciones residenciales, los complejos de apartamentos turísticos y las propiedades rurales dispersas entre La Santa y Tinajo. También damos servicio a La Caleta y las zonas costeras cercanas.",
+        whyChooseUs: [
+          "Experiencia con propiedades costeras expuestas a condiciones marinas extremas del noroeste de Lanzarote",
+          "Equipos de detección resistentes al entorno salino—€80.000+ en tecnología profesional",
+          "Conocimiento de los materiales de construcción locales y sus problemas específicos de fontanería",
+          "Servicio rápido desde nuestra base—llegamos a La Santa en menos de 40 minutos",
+          "Garantía Sin Encontrar, Sin Pagar para total tranquilidad",
+          "Informes bilingües para propietarios internacionales de apartamentos deportivos"
+        ],
+        emergencyResponse: {
+          responseTime: "2-4 horas",
+          availability: "24/7 Emergencias",
+          description: "Las fugas de agua en La Santa pueden causar daños rápidamente por la combinación de humedad marina y viento. Nuestro equipo de emergencia llega equipado con todo lo necesario para localizar y aislar fugas inmediatamente, minimizando daños en propiedades costeras."
+        },
+        localChallenges: "La Santa presenta desafíos únicos por su ubicación costera expuesta: corrosión acelerada por la brisa marina constante que afecta a toda la fontanería exterior; casas de pescadores tradicionales con tuberías de hace 40-50 años nunca renovadas; complejos deportivos con uso intensivo de agua caliente que estresan las instalaciones; y propiedades de vacaciones que permanecen cerradas durante meses permitiendo que problemas pequeños se conviertan en grandes daños por agua.",
+        nearbyAreas: ["Tinajo", "Tiagua", "Mancha Blanca", "Teguise"],
+        services: [
+          { title: "Detección de Fugas de Agua La Santa", description: "Detección experta de fugas para propiedades costeras de La Santa. Métodos no invasivos para casas tradicionales y apartamentos.", href: `${serviceBasePath}/deteccion-fugas-agua`, icon: Droplets },
+          { title: "Detección Subterránea La Santa", description: "Localización de tuberías enterradas y fugas subterráneas en La Santa. Gas trazador y equipos acústicos.", href: `${serviceBasePath}/deteccion-subterranea`, icon: Search },
+          { title: "Detección de Fugas en Piscinas La Santa", description: "Detección de fugas en piscinas de villas y complejos de La Santa. Localización precisa.", href: `${serviceBasePath}/deteccion-fugas-piscinas`, icon: Waves },
+          { title: "Reparación de Fugas La Santa", description: "Reparación profesional de fugas en La Santa. Materiales anticorrosión para entorno marino.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
+        ],
+        relatedLinks: [
+          { title: "Guía sistema de agua Lanzarote", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
+          { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
+          { title: "Contador de agua corriendo", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
+        ],
+        seo: { title: "Detección Fugas La Santa | Canary Detect", description: "Detección de fugas La Santa, Lanzarote. Casas costeras, apartamentos deportivos, piscinas. Emergencias 24h. +34 711 051 071", keywords: "detección fugas La Santa, fugas agua La Santa Lanzarote, fugas piscina La Santa, fontanero La Santa" }
+      },
+      "tinajo": {
+        name: "Tinajo",
+        slug: "tinajo",
+        description: "Servicios profesionales de detección de fugas en Tinajo, municipio agrícola del centro-oeste de Lanzarote.",
+        heroText: "Las fincas agrícolas, propiedades rurales y viviendas de Tinajo necesitan detección de fugas especializada. Proporcionamos servicios profesionales en todo este extenso municipio, desde el pueblo hasta La Santa.",
+        areaDescription: "Tinajo es un municipio agrícola en el centro-oeste de Lanzarote que incluye las localidades de La Santa, Mancha Blanca y Tiagua. La zona combina agricultura tradicional con propiedades residenciales y turísticas. Su extensión territorial y la dispersión de las propiedades rurales hacen que la detección precisa de fugas sea especialmente valiosa para evitar excavaciones costosas en terreno volcánico.",
+        aboutLocation: "Tinajo es un municipio auténticamente rural en el centro-oeste de Lanzarote, puerta de entrada al Parque Nacional de Timanfaya. El pueblo de Tinajo mantiene su carácter agrícola tradicional, con casas canarias típicas rodeadas de fincas de cultivo. El municipio incluye el pueblo costero de La Santa, la histórica Mancha Blanca con su ermita de los Dolores, y Tiagua con su Museo Agrícola. La economía local combina agricultura, ganadería caprina y turismo rural, creando una mezcla única de necesidades de fontanería.",
+        landmarks: ["Parque Nacional de Timanfaya", "Ermita de los Dolores (Mancha Blanca)", "Museo Agrícola El Patio (Tiagua)", "Charco de La Santa", "Montaña Blanca"],
+        neighborhoods: ["Tinajo pueblo", "Mancha Blanca", "Tiagua", "La Santa", "La Vegueta", "Tajaste"],
+        commonWaterIssues: [
+          { title: "Fugas en Sistemas de Riego Agrícola", description: "Las fincas tienen kilómetros de tuberías de riego por goteo enterradas. Las fugas subterráneas desperdician agua—un recurso especialmente escaso y caro en Lanzarote." },
+          { title: "Aljibes y Cisternas Antiguas", description: "Muchas propiedades rurales dependen de aljibes de piedra volcánica para almacenar agua. Las grietas capilares en estos depósitos causan pérdidas silenciosas durante años." },
+          { title: "Problemas de Presión por Distancia", description: "Las propiedades rurales alejadas de la red principal sufren baja presión de agua. Las fugas en largos tramos de tubería de suministro son difíciles de localizar sin equipos especializados." },
+          { title: "Fosas Sépticas y Saneamiento", description: "Muchas propiedades no están conectadas al alcantarillado municipal. Las fosas sépticas y sus tuberías de conexión requieren inspección y mantenimiento especializado." }
+        ],
+        serviceCoverage: "Damos cobertura a todo el municipio de Tinajo: el pueblo principal con sus viviendas tradicionales, las fincas agrícolas dispersas por el territorio, Mancha Blanca y sus propiedades cercanas a Timanfaya, Tiagua con sus casas rurales, y La Santa en la costa. Nuestro servicio incluye propiedades residenciales, fincas agrícolas, apartamentos turísticos rurales y establecimientos de agroturismo.",
+        whyChooseUs: [
+          "Experiencia con sistemas de riego agrícola y detección de fugas en tuberías enterradas sin planos",
+          "Conocimiento profundo del terreno volcánico de Tinajo y las técnicas de excavación mínima",
+          "Equipo de gas trazador ideal para localizar fugas en largos tramos de tubería rural",
+          "Inspección especializada de aljibes y cisternas tradicionales de piedra volcánica",
+          "Garantía Sin Encontrar, Sin Pagar—especialmente importante para propiedades con problemas complejos",
+          "Servicio bilingüe para propietarios extranjeros de fincas rurales"
+        ],
+        emergencyResponse: {
+          responseTime: "2-4 horas",
+          availability: "24/7 Emergencias",
+          description: "Las fugas de agua en zonas rurales de Tinajo pueden causar daños significativos antes de ser detectadas, especialmente en propiedades desocupadas. Nuestro servicio de emergencia cubre todo el municipio, llegando con equipos completos para localizar y aislar fugas rápidamente."
+        },
+        localChallenges: "Tinajo presenta desafíos típicos de zonas agrícolas rurales: extensos sistemas de riego enterrados sin documentación que hacen difícil localizar fugas; aljibes tradicionales de piedra volcánica con décadas de uso y posibles grietas capilares; propiedades muy dispersas con largos tramos de tubería de suministro; terreno volcánico extremadamente duro que hace la excavación costosa; y fincas con sistemas de agua complejos que combinan riego, abastecimiento doméstico y ganadero.",
+        nearbyAreas: ["La Santa", "Mancha Blanca", "Tiagua", "Teguise", "San Bartolomé"],
+        services: [
+          { title: "Detección de Fugas de Agua Tinajo", description: "Detección experta de fugas para propiedades de Tinajo. Casas de pueblo, fincas agrícolas y propiedades rurales.", href: `${serviceBasePath}/deteccion-fugas-agua`, icon: Droplets },
+          { title: "Detección Subterránea Tinajo", description: "Localización de tuberías de riego y suministro enterradas en fincas de Tinajo. Gas trazador y equipos acústicos.", href: `${serviceBasePath}/deteccion-subterranea`, icon: Search },
+          { title: "Detección de Fugas en Piscinas Tinajo", description: "Detección de fugas en piscinas privadas y de agroturismo en Tinajo. Servicio profesional de localización.", href: `${serviceBasePath}/deteccion-fugas-piscinas`, icon: Waves },
+          { title: "Reparación de Fugas Tinajo", description: "Reparación profesional de fugas en Tinajo. Tuberías, aljibes, sistemas de riego y fosas sépticas.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
+        ],
+        relatedLinks: [
+          { title: "Guía de aljibes y cisternas", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
+          { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
+          { title: "Contador de agua corriendo sin usar grifos", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
+        ],
+        seo: { title: "Detección Fugas Tinajo | Fincas Rurales | Canary Detect", description: "Detección de fugas Tinajo, Lanzarote. Fincas agrícolas, aljibes, riego. Expertos rurales. +34 711 051 071", keywords: "detección fugas Tinajo, fugas agua Tinajo Lanzarote, fugas riego finca, fontanero Tinajo, fugas aljibe" }
+      },
+      "haria": {
+        name: "Haría",
+        slug: "haria",
+        description: "Servicios profesionales de detección de fugas en Haría, el verde valle de las mil palmeras de Lanzarote.",
+        heroText: "Las propiedades tradicionales y fincas del Valle de Haría necesitan detección de fugas especializada. Proporcionamos servicios expertos en este hermoso municipio del norte de Lanzarote.",
+        areaDescription: "Haría es el municipio más septentrional de Lanzarote, conocido como el 'Valle de las Mil Palmeras' por su microclima más húmedo y vegetación exuberante. La zona incluye el pueblo de Haría, Arrieta en la costa, y el Mirador del Río. Las propiedades van desde casas canarias tradicionales hasta fincas rurales renovadas. El microclima más húmedo del norte significa que los problemas de humedad son más comunes y más difíciles de diagnosticar.",
+        aboutLocation: "Haría es un oasis verde en el norte de Lanzarote, un valle rodeado de volcanes donde crecen más de mil palmeras. Este municipio es el más verde de la isla gracias a su microclima único que recoge más humedad que el resto de Lanzarote. El pueblo de Haría mantiene una atmósfera artística y bohemia, con su famoso mercado artesanal de los sábados. Fue el último lugar de residencia de César Manrique, cuya casa-museo se puede visitar. El municipio también incluye la zona costera de Arrieta con sus piscinas naturales, el espectacular Mirador del Río y los Jameos del Agua.",
+        landmarks: ["Mirador del Río", "Jameos del Agua", "Cueva de los Verdes", "Casa-Museo César Manrique", "Mercado artesanal de Haría", "Máguez"],
+        neighborhoods: ["Haría pueblo", "Arrieta", "Punta Mujeres", "Máguez", "Guinate", "Ye", "Órzola"],
+        commonWaterIssues: [
+          { title: "Humedad Excesiva por Microclima", description: "El clima más húmedo del norte hace que la humedad por condensación sea habitual. Distinguir entre humedad ambiental y fugas reales requiere equipos de diagnóstico profesionales." },
+          { title: "Tuberías Antiguas en Casas Tradicionales", description: "Las casas del casco antiguo de Haría tienen tuberías de hierro y plomo de hace 50-60 años. La corrosión interna causa fugas lentas que dañan los gruesos muros de piedra." },
+          { title: "Sistemas de Captación de Agua de Lluvia", description: "Muchas propiedades aprovechan la mayor pluviosidad del norte con sistemas de captación y aljibes que requieren inspección y mantenimiento periódico." },
+          { title: "Fugas en Propiedades Turísticas Costeras", description: "Los apartamentos de Arrieta y Punta Mujeres, muy populares entre turistas, sufren el desgaste del uso intensivo combinado con la corrosión marina." }
+        ],
+        serviceCoverage: "Cubrimos todo el municipio de Haría: desde el pueblo de Haría con sus casas tradicionales y palmeras, pasando por Arrieta y Punta Mujeres en la costa, hasta los pequeños pueblos de Máguez, Guinate, Ye y Órzola en el extremo norte. Nuestro servicio incluye viviendas residenciales, fincas rurales, apartamentos turísticos costeros y propiedades históricas.",
+        whyChooseUs: [
+          "Experiencia con diagnóstico de humedad en el microclima más húmedo de Lanzarote—distinguimos fugas reales de condensación",
+          "Cámaras termográficas de alta sensibilidad para detectar fugas detrás de gruesos muros de piedra volcánica",
+          "Conocimiento de los sistemas de captación de agua de lluvia típicos del norte de la isla",
+          "Equipos acústicos y de gas trazador para tuberías enterradas en terreno volcánico sin planos",
+          "Garantía Sin Encontrar, Sin Pagar—tranquilidad total para propietarios",
+          "Informes profesionales bilingües para la creciente comunidad internacional del norte de Lanzarote"
+        ],
+        emergencyResponse: {
+          responseTime: "3-5 horas",
+          availability: "24/7 Emergencias",
+          description: "Aunque Haría está en el norte de Lanzarote, nuestro servicio de emergencia cubre todo el municipio. Llegamos con equipos completos para localizar fugas en cualquier tipo de propiedad, desde casas antiguas en el casco de Haría hasta apartamentos costeros en Arrieta."
+        },
+        localChallenges: "Haría presenta desafíos únicos del norte de Lanzarote: el microclima más húmedo de la isla dificulta el diagnóstico de humedad—¿es condensación o una fuga real? Las casas tradicionales del casco antiguo tienen muros de piedra volcánica de 60-80cm de grosor que ocultan las tuberías; las propiedades en Arrieta y Punta Mujeres sufren corrosión marina intensa; muchas fincas rurales tienen sistemas de captación de agua de lluvia y aljibes que requieren inspección especializada; y el terreno montañoso del norte crea desafíos de presión de agua y acceso.",
+        nearbyAreas: ["Teguise", "Arrieta", "Punta Mujeres", "Órzola", "Guatiza"],
+        services: [
+          { title: "Detección de Fugas de Agua Haría", description: "Detección experta de fugas en Haría. Diagnóstico diferencial de humedad vs fugas en el microclima más húmedo de Lanzarote.", href: `${serviceBasePath}/deteccion-fugas-agua`, icon: Droplets },
+          { title: "Detección Subterránea Haría", description: "Localización de tuberías enterradas y fugas subterráneas en fincas y propiedades rurales de Haría.", href: `${serviceBasePath}/deteccion-subterranea`, icon: Search },
+          { title: "Detección de Fugas en Piscinas Haría", description: "Detección de fugas en piscinas privadas del municipio de Haría. Servicio profesional con localización precisa.", href: `${serviceBasePath}/deteccion-fugas-piscinas`, icon: Waves },
+          { title: "Reparación de Fugas Haría", description: "Reparación profesional de fugas en Haría. Casas tradicionales, aljibes, tuberías y piscinas.", href: `${serviceBasePath}/reparacion-fugas`, icon: Wrench }
+        ],
+        relatedLinks: [
+          { title: "Guía sistema de agua Lanzarote", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
+          { title: "Paredes húmedas: causas y soluciones", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
+          { title: "Imagen térmica para detección de fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
+        ],
+        seo: { title: "Detección Fugas Haría | Norte Lanzarote | Canary Detect", description: "Detección de fugas Haría y norte de Lanzarote. Arrieta, Punta Mujeres, Órzola. Diagnóstico humedad experto. 711 051 071", keywords: "detección fugas Haría, fugas agua Haría Lanzarote, fugas Arrieta, fontanero norte Lanzarote, humedad Haría" }
       }
     };
   }
@@ -910,9 +1042,142 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Damp walls in old houses", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
       seo: { title: "Leak Detection Guatiza | Canary Detect", description: "Leak detection Guatiza. Village houses, cactus fincas, irrigation systems. Call +34 711 051 071", keywords: "leak detection Guatiza, water leak Guatiza Lanzarote, cactus finca leak, irrigation leak Guatiza" }
+    },
+    "la-santa": {
+      name: "La Santa",
+      slug: "la-santa",
+      description: "Professional leak detection services in La Santa, Lanzarote's famous sports village.",
+      heroText: "La Santa and its coastal properties need specialist leak detection. From sports apartments to traditional fishing houses, we provide expert services in this unique northwest Lanzarote location.",
+      areaDescription: "La Santa is a small coastal village in northwest Lanzarote, known worldwide for the former Club La Santa and its exceptional sporting conditions. The area features a mix of traditional fishing houses, holiday apartments and modern residential properties. Its exposed coastal position means properties face particularly harsh conditions from wind, salt and moisture.",
+      aboutLocation: "La Santa is a coastal gem in the municipality of Tinajo, internationally famous for its sporting conditions and natural lagoon (Charco de La Santa). This small fishing village retains its authentic Canarian character while attracting athletes and tourists from around the world. The volcanic coastline offers dramatic landscapes with natural lava pools. Properties range from traditional fishermen's cottages to modern holiday apartments, many with direct Atlantic views.",
+      landmarks: ["Charco de La Santa", "Club La Santa (historic)", "Natural pools", "Fishing harbour", "Montaña Tenésara"],
+      neighborhoods: ["La Santa village", "La Caleta de La Santa", "Northern residential zone", "La Santa Sport development"],
+      commonWaterIssues: [
+        { title: "Severe Marine Corrosion", description: "Direct Atlantic exposure causes accelerated corrosion on all metal pipework. Copper and iron fittings deteriorate far faster than in inland areas." },
+        { title: "Wind and Salt Damage", description: "Constant northwest winds deposit salt on exterior surfaces, affecting exposed pipe connections, pool valves and irrigation systems." },
+        { title: "Old Underground Pipes", description: "Many properties have buried pipes installed decades ago without documentation. Finding and repairing leaks requires specialist tracer gas detection." },
+        { title: "Holiday Apartment Issues", description: "Sports apartment complexes have high turnover and intensive shower use, accelerating plumbing wear and generating recurring leaks." }
+      ],
+      serviceCoverage: "We cover all of La Santa and surrounding areas: the coastal village with its traditional houses, residential developments, holiday apartment complexes and scattered rural properties between La Santa and Tinajo. We also serve La Caleta and nearby coastal areas.",
+      whyChooseUs: [
+        "Experience with coastal properties exposed to extreme northwest marine conditions",
+        "Detection equipment resistant to saline environments—€80,000+ in professional technology",
+        "Knowledge of local building materials and their specific plumbing challenges",
+        "Fast service from our base—we reach La Santa in under 40 minutes",
+        "No Find, No Fee guarantee for complete peace of mind",
+        "Bilingual reports for international sports apartment owners"
+      ],
+      emergencyResponse: {
+        responseTime: "2-4 hours",
+        availability: "24/7 Emergency",
+        description: "Water leaks in La Santa can cause rapid damage due to the combination of marine moisture and wind. Our emergency team arrives equipped with everything needed to locate and isolate leaks immediately, minimising damage to coastal properties."
+      },
+      localChallenges: "La Santa presents unique challenges from its exposed coastal location: accelerated corrosion from constant sea breeze affecting all exterior plumbing; traditional fishermen's houses with 40-50 year old pipes never renewed; sports complexes with intensive hot water use that stresses installations; and holiday properties left closed for months allowing small problems to become major water damage.",
+      nearbyAreas: ["Tinajo", "Tiagua", "Mancha Blanca", "Teguise"],
+      services: [
+        { title: "Water Leak Detection La Santa", description: "Expert leak detection for La Santa coastal properties. Non-invasive methods for traditional houses and apartments.", href: `${serviceBasePath}/water-leak-detection`, icon: Droplets },
+        { title: "Underground Detection La Santa", description: "Buried pipe and underground leak detection in La Santa. Tracer gas and acoustic equipment.", href: `${serviceBasePath}/underground-detection`, icon: Search },
+        { title: "Pool Leak Detection La Santa", description: "Pool leak detection for La Santa villas and complexes. Precise pinpointing service.", href: `${serviceBasePath}/pool-leak-detection`, icon: Waves },
+        { title: "Leak Repair La Santa", description: "Professional leak repair in La Santa. Anti-corrosion materials for marine environment.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
+      ],
+      relatedLinks: [
+        { title: "Lanzarote water system guide", href: `${blogBasePath}/master-your-lanzarote-water-system` },
+        { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
+        { title: "Water meter running with taps off", href: `${blogBasePath}/water-meter-running-when-taps-off` },
+      ],
+      seo: { title: "Leak Detection La Santa | Canary Detect", description: "Leak detection La Santa, Lanzarote. Coastal houses, sports apartments, pools. 24h emergency. Call +34 711 051 071", keywords: "leak detection La Santa, water leak La Santa Lanzarote, pool leak La Santa, plumber La Santa" }
+    },
+    "tinajo": {
+      name: "Tinajo",
+      slug: "tinajo",
+      description: "Professional leak detection services in Tinajo, an agricultural municipality in central-west Lanzarote.",
+      heroText: "Agricultural fincas, rural properties and homes in Tinajo need specialist leak detection. We provide professional services across this extensive municipality, from the village centre to La Santa.",
+      areaDescription: "Tinajo is an agricultural municipality in central-west Lanzarote that includes the villages of La Santa, Mancha Blanca and Tiagua. The area combines traditional agriculture with residential and tourist properties. Its large territory and dispersed rural properties make precise leak detection especially valuable to avoid costly excavation in volcanic terrain.",
+      aboutLocation: "Tinajo is an authentically rural municipality in central-west Lanzarote, gateway to Timanfaya National Park. The village of Tinajo maintains its traditional agricultural character, with typical Canarian houses surrounded by farming fincas. The municipality includes the coastal village of La Santa, historic Mancha Blanca with its Ermita de los Dolores, and Tiagua with its Agricultural Museum. The local economy combines agriculture, goat farming and rural tourism, creating a unique mix of plumbing requirements.",
+      landmarks: ["Timanfaya National Park", "Ermita de los Dolores (Mancha Blanca)", "El Patio Agricultural Museum (Tiagua)", "Charco de La Santa", "Montaña Blanca"],
+      neighborhoods: ["Tinajo village", "Mancha Blanca", "Tiagua", "La Santa", "La Vegueta", "Tajaste"],
+      commonWaterIssues: [
+        { title: "Agricultural Irrigation Leaks", description: "Fincas have kilometres of buried drip irrigation pipes. Underground leaks waste water—an especially scarce and expensive resource in Lanzarote." },
+        { title: "Old Aljibes and Cisterns", description: "Many rural properties depend on volcanic stone aljibes for water storage. Hairline cracks in these tanks cause silent losses over years." },
+        { title: "Pressure Problems from Distance", description: "Rural properties far from the main network suffer low water pressure. Leaks in long supply pipe runs are hard to locate without specialist equipment." },
+        { title: "Septic Tanks and Sanitation", description: "Many properties aren't connected to municipal sewerage. Septic tanks and their connecting pipes require specialist inspection and maintenance." }
+      ],
+      serviceCoverage: "We cover the entire Tinajo municipality: the main village with its traditional homes, dispersed agricultural fincas, Mancha Blanca and its properties near Timanfaya, Tiagua with its rural houses, and La Santa on the coast. Our service includes residential properties, agricultural fincas, rural holiday apartments and agrotourism establishments.",
+      whyChooseUs: [
+        "Experience with agricultural irrigation systems and detecting leaks in buried pipes without plans",
+        "Deep knowledge of Tinajo's volcanic terrain and minimal excavation techniques",
+        "Tracer gas equipment ideal for locating leaks in long rural pipe runs",
+        "Specialist inspection of traditional volcanic stone aljibes and cisterns",
+        "No Find, No Fee guarantee—especially important for properties with complex problems",
+        "Bilingual service for foreign rural finca owners"
+      ],
+      emergencyResponse: {
+        responseTime: "2-4 hours",
+        availability: "24/7 Emergency",
+        description: "Water leaks in rural Tinajo areas can cause significant damage before being detected, especially in unoccupied properties. Our emergency service covers the entire municipality, arriving with complete equipment to locate and isolate leaks quickly."
+      },
+      localChallenges: "Tinajo presents typical rural agricultural challenges: extensive buried irrigation systems without documentation making leak location difficult; traditional volcanic stone aljibes with decades of use and potential hairline cracks; highly dispersed properties with long supply pipe runs; extremely hard volcanic terrain making excavation expensive; and fincas with complex water systems combining irrigation, domestic supply and livestock.",
+      nearbyAreas: ["La Santa", "Mancha Blanca", "Tiagua", "Teguise", "San Bartolomé"],
+      services: [
+        { title: "Water Leak Detection Tinajo", description: "Expert leak detection for Tinajo properties. Village houses, agricultural fincas and rural properties.", href: `${serviceBasePath}/water-leak-detection`, icon: Droplets },
+        { title: "Underground Detection Tinajo", description: "Buried irrigation and supply pipe detection on Tinajo fincas. Tracer gas and acoustic equipment.", href: `${serviceBasePath}/underground-detection`, icon: Search },
+        { title: "Pool Leak Detection Tinajo", description: "Pool leak detection for private and agrotourism pools in Tinajo. Professional pinpointing service.", href: `${serviceBasePath}/pool-leak-detection`, icon: Waves },
+        { title: "Leak Repair Tinajo", description: "Professional leak repair in Tinajo. Pipes, aljibes, irrigation systems and septic tanks.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
+      ],
+      relatedLinks: [
+        { title: "Aljibes & cisterns guide", href: `${blogBasePath}/master-your-lanzarote-water-system` },
+        { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
+        { title: "Water meter running with taps off", href: `${blogBasePath}/water-meter-running-when-taps-off` },
+      ],
+      seo: { title: "Leak Detection Tinajo | Rural Fincas | Canary Detect", description: "Leak detection Tinajo, Lanzarote. Agricultural fincas, aljibes, irrigation. Rural specialists. Call +34 711 051 071", keywords: "leak detection Tinajo, water leak Tinajo Lanzarote, irrigation finca leak, plumber Tinajo, aljibe leak" }
+    },
+    "haria": {
+      name: "Haría",
+      slug: "haria",
+      description: "Professional leak detection services in Haría, Lanzarote's green valley of a thousand palm trees.",
+      heroText: "Traditional properties and fincas in the Haría Valley need specialist leak detection. We provide expert services in this beautiful municipality in northern Lanzarote.",
+      areaDescription: "Haría is Lanzarote's most northerly municipality, known as the 'Valley of a Thousand Palm Trees' for its wetter microclimate and lush vegetation. The area includes the village of Haría, coastal Arrieta and the Mirador del Río. Properties range from traditional Canarian houses to renovated rural fincas. The north's wetter microclimate means dampness problems are more common and harder to diagnose.",
+      aboutLocation: "Haría is a green oasis in northern Lanzarote, a valley surrounded by volcanoes where over a thousand palm trees grow. This municipality is the greenest on the island thanks to its unique microclimate that captures more moisture than the rest of Lanzarote. The village of Haría maintains an artistic, bohemian atmosphere with its famous Saturday artisan market. It was César Manrique's last place of residence, whose house-museum can be visited. The municipality also includes the coastal area of Arrieta with its natural pools, the spectacular Mirador del Río and Jameos del Agua.",
+      landmarks: ["Mirador del Río", "Jameos del Agua", "Cueva de los Verdes", "César Manrique House-Museum", "Haría Artisan Market", "Máguez"],
+      neighborhoods: ["Haría village", "Arrieta", "Punta Mujeres", "Máguez", "Guinate", "Ye", "Órzola"],
+      commonWaterIssues: [
+        { title: "Excessive Microclimate Moisture", description: "The north's wetter climate makes condensation dampness common. Distinguishing between environmental moisture and actual leaks requires professional diagnostic equipment." },
+        { title: "Old Pipes in Traditional Houses", description: "Houses in Haría's old quarter have iron and lead pipes from 50-60 years ago. Internal corrosion causes slow leaks that damage thick stone walls." },
+        { title: "Rainwater Harvesting Systems", description: "Many properties exploit the north's higher rainfall with harvesting systems and aljibes that need periodic inspection and maintenance." },
+        { title: "Coastal Tourist Property Leaks", description: "Apartments in Arrieta and Punta Mujeres, very popular with tourists, suffer from intensive-use wear combined with marine corrosion." }
+      ],
+      serviceCoverage: "We cover the entire Haría municipality: from the village of Haría with its traditional houses and palm trees, through coastal Arrieta and Punta Mujeres, to the small villages of Máguez, Guinate, Ye and Órzola at the northern tip. Our service includes residential homes, rural fincas, coastal holiday apartments and historic properties.",
+      whyChooseUs: [
+        "Experience with dampness diagnosis in Lanzarote's wettest microclimate—we distinguish real leaks from condensation",
+        "High-sensitivity thermal imaging cameras to detect leaks behind thick volcanic stone walls",
+        "Knowledge of rainwater harvesting systems typical of the island's north",
+        "Acoustic and tracer gas equipment for buried pipes in volcanic terrain without plans",
+        "No Find, No Fee guarantee—complete peace of mind for property owners",
+        "Professional bilingual reports for the growing international community in northern Lanzarote"
+      ],
+      emergencyResponse: {
+        responseTime: "3-5 hours",
+        availability: "24/7 Emergency",
+        description: "Although Haría is in northern Lanzarote, our emergency service covers the entire municipality. We arrive with complete equipment to locate leaks in any type of property, from old houses in Haría village to coastal apartments in Arrieta."
+      },
+      localChallenges: "Haría presents unique challenges from northern Lanzarote: the island's wettest microclimate makes dampness diagnosis complex—is it condensation or an actual leak? Traditional houses in the old quarter have 60-80cm thick volcanic stone walls hiding pipes; properties in Arrieta and Punta Mujeres suffer intense marine corrosion; many rural fincas have rainwater harvesting systems and aljibes requiring specialist inspection; and the mountainous northern terrain creates water pressure and access challenges.",
+      nearbyAreas: ["Teguise", "Arrieta", "Punta Mujeres", "Órzola", "Guatiza"],
+      services: [
+        { title: "Water Leak Detection Haría", description: "Expert leak detection in Haría. Differential diagnosis of dampness vs leaks in Lanzarote's wettest microclimate.", href: `${serviceBasePath}/water-leak-detection`, icon: Droplets },
+        { title: "Underground Detection Haría", description: "Buried pipe and underground leak detection for Haría fincas and rural properties.", href: `${serviceBasePath}/underground-detection`, icon: Search },
+        { title: "Pool Leak Detection Haría", description: "Pool leak detection for private pools across the Haría municipality. Professional precise pinpointing.", href: `${serviceBasePath}/pool-leak-detection`, icon: Waves },
+        { title: "Leak Repair Haría", description: "Professional leak repair in Haría. Traditional houses, aljibes, pipes and pools.", href: `${serviceBasePath}/leak-repair`, icon: Wrench }
+      ],
+      relatedLinks: [
+        { title: "Lanzarote water system guide", href: `${blogBasePath}/master-your-lanzarote-water-system` },
+        { title: "Damp walls: causes & solutions", href: `${blogBasePath}/damp-walls-causes-solutions` },
+        { title: "Thermal imaging for leak detection", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
+      ],
+      seo: { title: "Leak Detection Haría | North Lanzarote | Canary Detect", description: "Leak detection Haría and north Lanzarote. Arrieta, Punta Mujeres, Órzola. Expert dampness diagnosis. Call 711 051 071", keywords: "leak detection Haría, water leak Haría Lanzarote, leak Arrieta, plumber north Lanzarote, dampness Haría" }
     }
   };
 };
+
 
 // UI text translations for LocationPage component
 export const getLocationUIText = (isSpanish: boolean) => {
