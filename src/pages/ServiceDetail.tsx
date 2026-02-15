@@ -388,10 +388,40 @@ const ServiceDetail = () => {
               )}
               
               {service.richContent ? (
-                <div className="prose prose-lg max-w-none prose-headings:font-heading prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:font-bold prose-h3:mt-8 prose-h3:mb-3 prose-p:text-muted-foreground prose-p:leading-relaxed prose-li:text-muted-foreground prose-strong:text-foreground prose-blockquote:border-l-primary prose-blockquote:bg-muted/50 prose-blockquote:rounded-r-lg prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:italic prose-blockquote:text-muted-foreground prose-a:text-primary prose-a:font-medium hover:prose-a:underline">
+                <div className="max-w-none space-y-6">
                   <ReactMarkdown
                     rehypePlugins={[rehypeRaw]}
                     components={{
+                      h1: ({ children }) => (
+                        <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-0 mb-6">{children}</h1>
+                      ),
+                      h2: ({ children }) => (
+                        <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mt-12 mb-5 pb-3 border-b border-border">{children}</h2>
+                      ),
+                      h3: ({ children }) => (
+                        <h3 className="font-heading text-xl md:text-2xl font-bold text-foreground mt-8 mb-4">{children}</h3>
+                      ),
+                      h4: ({ children }) => (
+                        <h4 className="font-heading text-lg font-semibold text-foreground/90 mt-6 mb-3">{children}</h4>
+                      ),
+                      p: ({ children }) => (
+                        <p className="text-muted-foreground leading-relaxed mb-5 max-w-none">{children}</p>
+                      ),
+                      ul: ({ children }) => (
+                        <ul className="my-4 pl-6 space-y-2 list-disc marker:text-primary">{children}</ul>
+                      ),
+                      ol: ({ children }) => (
+                        <ol className="my-4 pl-6 space-y-2 list-decimal marker:text-primary">{children}</ol>
+                      ),
+                      li: ({ children }) => (
+                        <li className="text-muted-foreground leading-relaxed">{children}</li>
+                      ),
+                      strong: ({ children }) => (
+                        <strong className="text-foreground font-semibold">{children}</strong>
+                      ),
+                      blockquote: ({ children }) => (
+                        <blockquote className="border-l-4 border-primary bg-muted/50 rounded-r-lg py-3 px-5 my-6 italic text-muted-foreground">{children}</blockquote>
+                      ),
                       a: ({ href, children, ...props }) => {
                         const isInternal = href?.startsWith("/");
                         if (isInternal && href) {
