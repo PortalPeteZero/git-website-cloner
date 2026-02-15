@@ -990,7 +990,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Traditional Lanzarote water systems", href: `${blogBasePath}/master-your-lanzarote-water-system` },
         { title: "Damp walls in old houses", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Teguise | Historic & Rural | Canary Detect", description: "Leak detection Teguise. Historic buildings, rural fincas, coastal properties. Non-invasive methods. Call +34 711 051 071", keywords: "leak detection Teguise, water leak detection Teguise, historic building leak Lanzarote, rural leak Teguise, Costa Teguise leak" }
+      seo: { title: "Leak Detection Teguise | Historic & Rural Lanzarote", description: "Leak detection Teguise. Historic buildings, rural fincas, coastal properties. Non-invasive methods. Call +34 711 051 071", keywords: "leak detection Teguise, water leak detection Teguise, historic building leak Lanzarote, rural leak Teguise, Costa Teguise leak" }
     },
     "puerto-calero": {
       name: "Puerto Calero",
