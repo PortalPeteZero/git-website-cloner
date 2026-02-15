@@ -529,7 +529,7 @@ const ServiceDetail = () => {
                       >
                         <img 
                           src={img} 
-                          alt={`${service.title} ${index + 1}`}
+                          alt={`${service.title} - ${isSpanish ? 'ejemplo de trabajo' : 'work example'} ${index + 1}`}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           loading="lazy"
                           decoding="async"
@@ -566,7 +566,7 @@ const ServiceDetail = () => {
                   >
                     <img 
                       src={img} 
-                      alt={`${service.title} ${index + 1}`}
+                      alt={`${service.title} - ${isSpanish ? 'ejemplo de trabajo' : 'work example'} ${index + 1}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                       decoding="async"
@@ -676,7 +676,7 @@ const ServiceDetail = () => {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2 }}
               src={lightboxImages[lightboxIndex]}
-              alt={`${service.title} ${lightboxIndex + 1}`}
+              alt={`${service.title} - ${isSpanish ? 'foto ampliada' : 'enlarged photo'} ${lightboxIndex + 1}`}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />

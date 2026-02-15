@@ -1070,7 +1070,7 @@ We serve pool owners in Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza, a
     category: "Case Studies",
     image: emergencyLeakAcousticImg,
     metaTitle: "Emergency Leak Detection & Repair Lanzarote | One Afternoon",
-    metaDescription: "Real case study: hidden water leak detected, located, repaired and reinstated in one afternoon. Precision technology, minimal disruption. Canary Detect Lanzarote.",
+    metaDescription: "Real case study: hidden water leak detected, located, repaired and reinstated in one afternoon. Precision technology, minimal disruption.",
     keywords: "emergency leak detection Lanzarote, water leak repair, hidden leak found, pipe leak repair, leak detection case study, Canary Detect",
     readTime: 6,
     content: `
@@ -3131,7 +3131,7 @@ Servimos a propietarios de piscinas en Playa Blanca, Puerto del Carmen, Costa Te
     category: "Casos de Éxito",
     image: emergencyLeakAcousticImg,
     metaTitle: "Detección y Reparación de Fugas Emergencia Lanzarote",
-    metaDescription: "Caso real: fuga de agua oculta detectada, localizada, reparada y restaurada en una tarde. Tecnología de precisión, mínima interrupción. Canary Detect Lanzarote.",
+    metaDescription: "Caso real: fuga de agua oculta detectada, localizada, reparada y restaurada en una tarde. Tecnología de precisión, mínima interrupción.",
     keywords: "detección fugas emergencia Lanzarote, reparación fugas agua, fuga oculta encontrada, reparación tubería, caso de éxito, Canary Detect",
     readTime: 6,
     content: `
