@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import BreadcrumbNav from "@/components/ui/breadcrumb-nav";
 
 const PlumbingServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -147,19 +148,20 @@ const PlumbingServiceDetail = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
         </div>
         
-        <div className="container mx-auto px-4 relative z-10 text-center py-10 md:py-16">
+        <div className="container mx-auto px-4 relative z-10 text-center py-8 md:py-14">
+          <BreadcrumbNav 
+            items={[
+              { label: isSpanish ? "Inicio" : "Home", href: isSpanish ? "/es" : "/" },
+              { label: isSpanish ? "Fontanería" : "Plumbing", href: plumbingBasePath },
+              { label: title },
+            ]}
+            className="text-left"
+          />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Link 
-              to={isSpanish ? "/es/servicios-fontaneria" : "/plumbing-services"}
-              className="inline-flex items-center text-primary hover:text-primary/80 mb-3 md:mb-4 transition-colors text-sm md:text-base"
-            >
-              <ArrowRight className="h-4 w-4 rotate-180 mr-2" />
-              {content.backToServices}
-            </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 px-2 drop-shadow-lg">
               {title}
             </h1>

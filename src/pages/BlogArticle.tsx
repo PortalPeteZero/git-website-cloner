@@ -7,6 +7,7 @@ import SEOHead from "@/components/seo/SEOHead";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, Clock, ArrowLeft, ArrowRight } from "lucide-react";
+import BreadcrumbNav from "@/components/ui/breadcrumb-nav";
 import { getArticleBySlug, getRelatedArticles, BLOG_IMAGES } from "@/data/blogArticles";
 import { supabase } from "@/integrations/supabase/client";
 import ReactMarkdown from "react-markdown";
@@ -357,7 +358,12 @@ const BlogArticle = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-canary-navy/95 via-canary-navy/80 to-canary-navy/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-canary-navy/80 via-transparent to-transparent" />
         </div>
-        <div className="container mx-auto px-4 relative z-10 pt-12 pb-10 md:pt-16 md:pb-14">
+        <div className="container mx-auto px-4 relative z-10 pt-8 pb-10 md:pt-10 md:pb-14">
+          <BreadcrumbNav items={[
+            { label: isSpanish ? "Inicio" : "Home", href: isSpanish ? "/es" : "/" },
+            { label: "Blog", href: blogBasePath },
+            { label: title },
+          ]} />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

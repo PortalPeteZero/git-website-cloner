@@ -18,18 +18,21 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
     { to: getRoute("/services", "/es/servicios"), label: isSpanish ? "Servicios" : "Services" },
     { to: getRoute("/technology", "/es/tecnologia"), label: isSpanish ? "Tecnología" : "Technology" },
     { to: getRoute("/case-studies", "/es/casos-de-exito"), label: isSpanish ? "Casos de Éxito" : "Case Studies" },
+    { to: getRoute("/blog", "/es/blog"), label: "Blog" },
+    { to: getRoute("/meet-the-team", "/es/equipo"), label: isSpanish ? "Nuestro Equipo" : "Meet the Team" },
     { to: getRoute("/contact", "/es/contacto"), label: isSpanish ? "Contacto" : "Contact" },
   ];
 
   const serviceLinks = [
-    { to: getRoute("/services/water-leak-detection", "/es/servicios/deteccion-fugas-agua"), label: isSpanish ? "Detección de Fugas de Agua" : "Water Leak Detection" },
-    { to: getRoute("/services/pool-leak-detection", "/es/servicios/deteccion-fugas-piscinas"), label: isSpanish ? "Detección de Fugas de Piscinas" : "Pool Leak Detection" },
+    { to: getRoute("/services/water-leak-detection", "/es/servicios/deteccion-fugas-agua"), label: isSpanish ? "Detección Fugas de Agua" : "Water Leak Detection" },
+    { to: getRoute("/services/pool-leak-detection", "/es/servicios/deteccion-fugas-piscinas"), label: isSpanish ? "Detección Fugas Piscinas" : "Pool Leak Detection" },
     { to: getRoute("/services/underground-detection", "/es/servicios/deteccion-subterranea"), label: isSpanish ? "Detección Subterránea" : "Underground Detection" },
     { to: getRoute("/services/drain-detection", "/es/servicios/deteccion-desagues"), label: isSpanish ? "Inspección de Desagües" : "Drain & Pipe Surveys" },
     { to: getRoute("/services/leak-repair", "/es/servicios/reparacion-fugas"), label: isSpanish ? "Reparación de Fugas" : "Leak Repair" },
     { to: getRoute("/services/pool-leak-repair", "/es/servicios/reparacion-fugas-piscinas"), label: isSpanish ? "Reparación Fugas Piscinas" : "Pool Leak Repair" },
     { to: getRoute("/services/damp-moisture-mapping", "/es/servicios/mapeo-humedad"), label: isSpanish ? "Mapeo de Humedad" : "Damp Mapping" },
-    { to: getRoute("/plumbing-services", "/es/servicios-fontaneria"), label: isSpanish ? "Fontanería y Mantenimiento" : "Plumbing & Maintenance" },
+    { to: getRoute("/plumbing-services", "/es/servicios-fontaneria"), label: isSpanish ? "Fontanería" : "Plumbing Services" },
+    { to: getRoute("/services/free-leak-confirmation", "/es/servicios/confirmacion-fugas-gratis"), label: isSpanish ? "Confirmación Gratis" : "Free Leak Confirmation" },
   ];
 
   return (
@@ -199,7 +202,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
                 <span className="w-8 h-0.5 bg-primary"></span>
                 {isSpanish ? "Zonas" : "Areas"}
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-2 columns-2">
                 {[
                   { name: "Arrecife", slug: "arrecife" },
                   { name: "Puerto del Carmen", slug: "puerto-del-carmen" },
@@ -207,10 +210,15 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
                   { name: "Costa Teguise", slug: "costa-teguise" },
                   { name: "Yaiza", slug: "yaiza" },
                   { name: "Tías", slug: "tias" },
-                  { name: "Playa Honda", slug: "playa-honda" },
                   { name: "Teguise", slug: "teguise" },
                   { name: "San Bartolomé", slug: "san-bartolome" },
+                  { name: "Haría", slug: "haria" },
+                  { name: "Tinajo", slug: "tinajo" },
                   { name: "Puerto Calero", slug: "puerto-calero" },
+                  { name: "Tahiche", slug: "tahiche" },
+                  { name: "Playa Honda", slug: "playa-honda" },
+                  { name: "Guatiza", slug: "guatiza" },
+                  { name: "La Santa", slug: "la-santa" },
                 ].map(area => (
                   <li key={area.slug}>
                     <Link 
