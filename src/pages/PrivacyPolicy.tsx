@@ -12,11 +12,11 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
     <Layout ref={ref}>
       <SEOHead 
         title={isSpanish 
-          ? "Política de Privacidad | Canary Detect" 
-          : "Privacy Policy | Canary Detect"}
+          ? "Política de Privacidad | RGPD | Canary Detect" 
+          : "Privacy Policy | GDPR Compliant | Canary Detect"}
         description={isSpanish
-          ? "Política de Privacidad de Canary Detect - Descubra cómo recopilamos, usamos y protegemos sus datos personales de acuerdo con el RGPD."
-          : "Privacy Policy for Canary Detect - Learn how we collect, use, and protect your personal data in accordance with GDPR."}
+          ? "Política de Privacidad de Canary Detect (Camello Blanco S.L.). Cómo recopilamos, usamos y protegemos sus datos personales conforme al RGPD. Lanzarote."
+          : "Privacy Policy for Canary Detect (Camello Blanco S.L.). How we collect, use and protect your personal data under GDPR. Lanzarote, Spain."}
         canonical={isSpanish 
           ? "https://canary-detect.com/es/politica-de-privacidad" 
           : "https://canary-detect.com/privacy-policy"}
@@ -35,7 +35,7 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
 
       <section className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto prose prose-slate dark:prose-invert prose-headings:font-heading prose-headings:text-canary-navy prose-p:text-muted-foreground prose-li:text-muted-foreground prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-canary-navy">
+          <div className="max-w-4xl mx-auto prose prose-slate dark:prose-invert prose-headings:font-heading prose-headings:text-foreground prose-p:text-muted-foreground prose-li:text-muted-foreground prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground">
             
             {isSpanish ? (
               <>
@@ -238,7 +238,7 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
       <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-heading text-2xl font-bold text-canary-navy mb-6">
+            <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
               {isSpanish ? "Nuestros Servicios" : "Our Services"}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -253,6 +253,8 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
                 { name: isSpanish ? "Contacto" : "Contact Us", path: isSpanish ? "/es/contacto" : "/contact" },
                 { name: isSpanish ? "Conoce al Equipo" : "Meet the Team", path: isSpanish ? "/es/equipo" : "/meet-the-team" },
                 { name: isSpanish ? "Tecnología" : "Our Technology", path: isSpanish ? "/es/tecnologia" : "/technology" },
+                { name: isSpanish ? "Sobre Nosotros" : "About Us", path: isSpanish ? "/es/nosotros" : "/about" },
+                { name: isSpanish ? "Casos de Estudio" : "Case Studies", path: isSpanish ? "/es/casos-de-estudio" : "/case-studies" },
               ].map((service) => (
                 <Link
                   key={service.path}
@@ -261,6 +263,33 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
                 >
                   <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
                   <span className="text-muted-foreground group-hover:text-foreground">{service.name}</span>
+                </Link>
+              ))}
+            </div>
+
+            <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-4">
+              {isSpanish ? "Áreas de Servicio" : "Service Areas"}
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+              {[
+                { name: "Arrecife", slug: "arrecife" },
+                { name: "Playa Blanca", slug: "playa-blanca" },
+                { name: "Puerto del Carmen", slug: "puerto-del-carmen" },
+                { name: "Costa Teguise", slug: "costa-teguise" },
+                { name: "Yaiza", slug: "yaiza" },
+                { name: "Tías", slug: "tias" },
+                { name: "Teguise", slug: "teguise" },
+                { name: "San Bartolomé", slug: "san-bartolome" },
+                { name: "Haría", slug: "haria" },
+                { name: "Tinajo", slug: "tinajo" },
+              ].map((area) => (
+                <Link
+                  key={area.slug}
+                  to={isSpanish ? `/es/ubicaciones/${area.slug}` : `/locations/${area.slug}`}
+                  className="flex items-center gap-2 p-3 rounded-lg hover:bg-background transition-colors group text-sm"
+                >
+                  <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                  <span className="text-muted-foreground group-hover:text-foreground">{area.name}</span>
                 </Link>
               ))}
             </div>
