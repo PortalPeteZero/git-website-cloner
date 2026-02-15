@@ -176,7 +176,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Imagen térmica para detección de fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
         ],
-        seo: { title: "Detección Fugas Playa Blanca | ¡Somos Locales!", description: "Expertos locales en detección de fugas en Playa Blanca. Villas de lujo, piscinas, fugas subterráneas. Respuesta inmediata. Sin Encontrar, Sin Pagar. +34 711 051 071", keywords: "detección fugas Playa Blanca, fugas agua Playa Blanca, fugas piscina Playa Blanca, fontanero Playa Blanca, reparación fugas Playa Blanca Lanzarote" }
+        seo: { title: "Detección Fugas Playa Blanca | ¡Somos Locales!", description: "Expertos en detección de fugas en Playa Blanca. Villas, piscinas, fugas subterráneas. Respuesta inmediata. Sin Encontrar, Sin Pagar. +34 711 051 071", keywords: "detección fugas Playa Blanca, fugas agua Playa Blanca, fugas piscina Playa Blanca, fontanero Playa Blanca, reparación fugas Playa Blanca Lanzarote" }
       },
       "costa-teguise": {
         name: "Costa Teguise",
@@ -453,7 +453,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Imagen térmica para fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
           { title: "Diagnóstico paredes húmedas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Tahiche | Canary Detect", description: "Detección de fugas Tahiche. Propiedades residenciales, villas, casas tradicionales. Centro Lanzarote. +34 711 051 071", keywords: "detección fugas Tahiche, fugas agua Tahiche Lanzarote, fugas villa Tahiche, fontanero Tahiche" }
+        seo: { title: "Detección Fugas Tahiche | Centro Lanzarote", description: "Detección de fugas Tahiche. Propiedades residenciales, villas, casas tradicionales. Centro Lanzarote. +34 711 051 071", keywords: "detección fugas Tahiche, fugas agua Tahiche Lanzarote, fugas villa Tahiche, fontanero Tahiche" }
       },
       "guatiza": {
         name: "Guatiza",
@@ -888,7 +888,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Thermal imaging for leaks", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
         { title: "Damp walls diagnosis", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Tahiche | Canary Detect", description: "Leak detection Tahiche. Residential properties, villas, traditional houses. Central Lanzarote. Call +34 711 051 071", keywords: "leak detection Tahiche, water leak Tahiche Lanzarote, villa leak Tahiche, plumber Tahiche" }
+      seo: { title: "Leak Detection Tahiche | Central Lanzarote", description: "Leak detection Tahiche. Residential properties, villas, traditional houses. Central Lanzarote. Call +34 711 051 071", keywords: "leak detection Tahiche, water leak Tahiche Lanzarote, villa leak Tahiche, plumber Tahiche" }
     },
     "guatiza": {
       name: "Guatiza",
