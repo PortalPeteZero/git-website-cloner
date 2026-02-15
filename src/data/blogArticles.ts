@@ -81,7 +81,7 @@ export const blogArticlesEn: BlogArticle[] = [
     category: "Essential Guides",
     image: lanzaroteWaterHeroImg,
     metaTitle: "Lanzarote Water System Guide | Aljibe & Pumps",
-    metaDescription: "Essential guide to Lanzarote's water system. Learn how aljibes and pumps work, leak detection challenges, and if tap water is safe.",
+    metaDescription: "Essential guide to Lanzarote's water system. Learn how aljibes and pumps work, spot hidden leaks before they cost you, and if tap water is safe to drink.",
     keywords: "Lanzarote water system, aljibe Lanzarote, water pump Lanzarote, can you drink tap water Lanzarote, water meter spinning, leak detection Lanzarote, grupo de presion",
     readTime: 12,
     content: `
