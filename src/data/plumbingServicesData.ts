@@ -478,7 +478,7 @@ export const plumbingServicesData: Record<string, PlumbingService> = {
     title: "Manifold Upgrades & Refurbishment",
     titleEs: "Mejoras y Renovación de Colectores",
     metaTitle: "Manifold Upgrades Lanzarote | Valve Replacement | Canary Detect",
-    metaTitleEs: "Mejoras de Colectores Lanzarote | Reemplazo Válvulas | Canary Detect",
+    metaTitleEs: "Mejoras Colectores Lanzarote | Canary Detect",
     metaDescription: "Professional manifold upgrades and refurbishment in Lanzarote. Replace rusted valves and worn connections with modern, reliable systems. 2-Year Guarantee.",
     metaDescriptionEs: "Renovación de colectores en Lanzarote. Válvulas oxidadas y conexiones desgastadas por sistemas modernos y fiables. Garantía 2 años.",
     description: "Replace rusted valves and worn connections with modern, reliable manifold systems.",
