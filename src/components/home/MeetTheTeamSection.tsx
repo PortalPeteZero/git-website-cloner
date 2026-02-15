@@ -88,7 +88,7 @@ const MeetTheTeamSection = () => {
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-2xl ring-1 ring-black/5">
                 <img 
                   src={peteDaveMain}
-                  alt="Pete Ashcroft and Dave Poxon - Canary Detect owners"
+                  alt={isSpanish ? "Pete Ashcroft y Dave Poxon, propietarios de Canary Detect en Lanzarote" : "Pete Ashcroft and Dave Poxon, Canary Detect owners in Lanzarote"}
                   className="w-full h-full object-cover object-bottom group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -102,7 +102,7 @@ const MeetTheTeamSection = () => {
               <div className="aspect-[3/2] rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                 <img 
                   src={peteDaveSuits}
-                  alt="Pete and Dave in Lanzarote"
+                  alt={isSpanish ? "Pete y Dave vestidos elegantes en Lanzarote" : "Pete and Dave suited up in Lanzarote"}
                   className="w-full h-full object-cover object-[center_45%]"
                   loading="lazy"
                 />
@@ -317,6 +317,46 @@ const MeetTheTeamSection = () => {
           </div>
         </motion.div>
 
+        {/* Why Choose Section - additional content for depth */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12"
+        >
+          <div className="bg-white rounded-xl p-6 shadow-lg ring-1 ring-black/5">
+            <h2 className="font-heading text-2xl font-bold text-canary-navy mb-4">
+              {isSpanish ? "¿Por Qué Elegir a Pete y Dave?" : "Why Choose Pete & Dave?"}
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 text-muted-foreground leading-relaxed">
+              <div>
+                <p className="mb-4">
+                  {isSpanish
+                    ? "A diferencia de otras empresas de fontanería en Lanzarote, Canary Detect se especializa exclusivamente en la detección y reparación de fugas. Nuestro equipo utiliza tecnología profesional valorada en más de €80.000, incluyendo detectores acústicos, cámaras termográficas, gas trazador y cámaras CCTV para inspección de tuberías."
+                    : "Unlike other plumbing companies in Lanzarote, Canary Detect specialises exclusively in leak detection and repair. Our team uses professional technology worth over €80,000, including acoustic detectors, thermal imaging cameras, tracer gas equipment, and CCTV cameras for pipe inspection."}
+                </p>
+                <p>
+                  {isSpanish
+                    ? "Pete aporta su experiencia de casi tres décadas formando a profesionales en el Reino Unido en la localización de servicios subterráneos. Dave complementa con su profundo conocimiento del sistema de agua de Lanzarote, adquirido tras más de 20 años viviendo y trabajando en la isla."
+                    : "Pete brings nearly three decades of experience training professionals across the UK in underground utility location. Dave complements this with his deep knowledge of Lanzarote's water system, gained from over 20 years of living and working on the island."}
+                </p>
+              </div>
+              <div>
+                <p className="mb-4">
+                  {isSpanish
+                    ? "Nuestro compromiso con la comunidad de Lanzarote va más allá de los servicios profesionales. A través de El Atico De Abuela, la participación en eventos deportivos locales y los espectáculos de pantomima benéficos, Pete y Dave demuestran que Canary Detect es una empresa que realmente se preocupa por sus vecinos."
+                    : "Our commitment to the Lanzarote community goes beyond professional services. Through El Atico De Abuela, involvement in local sporting events, and charity pantomime shows, Pete and Dave demonstrate that Canary Detect is a company that truly cares about its neighbours."}
+                </p>
+                <p>
+                  {isSpanish
+                    ? "Con nuestra garantía de Sin Encontrar, Sin Pagar, puede confiar en que solo paga por resultados. Servimos toda la isla desde Playa Blanca hasta Arrecife, incluyendo Puerto del Carmen, Costa Teguise, Yaiza y todos los municipios intermedios."
+                    : "With our No Find, No Fee guarantee, you can trust that you only pay for results. We serve the entire island from Playa Blanca to Arrecife, including Puerto del Carmen, Costa Teguise, Yaiza, and every municipality in between."}
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Internal Links Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -346,6 +386,33 @@ const MeetTheTeamSection = () => {
                 >
                   <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
                   <span className="text-muted-foreground group-hover:text-foreground">{service.name}</span>
+                </Link>
+              ))}
+            </div>
+
+            <h3 className="font-heading text-lg font-bold text-canary-navy mt-6 mb-3">
+              {isSpanish ? "Áreas de Servicio" : "Service Areas"}
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
+              {[
+                { name: "Playa Blanca", slug: "playa-blanca" },
+                { name: "Puerto del Carmen", slug: "puerto-del-carmen" },
+                { name: "Costa Teguise", slug: "costa-teguise" },
+                { name: "Arrecife", slug: "arrecife" },
+                { name: "Yaiza", slug: "yaiza" },
+                { name: "Tías", slug: "tias" },
+                { name: "Teguise", slug: "teguise" },
+                { name: "San Bartolomé", slug: "san-bartolome" },
+                { name: "Haría", slug: "haria" },
+                { name: "Tinajo", slug: "tinajo" },
+              ].map((loc) => (
+                <Link
+                  key={loc.slug}
+                  to={isSpanish ? `/es/ubicaciones/${loc.slug}` : `/locations/${loc.slug}`}
+                  className="flex items-center gap-2 p-2 rounded-lg hover:bg-muted transition-colors group text-sm"
+                >
+                  <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                  <span className="text-muted-foreground group-hover:text-foreground">{loc.name}</span>
                 </Link>
               ))}
             </div>

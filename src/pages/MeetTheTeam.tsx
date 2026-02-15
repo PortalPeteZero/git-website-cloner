@@ -10,11 +10,11 @@ const MeetTheTeam = () => {
     <Layout>
       <SEOHead 
         title={isSpanish 
-          ? "Conoce a Pete & Dave | Canary Detect Lanzarote" 
-          : "Meet Pete & Dave | Canary Detect Lanzarote"}
+          ? "Conoce a Pete & Dave | Detección Fugas Lanzarote" 
+          : "Meet Pete & Dave | Leak Detection Lanzarote"}
         description={isSpanish
-          ? "Conoce a Pete Ashcroft y Dave Poxon, los propietarios de Canary Detect. 40+ años de experiencia combinada en detección de fugas en Lanzarote."
-          : "Meet Pete Ashcroft & Dave Poxon, owners of Canary Detect. 40+ years combined experience in leak detection across Lanzarote."}
+          ? "Conoce a Pete Ashcroft y Dave Poxon, propietarios de Canary Detect. 40+ años de experiencia combinada en detección de fugas de agua y piscinas en Lanzarote."
+          : "Meet Pete Ashcroft and Dave Poxon, the owners of Canary Detect. Over 40 years combined leak detection experience serving all of Lanzarote island."}
         keywords={isSpanish
           ? "equipo canary detect, pete ashcroft, dave poxon, detección fugas lanzarote, los cazafugas"
           : "canary detect team, pete ashcroft, dave poxon, leak detection lanzarote, the leaky finders"}
