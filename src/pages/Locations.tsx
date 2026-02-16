@@ -28,8 +28,8 @@ const Locations = () => {
           ? "Detección Fugas Lanzarote | 15 Municipios | Canary Detect"
           : "Leak Detection Lanzarote | All 15 Municipalities | Canary Detect"}
         description={isSpanish
-          ? "Detección profesional de fugas en toda Lanzarote. Servimos los 15 municipios: Arrecife, Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza, Tinajo, Haría y más. Sin Encontrar, Sin Pagar. +34 711 051 071"
-          : "Professional leak detection across all of Lanzarote. We serve all 15 municipalities: Arrecife, Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza, Tinajo, Haría and more. No Find, No Fee. +34 711 051 071"}
+          ? "Detección de fugas en los 15 municipios de Lanzarote. Arrecife, Playa Blanca, Puerto del Carmen, Costa Teguise y más. Sin Encontrar, Sin Pagar."
+          : "Leak detection across all 15 Lanzarote municipalities. Arrecife, Playa Blanca, Puerto del Carmen, Costa Teguise and more. No Find, No Fee."}
         canonical={canonicalUrl}
       />
       <LocalBusinessSchema />
