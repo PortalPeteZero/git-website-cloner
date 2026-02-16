@@ -335,10 +335,15 @@ const MeetTheTeamSection = () => {
                     ? "A diferencia de otras empresas de fontanería en Lanzarote, Canary Detect se especializa exclusivamente en la detección y reparación de fugas. Nuestro equipo utiliza tecnología profesional valorada en más de €80.000, incluyendo detectores acústicos, cámaras termográficas, gas trazador y cámaras CCTV para inspección de tuberías."
                     : "Unlike other plumbing companies in Lanzarote, Canary Detect specialises exclusively in leak detection and repair. Our team uses professional technology worth over €80,000, including acoustic detectors, thermal imaging cameras, tracer gas equipment, and CCTV cameras for pipe inspection."}
                 </p>
-                <p>
+                <p className="mb-4">
                   {isSpanish
                     ? "Pete aporta su experiencia de casi tres décadas formando a profesionales en el Reino Unido en la localización de servicios subterráneos. Dave complementa con su profundo conocimiento del sistema de agua de Lanzarote, adquirido tras más de 20 años viviendo y trabajando en la isla."
                     : "Pete brings nearly three decades of experience training professionals across the UK in underground utility location. Dave complements this with his deep knowledge of Lanzarote's water system, gained from over 20 years of living and working on the island."}
+                </p>
+                <p>
+                  {isSpanish
+                    ? "Nuestro enfoque combina la experiencia británica en ingeniería con el conocimiento local de la isla. Entendemos las particularidades del terreno volcánico de Lanzarote, donde la excavación puede costar hasta 10 veces más que en suelo normal. Por eso invertimos en la mejor tecnología no invasiva disponible—para encontrar su fuga sin destruir su propiedad."
+                    : "Our approach combines British engineering expertise with local island knowledge. We understand the particularities of Lanzarote's volcanic terrain, where excavation can cost up to 10 times more than in normal soil. That's why we invest in the best non-invasive technology available—to find your leak without destroying your property."}
                 </p>
               </div>
               <div>
@@ -347,10 +352,15 @@ const MeetTheTeamSection = () => {
                     ? "Nuestro compromiso con la comunidad de Lanzarote va más allá de los servicios profesionales. A través de El Atico De Abuela, la participación en eventos deportivos locales y los espectáculos de pantomima benéficos, Pete y Dave demuestran que Canary Detect es una empresa que realmente se preocupa por sus vecinos."
                     : "Our commitment to the Lanzarote community goes beyond professional services. Through El Atico De Abuela, involvement in local sporting events, and charity pantomime shows, Pete and Dave demonstrate that Canary Detect is a company that truly cares about its neighbours."}
                 </p>
-                <p>
+                <p className="mb-4">
                   {isSpanish
                     ? "Con nuestra garantía de Sin Encontrar, Sin Pagar, puede confiar en que solo paga por resultados. Servimos toda la isla desde Playa Blanca hasta Arrecife, incluyendo Puerto del Carmen, Costa Teguise, Yaiza y todos los municipios intermedios."
                     : "With our No Find, No Fee guarantee, you can trust that you only pay for results. We serve the entire island from Playa Blanca to Arrecife, including Puerto del Carmen, Costa Teguise, Yaiza, and every municipality in between."}
+                </p>
+                <p>
+                  {isSpanish
+                    ? "Ya sea una fuga de agua en su villa, una piscina que pierde agua inexplicablemente, o humedad persistente en las paredes, nuestro equipo de nueve profesionales tiene la experiencia y el equipo para resolver su problema rápidamente. Disponibles las 24 horas para emergencias, llegamos a cualquier punto de Lanzarote totalmente equipados."
+                    : "Whether it's a water leak in your villa, a swimming pool losing water unexpectedly, or persistent damp on your walls, our team of nine professionals has the experience and equipment to solve your problem quickly. Available 24/7 for emergencies, we reach any point on Lanzarote fully equipped."}
                 </p>
               </div>
             </div>
