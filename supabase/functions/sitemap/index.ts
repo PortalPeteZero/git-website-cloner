@@ -18,6 +18,7 @@ const staticPages = [
   { en: "/contact", es: "/es/contacto", priority: "0.8", changefreq: "monthly" },
   { en: "/blog", es: "/es/blog", priority: "0.7", changefreq: "weekly" },
   { en: "/meet-the-team", es: "/es/equipo", priority: "0.6", changefreq: "monthly" },
+  { en: "/reviews", es: "/es/resenas", priority: "0.8", changefreq: "weekly" },
   { en: "/privacy-policy", es: "/es/politica-de-privacidad", priority: "0.3", changefreq: "yearly" },
 ];
 
