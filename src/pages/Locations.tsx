@@ -25,11 +25,11 @@ const Locations = () => {
     <Layout>
       <SEOHead
         title={isSpanish
-          ? "Ubicaciones | Detección Fugas Lanzarote | Canary Detect"
-          : "Locations | Leak Detection Lanzarote | Canary Detect"}
+          ? "Detección Fugas Lanzarote | 15 Municipios | Canary Detect"
+          : "Leak Detection Lanzarote | All 15 Municipalities | Canary Detect"}
         description={isSpanish
-          ? "Detección profesional de fugas en toda Lanzarote. Servimos Arrecife, Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza y más. Sin Encontrar, Sin Pagar."
-          : "Professional leak detection across all of Lanzarote. We serve Arrecife, Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza and more. No Find, No Fee."}
+          ? "Detección profesional de fugas en toda Lanzarote. Servimos los 15 municipios: Arrecife, Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza, Tinajo, Haría y más. Sin Encontrar, Sin Pagar. +34 711 051 071"
+          : "Professional leak detection across all of Lanzarote. We serve all 15 municipalities: Arrecife, Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza, Tinajo, Haría and more. No Find, No Fee. +34 711 051 071"}
         canonical={canonicalUrl}
       />
       <LocalBusinessSchema />
@@ -100,10 +100,20 @@ const Locations = () => {
             <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-6">
               {isSpanish ? "Todas Nuestras Áreas de Servicio" : "All Our Service Areas"}
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               {isSpanish
                 ? "Basados en Playa Blanca, proporcionamos servicios profesionales de detección de fugas en toda la isla de Lanzarote. Nuestro equipo cubre todos los municipios, desde la capital Arrecife hasta los pueblos rurales del norte. Cada ubicación tiene desafíos únicos de fontanería que conocemos en profundidad."
                 : "Based in Playa Blanca, we provide professional leak detection services across the entire island of Lanzarote. Our team covers every municipality, from the capital Arrecife to the rural villages of the north. Each location has unique plumbing challenges that we understand in depth."}
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              {isSpanish
+                ? "Lanzarote presenta desafíos de fontanería únicos que no existen en la España continental. El terreno volcánico hace que la excavación sea extremadamente costosa—hasta 10 veces más cara que en suelo normal. El agua dura de la isla acelera la corrosión de tuberías, especialmente en edificios de los años 60-80. Y las propiedades costeras sufren deterioro adicional por el ambiente salino del Atlántico. Nuestro equipo de detección de fugas, valorado en más de €80.000, elimina las conjeturas y localiza fugas con precisión centimétrica."
+                : "Lanzarote presents unique plumbing challenges not found on mainland Spain. The volcanic terrain makes excavation extremely expensive—up to 10 times more costly than in normal soil. The island's hard water accelerates pipe corrosion, particularly in buildings from the 1960s-80s. And coastal properties suffer additional deterioration from the Atlantic's saline environment. Our leak detection equipment, worth over €80,000, eliminates guesswork and pinpoints leaks with centimetre accuracy."}
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              {isSpanish
+                ? "Desde hoteles de cinco estrellas en Puerto del Carmen hasta fincas rurales en Tinajo, desde apartamentos turísticos en Costa Teguise hasta villas de lujo en Marina Rubicón—cada tipo de propiedad requiere un enfoque diferente. Seleccione su zona a continuación para conocer los desafíos específicos de su área y cómo podemos ayudarle."
+                : "From five-star hotels in Puerto del Carmen to rural fincas in Tinajo, from tourist apartments in Costa Teguise to luxury villas at Marina Rubicón—every property type requires a different approach. Select your area below to learn about the specific challenges in your location and how we can help."}
             </p>
           </div>
 
