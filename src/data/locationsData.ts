@@ -541,7 +541,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Contador de agua corriendo", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
         ],
-        seo: { title: "Detección Fugas La Santa | Canary Detect", description: "Detección de fugas La Santa, Lanzarote. Casas costeras, apartamentos deportivos, piscinas. Emergencias 24h. +34 711 051 071", keywords: "detección fugas La Santa, fugas agua La Santa Lanzarote, fugas piscina La Santa, fontanero La Santa" }
+        seo: { title: "Detección Fugas La Santa | Pueblo Costero Lanzarote", description: "Detección profesional de fugas en La Santa, Lanzarote. Casas de pescadores, apartamentos deportivos, piscinas costeras. Corrosión marina. Emergencias 24h. +34 711 051 071", keywords: "detección fugas La Santa, fugas agua La Santa Lanzarote, fugas piscina La Santa, fontanero La Santa" }
       },
       "tinajo": {
         name: "Tinajo",
@@ -585,7 +585,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Contador de agua corriendo sin usar grifos", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
         ],
-        seo: { title: "Detección Fugas Tinajo | Fincas Rurales | Canary Detect", description: "Detección de fugas Tinajo, Lanzarote. Fincas agrícolas, aljibes, riego. Expertos rurales. +34 711 051 071", keywords: "detección fugas Tinajo, fugas agua Tinajo Lanzarote, fugas riego finca, fontanero Tinajo, fugas aljibe" }
+        seo: { title: "Detección Fugas Tinajo | Fincas y Aljibes Lanzarote", description: "Detección profesional de fugas en Tinajo, Lanzarote. Fincas agrícolas, aljibes volcánicos, sistemas de riego subterráneo. Expertos rurales con gas trazador. +34 711 051 071", keywords: "detección fugas Tinajo, fugas agua Tinajo Lanzarote, fugas riego finca, fontanero Tinajo, fugas aljibe" }
       },
       "haria": {
         name: "Haría",
@@ -629,7 +629,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Paredes húmedas: causas y soluciones", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
           { title: "Imagen térmica para detección de fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
         ],
-        seo: { title: "Detección Fugas Haría | Norte Lanzarote | Canary Detect", description: "Detección de fugas Haría y norte de Lanzarote. Arrieta, Punta Mujeres, Órzola. Diagnóstico humedad experto. 711 051 071", keywords: "detección fugas Haría, fugas agua Haría Lanzarote, fugas Arrieta, fontanero norte Lanzarote, humedad Haría" }
+        seo: { title: "Detección Fugas Haría | Valle Mil Palmeras Lanzarote", description: "Detección profesional de fugas en Haría, el verde valle del norte de Lanzarote. Arrieta, Punta Mujeres, Máguez, Órzola. Diagnóstico humedad vs fugas. +34 711 051 071", keywords: "detección fugas Haría, fugas agua Haría Lanzarote, fugas Arrieta, fontanero norte Lanzarote, humedad Haría" }
       }
     };
   }
