@@ -18,6 +18,7 @@ export const routeMap: Record<string, string> = {
   '/contact': '/es/contacto',
   '/blog': '/es/blog',
   '/plumbing-services': '/es/servicios-fontaneria',
+  '/reviews': '/es/resenas',
   '/plumbing-services/general-repairs': '/es/servicios-fontaneria/reparaciones-generales',
   '/plumbing-services/boiler-services': '/es/servicios-fontaneria/servicios-calderas',
   '/plumbing-services/system-upgrades': '/es/servicios-fontaneria/mejoras-sistema',

@@ -14,10 +14,11 @@ import LoadingFallback from "@/components/LoadingFallback";
 const ServicesGrid = lazy(() => import("@/components/home/ServicesGrid"));
 const TechnologySection = lazy(() => import("@/components/home/TechnologySection"));
 const HowItWorksSection = lazy(() => import("@/components/home/HowItWorksSection"));
-const TestimonialsSection = lazy(() => import("@/components/home/TestimonialsSection"));
+
 const CaseStudiesPreview = lazy(() => import("@/components/home/CaseStudiesPreview"));
 const FAQSection = lazy(() => import("@/components/home/FAQSection"));
 const ProblemFAQSection = lazy(() => import("@/components/home/ProblemFAQSection"));
+const GoogleReviewsHighlight = lazy(() => import("@/components/home/GoogleReviewsHighlight"));
 
 const Index = () => {
   const { t, isSpanish } = useTranslation();
@@ -65,7 +66,7 @@ const Index = () => {
       
       <ErrorBoundary>
         <Suspense fallback={<LoadingFallback height="min-h-[300px]" />}>
-          <TestimonialsSection />
+          <GoogleReviewsHighlight />
         </Suspense>
       </ErrorBoundary>
       
