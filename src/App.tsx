@@ -19,6 +19,7 @@ import PlumbingServiceDetail from "./pages/PlumbingServiceDetail";
 import MeetTheTeam from "./pages/MeetTheTeam";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Services from "./pages/Services";
+import Reviews from "./pages/Reviews";
 
 // Lazy load non-SEO-critical pages
 const About = lazy(() => import("./pages/About"));
@@ -128,6 +129,7 @@ const App = () => (
               <Route path="/locations" element={<Locations />} />
               <Route path="/locations/:location" element={<LocationPage />} />
               <Route path="/meet-the-team" element={<MeetTheTeam />} />
+              <Route path="/reviews" element={<Reviews />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/plumbing-services" element={<PlumbingServices />} />
               <Route path="/plumbing-services/:slug" element={<PlumbingServiceDetail />} />
@@ -155,6 +157,7 @@ const App = () => (
               <Route path="/es/ubicaciones" element={<Locations />} />
               <Route path="/es/ubicaciones/:location" element={<LocationPage />} />
               <Route path="/es/equipo" element={<MeetTheTeam />} />
+              <Route path="/es/resenas" element={<Reviews />} />
               <Route path="/es/politica-de-privacidad" element={<PrivacyPolicy />} />
               <Route path="/es/servicios-fontaneria" element={<PlumbingServices />} />
               <Route path="/es/servicios-fontaneria/:slug" element={<PlumbingServiceDetail />} />
