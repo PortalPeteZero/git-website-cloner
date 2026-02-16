@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronRight, ExternalLink, Phone, Droplets, Waves, Wrench, Search, TestTube, Gamepad2, Users, Thermometer } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, ExternalLink, Phone, Droplets, Waves, Wrench, Search, TestTube, Gamepad2, Users, Thermometer, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -108,6 +108,19 @@ const Header = () => {
                 }`}
               >
                 Blog
+              </Link>
+              <Link 
+                to={getRoute("/locations", "/es/ubicaciones")} 
+                className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
+                  isActive("/locations") || isActive("/es/ubicaciones")
+                    ? "text-primary" 
+                    : "text-white/90 hover:text-primary"
+                }`}
+              >
+                <span className="flex items-center gap-1">
+                  <MapPin className="h-3.5 w-3.5" />
+                  {isSpanish ? "Ubicaciones" : "Locations"}
+                </span>
               </Link>
 
               <div className="h-4 w-px bg-white/20 mx-2" />
@@ -583,6 +596,14 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
+              </Link>
+              <Link 
+                to={getRoute("/locations", "/es/ubicaciones")} 
+                className="px-4 py-3 text-foreground font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300 flex items-center gap-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <MapPin className="h-4 w-4 text-primary" />
+                {isSpanish ? "Ubicaciones" : "Locations"}
               </Link>
 
               <div className="h-px bg-border my-3" />
