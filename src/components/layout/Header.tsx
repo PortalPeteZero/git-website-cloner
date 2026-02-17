@@ -124,16 +124,10 @@ const Header = () => {
               </Link>
               <Link 
                 to={getRoute("/reviews", "/es/resenas")} 
-                className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
-                  isActive("/reviews") || isActive("/es/resenas")
-                    ? "text-primary" 
-                    : "text-white/90 hover:text-primary"
-                }`}
+                className="flex items-center gap-1.5 px-3 py-1.5 font-bold text-sm rounded-md transition-all duration-300 bg-gradient-to-r from-primary via-accent to-primary text-white hover:opacity-90 hover:scale-105 shadow-md hover:shadow-lg"
               >
-                <span className="flex items-center gap-1">
-                  <Star className="h-3.5 w-3.5" />
-                  {isSpanish ? "Reseñas" : "Reviews"}
-                </span>
+                <Star className="h-4 w-4" />
+                {isSpanish ? "Reseñas" : "Reviews"}
               </Link>
 
               <div className="h-4 w-px bg-white/20 mx-2" />
@@ -390,7 +384,7 @@ const Header = () => {
 
             {/* NEW Plumbing Services CTA */}
             <Link to={getRoute("/plumbing-services", "/es/servicios-fontaneria")}>
-              <button className="flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-md hover:shadow-lg bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white hover:opacity-90 animate-pulse hover:animate-none">
+              <button className="flex items-center gap-2 px-4 py-2 font-bold text-sm rounded-lg transition-all duration-300 shadow-md hover:shadow-lg bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white hover:opacity-90 hover:scale-105">
                 <span className="bg-white/20 px-1.5 py-0.5 rounded text-xs font-black">NEW</span>
                 <Wrench className="h-4 w-4" />
                 {isSpanish ? "Fontanería" : "Plumbing"}
