@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronRight, ExternalLink, Phone, Droplets, Waves, Wrench, Search, TestTube, Gamepad2, Users, Thermometer, MapPin } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, ExternalLink, Phone, Droplets, Waves, Wrench, Search, TestTube, Gamepad2, Users, Thermometer, MapPin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -120,6 +120,19 @@ const Header = () => {
                 <span className="flex items-center gap-1">
                   <MapPin className="h-3.5 w-3.5" />
                   {isSpanish ? "Ubicaciones" : "Locations"}
+                </span>
+              </Link>
+              <Link 
+                to={getRoute("/reviews", "/es/resenas")} 
+                className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
+                  isActive("/reviews") || isActive("/es/resenas")
+                    ? "text-primary" 
+                    : "text-white/90 hover:text-primary"
+                }`}
+              >
+                <span className="flex items-center gap-1">
+                  <Star className="h-3.5 w-3.5" />
+                  {isSpanish ? "Reseñas" : "Reviews"}
                 </span>
               </Link>
 
@@ -604,6 +617,14 @@ const Header = () => {
               >
                 <MapPin className="h-4 w-4 text-primary" />
                 {isSpanish ? "Ubicaciones" : "Locations"}
+              </Link>
+              <Link 
+                to={getRoute("/reviews", "/es/resenas")} 
+                className="px-4 py-3 text-foreground font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300 flex items-center gap-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Star className="h-4 w-4 text-primary" />
+                {isSpanish ? "Reseñas" : "Reviews"}
               </Link>
 
               <div className="h-px bg-border my-3" />
