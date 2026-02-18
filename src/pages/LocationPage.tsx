@@ -296,7 +296,15 @@ const LocationPage = () => {
             <h2 className="font-heading text-2xl md:text-3xl font-bold mt-2 mb-4">{uiText.sections.nearbyAreas}</h2>
             <p className="text-muted-foreground mb-8">{uiText.sections.nearbyDescription(locationData.name)}</p>
             <div className="flex flex-wrap justify-center gap-3">
-              {locationData.nearbyAreas.map((area) => (<span key={area} className="bg-muted px-4 py-2 rounded-full text-sm font-medium">{area}</span>))}
+              {locationData.nearbyAreas.map((area) => {
+                const areaSlug = area.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
+                const areaPath = `${getLocationsBasePath(isSpanish)}/${areaSlug}`;
+                return (
+                  <Link key={area} to={areaPath} className="bg-muted px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/10 hover:text-primary transition-colors">
+                    {area}
+                  </Link>
+                );
+              })}
             </div>
           </motion.div>
         </div>
