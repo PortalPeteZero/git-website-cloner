@@ -15,8 +15,8 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
           ? "Política de Privacidad | Canary Detect | RGPD Lanzarote" 
           : "Privacy Policy | Canary Detect | GDPR Leak Detection Lanzarote"}
         description={isSpanish
-          ? "Política de Privacidad de Canary Detect (Camello Blanco S.L.), empresa de detección de fugas en Lanzarote. Cómo recopilamos, usamos y protegemos sus datos personales conforme al RGPD. +34 711 051 071"
-          : "Privacy Policy for Canary Detect (Camello Blanco S.L.), leak detection company in Lanzarote. How we collect, use and protect your personal data under GDPR. +34 711 051 071"}
+          ? "Política de Privacidad de Canary Detect. Cómo recopilamos, usamos y protegemos sus datos personales conforme al RGPD en Lanzarote."
+          : "Privacy Policy for Canary Detect. How we collect, use and protect your personal data under GDPR. Lanzarote leak detection."}
         canonical={isSpanish 
           ? "https://canary-detect.com/es/politica-de-privacidad" 
           : "https://canary-detect.com/privacy-policy"}
