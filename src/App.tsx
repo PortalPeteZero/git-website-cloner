@@ -9,7 +9,7 @@ import { LanguageProvider } from "@/i18n/LanguageContext";
 import ScrollToTop from "./components/ScrollToTop";
 import LoadingFallback from "./components/LoadingFallback";
 
-// Critical path - loaded immediately for SEO pre-rendering
+// All SEO-critical pages loaded eagerly for pre-rendering (lovable.html)
 import Index from "./pages/Index";
 import LocationPage from "./pages/LocationPage";
 import Locations from "./pages/Locations";
@@ -20,19 +20,19 @@ import MeetTheTeam from "./pages/MeetTheTeam";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Services from "./pages/Services";
 import Reviews from "./pages/Reviews";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import CaseStudies from "./pages/CaseStudies";
+import Technology from "./pages/Technology";
+import Blog from "./pages/Blog";
+import BlogArticle from "./pages/BlogArticle";
+import FontaneroLocationPage from "./pages/FontaneroLocationPage";
+import FreeLeakConfirmation from "./pages/FreeLeakConfirmation";
 
-// Lazy load non-SEO-critical pages
-const About = lazy(() => import("./pages/About"));
-const FreeLeakConfirmation = lazy(() => import("./pages/FreeLeakConfirmation"));
-const Contact = lazy(() => import("./pages/Contact"));
-const CaseStudies = lazy(() => import("./pages/CaseStudies"));
-const Technology = lazy(() => import("./pages/Technology"));
-const Blog = lazy(() => import("./pages/Blog"));
-const BlogArticle = lazy(() => import("./pages/BlogArticle"));
+// Lazy load admin-only pages (not SEO-critical)
 const Admin = lazy(() => import("./pages/Admin"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const FontaneroLocationPage = lazy(() => import("./pages/FontaneroLocationPage"));
 const queryClient = new QueryClient();
 
 // Wrapper for lazy-loaded routes
@@ -55,9 +55,9 @@ const App = () => (
             <Routes>
               {/* English Routes */}
               <Route path="/" element={<Index />} />
-              <Route path="/about" element={<LazyRoute><About /></LazyRoute>} />
+              <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/services/free-leak-confirmation" element={<LazyRoute><FreeLeakConfirmation /></LazyRoute>} />
+              <Route path="/services/free-leak-confirmation" element={<FreeLeakConfirmation />} />
               <Route path="/services/pipe-inspection" element={<Navigate to="/services/drain-detection" replace />} />
               
               {/* SEO-friendly redirects for common URL variations */}
@@ -121,11 +121,11 @@ const App = () => (
               <Route path="/2022/12/" element={<Navigate to="/blog" replace />} />
               
               <Route path="/services/:slug" element={<ServiceDetail />} />
-              <Route path="/contact" element={<LazyRoute><Contact /></LazyRoute>} />
-              <Route path="/case-studies" element={<LazyRoute><CaseStudies /></LazyRoute>} />
-              <Route path="/technology" element={<LazyRoute><Technology /></LazyRoute>} />
-              <Route path="/blog" element={<LazyRoute><Blog /></LazyRoute>} />
-              <Route path="/blog/:slug" element={<LazyRoute><BlogArticle /></LazyRoute>} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/technology" element={<Technology />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogArticle />} />
               <Route path="/locations" element={<Locations />} />
               <Route path="/locations/:location" element={<LocationPage />} />
               <Route path="/meet-the-team" element={<MeetTheTeam />} />
@@ -140,20 +140,20 @@ const App = () => (
               
               {/* Fontanero location pages */}
               {["arrecife","playa-blanca","puerto-del-carmen","costa-teguise","yaiza","tias","teguise","san-bartolome","haria","tinajo"].map(loc => (
-                <Route key={loc} path={`/es/fontanero-${loc}`} element={<LazyRoute><FontaneroLocationPage /></LazyRoute>} />
+                <Route key={loc} path={`/es/fontanero-${loc}`} element={<FontaneroLocationPage />} />
               ))}
               
               {/* Spanish Routes */}
               <Route path="/es" element={<Index />} />
-              <Route path="/es/sobre-nosotros" element={<LazyRoute><About /></LazyRoute>} />
+              <Route path="/es/sobre-nosotros" element={<About />} />
               <Route path="/es/servicios" element={<Services />} />
-              <Route path="/es/servicios/confirmacion-fugas-gratis" element={<LazyRoute><FreeLeakConfirmation /></LazyRoute>} />
+              <Route path="/es/servicios/confirmacion-fugas-gratis" element={<FreeLeakConfirmation />} />
               <Route path="/es/servicios/:slug" element={<ServiceDetail />} />
-              <Route path="/es/contacto" element={<LazyRoute><Contact /></LazyRoute>} />
-              <Route path="/es/casos-de-exito" element={<LazyRoute><CaseStudies /></LazyRoute>} />
-              <Route path="/es/tecnologia" element={<LazyRoute><Technology /></LazyRoute>} />
-              <Route path="/es/blog" element={<LazyRoute><Blog /></LazyRoute>} />
-              <Route path="/es/blog/:slug" element={<LazyRoute><BlogArticle /></LazyRoute>} />
+              <Route path="/es/contacto" element={<Contact />} />
+              <Route path="/es/casos-de-exito" element={<CaseStudies />} />
+              <Route path="/es/tecnologia" element={<Technology />} />
+              <Route path="/es/blog" element={<Blog />} />
+              <Route path="/es/blog/:slug" element={<BlogArticle />} />
               <Route path="/es/ubicaciones" element={<Locations />} />
               <Route path="/es/ubicaciones/:location" element={<LocationPage />} />
               <Route path="/es/equipo" element={<MeetTheTeam />} />
