@@ -23,6 +23,9 @@ const ServiceAreas = ({ isSpanish, serviceName }: ServiceAreasProps) => {
     { name: "Puerto Calero", slug: "puerto-calero" },
     { name: "Tahiche", slug: "tahiche" },
     { name: "Guatiza", slug: "guatiza" },
+    { name: "La Santa", slug: "la-santa" },
+    { name: "Tinajo", slug: "tinajo" },
+    { name: "Haría", slug: "haria" },
   ];
 
   return (
