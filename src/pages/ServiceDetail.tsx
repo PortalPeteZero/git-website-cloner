@@ -25,12 +25,7 @@ import ServiceAreas from "@/components/internal-links/ServiceAreas";
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const { isSpanish } = useTranslation();
-  const [isHydrated, setIsHydrated] = useState(false);
   
-  // Mark component as hydrated after first render
-  useEffect(() => {
-    setIsHydrated(true);
-  }, []);
   
   // Normalize slug to English for data lookup
   const englishSlug = slug ? getEnglishSlug(slug) : null;
@@ -103,14 +98,7 @@ const ServiceDetail = () => {
     return () => clearInterval(timer);
   }, [hasHeroCarousel, carouselImages.length]);
 
-  // Show loading state during initial hydration to prevent "Not Found" flash
-  if (!isHydrated) {
-    return (
-      <Layout>
-        <LoadingFallback height="min-h-[60vh]" />
-      </Layout>
-    );
-  }
+  
 
   // revealOnMount animations removed — they caused content to remain at opacity 0
   // on some browsers/devices, harming mobile contrast and accessibility.
