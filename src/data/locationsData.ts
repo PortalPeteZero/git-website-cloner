@@ -541,7 +541,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Contador de agua corriendo", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
         ],
-        seo: { title: "Detección Fugas La Santa | Pueblo Costero Lanzarote", description: "Detección profesional de fugas en La Santa, Lanzarote. Casas de pescadores, apartamentos deportivos, piscinas costeras. Corrosión marina. Emergencias 24h. +34 711 051 071", keywords: "detección fugas La Santa, fugas agua La Santa Lanzarote, fugas piscina La Santa, fontanero La Santa" }
+        seo: { title: "Detección Fugas La Santa | Pueblo Costero Lanzarote", description: "Detección de fugas en La Santa, Lanzarote. Casas costeras, apartamentos, piscinas. Emergencias 24h. +34 711 051 071", keywords: "detección fugas La Santa, fugas agua La Santa Lanzarote, fugas piscina La Santa, fontanero La Santa" }
       },
       "tinajo": {
         name: "Tinajo",
