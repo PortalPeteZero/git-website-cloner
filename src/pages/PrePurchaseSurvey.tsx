@@ -1,11 +1,9 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Globe, ChevronRight, Droplets, Zap, ShieldCheck, CheckCircle2 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 // Survey images
 import heroImg from "@/assets/services/survey/hero-pool-survey.jpg";
@@ -25,7 +23,7 @@ import poolSmall2 from "@/assets/services/survey/pool-survey-small-2.jpg";
 
 interface ModuleData {
   id: string;
-  tabLabel: string;
+  navLabel: string;
   moduleNumber: string;
   moduleType: string;
   title: string;
@@ -39,143 +37,126 @@ interface ModuleData {
   footnote?: string;
 }
 
+const modules: ModuleData[] = [
+  {
+    id: "thermal",
+    navLabel: "Thermal Imaging & Damp",
+    moduleNumber: "Module 01",
+    moduleType: "Optional",
+    title: "Thermal Imaging & Damp Survey",
+    description: "We use a professional-grade FLIR thermal imaging camera — not a cheap smartphone attachment — alongside calibrated moisture meters to map every room. The camera detects temperature variations caused by moisture, revealing hidden damp, water ingress, and roofline issues that are completely invisible to the naked eye.",
+    bullets: [
+      "Full room-by-room thermal scan",
+      "Moisture meter readings at every wall",
+      "Roofline and ceiling inspection",
+      "Detailed report with thermal images and readings",
+    ],
+    mainImage: thermalMain,
+    mainImageAlt: "FLIR thermal imaging showing moisture in a wall",
+    smallImages: [thermalSmall1, thermalSmall2],
+  },
+  {
+    id: "pressure",
+    navLabel: "Full System Pressure Test",
+    moduleNumber: "Module 02",
+    moduleType: "Optional",
+    title: "Full System Pressure Test",
+    description: "A comprehensive pressure test of the mains water system and any pumped systems gives you a definitive, documented answer: is this property leak-free? If a leak is detected, you have the option to commission our advanced leak pinpointing service to identify the exact location before committing to a purchase.",
+    bullets: [
+      "Mains water system pressure test",
+      "Pumped system pressure test",
+      "Pass certificate or leak confirmation report",
+      "Optional leak pinpointing add-on if required",
+    ],
+    mainImage: pressureMain,
+    mainImageAlt: "Digital pressure gauge connected to water system",
+    smallImages: [pressureSmall],
+  },
+  {
+    id: "water-system",
+    navLabel: "Water System Inspection",
+    moduleNumber: "Module 03",
+    moduleType: "Optional",
+    title: "Water System Inspection",
+    description: "Properties in Lanzarote have unique water infrastructure. Our qualified plumbers conduct a thorough inspection of the aljibe (water storage tank), ball cock condition, pump, and manifold system. We assess the condition and functionality of every key component, identifying anything that may need attention now or in the near future.",
+    bullets: [
+      "Aljibe (water tank) condition assessment",
+      "Ball cock and float valve inspection",
+      "Pump and manifold inspection",
+      "Qualified plumber report",
+    ],
+    mainImage: waterSystemMain,
+    mainImageAlt: "Water pump and manifold system inspection",
+    smallImages: [waterSystemSmall1, waterSystemSmall2],
+  },
+  {
+    id: "drain",
+    navLabel: "Drain Inspection",
+    moduleNumber: "Module 04",
+    moduleType: "Optional",
+    title: "Drain Inspection",
+    description: "Using advanced CCTV drain cameras, we inspect the main drains of the property from the inside. We capture images of the internal pipework, map drain locations, determine whether the property connects to the main sewer or uses a septic tank, and assess the general condition of the drainage system.",
+    bullets: [
+      "CCTV camera inspection of main drains",
+      "Internal pipework photography",
+      "Sewer vs. septic tank determination",
+      "Manhole inspection and condition report",
+    ],
+    mainImage: drainMain,
+    mainImageAlt: "CCTV drain camera inspection",
+    smallImages: [drainSmall],
+  },
+  {
+    id: "pool",
+    navLabel: "Swimming Pool Survey",
+    moduleNumber: "Module 05",
+    moduleType: "Optional",
+    title: "Comprehensive Swimming Pool Survey",
+    description: "Our pool survey is the most comprehensive available on the island. We test every single aspect of the pool's structure and systems. We don't just tell you if there's a problem — we pinpoint its exact location using acoustic, CCTV, and tracer gas technology. Every survey includes an insurance-ready report.",
+    bullets: [
+      "Acoustic testing of all fittings and pool shell",
+      "Pump, filter and housing inspection",
+      "Full pipework pressure test",
+      "Electronic shell testing",
+      "CCTV internal pipe inspection",
+      "Insurance-ready detailed report",
+    ],
+    mainImage: poolMain,
+    mainImageAlt: "Canary Detect pool survey in progress",
+    smallImages: [poolSmall1, poolSmall2],
+  },
+  {
+    id: "electrical",
+    navLabel: "+ Electrical Report",
+    moduleNumber: "Module 06",
+    moduleType: "Optional Add-On",
+    title: "Electrical Safety Report",
+    description: "Our qualified electricians perform a full inspection of the property's electrical installation — from the fuse board to the outlets — checking safety, compliance, and condition. An essential check for any property purchase.",
+    bullets: [
+      "Fuse board and consumer unit inspection",
+      "Wiring condition and compliance check",
+      "Socket and outlet testing",
+      "Full report from a qualified electrician",
+    ],
+    isAddOn: true,
+    iconSection: (
+      <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/20 mx-auto mb-6">
+        <Zap className="w-10 h-10 text-primary" />
+      </div>
+    ),
+    footnote: "Carried out by a fully qualified and experienced electrician. Gives you complete confidence in the safety of the property's electrical systems.",
+  },
+];
+
 const PrePurchaseSurvey = () => {
   const { isSpanish } = useTranslation();
-  const [activeModule, setActiveModule] = useState("thermal");
 
-  const modules: ModuleData[] = [
-    {
-      id: "thermal",
-      tabLabel: "Thermal Imaging & Damp",
-      moduleNumber: "Module 01",
-      moduleType: "Optional",
-      title: "Thermal Imaging & Damp Survey",
-      description: "We use a professional-grade FLIR thermal imaging camera — not a cheap smartphone attachment — alongside calibrated moisture meters to map every room. The camera detects temperature variations caused by moisture, revealing hidden damp, water ingress, and roofline issues that are completely invisible to the naked eye.",
-      bullets: [
-        "Full room-by-room thermal scan",
-        "Moisture meter readings at every wall",
-        "Roofline and ceiling inspection",
-        "Detailed report with thermal images and readings",
-      ],
-      mainImage: thermalMain,
-      mainImageAlt: "FLIR thermal imaging showing moisture in a wall",
-      smallImages: [thermalSmall1, thermalSmall2],
-    },
-    {
-      id: "pressure",
-      tabLabel: "Full System Pressure Test",
-      moduleNumber: "Module 02",
-      moduleType: "Optional",
-      title: "Full System Pressure Test",
-      description: "A comprehensive pressure test of the mains water system and any pumped systems gives you a definitive, documented answer: is this property leak-free? If a leak is detected, you have the option to commission our advanced leak pinpointing service to identify the exact location before committing to a purchase.",
-      bullets: [
-        "Mains water system pressure test",
-        "Pumped system pressure test",
-        "Pass certificate or leak confirmation report",
-        "Optional leak pinpointing add-on if required",
-      ],
-      mainImage: pressureMain,
-      mainImageAlt: "Digital pressure gauge connected to water system",
-      smallImages: [pressureSmall],
-    },
-    {
-      id: "water-system",
-      tabLabel: "Water System Inspection",
-      moduleNumber: "Module 03",
-      moduleType: "Optional",
-      title: "Water System Inspection",
-      description: "Properties in Lanzarote have unique water infrastructure. Our qualified plumbers conduct a thorough inspection of the aljibe (water storage tank), ball cock condition, pump, and manifold system. We assess the condition and functionality of every key component, identifying anything that may need attention now or in the near future.",
-      bullets: [
-        "Aljibe (water tank) condition assessment",
-        "Ball cock and float valve inspection",
-        "Pump and manifold inspection",
-        "Qualified plumber report",
-      ],
-      mainImage: waterSystemMain,
-      mainImageAlt: "Water pump and manifold system inspection",
-      smallImages: [waterSystemSmall1, waterSystemSmall2],
-    },
-    {
-      id: "drain",
-      tabLabel: "Drain Inspection",
-      moduleNumber: "Module 04",
-      moduleType: "Optional",
-      title: "Drain Inspection",
-      description: "Using advanced CCTV drain cameras, we inspect the main drains of the property from the inside. We capture images of the internal pipework, map drain locations, determine whether the property connects to the main sewer or uses a septic tank, and assess the general condition of the drainage system.",
-      bullets: [
-        "CCTV camera inspection of main drains",
-        "Internal pipework photography",
-        "Sewer vs. septic tank determination",
-        "Manhole inspection and condition report",
-      ],
-      mainImage: drainMain,
-      mainImageAlt: "CCTV drain camera inspection",
-      smallImages: [drainSmall],
-    },
-    {
-      id: "pool",
-      tabLabel: "Swimming Pool Survey",
-      moduleNumber: "Module 05",
-      moduleType: "Optional",
-      title: "Comprehensive Swimming Pool Survey",
-      description: "Our pool survey is the most comprehensive available on the island. We test every single aspect of the pool's structure and systems. We don't just tell you if there's a problem — we pinpoint its exact location using acoustic, CCTV, and tracer gas technology. Every survey includes an insurance-ready report.",
-      bullets: [
-        "Acoustic testing of all fittings and pool shell",
-        "Pump, filter and housing inspection",
-        "Full pipework pressure test",
-        "Electronic shell testing",
-        "CCTV internal pipe inspection",
-        "Insurance-ready detailed report",
-      ],
-      mainImage: poolMain,
-      mainImageAlt: "Canary Detect pool survey in progress",
-      smallImages: [poolSmall1, poolSmall2],
-    },
-    {
-      id: "electrical",
-      tabLabel: "+ Electrical Report",
-      moduleNumber: "Module 06",
-      moduleType: "Optional Add-On",
-      title: "Electrical Safety Report",
-      description: "Our qualified electricians perform a full inspection of the property's electrical installation — from the fuse board to the outlets — checking safety, compliance, and condition. An essential check for any property purchase.",
-      bullets: [
-        "Fuse board and consumer unit inspection",
-        "Wiring condition and compliance check",
-        "Socket and outlet testing",
-        "Full report from a qualified electrician",
-      ],
-      isAddOn: true,
-      iconSection: (
-        <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/20 mx-auto mb-6">
-          <Zap className="w-10 h-10 text-primary" />
-        </div>
-      ),
-      footnote: "Carried out by a fully qualified and experienced electrician. Gives you complete confidence in the safety of the property's electrical systems.",
-    },
-    {
-      id: "pinpointing",
-      tabLabel: "+ Leak Pinpointing",
-      moduleNumber: "Module 07",
-      moduleType: "Optional Add-On",
-      title: "Leak Pinpointing",
-      description: "If our pressure test reveals a leak, our advanced pinpointing service uses acoustic listening equipment, tracer gas, and thermal imaging to locate the exact position of the leak — saving you from unnecessary excavation and repair costs.",
-      bullets: [
-        "Acoustic leak detection",
-        "Tracer gas testing",
-        "Thermal imaging confirmation",
-        "Pinpoint accuracy report",
-      ],
-      isAddOn: true,
-      iconSection: (
-        <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/20 mx-auto mb-6">
-          <Droplets className="w-10 h-10 text-primary" />
-        </div>
-      ),
-      footnote: "Only required if the pressure test detects a leak. Uses €80,000+ of specialist equipment to find the exact location without unnecessary damage.",
-    },
-  ];
-
-  const activeModuleData = modules.find(m => m.id === activeModule) || modules[0];
+  const scrollToModule = (id: string) => {
+    const el = document.getElementById(`module-${id}`);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <Layout>
@@ -272,7 +253,6 @@ const PrePurchaseSurvey = () => {
       <section className="bg-slate-900 py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            {/* Left - Text */}
             <div>
               <span className="text-primary font-bold text-xs uppercase tracking-widest">
                 Why It Matters
@@ -293,7 +273,6 @@ const PrePurchaseSurvey = () => {
               </blockquote>
             </div>
 
-            {/* Right - Stats Grid + Price */}
             <div className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -314,7 +293,6 @@ const PrePurchaseSurvey = () => {
                 ))}
               </div>
 
-              {/* Pricing Badge */}
               <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center">
                 <div className="text-slate-400 text-sm mb-1">Surveys from</div>
                 <div className="text-primary font-heading font-bold text-5xl md:text-6xl">€99</div>
@@ -327,7 +305,7 @@ const PrePurchaseSurvey = () => {
         </div>
       </section>
 
-      {/* ===== BUILD YOUR OWN SURVEY - MODULES ===== */}
+      {/* ===== BUILD YOUR OWN SURVEY - ALL MODULES STACKED ===== */}
       <section id="modules" className="bg-slate-900 py-16 md:py-24 border-t border-slate-800">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
@@ -339,82 +317,63 @@ const PrePurchaseSurvey = () => {
             </p>
           </div>
 
-          {/* Tabs Navigation */}
-          <Tabs value={activeModule} onValueChange={setActiveModule} className="w-full">
-            <TabsList className="flex flex-wrap justify-center gap-2 bg-transparent h-auto p-0 mb-12">
-              {modules.map((mod) => (
-                <TabsTrigger
-                  key={mod.id}
-                  value={mod.id}
-                  className="px-4 py-2.5 rounded-full text-sm font-semibold transition-all data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:shadow-primary/30 data-[state=inactive]:bg-slate-800 data-[state=inactive]:text-slate-400 data-[state=inactive]:hover:bg-slate-700 data-[state=inactive]:hover:text-slate-200 border-0"
-                >
-                  {mod.tabLabel}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-
+          {/* Navigation Pills - scroll to section */}
+          <div className="flex flex-wrap justify-center gap-2 mb-16">
             {modules.map((mod) => (
-              <TabsContent key={mod.id} value={mod.id} className="mt-0">
-                <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden">
-                  {mod.mainImage && !mod.isAddOn ? (
-                    <div className="grid lg:grid-cols-2 gap-0">
-                      {/* Images */}
-                      <div className="p-6 md:p-8 space-y-4">
-                        <img
-                          src={mod.mainImage}
-                          alt={mod.mainImageAlt || mod.title}
-                          className="w-full rounded-xl object-cover aspect-video"
-                          loading="lazy"
-                        />
-                        {mod.smallImages && mod.smallImages.length > 0 && (
-                          <div className="flex gap-4">
-                            {mod.smallImages.map((img, i) => (
-                              <img
-                                key={i}
-                                src={img}
-                                alt={`${mod.title} detail ${i + 1}`}
-                                className="flex-1 rounded-lg object-cover aspect-square max-h-32"
-                                loading="lazy"
-                              />
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                      {/* Text */}
-                      <div className="p-6 md:p-8 flex flex-col justify-center">
-                        <span className="text-primary font-bold text-xs uppercase tracking-widest mb-2">
-                          {mod.moduleNumber} · {mod.moduleType}
-                        </span>
-                        <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4">
-                          {mod.title}
-                        </h3>
-                        <p className="text-slate-400 leading-relaxed mb-6 max-w-lg">
-                          {mod.description}
-                        </p>
-                        <ul className="space-y-3">
-                          {mod.bullets.map((bullet) => (
-                            <li key={bullet} className="flex items-start gap-3 text-slate-300">
-                              <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                              <span>{bullet}</span>
-                            </li>
+              <button
+                key={mod.id}
+                onClick={() => scrollToModule(mod.id)}
+                className="px-4 py-2.5 rounded-full text-sm font-semibold bg-slate-800 text-slate-400 hover:bg-primary hover:text-white transition-all"
+              >
+                {mod.navLabel}
+              </button>
+            ))}
+          </div>
+
+          {/* All modules stacked vertically */}
+          <div className="space-y-12">
+            {modules.map((mod) => (
+              <div
+                key={mod.id}
+                id={`module-${mod.id}`}
+                className="bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden scroll-mt-24"
+              >
+                {mod.mainImage && !mod.isAddOn ? (
+                  <div className="grid lg:grid-cols-2 gap-0">
+                    {/* Images */}
+                    <div className="p-6 md:p-8 space-y-4">
+                      <img
+                        src={mod.mainImage}
+                        alt={mod.mainImageAlt || mod.title}
+                        className="w-full rounded-xl object-cover aspect-[16/10]"
+                        loading="lazy"
+                      />
+                      {mod.smallImages && mod.smallImages.length > 0 && (
+                        <div className="grid grid-cols-2 gap-4">
+                          {mod.smallImages.map((img, i) => (
+                            <img
+                              key={i}
+                              src={img}
+                              alt={`${mod.title} detail ${i + 1}`}
+                              className="w-full rounded-lg object-cover aspect-square"
+                              loading="lazy"
+                            />
                           ))}
-                        </ul>
-                      </div>
+                        </div>
+                      )}
                     </div>
-                  ) : (
-                    /* Add-on modules (no main image) */
-                    <div className="p-8 md:p-12 text-center max-w-2xl mx-auto">
-                      {mod.iconSection}
-                      <span className="text-primary font-bold text-xs uppercase tracking-widest mb-2 block">
+                    {/* Text */}
+                    <div className="p-6 md:p-8 flex flex-col justify-center">
+                      <span className="text-primary font-bold text-xs uppercase tracking-widest mb-2">
                         {mod.moduleNumber} · {mod.moduleType}
                       </span>
                       <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4">
                         {mod.title}
                       </h3>
-                      <p className="text-slate-400 leading-relaxed mb-6">
+                      <p className="text-slate-400 leading-relaxed mb-6 max-w-lg">
                         {mod.description}
                       </p>
-                      <ul className="space-y-3 text-left max-w-md mx-auto mb-8">
+                      <ul className="space-y-3">
                         {mod.bullets.map((bullet) => (
                           <li key={bullet} className="flex items-start gap-3 text-slate-300">
                             <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -422,17 +381,39 @@ const PrePurchaseSurvey = () => {
                           </li>
                         ))}
                       </ul>
-                      {mod.footnote && (
-                        <p className="text-slate-500 text-sm italic max-w-md mx-auto">
-                          {mod.footnote}
-                        </p>
-                      )}
                     </div>
-                  )}
-                </div>
-              </TabsContent>
+                  </div>
+                ) : (
+                  /* Add-on modules (no main image) */
+                  <div className="p-8 md:p-12 text-center max-w-2xl mx-auto">
+                    {mod.iconSection}
+                    <span className="text-primary font-bold text-xs uppercase tracking-widest mb-2 block">
+                      {mod.moduleNumber} · {mod.moduleType}
+                    </span>
+                    <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4">
+                      {mod.title}
+                    </h3>
+                    <p className="text-slate-400 leading-relaxed mb-6">
+                      {mod.description}
+                    </p>
+                    <ul className="space-y-3 text-left max-w-md mx-auto mb-8">
+                      {mod.bullets.map((bullet) => (
+                        <li key={bullet} className="flex items-start gap-3 text-slate-300">
+                          <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {mod.footnote && (
+                      <p className="text-slate-500 text-sm italic max-w-md mx-auto">
+                        {mod.footnote}
+                      </p>
+                    )}
+                  </div>
+                )}
+              </div>
             ))}
-          </Tabs>
+          </div>
         </div>
       </section>
 
@@ -463,7 +444,6 @@ const PrePurchaseSurvey = () => {
               </a>
             </div>
 
-            {/* LeakGuard Feature Card */}
             <div className="mt-12 bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 text-center">
               <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/20 mx-auto mb-4">
                 <Droplets className="w-8 h-8 text-primary" />
