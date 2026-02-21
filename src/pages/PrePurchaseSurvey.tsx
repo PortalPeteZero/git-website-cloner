@@ -665,13 +665,13 @@ const PrePurchaseSurvey = () => {
               <Phone className="w-5 h-5" />
               {isSpanish ? "Llamar +34 711 051 071" : "Call +34 711 051 071"}
             </a>
-            <a
-              href="https://canary-detect.com/"
+            <Link
+              to={isSpanish ? "/es/contacto" : "/contact"}
               className="inline-flex items-center gap-2 px-8 py-3 rounded-lg border-2 border-slate-600 text-white font-bold text-base hover:bg-slate-800 transition-all"
             >
-              <Globe className="w-5 h-5" />
-              {isSpanish ? "Visitar canary-detect.com" : "Visit canary-detect.com"}
-            </a>
+              <ChevronRight className="w-5 h-5" />
+              {isSpanish ? "Enviar Consulta" : "Send an Enquiry"}
+            </Link>
           </div>
         </div>
       </section>
