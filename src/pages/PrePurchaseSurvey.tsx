@@ -329,27 +329,89 @@ const PrePurchaseSurvey = () => {
               </button>
             ))}
           </div>
+        </div>
 
-          {/* All modules stacked vertically */}
-          <div className="space-y-12">
-            {modules.map((mod) => (
+        {/* All modules stacked vertically — no card wrappers, alternating bg */}
+        <div>
+          {modules.map((mod, index) => {
+            const isEven = index % 2 === 1;
+            const bgColor = isEven ? "bg-[#f9f9f9]" : "bg-white";
+
+            if (mod.isAddOn) {
+              return (
+                <div
+                  key={mod.id}
+                  id={`module-${mod.id}`}
+                  className={`${bgColor} scroll-mt-24`}
+                >
+                  <div className="container mx-auto max-w-6xl px-8 md:px-12 py-12 md:py-16 text-center">
+                    {mod.iconSection}
+                    <span className="text-[#f97316] font-bold text-xs uppercase tracking-widest mb-2 block">
+                      {mod.moduleNumber} · {mod.moduleType}
+                    </span>
+                    <h3 className="font-heading text-2xl md:text-3xl font-bold text-[#111827] mb-4">
+                      {mod.title}
+                    </h3>
+                    <p className="text-[#374151] leading-relaxed mb-6 max-w-2xl mx-auto">
+                      {mod.description}
+                    </p>
+                    <ul className="space-y-3 text-left max-w-md mx-auto mb-8">
+                      {mod.bullets.map((bullet) => (
+                        <li key={bullet} className="flex items-start gap-3 text-[#374151]">
+                          <span className="w-2.5 h-2.5 rounded-full bg-[#f97316] shrink-0 mt-1.5" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {mod.footnote && (
+                      <p className="text-[#6b7280] text-sm italic max-w-md mx-auto">
+                        {mod.footnote}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              );
+            }
+
+            return (
               <div
                 key={mod.id}
                 id={`module-${mod.id}`}
-                className="bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden scroll-mt-24"
+                className={`${bgColor} scroll-mt-24`}
               >
-                {mod.mainImage && !mod.isAddOn ? (
-                  <div className="grid lg:grid-cols-2 gap-0">
-                    {/* Images */}
-                    <div className="p-6 md:p-8 space-y-4">
+                <div className="container mx-auto max-w-6xl">
+                  <div className={`grid lg:grid-cols-2 gap-0 ${isEven ? "direction-rtl" : ""}`}>
+                    {/* Image — full 50% width, edge-to-edge, no padding */}
+                    <div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
                       <img
                         src={mod.mainImage}
                         alt={mod.mainImageAlt || mod.title}
-                        className="w-full rounded-xl object-cover aspect-[16/10]"
+                        className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
                         loading="lazy"
                       />
+                    </div>
+                    {/* Content panel */}
+                    <div className={`px-8 md:px-12 py-12 md:py-16 flex flex-col justify-center ${isEven ? "lg:order-1" : "lg:order-2"}`}>
+                      <span className="text-[#f97316] font-bold text-xs uppercase tracking-widest mb-2">
+                        {mod.moduleNumber} · {mod.moduleType}
+                      </span>
+                      <h3 className="font-heading text-2xl md:text-3xl font-bold text-[#111827] mb-4">
+                        {mod.title}
+                      </h3>
+                      <p className="text-[#374151] leading-relaxed mb-6 max-w-lg">
+                        {mod.description}
+                      </p>
+                      <ul className="space-y-3">
+                        {mod.bullets.map((bullet) => (
+                          <li key={bullet} className="flex items-start gap-3 text-[#374151]">
+                            <span className="w-2.5 h-2.5 rounded-full bg-[#f97316] shrink-0 mt-1.5" />
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {/* Small images below bullets */}
                       {mod.smallImages && mod.smallImages.length > 0 && (
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-2 gap-3 mt-6">
                           {mod.smallImages.map((img, i) => (
                             <img
                               key={i}
@@ -362,58 +424,11 @@ const PrePurchaseSurvey = () => {
                         </div>
                       )}
                     </div>
-                    {/* Text */}
-                    <div className="p-6 md:p-8 flex flex-col justify-center">
-                      <span className="text-primary font-bold text-xs uppercase tracking-widest mb-2">
-                        {mod.moduleNumber} · {mod.moduleType}
-                      </span>
-                      <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4">
-                        {mod.title}
-                      </h3>
-                      <p className="text-slate-400 leading-relaxed mb-6 max-w-lg">
-                        {mod.description}
-                      </p>
-                      <ul className="space-y-3">
-                        {mod.bullets.map((bullet) => (
-                          <li key={bullet} className="flex items-start gap-3 text-slate-300">
-                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                            <span>{bullet}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
-                ) : (
-                  /* Add-on modules (no main image) */
-                  <div className="p-8 md:p-12 text-center max-w-2xl mx-auto">
-                    {mod.iconSection}
-                    <span className="text-primary font-bold text-xs uppercase tracking-widest mb-2 block">
-                      {mod.moduleNumber} · {mod.moduleType}
-                    </span>
-                    <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4">
-                      {mod.title}
-                    </h3>
-                    <p className="text-slate-400 leading-relaxed mb-6">
-                      {mod.description}
-                    </p>
-                    <ul className="space-y-3 text-left max-w-md mx-auto mb-8">
-                      {mod.bullets.map((bullet) => (
-                        <li key={bullet} className="flex items-start gap-3 text-slate-300">
-                          <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                          <span>{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    {mod.footnote && (
-                      <p className="text-slate-500 text-sm italic max-w-md mx-auto">
-                        {mod.footnote}
-                      </p>
-                    )}
-                  </div>
-                )}
+                </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 
