@@ -72,8 +72,8 @@ const TechnologySection = forwardRef<HTMLElement>((_, ref) => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">
@@ -98,8 +98,8 @@ const TechnologySection = forwardRef<HTMLElement>((_, ref) => {
         {/* Equipment value badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="flex justify-center mb-12"
         >
           <div className="bg-primary/20 border border-primary/30 rounded-full px-6 py-3 inline-flex items-center gap-3">
@@ -116,9 +116,8 @@ const TechnologySection = forwardRef<HTMLElement>((_, ref) => {
             <motion.div
               key={tech.name}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
               className="bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:from-white/[0.12] hover:to-white/[0.05] transition-all duration-300 group hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
             >
               <div className="w-12 h-12 bg-gradient-to-br from-primary/30 to-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:from-primary/40 group-hover:to-primary/20 transition-all duration-300 group-hover:scale-105">
@@ -140,8 +139,8 @@ const TechnologySection = forwardRef<HTMLElement>((_, ref) => {
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center"
         >
           <Button size="lg" variant="secondary" asChild>

@@ -54,8 +54,8 @@ const MeetTheTeamSection = () => {
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
           <span className="text-primary font-semibold uppercase tracking-wide text-sm flex items-center justify-center gap-2">
@@ -79,8 +79,8 @@ const MeetTheTeamSection = () => {
           {/* Left column - Images */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="space-y-4"
           >
             {/* Main hero image */}
@@ -113,8 +113,8 @@ const MeetTheTeamSection = () => {
           {/* Right column - Content */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col gap-6 h-full"
           >
             {/* Professional credentials */}
@@ -236,9 +236,8 @@ const MeetTheTeamSection = () => {
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                   className="bg-white rounded-lg p-3 shadow-md ring-1 ring-black/5 text-center"
                 >
                   <stat.icon className="h-5 w-5 text-primary mx-auto mb-1" />
@@ -253,8 +252,8 @@ const MeetTheTeamSection = () => {
         {/* Fun side section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-12"
         >
           <div className="bg-gradient-to-r from-canary-navy to-canary-navy/90 rounded-2xl p-6 md:p-8 text-white relative overflow-hidden">
@@ -297,9 +296,8 @@ const MeetTheTeamSection = () => {
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
                     className="group relative"
                   >
                     <div className="aspect-square rounded-lg overflow-hidden ring-2 ring-white/20 group-hover:ring-primary transition-all duration-300">
@@ -320,8 +318,8 @@ const MeetTheTeamSection = () => {
         {/* Why Choose Section - additional content for depth */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           className="mt-12"
         >
           <div className="bg-white rounded-xl p-6 shadow-lg ring-1 ring-black/5">
@@ -370,8 +368,8 @@ const MeetTheTeamSection = () => {
         {/* Internal Links Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-12"
         >
           <div className="bg-white rounded-xl p-6 shadow-lg ring-1 ring-black/5">

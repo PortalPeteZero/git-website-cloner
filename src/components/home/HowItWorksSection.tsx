@@ -75,8 +75,8 @@ const HowItWorksSection = forwardRef<HTMLElement>((_, ref) => {
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-10"
         >
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">
@@ -100,8 +100,7 @@ const HowItWorksSection = forwardRef<HTMLElement>((_, ref) => {
           {/* Animated progress overlay */}
           <motion.div 
             initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
+            animate={{ scaleX: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="absolute top-[60px] left-[10%] right-[10%] h-1 bg-gradient-to-r from-primary via-primary to-primary rounded-full origin-left"
           />
@@ -111,9 +110,8 @@ const HowItWorksSection = forwardRef<HTMLElement>((_, ref) => {
               <motion.div
                 key={step.number}
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.15, duration: 0.5 }}
                 className="text-center group"
               >
                 {/* Step Number Circle */}
@@ -160,9 +158,8 @@ const HowItWorksSection = forwardRef<HTMLElement>((_, ref) => {
               <motion.div
                 key={step.number}
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="flex gap-6 group"
               >
                 {/* Step Number Circle */}

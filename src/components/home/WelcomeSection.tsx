@@ -41,8 +41,8 @@ const WelcomeSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center overflow-visible">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
             className="min-w-0"
           >
             <span className="text-primary font-semibold uppercase tracking-wide text-sm">
@@ -90,9 +90,8 @@ const WelcomeSection = () => {
                 <motion.div
                   key={feature}
                   initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
                   className="flex items-center gap-2"
                 >
                   <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
@@ -119,8 +118,8 @@ const WelcomeSection = () => {
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="relative"
           >
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl ring-1 ring-black/5">
