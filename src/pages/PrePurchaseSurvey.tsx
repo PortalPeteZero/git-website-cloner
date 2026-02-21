@@ -268,12 +268,14 @@ const PrePurchaseSurvey = () => {
               <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-6 max-w-xl">
                 Canary Detect has no relationship with any estate agent or seller. Our only job is to give you an accurate, honest picture of the property's condition — the good and the bad — so you can negotiate with confidence, plan for repairs, or walk away from a bad investment.
               </p>
-              <h3 className="font-heading text-xl md:text-2xl font-bold text-white mt-4 mb-3">
+              <span className="text-[#f97316] font-bold text-xs uppercase tracking-widest mt-6 block">
                 A note on estate agents
-              </h3>
-              <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
-                Reputable estate agents recognise the value of an independent survey commissioned directly by the buyer. Many of the best agents in Lanzarote actively encourage their clients to arrange their own survey — and are happy to recommend Canary Detect. If your agent suggests getting an independent survey, take them up on it. It is a sign you are dealing with someone who has your best interests at heart.
-              </p>
+              </span>
+              <div className="border-l-4 border-primary pl-6 py-4 mt-3 mb-8 bg-slate-800/40 rounded-r-lg max-w-xl">
+                <p className="text-slate-300 text-base md:text-lg leading-relaxed">
+                  Reputable estate agents recognise the value of an independent survey commissioned directly by the buyer. Many of the best agents in Lanzarote actively encourage their clients to arrange their own survey — and are happy to recommend Canary Detect. If your agent suggests getting an independent survey, take them up on it. It is a sign you are dealing with someone who has your best interests at heart.
+                </p>
+              </div>
               <blockquote className="border-l-4 border-primary pl-6 py-2 italic text-slate-300 text-lg">
                 "Before you sign anything, make sure the survey is truly on your side."
               </blockquote>
