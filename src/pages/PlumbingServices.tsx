@@ -258,9 +258,8 @@ const PlumbingServices = () => {
                 <motion.div
                   key={service.slug}
                   initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.08 }}
-                  viewport={{ once: true }}
                 >
                   <Link to={getServicePath(service.slug)} className="group block h-full">
                     <div className="h-full rounded-xl overflow-hidden bg-canary-navy border border-border/50 hover:border-primary/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">

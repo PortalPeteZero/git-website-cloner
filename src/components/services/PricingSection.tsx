@@ -102,8 +102,8 @@ const PricingSection = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-10"
         >
           <span className="text-primary font-medium">
@@ -156,8 +156,8 @@ const PricingSection = () => {
         {/* Guarantees Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="mb-12"
         >
           <h3 className="font-heading text-2xl font-bold text-center mb-8">
@@ -196,8 +196,8 @@ const PricingSection = () => {
         {/* Note and CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="text-center"
         >
           <p className="text-muted-foreground text-sm mb-6 max-w-2xl mx-auto">

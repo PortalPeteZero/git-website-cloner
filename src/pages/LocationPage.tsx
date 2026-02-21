@@ -119,7 +119,7 @@ const LocationPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
                 <span className="text-primary font-semibold text-sm uppercase tracking-widest">{uiText.sections.localExperts}</span>
                 <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-6">{uiText.sections.servicesIn(locationData.name)}</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">{locationData.areaDescription}</p>
@@ -252,7 +252,7 @@ const LocationPage = () => {
               </motion.div>
             </div>
             <div>
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-card border border-border rounded-xl p-6 sticky top-24 shadow-sm">
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-card border border-border rounded-xl p-6 sticky top-24 shadow-sm">
                 <h3 className="font-heading text-xl font-bold text-foreground mb-4">{uiText.sections.getQuoteIn(locationData.name)}</h3>
                 <p className="text-foreground/80 text-sm mb-6">{uiText.sections.quoteDescription(locationData.name)}</p>
                 <div className="space-y-4 mb-6">
@@ -291,7 +291,7 @@ const LocationPage = () => {
       {/* Nearby Areas */}
       <section className="py-14 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-center">
             <span className="text-primary font-semibold text-sm uppercase tracking-widest">{uiText.sections.coverageArea}</span>
             <h2 className="font-heading text-2xl md:text-3xl font-bold mt-2 mb-4">{uiText.sections.nearbyAreas}</h2>
             <p className="text-muted-foreground mb-8">{uiText.sections.nearbyDescription(locationData.name)}</p>
@@ -313,7 +313,7 @@ const LocationPage = () => {
       {/* CTA Section */}
       <section className="py-14 md:py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">{uiText.sections.needLeakDetection(locationData.name)}</h2>
             <p className="text-primary-foreground/90 text-lg mb-8 max-w-xl mx-auto">{uiText.sections.ctaDescription}</p>
             <div className="flex flex-wrap justify-center gap-4">

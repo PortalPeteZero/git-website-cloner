@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { MapPin, CheckCircle, Clock, TrendingUp } from "lucide-react";
 import SEOHead from "@/components/seo/SEOHead";
 import { useTranslation } from "@/i18n/LanguageContext";
+import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
 
 // Import hero and case study images
 import caseStudiesHero from "@/assets/hero/case-studies-hero.jpg";
@@ -289,9 +290,8 @@ const CaseStudies = () => {
               <motion.article
                 key={study.id}
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="group bg-card rounded-2xl overflow-hidden border border-border shadow-md hover:shadow-2xl transition-all duration-500"
               >
                 {/* Location Badge */}
@@ -358,13 +358,16 @@ const CaseStudies = () => {
         </div>
       </section>
 
+      {/* All Services Grid - Internal Links */}
+      <AllServicesGrid isSpanish={isSpanish} />
+
       {/* CTA Section */}
       <section className="py-10 md:py-12 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)] section-stripes-orange">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
               {isSpanish ? "¿Necesita a Los Cazafugas?" : "Need The Leaky Finders?"}

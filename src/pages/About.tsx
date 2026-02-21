@@ -6,6 +6,7 @@ import welcomeImg from "@/assets/welcome.jpg";
 import aboutHero from "@/assets/hero/about-hero.jpg";
 import SEOHead from "@/components/seo/SEOHead";
 import { useTranslation } from "@/i18n/LanguageContext";
+import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
 
 const About = () => {
   const { t, isSpanish } = useTranslation();
@@ -58,8 +59,8 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
             >
               <span className="text-primary font-medium">{isSpanish ? "Nuestra Historia" : "Our Story"}</span>
               <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-6">
@@ -104,8 +105,8 @@ const About = () => {
 
             <motion.div
               initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
               className="relative"
             >
               <div className="aspect-square rounded-lg overflow-hidden relative">
@@ -124,8 +125,8 @@ const About = () => {
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="text-center max-w-2xl mx-auto mb-12"
           >
             <span className="text-primary font-medium">{isSpanish ? "Nuestras Promesas" : "Our Promises"}</span>
@@ -137,8 +138,8 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               className="bg-canary-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-canary-white/10"
             >
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -156,9 +157,8 @@ const About = () => {
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
               className="bg-canary-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-canary-white/10"
             >
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -176,9 +176,8 @@ const About = () => {
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
               className="bg-canary-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-canary-white/10"
             >
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -197,14 +196,16 @@ const About = () => {
         </div>
       </section>
 
+      {/* All Services Grid - Internal Links */}
+      <AllServicesGrid isSpanish={isSpanish} />
 
       {/* CTA Section */}
       <section className="py-10 md:py-12 bg-primary section-stripes-orange">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
               {isSpanish ? "¿Listo para Encontrar su Fuga?" : "Ready to Find Your Leak?"}

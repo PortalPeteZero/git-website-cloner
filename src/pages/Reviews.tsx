@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Star, Quote, ExternalLink } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useGoogleReviews } from "@/hooks/useGoogleReviews";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
+import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
 
 const Reviews = () => {
   const { isSpanish } = useLanguage();
@@ -127,9 +128,8 @@ const Reviews = () => {
                 <motion.div
                   key={review.id}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: Math.min(index * 0.05, 0.5) }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: Math.min(index * 0.05, 0.5), duration: 0.5 }}
                   className="group relative bg-card rounded-2xl p-6 md:p-8 border-t-4 border-t-primary hover:border-t-[hsl(25,93%,45%)] border-x border-b border-border shadow-md hover:shadow-xl transition-all duration-300"
                 >
                   {/* Google badge */}
@@ -195,6 +195,9 @@ const Reviews = () => {
           )}
         </div>
       </section>
+
+      {/* All Services Grid - Internal Links */}
+      <AllServicesGrid isSpanish={isSpanish} />
     </Layout>
   );
 };
