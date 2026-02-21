@@ -1,63 +1,47 @@
+# Project Architecture: Lovable React SPA with LovableHTML Pre-Rendering
 
+## How the two layers work together
 
-# Combined Fix: whileInView Animations + Unbalanced Link Ratios (All Pages)
+This site is a React Single Page Application (SPA) built and maintained in Lovable. It uses LovableHTML as a pre-rendering proxy layer to make the site visible to search engines and AI crawlers.
 
-## Problem 1: Invisible Content (whileInView)
+Human visitors always receive the full interactive React experience. When a search engine bot (Googlebot, Bingbot) or AI crawler (ChatGPT, Perplexity, Claude) visits, LovableHTML intercepts the request, detects it is a crawler via user agent, and serves a cached pre-rendered HTML snapshot instead. The Lovable codebase itself is untouched by this process.
 
-Content using `whileInView` stays at `opacity: 0` for the pre-renderer (which doesn't scroll), causing "Thin Content", "Missing H1", and "Low Internal Links" errors.
+## Key Rules
 
-**Remaining instances across 13 files (~35 total):**
+### Editing
+- This is a React SPA. All edits must be treated as React code.
+- Do NOT suggest converting to SSR/SSG (Next.js, Remix, etc.) — this would break the Lovable editor and is unnecessary.
+- Do NOT suggest Puppeteer, Rendertron, or self-hosted pre-rendering solutions.
 
-| File | Instances |
-|------|-----------|
-| `src/pages/About.tsx` | 7 |
-| `src/pages/Technology.tsx` | 11 |
-| `src/pages/Reviews.tsx` | 1 |
-| `src/pages/Blog.tsx` | 1 |
-| `src/pages/CaseStudies.tsx` | 2 |
-| `src/pages/Contact.tsx` | 2 |
-| `src/pages/BlogArticle.tsx` | 2 |
-| `src/pages/Locations.tsx` | 2 |
-| `src/pages/LocationPage.tsx` | 4 |
-| `src/pages/PlumbingServices.tsx` | 1 |
-| `src/pages/PlumbingServiceDetail.tsx` | 1 |
-| `src/pages/Services.tsx` | 3 |
-| `src/components/services/PricingSection.tsx` | 5 |
+### SEO Meta Tags
+- All meta tags, titles, OG tags, Twitter cards, canonical URLs, and JSON-LD must be implemented through `react-helmet-async` per page.
+- Do NOT hardcode these into `index.html` — static tags override/conflict with per-page component-level tags.
+- Canonical URLs must always point to the custom domain (`canary-detect.com`), never to the `lovable.app` preview subdomain.
 
-**Fix:** Replace every `whileInView` with `animate` and remove `viewport={{ once: true }}`. Preserve existing `transition` props where present; add `transition={{ duration: 0.5 }}` where missing.
+### Translations / i18n
+- All translated content must use the existing i18n setup. Do NOT hardcode translated text directly into components.
 
----
+### Adding New Pages
+- Every new page/route must be added to `sitemap.xml`.
+- LovableHTML pre-renders pages based on what is in the sitemap — missing pages won't be pre-rendered.
+- For 10+ pages, use a script-based sitemap approach.
 
-## Problem 2: Unbalanced Link Ratios
+### After Publishing
+- LovableHTML cache does not update instantly. Cache refresh can be scheduled or triggered on demand via the LovableHTML API/dashboard.
 
-Pages have too many external links relative to internal links. The fix is to add the existing `AllServicesGrid` component (already used on other pages) to each affected page. This component renders a grid of ~8 internal service links, pushing the internal count above the external count.
+### Images
+- All images must have descriptive alt text.
+- Use WebP format where possible and compress before uploading.
 
-**Pages receiving `AllServicesGrid`:**
+### Internal Links
+- Internal links are rendered by JavaScript via React Router.
+- LovableHTML makes them visible to crawlers as long as pages are in the sitemap.
+- Always add relevant internal links between related pages with descriptive anchor text.
 
-| Page | Where it goes |
-|------|--------------|
-| `CaseStudies.tsx` | Before the CTA section |
-| `Blog.tsx` | Before the Newsletter CTA section |
-| `Reviews.tsx` | Before the end of the page (after reviews grid) |
-| `Contact.tsx` | Before or after the contact form section |
-| `About.tsx` | Before the CTA section |
-| `Services.tsx` | Already has service links; add if ratio still unbalanced |
-| `Technology.tsx` | Before the CTA section |
+### Structured Data
+- JSON-LD schemas are rendered by JavaScript and only visible to crawlers via LovableHTML pre-render.
+- Use Organisation schema on homepage, page-specific schemas where relevant.
+- Validate with Google's Rich Results Test after changes.
 
-Each page will import `AllServicesGrid` from `@/components/internal-links/AllServicesGrid` and render it in a new section. This adds 8+ internal links per page with zero new content to maintain -- it reuses an existing component.
-
----
-
-## Implementation Order
-
-1. Fix all 35 `whileInView` instances across all 13 files (batch edit)
-2. Add `AllServicesGrid` import and section to each of the 7 affected pages
-3. Verify no `whileInView` instances remain in the codebase
-
-## Result
-
-- All page content visible to the pre-renderer on first render
-- Internal link count exceeds external link count on every page
-- No new dependencies, routes, or database changes
-- No visible difference for end users (animations still play on mount)
-
+### Static Files
+- `sitemap.xml` and `robots.txt` are static files in `/public` — directly readable by crawlers without pre-rendering. Keep both up to date.
