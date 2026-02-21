@@ -502,8 +502,8 @@ const BlogArticle = () => {
             {/* CTA Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               className="mt-12 p-8 bg-canary-navy rounded-xl text-white text-center"
             >
               <h3 className="font-heading text-2xl font-bold mb-4">
@@ -535,9 +535,8 @@ const BlogArticle = () => {
                 <motion.article
                   key={post.id}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
                   className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
                 >
                   <Link to={`${blogBasePath}/${post.slug}`}>

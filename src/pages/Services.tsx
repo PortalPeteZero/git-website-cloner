@@ -212,8 +212,8 @@ const Services = () => {
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="text-center max-w-2xl mx-auto mb-12"
           >
             <span className="text-primary font-medium">
@@ -227,8 +227,8 @@ const Services = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               className="text-center"
             >
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
@@ -246,9 +246,8 @@ const Services = () => {
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
               className="text-center"
             >
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
@@ -266,9 +265,8 @@ const Services = () => {
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
               className="text-center"
             >
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
@@ -293,8 +291,8 @@ const Services = () => {
           <div className="container mx-auto px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               className="max-w-4xl mx-auto"
             >
               <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-center">
@@ -400,8 +398,8 @@ const Services = () => {
           <div className="container mx-auto px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               className="text-center mb-10"
             >
               <span className="text-primary font-medium">Cobertura en Toda la Isla</span>
@@ -454,8 +452,8 @@ const Services = () => {
           <div className="container mx-auto px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               className="text-center mb-10"
             >
               <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
@@ -470,8 +468,8 @@ const Services = () => {
             <div className="grid md:grid-cols-4 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 className="text-center p-6"
               >
                 <Award className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -482,9 +480,8 @@ const Services = () => {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
                 className="text-center p-6"
               >
                 <Users className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -495,9 +492,8 @@ const Services = () => {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
                 className="text-center p-6"
               >
                 <Clock className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -508,9 +504,8 @@ const Services = () => {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
                 className="text-center p-6"
               >
                 <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -523,8 +518,8 @@ const Services = () => {
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               className="mt-10 text-center"
             >
               <p className="text-muted-foreground mb-6">

@@ -256,9 +256,8 @@ const PlumbingServiceDetail = () => {
                     <motion.div
                       key={idx}
                       initial={{ opacity: 0, scale: 0.95 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
+                      animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: idx * 0.05 }}
-                      viewport={{ once: true }}
                       className="aspect-square rounded-lg overflow-hidden"
                     >
                       <img 

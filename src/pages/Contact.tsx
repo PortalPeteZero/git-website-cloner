@@ -11,6 +11,7 @@ import SEOHead from "@/components/seo/SEOHead";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
+import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
 
 const Contact = () => {
   const { t, isSpanish } = useTranslation();
@@ -50,7 +51,6 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Get service label for the email
       const selectedService = serviceOptions.find(opt => opt.value === formData.service);
       const serviceLabel = selectedService?.label || "Not specified";
       
@@ -73,7 +73,6 @@ const Contact = () => {
       console.log("Contact form submitted successfully:", data);
       setSubmitStatus("success");
       
-      // Reset after 3 seconds
       setTimeout(() => {
         setSubmitStatus("idle");
         setFormData({ name: "", phone: "", email: "", service: "", message: "" });
@@ -162,8 +161,8 @@ const Contact = () => {
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
             >
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
                 {t('contact.sendMessage')}
@@ -297,8 +296,8 @@ const Contact = () => {
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
             >
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
                 {t('contact.contactInfo')}
@@ -408,6 +407,9 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* All Services Grid - Internal Links */}
+      <AllServicesGrid isSpanish={isSpanish} />
     </Layout>
   );
 };

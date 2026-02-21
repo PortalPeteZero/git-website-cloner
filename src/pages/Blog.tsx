@@ -10,6 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getBlogPath } from "@/i18n/routes";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
+import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
 
 // Hero carousel images
 import heroHqScene from "@/assets/hero/blog-hq-scene.jpg";
@@ -353,13 +354,16 @@ const Blog = () => {
         </div>
       </section>
 
+      {/* All Services Grid - Internal Links */}
+      <AllServicesGrid isSpanish={isSpanish} />
+
       {/* Newsletter CTA */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="max-w-xl mx-auto"
           >
             <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">

@@ -6,6 +6,7 @@ import { Atom, AudioLines, Thermometer, Mic, Video, CheckCircle, AlertCircle, Sp
 import technologyHero from "@/assets/hero/technology-hero.jpg";
 import SEOHead from "@/components/seo/SEOHead";
 import { useTranslation } from "@/i18n/LanguageContext";
+import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
 // Before & After images
 import leakRepairBa1 from "@/assets/services/gallery/leak-repair-ba-1.jpg";
 import leakRepairBa2 from "@/assets/services/gallery/leak-repair-ba-2.jpg";
@@ -149,8 +150,8 @@ const Technology = () => {
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="text-center flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8"
           >
             <Sparkles className="h-10 w-10 text-white/80" />
@@ -175,8 +176,8 @@ const Technology = () => {
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="text-center max-w-2xl mx-auto mb-10"
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
@@ -259,8 +260,8 @@ const Technology = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
             >
               <span className="text-primary font-medium">{isSpanish ? "Por Qué Importa" : "Why It Matters"}</span>
               <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-6">
@@ -304,8 +305,8 @@ const Technology = () => {
 
             <motion.div
               initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
               className="bg-card border border-border rounded-2xl p-8 shadow-lg"
             >
               <h3 className="font-heading font-bold text-xl mb-6 text-center">
@@ -345,8 +346,8 @@ const Technology = () => {
           {/* Before & After Proof Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="mt-12"
           >
             <div className="text-center mb-8">
@@ -392,8 +393,8 @@ const Technology = () => {
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="max-w-3xl mx-auto"
           >
             <span className="text-primary font-medium">
@@ -437,13 +438,16 @@ const Technology = () => {
         </div>
       </section>
 
+      {/* All Services Grid - Internal Links */}
+      <AllServicesGrid isSpanish={isSpanish} />
+
       {/* CTA Section */}
       <section className="py-10 md:py-12 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)] section-stripes-orange">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
               {isSpanish ? "¿Listo para Los Cazafugas?" : "Ready for The Leaky Finders?"}

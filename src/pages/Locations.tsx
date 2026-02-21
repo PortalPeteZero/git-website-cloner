@@ -123,9 +123,8 @@ const Locations = () => {
               <motion.div
                 key={loc.slug}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05, duration: 0.5 }}
               >
                 <Link
                   to={isSpanish ? `/es/ubicaciones/${loc.slug}` : `/locations/${loc.slug}`}
@@ -157,7 +156,7 @@ const Locations = () => {
       {/* CTA */}
       <section className="py-14 md:py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <p className="text-primary-foreground text-3xl md:text-4xl font-bold font-heading mb-4">
               {isSpanish ? "¿No Encuentra Su Zona?" : "Can't Find Your Area?"}
             </p>
