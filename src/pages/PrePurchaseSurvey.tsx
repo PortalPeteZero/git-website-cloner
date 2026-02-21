@@ -391,12 +391,33 @@ const PrePurchaseSurvey = () => {
                   <div className={`grid lg:grid-cols-2 gap-0`}>
                     {/* Image — full 50% width, edge-to-edge, no padding */}
                     <div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                      <img
-                        src={mod.mainImage}
-                        alt={mod.mainImageAlt || mod.title}
-                        className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
-                        loading="lazy"
-                      />
+                      {mod.smallImages && mod.smallImages.length > 0 ? (
+                        <div className="grid grid-cols-2 h-full min-h-[300px] lg:min-h-[500px]">
+                          <img
+                            src={mod.mainImage}
+                            alt={mod.mainImageAlt || mod.title}
+                            className={`w-full object-cover ${mod.smallImages.length === 1 ? "row-span-2" : "row-span-1 col-span-2"}`}
+                            style={{ height: mod.smallImages.length === 1 ? "100%" : undefined }}
+                            loading="lazy"
+                          />
+                          {mod.smallImages.map((img, i) => (
+                            <img
+                              key={i}
+                              src={img}
+                              alt={`${mod.title} detail ${i + 1}`}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                          ))}
+                        </div>
+                      ) : (
+                        <img
+                          src={mod.mainImage}
+                          alt={mod.mainImageAlt || mod.title}
+                          className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
+                          loading="lazy"
+                        />
+                      )}
                     </div>
                     {/* Content panel */}
                     <div className={`px-8 md:px-12 py-12 md:py-16 flex flex-col justify-center ${isEven ? "lg:order-1" : "lg:order-2"}`}>
