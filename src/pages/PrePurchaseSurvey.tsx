@@ -272,7 +272,7 @@ const PrePurchaseSurvey = () => {
                 A note on estate agents
               </h3>
               <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
-                In fact, reputable estate agents recognise the value of an independent survey commissioned directly by the buyer. Many of the best agents in Lanzarote actively encourage their clients to arrange their own survey — and are happy to recommend Canary Detect. If your agent suggests getting an independent survey, take them up on it. It is a sign you are dealing with someone who has your best interests at heart.
+                Reputable estate agents recognise the value of an independent survey commissioned directly by the buyer. Many of the best agents in Lanzarote actively encourage their clients to arrange their own survey — and are happy to recommend Canary Detect. If your agent suggests getting an independent survey, take them up on it. It is a sign you are dealing with someone who has your best interests at heart.
               </p>
               <blockquote className="border-l-4 border-primary pl-6 py-2 italic text-slate-300 text-lg">
                 "Before you sign anything, make sure the survey is truly on your side."
