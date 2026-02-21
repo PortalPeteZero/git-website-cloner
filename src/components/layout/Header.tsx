@@ -149,7 +149,7 @@ const Header = () => {
               <a 
                 href="https://leak-detective.com/" 
                 target="_blank" 
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="flex items-center gap-1.5 px-3 py-1.5 font-semibold text-sm rounded-md transition-all duration-300 text-white/90 hover:text-primary"
               >
                 <Gamepad2 className="h-4 w-4" />
@@ -308,7 +308,7 @@ const Header = () => {
                           <a 
                             href="https://canary-detect-coatings.es/" 
                             target="_blank" 
-                            rel="noopener noreferrer"
+                            rel="noopener noreferrer nofollow"
                             className="block cursor-pointer font-semibold text-accent hover:bg-accent/10 rounded-lg transition-colors py-2.5 px-3 flex items-center gap-2"
                           >
                             {t('navigation.poolCoatings')}
@@ -339,7 +339,7 @@ const Header = () => {
                           <a 
                             href="https://leakguardlanzarote.com/" 
                             target="_blank" 
-                            rel="noopener noreferrer"
+                            rel="noopener noreferrer nofollow"
                             className="block cursor-pointer font-medium hover:bg-accent/10 hover:text-accent rounded-lg transition-colors py-2.5 px-3 flex items-center gap-2"
                           >
                             {isSpanish ? "Monitoreo de Fugas" : "Water Leak Monitoring"}
@@ -507,7 +507,7 @@ const Header = () => {
                   <a 
                     href="https://canary-detect-coatings.es/" 
                     target="_blank" 
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-2 px-4 py-2.5 text-accent font-semibold hover:bg-accent/5 rounded-lg transition-all"
                   >
@@ -533,7 +533,7 @@ const Header = () => {
                   <a 
                     href="https://leakguardlanzarote.com/" 
                     target="_blank" 
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-2 px-4 py-2.5 text-foreground/80 font-medium hover:text-accent hover:bg-accent/5 rounded-lg transition-all"
                   >
@@ -677,7 +677,7 @@ const Header = () => {
                 <a 
                   href="https://leak-detective.com/" 
                   target="_blank" 
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full"
                 >

@@ -11,6 +11,7 @@ import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getBlogPath } from "@/i18n/routes";
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
 import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
+import ServiceAreas from "@/components/internal-links/ServiceAreas";
 
 // Hero carousel images
 import heroHqScene from "@/assets/hero/blog-hq-scene.jpg";
@@ -356,6 +357,9 @@ const Blog = () => {
 
       {/* All Services Grid - Internal Links */}
       <AllServicesGrid isSpanish={isSpanish} />
+
+      {/* Service Areas - Internal Links */}
+      <ServiceAreas isSpanish={isSpanish} />
 
       {/* Newsletter CTA */}
       <section className="py-16 md:py-24 bg-background">
