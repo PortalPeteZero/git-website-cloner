@@ -1,31 +1,42 @@
 
 
-## Fix: Trim Locations Page Title to Under 60 Characters
+## Fix: Improve Blog Page Link Ratio
 
 ### Problem
-The English meta title "Leak Detection Lanzarote | All 15 Municipalities | Canary Detect" is 65 characters, exceeding the 60-character SEO limit. All other reported issues (Soft 404, Thin Content, Meta Description 301 chars, Image Alt) are pre-renderer cache artifacts that will resolve on the next LovableHTML cache refresh.
+The SEO audit reports 51 external links vs 48 internal links on /blog. The actual external count from the code is closer to 6-10 (the audit tool is likely inflating the number). However, two real improvements can be made:
 
-### Change
+1. External links in the Header navigation are missing `rel="nofollow"` -- they pass link equity unnecessarily
+2. Adding more internal links on the blog page will further improve the ratio
 
-**File: `src/pages/Locations.tsx` (line 29)**
+### Changes
 
-Current (65 chars):
-```
-Leak Detection Lanzarote | All 15 Municipalities | Canary Detect
-```
+#### 1. Add `nofollow` to external links in Header.tsx
 
-New (54 chars):
-```
-Leak Detection Lanzarote | All Areas | Canary Detect
-```
+Three external links in the desktop nav and three duplicates in the mobile nav need `nofollow` added to their existing `rel` attribute:
 
-### No Other Code Changes Needed
+**File: `src/components/layout/Header.tsx`**
 
-The remaining 4 reported issues are all cache artifacts:
-- **Soft 404 / Thin Content (26 words)**: The page renders 500+ words immediately on mount. The crawler cached a stale snapshot.
-- **Meta Description Length (301)**: Both EN (143 chars) and ES (146 chars) descriptions are within the 50-160 char limit. The "301" is a stale reading.
-- **Image Alt Text**: The hero image has bilingual alt text on line 48.
+- **leak-detective.com** (desktop, ~line 152): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
+- **canary-detect-coatings.es** (desktop, ~line 311): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
+- **leakguardlanzarote.com** (desktop, ~line 343): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
+- **canary-detect-coatings.es** (mobile, ~line 510): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
+- **leakguardlanzarote.com** (mobile, ~line 536): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
+- **leak-detective.com** (mobile, ~line 678+): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
 
-### After Publishing
-Trigger a LovableHTML cache refresh for `/locations` so crawlers pick up the full rendered content.
+#### 2. Add internal links section to Blog page
+
+**File: `src/pages/Blog.tsx`**
+
+Add a "Popular Locations" internal link grid between the AllServicesGrid and the CTA section. This adds 15 internal links to location pages, significantly improving the ratio.
+
+The component will be a simple grid linking to the 15 municipality location pages (Arrecife, Playa Blanca, Puerto del Carmen, etc.), matching the style already used in the Footer. This reuses the location data pattern already in the Footer.
+
+### What does NOT need changing
+
+- Footer external links (Facebook, Instagram) -- these are standard social links and already have `noopener noreferrer`; social profiles are acceptable external links
+- `tel:` and `mailto:` links -- these are functional contact links, not SEO concerns
+- The "51 external" count will likely correct itself after cache refresh, as it appears inflated by the SEO tool
+
+### After publishing
+Trigger a LovableHTML cache refresh for `/blog`.
 
