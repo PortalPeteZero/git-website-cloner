@@ -195,9 +195,8 @@ const Technology = () => {
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -6 }}
                 className="group bg-card border-2 border-border hover:border-primary/30 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300"
               >
@@ -291,9 +290,8 @@ const Technology = () => {
                   <motion.div
                     key={item}
                     initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
                     className="flex items-center gap-3"
                   >
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
@@ -365,9 +363,8 @@ const Technology = () => {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
                   className="group"
                 >
                   <div className="aspect-[4/3] rounded-xl overflow-hidden mb-3 border-2 border-border group-hover:border-primary/30 transition-colors">
