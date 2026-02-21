@@ -389,9 +389,8 @@ const PrePurchaseSurvey = () => {
               >
                 <div className="max-w-6xl mx-auto overflow-hidden">
                   <div className={`grid lg:grid-cols-2 gap-0`}>
-                    {/* Image — full 50% width, edge-to-edge, no padding */}
-                    <div className={`relative min-h-[250px] lg:min-h-0 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                      <div className="lg:absolute lg:inset-0">
+                    {/* Image — full 50% width, fixed height */}
+                    <div className={`min-h-[250px] lg:h-[420px] overflow-hidden ${isEven ? "lg:order-2" : "lg:order-1"}`}>
                         {mod.smallImages && mod.smallImages.length >= 2 ? (
                           <div className="grid grid-rows-[3fr_2fr] h-full">
                             <img
@@ -435,7 +434,6 @@ const PrePurchaseSurvey = () => {
                             loading="lazy"
                           />
                         )}
-                      </div>
                     </div>
                     {/* Content panel */}
                     <div className={`px-8 md:px-12 py-12 md:py-16 flex flex-col justify-center ${isEven ? "lg:order-1" : "lg:order-2"}`}>
