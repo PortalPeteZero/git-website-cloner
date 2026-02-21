@@ -108,6 +108,10 @@ const resolveImagePath = (src: string): string => {
     '/assets/blog/emergency-leak-pipe-repair.jpg': BLOG_IMAGES.emergencyLeakPipeRepair,
     '/assets/blog/emergency-leak-hole.jpg': BLOG_IMAGES.emergencyLeakHole,
     '/assets/blog/emergency-leak-cctv.jpg': BLOG_IMAGES.emergencyLeakCctv,
+    // LeakGuard article
+    '/assets/blog/leakguard-flow-data.png': BLOG_IMAGES.leakguardFlowData,
+    '/assets/blog/leakguard-ground-box.jpg': BLOG_IMAGES.leakguardGroundBox,
+    '/assets/blog/leakguard-meter-install.jpg': BLOG_IMAGES.leakguardMeterInstall,
   };
   return imageMap[src] || src;
 };
