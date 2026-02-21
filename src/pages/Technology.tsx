@@ -387,6 +387,56 @@ const Technology = () => {
         </div>
       </section>
 
+      {/* What's In Your Report */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <span className="text-primary font-medium">
+              {isSpanish ? "Informes Profesionales" : "Professional Reports"}
+            </span>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">
+              {isSpanish ? "Qué Incluye Su Informe" : "What's Included in Your Report"}
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              {isSpanish
+                ? "Cada inspección incluye un informe fotográfico profesional detallado, adecuado para reclamaciones de seguros, sin coste adicional."
+                : "Every survey includes a detailed professional photographic report, suitable for insurance claims, at no extra cost."}
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {(isSpanish ? [
+                "Documentación fotográfica completa de todos los hallazgos",
+                "Imágenes térmicas con anotaciones de temperatura",
+                "Diagrama de localización de la fuga con medidas precisas",
+                "Datos de pruebas de presión y lecturas acústicas",
+                "Recomendaciones de reparación con opciones",
+                "Estimación de costes de reparación orientativa",
+                "Resumen ejecutivo para compañías de seguros",
+                "Vídeo CCTV de inspecciones de desagües (cuando aplique)"
+              ] : [
+                "Full photographic documentation of all findings",
+                "Annotated thermal images with temperature readings",
+                "Leak location diagram with precise measurements",
+                "Pressure test data and acoustic readings",
+                "Repair recommendations with options",
+                "Indicative repair cost estimates",
+                "Executive summary for insurance companies",
+                "CCTV video of drain inspections (where applicable)"
+              ]).map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-10 md:py-12 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)] section-stripes-orange">
         <div className="container mx-auto px-4 md:px-6 text-center">

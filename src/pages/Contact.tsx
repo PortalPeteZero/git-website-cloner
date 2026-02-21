@@ -361,6 +361,36 @@ const Contact = () => {
                 </div>
               </div>
 
+              {/* Emergency Response Section */}
+              <div className="mt-10 bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/20 rounded-2xl p-6">
+                <h3 className="font-heading font-bold text-xl mb-4 flex items-center gap-2">
+                  <Clock className="h-5 w-5 text-primary" />
+                  {isSpanish ? "Respuesta de Emergencia" : "Emergency Response"}
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  {isSpanish 
+                    ? "Disponibilidad telefónica 24/7 para emergencias de fugas de agua en toda Lanzarote. Tiempo de respuesta típico de 2-4 horas."
+                    : "24/7 phone availability for water leak emergencies across Lanzarote. Typical response time of 2–4 hours."}
+                </p>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  {(isSpanish ? [
+                    "📞 Llame — evaluamos su situación por teléfono",
+                    "📋 Evaluamos la urgencia y asignamos al técnico más cercano",
+                    "🚗 Llegamos a cualquier punto de Lanzarote en 2-4 horas",
+                    "🔍 Detección y localización con equipos multi-tecnología",
+                    "📄 Informe fotográfico profesional entregado el mismo día"
+                  ] : [
+                    "📞 Call — we assess your situation over the phone",
+                    "📋 We evaluate urgency and assign the nearest technician",
+                    "🚗 We reach anywhere in Lanzarote within 2–4 hours",
+                    "🔍 Detection and location using multi-technology equipment",
+                    "📄 Professional photographic report delivered same day"
+                  ]).map((step, i) => (
+                    <p key={i}>{step}</p>
+                  ))}
+                </div>
+              </div>
+
               {/* Map - Playa Blanca Office */}
               <div className="mt-8 aspect-video bg-muted rounded-lg overflow-hidden">
                 <iframe
