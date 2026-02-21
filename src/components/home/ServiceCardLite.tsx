@@ -20,7 +20,7 @@ const ServiceCardLite = forwardRef<HTMLDivElement, ServiceCardLiteProps>(
       <div ref={ref} className="transition-transform duration-300 ease-out hover:-translate-y-1">
       <Link
         to={href}
-        className="group block bg-white rounded-xl border-2 border-gray-100 shadow-md hover:shadow-xl hover:border-primary/30 transition-all duration-300 ease-out overflow-hidden"
+        className="group flex flex-col h-full bg-white rounded-xl border-2 border-gray-100 shadow-md hover:shadow-xl hover:border-primary/30 transition-all duration-300 ease-out overflow-hidden"
       >
         {image && (
           <div className="aspect-[16/10] overflow-hidden relative">
@@ -36,14 +36,14 @@ const ServiceCardLite = forwardRef<HTMLDivElement, ServiceCardLiteProps>(
           </div>
         )}
 
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-1">
           <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
             <Icon className="h-7 w-7 text-primary group-hover:text-white transition-colors duration-300" />
           </div>
           <h3 className="font-heading font-bold text-lg mb-2 text-canary-navy group-hover:text-primary transition-colors duration-300">
             {title}
           </h3>
-          <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+          <p className="text-gray-600 text-sm leading-relaxed flex-1">{description}</p>
           <span className="inline-flex items-center gap-1 mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all duration-300">
             {isSpanish ? 'Más Información' : 'Learn More'}
             <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
