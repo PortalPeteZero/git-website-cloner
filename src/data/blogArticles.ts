@@ -27,6 +27,11 @@ import emergencyLeakPipeRepairImg from "@/assets/blog/emergency-leak-pipe-repair
 import emergencyLeakHoleImg from "@/assets/blog/emergency-leak-hole.jpg";
 import emergencyLeakCctvImg from "@/assets/blog/emergency-leak-cctv.jpg";
 
+// LeakGuard images
+import leakguardFlowDataImg from "@/assets/blog/leakguard-flow-data.png";
+import leakguardGroundBoxImg from "@/assets/blog/leakguard-ground-box.jpg";
+import leakguardMeterInstallImg from "@/assets/blog/leakguard-meter-install.jpg";
+
 // Helper to create image placeholders for markdown content
 export const BLOG_IMAGES = {
   lanzaroteTraditionalHouse: lanzaroteTraditionalHouseImg,
@@ -41,6 +46,9 @@ export const BLOG_IMAGES = {
   emergencyLeakPipeRepair: emergencyLeakPipeRepairImg,
   emergencyLeakHole: emergencyLeakHoleImg,
   emergencyLeakCctv: emergencyLeakCctvImg,
+  leakguardFlowData: leakguardFlowDataImg,
+  leakguardGroundBox: leakguardGroundBoxImg,
+  leakguardMeterInstall: leakguardMeterInstallImg,
 };
 
 export interface BlogArticle {
@@ -2268,6 +2276,92 @@ Realistic timeframes depend on property complexity. A straightforward villa with
 
 In most cases, yes. GPR scanning, acoustic listening through surface contact, and sometimes tracer gas detection allow accurate locating and leak pinpointing under tiles, stamped concrete, or decorative stone without immediate demolition. Once the target location is narrowed to a small area, only a focused opening is typically needed—often just a few tiles rather than metres of terrace. This non-destructive approach minimises damage and repair costs significantly. It's precisely this capability that leads homeowners and hotels across Lanzarote to contact Canary Detect before allowing contractors to begin breaking floors based on guesswork.
     `
+  },
+  {
+    id: 13,
+    slug: "leakguard-smart-water-monitoring-lanzarote",
+    title: "LeakGuard is Live! The Future of Leak Detection in Lanzarote is Here",
+    excerpt: "Canary Detect introduces LeakGuard, a revolutionary 24/7 smart water monitoring system in Lanzarote. Prevent costly water leaks with instant alerts and protect your property.",
+    date: "2026-02-21",
+    author: "Canary Detect",
+    category: "Product Launch",
+    image: leakguardMeterInstallImg,
+    metaTitle: "LeakGuard: 24/7 Smart Water Monitoring | Lanzarote",
+    metaDescription: "LeakGuard by Canary Detect: 24/7 smart water monitoring for Lanzarote properties. Catch leaks in 24 hours, not 6 weeks. From €395.",
+    keywords: "leak detection Lanzarote, water leak Lanzarote, pool leak Lanzarote, smart water monitoring Lanzarote, LeakGuard, water meter monitoring",
+    readTime: 8,
+    content: `
+## The Future of Leak Detection in Lanzarote Has Arrived: LeakGuard is LIVE!
+
+For years, Canary Detect, "The Leaky Finders," has been the trusted name for [leak detection in Lanzarote](/services/water-leak-detection). Our commitment to using the most advanced technology and our "No Find, No Fee" promise have helped over 1,200 property owners save money and prevent damage. Today, we are taking a monumental step forward in property protection on the island.
+
+We are incredibly excited to announce that **LeakGuard**, our 24/7 smart water monitoring system, is officially live!
+
+## The First Data Stream is Flowing, and It's Revealing Everything
+
+Our very first LeakGuard installation is now active, and the insights are already proving invaluable. This isn't just about finding leaks; it's about understanding your property's water usage in incredible detail.
+
+![Live LeakGuard flow data showing water usage patterns over time](/assets/blog/leakguard-flow-data.png)
+
+The live data is so precise, we can see the rhythm of a home: the morning showers, the garden's nightly watering schedule, even the exact day the swimming pool is topped up. We can also spot anomalies, big and small. To the pool cleaner who recently left the hose running... yes, LeakGuard saw you! 😉
+
+This is the new reality of water leak detection in Lanzarote: proactive, intelligent, and always watching.
+
+## What is LeakGuard? Your 24/7 Watchman Against Water Waste
+
+LeakGuard is a sophisticated, cloud-connected device that we professionally install at your water meter. It gets to know your property's unique water consumption patterns, from daily routines to seasonal changes.
+
+![LeakGuard meter box professionally installed at a water meter in Lanzarote](/assets/blog/leakguard-meter-install.jpg)
+
+Here's how it protects you:
+
+1. **24/7 Monitoring:** LeakGuard constantly tracks water flow, building a precise profile of your normal usage.
+
+2. **Instant Alerts:** The moment an unusual pattern emerges—like a continuous flow that indicates a leak—the system sends an instant alert to you and to our team.
+
+3. **Rapid Response:** No more waiting 6-8 weeks for a surprise water bill. You'll know about a potential [water leak in your Lanzarote property](/services/water-leak-detection) within 24 hours, allowing for immediate action.
+
+## Why Every Lanzarote Property Needs LeakGuard
+
+Lanzarote presents unique challenges for property owners. Many villas, holiday rentals, and commercial spaces are left vacant for extended periods. Combined with the island's 6-8 week water billing cycle, a minor leak can silently escalate into a major financial and structural problem. A single hidden leak can easily result in a bill exceeding €1,000.
+
+LeakGuard is the definitive solution, providing essential peace of mind, especially for absentee owners. It's your virtual presence on the island, safeguarding your investment around the clock.
+
+### Who Benefits Most from LeakGuard?
+
+- **Holiday home owners** who leave their property unoccupied for weeks or months
+- **Property managers** overseeing multiple villas and apartments
+- **Hotel and resort operators** wanting to reduce water waste across their estate
+- **Absentee landlords** who need remote oversight of their rental properties
+- **Anyone with a [swimming pool](/services/pool-leak-detection)** — pools are one of the most common sources of hidden leaks
+
+## The Power of The Leaky Finders, Supercharged
+
+When LeakGuard raises the alarm, it's backed by the full force of Canary Detect. Our team of experts, armed with over €80,000 of specialist equipment—from thermal imaging cameras to acoustic sensors—is ready to pinpoint the exact location of the leak. We don't just alert you to a problem; we provide the expertise to find and fix it with surgical precision.
+
+![LeakGuard ground box sunk flush with the surface so it can be hidden under gravel](/assets/blog/leakguard-ground-box.jpg)
+
+The installation itself is designed to be completely discreet. The monitoring box is sunk into the ground at your water meter, allowing it to be covered with gravel or picón and hidden from view. No unsightly equipment, no disruption to your property's appearance.
+
+## An Investment in Your Property's Future
+
+Protecting your property with the most advanced leak detection in Lanzarote is more affordable than you might think. It's a small investment that prevents catastrophic costs.
+
+- **One-Time Hardware & Professional Installation:** €395
+- **Annual 24/7 Monitoring Subscription:** €60 (after the first year)
+
+For less than the price of a coffee per month, LeakGuard provides ongoing protection and could save you thousands of euros. It pays for itself by catching just one leak.
+
+## Don't Wait for a Disaster. Get Protected Today
+
+Embrace the future of property protection. Secure your home, villa, or business from hidden water leaks and gain unparalleled insight into your water usage.
+
+[Contact us today](/contact) for your free, no-obligation quote and join the growing number of Lanzarote property owners who are taking control of their water.
+
+---
+
+*Canary Detect offers professional [water leak detection](/services/water-leak-detection) and [swimming pool leak detection](/services/pool-leak-detection) services across Lanzarote, including Playa Blanca, Puerto del Carmen, Costa Teguise, and Arrecife. [Contact us](/contact) for all your leak detection needs.*
+    `
   }
 ];
 
@@ -4175,6 +4269,92 @@ Una villa sencilla con piscina y jardín típicamente requiere 2-4 horas. Propie
 
 En la mayoría de los casos, sí. El escaneo GPR, la escucha acústica y la detección por gas trazador permiten localización precisa sin demolición. Este enfoque no destructivo minimiza significativamente los daños y costes de reparación.
     `
+  },
+  {
+    id: 13,
+    slug: "leakguard-monitorizacion-inteligente-agua-lanzarote",
+    title: "¡LeakGuard está Aquí! El Futuro de la Detección de Fugas en Lanzarote",
+    excerpt: "Canary Detect presenta LeakGuard, un revolucionario sistema de monitorización inteligente de agua 24/7 en Lanzarote. Prevén fugas costosas con alertas instantáneas y protege tu propiedad.",
+    date: "2026-02-21",
+    author: "Canary Detect",
+    category: "Lanzamiento de Producto",
+    image: leakguardMeterInstallImg,
+    metaTitle: "LeakGuard: Monitorización de Agua 24/7 | Lanzarote",
+    metaDescription: "LeakGuard de Canary Detect: monitorización inteligente de agua 24/7 para propiedades en Lanzarote. Detecta fugas en 24 horas, no en 6 semanas. Desde 395€.",
+    keywords: "detección de fugas Lanzarote, fuga de agua Lanzarote, fuga de piscina Lanzarote, monitorización inteligente de agua Lanzarote, LeakGuard",
+    readTime: 8,
+    content: `
+## El Futuro de la Detección de Fugas en Lanzarote Ha Llegado: ¡LeakGuard está AQUÍ!
+
+Durante años, Canary Detect, "Los Cazafugas," ha sido el nombre de confianza para la [detección de fugas en Lanzarote](/es/servicios/deteccion-fugas-agua). Nuestro compromiso con la tecnología más avanzada y nuestra promesa de "Si No Encontramos, No Cobras" han ayudado a más de 1.200 propietarios a ahorrar dinero y prevenir daños. Hoy, damos un paso monumental en la protección de propiedades en la isla.
+
+¡Estamos increíblemente emocionados de anunciar que **LeakGuard**, nuestro sistema de monitorización inteligente de agua 24/7, está oficialmente en funcionamiento!
+
+## Los Primeros Datos ya Fluyen, y lo Revelan Todo
+
+Nuestra primera instalación de LeakGuard ya está activa, y los datos son invaluables. No se trata solo de encontrar fugas; se trata de entender el consumo de agua de tu propiedad con un detalle increíble.
+
+![Datos de flujo en vivo de LeakGuard mostrando patrones de uso de agua](/assets/blog/leakguard-flow-data.png)
+
+Los datos en vivo son tan precisos que podemos ver el ritmo de un hogar: las duchas matutinas, el horario de riego nocturno del jardín, incluso el día exacto en que se rellena la piscina. También detectamos anomalías, grandes y pequeñas. Al limpiador de piscinas que recientemente dejó la manguera abierta... ¡sí, LeakGuard te vio! 😉
+
+Esta es la nueva realidad de la detección de fugas de agua en Lanzarote: proactiva, inteligente y siempre vigilante.
+
+## ¿Qué es LeakGuard? Tu Vigilante 24/7 Contra el Desperdicio de Agua
+
+LeakGuard es un dispositivo sofisticado conectado a la nube que instalamos profesionalmente en tu contador de agua. Aprende los patrones únicos de consumo de tu propiedad, desde las rutinas diarias hasta los cambios estacionales.
+
+![Caja de LeakGuard instalada profesionalmente en un contador de agua en Lanzarote](/assets/blog/leakguard-meter-install.jpg)
+
+Así es como te protege:
+
+1. **Monitorización 24/7:** LeakGuard rastrea constantemente el flujo de agua, creando un perfil preciso de tu consumo normal.
+
+2. **Alertas Instantáneas:** En el momento en que surge un patrón inusual—como un flujo continuo que indica una fuga—el sistema envía una alerta instantánea a ti y a nuestro equipo.
+
+3. **Respuesta Rápida:** No más esperar 6-8 semanas para una factura sorpresa. Sabrás de una posible [fuga de agua en tu propiedad de Lanzarote](/es/servicios/deteccion-fugas-agua) en 24 horas, permitiendo una acción inmediata.
+
+## Por Qué Cada Propiedad en Lanzarote Necesita LeakGuard
+
+Lanzarote presenta desafíos únicos para los propietarios. Muchas villas, alquileres vacacionales y espacios comerciales permanecen vacíos durante períodos prolongados. Combinado con el ciclo de facturación de agua de 6-8 semanas de la isla, una fuga menor puede escalar silenciosamente hasta convertirse en un problema financiero y estructural grave. Una sola fuga oculta puede resultar fácilmente en una factura que supere los 1.000€.
+
+LeakGuard es la solución definitiva, proporcionando tranquilidad esencial, especialmente para propietarios ausentes. Es tu presencia virtual en la isla, protegiendo tu inversión las 24 horas del día.
+
+### ¿Quién se Beneficia Más de LeakGuard?
+
+- **Propietarios de casas vacacionales** que dejan su propiedad desocupada durante semanas o meses
+- **Administradores de propiedades** que supervisan múltiples villas y apartamentos
+- **Operadores de hoteles y resorts** que quieren reducir el desperdicio de agua en sus instalaciones
+- **Propietarios ausentes** que necesitan supervisión remota de sus propiedades de alquiler
+- **Cualquier persona con [piscina](/es/servicios/deteccion-fugas-piscinas)** — las piscinas son una de las fuentes más comunes de fugas ocultas
+
+## El Poder de Los Cazafugas, Potenciado
+
+Cuando LeakGuard da la alarma, cuenta con toda la fuerza de Canary Detect. Nuestro equipo de expertos, armado con más de 80.000€ en equipos especializados—desde cámaras de imagen térmica hasta sensores acústicos—está listo para localizar la ubicación exacta de la fuga. No solo te alertamos de un problema; proporcionamos la experiencia para encontrarlo y repararlo con precisión quirúrgica.
+
+![Caja de LeakGuard empotrada en el suelo para ocultarla bajo la grava](/assets/blog/leakguard-ground-box.jpg)
+
+La instalación en sí está diseñada para ser completamente discreta. La caja de monitorización se empotra en el suelo junto a tu contador de agua, permitiendo cubrirla con grava o picón y ocultarla a la vista. Sin equipos antiestéticos, sin alteraciones en la apariencia de tu propiedad.
+
+## Una Inversión en el Futuro de Tu Propiedad
+
+Proteger tu propiedad con la detección de fugas más avanzada de Lanzarote es más asequible de lo que piensas. Es una pequeña inversión que previene costes catastróficos.
+
+- **Hardware e Instalación Profesional (una vez):** 395€
+- **Suscripción Anual de Monitorización 24/7:** 60€ (después del primer año)
+
+Por menos del precio de un café al mes, LeakGuard proporciona protección continua y podría ahorrarte miles de euros. Se amortiza solo con detectar una sola fuga.
+
+## No Esperes a un Desastre. Protégete Hoy
+
+Abraza el futuro de la protección de propiedades. Asegura tu hogar, villa o negocio contra fugas de agua ocultas y obtén una visión sin precedentes de tu consumo de agua.
+
+[Contáctanos hoy](/es/contacto) para tu presupuesto gratuito y sin compromiso y únete al creciente número de propietarios en Lanzarote que están tomando el control de su agua.
+
+---
+
+*Canary Detect ofrece servicios profesionales de [detección de fugas de agua](/es/servicios/deteccion-fugas-agua) y [detección de fugas de piscinas](/es/servicios/deteccion-fugas-piscinas) en toda Lanzarote, incluyendo Playa Blanca, Puerto del Carmen, Costa Teguise y Arrecife. [Contáctenos](/es/contacto) para todas sus necesidades de detección de fugas.*
+    `
   }
 ];
 
@@ -4191,7 +4371,8 @@ export const blogSlugMap: Record<string, string> = {
   "how-to-tell-if-pool-has-leak-lanzarote": "como-saber-si-piscina-tiene-fuga-lanzarote",
   "signs-water-leak-villa-lanzarote": "senales-fuga-agua-villa-lanzarote",
   "high-water-bills-lanzarote-causes": "facturas-agua-altas-lanzarote-causas",
-  "how-to-detect-underground-pipes-lanzarote": "como-detectar-tuberias-subterraneas-lanzarote"
+  "how-to-detect-underground-pipes-lanzarote": "como-detectar-tuberias-subterraneas-lanzarote",
+  "leakguard-smart-water-monitoring-lanzarote": "leakguard-monitorizacion-inteligente-agua-lanzarote"
 };
 
 // Reverse slug mapping for Spanish to English
