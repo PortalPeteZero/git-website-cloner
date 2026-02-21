@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
-import { Droplets, Search, Cable, Waves, CircleDot, Wrench, MapPin, Award, Clock, Users } from "lucide-react";
+import { Droplets, Search, Cable, Waves, CircleDot, Wrench, MapPin, Award, Clock, Users, ChevronRight } from "lucide-react";
 import { Shield } from "lucide-react";
 import ServiceCard from "@/components/home/ServiceCard";
 import SEOHead from "@/components/seo/SEOHead";
@@ -157,6 +157,40 @@ const Services = () => {
           </motion.div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
+      </section>
+
+      {/* Pre-Purchase Survey Featured Card */}
+      <section className="py-8 md:py-12 bg-background section-noise">
+        <div className="container mx-auto px-4 md:px-6">
+          <Link 
+            to={isSpanish ? "/es/servicios/inspeccion-precompra" : "/services/pre-purchase-survey"}
+            className="block group"
+          >
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-canary-navy via-slate-800 to-canary-navy p-8 md:p-10 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                  <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary font-bold text-xs uppercase tracking-widest mb-3">
+                    {isSpanish ? "Nuevo Servicio" : "New Service"}
+                  </span>
+                  <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-2">
+                    {isSpanish ? "Inspección Pre-Compra de Propiedades" : "Pre-Purchase Property Survey"}
+                  </h3>
+                  <p className="text-slate-400 max-w-xl">
+                    {isSpanish 
+                      ? "Inspección independiente antes de comprar. Imagen térmica, pruebas de presión, inspección de piscinas y más. Desde €99."
+                      : "Independent property survey before you buy. Thermal imaging, pressure testing, pool inspection & more. Surveys from €99."}
+                  </p>
+                </div>
+                <div className="shrink-0">
+                  <span className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-bold text-base group-hover:bg-primary/90 transition-all shadow-lg shadow-primary/30">
+                    {isSpanish ? "Ver Detalles" : "View Details"}
+                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
       </section>
 
       {/* Services Grid */}

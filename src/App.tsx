@@ -28,6 +28,7 @@ import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import FontaneroLocationPage from "./pages/FontaneroLocationPage";
 import FreeLeakConfirmation from "./pages/FreeLeakConfirmation";
+import PrePurchaseSurvey from "./pages/PrePurchaseSurvey";
 
 // Lazy load admin-only pages (not SEO-critical)
 const Admin = lazy(() => import("./pages/Admin"));
@@ -58,6 +59,7 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services/free-leak-confirmation" element={<FreeLeakConfirmation />} />
+              <Route path="/services/pre-purchase-survey" element={<PrePurchaseSurvey />} />
               <Route path="/services/pipe-inspection" element={<Navigate to="/services/drain-detection" replace />} />
               
               {/* SEO-friendly redirects for common URL variations */}
@@ -148,6 +150,7 @@ const App = () => (
               <Route path="/es/sobre-nosotros" element={<About />} />
               <Route path="/es/servicios" element={<Services />} />
               <Route path="/es/servicios/confirmacion-fugas-gratis" element={<FreeLeakConfirmation />} />
+              <Route path="/es/servicios/inspeccion-precompra" element={<PrePurchaseSurvey />} />
               <Route path="/es/servicios/:slug" element={<ServiceDetail />} />
               <Route path="/es/contacto" element={<Contact />} />
               <Route path="/es/casos-de-exito" element={<CaseStudies />} />

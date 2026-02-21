@@ -283,6 +283,18 @@ const Header = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link 
+                            to={getRoute("/services/pre-purchase-survey", "/es/servicios/inspeccion-precompra")} 
+                            className="block cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-lg transition-colors py-2.5 px-3 flex items-center gap-2"
+                          >
+                            <span className="bg-primary/20 text-primary px-1.5 py-0.5 rounded text-[10px] font-black uppercase">New</span>
+                            {isSpanish ? "Inspección Pre-Compra" : "Pre-Purchase Survey"}
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li className="border-t border-border my-1"></li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link 
                             to={getRoute("/plumbing-services", "/es/servicios-fontaneria")} 
                             className="block cursor-pointer font-semibold text-primary hover:bg-primary/10 rounded-lg transition-colors py-2.5 px-3"
                           >
@@ -471,6 +483,16 @@ const Header = () => {
                   >
                     <ChevronRight className="h-4 w-4 text-primary/60" />
                     {isSpanish ? "Mapeo de Humedad" : "Damp & Moisture Mapping"}
+                  </Link>
+                  <div className="h-px bg-border mx-4 my-1"></div>
+                  <Link 
+                    to={getRoute("/services/pre-purchase-survey", "/es/servicios/inspeccion-precompra")} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2 px-4 py-2.5 text-primary font-semibold hover:bg-primary/5 rounded-lg transition-all"
+                  >
+                    <ChevronRight className="h-4 w-4 text-primary" />
+                    <span className="bg-primary/20 text-primary px-1.5 py-0.5 rounded text-[10px] font-black uppercase mr-1">New</span>
+                    {isSpanish ? "Inspección Pre-Compra" : "Pre-Purchase Survey"}
                   </Link>
                   <div className="h-px bg-border mx-4 my-1"></div>
                   <Link 
