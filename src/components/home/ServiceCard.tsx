@@ -22,7 +22,7 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
     
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 5000); // Slower for better performance
+    }, 5000);
     
     return () => clearInterval(timer);
   }, [images.length]);
@@ -30,9 +30,8 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
       whileHover={{ y: -4 }}
     >
       <Link 
@@ -49,10 +48,8 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
               decoding="async"
             />
             
-            {/* Subtle gradient overlay for smoother transition */}
             <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/30 to-transparent pointer-events-none" />
             
-            {/* Image indicators */}
             {images.length > 1 && (
               <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
                 {images.map((_, idx) => (

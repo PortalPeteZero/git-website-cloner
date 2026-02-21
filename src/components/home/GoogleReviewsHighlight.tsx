@@ -25,8 +25,8 @@ const GoogleReviewsHighlight = forwardRef<HTMLElement>((_, ref) => {
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-4"
         >
           <span className="text-primary font-semibold uppercase tracking-wide text-sm">
@@ -47,8 +47,8 @@ const GoogleReviewsHighlight = forwardRef<HTMLElement>((_, ref) => {
         {/* Google rating summary */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="flex items-center justify-center gap-3 mb-10"
         >
           <div className="flex items-center gap-1">
@@ -73,9 +73,8 @@ const GoogleReviewsHighlight = forwardRef<HTMLElement>((_, ref) => {
             <motion.div
               key={review.id}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
               whileHover={{ y: -4 }}
               className="group relative bg-card rounded-2xl p-8 border-t-4 border-t-primary hover:border-t-[hsl(25,93%,45%)] border-x border-b border-border shadow-md hover:shadow-xl transition-all duration-300"
             >
@@ -96,9 +95,8 @@ const GoogleReviewsHighlight = forwardRef<HTMLElement>((_, ref) => {
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 + i * 0.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.3 + index * 0.1 + i * 0.05, duration: 0.3 }}
                   >
                     <Star className="h-5 w-5 fill-primary text-primary drop-shadow-sm" />
                   </motion.div>
@@ -148,8 +146,8 @@ const GoogleReviewsHighlight = forwardRef<HTMLElement>((_, ref) => {
         {/* CTA to full reviews page */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link to={isSpanish ? "/es/resenas" : "/reviews"}>

@@ -36,7 +36,6 @@ const TrustBadgesSection = () => {
   ];
 
   const formatNumber = (n: number) => {
-    // Use Spanish format with dots for Spanish, commas for English
     return isSpanish 
       ? new Intl.NumberFormat("es-ES").format(n)
       : new Intl.NumberFormat("en-GB").format(n);
@@ -63,9 +62,8 @@ const TrustBadgesSection = () => {
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               className="text-center"
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-3">
@@ -82,17 +80,16 @@ const TrustBadgesSection = () => {
         {/* Trust Badges */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6"
         >
           {badges.map((badge, index) => (
             <motion.div
               key={badge.label}
               initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 + index * 0.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
               whileHover={{ y: -2 }}
               className="group bg-card border-2 border-border hover:border-primary/30 rounded-xl p-5 text-center shadow-sm hover:shadow-lg transition-all duration-300"
             >

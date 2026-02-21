@@ -33,8 +33,8 @@ const ServiceAreas = ({ isSpanish, serviceName }: ServiceAreasProps) => {
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-8"
         >
           <div className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-widest mb-2">
@@ -59,8 +59,8 @@ const ServiceAreas = ({ isSpanish, serviceName }: ServiceAreasProps) => {
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-3"
         >
           {locations.map((location) => (

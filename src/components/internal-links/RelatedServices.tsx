@@ -48,8 +48,8 @@ const RelatedServices = ({ currentServiceSlug, isSpanish }: RelatedServicesProps
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
           <span className="text-primary font-semibold text-sm uppercase tracking-widest">
@@ -65,9 +65,8 @@ const RelatedServices = ({ currentServiceSlug, isSpanish }: RelatedServicesProps
             <motion.div
               key={service.href}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
             >
               <Link
                 to={service.href}
