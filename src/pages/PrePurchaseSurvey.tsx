@@ -39,26 +39,9 @@ interface ModuleData {
 
 const modules: ModuleData[] = [
   {
-    id: "thermal",
-    navLabel: "Thermal Imaging & Damp",
-    moduleNumber: "Module 01",
-    moduleType: "Optional",
-    title: "Thermal Imaging & Damp Survey",
-    description: "We use a professional-grade FLIR thermal imaging camera — not a cheap smartphone attachment — alongside calibrated moisture meters to map every room. The camera detects temperature variations caused by moisture, revealing hidden damp, water ingress, and roofline issues that are completely invisible to the naked eye.",
-    bullets: [
-      "Full room-by-room thermal scan",
-      "Moisture meter readings at every wall",
-      "Roofline and ceiling inspection",
-      "Detailed report with thermal images and readings",
-    ],
-    mainImage: thermalMain,
-    mainImageAlt: "FLIR thermal imaging showing moisture in a wall",
-    smallImages: [thermalSmall1, thermalSmall2],
-  },
-  {
     id: "pressure",
     navLabel: "Full System Pressure Test",
-    moduleNumber: "Module 02",
+    moduleNumber: "Module 01",
     moduleType: "Optional",
     title: "Full System Pressure Test",
     description: "A comprehensive pressure test of the mains water system and any pumped systems gives you a definitive, documented answer: is this property leak-free? If a leak is detected, you have the option to commission our advanced leak pinpointing service to identify the exact location before committing to a purchase.",
@@ -75,7 +58,7 @@ const modules: ModuleData[] = [
   {
     id: "water-system",
     navLabel: "Water System Inspection",
-    moduleNumber: "Module 03",
+    moduleNumber: "Module 02",
     moduleType: "Optional",
     title: "Water System Inspection",
     description: "Properties in Lanzarote have unique water infrastructure. Our qualified plumbers conduct a thorough inspection of the aljibe (water storage tank), ball cock condition, pump, and manifold system. We assess the condition and functionality of every key component, identifying anything that may need attention now or in the near future.",
@@ -88,6 +71,23 @@ const modules: ModuleData[] = [
     mainImage: waterSystemMain,
     mainImageAlt: "Water pump and manifold system inspection",
     smallImages: [waterSystemSmall1, waterSystemSmall2],
+  },
+  {
+    id: "thermal",
+    navLabel: "Thermal Imaging & Damp",
+    moduleNumber: "Module 03",
+    moduleType: "Optional",
+    title: "Thermal Imaging & Damp Survey",
+    description: "We use a professional-grade FLIR thermal imaging camera — not a cheap smartphone attachment — alongside calibrated moisture meters to map every room. The camera detects temperature variations caused by moisture, revealing hidden damp, water ingress, and roofline issues that are completely invisible to the naked eye.",
+    bullets: [
+      "Full room-by-room thermal scan",
+      "Moisture meter readings at every wall",
+      "Roofline and ceiling inspection",
+      "Detailed report with thermal images and readings",
+    ],
+    mainImage: thermalMain,
+    mainImageAlt: "FLIR thermal imaging showing moisture in a wall",
+    smallImages: [thermalSmall1, thermalSmall2],
   },
   {
     id: "drain",
