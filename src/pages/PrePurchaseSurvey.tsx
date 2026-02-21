@@ -342,10 +342,13 @@ const PrePurchaseSurvey = () => {
       </section>
 
       {/* ===== BUILD YOUR OWN SURVEY - ALL MODULES STACKED ===== */}
-      <section id="modules" className="bg-slate-900 py-16 md:py-24 border-t border-slate-800">
+      <section id="modules" className="bg-slate-900 py-20 md:py-28 border-t border-slate-800">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <div className="text-center mb-14">
+            <span className="text-primary font-bold text-xs uppercase tracking-widest mb-4 block">
+              Modular Survey System
+            </span>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5">
               Build Your Own Survey
             </h2>
             <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
@@ -354,13 +357,14 @@ const PrePurchaseSurvey = () => {
           </div>
 
           {/* Navigation Pills - scroll to section */}
-          <div className="flex flex-wrap justify-center gap-2 mb-16">
-            {modules.map((mod) => (
+          <div className="flex flex-wrap justify-center gap-3 mb-16">
+            {modules.map((mod, i) => (
               <button
                 key={mod.id}
                 onClick={() => scrollToModule(mod.id)}
-                className="px-4 py-2.5 rounded-full text-sm font-semibold bg-slate-800 text-slate-400 hover:bg-primary hover:text-white transition-all"
+                className="group flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold bg-gradient-to-br from-slate-800/80 to-slate-800/40 border border-slate-700/40 text-slate-300 hover:border-primary/40 hover:text-primary transition-all duration-300"
               >
+                <span className="text-primary/60 text-xs font-heading font-bold">{String(i + 1).padStart(2, '0')}</span>
                 {mod.navLabel}
               </button>
             ))}
