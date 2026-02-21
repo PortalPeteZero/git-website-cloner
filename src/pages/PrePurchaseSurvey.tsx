@@ -265,8 +265,14 @@ const PrePurchaseSurvey = () => {
               <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-6 max-w-xl">
                 Estate agents are in the business of selling properties. The surveys they recommend are often basic and can lack the independence you need to make a truly informed decision. There is an inherent conflict of interest when the person selling you the house is also recommending the surveyor.
               </p>
-              <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
+              <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-6 max-w-xl">
                 Canary Detect has no relationship with any estate agent or seller. Our only job is to give you an accurate, honest picture of the property's condition — the good and the bad — so you can negotiate with confidence, plan for repairs, or walk away from a bad investment.
+              </p>
+              <h3 className="font-heading text-xl md:text-2xl font-bold text-white mt-4 mb-3">
+                A note on estate agents
+              </h3>
+              <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
+                In fact, reputable estate agents recognise the value of an independent survey commissioned directly by the buyer. Many of the best agents in Lanzarote actively encourage their clients to arrange their own survey — and are happy to recommend Canary Detect. If your agent suggests getting an independent survey, take them up on it. It is a sign you are dealing with someone who has your best interests at heart.
               </p>
               <blockquote className="border-l-4 border-primary pl-6 py-2 italic text-slate-300 text-lg">
                 "Before you sign anything, make sure the survey is truly on your side."
