@@ -340,7 +340,7 @@ const PrePurchaseSurvey = () => {
       </section>
 
       {/* ===== WHY IT MATTERS ===== */}
-      <section className="bg-slate-900 py-20 md:py-28">
+      <section className="bg-slate-900 py-12 md:py-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
             <div>
@@ -442,9 +442,9 @@ const PrePurchaseSurvey = () => {
       </section>
 
       {/* ===== BUILD YOUR OWN SURVEY - ALL MODULES STACKED ===== */}
-      <section id="modules" className="bg-slate-900 py-20 md:py-28 border-t border-slate-800">
+      <section id="modules" className="bg-slate-900 py-12 md:py-16">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <span className="text-primary font-bold text-xs uppercase tracking-widest mb-4 block">
               {isSpanish ? "Sistema Modular de Inspección" : "Modular Survey System"}
             </span>
@@ -459,7 +459,7 @@ const PrePurchaseSurvey = () => {
           </div>
 
           {/* Navigation Pills - scroll to section */}
-          <div className="flex flex-wrap justify-center gap-3 mb-16">
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
             {modules.map((mod, i) => (
               <button
                 key={mod.id}
