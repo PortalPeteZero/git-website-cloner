@@ -250,29 +250,31 @@ const PrePurchaseSurvey = () => {
       </section>
 
       {/* ===== WHY IT MATTERS ===== */}
-      <section className="bg-slate-900 py-16 md:py-24">
+      <section className="bg-slate-900 py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
             <div>
               <span className="text-primary font-bold text-xs uppercase tracking-widest">
                 Why It Matters
               </span>
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-6 leading-tight">
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-8 leading-tight">
                 We Work for You.{" "}
                 <br className="hidden md:block" />
                 Not the Seller.
               </h2>
-              <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-6 max-w-xl">
-                Estate agents are in the business of selling properties. The surveys they recommend are often basic and can lack the independence you need to make a truly informed decision. There is an inherent conflict of interest when the person selling you the house is also recommending the surveyor.
-              </p>
-              <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-6 max-w-xl">
-                Canary Detect has no relationship with any estate agent or seller. Our only job is to give you an accurate, honest picture of the property's condition — the good and the bad — so you can negotiate with confidence, plan for repairs, or walk away from a bad investment.
-              </p>
-              <span className="text-[#f97316] font-bold text-xs uppercase tracking-widest mt-6 block">
+              <div className="space-y-5 mb-8">
+                <p className="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl">
+                  Estate agents are in the business of selling properties. The surveys they recommend are often basic and can lack the independence you need to make a truly informed decision. There is an inherent conflict of interest when the person selling you the house is also recommending the surveyor.
+                </p>
+                <p className="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl">
+                  Canary Detect has no relationship with any estate agent or seller. Our only job is to give you an accurate, honest picture of the property's condition — the good and the bad — so you can negotiate with confidence, plan for repairs, or walk away from a bad investment.
+                </p>
+              </div>
+              <span className="text-primary font-bold text-xs uppercase tracking-widest block mb-3">
                 A note on estate agents
               </span>
-              <div className="border-l-4 border-primary pl-6 py-4 mt-3 mb-8 bg-slate-800/40 rounded-r-lg max-w-xl">
-                <p className="text-slate-300 text-base md:text-lg leading-relaxed">
+              <div className="border-l-4 border-primary pl-6 py-5 bg-slate-800/30 rounded-r-lg max-w-xl mb-8">
+                <p className="text-slate-300 text-base leading-relaxed">
                   Reputable estate agents recognise the value of an independent survey commissioned directly by the buyer. Many of the best agents in Lanzarote actively encourage their clients to arrange their own survey — and are happy to recommend Canary Detect. If your agent suggests getting an independent survey, take them up on it. It is a sign you are dealing with someone who has your best interests at heart.
                 </p>
               </div>
@@ -281,33 +283,41 @@ const PrePurchaseSurvey = () => {
               </blockquote>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-5 lg:sticky lg:top-28">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: "1,200+", label: "Leaks Found" },
-                  { value: "99%", label: "Success Rate" },
-                  { value: "€80K+", label: "Equipment" },
-                  { value: "40+", label: "Years Experience" },
+                  { value: "1,200+", label: "Leaks Found", icon: "💧" },
+                  { value: "99%", label: "Success Rate", icon: "✓" },
+                  { value: "€80K+", label: "Equipment", icon: "⚙" },
+                  { value: "40+", label: "Years Experience", icon: "📅" },
                 ].map((stat) => (
                   <div
                     key={stat.label}
-                    className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
+                    className="group bg-gradient-to-br from-slate-800/80 to-slate-800/40 border border-slate-700/40 rounded-2xl p-6 text-center hover:border-primary/30 transition-all duration-300"
                   >
-                    <div className="text-primary font-heading font-bold text-3xl md:text-4xl mb-1">
+                    <div className="text-primary font-heading font-bold text-3xl md:text-4xl mb-1.5 drop-shadow-[0_0_12px_rgba(249,115,22,0.15)]">
                       {stat.value}
                     </div>
-                    <div className="text-slate-400 text-sm font-medium">{stat.label}</div>
+                    <div className="text-slate-400 text-sm font-medium tracking-wide">{stat.label}</div>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center">
-                <div className="text-slate-400 text-sm mb-1">Surveys from</div>
-                <div className="text-primary font-heading font-bold text-5xl md:text-6xl">€99</div>
-                <div className="text-slate-500 text-xs mt-2">
+              <div className="bg-gradient-to-br from-slate-800/80 to-slate-800/40 border border-slate-700/40 rounded-2xl p-8 text-center hover:border-primary/30 transition-all duration-300">
+                <div className="text-slate-400 text-sm mb-2 tracking-wide">Surveys from</div>
+                <div className="text-primary font-heading font-bold text-5xl md:text-6xl drop-shadow-[0_0_20px_rgba(249,115,22,0.2)]">€99</div>
+                <div className="text-slate-500 text-xs mt-3 max-w-xs mx-auto">
                   Price depends on modules selected. Contact us for a tailored quote.
                 </div>
               </div>
+
+              <a
+                href="tel:+34711051071"
+                className="flex items-center justify-center gap-2 w-full px-6 py-4 rounded-2xl bg-primary text-white font-bold text-base hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+              >
+                <Phone className="w-5 h-5" />
+                Get Your Free Quote
+              </a>
             </div>
           </div>
         </div>
