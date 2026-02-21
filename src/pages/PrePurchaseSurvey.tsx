@@ -390,52 +390,52 @@ const PrePurchaseSurvey = () => {
                 <div className="max-w-6xl mx-auto overflow-hidden">
                   <div className={`grid lg:grid-cols-2 gap-0`}>
                     {/* Image — full 50% width, edge-to-edge, no padding */}
-                    <div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    {mod.smallImages && mod.smallImages.length >= 2 ? (
-                        /* 2+ small images: main image on top (full width), small images in a row below */
-                        <div className="grid grid-rows-[3fr_2fr] h-full min-h-[300px] lg:min-h-[500px]">
-                          <img
-                            src={mod.mainImage}
-                            alt={mod.mainImageAlt || mod.title}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                          />
-                          <div className="grid grid-cols-2">
-                            {mod.smallImages.map((img, i) => (
-                              <img
-                                key={i}
-                                src={img}
-                                alt={`${mod.title} detail ${i + 1}`}
-                                className="w-full h-full object-cover"
-                                loading="lazy"
-                              />
-                            ))}
+                    <div className={`relative min-h-[250px] lg:min-h-0 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                      <div className="lg:absolute lg:inset-0">
+                        {mod.smallImages && mod.smallImages.length >= 2 ? (
+                          <div className="grid grid-rows-[3fr_2fr] h-full">
+                            <img
+                              src={mod.mainImage}
+                              alt={mod.mainImageAlt || mod.title}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                            <div className="grid grid-cols-2">
+                              {mod.smallImages.map((img, i) => (
+                                <img
+                                  key={i}
+                                  src={img}
+                                  alt={`${mod.title} detail ${i + 1}`}
+                                  className="w-full h-full object-cover"
+                                  loading="lazy"
+                                />
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      ) : mod.smallImages && mod.smallImages.length === 1 ? (
-                        /* 1 small image: main image left, small image right */
-                        <div className="grid grid-cols-2 h-full min-h-[300px] lg:min-h-[500px]">
+                        ) : mod.smallImages && mod.smallImages.length === 1 ? (
+                          <div className="grid grid-cols-2 h-full">
+                            <img
+                              src={mod.mainImage}
+                              alt={mod.mainImageAlt || mod.title}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                            <img
+                              src={mod.smallImages[0]}
+                              alt={`${mod.title} detail`}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                          </div>
+                        ) : (
                           <img
                             src={mod.mainImage}
                             alt={mod.mainImageAlt || mod.title}
                             className="w-full h-full object-cover"
                             loading="lazy"
                           />
-                          <img
-                            src={mod.smallImages[0]}
-                            alt={`${mod.title} detail`}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                          />
-                        </div>
-                      ) : (
-                        <img
-                          src={mod.mainImage}
-                          alt={mod.mainImageAlt || mod.title}
-                          className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
-                          loading="lazy"
-                        />
-                      )}
+                        )}
+                      </div>
                     </div>
                     {/* Content panel */}
                     <div className={`px-8 md:px-12 py-12 md:py-16 flex flex-col justify-center ${isEven ? "lg:order-1" : "lg:order-2"}`}>
