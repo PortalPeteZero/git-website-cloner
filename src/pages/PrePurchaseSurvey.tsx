@@ -379,8 +379,8 @@ const PrePurchaseSurvey = () => {
                 id={`module-${mod.id}`}
                 className={`${bgColor} scroll-mt-24`}
               >
-                <div className="container mx-auto max-w-6xl">
-                  <div className={`grid lg:grid-cols-2 gap-0 ${isEven ? "direction-rtl" : ""}`}>
+                <div className="max-w-6xl mx-auto overflow-hidden">
+                  <div className={`grid lg:grid-cols-2 gap-0`}>
                     {/* Image — full 50% width, edge-to-edge, no padding */}
                     <div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
                       <img
@@ -409,20 +409,6 @@ const PrePurchaseSurvey = () => {
                           </li>
                         ))}
                       </ul>
-                      {/* Small images below bullets */}
-                      {mod.smallImages && mod.smallImages.length > 0 && (
-                        <div className="grid grid-cols-2 gap-3 mt-6">
-                          {mod.smallImages.map((img, i) => (
-                            <img
-                              key={i}
-                              src={img}
-                              alt={`${mod.title} detail ${i + 1}`}
-                              className="w-full rounded-lg object-cover aspect-square"
-                              loading="lazy"
-                            />
-                          ))}
-                        </div>
-                      )}
                     </div>
                   </div>
                 </div>
