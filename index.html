@@ -98,12 +98,16 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://canary-detect.com/#business",
       "name": "Canary Detect",
+      "legalName": "Camello Blanco S.L.",
       "alternateName": "The Leaky Finders",
       "description": "Professional leak detection company in Lanzarote specializing in water leak detection, pool leak detection, underground pipe detection, and leak repair services.",
       "url": "https://canary-detect.com",
       "telephone": "+34711051071",
       "email": "info@canary-detect.com",
+      "image": "https://canary-detect.com/og-image.jpg",
+      "logo": "https://canary-detect.com/favicon.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "C. las Maretas 12",
@@ -118,13 +122,17 @@
         "longitude": -13.8267
       },
       "areaServed": [
-        { "@type": "City", "name": "Arrecife" },
-        { "@type": "City", "name": "Puerto del Carmen" },
-        { "@type": "City", "name": "Playa Blanca" },
-        { "@type": "City", "name": "Costa Teguise" },
-        { "@type": "AdministrativeArea", "name": "Lanzarote" }
+        { "@type": "City", "name": "Arrecife", "containedInPlace": { "@type": "AdministrativeArea", "name": "Lanzarote" } },
+        { "@type": "City", "name": "Puerto del Carmen", "containedInPlace": { "@type": "AdministrativeArea", "name": "Lanzarote" } },
+        { "@type": "City", "name": "Playa Blanca", "containedInPlace": { "@type": "AdministrativeArea", "name": "Lanzarote" } },
+        { "@type": "City", "name": "Costa Teguise", "containedInPlace": { "@type": "AdministrativeArea", "name": "Lanzarote" } },
+        { "@type": "City", "name": "Yaiza", "containedInPlace": { "@type": "AdministrativeArea", "name": "Lanzarote" } },
+        { "@type": "City", "name": "Tías", "containedInPlace": { "@type": "AdministrativeArea", "name": "Lanzarote" } },
+        { "@type": "AdministrativeArea", "name": "Lanzarote", "containedInPlace": { "@type": "Country", "name": "Spain" } }
       ],
       "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -144,16 +152,29 @@
         "name": "Leak Detection Services",
         "itemListElement": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water Leak Detection", "description": "Professional water pipe leak detection using thermal imaging, acoustic sensors and tracer gas technology" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pool Leak Detection", "description": "Swimming pool leak detection and repair services for pools and spas" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Swimming Pool Leak Detection", "description": "Swimming pool leak detection and repair services for pools and spas" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Underground Leak Detection", "description": "Underground water leak detection and pipe location services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drain Detection & CCTV Surveys", "description": "CCTV drain inspection and pipe surveys with detailed video reports" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leak Repair", "description": "Professional leak repair services for water pipes, pools and underground systems" } }
         ]
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "47"
-      }
+        "ratingValue": "4.9",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": [
+        "https://www.facebook.com/canarydetect",
+        "https://www.instagram.com/canarydetect"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Pete Ashcroft"
+      },
+      "foundingDate": "2014",
+      "slogan": "No Find, No Fee"
     }
     </script>
   </head>

@@ -46,6 +46,7 @@ const getGuarantees = (isSpanish: boolean) => [
 const getPricingInfo = (isSpanish: boolean) => [
   {
     title: isSpanish ? "Detección de Fugas Residencial" : "Residential Leak Detection",
+    price: isSpanish ? "Desde €150" : "From €150",
     features: isSpanish ? [
       "Inspección a precio fijo para casas y villas",
       "Informe completo con hallazgos incluido",
@@ -60,6 +61,7 @@ const getPricingInfo = (isSpanish: boolean) => [
   },
   {
     title: isSpanish ? "Detección de Fugas de Piscinas" : "Swimming Pool Leak Detection",
+    price: isSpanish ? "Desde €200" : "From €200",
     features: isSpanish ? [
       "Inspecciones especializadas de piscinas y spas",
       "Pruebas de presión y localización",
@@ -74,6 +76,7 @@ const getPricingInfo = (isSpanish: boolean) => [
   },
   {
     title: isSpanish ? "Detección de Fugas Comercial" : "Commercial Leak Detection",
+    price: isSpanish ? "Contacte para presupuesto" : "Contact for quote",
     features: isSpanish ? [
       "Inspecciones adaptadas para negocios",
       "Hoteles, apartamentos, oficinas",
@@ -129,9 +132,10 @@ const PricingSection = () => {
               transition={{ delay: index * 0.1 }}
               className="bg-card border border-border rounded-2xl p-8 hover:border-primary/30 hover:shadow-lg transition-all duration-300"
             >
-              <h3 className="font-heading font-bold text-xl mb-6 text-foreground">
+              <h3 className="font-heading font-bold text-xl mb-2 text-foreground">
                 {service.title}
               </h3>
+              <p className="text-primary font-heading font-bold text-lg mb-4">{service.price}</p>
               <ul className="space-y-3 mb-8">
                 {service.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
