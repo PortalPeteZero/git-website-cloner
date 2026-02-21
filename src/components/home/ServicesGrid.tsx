@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { Droplets, Search, Cable, Waves, CircleDot, Wrench, Thermometer } from "lucide-react";
+import { Droplets, Search, Cable, Waves, CircleDot, Wrench, Thermometer, ClipboardCheck, Hammer } from "lucide-react";
 import ServiceCardLite from "./ServiceCardLite";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -11,8 +11,9 @@ import undergroundDetectionImg from "@/assets/services/underground-detection.jpg
 import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg";
 import leakRepairImg from "@/assets/services/leak-repair.jpg";
 import thermalUndergroundLeak from "@/assets/blog/thermal-underground-leak.jpg";
-// Use drain-detection-4.jpg for water leak as it shows acoustic detection
 import waterLeakImg from "@/assets/services/gallery/drain-detection-4.jpg";
+import surveyHeroImg from "@/assets/services/survey/hero-pool-survey.jpg";
+import boilerImg from "@/assets/plumbing/boiler/boiler-installation-wall.jpg";
 
 const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useLanguage();
@@ -88,6 +89,26 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
       href: isSpanish ? "/es/servicios/mapeo-humedad" : "/services/damp-moisture-mapping",
       image: thermalUndergroundLeak,
       imageAlt: isSpanish ? "Detección de humedades con cámara térmica Lanzarote" : "Thermal imaging damp detection Lanzarote",
+    },
+    {
+      title: isSpanish ? "Inspección Pre-Compra" : "Pre-Purchase Survey",
+      description: isSpanish
+        ? "¿Comprando una propiedad en Lanzarote? Nuestra inspección independiente revela fugas ocultas, humedades y problemas de fontanería antes de firmar."
+        : "Buying property in Lanzarote? Our independent survey reveals hidden leaks, damp, and plumbing issues before you sign.",
+      icon: ClipboardCheck,
+      href: isSpanish ? "/es/servicios/inspeccion-precompra" : "/services/pre-purchase-survey",
+      image: surveyHeroImg,
+      imageAlt: isSpanish ? "Inspección pre-compra de propiedades Lanzarote" : "Pre-purchase property survey Lanzarote",
+    },
+    {
+      title: isSpanish ? "Fontanería y Mantenimiento" : "Plumbing & Maintenance",
+      description: isSpanish
+        ? "Reparaciones, instalaciones de calentadores, mejoras de sistemas y mantenimiento de piscinas. Soluciones completas de fontanería."
+        : "Repairs, boiler installations, system upgrades, and pool maintenance. Complete plumbing solutions from detection to fix.",
+      icon: Hammer,
+      href: isSpanish ? "/es/servicios-fontaneria" : "/plumbing-services",
+      image: boilerImg,
+      imageAlt: isSpanish ? "Servicios de fontanería y mantenimiento Lanzarote" : "Plumbing and maintenance services Lanzarote",
     },
   ];
 
