@@ -1,47 +1,31 @@
-# Project Architecture: Lovable React SPA with LovableHTML Pre-Rendering
 
-## How the two layers work together
 
-This site is a React Single Page Application (SPA) built and maintained in Lovable. It uses LovableHTML as a pre-rendering proxy layer to make the site visible to search engines and AI crawlers.
+## Fix: Trim Locations Page Title to Under 60 Characters
 
-Human visitors always receive the full interactive React experience. When a search engine bot (Googlebot, Bingbot) or AI crawler (ChatGPT, Perplexity, Claude) visits, LovableHTML intercepts the request, detects it is a crawler via user agent, and serves a cached pre-rendered HTML snapshot instead. The Lovable codebase itself is untouched by this process.
+### Problem
+The English meta title "Leak Detection Lanzarote | All 15 Municipalities | Canary Detect" is 65 characters, exceeding the 60-character SEO limit. All other reported issues (Soft 404, Thin Content, Meta Description 301 chars, Image Alt) are pre-renderer cache artifacts that will resolve on the next LovableHTML cache refresh.
 
-## Key Rules
+### Change
 
-### Editing
-- This is a React SPA. All edits must be treated as React code.
-- Do NOT suggest converting to SSR/SSG (Next.js, Remix, etc.) — this would break the Lovable editor and is unnecessary.
-- Do NOT suggest Puppeteer, Rendertron, or self-hosted pre-rendering solutions.
+**File: `src/pages/Locations.tsx` (line 29)**
 
-### SEO Meta Tags
-- All meta tags, titles, OG tags, Twitter cards, canonical URLs, and JSON-LD must be implemented through `react-helmet-async` per page.
-- Do NOT hardcode these into `index.html` — static tags override/conflict with per-page component-level tags.
-- Canonical URLs must always point to the custom domain (`canary-detect.com`), never to the `lovable.app` preview subdomain.
+Current (65 chars):
+```
+Leak Detection Lanzarote | All 15 Municipalities | Canary Detect
+```
 
-### Translations / i18n
-- All translated content must use the existing i18n setup. Do NOT hardcode translated text directly into components.
+New (54 chars):
+```
+Leak Detection Lanzarote | All Areas | Canary Detect
+```
 
-### Adding New Pages
-- Every new page/route must be added to `sitemap.xml`.
-- LovableHTML pre-renders pages based on what is in the sitemap — missing pages won't be pre-rendered.
-- For 10+ pages, use a script-based sitemap approach.
+### No Other Code Changes Needed
+
+The remaining 4 reported issues are all cache artifacts:
+- **Soft 404 / Thin Content (26 words)**: The page renders 500+ words immediately on mount. The crawler cached a stale snapshot.
+- **Meta Description Length (301)**: Both EN (143 chars) and ES (146 chars) descriptions are within the 50-160 char limit. The "301" is a stale reading.
+- **Image Alt Text**: The hero image has bilingual alt text on line 48.
 
 ### After Publishing
-- LovableHTML cache does not update instantly. Cache refresh can be scheduled or triggered on demand via the LovableHTML API/dashboard.
+Trigger a LovableHTML cache refresh for `/locations` so crawlers pick up the full rendered content.
 
-### Images
-- All images must have descriptive alt text.
-- Use WebP format where possible and compress before uploading.
-
-### Internal Links
-- Internal links are rendered by JavaScript via React Router.
-- LovableHTML makes them visible to crawlers as long as pages are in the sitemap.
-- Always add relevant internal links between related pages with descriptive anchor text.
-
-### Structured Data
-- JSON-LD schemas are rendered by JavaScript and only visible to crawlers via LovableHTML pre-render.
-- Use Organisation schema on homepage, page-specific schemas where relevant.
-- Validate with Google's Rich Results Test after changes.
-
-### Static Files
-- `sitemap.xml` and `robots.txt` are static files in `/public` — directly readable by crawlers without pre-rendering. Keep both up to date.
