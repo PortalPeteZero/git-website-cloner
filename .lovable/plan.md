@@ -1,42 +1,39 @@
 
+### Analysis of the Issue
+The SEO audit reported a title length of 71 characters for `/locations/tahiche`. In the current code, the title is 43 characters. The discrepancy likely comes from a suffix being appended during the build/pre-rendering process or a previous version of the site being indexed. 
 
-## Fix: Improve Blog Page Link Ratio
+To resolve this and follow best practices, we will optimize the titles to be more descriptive while staying strictly under the 60-character limit.
 
-### Problem
-The SEO audit reports 51 external links vs 48 internal links on /blog. The actual external count from the code is closer to 6-10 (the audit tool is likely inflating the number). However, two real improvements can be made:
+### Proposed Changes
 
-1. External links in the Header navigation are missing `rel="nofollow"` -- they pass link equity unnecessarily
-2. Adding more internal links on the blog page will further improve the ratio
+#### 1. Optimize Tahiche Titles
+I will update the SEO titles for Tahiche in `src/data/locationsData.ts` to include the brand name and more descriptive keywords.
+*   **New English Title:** `Leak Detection Tahiche | Central Lanzarote | Canary Detect` (59 characters)
+*   **New Spanish Title:** `Detección Fugas Tahiche | Centro Lanzarote | Canary Detect` (60 characters)
 
-### Changes
+#### 2. Proactive Optimization for Other Locations
+To prevent similar issues on other location pages, I will also optimize the following entries in `src/data/locationsData.ts`:
 
-#### 1. Add `nofollow` to external links in Header.tsx
+*   **Guatiza:**
+    *   EN: `Leak Detection Guatiza | Northeast Lanzarote | Canary Detect` (59 characters)
+    *   ES: `Detección Fugas Guatiza | Noreste Lanzarote | Canary Detect` (59 characters)
+*   **La Santa:**
+    *   EN: `Leak Detection La Santa | Coastal Lanzarote | Canary Detect` (58 characters)
+    *   ES: `Detección Fugas La Santa | Costa Lanzarote | Canary Detect` (58 characters)
+*   **Tinajo:**
+    *   EN: `Leak Detection Tinajo | Central-West Lanzarote | Canary Detect` (60 characters)
+    *   ES: `Detección Fugas Tinajo | Centro-Oeste Lanzarote | Canary Detect` (60 characters)
+*   **Las Breñas:**
+    *   EN: `Leak Detection Las Breñas | South Lanzarote | Canary Detect` (58 characters)
+    *   ES: `Detección Fugas Las Breñas | Sur Lanzarote | Canary Detect` (58 characters)
+*   **Uga:**
+    *   EN: `Leak Detection Uga | La Geria Wine Region | Canary Detect` (55 characters)
+    *   ES: `Detección Fugas Uga | Región de La Geria | Canary Detect` (56 characters)
 
-Three external links in the desktop nav and three duplicates in the mobile nav need `nofollow` added to their existing `rel` attribute:
+### Technical Details
+*   **File to modify:** `src/data/locationsData.ts`
+*   **Standardized Format:** `[Service] [Location] | [Sub-Region] | Canary Detect`
+*   **Character Limit:** All titles will be kept at or below 60 characters to satisfy major search engine requirements.
 
-**File: `src/components/layout/Header.tsx`**
-
-- **leak-detective.com** (desktop, ~line 152): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
-- **canary-detect-coatings.es** (desktop, ~line 311): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
-- **leakguardlanzarote.com** (desktop, ~line 343): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
-- **canary-detect-coatings.es** (mobile, ~line 510): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
-- **leakguardlanzarote.com** (mobile, ~line 536): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
-- **leak-detective.com** (mobile, ~line 678+): change `rel="noopener noreferrer"` to `rel="noopener noreferrer nofollow"`
-
-#### 2. Add internal links section to Blog page
-
-**File: `src/pages/Blog.tsx`**
-
-Add a "Popular Locations" internal link grid between the AllServicesGrid and the CTA section. This adds 15 internal links to location pages, significantly improving the ratio.
-
-The component will be a simple grid linking to the 15 municipality location pages (Arrecife, Playa Blanca, Puerto del Carmen, etc.), matching the style already used in the Footer. This reuses the location data pattern already in the Footer.
-
-### What does NOT need changing
-
-- Footer external links (Facebook, Instagram) -- these are standard social links and already have `noopener noreferrer`; social profiles are acceptable external links
-- `tel:` and `mailto:` links -- these are functional contact links, not SEO concerns
-- The "51 external" count will likely correct itself after cache refresh, as it appears inflated by the SEO tool
-
-### After publishing
-Trigger a LovableHTML cache refresh for `/blog`.
-
+### After Implementation
+After publishing these changes, the LovableHTML pre-renderer will re-cache the pages with the updated metadata, resolving the reported length issues.
