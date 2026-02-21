@@ -127,9 +127,8 @@ const PricingSection = () => {
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               className="bg-card border border-border rounded-2xl p-8 hover:border-primary/30 hover:shadow-lg transition-all duration-300"
             >
               <h3 className="font-heading font-bold text-xl mb-2 text-foreground">
@@ -168,9 +167,8 @@ const PricingSection = () => {
               <motion.div
                 key={guarantee.title}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
                 className={`rounded-2xl p-6 text-center ${
                   guarantee.highlight 
                     ? 'bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/20' 
