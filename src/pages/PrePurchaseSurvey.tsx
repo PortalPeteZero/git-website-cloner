@@ -318,6 +318,24 @@ const PrePurchaseSurvey = () => {
                 <Phone className="w-5 h-5" />
                 Get Your Free Quote
               </a>
+
+              <div className="bg-gradient-to-br from-slate-800/80 to-slate-800/40 border border-slate-700/40 rounded-2xl p-6">
+                <div className="text-slate-400 text-xs uppercase tracking-widest font-bold mb-4">Available Modules</div>
+                <ul className="space-y-3">
+                  {modules.map((mod) => (
+                    <li key={mod.id}>
+                      <button
+                        onClick={() => scrollToModule(mod.id)}
+                        className="flex items-center gap-3 w-full text-left group"
+                      >
+                        <span className="text-primary text-xs font-bold font-heading shrink-0 w-16">{mod.moduleNumber.replace("Module ", "#")}</span>
+                        <span className="text-slate-300 text-sm group-hover:text-primary transition-colors">{mod.navLabel}</span>
+                        {mod.isAddOn && <span className="text-[10px] uppercase tracking-wider text-primary/60 border border-primary/20 rounded px-1.5 py-0.5 ml-auto shrink-0">Add-on</span>}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
