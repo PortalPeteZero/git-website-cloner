@@ -15,6 +15,18 @@ export const serviceFaqs: Record<string, ServiceFaqData> = {
   "water-leak-detection": {
     en: [
       {
+        question: "Using a Water Meter for Detection",
+        answer: "Your water meter is a powerful tool for uncovering hidden leaks in your water supply system. To check for leaks, take a meter reading, then ensure all the taps in your property are turned off and avoid using any water for a few hours. After this period, take a second reading—if the meter has moved, it means water is still flowing somewhere in the system, indicating a possible leak. This simple test can help you determine if there's a problem even when there are no obvious signs. Keep an eye on your water bill as well; a sudden increase often points to leakage. If you suspect a leak, contact a professional plumber immediately to help locate the exact location and discuss options like a leak allowance to help reduce your bill."
+      },
+      {
+        question: "External Piping Inspection",
+        answer: "Inspecting the external pipes around your property is essential for early leak detection. Start by checking the supply pipe that connects your house to the main water supply, as faulty pipes here are a common cause of leaks. Walk around your front garden and along the outside walls of your house, looking for obvious signs such as leaking water, damp patches, or soft spots on the ground. These can indicate a hidden leak that may lead to water damage if left unchecked. Regularly inspecting these areas helps you avoid leaks and maintain the integrity of your property's plumbing system."
+      },
+      {
+        question: "Irrigation System Check",
+        answer: "Irrigation systems, including sprinklers and garden pipes, are often overlooked sources of leaks. Make it a habit to check your sprinklers and pipes for any signs of damage or wear, ensuring everything is working properly. A leak in your irrigation system can result in significant water waste and an increased water bill. To detect leaks, turn off the water supply to your irrigation system and take a meter reading. If the meter changes while the system is off, there may be a hidden leak. If you notice any signs of leakage, contact a professional plumber to assess and repair the system, helping you avoid unnecessary waste and costs."
+      },
+      {
         question: "What are the signs of a hidden water leak I can't see?",
         answer: "The most reliable sign is your water meter spinning when all taps and appliances are off. Other indicators include: unexplained high water bills, damp or warm patches on floors, musty smells with no visible source, paint bubbling or wallpaper peeling, or hearing running water when nothing is in use."
       },
@@ -36,6 +48,18 @@ export const serviceFaqs: Record<string, ServiceFaqData> = {
       },
     ],
     es: [
+      {
+        question: "Uso del Contador de Agua para Detección",
+        answer: "Su contador de agua es una herramienta poderosa para descubrir fugas ocultas en su sistema de suministro. Para comprobar si hay fugas, tome una lectura del contador, asegúrese de que todos los grifos estén cerrados y evite usar agua durante unas horas. Después, tome una segunda lectura—si el contador se ha movido, significa que el agua sigue fluyendo en algún lugar del sistema, indicando una posible fuga. Esta prueba simple puede ayudarle a determinar si hay un problema incluso cuando no hay señales obvias. Vigile también su factura de agua; un aumento repentino a menudo indica una fuga. Si sospecha una fuga, contacte a un fontanero profesional inmediatamente."
+      },
+      {
+        question: "Inspección de Tuberías Externas",
+        answer: "Inspeccionar las tuberías externas alrededor de su propiedad es esencial para la detección temprana de fugas. Comience comprobando la tubería de suministro que conecta su casa con el suministro principal, ya que las tuberías defectuosas aquí son una causa común de fugas. Camine por su jardín y a lo largo de las paredes exteriores, buscando señales obvias como agua goteando, manchas húmedas o puntos blandos en el suelo. Estos pueden indicar una fuga oculta que puede causar daños por agua si no se controla."
+      },
+      {
+        question: "Comprobación del Sistema de Riego",
+        answer: "Los sistemas de riego, incluyendo aspersores y tuberías de jardín, son fuentes de fugas frecuentemente pasadas por alto. Acostúmbrese a comprobar sus aspersores y tuberías en busca de signos de daño o desgaste. Una fuga en su sistema de riego puede resultar en un desperdicio significativo de agua y un aumento en la factura. Para detectar fugas, cierre el suministro de agua al sistema de riego y tome una lectura del contador. Si el contador cambia mientras el sistema está apagado, puede haber una fuga oculta."
+      },
       {
         question: "¿Cuáles son las señales de una fuga de agua oculta?",
         answer: "La señal más fiable es ver el contador de agua girando cuando todos los grifos y electrodomésticos están cerrados. Otros indicadores incluyen: facturas de agua inexplicablemente altas, manchas húmedas o calientes en suelos, olores a moho sin fuente visible, pintura burbujeando o papel pintado despegándose, o escuchar agua corriendo cuando nada está en uso."

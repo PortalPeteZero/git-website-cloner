@@ -346,12 +346,11 @@ const ServiceDetail = () => {
                       <Shield className="h-7 w-7 text-primary-foreground" />
                     </div>
                   </div>
-                  <div className="flex-1">
+                    <div className="flex-1">
                     <p className="text-primary-foreground/95 leading-relaxed">
-                      {(() => {
-                        const paragraphs = service.content.split("\n\n");
-                        return paragraphs[paragraphs.length - 1] ?? "";
-                      })()}
+                      {isSpanish
+                        ? "Operamos con total confianza en nuestras capacidades. Si confirmamos que tiene una fuga activa pero no conseguimos localizarla, no hay cargo. Sin riesgos, sin sorpresas. Nuestros informes profesionales detallados son aceptados por todas las compañías de seguros para reclamaciones."
+                        : "We operate with complete confidence in our capabilities. If we confirm you have an active leak but fail to locate it, there is no charge. No risk, no surprises. Our detailed professional reports are accepted by all insurance companies for claims."}
                     </p>
                   </div>
                   <div className="flex-shrink-0 flex items-center gap-2">
