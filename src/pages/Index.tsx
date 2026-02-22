@@ -21,6 +21,7 @@ const ProblemFAQSection = lazy(() => import("@/components/home/ProblemFAQSection
 const GoogleReviewsHighlight = lazy(() => import("@/components/home/GoogleReviewsHighlight"));
 const PopularArticlesSection = lazy(() => import("@/components/home/PopularArticlesSection"));
 const ServiceAreasHomepage = lazy(() => import("@/components/home/ServiceAreasHomepage"));
+const GetQuoteCTA = lazy(() => import("@/components/home/GetQuoteCTA"));
 
 const Index = () => {
   const { t, isSpanish } = useTranslation();
@@ -99,6 +100,12 @@ const Index = () => {
       <ErrorBoundary>
         <Suspense fallback={<LoadingFallback height="min-h-[300px]" />}>
           <ServiceAreasHomepage />
+        </Suspense>
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+        <Suspense fallback={<LoadingFallback height="min-h-[200px]" />}>
+          <GetQuoteCTA />
         </Suspense>
       </ErrorBoundary>
     </Layout>
