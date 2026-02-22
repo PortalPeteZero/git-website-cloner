@@ -218,6 +218,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://canary-detect.com/services/pre-purchase-survey</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/services/pre-purchase-survey"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios/inspeccion-precompra"/>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/plumbing-services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/plumbing-services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios-fontaneria"/>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- English Location Pages -->
   <url>
@@ -506,6 +522,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/services/damp-moisture-mapping"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios/mapeo-humedad"/>
     <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/servicios/inspeccion-precompra</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/services/pre-purchase-survey"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios/inspeccion-precompra"/>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/servicios-fontaneria</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/plumbing-services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios-fontaneria"/>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
