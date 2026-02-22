@@ -61,6 +61,7 @@ export interface ServiceData {
   content: string;
   richContent?: boolean;
   heroImage: string;
+  heroAlt?: string;
   galleryImages: string[];
   specialHeroImage?: string;
   seo: {
@@ -469,10 +470,11 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       description: "Canary Detect offers expert leak detection and repair services throughout Lanzarote. We provide comprehensive solutions for homeowners, businesses, and property managers who need to identify and fix water leaks quickly and efficiently.",
       icon: Wrench,
       heroImage: leakRepairBa4,
+      heroAlt: "Leak Repair Lanzarote",
       galleryImages: [leakRepairBa1, leakRepairBa2, leakRepairBa3, leakRepairBa4],
       seo: {
-        title: "Leak Detection & Repair Lanzarote | Canary Detect",
-        description: "Expert leak detection and repair in Lanzarote. Water leaks, pool leaks, underground pipes. Advanced technology, fast response. No Find, No Fee.",
+        title: "Leak Repair Lanzarote | Water & Pool Pipe Repair",
+        description: "Leak repair Lanzarote. Water pipe, pool pipe, underground leak repair. Emergency service. Complete detection to repair.",
         keywords: "leak detection and repair Lanzarote, leak repair Lanzarote, water leak repair Canary Islands, pool leak repair, underground leak repair, emergency leak repair Lanzarote, leak detection Lanzarote"
       },
       features: [
