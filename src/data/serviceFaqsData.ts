@@ -230,15 +230,15 @@ export const serviceFaqs: Record<string, ServiceFaqData> = {
     en: [
       {
         question: "Do I have to use your repair service after detection?",
-        answer: "No—you're free to use your own contractor. We provide detailed reports and can brief any tradesperson on what we found. However, many customers prefer our complete service for single-point accountability."
+        answer: "No, you are not obligated to use our repair service after we detect a leak. We provide a detailed report and recommendations, so you can choose the best solution for your needs."
       },
       {
         question: "What types of leak repairs do you handle?",
-        answer: "We repair water pipe leaks, pool pipe leaks, underground leaks, drain repairs, and can handle everything from simple joint repairs to full pipe replacements. All work comes with our quality guarantee."
+        answer: "We handle a wide range of repairs, including pipe repairs, pool repairs, drain repairs, joint sealing, patch repairs, and complete replacements."
       },
       {
         question: "Do you offer emergency leak repairs?",
-        answer: "Yes—we provide emergency response across Lanzarote for urgent situations like burst pipes or significant water damage. Call us and we'll assess whether same-day attendance is possible."
+        answer: "Yes, we offer emergency leak repair services across Lanzarote. Our team can often detect and confirm leaks within the same day for your convenience."
       },
     ],
     es: [
