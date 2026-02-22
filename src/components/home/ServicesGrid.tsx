@@ -28,7 +28,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
       icon: Search,
       href: isSpanish ? "/es/servicios/deteccion-desagues" : "/services/drain-detection",
       image: drainDetectionImg,
-      imageAlt: isSpanish ? "Inspección de desagües con cámara CCTV Lanzarote" : "CCTV drain inspection camera Lanzarote",
+      imageAlt: isSpanish ? "Técnico profesional de detección de fugas usando equipo acústico Lanzarote" : "Professional leak detection technician using acoustic equipment Lanzarote",
     },
     {
       title: isSpanish ? "Fugas en Tuberías" : "Water Pipe Leaks",
@@ -38,7 +38,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
       icon: CircleDot,
       href: isSpanish ? "/es/servicios/deteccion-fugas-tuberias" : "/services/water-pipe-leak-detection",
       image: pipeInspectionImg,
-      imageAlt: isSpanish ? "Detección de fugas en tuberías enterradas" : "Underground pipe leak detection",
+      imageAlt: isSpanish ? "Cámara de inspección CCTV de desagües Lanzarote" : "CCTV drain inspection camera Lanzarote",
     },
     {
       title: isSpanish ? "Detección Subterránea" : "Underground Detection",
@@ -48,7 +48,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
       icon: Cable,
       href: isSpanish ? "/es/servicios/deteccion-subterranea" : "/services/underground-detection",
       image: undergroundDetectionImg,
-      imageAlt: isSpanish ? "Detección de tuberías con radar de penetración terrestre" : "Ground penetrating radar pipe detection",
+      imageAlt: isSpanish ? "Detección de fugas en tuberías subterráneas" : "Underground pipe leak detection",
     },
     {
       title: isSpanish ? "Detección de Fugas de Agua" : "Water Leak Detection",
@@ -58,7 +58,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
       icon: Droplets,
       href: isSpanish ? "/es/servicios/deteccion-fugas-agua" : "/services/water-leak-detection",
       image: waterLeakImg,
-      imageAlt: isSpanish ? "Dispositivo de escucha para detección acústica de fugas" : "Acoustic leak detection listening device",
+      imageAlt: isSpanish ? "Detección de tuberías con radar de penetración terrestre" : "Ground penetrating radar pipe detection",
     },
     {
       title: isSpanish ? "Detección de Fugas de Piscinas" : "Swimming Pool Leak Detection",
@@ -68,7 +68,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
       icon: Waves,
       href: isSpanish ? "/es/servicios/deteccion-fugas-piscinas" : "/services/pool-leak-detection",
       image: poolLeakDetectionImg,
-      imageAlt: isSpanish ? "Prueba de presión para detección de fugas de piscinas" : "Swimming pool leak detection pressure testing",
+      imageAlt: isSpanish ? "Dispositivo de escucha para detección acústica de fugas" : "Acoustic leak detection listening device",
     },
     {
       title: isSpanish ? "Reparación de Fugas" : "Leak Repair",
@@ -78,7 +78,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
       icon: Wrench,
       href: isSpanish ? "/es/servicios/reparacion-fugas" : "/services/leak-repair",
       image: leakRepairImg,
-      imageAlt: isSpanish ? "Servicio profesional de reparación de fugas Lanzarote" : "Professional leak repair service Lanzarote",
+      imageAlt: isSpanish ? "Prueba de presión para detección de fugas de piscinas" : "Swimming pool leak detection pressure testing",
     },
     {
       title: isSpanish ? "Mapeo de Humedad" : "Damp & Moisture Mapping",
@@ -88,7 +88,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
       icon: Thermometer,
       href: isSpanish ? "/es/servicios/mapeo-humedad" : "/services/damp-moisture-mapping",
       image: thermalUndergroundLeak,
-      imageAlt: isSpanish ? "Detección de humedades con cámara térmica Lanzarote" : "Thermal imaging damp detection Lanzarote",
+      imageAlt: isSpanish ? "Servicio profesional de reparación de fugas Lanzarote" : "Professional leak repair service Lanzarote",
     },
     {
       title: isSpanish ? "Inspección Pre-Compra" : "Pre-Purchase Survey",

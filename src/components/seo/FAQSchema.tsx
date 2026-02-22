@@ -7,13 +7,14 @@ interface FAQItem {
 
 interface FAQSchemaProps {
   faqs: FAQItem[];
+  schemaId?: string;
 }
 
-const FAQSchema = forwardRef<HTMLDivElement, FAQSchemaProps>(({ faqs }, ref) => {
+const FAQSchema = forwardRef<HTMLDivElement, FAQSchemaProps>(({ faqs, schemaId = 'faq-schema' }, ref) => {
   useEffect(() => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.id = 'faq-schema';
+    script.id = schemaId;
     
     const faqSchema = {
       "@context": "https://schema.org",
@@ -30,8 +31,8 @@ const FAQSchema = forwardRef<HTMLDivElement, FAQSchemaProps>(({ faqs }, ref) => 
     
     script.textContent = JSON.stringify(faqSchema);
     
-    // Remove existing FAQ schema if present
-    const existing = document.getElementById('faq-schema');
+    // Remove existing schema with same id if present
+    const existing = document.getElementById(schemaId);
     if (existing) {
       existing.remove();
     }
@@ -39,12 +40,12 @@ const FAQSchema = forwardRef<HTMLDivElement, FAQSchemaProps>(({ faqs }, ref) => 
     document.head.appendChild(script);
     
     return () => {
-      const scriptToRemove = document.getElementById('faq-schema');
+      const scriptToRemove = document.getElementById(schemaId);
       if (scriptToRemove) {
         scriptToRemove.remove();
       }
     };
-  }, [faqs]);
+  }, [faqs, schemaId]);
   
   return <div ref={ref} style={{ display: 'none' }} />;
 });
