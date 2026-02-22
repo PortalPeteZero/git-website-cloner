@@ -71,16 +71,27 @@ const WelcomeSection = () => {
                 </>
               )}
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-6 max-w-none">
+              {isSpanish ? (
+                <>
+                  Nuestros servicios están diseñados para propietarios, administradores de propiedades y empresas en Lanzarote e Islas Canarias que desean proteger sus propiedades del daño por agua y reparaciones costosas. La detección de fugas es esencial para prevenir daños a la propiedad, ahorrar dinero en reparaciones y facturas de agua, y garantizar la seguridad e integridad de su propiedad.
+                </>
+              ) : (
+                <>
+                  Our services are designed for homeowners, property managers, and businesses across Lanzarote and the Canary Islands who want to protect their properties from water damage and costly repairs. Leak detection is essential to prevent property damage, save money on repairs and water bills, and ensure the safety and integrity of your property.
+                </>
+              )}
+            </p>
             <p className="text-muted-foreground leading-relaxed mb-8 max-w-none">
               {isSpanish ? (
                 <>
                   Ya sea que tenga una <Link to="/es/servicios/deteccion-fugas-piscinas" className="text-primary hover:underline">fuga de piscina</Link>, <Link to="/es/servicios/deteccion-fugas-agua" className="text-primary hover:underline">fuga de tubería de agua</Link>, o necesite <Link to="/es/servicios/deteccion-subterranea" className="text-primary hover:underline">detección de tuberías subterráneas</Link>, 
-                  tenemos la experiencia y el equipo para encontrar el problema y proporcionar soluciones efectivas.
+                  tenemos la experiencia y el equipo para encontrar el problema y proporcionar soluciones de detección y reparación de fugas de emergencia.
                 </>
               ) : (
                 <>
                   Whether you have a <Link to="/services/pool-leak-detection" className="text-primary hover:underline">swimming pool leak</Link>, <Link to="/services/water-leak-detection" className="text-primary hover:underline">water pipe leak</Link>, or need <Link to="/services/underground-detection" className="text-primary hover:underline">underground pipe detection</Link>, 
-                  we have the expertise and equipment to find the problem and provide effective solutions.
+                  we have the expertise and equipment to find the problem and provide emergency leak detection and repair solutions.
                 </>
               )}
             </p>

@@ -34,13 +34,13 @@ const GoogleReviewsHighlight = forwardRef<HTMLElement>((_, ref) => {
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-canary-navy">
             {isSpanish 
-              ? "Lo Que Dicen Nuestros Clientes"
-              : "What Our Customers Say"}
+              ? "Lo que Dicen los Clientes Sobre Los Cazafugas"
+              : "What Clients Say About The Leaky Finders"}
           </h2>
           <p className="text-muted-foreground">
             {isSpanish 
-              ? "Reseñas verificadas de Google de clientes reales en Lanzarote."
-              : "Verified Google reviews from real customers across Lanzarote."}
+              ? "No solo confíe en nuestra palabra - escuche a los propietarios de toda Lanzarote que han confiado en Canary Detect para sus necesidades de detección de fugas."
+              : "Don't just take our word for it - hear from property owners across Lanzarote who have trusted Canary Detect with their leak detection needs."}
           </p>
         </motion.div>
 

@@ -43,8 +43,8 @@ const getTechnologies = (isSpanish: boolean) => [
     subtitle: isSpanish ? "Cámaras Internas" : "Internal Cameras",
     icon: Video,
     description: isSpanish
-      ? "Cuatro sistemas de cámaras para diferentes tamaños de tuberías nos permiten identificar visualmente grietas, corrosión, intrusión de raíces y fallos en juntas con precisión."
-      : "Four camera systems for different pipe sizes let us visually identify cracks, corrosion, root intrusion, and joint failures with pinpoint accuracy.",
+      ? "Cuatro sistemas de cámaras para diferentes tamaños de tuberías nos permiten identificar visualmente grietas, corrosión, intrusión de raíces y fallos en juntas con precisión, formando la base de nuestros informes detallados de inspección CCTV de desagües y tuberías."
+      : "Four camera systems for different pipe sizes let us visually identify cracks, corrosion, root intrusion, and joint failures with pinpoint accuracy, forming the basis of our detailed CCTV drain and pipe inspection reports.",
   },
 ];
 
@@ -92,6 +92,11 @@ const TechnologySection = forwardRef<HTMLElement>((_, ref) => {
               <span className="text-primary font-semibold">at least two independent technologies</span>,
               delivering centimetre accuracy and keeping repair costs to an absolute minimum.</>
             )}
+          </p>
+          <p className="text-white/50 text-base mt-3">
+            {isSpanish
+              ? "Canary Detect utiliza múltiples métodos para confirmar los resultados de sus investigaciones con precisión."
+              : "Canary Detect uses multiple methods to confirm the results of their investigations for accuracy."}
           </p>
         </motion.div>
 
