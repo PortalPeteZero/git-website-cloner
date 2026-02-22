@@ -41,7 +41,7 @@ const CaseStudiesPreview = forwardRef<HTMLElement>((_, ref) => {
       title: "Hotel Pool Leak Detection",
       location: "Playa Blanca",
       description:
-        "Located a significant leak in a hotel pool that was causing water loss of 5,000 liters per day.",
+        "Located a significant leak in a hotel pool that was causing water loss of 5,000 liters per day, similar to the real-world projects featured in our Lanzarote leak detection success stories.",
       image: poolLeak1,
     },
     {
@@ -56,7 +56,7 @@ const CaseStudiesPreview = forwardRef<HTMLElement>((_, ref) => {
       title: "Residential Water Leak",
       location: "Costa Teguise",
       description:
-        "Found and repaired a hidden leak in a villa that had been causing damp problems for months.",
+        "Found and repaired a hidden leak in a villa that had been causing damp problems for months, showcasing the same non-invasive methods we use for professional leak detection in Costa Teguise apartments and pools.",
       image: photo2,
     },
   ];

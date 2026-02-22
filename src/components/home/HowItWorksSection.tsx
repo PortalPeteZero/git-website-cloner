@@ -34,7 +34,7 @@ const HowItWorksSection = forwardRef<HTMLElement>((_, ref) => {
     {
       number: 5,
       title: "Reparación",
-      description: "Podemos reparar la fuga o proporcionar orientación para su contratista elegido.",
+      description: "Podemos organizar o llevar a cabo las reparaciones para solucionar el problema definitivamente.",
       icon: Wrench,
     },
   ] : [
@@ -65,7 +65,7 @@ const HowItWorksSection = forwardRef<HTMLElement>((_, ref) => {
     {
       number: 5,
       title: "Repair",
-      description: "We can repair the leak or provide guidance for your chosen contractor.",
+      description: "We can arrange or carry out repairs to fix the problem for good.",
       icon: Wrench,
     },
   ];

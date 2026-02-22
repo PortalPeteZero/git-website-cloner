@@ -24,7 +24,7 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
       title: isSpanish ? "Detección de Desagües" : "Drain Detection",
       description: isSpanish 
         ? "Localice e identifique problemas de drenaje usando inspección con cámara avanzada y tecnología de rastreo."
-        : "Locate and identify drainage issues using advanced camera inspection and tracing technology.",
+        : "Locate and identify drainage issues using advanced camera inspection and tracing technology, including comprehensive CCTV drain and pipe surveys in Lanzarote.",
       icon: Search,
       href: isSpanish ? "/es/servicios/deteccion-desagues" : "/services/drain-detection",
       image: drainDetectionImg,
@@ -43,8 +43,8 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
     {
       title: isSpanish ? "Detección Subterránea" : "Underground Detection",
       description: isSpanish
-        ? "¿Necesita localizar tuberías enterradas antes de excavar? Localice tuberías, cables y servicios subterráneos con radar de penetración terrestre."
-        : "Need to find buried pipes before digging? Locate underground pipes, cables, and utilities with ground-penetrating radar.",
+        ? "¿Necesita encontrar tuberías enterradas antes de excavar? Detección de fugas de agua subterráneas en Lanzarote. Encuentre fugas ocultas bajo suelos, jardines y caminos con precisión centimétrica."
+        : "Need to find buried pipes before digging? Underground water leak detection in Lanzarote. Find hidden leaks beneath floors, gardens and driveways with centimetre accuracy.",
       icon: Cable,
       href: isSpanish ? "/es/servicios/deteccion-subterranea" : "/services/underground-detection",
       image: undergroundDetectionImg,
@@ -53,8 +53,8 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
     {
       title: isSpanish ? "Detección de Fugas de Agua" : "Water Leak Detection",
       description: isSpanish
-        ? "¿Paredes húmedas? ¿Facturas de agua altas? ¿Contador corriendo con los grifos cerrados? Encuentre fugas de agua ocultas usando tecnología acústica y de imagen térmica."
-        : "Damp walls? High water bills? Meter running when taps are off? Find hidden water leaks using acoustic and thermal imaging.",
+        ? "Detección de fugas de agua ocultas en Lanzarote. Encuentre fugas ocultas en paredes, suelos y techos con imagen térmica, gas trazador y tecnología acústica."
+        : "Hidden water leak detection in Lanzarote. Find hidden leaks in walls, floors and ceilings with thermal imaging, tracer gas and acoustic technology.",
       icon: Droplets,
       href: isSpanish ? "/es/servicios/deteccion-fugas-agua" : "/services/water-leak-detection",
       image: waterLeakImg,
@@ -83,8 +83,8 @@ const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
     {
       title: isSpanish ? "Mapeo de Humedad" : "Damp & Moisture Mapping",
       description: isSpanish
-        ? "¿Paredes húmedas? ¿Pintura descascarada? Detectamos humedades ocultas con infrarrojos. Ideal antes de reformas. Visita GRATUITA."
-        : "Damp walls? Peeling paint? We detect hidden moisture with infrared. Ideal before refurbishment. FREE home visit.",
+        ? "¿Paredes húmedas? ¿Facturas de agua altas? Mapeamos la humedad e identificamos la fuente de los problemas de humedad usando imagen térmica."
+        : "Damp walls? High water bills? We map moisture and identify the source of damp problems using thermal imaging.",
       icon: Thermometer,
       href: isSpanish ? "/es/servicios/mapeo-humedad" : "/services/damp-moisture-mapping",
       image: thermalUndergroundLeak,

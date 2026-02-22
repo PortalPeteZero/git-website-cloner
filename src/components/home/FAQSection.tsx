@@ -129,6 +129,53 @@ const FAQSection = forwardRef<HTMLElement>((_, ref) => {
                 ? "¿Tiene preguntas sobre nuestros servicios de detección de fugas? Aquí tiene respuestas a las preguntas más comunes que recibimos."
                 : "Got questions about our leak detection services? Here are answers to the most common questions we receive."}
             </p>
+
+            {/* Highlighted FAQ summary */}
+            <div className="space-y-4 mb-6">
+              <div className="bg-muted/50 rounded-lg p-4 border border-border">
+                <h3 className="font-heading font-semibold text-foreground mb-1 text-sm">
+                  {isSpanish ? "¿Ofrecen una prueba gratuita de confirmación de fugas?" : "Do you offer a free leak confirmation test?"}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {isSpanish
+                    ? "Sí, Canary Detect ofrece una prueba gratuita de confirmación de fugas para evaluar su sistema y comprobar si hay fugas antes de reservar una inspección completa. Esto le ayuda a saber si hay una fuga sin ningún compromiso."
+                    : "Yes, Canary Detect offers a free leak confirmation test to assess your system and check for leaks before booking a full survey. This helps you understand if a leak is present without any obligation."}
+                </p>
+              </div>
+              <div className="bg-muted/50 rounded-lg p-4 border border-border">
+                <h3 className="font-heading font-semibold text-foreground mb-1 text-sm">
+                  {isSpanish ? "¿Cuál es su política 'Sin Encontrar, Sin Pagar'?" : "What is your 'No Find, No Fee' leak detection policy?"}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {isSpanish
+                    ? "Ofrecemos una garantía sin riesgo con nuestra política 'Sin Encontrar, Sin Pagar'. Si no encontramos una fuga, no paga nada."
+                    : "We provide a risk-free guarantee with our 'No Find, No Fee' policy. If we don't find a leak, you pay nothing."}
+                </p>
+              </div>
+              <div className="bg-muted/50 rounded-lg p-4 border border-border">
+                <h3 className="font-heading font-semibold text-foreground mb-1 text-sm">
+                  {isSpanish ? "¿Proporcionan informes profesionales después de las inspecciones?" : "Do you provide professional reports after surveys?"}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {isSpanish
+                    ? "Por supuesto. Después de cada inspección, proporcionamos informes profesionales y extensos que detallan nuestra metodología y resultados, aptos para reclamaciones de seguros y sus registros."
+                    : "Absolutely. After every survey, we provide professional and extensive reports detailing our methodology and results, suitable for insurance claims and your records."}
+                </p>
+              </div>
+            </div>
+
+            {/* Summary paragraph */}
+            <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-6">
+              <h3 className="font-heading font-semibold text-foreground mb-2 text-sm">
+                {isSpanish ? "Detección Sin Riesgo e Informes Profesionales" : "Risk-Free Leak Detection & Professional Reporting"}
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {isSpanish
+                  ? "Canary Detect ofrece una prueba gratuita de confirmación de fugas para evaluar su sistema y comprobar si hay fugas antes de reservar una inspección completa. Nuestra política 'Sin Encontrar, Sin Pagar' sin riesgo significa que solo paga si encontramos la fuga. Después de cada inspección, proporcionamos informes profesionales y extensos que detallan nuestra metodología y resultados, aptos para reclamaciones de seguros y sus registros."
+                  : "Canary Detect offers a free leak confirmation test to assess your system and check for leaks before booking a full survey. Our risk-free 'No Find, No Fee' policy means you only pay if we find the leak. After every survey, we provide professional and extensive reports detailing our methodology and results, which are suitable for insurance claims and your records."}
+              </p>
+            </div>
+
             <p className="text-muted-foreground mb-8">
               {isSpanish 
                 ? "¿No encuentra lo que busca? Contáctenos y estaremos encantados de ayudar."
