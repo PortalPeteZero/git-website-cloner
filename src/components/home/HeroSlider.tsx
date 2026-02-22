@@ -267,6 +267,8 @@ const HeroSlider = () => {
 
   return (
     <section className="relative h-[550px] md:h-[650px] lg:h-[750px] overflow-hidden">
+      {/* SEO H1 - visible to crawlers via prerendered HTML, visually hidden */}
+      <h1 className="sr-only">Canary Detect – Leak Detection Experts in Lanzarote &amp; Canary Islands</h1>
       {/* Background Images with Carousel */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -307,11 +309,11 @@ const HeroSlider = () => {
                 <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
                   {isSpanish ? "Detección de Fugas Lanzarote e Islas Canarias" : "Leak Detection Lanzarote & Canary Islands"}
                 </span>
-                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-[1.1] drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+                <p className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-[1.1] drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]" aria-hidden="true">
                   {slide.title}
                   <br />
                   <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">{slide.subtitle}</span>
-                </h1>
+                </p>
                 <p className="text-white/90 text-lg md:text-xl mb-10 leading-relaxed max-w-xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
                   {slide.description}
                 </p>
