@@ -140,7 +140,7 @@ const ServiceDetail = () => {
         description={service.seo.description}
         keywords={service.seo.keywords}
         canonical={canonicalUrl}
-        type="service"
+        type={isWaterLeakPage ? "website" : "service"}
       />
       <BreadcrumbSchema 
         items={[
@@ -616,7 +616,7 @@ const ServiceDetail = () => {
                   >
                     <img 
                       src={img} 
-                      alt={`${service.title} - ${isSpanish ? 'ejemplo de trabajo' : 'work example'} ${index + 1}`}
+                      alt={isWaterLeakPage ? `${service.title} ${index + 1}` : `${service.title} - ${isSpanish ? 'ejemplo de trabajo' : 'work example'} ${index + 1}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                       decoding="async"
