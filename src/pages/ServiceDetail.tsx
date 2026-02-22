@@ -208,7 +208,7 @@ const ServiceDetail = () => {
           ) : (
             <img 
               src={service.heroImage} 
-              alt={service.title}
+              alt={service.heroAlt || service.title}
               className="w-full h-full object-cover"
               fetchPriority="high"
               decoding="async"
