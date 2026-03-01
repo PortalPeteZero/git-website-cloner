@@ -138,7 +138,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
                 <a 
                   href="https://www.facebook.com/profile.php?id=100071808930725" 
                   target="_blank" 
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className="w-9 h-9 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all duration-300 group"
                   aria-label="Follow us on Facebook"
                 >
@@ -147,7 +147,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
                 <a 
                   href="https://www.instagram.com/canarydetect_the_leaky_finders/" 
                   target="_blank" 
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className="w-9 h-9 rounded-full bg-white/10 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 flex items-center justify-center transition-all duration-300 group"
                   aria-label="Follow us on Instagram"
                 >

@@ -358,6 +358,57 @@ const Blog = () => {
       {/* All Services Grid - Internal Links */}
       <AllServicesGrid isSpanish={isSpanish} />
 
+      {/* Quick Links - Extra Internal Links for SEO Balance */}
+      <section className="py-12 md:py-16 bg-background section-divider">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <span className="text-primary font-semibold text-sm uppercase tracking-widest">
+              {isSpanish ? "Explora Más" : "Explore More"}
+            </span>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold mt-2">
+              {isSpanish ? "Enlaces Útiles" : "Useful Links"}
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {(isSpanish ? [
+              { label: "Sobre Nosotros", href: "/es/sobre-nosotros" },
+              { label: "Tecnología", href: "/es/tecnologia" },
+              { label: "Casos de Éxito", href: "/es/casos-de-exito" },
+              { label: "Reseñas", href: "/es/resenas" },
+              { label: "Contacto", href: "/es/contacto" },
+              { label: "Conoce al Equipo", href: "/es/equipo" },
+              { label: "Fontanería", href: "/es/servicios-fontaneria" },
+              { label: "Inspección Pre-Compra", href: "/es/servicios/inspeccion-precompra" },
+              { label: "Confirmación Fugas Gratis", href: "/es/servicios/confirmacion-fugas-gratis" },
+              { label: "Desatasco Desagües", href: "/es/servicios/desatasco-desagues" },
+              { label: "Política de Privacidad", href: "/es/politica-de-privacidad" },
+              { label: "Todos los Servicios", href: "/es/servicios" },
+            ] : [
+              { label: "About Us", href: "/about" },
+              { label: "Technology", href: "/technology" },
+              { label: "Case Studies", href: "/case-studies" },
+              { label: "Reviews", href: "/reviews" },
+              { label: "Contact", href: "/contact" },
+              { label: "Meet the Team", href: "/meet-the-team" },
+              { label: "Plumbing Services", href: "/plumbing-services" },
+              { label: "Pre-Purchase Survey", href: "/services/pre-purchase-survey" },
+              { label: "Free Leak Confirmation", href: "/services/free-leak-confirmation" },
+              { label: "Drain Unblocking", href: "/services/drain-unblocking" },
+              { label: "Privacy Policy", href: "/privacy-policy" },
+              { label: "All Services", href: "/services" },
+            ]).map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="px-4 py-3 bg-card border border-border rounded-lg text-sm font-medium hover:border-primary hover:text-primary hover:bg-primary/5 transition-all text-center"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Service Areas - Internal Links */}
       <ServiceAreas isSpanish={isSpanish} />
 
