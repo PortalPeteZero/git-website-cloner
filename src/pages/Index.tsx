@@ -6,6 +6,7 @@ import TrustBadgesSection from "@/components/home/TrustBadgesSection";
 import SEOHead from "@/components/seo/SEOHead";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
+import HomepageFAQSchema from "@/components/seo/HomepageFAQSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import LoadingFallback from "@/components/LoadingFallback";
@@ -36,6 +37,7 @@ const Index = () => {
       />
       <LocalBusinessSchema page="home" />
       <ServiceSchema />
+      <HomepageFAQSchema />
       
       {/* Critical above-the-fold content */}
       <ErrorBoundary>
