@@ -1,4 +1,5 @@
-import { useEffect, forwardRef } from 'react';
+import { Helmet } from "react-helmet-async";
+import { forwardRef } from "react";
 
 interface FAQItem {
   question: string;
@@ -11,43 +12,27 @@ interface FAQSchemaProps {
 }
 
 const FAQSchema = forwardRef<HTMLDivElement, FAQSchemaProps>(({ faqs, schemaId = 'faq-schema' }, ref) => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = schemaId;
-    
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
-    };
-    
-    script.textContent = JSON.stringify(faqSchema);
-    
-    // Remove existing schema with same id if present
-    const existing = document.getElementById(schemaId);
-    if (existing) {
-      existing.remove();
-    }
-    
-    document.head.appendChild(script);
-    
-    return () => {
-      const scriptToRemove = document.getElementById(schemaId);
-      if (scriptToRemove) {
-        scriptToRemove.remove();
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
       }
-    };
-  }, [faqs, schemaId]);
-  
-  return <div ref={ref} style={{ display: 'none' }} />;
+    }))
+  };
+
+  return (
+    <>
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
+      <div ref={ref} style={{ display: 'none' }} />
+    </>
+  );
 });
 
 FAQSchema.displayName = "FAQSchema";
