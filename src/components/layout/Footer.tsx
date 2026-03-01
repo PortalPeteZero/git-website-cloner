@@ -30,9 +30,11 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
     { to: getRoute("/services/drain-detection", "/es/servicios/deteccion-desagues"), label: isSpanish ? "Inspección de Desagües" : "Drain & Pipe Surveys" },
     { to: getRoute("/services/leak-repair", "/es/servicios/reparacion-fugas"), label: isSpanish ? "Reparación de Fugas" : "Leak Repair" },
     { to: getRoute("/services/pool-leak-repair", "/es/servicios/reparacion-fugas-piscinas"), label: isSpanish ? "Reparación Fugas Piscinas" : "Pool Leak Repair" },
+    { to: getRoute("/services/drain-unblocking", "/es/servicios/desatasco-desagues"), label: isSpanish ? "Desatasco Desagües" : "Drain Unblocking" },
     { to: getRoute("/services/damp-moisture-mapping", "/es/servicios/mapeo-humedad"), label: isSpanish ? "Mapeo de Humedad" : "Damp Mapping" },
     { to: getRoute("/plumbing-services", "/es/servicios-fontaneria"), label: isSpanish ? "Fontanería" : "Plumbing Services" },
     { to: getRoute("/services/free-leak-confirmation", "/es/servicios/confirmacion-fugas-gratis"), label: isSpanish ? "Confirmación Gratis" : "Free Leak Confirmation" },
+    { to: getRoute("/services/pre-purchase-survey", "/es/servicios/inspeccion-precompra"), label: isSpanish ? "Inspección Pre-Compra" : "Pre-Purchase Survey" },
   ];
 
   return (
