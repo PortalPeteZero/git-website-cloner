@@ -585,7 +585,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Contador de agua corriendo sin usar grifos", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
         ],
-        seo: { title: "Detección Fugas Tinajo | Centro-Oeste Lanzarote | Canary Detect", description: "Detección profesional de fugas en Tinajo. Fincas agrícolas, aljibes, riego subterráneo. Expertos rurales. +34 711 051 071", keywords: "detección fugas Tinajo, fugas agua Tinajo Lanzarote, fugas riego finca, fontanero Tinajo, fugas aljibe" }
+        seo: { title: "Detección Fugas Tinajo | Oeste Lanzarote | Canary Detect", description: "Detección profesional de fugas en Tinajo. Fincas agrícolas, aljibes, riego subterráneo. Expertos rurales. +34 711 051 071", keywords: "detección fugas Tinajo, fugas agua Tinajo Lanzarote, fugas riego finca, fontanero Tinajo, fugas aljibe" }
       },
       "haria": {
         name: "Haría",
@@ -1175,7 +1175,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Water meter running with taps off", href: `${blogBasePath}/water-meter-running-when-taps-off` },
       ],
-      seo: { title: "Leak Detection Tinajo | Central-West Lanzarote | Canary Detect", description: "Leak detection Tinajo, Lanzarote. Agricultural fincas, aljibes, irrigation. Rural specialists. Call +34 711 051 071", keywords: "leak detection Tinajo, water leak Tinajo Lanzarote, irrigation finca leak, plumber Tinajo, aljibe leak" }
+      seo: { title: "Leak Detection Tinajo | West Lanzarote | Canary Detect", description: "Leak detection Tinajo, Lanzarote. Agricultural fincas, aljibes, irrigation. Rural specialists. Call +34 711 051 071", keywords: "leak detection Tinajo, water leak Tinajo Lanzarote, irrigation finca leak, plumber Tinajo, aljibe leak" }
     },
     "haria": {
       name: "Haría",
