@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import FAQSchema from "@/components/seo/FAQSchema";
+
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const FAQSection = forwardRef<HTMLElement>((_, ref) => {
@@ -112,7 +112,7 @@ const FAQSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={ref} className="py-12 md:py-16 bg-background section-divider">
-      <FAQSchema faqs={faqs} schemaId="faq-schema-general" />
+      
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div>

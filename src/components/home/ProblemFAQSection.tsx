@@ -7,7 +7,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import FAQSchema from "@/components/seo/FAQSchema";
 import { HelpCircle, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -71,7 +70,7 @@ const ProblemFAQSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={ref} className="py-12 md:py-16 bg-muted/50 section-pattern section-divider">
-      <FAQSchema faqs={problemFaqs} schemaId="faq-schema-problems" />
+      
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* Left Column - Title and CTA */}
