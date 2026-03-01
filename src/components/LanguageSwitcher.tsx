@@ -1,6 +1,7 @@
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { getEquivalentRoute } from '@/i18n/routes';
+import { Link } from 'react-router-dom';
 
 interface LanguageSwitcherProps {
   variant?: 'default' | 'mobile' | 'compact' | 'dark';
@@ -8,15 +9,13 @@ interface LanguageSwitcherProps {
 
 const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
   const { language, setLanguage } = useLanguage();
-  const navigate = useNavigate();
   const location = useLocation();
 
-  const handleLanguageChange = (newLang: 'en' | 'es') => {
-    if (newLang === language) return;
-    
+  const enPath = getEquivalentRoute(location.pathname, 'en');
+  const esPath = getEquivalentRoute(location.pathname, 'es');
+
+  const handleClick = (newLang: 'en' | 'es') => {
     setLanguage(newLang);
-    const newPath = getEquivalentRoute(location.pathname, newLang);
-    navigate(newPath);
   };
 
   if (variant === 'mobile') {
@@ -24,8 +23,9 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
       <div className="flex items-center gap-3 px-4 py-3 border-t border-border/50">
         <span className="text-sm text-muted-foreground">Language:</span>
         <div className="flex gap-2">
-          <button
-            onClick={() => handleLanguageChange('en')}
+          <Link
+            to={enPath}
+            onClick={() => handleClick('en')}
             className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
               language === 'en'
                 ? 'bg-primary text-primary-foreground shadow-md'
@@ -33,9 +33,10 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
             }`}
           >
             English
-          </button>
-          <button
-            onClick={() => handleLanguageChange('es')}
+          </Link>
+          <Link
+            to={esPath}
+            onClick={() => handleClick('es')}
             className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
               language === 'es'
                 ? 'bg-primary text-primary-foreground shadow-md'
@@ -43,7 +44,7 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
             }`}
           >
             Español
-          </button>
+          </Link>
         </div>
       </div>
     );
@@ -52,8 +53,9 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
   if (variant === 'dark') {
     return (
       <div className="flex items-center gap-0.5 border border-white/20 rounded-md p-0.5 bg-white/5">
-        <button
-          onClick={() => handleLanguageChange('en')}
+        <Link
+          to={enPath}
+          onClick={() => handleClick('en')}
           className={`px-2 py-1 rounded font-medium text-xs transition-all ${
             language === 'en'
               ? 'bg-primary text-white'
@@ -62,9 +64,10 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
           title="English"
         >
           EN
-        </button>
-        <button
-          onClick={() => handleLanguageChange('es')}
+        </Link>
+        <Link
+          to={esPath}
+          onClick={() => handleClick('es')}
           className={`px-2 py-1 rounded font-medium text-xs transition-all ${
             language === 'es'
               ? 'bg-primary text-white'
@@ -73,7 +76,7 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
           title="Español"
         >
           ES
-        </button>
+        </Link>
       </div>
     );
   }
@@ -81,8 +84,9 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
   if (variant === 'compact') {
     return (
       <div className="flex items-center border border-border/50 rounded-md overflow-hidden bg-background/50">
-        <button
-          onClick={() => handleLanguageChange('en')}
+        <Link
+          to={enPath}
+          onClick={() => handleClick('en')}
           className={`px-2 py-1 text-xs font-medium transition-all ${
             language === 'en'
               ? 'bg-primary text-primary-foreground'
@@ -91,10 +95,11 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
           title="English"
         >
           EN
-        </button>
+        </Link>
         <div className="w-px h-4 bg-border" />
-        <button
-          onClick={() => handleLanguageChange('es')}
+        <Link
+          to={esPath}
+          onClick={() => handleClick('es')}
           className={`px-2 py-1 text-xs font-medium transition-all ${
             language === 'es'
               ? 'bg-primary text-primary-foreground'
@@ -103,15 +108,16 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
           title="Español"
         >
           ES
-        </button>
+        </Link>
       </div>
     );
   }
 
   return (
     <div className="flex items-center gap-1 border-2 border-border rounded-lg p-0.5 bg-muted/50">
-      <button
-        onClick={() => handleLanguageChange('en')}
+      <Link
+        to={enPath}
+        onClick={() => handleClick('en')}
         className={`px-2.5 py-1 rounded-md font-medium text-xs transition-all ${
           language === 'en'
             ? 'bg-primary text-primary-foreground shadow-sm'
@@ -120,9 +126,10 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
         title="English"
       >
         EN
-      </button>
-      <button
-        onClick={() => handleLanguageChange('es')}
+      </Link>
+      <Link
+        to={esPath}
+        onClick={() => handleClick('es')}
         className={`px-2.5 py-1 rounded-md font-medium text-xs transition-all ${
           language === 'es'
             ? 'bg-primary text-primary-foreground shadow-sm'
@@ -131,7 +138,7 @@ const LanguageSwitcher = ({ variant = 'default' }: LanguageSwitcherProps) => {
         title="Español"
       >
         ES
-      </button>
+      </Link>
     </div>
   );
 };

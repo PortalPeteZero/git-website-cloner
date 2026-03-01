@@ -58,7 +58,7 @@ const normalizeInlineText = (value: string) => value.replace(/\s+/g, " ").trim()
 const Blog = () => {
   const { isSpanish } = useTranslation();
   const [dbPosts, setDbPosts] = useState<CombinedPost[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [dbLoading, setDbLoading] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const heroSlides = getHeroSlides(isSpanish);
@@ -93,7 +93,7 @@ const Blog = () => {
           isDatabase: true,
         })));
       }
-      setLoading(false);
+      setDbLoading(false);
     };
 
     fetchDbPosts();
@@ -293,7 +293,7 @@ const Blog = () => {
             {uiText.allArticles}
           </h2>
           
-          {loading ? (
+          {dbLoading && allPosts.length === 0 ? (
             <div className="flex justify-center py-12">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
             </div>
