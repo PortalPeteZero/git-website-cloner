@@ -136,9 +136,22 @@ const App = () => (
               <Route path="/plumbing-services" element={<PlumbingServices />} />
               <Route path="/plumbing-services/:slug" element={<PlumbingServiceDetail />} />
               
-              {/* Spanish URL Redirects */}
+              {/* Spanish URL Redirects and legacy i18n fallbacks */}
               <Route path="/es/services" element={<Navigate to="/es/servicios" replace />} />
               <Route path="/es/services/" element={<Navigate to="/es/servicios" replace />} />
+              <Route path="/equipo" element={<Navigate to="/es/equipo" replace />} />
+              <Route path="/ubicaciones" element={<Navigate to="/es/ubicaciones" replace />} />
+              <Route path="/politica-de-privacidad" element={<Navigate to="/es/politica-de-privacidad" replace />} />
+              <Route path="/es/privacy-policy" element={<Navigate to="/es/politica-de-privacidad" replace />} />
+              <Route path="/es/servicios/desbloqueo-desagues" element={<Navigate to="/es/servicios/desatasco-desagues" replace />} />
+              <Route path="/es/servicios/deteccion-fugas-piscina" element={<Navigate to="/es/servicios/deteccion-fugas-piscinas" replace />} />
+              <Route path="/es/servicios/reparacion-fugas-piscina" element={<Navigate to="/es/servicios/reparacion-fugas-piscinas" replace />} />
+              <Route path="/blog/lanzarote-water-supply-guide" element={<Navigate to="/blog/master-your-lanzarote-water-system" replace />} />
+              <Route path="/es/blog/guia-suministro-agua-lanzarote" element={<Navigate to="/es/blog/domina-tu-sistema-de-agua-lanzarote" replace />} />
+              <Route path="/locations/tiagua" element={<Navigate to="/locations/tinajo" replace />} />
+              <Route path="/locations/mancha-blanca" element={<Navigate to="/locations/tinajo" replace />} />
+              <Route path="/es/ubicaciones/tiagua" element={<Navigate to="/es/ubicaciones/tinajo" replace />} />
+              <Route path="/es/ubicaciones/mancha-blanca" element={<Navigate to="/es/ubicaciones/tinajo" replace />} />
               
               {/* Fontanero location pages */}
               {["arrecife","playa-blanca","puerto-del-carmen","costa-teguise","yaiza","tias","teguise","san-bartolome","haria","tinajo"].map(loc => (
