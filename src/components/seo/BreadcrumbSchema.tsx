@@ -25,7 +25,7 @@ const BreadcrumbSchema = ({ items }: BreadcrumbSchemaProps) => {
 
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+      <script id="schema-breadcrumb" type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
     </Helmet>
   );
 };

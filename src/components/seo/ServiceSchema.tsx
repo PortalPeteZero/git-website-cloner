@@ -79,7 +79,7 @@ export default function ServiceSchema() {
 
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+      <script id="schema-service" type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
     </Helmet>
   );
 }

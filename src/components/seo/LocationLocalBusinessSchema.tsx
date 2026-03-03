@@ -122,7 +122,7 @@ const LocationLocalBusinessSchema = ({
 
   return (
     <Helmet>
-      <script type="application/ld+json">
+      <script id={`schema-local-business-${locationName.toLowerCase().replace(/\s+/g, '-')}`} type="application/ld+json">
         {JSON.stringify(schema)}
       </script>
     </Helmet>

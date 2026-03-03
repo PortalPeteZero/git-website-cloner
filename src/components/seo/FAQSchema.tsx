@@ -28,7 +28,7 @@ const FAQSchema = forwardRef<HTMLDivElement, FAQSchemaProps>(({ faqs, schemaId =
   return (
     <>
       <Helmet>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script id={`schema-${schemaId}`} type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div ref={ref} style={{ display: 'none' }} />
     </>
