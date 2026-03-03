@@ -44,6 +44,8 @@ const ServiceCard = ({ title, description, icon: Icon, href, images = [], index 
               src={images[currentImageIndex]}
               alt={`${title} ${currentImageIndex + 1}`}
               className="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500 transition-opacity"
+              width={640}
+              height={400}
               loading="lazy"
               decoding="async"
             />
