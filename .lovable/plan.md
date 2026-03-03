@@ -1,63 +1,42 @@
 
 
-## SEO Crawl Issues - Root Cause Analysis and Fix Plan
+## Assessment of Manus Performance Suggestions
 
-### Critical Bug Found: Double `/es/es/` Prefix
+Here's my evaluation of each suggestion against what's already in the codebase:
 
-The `getEquivalentRoute()` function in `src/i18n/routes.ts` has a logic flaw. When the current path is already Spanish (e.g., `/es/ubicaciones/teguise`) and `targetLang` is `'es'`, the function falls through all pattern matches and hits the **default fallback** at line 138:
+### 1. Lazy load all route-level components — PARTIALLY DISAGREE
 
-```
-return `/es${currentPath}`;  // → /es/es/ubicaciones/teguise
-```
+Currently, all 20+ page components are **eagerly imported** in `App.tsx` (lines 13-31). The code comment says "All SEO-critical pages loaded eagerly for pre-rendering (lovable.html)".
 
-This generates broken `/es/es/...` links in the **LanguageSwitcher** component (used in header/footer), which the pre-renderer then crawls and indexes. This single bug causes the cascade of: DUPLICATE_TITLE, DUPLICATE_META_DESC, DUPLICATE_BODY, THIN_CONTENT, CANONICAL_MISSING_OR_MISMATCH on ~20+ Spanish pages.
+**The problem with blindly lazy-loading everything:** LovableHTML pre-renders by hitting the live React app. If pages are lazy-loaded, the pre-renderer must wait for the chunk to download before it can capture content. Eager imports guarantee the pre-renderer gets complete HTML on first pass.
 
-### Second Bug: Wrong Spanish Slug for Drain Unblocking
+**What I recommend instead:** Lazy-load pages that are **not SEO-critical** or **rarely visited first** — specifically `CaseStudies`, `Technology`, `Reviews`, `PlumbingServices`, `PlumbingServiceDetail`, `FreeLeakConfirmation`, `PrePurchaseSurvey`, `PrivacyPolicy`, `MeetTheTeam`. Keep the high-traffic SEO pages eager: `Index`, `Services`, `ServiceDetail`, `Blog`, `BlogArticle`, `LocationPage`, `Locations`, `About`, `Contact`. This gives a meaningful bundle reduction without risking pre-render quality.
 
-The Footer and Blog page link to `/es/servicios/desatasco-desagues`, but `routes.ts` defines the Spanish slug as `desbloqueo-desagues`. The `ServiceDetail` component can't resolve `desatasco-desagues` back to the English key `drain-unblocking`, so the page renders as a soft 404.
+### 2. Add explicit width and height to all img elements — AGREE, PARTIALLY DONE
 
-This also causes the `SOFT_404` flag on `/servicios/desatasco-desagues`.
+The hero `<picture>` element (HeroSlider) is missing `width`/`height` on the `<img>` tag. `ServiceCard` images also lack explicit dimensions. These should be added. This is a straightforward fix across a handful of components.
 
----
+### 3. Add loading="lazy" to below-the-fold images — ALREADY DONE
 
-### Fix 1: `getEquivalentRoute()` — handle already-correct paths
+HeroSlider already uses `loading="eager"` + `fetchPriority="high"` on slide 0 and `loading="lazy"` on subsequent slides. ServiceCard uses `loading="lazy"`. This is already implemented correctly.
 
-In `src/i18n/routes.ts`, add an early return at the top of both branches: if the path already belongs to the target language, return it unchanged.
+### 4. Add preload link for LCP hero image in index.html — DISAGREE
 
-For `targetLang === 'es'`:
-- If `currentPath` already starts with `/es`, check reverse maps for a match. If no match, return `currentPath` as-is (it's already Spanish).
+The code comment in `index.html` (line 41-44) explicitly explains why this was removed: **Vite transforms image paths at build time**, so a static `<link rel="preload" href="/path-to-hero.jpg">` in `index.html` will point to the wrong URL. The current approach using eager `import` + `fetchPriority="high"` + `decoding="sync"` is the correct SPA solution.
 
-For `targetLang === 'en'`:
-- Already handles this via the `/es` prefix removal.
+### 5. Defer non-critical third-party scripts — NOT APPLICABLE
 
-Specifically, add this at the start of the `targetLang === 'es'` block:
-```typescript
-if (currentPath.startsWith('/es')) {
-  return currentPath; // Already a Spanish path
-}
-```
-
-### Fix 2: Align drain-unblocking Spanish slug
-
-Update `serviceSlugMap` in `routes.ts` to use `desatasco-desagues` instead of `desbloqueo-desagues`, matching what the Footer and Blog already link to. Also update `routeMap` entry for consistency.
-
-### Fix 3: SLOW_SERVER_RESPONSE
-
-These are pre-renderer cache issues. No code fix needed — resolved by publishing and triggering a re-render.
-
-### Fix 4: KEYWORD_CANNIBALIZATION on `/es/ubicaciones` and `/es/servicios`
-
-These are content-level issues that may need meta title/description differentiation, but should be reviewed after the routing fixes are deployed and re-crawled.
+There are zero third-party scripts in `index.html`. Only the Vite module script exists. Nothing to defer.
 
 ---
 
-### Summary of Changes
+### Plan: What I will actually change
 
-| File | Change |
-|------|--------|
-| `src/i18n/routes.ts` | Add early return for already-Spanish paths in `getEquivalentRoute()`. Change `desbloqueo-desagues` → `desatasco-desagues` in slug maps and route map. |
+| Change | File(s) |
+|--------|---------|
+| Lazy-load 9 low-traffic page components | `src/App.tsx` |
+| Add `width`/`height` to hero `<img>` | `src/components/home/HeroSlider.tsx` |
+| Add `width`/`height` to ServiceCard `<img>` | `src/components/home/ServiceCard.tsx` |
 
-### Impact
-
-This single routing fix resolves the `/es/es/` double-prefix issue affecting ~20+ Spanish pages, eliminating DUPLICATE_TITLE, DUPLICATE_META_DESC, DUPLICATE_BODY, THIN_CONTENT, and CANONICAL_MISSING_OR_MISMATCH errors across the board. The slug fix resolves the SOFT_404 on the drain unblocking page.
+These changes target the real performance bottlenecks (bundle size and CLS) without breaking pre-rendering or the existing image strategy.
 
