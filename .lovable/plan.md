@@ -1,39 +1,63 @@
 
-### Analysis of the Issue
-The SEO audit reported a title length of 71 characters for `/locations/tahiche`. In the current code, the title is 43 characters. The discrepancy likely comes from a suffix being appended during the build/pre-rendering process or a previous version of the site being indexed. 
 
-To resolve this and follow best practices, we will optimize the titles to be more descriptive while staying strictly under the 60-character limit.
+## SEO Crawl Issues - Root Cause Analysis and Fix Plan
 
-### Proposed Changes
+### Critical Bug Found: Double `/es/es/` Prefix
 
-#### 1. Optimize Tahiche Titles
-I will update the SEO titles for Tahiche in `src/data/locationsData.ts` to include the brand name and more descriptive keywords.
-*   **New English Title:** `Leak Detection Tahiche | Central Lanzarote | Canary Detect` (59 characters)
-*   **New Spanish Title:** `Detección Fugas Tahiche | Centro Lanzarote | Canary Detect` (60 characters)
+The `getEquivalentRoute()` function in `src/i18n/routes.ts` has a logic flaw. When the current path is already Spanish (e.g., `/es/ubicaciones/teguise`) and `targetLang` is `'es'`, the function falls through all pattern matches and hits the **default fallback** at line 138:
 
-#### 2. Proactive Optimization for Other Locations
-To prevent similar issues on other location pages, I will also optimize the following entries in `src/data/locationsData.ts`:
+```
+return `/es${currentPath}`;  // → /es/es/ubicaciones/teguise
+```
 
-*   **Guatiza:**
-    *   EN: `Leak Detection Guatiza | Northeast Lanzarote | Canary Detect` (59 characters)
-    *   ES: `Detección Fugas Guatiza | Noreste Lanzarote | Canary Detect` (59 characters)
-*   **La Santa:**
-    *   EN: `Leak Detection La Santa | Coastal Lanzarote | Canary Detect` (58 characters)
-    *   ES: `Detección Fugas La Santa | Costa Lanzarote | Canary Detect` (58 characters)
-*   **Tinajo:**
-    *   EN: `Leak Detection Tinajo | Central-West Lanzarote | Canary Detect` (60 characters)
-    *   ES: `Detección Fugas Tinajo | Centro-Oeste Lanzarote | Canary Detect` (60 characters)
-*   **Las Breñas:**
-    *   EN: `Leak Detection Las Breñas | South Lanzarote | Canary Detect` (58 characters)
-    *   ES: `Detección Fugas Las Breñas | Sur Lanzarote | Canary Detect` (58 characters)
-*   **Uga:**
-    *   EN: `Leak Detection Uga | La Geria Wine Region | Canary Detect` (55 characters)
-    *   ES: `Detección Fugas Uga | Región de La Geria | Canary Detect` (56 characters)
+This generates broken `/es/es/...` links in the **LanguageSwitcher** component (used in header/footer), which the pre-renderer then crawls and indexes. This single bug causes the cascade of: DUPLICATE_TITLE, DUPLICATE_META_DESC, DUPLICATE_BODY, THIN_CONTENT, CANONICAL_MISSING_OR_MISMATCH on ~20+ Spanish pages.
 
-### Technical Details
-*   **File to modify:** `src/data/locationsData.ts`
-*   **Standardized Format:** `[Service] [Location] | [Sub-Region] | Canary Detect`
-*   **Character Limit:** All titles will be kept at or below 60 characters to satisfy major search engine requirements.
+### Second Bug: Wrong Spanish Slug for Drain Unblocking
 
-### After Implementation
-After publishing these changes, the LovableHTML pre-renderer will re-cache the pages with the updated metadata, resolving the reported length issues.
+The Footer and Blog page link to `/es/servicios/desatasco-desagues`, but `routes.ts` defines the Spanish slug as `desbloqueo-desagues`. The `ServiceDetail` component can't resolve `desatasco-desagues` back to the English key `drain-unblocking`, so the page renders as a soft 404.
+
+This also causes the `SOFT_404` flag on `/servicios/desatasco-desagues`.
+
+---
+
+### Fix 1: `getEquivalentRoute()` — handle already-correct paths
+
+In `src/i18n/routes.ts`, add an early return at the top of both branches: if the path already belongs to the target language, return it unchanged.
+
+For `targetLang === 'es'`:
+- If `currentPath` already starts with `/es`, check reverse maps for a match. If no match, return `currentPath` as-is (it's already Spanish).
+
+For `targetLang === 'en'`:
+- Already handles this via the `/es` prefix removal.
+
+Specifically, add this at the start of the `targetLang === 'es'` block:
+```typescript
+if (currentPath.startsWith('/es')) {
+  return currentPath; // Already a Spanish path
+}
+```
+
+### Fix 2: Align drain-unblocking Spanish slug
+
+Update `serviceSlugMap` in `routes.ts` to use `desatasco-desagues` instead of `desbloqueo-desagues`, matching what the Footer and Blog already link to. Also update `routeMap` entry for consistency.
+
+### Fix 3: SLOW_SERVER_RESPONSE
+
+These are pre-renderer cache issues. No code fix needed — resolved by publishing and triggering a re-render.
+
+### Fix 4: KEYWORD_CANNIBALIZATION on `/es/ubicaciones` and `/es/servicios`
+
+These are content-level issues that may need meta title/description differentiation, but should be reviewed after the routing fixes are deployed and re-crawled.
+
+---
+
+### Summary of Changes
+
+| File | Change |
+|------|--------|
+| `src/i18n/routes.ts` | Add early return for already-Spanish paths in `getEquivalentRoute()`. Change `desbloqueo-desagues` → `desatasco-desagues` in slug maps and route map. |
+
+### Impact
+
+This single routing fix resolves the `/es/es/` double-prefix issue affecting ~20+ Spanish pages, eliminating DUPLICATE_TITLE, DUPLICATE_META_DESC, DUPLICATE_BODY, THIN_CONTENT, and CANONICAL_MISSING_OR_MISMATCH errors across the board. The slug fix resolves the SOFT_404 on the drain unblocking page.
+
