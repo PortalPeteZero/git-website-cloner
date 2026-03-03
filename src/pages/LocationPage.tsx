@@ -22,6 +22,7 @@ const LocationPage = () => {
   const locationsData = getLocationsData(isSpanish);
   const uiText = getLocationUIText(isSpanish);
   const locationData = location ? locationsData[location] : null;
+  const availableLocationSlugs = new Set(Object.keys(locationsData));
 
   const canonicalUrl = isSpanish 
     ? `https://canary-detect.com/es/ubicaciones/${location}`
@@ -296,11 +297,22 @@ const LocationPage = () => {
             <h2 className="font-heading text-2xl md:text-3xl font-bold mt-2 mb-4">{uiText.sections.nearbyAreas}</h2>
             <p className="text-muted-foreground mb-8">{uiText.sections.nearbyDescription(locationData.name)}</p>
             <div className="flex flex-wrap justify-center gap-3">
-              {locationData.nearbyAreas.map((area) => {
+              {locationData.nearbyAreas.map((area, idx) => {
                 const areaSlug = area.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
                 const areaPath = `${getLocationsBasePath(isSpanish)}/${areaSlug}`;
+                const isKnownLocation = availableLocationSlugs.has(areaSlug);
+                const baseClasses = "bg-muted px-4 py-2 rounded-full text-sm font-medium";
+
+                if (!isKnownLocation) {
+                  return (
+                    <span key={`${area}-${idx}`} className={`${baseClasses} text-muted-foreground cursor-default`}>
+                      {area}
+                    </span>
+                  );
+                }
+
                 return (
-                  <Link key={area} to={areaPath} className="bg-muted px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/10 hover:text-primary transition-colors">
+                  <Link key={area} to={areaPath} className={`${baseClasses} hover:bg-primary/10 hover:text-primary transition-colors`}>
                     {area}
                   </Link>
                 );

@@ -232,10 +232,10 @@ const Header = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link 
-                            to={getRoute("/services/drain-unblocking", "/es/servicios/desbloqueo-desagues")} 
+                            to={getRoute("/services/drain-unblocking", "/es/servicios/desatasco-desagues")} 
                             className="block cursor-pointer font-medium hover:bg-primary/10 hover:text-primary rounded-lg transition-colors py-2.5 px-3"
                           >
-                            {isSpanish ? "Desbloqueo de Desagües" : "Drain Unblocking"}
+                            {isSpanish ? "Desatasco de Desagües" : "Drain Unblocking"}
                           </Link>
                         </NavigationMenuLink>
                       </li>
@@ -445,12 +445,12 @@ const Header = () => {
                     {isSpanish ? "Inspección de Desagües" : "Drain & Pipe Surveys"}
                   </Link>
                   <Link 
-                    to={getRoute("/services/drain-unblocking", "/es/servicios/desbloqueo-desagues")} 
+                    to={getRoute("/services/drain-unblocking", "/es/servicios/desatasco-desagues")} 
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-2 px-4 py-2.5 text-foreground/80 font-medium hover:text-primary hover:bg-primary/5 rounded-lg transition-all"
                   >
                     <ChevronRight className="h-4 w-4 text-primary/60" />
-                    {isSpanish ? "Desbloqueo de Desagües" : "Drain Unblocking"}
+                    {isSpanish ? "Desatasco de Desagües" : "Drain Unblocking"}
                   </Link>
                   <Link 
                     to={getRoute("/services/leak-repair", "/es/servicios/reparacion-fugas")} 
