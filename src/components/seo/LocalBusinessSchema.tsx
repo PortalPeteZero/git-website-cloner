@@ -186,7 +186,7 @@ const LocalBusinessSchema = ({ page = "home" }: LocalBusinessSchemaProps) => {
 
   return (
     <Helmet>
-      <script type="application/ld+json">
+      <script id="schema-local-business" type="application/ld+json">
         {JSON.stringify(schema)}
       </script>
     </Helmet>

@@ -154,7 +154,7 @@ const HomepageFAQSchema = () => {
 
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      <script id="schema-homepage-faq" type="application/ld+json">{JSON.stringify(faqSchema)}</script>
     </Helmet>
   );
 };
