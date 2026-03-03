@@ -8,7 +8,7 @@ export const routeMap: Record<string, string> = {
   '/services/water-pipe-leak-detection': '/es/servicios/deteccion-fugas-tuberias',
   '/services/pool-leak-detection': '/es/servicios/deteccion-fugas-piscinas',
   '/services/leak-repair': '/es/servicios/reparacion-fugas',
-  '/services/drain-unblocking': '/es/servicios/desbloqueo-desagues',
+  '/services/drain-unblocking': '/es/servicios/desatasco-desagues',
   '/services/pool-leak-repair': '/es/servicios/reparacion-fugas-piscinas',
   '/services/free-leak-confirmation': '/es/servicios/confirmacion-fugas-gratis',
   '/services/pre-purchase-survey': '/es/servicios/inspeccion-precompra',
@@ -41,7 +41,7 @@ export const serviceSlugMap: Record<string, string> = {
   'water-pipe-leak-detection': 'deteccion-fugas-tuberias',
   'pool-leak-detection': 'deteccion-fugas-piscinas',
   'leak-repair': 'reparacion-fugas',
-  'drain-unblocking': 'desbloqueo-desagues',
+  'drain-unblocking': 'desatasco-desagues',
   'pool-leak-repair': 'reparacion-fugas-piscinas',
   'free-leak-confirmation': 'confirmacion-fugas-gratis',
   'pre-purchase-survey': 'inspeccion-precompra',
@@ -103,6 +103,11 @@ export const getSpanishSlug = (slug: string): string => {
 // Get the equivalent route in the target language
 export const getEquivalentRoute = (currentPath: string, targetLang: 'en' | 'es'): string => {
   if (targetLang === 'es') {
+    // Already a Spanish path — return as-is to prevent /es/es/ double-prefix
+    if (currentPath.startsWith('/es')) {
+      return currentPath;
+    }
+    
     // Check direct match first
     if (routeMap[currentPath]) return routeMap[currentPath];
     
