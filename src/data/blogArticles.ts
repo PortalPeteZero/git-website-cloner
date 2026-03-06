@@ -3110,7 +3110,7 @@ Un contador de agua girando es tu propiedad diciéndote que algo está mal. No l
     `
   },
   {
-    id: 4,
+    id: 5,
     slug: "paredes-humedas-causas-soluciones",
     title: "Paredes Húmedas en Lanzarote: Causas, Detección y Soluciones",
     excerpt: "Las paredes húmedas no son solo antiestéticas – indican intrusión de agua que necesita ser tratada. Aprende las causas comunes y cómo solucionarlas.",
