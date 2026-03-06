@@ -64,6 +64,9 @@ export const BLOG_IMAGES = {
   propertyPipeDetective: propertyPipeDetectiveImg,
   propertyMeterSpinning: propertyMeterSpinningImg,
   propertyTankInspection: propertyTankInspectionImg,
+  roSystemHero: roSystemHeroImg,
+  roSystemHissing: roSystemHissingImg,
+  roSystemMeterCheck: roSystemMeterCheckImg,
 };
 
 export interface BlogArticle {
