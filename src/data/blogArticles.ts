@@ -38,6 +38,11 @@ import propertyPipeDetectiveImg from "@/assets/blog/property-pipe-detective.png?
 import propertyMeterSpinningImg from "@/assets/blog/property-meter-spinning.png?w=800";
 import propertyTankInspectionImg from "@/assets/blog/property-tank-inspection.png?w=800";
 
+// Reverse osmosis blog images
+import roSystemHeroImg from "@/assets/blog/ro-system-hero.jpg?w=800";
+import roSystemHissingImg from "@/assets/blog/ro-system-hissing.jpg?w=800";
+import roSystemMeterCheckImg from "@/assets/blog/ro-system-meter-check.jpg?w=800";
+
 // Helper to create image placeholders for markdown content
 export const BLOG_IMAGES = {
   lanzaroteTraditionalHouse: lanzaroteTraditionalHouseImg,
