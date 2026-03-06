@@ -2853,7 +2853,7 @@ Si has probado la prueba del cubo y sospechas una fuga, no esperes. Las fugas de
     `
   },
   {
-    id: 2,
+    id: 3,
     slug: "senales-fuga-agua-subterranea",
     title: "7 Señales de una Fuga de Agua Subterránea: Lo que los Propietarios de Lanzarote Deben Saber",
     excerpt: "Las fugas de agua subterráneas pueden pasar desapercibidas durante meses. Aprende las señales de advertencia y cómo detectar fugas ocultas antes de que causen daños mayores.",
@@ -2990,7 +2990,7 @@ Las fugas de agua subterráneas solo empeoran con el tiempo. Si has notado algun
     `
   },
   {
-    id: 3,
+    id: 4,
     slug: "contador-agua-girando-grifos-cerrados",
     title: "¿El Contador de Agua Gira con los Grifos Cerrados? Esto Es lo que Significa",
     excerpt: "Si tu contador de agua sigue girando con todos los grifos cerrados, probablemente tienes una fuga oculta. Aprende cómo comprobarlo y qué hacer.",
@@ -3110,7 +3110,7 @@ Un contador de agua girando es tu propiedad diciéndote que algo está mal. No l
     `
   },
   {
-    id: 4,
+    id: 5,
     slug: "paredes-humedas-causas-soluciones",
     title: "Paredes Húmedas en Lanzarote: Causas, Detección y Soluciones",
     excerpt: "Las paredes húmedas no son solo antiestéticas – indican intrusión de agua que necesita ser tratada. Aprende las causas comunes y cómo solucionarlas.",
@@ -3271,7 +3271,7 @@ No adivines la causa de tus paredes húmedas – obtén un diagnóstico profesio
     `
   },
   {
-    id: 5,
+    id: 6,
     slug: "imagen-termica-deteccion-fugas-explicada",
     title: "Cómo la Imagen Térmica Encuentra Fugas de Agua Ocultas: Tecnología Explicada",
     excerpt: "Descubre cómo las cámaras de imagen térmica detectan fugas de agua detrás de paredes y bajo suelos sin ningún daño a tu propiedad.",
@@ -3419,7 +3419,7 @@ Si sospechas fugas ocultas en tu propiedad de Lanzarote, la imagen térmica pued
     `
   },
   {
-    id: 6,
+    id: 7,
     slug: "coste-reparacion-fugas-piscina-lanzarote",
     title: "Costes de Reparación de Fugas de Piscina en Lanzarote: Qué Esperar",
     excerpt: "Entiende los costes de detección y reparación de fugas de piscina en Lanzarote. Desde arreglos menores hasta reparaciones mayores, aquí está tu guía completa de precios.",
