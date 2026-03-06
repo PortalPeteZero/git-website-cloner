@@ -43,6 +43,12 @@ import roSystemHeroImg from "@/assets/blog/ro-system-hero.jpg?w=800";
 import roSystemHissingImg from "@/assets/blog/ro-system-hissing.jpg?w=800";
 import roSystemMeterCheckImg from "@/assets/blog/ro-system-meter-check.jpg?w=800";
 
+// Insurance blog images
+import insuranceHeroImg from "@/assets/blog/insurance-hero.jpg?w=800";
+import insuranceRejectedImg from "@/assets/blog/insurance-rejected-claim.jpg?w=800";
+import insuranceThermalImg from "@/assets/blog/insurance-thermal-evidence.jpg?w=800";
+import insuranceApprovedImg from "@/assets/blog/insurance-approved-claim.jpg?w=800";
+
 // Helper to create image placeholders for markdown content
 export const BLOG_IMAGES = {
   lanzaroteTraditionalHouse: lanzaroteTraditionalHouseImg,
