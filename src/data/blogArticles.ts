@@ -3271,7 +3271,7 @@ No adivines la causa de tus paredes húmedas – obtén un diagnóstico profesio
     `
   },
   {
-    id: 5,
+    id: 6,
     slug: "imagen-termica-deteccion-fugas-explicada",
     title: "Cómo la Imagen Térmica Encuentra Fugas de Agua Ocultas: Tecnología Explicada",
     excerpt: "Descubre cómo las cámaras de imagen térmica detectan fugas de agua detrás de paredes y bajo suelos sin ningún daño a tu propiedad.",
