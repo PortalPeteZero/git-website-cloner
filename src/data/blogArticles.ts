@@ -4648,7 +4648,7 @@ Así que, póngase en contacto con Canary Detect sin dudarlo. Antes de pagar por
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Seguros y Reclamaciones",
-    image: leakRepairImg,
+    image: insuranceHeroImg,
     metaTitle: "Informe de Fugas para Seguros | Lanzarote",
     metaDescription: "5 cosas que el seguro de tu hogar en Lanzarote necesita ver en un informe de fugas. Aprueba tu reclamación con la evidencia técnica adecuada de Canary Detect.",
     keywords: "informe fugas seguro Lanzarote, reclamación seguro hogar Lanzarote, informe detección fugas, trace and access Lanzarote, reclamación seguro daños agua, reparación fugas Playa Blanca",
@@ -4657,6 +4657,8 @@ Así que, póngase en contacto con Canary Detect sin dudarlo. Antes de pagar por
 ## 5 Cosas Que el Seguro de Tu Hogar en Lanzarote Necesita Ver en un Informe de Fugas
 
 Encontrar una fuga en tu villa es solo la mitad de la batalla; la segunda mitad es asegurarse de que tu compañía de seguros cubra los costes.
+
+![Reclamación de seguro rechazada junto a una simple factura de fontanero — no es evidencia suficiente](/assets/blog/insurance-rejected-claim.jpg)
 
 Muchos propietarios en Lanzarote se sorprenden al ver sus reclamaciones rechazadas porque proporcionaron una simple factura de fontanero en lugar de un informe técnico certificado. ¿Te ha pasado algo similar?
 
@@ -4678,6 +4680,8 @@ El informe necesita detallar los daños secundarios. Los peritos de seguros busc
 
 ## 4. Evidencia Fotográfica Digital
 
+![Comparación de imagen térmica mostrando humedad oculta detrás de una pared — el tipo de evidencia que necesitan las aseguradoras](/assets/blog/insurance-thermal-evidence.jpg)
+
 Una descripción escrita rara vez es suficiente, y por eso, tu informe debe incluir fotos de alta resolución del área específica, escaneos de [imagen térmica](/es/servicios/mapeo-humedad) que muestren patrones de humedad, o grabaciones CCTV de las condiciones internas de las tuberías.
 
 Esta prueba visual confirma que la fuga está activa y justifica una intervención del seguro.
@@ -4689,6 +4693,8 @@ Un informe profesional concluye con una hoja de ruta precisa para la reparación
 Al identificar el centímetro exacto de la avería, posibilitamos una [reparación quirúrgica de la fuga](/es/servicios/reparacion-fugas), lo que minimiza el pago que la compañía de seguros debe hacer para reparar el suelo o la pared después de la intervención.
 
 ## Empieza Hoy
+
+![Propietaria feliz con una reclamación de seguro aprobada respaldada por un informe profesional de detección de fugas](/assets/blog/insurance-approved-claim.jpg)
 
 Así que, conéctate con Canary Detect y obtén tu [confirmación gratuita de fugas](/es/servicios/confirmacion-fugas-gratis) hoy. Aprovechando nuestra prueba gratuita de confirmación de fugas, puedes obtener los datos concretos que necesitas para iniciar una reclamación de seguro.
 
