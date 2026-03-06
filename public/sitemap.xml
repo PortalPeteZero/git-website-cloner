@@ -477,6 +477,31 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://canary-detect.com/es/blog/comprar-propiedad-lanzarote-inspeccion-fugas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/buying-property-lanzarote-leak-survey"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/comprar-propiedad-lanzarote-inspeccion-fugas"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/blog/informe-fugas-seguro-hogar-lanzarote</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/insurance-leak-report-lanzarote"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/informe-fugas-seguro-hogar-lanzarote"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/blog/osmosis-inversa-factura-agua-alta-lanzarote</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/blog/reverse-osmosis-high-water-bill-lanzarote"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/blog/osmosis-inversa-factura-agua-alta-lanzarote"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Spanish Service Pages -->
   <url>
     <loc>https://canary-detect.com/es/servicios/deteccion-fugas-agua</loc>
