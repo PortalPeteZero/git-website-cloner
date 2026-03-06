@@ -38,6 +38,11 @@ import propertyPipeDetectiveImg from "@/assets/blog/property-pipe-detective.png?
 import propertyMeterSpinningImg from "@/assets/blog/property-meter-spinning.png?w=800";
 import propertyTankInspectionImg from "@/assets/blog/property-tank-inspection.png?w=800";
 
+// Reverse osmosis blog images
+import roSystemHeroImg from "@/assets/blog/ro-system-hero.jpg?w=800";
+import roSystemHissingImg from "@/assets/blog/ro-system-hissing.jpg?w=800";
+import roSystemMeterCheckImg from "@/assets/blog/ro-system-meter-check.jpg?w=800";
+
 // Helper to create image placeholders for markdown content
 export const BLOG_IMAGES = {
   lanzaroteTraditionalHouse: lanzaroteTraditionalHouseImg,
@@ -59,6 +64,9 @@ export const BLOG_IMAGES = {
   propertyPipeDetective: propertyPipeDetectiveImg,
   propertyMeterSpinning: propertyMeterSpinningImg,
   propertyTankInspection: propertyTankInspectionImg,
+  roSystemHero: roSystemHeroImg,
+  roSystemHissing: roSystemHissingImg,
+  roSystemMeterCheck: roSystemMeterCheckImg,
 };
 
 export interface BlogArticle {
@@ -2503,7 +2511,7 @@ So, connect with Canary Detect and get your [free leak confirmation](/services/f
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Water Systems",
-    image: waterMeterImg,
+    image: roSystemHeroImg,
     metaTitle: "Reverse Osmosis High Water Bill Lanzarote",
     metaDescription: "Is your Lanzarote villa's reverse osmosis system wasting water 24/7? Learn the 3 signs of a faulty RO system and how to fix it with Canary Detect.",
     keywords: "reverse osmosis water bill Lanzarote, high water bill Lanzarote, RO system leak, water waste Lanzarote villa, water meter spinning, leak detection Lanzarote",
@@ -2525,6 +2533,8 @@ Because this water goes directly into your villa's drainage system, you will nev
 
 ## 3 Signs Your RO System is Leaking
 
+![Inspecting an under-sink reverse osmosis system with a torch to check for constant water flow](/assets/blog/ro-system-hissing.jpg)
+
 1. **Constant Hissing:** Listen to your kitchen cupboard. A faint, constant running water sound when the tank should be full indicates a bypass.
 2. **Cold Drain Pipes:** The small plastic drain line under your sink should only be cold when the system is actively filling. If it is always cold, water is flowing non-stop.
 3. **The Metre Crawl:** Look at your [water meter](/blog/water-meter-running-when-taps-off) when all taps are off. A slow, steady rotation often points to a filtration issue.
@@ -2538,6 +2548,8 @@ If you are sure your system is leaking, here are the steps to take next:
 Turn off the dedicated cold-water feed valve to your RO system for 20 minutes.
 
 ### Step 2: Check the Metre
+
+![Checking the water meter at a Lanzarote property to confirm a leak](/assets/blog/ro-system-meter-check.jpg)
 
 If the meter stops moving, the RO system is the culprit.
 
@@ -4679,7 +4691,7 @@ Así que, conéctate con Canary Detect y obtén tu [confirmación gratuita de fu
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Sistemas de Agua",
-    image: waterMeterImg,
+    image: roSystemHeroImg,
     metaTitle: "Ósmosis Inversa y Factura de Agua Alta Lanzarote",
     metaDescription: "¿Tu sistema de ósmosis inversa en Lanzarote está desperdiciando agua 24/7? Conoce las 3 señales de un sistema RO defectuoso y cómo solucionarlo con Canary Detect.",
     keywords: "ósmosis inversa factura agua Lanzarote, factura agua alta Lanzarote, fuga sistema RO, desperdicio agua villa Lanzarote, contador agua girando, detección fugas Lanzarote",
@@ -4701,6 +4713,8 @@ Como esta agua va directamente al sistema de drenaje de tu villa, nunca verás u
 
 ## 3 Señales de Que Tu Sistema de OI Tiene una Fuga
 
+![Inspección de un sistema de ósmosis inversa bajo el fregadero con una linterna para comprobar el flujo constante de agua](/assets/blog/ro-system-hissing.jpg)
+
 1. **Silbido Constante:** Escucha en tu armario de cocina. Un sonido débil y constante de agua corriendo cuando el tanque debería estar lleno indica un bypass.
 2. **Tuberías de Drenaje Frías:** La pequeña tubería de drenaje de plástico bajo tu fregadero solo debería estar fría cuando el sistema está llenando activamente. Si siempre está fría, el agua está fluyendo sin parar.
 3. **El Contador Avanza Lentamente:** Mira tu [contador de agua](/es/blog/contador-agua-girando-grifos-cerrados) cuando todos los grifos estén cerrados. Una rotación lenta y constante a menudo apunta a un problema de filtración.
@@ -4714,6 +4728,8 @@ Si estás seguro de que tu sistema tiene una fuga, estos son los pasos a seguir:
 Cierra la válvula de alimentación de agua fría dedicada a tu sistema de OI durante 20 minutos.
 
 ### Paso 2: Comprueba el Contador
+
+![Comprobación del contador de agua en una propiedad de Lanzarote para confirmar una fuga](/assets/blog/ro-system-meter-check.jpg)
 
 Si el contador deja de moverse, el sistema de OI es el culpable.
 
