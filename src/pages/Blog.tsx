@@ -9,16 +9,16 @@ import { getBlogArticles, BlogArticle as StaticBlogArticle } from "@/data/blogAr
 import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getBlogPath } from "@/i18n/routes";
-import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
+import waterLeakImg from "@/assets/services/water-leak-detection.jpg?w=800";
 import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
 import ServiceAreas from "@/components/internal-links/ServiceAreas";
 
 // Hero carousel images
-import heroHqScene from "@/assets/hero/blog-hq-scene.jpg";
-import heroElAtico from "@/assets/hero/blog-el-atico.jpg";
-import heroPoolSpa from "@/assets/hero/blog-pool-spa.jpg";
-import heroTerrace from "@/assets/hero/blog-terrace.jpg";
-import heroVillageSquare from "@/assets/hero/blog-village-square.jpg";
+import heroHqScene from "@/assets/hero/blog-hq-scene.jpg?w=1920";
+import heroElAtico from "@/assets/hero/blog-el-atico.jpg?w=1920";
+import heroPoolSpa from "@/assets/hero/blog-pool-spa.jpg?w=1920";
+import heroTerrace from "@/assets/hero/blog-terrace.jpg?w=1920";
+import heroVillageSquare from "@/assets/hero/blog-village-square.jpg?w=1920";
 
 const getHeroSlides = (isSpanish: boolean) => [
   { image: heroHqScene, alt: isSpanish ? "Canary Detect HQ - Especialistas en detección de fugas" : "Canary Detect HQ - Leak detection specialists" },

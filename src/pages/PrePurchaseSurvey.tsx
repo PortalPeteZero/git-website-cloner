@@ -7,20 +7,20 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import { useTranslation } from "@/i18n/LanguageContext";
 
 // Survey images
-import heroImg from "@/assets/services/survey/hero-pool-survey.jpg";
-import thermalMain from "@/assets/services/survey/thermal-imaging-wall.jpg";
-import thermalSmall1 from "@/assets/services/survey/thermal-small-1.jpg";
-import thermalSmall2 from "@/assets/services/survey/thermal-small-2.jpg";
-import pressureMain from "@/assets/services/survey/pressure-test-gauge.jpg";
-import pressureSmall from "@/assets/services/survey/pressure-test-small.jpg";
-import waterSystemMain from "@/assets/services/survey/water-system-pump.jpg";
-import waterSystemSmall1 from "@/assets/services/survey/water-system-small-1.jpg";
-import waterSystemSmall2 from "@/assets/services/survey/water-system-small-2.jpg";
-import drainMain from "@/assets/services/survey/drain-cctv-camera.jpg";
-import drainSmall from "@/assets/services/survey/drain-small.jpg";
-import poolMain from "@/assets/services/survey/hero-pool-survey.jpg";
-import poolSmall1 from "@/assets/services/survey/pool-survey-small-1.jpg";
-import poolSmall2 from "@/assets/services/survey/pool-survey-small-2.jpg";
+import heroImg from "@/assets/services/survey/hero-pool-survey.jpg?w=1920";
+import thermalMain from "@/assets/services/survey/thermal-imaging-wall.jpg?w=800";
+import thermalSmall1 from "@/assets/services/survey/thermal-small-1.jpg?w=600";
+import thermalSmall2 from "@/assets/services/survey/thermal-small-2.jpg?w=600";
+import pressureMain from "@/assets/services/survey/pressure-test-gauge.jpg?w=800";
+import pressureSmall from "@/assets/services/survey/pressure-test-small.jpg?w=600";
+import waterSystemMain from "@/assets/services/survey/water-system-pump.jpg?w=800";
+import waterSystemSmall1 from "@/assets/services/survey/water-system-small-1.jpg?w=600";
+import waterSystemSmall2 from "@/assets/services/survey/water-system-small-2.jpg?w=600";
+import drainMain from "@/assets/services/survey/drain-cctv-camera.jpg?w=800";
+import drainSmall from "@/assets/services/survey/drain-small.jpg?w=600";
+import poolMain from "@/assets/services/survey/hero-pool-survey.jpg?w=800";
+import poolSmall1 from "@/assets/services/survey/pool-survey-small-1.jpg?w=600";
+import poolSmall2 from "@/assets/services/survey/pool-survey-small-2.jpg?w=600";
 
 interface ModuleData {
   id: string;

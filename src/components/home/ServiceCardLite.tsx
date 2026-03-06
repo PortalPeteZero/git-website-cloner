@@ -30,6 +30,8 @@ const ServiceCardLite = forwardRef<HTMLDivElement, ServiceCardLiteProps>(
               className="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
               decoding="async"
+              width={640}
+              height={400}
             />
 
             <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/30 to-transparent pointer-events-none" />

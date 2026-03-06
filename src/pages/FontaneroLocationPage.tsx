@@ -7,7 +7,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { fontaneroLocations } from "@/data/fontaneroLocationsData";
 import { Phone, Wrench, ShieldCheck, Clock, Droplets, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import servicesHero from "@/assets/hero/services-hero.jpg";
+import servicesHero from "@/assets/hero/services-hero.jpg?w=1920";
 
 const FontaneroLocationPage = () => {
   const { pathname } = useLocation();

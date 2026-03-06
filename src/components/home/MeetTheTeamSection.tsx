@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 // Import team images
-import peteDaveMain from "@/assets/team/pete-dave-main.jpg";
-import peteDaveSuits from "@/assets/team/pete-dave-suits.png";
-import pantoMatching from "@/assets/team/panto-matching.jpg";
-import daveUnicorn from "@/assets/team/dave-unicorn.jpg";
-import pantoGreen from "@/assets/team/panto-green.jpg";
-import pantoGroup from "@/assets/team/panto-group.jpg";
+import peteDaveMain from "@/assets/team/pete-dave-main.jpg?w=800";
+import peteDaveSuits from "@/assets/team/pete-dave-suits.png?w=800";
+import pantoMatching from "@/assets/team/panto-matching.jpg?w=600";
+import daveUnicorn from "@/assets/team/dave-unicorn.jpg?w=600";
+import pantoGreen from "@/assets/team/panto-green.jpg?w=600";
+import pantoGroup from "@/assets/team/panto-group.jpg?w=600";
 
 const MeetTheTeamSection = () => {
   const { isSpanish } = useLanguage();

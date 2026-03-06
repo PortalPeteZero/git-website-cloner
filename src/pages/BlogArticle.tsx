@@ -14,7 +14,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getBlogPath, getHomePath } from "@/i18n/routes";
-import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
+import waterLeakImg from "@/assets/services/water-leak-detection.jpg?w=800";
 import VideoPlayer from "@/components/blog/VideoPlayer";
 import BlogServicesCallout from "@/components/internal-links/BlogServicesCallout";
 

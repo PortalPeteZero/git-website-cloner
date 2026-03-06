@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-import poolLeak1 from "@/assets/case-studies/pool-leak-1.jpg";
-import photo1 from "@/assets/gallery/photo-1.jpg";
-import photo2 from "@/assets/gallery/photo-2.jpg";
+import poolLeak1 from "@/assets/case-studies/pool-leak-1.jpg?w=800";
+import photo1 from "@/assets/gallery/photo-1.jpg?w=800";
+import photo2 from "@/assets/gallery/photo-2.jpg?w=800";
 
 const CaseStudiesPreview = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useLanguage();
@@ -93,6 +93,8 @@ const CaseStudiesPreview = forwardRef<HTMLElement>((_, ref) => {
                   alt={study.title}
                   loading="lazy"
                   decoding="async"
+                  width={640}
+                  height={360}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
