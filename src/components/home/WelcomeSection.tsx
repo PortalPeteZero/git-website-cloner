@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import welcomeImg from "@/assets/welcome.jpg";
+import welcomeImg from "@/assets/welcome.jpg?w=1200";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const WelcomeSection = () => {
