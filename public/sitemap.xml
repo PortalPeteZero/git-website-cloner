@@ -882,4 +882,234 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Additional Spanish Location Pages -->
+  <url>
+    <loc>https://canary-detect.com/es/ubicaciones/puerto-calero</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/locations/puerto-calero"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/ubicaciones/puerto-calero"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/ubicaciones/femes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/locations/femes"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/ubicaciones/femes"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/ubicaciones/las-brenas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/locations/las-brenas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/ubicaciones/las-brenas"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/ubicaciones/uga</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/locations/uga"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/ubicaciones/uga"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/ubicaciones/tahiche</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/locations/tahiche"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/ubicaciones/tahiche"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/ubicaciones/guatiza</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/locations/guatiza"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/ubicaciones/guatiza"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/ubicaciones/la-santa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/locations/la-santa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/ubicaciones/la-santa"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/ubicaciones/tinajo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/locations/tinajo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/ubicaciones/tinajo"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/ubicaciones/haria</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/locations/haria"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/ubicaciones/haria"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Spanish Utility Pages -->
+  <url>
+    <loc>https://canary-detect.com/es/ubicaciones</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/locations"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/ubicaciones"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/equipo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/meet-the-team"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/equipo"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/resenas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/reviews"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/resenas"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/politica-de-privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/politica-de-privacidad"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Spanish Service: Water Pipe Leak Detection -->
+  <url>
+    <loc>https://canary-detect.com/es/servicios/deteccion-fugas-tuberias</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/services/water-pipe-leak-detection"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios/deteccion-fugas-tuberias"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Spanish Plumbing Service Detail Pages -->
+  <url>
+    <loc>https://canary-detect.com/es/servicios-fontaneria/reparaciones-generales</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/plumbing-services/general-repairs"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios-fontaneria/reparaciones-generales"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/servicios-fontaneria/servicios-calderas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/plumbing-services/boiler-services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios-fontaneria/servicios-calderas"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/servicios-fontaneria/mejoras-sistema</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/plumbing-services/system-upgrades"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios-fontaneria/mejoras-sistema"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/servicios-fontaneria/mejoras-colectores</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/plumbing-services/manifold-upgrades"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios-fontaneria/mejoras-colectores"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/servicios-fontaneria/fontaneria-piscinas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/plumbing-services/pool-plumbing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios-fontaneria/fontaneria-piscinas"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/servicios-fontaneria/reparaciones-piscinas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://canary-detect.com/plumbing-services/pool-repairs"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://canary-detect.com/es/servicios-fontaneria/reparaciones-piscinas"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Spanish Fontanero Location Pages -->
+  <url>
+    <loc>https://canary-detect.com/es/fontanero-arrecife</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/fontanero-playa-blanca</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/fontanero-puerto-del-carmen</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/fontanero-costa-teguise</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/fontanero-yaiza</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/fontanero-tias</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/fontanero-teguise</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/fontanero-san-bartolome</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/fontanero-haria</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://canary-detect.com/es/fontanero-tinajo</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
