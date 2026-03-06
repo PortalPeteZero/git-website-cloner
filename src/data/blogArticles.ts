@@ -4557,7 +4557,7 @@ Abraza el futuro de la protección de propiedades. Asegura tu hogar, villa o neg
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Consejos Inmobiliarios",
-    image: waterLeakImg,
+    image: propertyBuyingHeroImg,
     metaTitle: "Inspección de Fugas Antes de Comprar en Lanzarote",
     metaDescription: "Por qué una inspección de fugas es vital antes de comprar una propiedad en Lanzarote. Proteja su inversión de roturas ocultas y humedades con Canary Detect.",
     keywords: "comprar propiedad Lanzarote, inspección fugas Lanzarote, inspección precompra, inspección propiedad Lanzarote, fugas ocultas propiedad, detección fugas agua Lanzarote, informe estructural Lanzarote",
@@ -4575,15 +4575,21 @@ En Canary Detect, creemos que es fundamental conocer el estado del sistema de fo
 
 Cuando compra una villa, no solo está comprando las vistas; también está heredando las tuberías.
 
+![Tuberías ocultas bajo una propiedad en Lanzarote reveladas durante una inspección de fugas](/assets/blog/property-pipe-detective.png)
+
 El suelo volcánico de Lanzarote tiende a moverse, y esto puede provocar micro-fracturas en las tuberías de la piscina y en el suministro de agua de la red. Debido a la alta porosidad del suelo, una casa puede tener una gran piscina perdiendo agua sin que haya signos de humedad evidentes en la superficie durante una visita de 20 minutos.
 
 Sin una [detección profesional de fugas de agua en Lanzarote](/es/servicios/deteccion-fugas-agua), podría estar mudándose a una casa que ya está desperdiciando miles de litros de agua, dejándole lidiar con la primera gran factura de Canal Gestión.
+
+![Un contador de agua girando puede indicar una fuga oculta en su nueva propiedad](/assets/blog/property-meter-spinning.png)
 
 ## 3 Cosas Que una Inspección Estándar No Detecta
 
 1. **Integridad de las Tuberías Subterráneas:** Un perito puede ver una grieta en una pared, pero no puede ver una unión en T deteriorada enterrada tres metros bajo su terraza.
 2. **Estado Interno de los Desagües:** Usando cámaras CCTV, podemos inspeccionar la intrusión de raíces o tuberías colapsadas que podrían no causar problemas hasta que la villa esté a plena ocupación.
 3. **Mapeo de Humedad Oculta:** Utilizamos [imagen térmica](/es/servicios/mapeo-humedad) para detectar puntos fríos detrás de paredes recién pintadas, revelando si un vendedor está enmascarando un problema de humedad.
+
+![Inspección de tanques de agua ocultos e infraestructura antes de comprar una propiedad](/assets/blog/property-tank-inspection.png)
 
 ## Proteja Su Inversión Programando una Inspección de Fugas
 
