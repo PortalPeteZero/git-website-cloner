@@ -2362,6 +2362,183 @@ Embrace the future of property protection. Secure your home, villa, or business 
 
 *Canary Detect offers professional [water leak detection](/services/water-leak-detection) and [swimming pool leak detection](/services/pool-leak-detection) services across Lanzarote, including Playa Blanca, Puerto del Carmen, Costa Teguise, and Arrecife. [Contact us](/contact) for all your leak detection needs.*
     `
+  },
+  {
+    id: 14,
+    slug: "buying-property-lanzarote-leak-survey",
+    title: "Buying a Property in Lanzarote? Why a Leak Survey is as Vital as a Structural Report",
+    excerpt: "Discover why a professional leak survey is essential before purchasing property in Lanzarote. Hidden pipe bursts, underground leaks, and concealed damp can turn your dream home into a financial nightmare.",
+    date: "2026-03-06",
+    author: "Canary Detect",
+    category: "Property Advice",
+    image: waterLeakImg,
+    metaTitle: "Leak Survey Before Buying Property Lanzarote",
+    metaDescription: "Why a leak survey is vital before buying property in Lanzarote. Protect your investment from hidden pipe bursts and concealed damp with Canary Detect.",
+    keywords: "buying property Lanzarote, leak survey Lanzarote, pre-purchase survey, property inspection Lanzarote, hidden leaks property, water leak detection Lanzarote, structural report Lanzarote",
+    readTime: 5,
+    content: `
+## Buying a Property in Lanzarote? Why a Leak Survey is as Vital as a Structural Report
+
+Buying a property in Lanzarote is a dream come true, whether it's a holiday rental in Playa Blanca or a family home in Teguise. But the unique geology of Lanzarote and the age of the island's infrastructure can hold secrets that may cost you dearly if you're not careful.
+
+While a typical surveyor examines the walls and roof, they usually do not have access to the equipment required to examine what is going on beneath the floor tiles, and this is where your investment can turn into a huge financial risk.
+
+At Canary Detect, we believe that it is crucial to know the condition of the plumbing system before you sign the Escritura. A concealed pipe burst is more than a maintenance problem; it's a structural defect that can depreciate your investment in an instant. Continue reading to know why a leak survey is as important as a structural report.
+
+## The Risk of the Silent Inheritance
+
+When you purchase a villa, you are not only purchasing the views; you are also inheriting the pipework.
+
+The volcanic soil in Lanzarote tends to move, and this can lead to micro-fractures in the swimming pool pipes and the mains water supply. Due to the high porosity of the soil, a house can have a large pool losing water without any signs of dampness being evident on the surface during a 20-minute viewing.
+
+Without professional [water leak detection in Lanzarote](/services/water-leak-detection), you might be moving into a house that is already wasting thousands of litres of water, leaving you to deal with the first huge bill from Canal Gestión.
+
+## 3 Things a Standard Building Survey Misses
+
+1. **Underground Pipe Integrity:** A surveyor can see a crack in a wall, but they cannot see a perished T-junction buried three metres under your terrace.
+2. **Internal Drain Condition:** Using CCTV cameras, we can inspect for root intrusion or collapsed pipes that might not cause a backup until the villa is at full occupancy.
+3. **Hidden Moisture Mapping:** We use [thermal imaging](/services/damp-moisture-mapping) to detect cold spots behind freshly painted walls, revealing if a seller is masking a damp problem.
+
+## Protect Your Investment By Scheduling a Leak Survey
+
+Before you complete your purchase, make sure your dream home doesn't become a nightmare by scheduling a leak survey.
+
+A professional [leak detection survey](/services/pre-purchase-survey) in Lanzarote provides the evidence required to either negotiate the price or ensure repairs are made before the keys change hands.
+
+### Here's how to schedule a leak survey:
+
+- **Step 1:** Request a survey by [contacting us](/contact) before your cooling-off period ends.
+- **Step 2:** You will receive a detailed photographic report perfect for your lawyer or architect.
+- **Step 3:** Move in knowing your plumbing is as solid as the foundations.
+
+So, get in touch with Canary Detect without hesitation. Before paying for a full survey, confirm the property's water meter is stable with our [free leak confirmation test](/services/free-leak-confirmation).
+
+---
+
+*Contact Canary Detect for professional [leak detection in Lanzarote](/services/water-leak-detection). We help buyers across the island protect their investments with non-invasive technology.*
+
+[Contact us now →](/contact)
+    `
+  },
+  {
+    id: 15,
+    slug: "insurance-leak-report-lanzarote",
+    title: "5 Things Your Lanzarote Home Insurance Needs to See in a Leak Report",
+    excerpt: "Many homeowners in Lanzarote have their insurance claims rejected because they lack a proper technical report. Learn the five essential elements your insurer expects to see.",
+    date: "2026-03-06",
+    author: "Canary Detect",
+    category: "Insurance & Claims",
+    image: leakRepairImg,
+    metaTitle: "Leak Report for Insurance Claims | Lanzarote",
+    metaDescription: "5 things your Lanzarote home insurance needs in a leak report. Get your claim approved with the right technical evidence from Canary Detect.",
+    keywords: "insurance leak report Lanzarote, home insurance claim Lanzarote, leak detection report, trace and access Lanzarote, insurance claim water damage, leak repair Playa Blanca",
+    readTime: 5,
+    content: `
+## 5 Things Your Lanzarote Home Insurance Needs to See in a Leak Report
+
+Finding a leak in your villa is only half the battle; the second half is ensuring your insurance company covers the costs.
+
+Many homeowners in Lanzarote are surprised to find their claims rejected because they provided a simple plumber's invoice rather than a certified technical report. Have you experienced anything similar?
+
+We are all noticing that insurance providers have become stricter and require specific evidence before authorising a payout for Trace and Access or structural repairs. If you are dealing with a property issue, providing a professional document is the only way to protect your claim.
+
+Take a look at the five essential elements your insurance company expects to see in a professional report so you can reduce the chances of your claim getting rejected.
+
+## 1. Proof of Non-Invasive Methods
+
+Insurance companies want to avoid trial-and-error digging, which causes unnecessary damage. Your report should clearly state that you utilised advanced technology, such as professional [leak detection](/services/water-leak-detection), to find the source of the water without destroying your terrace or walls.
+
+## 2. Technical Data and Readings
+
+To eliminate guesswork, your report should include data from specialised equipment. For example, acoustic charts showing decibel spikes where water is escaping, or gas sensor readings confirming the exact location of a sub-surface fracture.
+
+## 3. Impact Assessment
+
+The report needs to detail the secondary damage. Insurance adjusters look for information on how the water is affecting the property's structure, such as rising damp, salt efflorescence, or undermined foundations, to determine the scale of the claim.
+
+## 4. Digital Photographic Evidence
+
+A written description is rarely enough, and hence, your report must include high-resolution photos of the specific area, [thermal imaging](/services/damp-moisture-mapping) scans showing moisture patterns, or CCTV footage of internal pipe conditions.
+
+This visual proof confirms that the leak is active and warrants an insurance intervention.
+
+## 5. Clear Recommendations for Repair
+
+A professional report concludes with a precise roadmap for the fix.
+
+By pinpointing the exact centimetre of the failure, we enable a surgical [leak repair](/services/leak-repair), which minimises the payout the insurance company has to make for making good the floor or wall after the fix.
+
+## Get Started Today
+
+So, connect with Canary Detect and get your [free leak confirmation](/services/free-leak-confirmation) today. By leveraging our free leak confirmation test, you can get the hard data you need to start an insurance claim.
+
+---
+
+*Contact Canary Detect for professional [leak detection in Lanzarote](/services/water-leak-detection). Our reports are designed to meet insurance company requirements across Spain and the UK.*
+
+[Contact us now →](/contact)
+    `
+  },
+  {
+    id: 16,
+    slug: "reverse-osmosis-high-water-bill-lanzarote",
+    title: "Is the Reverse Osmosis System in Your Lanzarote Villa Doubling Your Water Bill?",
+    excerpt: "Many villas in Lanzarote have under-sink RO systems that can silently waste thousands of litres of water when the shut-off valve fails. Learn the signs and what to do next.",
+    date: "2026-03-06",
+    author: "Canary Detect",
+    category: "Water Systems",
+    image: waterMeterImg,
+    metaTitle: "Reverse Osmosis High Water Bill Lanzarote",
+    metaDescription: "Is your Lanzarote villa's reverse osmosis system wasting water 24/7? Learn the 3 signs of a faulty RO system and how to fix it with Canary Detect.",
+    keywords: "reverse osmosis water bill Lanzarote, high water bill Lanzarote, RO system leak, water waste Lanzarote villa, water meter spinning, leak detection Lanzarote",
+    readTime: 5,
+    content: `
+## Is the Reverse Osmosis System in Your Lanzarote Villa Doubling Your Water Bill?
+
+Some villas in Lanzarote are equipped with an under-sink Reverse Osmosis (RO) system because many residents prefer not to drink the desalinated mains water. Even though the water is safe and meets EU standards, it often has a mineral or salty taste that makes it less pleasant to drink. While these systems provide clean drinking water, they can also be a hidden source of massive water waste.
+
+Have you noticed a sudden jump in your usage? It might be a malfunctioning filtration system that is causing a [high water bill in Lanzarote](/blog/high-water-bills-lanzarote-causes).
+
+At Canary Detect, we often find that a silent leak isn't always a burst pipe or a structural failure. In many cases, it is an appliance that is designed to use water but has stopped shutting off correctly.
+
+## How a Reverse Osmosis System Wastes Water
+
+A standard RO system has the process of pushing water through the membrane, producing brine or wastewater that is flushed away. The system is meant to stop the process when your storage tank is full. However, the system has an internal automatic shut-off valve in place, allowing it to continue running the process 24 hours a day when the valve fails.
+
+Because this water goes directly into your villa's drainage system, you will never see a damp patch, a puddle, or a [pool losing water](/services/pool-leak-detection). This makes it one of the most difficult leaks for a homeowner to identify without checking the meter specifically.
+
+## 3 Signs Your RO System is Leaking
+
+1. **Constant Hissing:** Listen to your kitchen cupboard. A faint, constant running water sound when the tank should be full indicates a bypass.
+2. **Cold Drain Pipes:** The small plastic drain line under your sink should only be cold when the system is actively filling. If it is always cold, water is flowing non-stop.
+3. **The Metre Crawl:** Look at your [water meter](/blog/water-meter-running-when-taps-off) when all taps are off. A slow, steady rotation often points to a filtration issue.
+
+## What to Do Next?
+
+If you are sure your system is leaking, here are the steps to take next:
+
+### Step 1: The Isolation Test
+
+Turn off the dedicated cold-water feed valve to your RO system for 20 minutes.
+
+### Step 2: Check the Metre
+
+If the meter stops moving, the RO system is the culprit.
+
+### Step 3: Professional Survey
+
+Is the metre still spinning? The leak is elsewhere in your plumbing. Contact [Canary Detect](/services/water-leak-detection) for a professional survey.
+
+## Free Leak Confirmation
+
+Before paying for a full survey, confirm you actually have a leak with our [Free Leak Confirmation Test](/services/free-leak-confirmation).
+
+---
+
+*Contact Canary Detect for professional [leak detection across Lanzarote](/services/water-leak-detection). Our No Find, No Fee guarantee gives you total peace of mind.*
+
+[Contact us now →](/contact)
+    `
   }
 ];
 
