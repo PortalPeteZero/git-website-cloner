@@ -1,42 +1,38 @@
 
 
-## Assessment of Manus Performance Suggestions
+## Add 3 New Blog Articles
 
-Here's my evaluation of each suggestion against what's already in the codebase:
+### Summary
+Add 3 new bilingual blog articles (IDs 14, 15, 16) to `src/data/blogArticles.ts` with placeholder images, plus update the sitemap and slug mappings.
 
-### 1. Lazy load all route-level components — PARTIALLY DISAGREE
+### Articles
 
-Currently, all 20+ page components are **eagerly imported** in `App.tsx` (lines 13-31). The code comment says "All SEO-critical pages loaded eagerly for pre-rendering (lovable.html)".
+| ID | EN Slug | Title | Category | Placeholder Image |
+|----|---------|-------|----------|-------------------|
+| 14 | `buying-property-lanzarote-leak-survey` | Buying a Property in Lanzarote? Why a Leak Survey is as Vital as a Structural Report | Property Advice | `waterLeakImg` |
+| 15 | `insurance-leak-report-lanzarote` | 5 Things Your Lanzarote Home Insurance Needs to See in a Leak Report | Insurance & Claims | `leakRepairImg` |
+| 16 | `reverse-osmosis-high-water-bill-lanzarote` | Is the Reverse Osmosis System in Your Lanzarote Villa Doubling Your Water Bill? | Water Systems | `waterMeterImg` |
 
-**The problem with blindly lazy-loading everything:** LovableHTML pre-renders by hitting the live React app. If pages are lazy-loaded, the pre-renderer must wait for the chunk to download before it can capture content. Eager imports guarantee the pre-renderer gets complete HTML on first pass.
+### Files to Edit
 
-**What I recommend instead:** Lazy-load pages that are **not SEO-critical** or **rarely visited first** — specifically `CaseStudies`, `Technology`, `Reviews`, `PlumbingServices`, `PlumbingServiceDetail`, `FreeLeakConfirmation`, `PrePurchaseSurvey`, `PrivacyPolicy`, `MeetTheTeam`. Keep the high-traffic SEO pages eager: `Index`, `Services`, `ServiceDetail`, `Blog`, `BlogArticle`, `LocationPage`, `Locations`, `About`, `Contact`. This gives a meaningful bundle reduction without risking pre-render quality.
+1. **`src/data/blogArticles.ts`**
+   - Add 3 English articles (id 14-16) to `blogArticlesEn` array with full markdown content converted from the Word docs, internal links to relevant services (leak detection, free leak confirmation, contact), and SEO metadata
+   - Add 3 Spanish translations (id 14-16) to `blogArticlesEs` array with translated content
+   - Add 3 entries to `blogSlugMap` for EN-to-ES slug mapping
 
-### 2. Add explicit width and height to all img elements — AGREE, PARTIALLY DONE
+2. **`public/sitemap.xml`**
+   - Add 6 new URL entries (3 EN + 3 ES) with hreflang cross-references
 
-The hero `<picture>` element (HeroSlider) is missing `width`/`height` on the `<img>` tag. `ServiceCard` images also lack explicit dimensions. These should be added. This is a straightforward fix across a handful of components.
+### Content Approach
+- Convert Word doc structure to markdown matching the existing article format
+- Add internal links to services (`/services/water-leak-detection`, `/services/free-leak-confirmation`, `/contact`) within the content
+- Include context-aware CTAs at the end of each article
+- Spanish translations will be professionally localized (not machine-translated placeholders)
+- Each article gets unique `metaTitle`, `metaDescription`, and `keywords` for SEO
+- Date set to `2026-03-06` (today)
 
-### 3. Add loading="lazy" to below-the-fold images — ALREADY DONE
-
-HeroSlider already uses `loading="eager"` + `fetchPriority="high"` on slide 0 and `loading="lazy"` on subsequent slides. ServiceCard uses `loading="lazy"`. This is already implemented correctly.
-
-### 4. Add preload link for LCP hero image in index.html — DISAGREE
-
-The code comment in `index.html` (line 41-44) explicitly explains why this was removed: **Vite transforms image paths at build time**, so a static `<link rel="preload" href="/path-to-hero.jpg">` in `index.html` will point to the wrong URL. The current approach using eager `import` + `fetchPriority="high"` + `decoding="sync"` is the correct SPA solution.
-
-### 5. Defer non-critical third-party scripts — NOT APPLICABLE
-
-There are zero third-party scripts in `index.html`. Only the Vite module script exists. Nothing to defer.
-
----
-
-### Plan: What I will actually change
-
-| Change | File(s) |
-|--------|---------|
-| Lazy-load 9 low-traffic page components | `src/App.tsx` |
-| Add `width`/`height` to hero `<img>` | `src/components/home/HeroSlider.tsx` |
-| Add `width`/`height` to ServiceCard `<img>` | `src/components/home/ServiceCard.tsx` |
-
-These changes target the real performance bottlenecks (bundle size and CLS) without breaking pre-rendering or the existing image strategy.
+### Spanish Slugs
+- `comprar-propiedad-lanzarote-inspeccion-fugas`
+- `informe-fugas-seguro-hogar-lanzarote`
+- `osmosis-inversa-factura-agua-alta-lanzarote`
 
