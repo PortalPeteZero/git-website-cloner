@@ -85,7 +85,10 @@ export const blogSlugMap: Record<string, string> = {
   "signs-water-leak-villa-lanzarote": "senales-fuga-agua-villa-lanzarote",
   "high-water-bills-lanzarote-causes": "facturas-agua-altas-lanzarote-causas",
   "how-to-detect-underground-pipes-lanzarote": "como-detectar-tuberias-subterraneas-lanzarote",
-  "leakguard-smart-water-monitoring-lanzarote": "leakguard-monitorizacion-inteligente-agua-lanzarote"
+  "leakguard-smart-water-monitoring-lanzarote": "leakguard-monitorizacion-inteligente-agua-lanzarote",
+  "buying-property-lanzarote-leak-survey": "comprar-propiedad-lanzarote-inspeccion-fugas",
+  "insurance-leak-report-lanzarote": "informe-fugas-seguro-hogar-lanzarote",
+  "reverse-osmosis-high-water-bill-lanzarote": "osmosis-inversa-factura-agua-alta-lanzarote"
 };
 
 // Reverse blog slug map (Spanish to English)
