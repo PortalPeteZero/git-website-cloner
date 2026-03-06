@@ -32,6 +32,12 @@ import leakguardFlowDataImg from "@/assets/blog/leakguard-flow-data.png?w=800";
 import leakguardGroundBoxImg from "@/assets/blog/leakguard-ground-box.jpg?w=800";
 import leakguardMeterInstallImg from "@/assets/blog/leakguard-meter-install.jpg?w=800";
 
+// Property buying blog images
+import propertyBuyingHeroImg from "@/assets/blog/property-buying-hero.png?w=800";
+import propertyPipeDetectiveImg from "@/assets/blog/property-pipe-detective.png?w=800";
+import propertyMeterSpinningImg from "@/assets/blog/property-meter-spinning.png?w=800";
+import propertyTankInspectionImg from "@/assets/blog/property-tank-inspection.png?w=800";
+
 // Helper to create image placeholders for markdown content
 export const BLOG_IMAGES = {
   lanzaroteTraditionalHouse: lanzaroteTraditionalHouseImg,
@@ -49,6 +55,10 @@ export const BLOG_IMAGES = {
   leakguardFlowData: leakguardFlowDataImg,
   leakguardGroundBox: leakguardGroundBoxImg,
   leakguardMeterInstall: leakguardMeterInstallImg,
+  propertyBuyingHero: propertyBuyingHeroImg,
+  propertyPipeDetective: propertyPipeDetectiveImg,
+  propertyMeterSpinning: propertyMeterSpinningImg,
+  propertyTankInspection: propertyTankInspectionImg,
 };
 
 export interface BlogArticle {
@@ -2371,7 +2381,7 @@ Embrace the future of property protection. Secure your home, villa, or business 
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Property Advice",
-    image: waterLeakImg,
+    image: propertyBuyingHeroImg,
     metaTitle: "Leak Survey Before Buying Property Lanzarote",
     metaDescription: "Why a leak survey is vital before buying property in Lanzarote. Protect your investment from hidden pipe bursts and concealed damp with Canary Detect.",
     keywords: "buying property Lanzarote, leak survey Lanzarote, pre-purchase survey, property inspection Lanzarote, hidden leaks property, water leak detection Lanzarote, structural report Lanzarote",
@@ -2389,15 +2399,21 @@ At Canary Detect, we believe that it is crucial to know the condition of the plu
 
 When you purchase a villa, you are not only purchasing the views; you are also inheriting the pipework.
 
+![Hidden pipes beneath a Lanzarote property revealed during a leak survey](/assets/blog/property-pipe-detective.png)
+
 The volcanic soil in Lanzarote tends to move, and this can lead to micro-fractures in the swimming pool pipes and the mains water supply. Due to the high porosity of the soil, a house can have a large pool losing water without any signs of dampness being evident on the surface during a 20-minute viewing.
 
 Without professional [water leak detection in Lanzarote](/services/water-leak-detection), you might be moving into a house that is already wasting thousands of litres of water, leaving you to deal with the first huge bill from Canal Gestión.
+
+![A spinning water meter can indicate a hidden leak in your new property](/assets/blog/property-meter-spinning.png)
 
 ## 3 Things a Standard Building Survey Misses
 
 1. **Underground Pipe Integrity:** A surveyor can see a crack in a wall, but they cannot see a perished T-junction buried three metres under your terrace.
 2. **Internal Drain Condition:** Using CCTV cameras, we can inspect for root intrusion or collapsed pipes that might not cause a backup until the villa is at full occupancy.
 3. **Hidden Moisture Mapping:** We use [thermal imaging](/services/damp-moisture-mapping) to detect cold spots behind freshly painted walls, revealing if a seller is masking a damp problem.
+
+![Inspecting hidden water tanks and infrastructure before purchasing a property](/assets/blog/property-tank-inspection.png)
 
 ## Protect Your Investment By Scheduling a Leak Survey
 
@@ -4541,7 +4557,7 @@ Abraza el futuro de la protección de propiedades. Asegura tu hogar, villa o neg
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Consejos Inmobiliarios",
-    image: waterLeakImg,
+    image: propertyBuyingHeroImg,
     metaTitle: "Inspección de Fugas Antes de Comprar en Lanzarote",
     metaDescription: "Por qué una inspección de fugas es vital antes de comprar una propiedad en Lanzarote. Proteja su inversión de roturas ocultas y humedades con Canary Detect.",
     keywords: "comprar propiedad Lanzarote, inspección fugas Lanzarote, inspección precompra, inspección propiedad Lanzarote, fugas ocultas propiedad, detección fugas agua Lanzarote, informe estructural Lanzarote",
@@ -4559,15 +4575,21 @@ En Canary Detect, creemos que es fundamental conocer el estado del sistema de fo
 
 Cuando compra una villa, no solo está comprando las vistas; también está heredando las tuberías.
 
+![Tuberías ocultas bajo una propiedad en Lanzarote reveladas durante una inspección de fugas](/assets/blog/property-pipe-detective.png)
+
 El suelo volcánico de Lanzarote tiende a moverse, y esto puede provocar micro-fracturas en las tuberías de la piscina y en el suministro de agua de la red. Debido a la alta porosidad del suelo, una casa puede tener una gran piscina perdiendo agua sin que haya signos de humedad evidentes en la superficie durante una visita de 20 minutos.
 
 Sin una [detección profesional de fugas de agua en Lanzarote](/es/servicios/deteccion-fugas-agua), podría estar mudándose a una casa que ya está desperdiciando miles de litros de agua, dejándole lidiar con la primera gran factura de Canal Gestión.
+
+![Un contador de agua girando puede indicar una fuga oculta en su nueva propiedad](/assets/blog/property-meter-spinning.png)
 
 ## 3 Cosas Que una Inspección Estándar No Detecta
 
 1. **Integridad de las Tuberías Subterráneas:** Un perito puede ver una grieta en una pared, pero no puede ver una unión en T deteriorada enterrada tres metros bajo su terraza.
 2. **Estado Interno de los Desagües:** Usando cámaras CCTV, podemos inspeccionar la intrusión de raíces o tuberías colapsadas que podrían no causar problemas hasta que la villa esté a plena ocupación.
 3. **Mapeo de Humedad Oculta:** Utilizamos [imagen térmica](/es/servicios/mapeo-humedad) para detectar puntos fríos detrás de paredes recién pintadas, revelando si un vendedor está enmascarando un problema de humedad.
+
+![Inspección de tanques de agua ocultos e infraestructura antes de comprar una propiedad](/assets/blog/property-tank-inspection.png)
 
 ## Proteja Su Inversión Programando una Inspección de Fugas
 
