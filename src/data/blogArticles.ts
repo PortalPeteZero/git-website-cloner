@@ -3419,7 +3419,7 @@ Si sospechas fugas ocultas en tu propiedad de Lanzarote, la imagen térmica pued
     `
   },
   {
-    id: 6,
+    id: 7,
     slug: "coste-reparacion-fugas-piscina-lanzarote",
     title: "Costes de Reparación de Fugas de Piscina en Lanzarote: Qué Esperar",
     excerpt: "Entiende los costes de detección y reparación de fugas de piscina en Lanzarote. Desde arreglos menores hasta reparaciones mayores, aquí está tu guía completa de precios.",
