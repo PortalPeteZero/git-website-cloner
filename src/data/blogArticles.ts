@@ -55,6 +55,10 @@ export const BLOG_IMAGES = {
   leakguardFlowData: leakguardFlowDataImg,
   leakguardGroundBox: leakguardGroundBoxImg,
   leakguardMeterInstall: leakguardMeterInstallImg,
+  propertyBuyingHero: propertyBuyingHeroImg,
+  propertyPipeDetective: propertyPipeDetectiveImg,
+  propertyMeterSpinning: propertyMeterSpinningImg,
+  propertyTankInspection: propertyTankInspectionImg,
 };
 
 export interface BlogArticle {
