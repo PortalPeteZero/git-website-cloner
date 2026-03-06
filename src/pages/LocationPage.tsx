@@ -13,7 +13,7 @@ import RelatedServices from "@/components/internal-links/RelatedServices";
 import { useTranslation } from "@/i18n/LanguageContext";
 import { getContactPath, getHomePath, getLocationsBasePath } from "@/i18n/routes";
 import { getLocationsData, getLocationUIText } from "@/data/locationsData";
-import titleBg from "@/assets/title-bg.jpg";
+import titleBg from "@/assets/title-bg.jpg?w=1920";
 
 const LocationPage = () => {
   const { location } = useParams<{ location: string }>();
