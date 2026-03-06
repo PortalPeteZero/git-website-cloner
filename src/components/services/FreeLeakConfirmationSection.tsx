@@ -1,6 +1,6 @@
 import { BadgeCheck, CheckCircle2, Mail, Phone, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation-new.png";
+import freeLeakConfirmationImg from "@/assets/services/free-leak-confirmation-new.png?w=800";
 import LeakConfirmationForm from "./LeakConfirmationForm";
 import { useTranslation } from "@/i18n/LanguageContext";
 

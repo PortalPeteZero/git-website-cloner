@@ -3,15 +3,15 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Atom, AudioLines, Thermometer, Mic, Video, CheckCircle, AlertCircle, Sparkles } from "lucide-react";
-import technologyHero from "@/assets/hero/technology-hero.jpg";
+import technologyHero from "@/assets/hero/technology-hero.jpg?w=1920";
 import SEOHead from "@/components/seo/SEOHead";
 import { useTranslation } from "@/i18n/LanguageContext";
 import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
 // Before & After images
-import leakRepairBa1 from "@/assets/services/gallery/leak-repair-ba-1.jpg";
-import leakRepairBa2 from "@/assets/services/gallery/leak-repair-ba-2.jpg";
-import leakRepairBa3 from "@/assets/services/gallery/leak-repair-ba-3.jpg";
-import leakRepairBa4 from "@/assets/services/gallery/leak-repair-ba-4.jpg";
+import leakRepairBa1 from "@/assets/services/gallery/leak-repair-ba-1.jpg?w=800";
+import leakRepairBa2 from "@/assets/services/gallery/leak-repair-ba-2.jpg?w=800";
+import leakRepairBa3 from "@/assets/services/gallery/leak-repair-ba-3.jpg?w=800";
+import leakRepairBa4 from "@/assets/services/gallery/leak-repair-ba-4.jpg?w=800";
 
 const getTechnologies = (isSpanish: boolean) => [
   {

@@ -1,40 +1,40 @@
 import { LucideIcon, Wrench, Flame, Settings, Droplets, Gauge, Thermometer, PenTool, GitBranch, Search, Zap, Shield, BadgeCheck, Home, Paintbrush } from "lucide-react";
 
 // Pool plumbing images
-import poolValvesMoisture from "@/assets/plumbing/pool/pool-valves-moisture.jpg";
-import poolEquipmentBox from "@/assets/plumbing/pool/pool-equipment-box.jpg";
-import poolPipeRerouting from "@/assets/plumbing/pool/pool-pipe-rerouting.jpg";
-import poolValveManifoldWall from "@/assets/plumbing/pool/pool-valve-manifold-wall.jpg";
-import poolPumpRoomComplete from "@/assets/plumbing/pool/pool-pump-room-complete.jpg";
-import poolValveCloseup from "@/assets/plumbing/pool/pool-valve-closeup.jpg";
-import poolBeforeAfter from "@/assets/plumbing/pool/pool-before-after.jpg";
-import poolComplexPipework from "@/assets/plumbing/pool/pool-complex-pipework.jpg";
+import poolValvesMoisture from "@/assets/plumbing/pool/pool-valves-moisture.jpg?w=800";
+import poolEquipmentBox from "@/assets/plumbing/pool/pool-equipment-box.jpg?w=800";
+import poolPipeRerouting from "@/assets/plumbing/pool/pool-pipe-rerouting.jpg?w=800";
+import poolValveManifoldWall from "@/assets/plumbing/pool/pool-valve-manifold-wall.jpg?w=800";
+import poolPumpRoomComplete from "@/assets/plumbing/pool/pool-pump-room-complete.jpg?w=800";
+import poolValveCloseup from "@/assets/plumbing/pool/pool-valve-closeup.jpg?w=800";
+import poolBeforeAfter from "@/assets/plumbing/pool/pool-before-after.jpg?w=800";
+import poolComplexPipework from "@/assets/plumbing/pool/pool-complex-pipework.jpg?w=800";
 
 // Pool repair gallery images
-import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
-import poolRepair2 from "@/assets/services/gallery/pool-repair-2.jpg";
-import poolRepair3 from "@/assets/services/gallery/pool-repair-3.jpg";
-import poolRepair4 from "@/assets/services/gallery/pool-repair-4.jpg";
-import poolRepair5 from "@/assets/services/gallery/pool-repair-5.jpg";
-import poolRepair6 from "@/assets/services/gallery/pool-repair-6.jpg";
+import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg?w=800";
+import poolRepair2 from "@/assets/services/gallery/pool-repair-2.jpg?w=800";
+import poolRepair3 from "@/assets/services/gallery/pool-repair-3.jpg?w=800";
+import poolRepair4 from "@/assets/services/gallery/pool-repair-4.jpg?w=800";
+import poolRepair5 from "@/assets/services/gallery/pool-repair-5.jpg?w=800";
+import poolRepair6 from "@/assets/services/gallery/pool-repair-6.jpg?w=800";
 
 // Boiler images
-import boilerCustomHousing from "@/assets/plumbing/boiler/boiler-custom-housing.jpg";
-import boilerInstallationWall from "@/assets/plumbing/boiler/boiler-installation-wall.jpg";
-import boilerOutdoorSetup from "@/assets/plumbing/boiler/boiler-outdoor-setup.jpg";
-import boilerPipeworkManifold from "@/assets/plumbing/boiler/boiler-pipework-manifold.jpg";
-import waterHeaterWallMount from "@/assets/plumbing/boiler/water-heater-wall-mount.jpg";
-import customHousingBuild from "@/assets/plumbing/boiler/custom-housing-build.jpg";
-import waterHeaterEnclosure from "@/assets/plumbing/boiler/water-heater-enclosure.jpg";
-import tekaWaterHeater from "@/assets/plumbing/boiler/teka-water-heater.jpg";
+import boilerCustomHousing from "@/assets/plumbing/boiler/boiler-custom-housing.jpg?w=800";
+import boilerInstallationWall from "@/assets/plumbing/boiler/boiler-installation-wall.jpg?w=800";
+import boilerOutdoorSetup from "@/assets/plumbing/boiler/boiler-outdoor-setup.jpg?w=800";
+import boilerPipeworkManifold from "@/assets/plumbing/boiler/boiler-pipework-manifold.jpg?w=800";
+import waterHeaterWallMount from "@/assets/plumbing/boiler/water-heater-wall-mount.jpg?w=800";
+import customHousingBuild from "@/assets/plumbing/boiler/custom-housing-build.jpg?w=800";
+import waterHeaterEnclosure from "@/assets/plumbing/boiler/water-heater-enclosure.jpg?w=800";
+import tekaWaterHeater from "@/assets/plumbing/boiler/teka-water-heater.jpg?w=800";
 
 // Manifold images
-import manifoldBeforeAfter from "@/assets/plumbing/manifold/manifold-before-after.jpg";
-import manifoldHiddenPipework from "@/assets/plumbing/manifold/manifold-hidden-pipework.jpg";
-import manifoldOldWorn from "@/assets/plumbing/manifold/manifold-old-worn.jpg";
-import manifoldNewBrass from "@/assets/plumbing/manifold/manifold-new-brass.jpg";
-import brandedBrassValve from "@/assets/plumbing/manifold/branded-brass-valve.jpg";
-import villaGardenIrrigation from "@/assets/services/villa-garden-irrigation.jpg";
+import manifoldBeforeAfter from "@/assets/plumbing/manifold/manifold-before-after.jpg?w=800";
+import manifoldHiddenPipework from "@/assets/plumbing/manifold/manifold-hidden-pipework.jpg?w=800";
+import manifoldOldWorn from "@/assets/plumbing/manifold/manifold-old-worn.jpg?w=800";
+import manifoldNewBrass from "@/assets/plumbing/manifold/manifold-new-brass.jpg?w=800";
+import brandedBrassValve from "@/assets/plumbing/manifold/branded-brass-valve.jpg?w=800";
+import villaGardenIrrigation from "@/assets/services/villa-garden-irrigation.jpg?w=800";
 
 export interface PlumbingServiceItem {
   name: string;

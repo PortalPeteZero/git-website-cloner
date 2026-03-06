@@ -11,28 +11,28 @@ import PricingSection from "@/components/services/PricingSection";
 import { useTranslation } from "@/i18n/LanguageContext";
 
 // Import service hero images
-import drainDetectionImg from "@/assets/services/drain-detection.jpg";
-import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg";
-import undergroundDetectionImg from "@/assets/services/underground-detection.jpg";
-import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg";
-import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg";
-import leakRepairImg from "@/assets/services/leak-repair.jpg";
-import drainUnblockingImg from "@/assets/services/drain-unblocking.jpg";
-import poolLeakRepairImg from "@/assets/services/pool-leak-repair.jpg";
-import servicesHero from "@/assets/hero/services-hero.jpg";
+import drainDetectionImg from "@/assets/services/drain-detection.jpg?w=800";
+import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg?w=800";
+import undergroundDetectionImg from "@/assets/services/underground-detection.jpg?w=800";
+import waterLeakDetectionImg from "@/assets/services/water-leak-detection.jpg?w=800";
+import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg?w=800";
+import leakRepairImg from "@/assets/services/leak-repair.jpg?w=800";
+import drainUnblockingImg from "@/assets/services/drain-unblocking.jpg?w=800";
+import poolLeakRepairImg from "@/assets/services/pool-leak-repair.jpg?w=800";
+import servicesHero from "@/assets/hero/services-hero.jpg?w=1920";
 
 // Import gallery images for carousels
-import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg";
-import pipeInspection2 from "@/assets/services/gallery/pipe-inspection-2.jpg";
-import pipeInspection3 from "@/assets/services/gallery/pipe-inspection-3.jpg";
-import poolLeak7 from "@/assets/services/gallery/pool-leak-7.jpg";
-import poolLeak8 from "@/assets/services/gallery/pool-leak-8.jpg";
-import poolLeak10 from "@/assets/services/gallery/pool-leak-10.jpg";
-import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg";
-import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg";
-import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg";
-import drainUnblocking1 from "@/assets/services/gallery/drain-unblocking-1.jpg";
-import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg";
+import drainDetection2 from "@/assets/services/gallery/drain-detection-2.jpg?w=800";
+import pipeInspection2 from "@/assets/services/gallery/pipe-inspection-2.jpg?w=800";
+import pipeInspection3 from "@/assets/services/gallery/pipe-inspection-3.jpg?w=800";
+import poolLeak7 from "@/assets/services/gallery/pool-leak-7.jpg?w=800";
+import poolLeak8 from "@/assets/services/gallery/pool-leak-8.jpg?w=800";
+import poolLeak10 from "@/assets/services/gallery/pool-leak-10.jpg?w=800";
+import waterLeak1 from "@/assets/services/gallery/water-leak-1.jpg?w=800";
+import waterLeak2 from "@/assets/services/gallery/water-leak-2.jpg?w=800";
+import undergroundDetection6 from "@/assets/services/gallery/underground-detection-6.jpg?w=800";
+import drainUnblocking1 from "@/assets/services/gallery/drain-unblocking-1.jpg?w=800";
+import poolRepair1 from "@/assets/services/gallery/pool-repair-1.jpg?w=800";
 
 const Services = () => {
   const { t, isSpanish } = useTranslation();
