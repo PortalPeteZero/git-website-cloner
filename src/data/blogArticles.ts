@@ -4691,7 +4691,7 @@ Así que, conéctate con Canary Detect y obtén tu [confirmación gratuita de fu
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Sistemas de Agua",
-    image: waterMeterImg,
+    image: roSystemHeroImg,
     metaTitle: "Ósmosis Inversa y Factura de Agua Alta Lanzarote",
     metaDescription: "¿Tu sistema de ósmosis inversa en Lanzarote está desperdiciando agua 24/7? Conoce las 3 señales de un sistema RO defectuoso y cómo solucionarlo con Canary Detect.",
     keywords: "ósmosis inversa factura agua Lanzarote, factura agua alta Lanzarote, fuga sistema RO, desperdicio agua villa Lanzarote, contador agua girando, detección fugas Lanzarote",
@@ -4713,6 +4713,8 @@ Como esta agua va directamente al sistema de drenaje de tu villa, nunca verás u
 
 ## 3 Señales de Que Tu Sistema de OI Tiene una Fuga
 
+![Inspección de un sistema de ósmosis inversa bajo el fregadero con una linterna para comprobar el flujo constante de agua](/assets/blog/ro-system-hissing.jpg)
+
 1. **Silbido Constante:** Escucha en tu armario de cocina. Un sonido débil y constante de agua corriendo cuando el tanque debería estar lleno indica un bypass.
 2. **Tuberías de Drenaje Frías:** La pequeña tubería de drenaje de plástico bajo tu fregadero solo debería estar fría cuando el sistema está llenando activamente. Si siempre está fría, el agua está fluyendo sin parar.
 3. **El Contador Avanza Lentamente:** Mira tu [contador de agua](/es/blog/contador-agua-girando-grifos-cerrados) cuando todos los grifos estén cerrados. Una rotación lenta y constante a menudo apunta a un problema de filtración.
@@ -4726,6 +4728,8 @@ Si estás seguro de que tu sistema tiene una fuga, estos son los pasos a seguir:
 Cierra la válvula de alimentación de agua fría dedicada a tu sistema de OI durante 20 minutos.
 
 ### Paso 2: Comprueba el Contador
+
+![Comprobación del contador de agua en una propiedad de Lanzarote para confirmar una fuga](/assets/blog/ro-system-meter-check.jpg)
 
 Si el contador deja de moverse, el sistema de OI es el culpable.
 
