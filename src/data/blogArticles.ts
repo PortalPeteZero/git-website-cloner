@@ -2511,7 +2511,7 @@ So, connect with Canary Detect and get your [free leak confirmation](/services/f
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Water Systems",
-    image: waterMeterImg,
+    image: roSystemHeroImg,
     metaTitle: "Reverse Osmosis High Water Bill Lanzarote",
     metaDescription: "Is your Lanzarote villa's reverse osmosis system wasting water 24/7? Learn the 3 signs of a faulty RO system and how to fix it with Canary Detect.",
     keywords: "reverse osmosis water bill Lanzarote, high water bill Lanzarote, RO system leak, water waste Lanzarote villa, water meter spinning, leak detection Lanzarote",
@@ -2533,6 +2533,8 @@ Because this water goes directly into your villa's drainage system, you will nev
 
 ## 3 Signs Your RO System is Leaking
 
+![Inspecting an under-sink reverse osmosis system with a torch to check for constant water flow](/assets/blog/ro-system-hissing.jpg)
+
 1. **Constant Hissing:** Listen to your kitchen cupboard. A faint, constant running water sound when the tank should be full indicates a bypass.
 2. **Cold Drain Pipes:** The small plastic drain line under your sink should only be cold when the system is actively filling. If it is always cold, water is flowing non-stop.
 3. **The Metre Crawl:** Look at your [water meter](/blog/water-meter-running-when-taps-off) when all taps are off. A slow, steady rotation often points to a filtration issue.
@@ -2546,6 +2548,8 @@ If you are sure your system is leaking, here are the steps to take next:
 Turn off the dedicated cold-water feed valve to your RO system for 20 minutes.
 
 ### Step 2: Check the Metre
+
+![Checking the water meter at a Lanzarote property to confirm a leak](/assets/blog/ro-system-meter-check.jpg)
 
 If the meter stops moving, the RO system is the culprit.
 
