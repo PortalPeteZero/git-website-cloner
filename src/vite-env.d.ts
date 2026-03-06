@@ -32,8 +32,23 @@ declare module '*?w=1920&format=webp&quality=85' {
   export default src;
 }
 
-// Generic catch-all for imagetools query params
-declare module '*?w=*' {
+// vite-imagetools width resize directives
+declare module '*?w=600' {
+  const src: string;
+  export default src;
+}
+
+declare module '*?w=800' {
+  const src: string;
+  export default src;
+}
+
+declare module '*?w=1200' {
+  const src: string;
+  export default src;
+}
+
+declare module '*?w=1920' {
   const src: string;
   export default src;
 }
