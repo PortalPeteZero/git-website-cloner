@@ -11,12 +11,12 @@ import { Phone, ArrowRight, Shield, Wrench, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Hero carousel images - professional plumbing work
-import poolPumpRoomComplete from "@/assets/plumbing/pool/pool-pump-room-complete.jpg";
-import poolComplexPipework from "@/assets/plumbing/pool/pool-complex-pipework.jpg";
-import tekaWaterHeater from "@/assets/plumbing/boiler/teka-water-heater.jpg";
-import manifoldNewBrass from "@/assets/plumbing/manifold/manifold-new-brass.jpg";
-import villaGardenIrrigation from "@/assets/services/villa-garden-irrigation.jpg";
-import boilerPipeworkManifold from "@/assets/plumbing/boiler/boiler-pipework-manifold.jpg";
+import poolPumpRoomComplete from "@/assets/plumbing/pool/pool-pump-room-complete.jpg?w=1920";
+import poolComplexPipework from "@/assets/plumbing/pool/pool-complex-pipework.jpg?w=1920";
+import tekaWaterHeater from "@/assets/plumbing/boiler/teka-water-heater.jpg?w=1920";
+import manifoldNewBrass from "@/assets/plumbing/manifold/manifold-new-brass.jpg?w=1920";
+import villaGardenIrrigation from "@/assets/services/villa-garden-irrigation.jpg?w=1920";
+import boilerPipeworkManifold from "@/assets/plumbing/boiler/boiler-pipework-manifold.jpg?w=1920";
 
 const heroImages = [
   { 

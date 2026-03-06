@@ -1,36 +1,36 @@
-import waterLeakImg from "@/assets/services/water-leak-detection.jpg";
-import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg";
-import poolLeakImg from "@/assets/services/pool-leak-detection.jpg";
-import drainDetectionImg from "@/assets/services/drain-detection.jpg";
-import undergroundImg from "@/assets/services/underground-detection.jpg";
-import leakRepairImg from "@/assets/services/leak-repair.jpg";
+import waterLeakImg from "@/assets/services/water-leak-detection.jpg?w=800";
+import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg?w=800";
+import poolLeakImg from "@/assets/services/pool-leak-detection.jpg?w=800";
+import drainDetectionImg from "@/assets/services/drain-detection.jpg?w=800";
+import undergroundImg from "@/assets/services/underground-detection.jpg?w=800";
+import leakRepairImg from "@/assets/services/leak-repair.jpg?w=800";
 
 // Blog-specific images
-import poolBucketTestImg from "@/assets/blog/pool-bucket-test.jpg";
-import thermalUndergroundImg from "@/assets/blog/thermal-underground-leak.jpg";
-import waterMeterImg from "@/assets/blog/water-meter-leak.jpg";
-import risingDampImg from "@/assets/blog/rising-damp-wall.jpg";
-import poolDiverImg from "@/assets/blog/pool-diver-inspection.jpg";
-import lanzaroteWaterHeroImg from "@/assets/blog/lanzarote-water-hero.jpg";
-import lanzaroteTraditionalHouseImg from "@/assets/blog/lanzarote-traditional-house.jpg";
-import lanzaroteAljibeImg from "@/assets/blog/lanzarote-aljibe-cistern.jpg";
-import lanzaroteTankerImg from "@/assets/blog/lanzarote-water-tanker.jpg";
-import lanzaroteSystemHouseImg from "@/assets/blog/lanzarote-water-system-house.png";
-import lanzaroteSystemDiagramImg from "@/assets/blog/lanzarote-water-system-diagram.png";
-import lanzaroteMeterLeakImg from "@/assets/blog/lanzarote-water-meter-leak.png";
+import poolBucketTestImg from "@/assets/blog/pool-bucket-test.jpg?w=800";
+import thermalUndergroundImg from "@/assets/blog/thermal-underground-leak.jpg?w=800";
+import waterMeterImg from "@/assets/blog/water-meter-leak.jpg?w=800";
+import risingDampImg from "@/assets/blog/rising-damp-wall.jpg?w=800";
+import poolDiverImg from "@/assets/blog/pool-diver-inspection.jpg?w=800";
+import lanzaroteWaterHeroImg from "@/assets/blog/lanzarote-water-hero.jpg?w=800";
+import lanzaroteTraditionalHouseImg from "@/assets/blog/lanzarote-traditional-house.jpg?w=800";
+import lanzaroteAljibeImg from "@/assets/blog/lanzarote-aljibe-cistern.jpg?w=800";
+import lanzaroteTankerImg from "@/assets/blog/lanzarote-water-tanker.jpg?w=800";
+import lanzaroteSystemHouseImg from "@/assets/blog/lanzarote-water-system-house.png?w=800";
+import lanzaroteSystemDiagramImg from "@/assets/blog/lanzarote-water-system-diagram.png?w=800";
+import lanzaroteMeterLeakImg from "@/assets/blog/lanzarote-water-meter-leak.png?w=800";
 
 // Emergency leak detection images
-import emergencyLeakWetFloorImg from "@/assets/blog/emergency-leak-wet-floor.jpg";
-import emergencyLeakAcousticImg from "@/assets/blog/emergency-leak-acoustic-detection.jpg";
-import emergencyLeakExcavationImg from "@/assets/blog/emergency-leak-excavation.jpg";
-import emergencyLeakPipeRepairImg from "@/assets/blog/emergency-leak-pipe-repair.jpg";
-import emergencyLeakHoleImg from "@/assets/blog/emergency-leak-hole.jpg";
-import emergencyLeakCctvImg from "@/assets/blog/emergency-leak-cctv.jpg";
+import emergencyLeakWetFloorImg from "@/assets/blog/emergency-leak-wet-floor.jpg?w=800";
+import emergencyLeakAcousticImg from "@/assets/blog/emergency-leak-acoustic-detection.jpg?w=800";
+import emergencyLeakExcavationImg from "@/assets/blog/emergency-leak-excavation.jpg?w=800";
+import emergencyLeakPipeRepairImg from "@/assets/blog/emergency-leak-pipe-repair.jpg?w=800";
+import emergencyLeakHoleImg from "@/assets/blog/emergency-leak-hole.jpg?w=800";
+import emergencyLeakCctvImg from "@/assets/blog/emergency-leak-cctv.jpg?w=800";
 
 // LeakGuard images
-import leakguardFlowDataImg from "@/assets/blog/leakguard-flow-data.png";
-import leakguardGroundBoxImg from "@/assets/blog/leakguard-ground-box.jpg";
-import leakguardMeterInstallImg from "@/assets/blog/leakguard-meter-install.jpg";
+import leakguardFlowDataImg from "@/assets/blog/leakguard-flow-data.png?w=800";
+import leakguardGroundBoxImg from "@/assets/blog/leakguard-ground-box.jpg?w=800";
+import leakguardMeterInstallImg from "@/assets/blog/leakguard-meter-install.jpg?w=800";
 
 // Helper to create image placeholders for markdown content
 export const BLOG_IMAGES = {

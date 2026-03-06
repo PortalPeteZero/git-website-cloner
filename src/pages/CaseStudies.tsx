@@ -8,18 +8,18 @@ import { useTranslation } from "@/i18n/LanguageContext";
 import AllServicesGrid from "@/components/internal-links/AllServicesGrid";
 
 // Import hero and case study images
-import caseStudiesHero from "@/assets/hero/case-studies-hero.jpg";
-import drainDetection1 from "@/assets/case-studies/drain-detection-1.jpg";
-import poolLeak1 from "@/assets/case-studies/pool-leak-1.jpg";
-import pipeInspection1 from "@/assets/case-studies/pipe-inspection-1.jpg";
+import caseStudiesHero from "@/assets/hero/case-studies-hero.jpg?w=1920";
+import drainDetection1 from "@/assets/case-studies/drain-detection-1.jpg?w=800";
+import poolLeak1 from "@/assets/case-studies/pool-leak-1.jpg?w=800";
+import pipeInspection1 from "@/assets/case-studies/pipe-inspection-1.jpg?w=800";
 
 // Emergency leak case study image
-import emergencyLeakAcousticImg from "@/assets/blog/emergency-leak-acoustic-detection.jpg";
+import emergencyLeakAcousticImg from "@/assets/blog/emergency-leak-acoustic-detection.jpg?w=800";
 
 // Import gallery photos for variety
-import photo1 from "@/assets/gallery/photo-1.jpg";
-import photo2 from "@/assets/gallery/photo-2.jpg";
-import photo3 from "@/assets/gallery/photo-3.jpg";
+import photo1 from "@/assets/gallery/photo-1.jpg?w=800";
+import photo2 from "@/assets/gallery/photo-2.jpg?w=800";
+import photo3 from "@/assets/gallery/photo-3.jpg?w=800";
 
 const CaseStudies = () => {
   const { t, isSpanish } = useTranslation();
