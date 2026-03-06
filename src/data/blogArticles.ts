@@ -2462,7 +2462,7 @@ So, get in touch with Canary Detect without hesitation. Before paying for a full
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Insurance & Claims",
-    image: leakRepairImg,
+    image: insuranceHeroImg,
     metaTitle: "Leak Report for Insurance Claims | Lanzarote",
     metaDescription: "5 things your Lanzarote home insurance needs in a leak report. Get your claim approved with the right technical evidence from Canary Detect.",
     keywords: "insurance leak report Lanzarote, home insurance claim Lanzarote, leak detection report, trace and access Lanzarote, insurance claim water damage, leak repair Playa Blanca",
@@ -2471,6 +2471,8 @@ So, get in touch with Canary Detect without hesitation. Before paying for a full
 ## 5 Things Your Lanzarote Home Insurance Needs to See in a Leak Report
 
 Finding a leak in your villa is only half the battle; the second half is ensuring your insurance company covers the costs.
+
+![Rejected insurance claim alongside a simple plumber's invoice — not enough evidence](/assets/blog/insurance-rejected-claim.jpg)
 
 Many homeowners in Lanzarote are surprised to find their claims rejected because they provided a simple plumber's invoice rather than a certified technical report. Have you experienced anything similar?
 
@@ -2492,6 +2494,8 @@ The report needs to detail the secondary damage. Insurance adjusters look for in
 
 ## 4. Digital Photographic Evidence
 
+![Thermal imaging comparison showing hidden moisture behind a wall — the kind of evidence insurers need](/assets/blog/insurance-thermal-evidence.jpg)
+
 A written description is rarely enough, and hence, your report must include high-resolution photos of the specific area, [thermal imaging](/services/damp-moisture-mapping) scans showing moisture patterns, or CCTV footage of internal pipe conditions.
 
 This visual proof confirms that the leak is active and warrants an insurance intervention.
@@ -2503,6 +2507,8 @@ A professional report concludes with a precise roadmap for the fix.
 By pinpointing the exact centimetre of the failure, we enable a surgical [leak repair](/services/leak-repair), which minimises the payout the insurance company has to make for making good the floor or wall after the fix.
 
 ## Get Started Today
+
+![Happy homeowner with an approved insurance claim backed by a professional leak detection report](/assets/blog/insurance-approved-claim.jpg)
 
 So, connect with Canary Detect and get your [free leak confirmation](/services/free-leak-confirmation) today. By leveraging our free leak confirmation test, you can get the hard data you need to start an insurance claim.
 
