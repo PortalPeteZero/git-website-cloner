@@ -43,6 +43,12 @@ import roSystemHeroImg from "@/assets/blog/ro-system-hero.jpg?w=800";
 import roSystemHissingImg from "@/assets/blog/ro-system-hissing.jpg?w=800";
 import roSystemMeterCheckImg from "@/assets/blog/ro-system-meter-check.jpg?w=800";
 
+// Insurance blog images
+import insuranceHeroImg from "@/assets/blog/insurance-hero.jpg?w=800";
+import insuranceRejectedImg from "@/assets/blog/insurance-rejected-claim.jpg?w=800";
+import insuranceThermalImg from "@/assets/blog/insurance-thermal-evidence.jpg?w=800";
+import insuranceApprovedImg from "@/assets/blog/insurance-approved-claim.jpg?w=800";
+
 // Helper to create image placeholders for markdown content
 export const BLOG_IMAGES = {
   lanzaroteTraditionalHouse: lanzaroteTraditionalHouseImg,
@@ -67,6 +73,10 @@ export const BLOG_IMAGES = {
   roSystemHero: roSystemHeroImg,
   roSystemHissing: roSystemHissingImg,
   roSystemMeterCheck: roSystemMeterCheckImg,
+  insuranceHero: insuranceHeroImg,
+  insuranceRejected: insuranceRejectedImg,
+  insuranceThermal: insuranceThermalImg,
+  insuranceApproved: insuranceApprovedImg,
 };
 
 export interface BlogArticle {
@@ -2452,7 +2462,7 @@ So, get in touch with Canary Detect without hesitation. Before paying for a full
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Insurance & Claims",
-    image: leakRepairImg,
+    image: insuranceHeroImg,
     metaTitle: "Leak Report for Insurance Claims | Lanzarote",
     metaDescription: "5 things your Lanzarote home insurance needs in a leak report. Get your claim approved with the right technical evidence from Canary Detect.",
     keywords: "insurance leak report Lanzarote, home insurance claim Lanzarote, leak detection report, trace and access Lanzarote, insurance claim water damage, leak repair Playa Blanca",
@@ -2461,6 +2471,8 @@ So, get in touch with Canary Detect without hesitation. Before paying for a full
 ## 5 Things Your Lanzarote Home Insurance Needs to See in a Leak Report
 
 Finding a leak in your villa is only half the battle; the second half is ensuring your insurance company covers the costs.
+
+![Rejected insurance claim alongside a simple plumber's invoice — not enough evidence](/assets/blog/insurance-rejected-claim.jpg)
 
 Many homeowners in Lanzarote are surprised to find their claims rejected because they provided a simple plumber's invoice rather than a certified technical report. Have you experienced anything similar?
 
@@ -2482,6 +2494,8 @@ The report needs to detail the secondary damage. Insurance adjusters look for in
 
 ## 4. Digital Photographic Evidence
 
+![Thermal imaging comparison showing hidden moisture behind a wall — the kind of evidence insurers need](/assets/blog/insurance-thermal-evidence.jpg)
+
 A written description is rarely enough, and hence, your report must include high-resolution photos of the specific area, [thermal imaging](/services/damp-moisture-mapping) scans showing moisture patterns, or CCTV footage of internal pipe conditions.
 
 This visual proof confirms that the leak is active and warrants an insurance intervention.
@@ -2493,6 +2507,8 @@ A professional report concludes with a precise roadmap for the fix.
 By pinpointing the exact centimetre of the failure, we enable a surgical [leak repair](/services/leak-repair), which minimises the payout the insurance company has to make for making good the floor or wall after the fix.
 
 ## Get Started Today
+
+![Happy homeowner with an approved insurance claim backed by a professional leak detection report](/assets/blog/insurance-approved-claim.jpg)
 
 So, connect with Canary Detect and get your [free leak confirmation](/services/free-leak-confirmation) today. By leveraging our free leak confirmation test, you can get the hard data you need to start an insurance claim.
 
@@ -4632,7 +4648,7 @@ Así que, póngase en contacto con Canary Detect sin dudarlo. Antes de pagar por
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Seguros y Reclamaciones",
-    image: leakRepairImg,
+    image: insuranceHeroImg,
     metaTitle: "Informe de Fugas para Seguros | Lanzarote",
     metaDescription: "5 cosas que el seguro de tu hogar en Lanzarote necesita ver en un informe de fugas. Aprueba tu reclamación con la evidencia técnica adecuada de Canary Detect.",
     keywords: "informe fugas seguro Lanzarote, reclamación seguro hogar Lanzarote, informe detección fugas, trace and access Lanzarote, reclamación seguro daños agua, reparación fugas Playa Blanca",
@@ -4641,6 +4657,8 @@ Así que, póngase en contacto con Canary Detect sin dudarlo. Antes de pagar por
 ## 5 Cosas Que el Seguro de Tu Hogar en Lanzarote Necesita Ver en un Informe de Fugas
 
 Encontrar una fuga en tu villa es solo la mitad de la batalla; la segunda mitad es asegurarse de que tu compañía de seguros cubra los costes.
+
+![Reclamación de seguro rechazada junto a una simple factura de fontanero — no es evidencia suficiente](/assets/blog/insurance-rejected-claim.jpg)
 
 Muchos propietarios en Lanzarote se sorprenden al ver sus reclamaciones rechazadas porque proporcionaron una simple factura de fontanero en lugar de un informe técnico certificado. ¿Te ha pasado algo similar?
 
@@ -4662,6 +4680,8 @@ El informe necesita detallar los daños secundarios. Los peritos de seguros busc
 
 ## 4. Evidencia Fotográfica Digital
 
+![Comparación de imagen térmica mostrando humedad oculta detrás de una pared — el tipo de evidencia que necesitan las aseguradoras](/assets/blog/insurance-thermal-evidence.jpg)
+
 Una descripción escrita rara vez es suficiente, y por eso, tu informe debe incluir fotos de alta resolución del área específica, escaneos de [imagen térmica](/es/servicios/mapeo-humedad) que muestren patrones de humedad, o grabaciones CCTV de las condiciones internas de las tuberías.
 
 Esta prueba visual confirma que la fuga está activa y justifica una intervención del seguro.
@@ -4673,6 +4693,8 @@ Un informe profesional concluye con una hoja de ruta precisa para la reparación
 Al identificar el centímetro exacto de la avería, posibilitamos una [reparación quirúrgica de la fuga](/es/servicios/reparacion-fugas), lo que minimiza el pago que la compañía de seguros debe hacer para reparar el suelo o la pared después de la intervención.
 
 ## Empieza Hoy
+
+![Propietaria feliz con una reclamación de seguro aprobada respaldada por un informe profesional de detección de fugas](/assets/blog/insurance-approved-claim.jpg)
 
 Así que, conéctate con Canary Detect y obtén tu [confirmación gratuita de fugas](/es/servicios/confirmacion-fugas-gratis) hoy. Aprovechando nuestra prueba gratuita de confirmación de fugas, puedes obtener los datos concretos que necesitas para iniciar una reclamación de seguro.
 
