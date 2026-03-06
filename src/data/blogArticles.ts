@@ -32,6 +32,12 @@ import leakguardFlowDataImg from "@/assets/blog/leakguard-flow-data.png?w=800";
 import leakguardGroundBoxImg from "@/assets/blog/leakguard-ground-box.jpg?w=800";
 import leakguardMeterInstallImg from "@/assets/blog/leakguard-meter-install.jpg?w=800";
 
+// Property buying blog images
+import propertyBuyingHeroImg from "@/assets/blog/property-buying-hero.png?w=800";
+import propertyPipeDetectiveImg from "@/assets/blog/property-pipe-detective.png?w=800";
+import propertyMeterSpinningImg from "@/assets/blog/property-meter-spinning.png?w=800";
+import propertyTankInspectionImg from "@/assets/blog/property-tank-inspection.png?w=800";
+
 // Helper to create image placeholders for markdown content
 export const BLOG_IMAGES = {
   lanzaroteTraditionalHouse: lanzaroteTraditionalHouseImg,
