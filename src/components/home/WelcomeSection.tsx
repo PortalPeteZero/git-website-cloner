@@ -142,6 +142,8 @@ const WelcomeSection = () => {
                 className="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
+                width={1200}
+                height={900}
               />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-lg shadow-2xl">

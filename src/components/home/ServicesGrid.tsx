@@ -5,15 +5,15 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 // Only import FIRST image per service for initial render (LCP optimization)
 // Gallery images are loaded lazily on service detail pages
-import drainDetectionImg from "@/assets/services/drain-detection.jpg";
-import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg";
-import undergroundDetectionImg from "@/assets/services/underground-detection.jpg";
-import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg";
-import leakRepairImg from "@/assets/services/leak-repair.jpg";
-import thermalUndergroundLeak from "@/assets/blog/thermal-underground-leak.jpg";
-import waterLeakImg from "@/assets/services/gallery/drain-detection-4.jpg";
-import surveyHeroImg from "@/assets/services/survey/hero-pool-survey.jpg";
-import boilerImg from "@/assets/plumbing/boiler/boiler-installation-wall.jpg";
+import drainDetectionImg from "@/assets/services/drain-detection.jpg?w=800";
+import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg?w=800";
+import undergroundDetectionImg from "@/assets/services/underground-detection.jpg?w=800";
+import poolLeakDetectionImg from "@/assets/services/pool-leak-detection.jpg?w=800";
+import leakRepairImg from "@/assets/services/leak-repair.jpg?w=800";
+import thermalUndergroundLeak from "@/assets/blog/thermal-underground-leak.jpg?w=800";
+import waterLeakImg from "@/assets/services/gallery/drain-detection-4.jpg?w=800";
+import surveyHeroImg from "@/assets/services/survey/hero-pool-survey.jpg?w=800";
+import boilerImg from "@/assets/plumbing/boiler/boiler-installation-wall.jpg?w=800";
 
 const ServicesGrid = forwardRef<HTMLElement>((_, ref) => {
   const { isSpanish } = useLanguage();

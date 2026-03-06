@@ -93,6 +93,8 @@ const CaseStudiesPreview = forwardRef<HTMLElement>((_, ref) => {
                   alt={study.title}
                   loading="lazy"
                   decoding="async"
+                  width={640}
+                  height={360}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
