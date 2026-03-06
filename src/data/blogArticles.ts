@@ -73,6 +73,10 @@ export const BLOG_IMAGES = {
   roSystemHero: roSystemHeroImg,
   roSystemHissing: roSystemHissingImg,
   roSystemMeterCheck: roSystemMeterCheckImg,
+  insuranceHero: insuranceHeroImg,
+  insuranceRejected: insuranceRejectedImg,
+  insuranceThermal: insuranceThermalImg,
+  insuranceApproved: insuranceApprovedImg,
 };
 
 export interface BlogArticle {
