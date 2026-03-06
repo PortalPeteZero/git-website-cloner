@@ -2381,7 +2381,7 @@ Embrace the future of property protection. Secure your home, villa, or business 
     date: "2026-03-06",
     author: "Canary Detect",
     category: "Property Advice",
-    image: waterLeakImg,
+    image: propertyBuyingHeroImg,
     metaTitle: "Leak Survey Before Buying Property Lanzarote",
     metaDescription: "Why a leak survey is vital before buying property in Lanzarote. Protect your investment from hidden pipe bursts and concealed damp with Canary Detect.",
     keywords: "buying property Lanzarote, leak survey Lanzarote, pre-purchase survey, property inspection Lanzarote, hidden leaks property, water leak detection Lanzarote, structural report Lanzarote",
@@ -2399,15 +2399,21 @@ At Canary Detect, we believe that it is crucial to know the condition of the plu
 
 When you purchase a villa, you are not only purchasing the views; you are also inheriting the pipework.
 
+![Hidden pipes beneath a Lanzarote property revealed during a leak survey](/assets/blog/property-pipe-detective.png)
+
 The volcanic soil in Lanzarote tends to move, and this can lead to micro-fractures in the swimming pool pipes and the mains water supply. Due to the high porosity of the soil, a house can have a large pool losing water without any signs of dampness being evident on the surface during a 20-minute viewing.
 
 Without professional [water leak detection in Lanzarote](/services/water-leak-detection), you might be moving into a house that is already wasting thousands of litres of water, leaving you to deal with the first huge bill from Canal Gestión.
+
+![A spinning water meter can indicate a hidden leak in your new property](/assets/blog/property-meter-spinning.png)
 
 ## 3 Things a Standard Building Survey Misses
 
 1. **Underground Pipe Integrity:** A surveyor can see a crack in a wall, but they cannot see a perished T-junction buried three metres under your terrace.
 2. **Internal Drain Condition:** Using CCTV cameras, we can inspect for root intrusion or collapsed pipes that might not cause a backup until the villa is at full occupancy.
 3. **Hidden Moisture Mapping:** We use [thermal imaging](/services/damp-moisture-mapping) to detect cold spots behind freshly painted walls, revealing if a seller is masking a damp problem.
+
+![Inspecting hidden water tanks and infrastructure before purchasing a property](/assets/blog/property-tank-inspection.png)
 
 ## Protect Your Investment By Scheduling a Leak Survey
 
