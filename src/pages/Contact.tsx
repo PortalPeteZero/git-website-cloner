@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import contactHero from "@/assets/hero/contact-hero.jpg";
+import contactHero from "@/assets/hero/contact-hero.jpg?w=1920";
 import SEOHead from "@/components/seo/SEOHead";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { useTranslation } from "@/i18n/LanguageContext";

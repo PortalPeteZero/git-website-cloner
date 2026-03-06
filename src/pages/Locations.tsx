@@ -10,7 +10,7 @@ import { getLocationsData } from "@/data/locationsData";
 import { getContactPath, getHomePath } from "@/i18n/routes";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, ArrowRight } from "lucide-react";
-import titleBg from "@/assets/title-bg.jpg";
+import titleBg from "@/assets/title-bg.jpg?w=1920";
 
 const Locations = () => {
   const { isSpanish } = useTranslation();
