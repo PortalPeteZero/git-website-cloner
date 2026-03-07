@@ -171,7 +171,7 @@ const WelcomeSection = () => {
               {isSpanish 
                 ? "Resumen: Servicios de Detección de Fugas en Lanzarote y las Islas Canarias"
                 : "Summary: Leak Detection Services in Lanzarote and the Canary Islands"}
-            </h3>
+            </h2>
             <p className="text-muted-foreground leading-relaxed">
               {isSpanish
                 ? "Canary Detect ofrece servicios profesionales de detección de fugas en toda Lanzarote y las Islas Canarias, utilizando la última tecnología y un equipo de fontaneros totalmente cualificados para localizar fugas de forma rápida y precisa. Servicios de emergencia, pruebas gratuitas de confirmación de fugas e informes detallados aprobados por seguros están disponibles."
