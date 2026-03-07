@@ -70,13 +70,6 @@ const getTechnologies = (isSpanish: boolean) => [
     name: isSpanish ? "Inspección CCTV Interna" : "Internal CCTV Inspection",
     subtitle: isSpanish ? "Inspección Visual de Tuberías" : "Visual Pipe Inspection",
     icon: Video,
-    description: isSpanish
-      ? "6 sistemas de cámaras para todos los tamaños de tuberías desde 25mm hasta 300mm. Inspeccionamos desagües, alcantarillado y tuberías subterráneas para encontrar bloqueos, daños e infiltraciones."
-      : "Internal CCTV inspection allows us to see inside your pipework and visually identify faults. We carry four different camera systems to suit different pipe diameters. Flexible cameras navigate around bends to access hard-to-reach areas, while more rigid cameras travel greater distances through longer pipe runs.",
-    bestFor: isSpanish ? "Inspecciones de desagües, bloqueos, daños estructurales" : "Reveals the true layout of pipework including T-junctions and hidden branches. Identifies cracks, corrosion, joint failures, and root intrusion.",
-    limitations: isSpanish
-      ? "El acceso puede estar limitado por tuberías estrechas, codos de 90 grados, escombros o agua estancada."
-      : "Access can be limited by narrow pipes, sharp 90-degree bends, T-junctions, debris, or standing water.",
     color: "from-amber-500 to-yellow-600",
   },
 ];
@@ -93,6 +86,19 @@ const Technology = () => {
   const technologies = getTechnologies(isSpanish);
   const beforeAfterImages = getBeforeAfterImages(isSpanish);
   
+  // CCTV description and bestFor with internal links - rendered separately
+  const cctvDescription = isSpanish
+    ? <>6 sistemas de cámaras para todos los tamaños de tuberías desde 25mm hasta 300mm. Inspeccionamos desagües, alcantarillado y tuberías subterráneas para encontrar bloqueos, daños e infiltraciones, similar al equipo especializado usado en nuestro <Link to="/es/servicios/deteccion-desagues" className="text-primary underline hover:text-primary/80 transition-colors">servicio dedicado de inspección CCTV de desagües y tuberías en Lanzarote</Link>.</>
+    : <>Internal CCTV inspection allows us to see inside your pipework and visually identify faults. We carry four different camera systems to suit different pipe diameters, similar to the specialised equipment used in our dedicated <Link to="/services/drain-detection" className="text-primary underline hover:text-primary/80 transition-colors">drain and pipe CCTV survey service in Lanzarote</Link>. Flexible cameras navigate around bends to access hard-to-reach areas, while more rigid cameras travel greater distances through longer pipe runs.</>;
+  
+  const cctvBestFor = isSpanish
+    ? <>Revela el diseño real de las tuberías incluyendo uniones en T y ramificaciones ocultas. Identifica grietas, corrosión, fallos en juntas e intrusión de raíces, y proporciona el nivel de detalle necesario para <Link to="/es/servicios/inspeccion-tuberias" className="text-primary underline hover:text-primary/80 transition-colors">inspecciones completas CCTV de desagües y tuberías</Link>.</>
+    : <>Reveals the true layout of pipework including T-junctions and hidden branches. Identifies cracks, corrosion, joint failures, and root intrusion, and provides the level of detail needed for comprehensive <Link to="/services/pipe-inspection" className="text-primary underline hover:text-primary/80 transition-colors">CCTV drain and pipe inspection surveys</Link>.</>;
+
+  const cctvLimitations = isSpanish
+    ? "El acceso puede estar limitado por tuberías estrechas, codos de 90 grados, escombros o agua estancada."
+    : "Access can be limited by narrow pipes, sharp 90-degree bends, T-junctions, debris, or standing water.";
+
   return (
     <Layout>
       <SEOHead 
@@ -101,6 +107,12 @@ const Technology = () => {
         keywords={t('meta.technology.keywords')}
         canonical={isSpanish ? "https://canary-detect.com/es/tecnologia" : "https://canary-detect.com/technology"}
       />
+
+      {/* SR-only H1 for SEO */}
+      <h1 className="sr-only">
+        {isSpanish ? "Detección de Fugas Lanzarote" : "Leak Detection Lanzarote"}
+      </h1>
+
       {/* Hero Section */}
       <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-start overflow-hidden">
         <div className="absolute inset-0">
@@ -118,25 +130,21 @@ const Technology = () => {
             <span className="inline-block text-white font-semibold text-sm uppercase tracking-[0.1em] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
               {isSpanish ? "Tecnología de Los Cazafugas" : "The Leaky Finders' Technology"}
             </span>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
               {isSpanish ? (
-                <>Detección de Fugas <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Multi-Tecnología Profesional</span></>
+                <>Detección de Fugas de Agua <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Multi-Tecnología Profesional</span></>
               ) : (
-                <>Professional Multi-Technology <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Leak Detection Lanzarote</span></>
+                <>Professional Multi-Technology <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Water Leak Detection Lanzarote</span></>
               )}
-            </h1>
+            </h2>
             <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
               {isSpanish ? (
                 <>
-                  ¿Tiene dificultades para encontrar de dónde viene la fuga? Muchas empresas usan solo una tecnología, pero ningún método es 100% preciso. 
-                  Por eso Los Cazafugas siempre confirmamos la ubicación usando 
-                  al menos dos tecnologías independientes para nuestros <Link to="/es/servicios" className="underline hover:text-primary transition-colors">servicios de detección de fugas</Link>.
+                  ¿Busca detección de fugas experta en Lanzarote? Canary Detect se especializa en encontrar y reparar fugas en toda la isla.
                 </>
               ) : (
                 <>
-                  Struggling to find where water is leaking from? Many leak detection companies rely on just one technology, but no single method is 100% accurate. 
-                  That's why The Leaky Finders always confirm a leak location using 
-                  at least two independent technologies for our <Link to="/services" className="underline hover:text-primary transition-colors">leak detection services</Link>.
+                  Looking for expert leak detection in Lanzarote? Canary Detect specializes in finding and repairing leaks across the island.
                 </>
               )}
             </p>
@@ -171,6 +179,144 @@ const Technology = () => {
         </div>
       </section>
 
+      {/* Introduction to Leak Detection */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+              {isSpanish ? "Introducción a la Detección de Fugas" : "Introduction to Leak Detection"}
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              {isSpanish
+                ? "Esta página es para propietarios y empresas en Lanzarote que buscan servicios fiables y no invasivos de detección y reparación de fugas para proteger sus propiedades y conservar agua."
+                : "This page is for homeowners and businesses in Lanzarote seeking reliable, non-invasive leak detection and repair services to protect their properties and conserve water."}
+            </p>
+
+            <h3 className="font-heading text-2xl font-bold mb-3">
+              {isSpanish ? "Por Qué Importa la Detección Temprana de Fugas" : "Why Early Leak Detection Matters"}
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              {isSpanish
+                ? "La detección de fugas de agua es un servicio esencial para propietarios y empresas en Lanzarote y las Islas Canarias, ayudando a identificar y resolver fugas antes de que se conviertan en reparaciones costosas o daños significativos a la propiedad. La detección de fugas es especialmente crítica en Lanzarote debido a la escasez de agua y la necesidad de proteger valiosas inversiones inmobiliarias. Al detectar fugas temprano, ayudamos a nuestros clientes a ahorrar dinero, reducir costes de reparación y proteger sus propiedades de mayores interrupciones."
+                : "Water leak detection is an essential service for homeowners and businesses across Lanzarote and the Canary Islands, helping to identify and resolve leaks before they escalate into costly repairs or significant property damage. Leak detection is especially critical in Lanzarote due to water scarcity and the need to protect valuable property investments. By detecting leaks early, we help our clients save money, reduce repair costs, and protect their properties from further disruption."}
+            </p>
+
+            <h3 className="font-heading text-2xl font-bold mb-3">
+              {isSpanish ? "Nuestro Enfoque de Detección de Fugas" : "Our Approach to Leak Detection"}
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              {isSpanish
+                ? "En Canary Detect, también conocidos como Los Cazafugas, nuestro equipo experto se especializa en localizar fugas en piscinas, sistemas de agua y tuberías subterráneas, utilizando tecnología avanzada para garantizar resultados rápidos y precisos. Canary Detect y Leakbusters son servicios locales especializados de habla inglesa que ofrecen servicios de detección y reparación de fugas en Lanzarote."
+                : "At Canary Detect, also known as The Leaky Finders, our expert team specializes in pinpointing leaks in pools, water systems, and underground pipes, using advanced technology to ensure fast, accurate results. Canary Detect and Leakbusters are specialized, English-speaking local services offering leak detection and repair services in Lanzarote."}
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              {isSpanish
+                ? "Nuestra empresa ha construido una reputación de excelencia en detección y reparación de fugas, con más de 40 años de experiencia combinada y una tasa de éxito comprobada del 99%. Tratamos cada trabajo de detección de fugas con un enfoque profesional y dedicado, enfatizando un servicio cuidadoso y exhaustivo para garantizar la satisfacción del cliente y la precisión. Canary Detect ofrece una garantía sin riesgo con nuestra política 'Sin Encontrar, Sin Pagar'. Entendemos que cada propiedad es única y cada fuga presenta sus propios desafíos. Por eso utilizamos una combinación de métodos no invasivos—como dispositivos de escucha acústica e imagen térmica—para encontrar fugas sin daños innecesarios a su villa o local comercial. Nuestro enfoque significa menos conjeturas, mínima interrupción y soluciones más efectivas para los problemas de su sistema de agua."
+                : "Our company has built a reputation for excellence in leak detection and repair, with over 40 years of combined experience and a proven 99% success rate. We treat each leak detection job with a professional and dedicated approach, emphasizing careful and thorough service to ensure customer satisfaction and accuracy. Canary Detect offers a risk-free guarantee with a 'No Find, No Fee' policy. We understand that every property is unique, and every leak presents its own challenges. That's why we use a combination of non-invasive methods—such as acoustic listening devices and thermal imaging—to find leaks without unnecessary damage to your villa or business premises. Our approach means less guesswork, minimal disruption, and more effective solutions for your water system problems."}
+            </p>
+
+            <h3 className="font-heading text-2xl font-bold mb-3">
+              {isSpanish ? "Compromiso con el Servicio al Cliente" : "Customer Service Commitment"}
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              {isSpanish
+                ? "En Canary Detect, nos enorgullecemos de ofrecer un servicio al cliente de primera junto con experiencia de vanguardia. Nuestro equipo trata cada trabajo con cuidado y atención al detalle, asegurando que las grietas, fugas y otros problemas se reparen rápida y eficientemente. Los comentarios positivos y testimonios de nuestros clientes reflejan nuestro compromiso de proporcionar respuestas, apoyo y tranquilidad durante todo el proceso."
+                : "At Canary Detect, we pride ourselves on delivering good, old-fashioned customer service alongside cutting-edge expertise. Our team treats every job with care and attention to detail, ensuring that cracks, leaks, and other issues are repaired quickly and efficiently. The positive comments and testimonials from our clients reflect our commitment to providing answers, support, and peace of mind throughout the process."}
+            </p>
+
+            <h3 className="font-heading text-2xl font-bold mb-3">
+              {isSpanish ? "Inspecciones Gratuitas y Soporte" : "Free Surveys and Support"}
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              {isSpanish
+                ? "Ya sea que esté lidiando con una piscina con fugas, grietas ocultas en su sistema de agua o aumentos inexplicables en su factura de agua, nuestros expertos están aquí para ayudar. Ofrecemos inspecciones gratuitas para evaluar su propiedad, proporcionar recomendaciones claras y trabajar con usted para encontrar la mejor solución, ahorrándole tiempo, dinero y estrés. Si tiene preguntas o quiere saber más sobre cómo podemos ayudarle, no dude en ponerse en contacto con nuestro amable equipo. Deje que Canary Detect llene los vacíos en la protección de su propiedad y asegure que su hogar o negocio se mantenga seguro, seco y sin preocupaciones."
+                : "Whether you're dealing with a leaky pool, hidden cracks in your water system, or unexplained increases in your water bill, our experts are here to help. We offer free surveys to assess your property, provide clear recommendations, and work with you to find the best solution—saving you time, money, and stress. If you have questions or want to learn more about how we can help, don't hesitate to get in touch with our friendly team. Let Canary Detect fill the gaps in your property's protection and ensure your home or business stays safe, dry, and worry-free."}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Common Leak Problems */}
+      <section className="py-12 md:py-16 bg-muted/30">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+              {isSpanish ? "Problemas Comunes de Fugas" : "Common Leak Problems"}
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              {isSpanish
+                ? "Vivir en Lanzarote y las Islas Canarias significa disfrutar de un clima hermoso y propiedades impresionantes, pero también trae desafíos únicos en lo que respecta a fugas de agua. En Canary Detect, nuestro equipo de expertos—conocidos como Los Cazafugas—ha visto de primera mano cómo incluso una pequeña fuga puede convertirse rápidamente en un gran problema, generando altos costes de reparación y pérdida innecesaria de agua."
+                : "Living in Lanzarote and the Canary Islands means enjoying beautiful weather and stunning properties, but it also brings unique challenges when it comes to water leaks. At Canary Detect, our team of experts—known as The Leaky Finders—has seen firsthand how even a small leak can quickly turn into a big problem, leading to high repair costs and unnecessary water loss."}
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              {isSpanish ? "Algunos de los problemas de fugas más comunes que encontramos incluyen:" : "Some of the most common leak problems we encounter include:"}
+            </p>
+
+            <div className="space-y-6 mb-8">
+              <div className="bg-card border border-border rounded-xl p-6">
+                <h3 className="font-heading font-bold text-lg mb-2">
+                  {isSpanish ? "Fugas en Piscinas" : "Pool Leaks"}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {isSpanish
+                    ? "Las grietas en las estructuras de piscinas o las tuberías defectuosas pueden hacer que el agua se escape, dificultando el mantenimiento de su piscina y aumentando sus facturas de agua. La detección temprana de fugas de agua es crucial para prevenir daños mayores y reparaciones costosas."
+                    : "Cracks in pool structures or faulty plumbing can cause water to escape, making your pool difficult to maintain and driving up your water bills. Early water leak detection is crucial to prevent further damage and costly repairs."}
+                </p>
+              </div>
+
+              <div className="bg-card border border-border rounded-xl p-6">
+                <h3 className="font-heading font-bold text-lg mb-2">
+                  {isSpanish ? "Fugas en Tuberías Subterráneas" : "Underground Pipe Leaks"}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {isSpanish
+                    ? "Ocultas bajo jardines, caminos de entrada o patios, estas fugas pueden pasar desapercibidas durante semanas o meses. A menudo resultan en manchas de humedad, hundimiento o aumentos inexplicables en el consumo de agua—problemas que pueden ser caros de arreglar si no se detectan a tiempo."
+                    : "Hidden beneath gardens, driveways, or patios, these leaks can go unnoticed for weeks or months. They often result in damp patches, subsidence, or unexplained increases in water usage—issues that can be expensive to fix if not caught early."}
+                </p>
+              </div>
+
+              <div className="bg-card border border-border rounded-xl p-6">
+                <h3 className="font-heading font-bold text-lg mb-2">
+                  {isSpanish ? "Fugas en Villas y Casas Vacacionales" : "Leaks in Villas and Holiday Homes"}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {isSpanish
+                    ? "Las propiedades en Lanzarote a menudo quedan desocupadas durante largos períodos, lo que facilita que las fugas se desarrollen sin ser detectadas. Esto puede causar daños estructurales, moho y mayores costes de reparación cuando finalmente se descubre el problema."
+                    : "Properties in Lanzarote are often left unoccupied for long periods, making it easy for leaks to develop unnoticed. This can lead to structural damage, mold, and higher repair costs when the problem is finally discovered."}
+                </p>
+              </div>
+
+              <div className="bg-card border border-border rounded-xl p-6">
+                <h3 className="font-heading font-bold text-lg mb-2">
+                  {isSpanish ? "Fugas en el Sistema" : "System Leaks"}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {isSpanish
+                    ? "Ya sea una junta defectuosa, una tubería corroída o una grieta oculta en su sistema de agua, estas fugas pueden interrumpir su rutina diaria y causar daños significativos a la propiedad si no se abordan rápidamente."
+                    : "Whether it's a faulty joint, corroded pipe, or a hidden crack in your water system, these leaks can disrupt your daily routine and cause significant property damage if not addressed promptly."}
+                </p>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed">
+              {isSpanish
+                ? "Nuestros expertos en Canary Detect utilizan métodos avanzados de detección de fugas para encontrar y solucionar estos problemas rápidamente, minimizando las interrupciones y ahorrándole dinero. Al confiar en nuestro equipo experimentado, puede proteger su propiedad, evitar costes de reparación innecesarios y asegurar que su sistema de agua funcione correctamente. Si sospecha de una fuga o quiere verificar su propiedad en busca de problemas ocultos, póngase en contacto con Canary Detect—la empresa de detección de fugas de confianza en Lanzarote y las Islas Canarias."
+                : "Our experts at Canary Detect use advanced leak detection methods to find and fix these problems quickly, minimizing disruption and saving you money. By trusting our experienced team, you can protect your property, avoid unnecessary repair costs, and ensure your water system is running smoothly. If you suspect a leak or want to check your property for hidden issues, get in touch with Canary Detect—the trusted leak detection company in Lanzarote and the Canary Islands."}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Technologies Detail */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4 md:px-6">
@@ -191,64 +337,67 @@ const Technology = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {technologies.map((tech, index) => (
-              <motion.div
-                key={tech.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                whileHover={{ y: -6 }}
-                className="group bg-card border-2 border-border hover:border-primary/30 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300"
-              >
-                {/* Header with Icon */}
-                <div className="p-8 pb-6">
-                  <div className="flex items-start gap-5">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${tech.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <tech.icon className="h-8 w-8 text-white" />
+            {technologies.map((tech, index) => {
+              const isCCTV = tech.name === (isSpanish ? "Inspección CCTV Interna" : "Internal CCTV Inspection");
+              return (
+                <motion.div
+                  key={tech.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  whileHover={{ y: -6 }}
+                  className="group bg-card border-2 border-border hover:border-primary/30 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300"
+                >
+                  {/* Header with Icon */}
+                  <div className="p-8 pb-6">
+                    <div className="flex items-start gap-5">
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${tech.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                        <tech.icon className="h-8 w-8 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-heading font-bold text-2xl text-foreground group-hover:text-primary transition-colors">
+                          {tech.name}
+                        </h3>
+                        <p className="text-primary text-sm font-semibold uppercase tracking-wide mt-1">
+                          {tech.subtitle}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-heading font-bold text-2xl text-foreground group-hover:text-primary transition-colors">
-                        {tech.name}
-                      </h3>
-                      <p className="text-primary text-sm font-semibold uppercase tracking-wide mt-1">
-                        {tech.subtitle}
+                    
+                    <p className="text-muted-foreground leading-relaxed mt-5 max-w-none">
+                      {isCCTV ? cctvDescription : tech.description}
+                    </p>
+                  </div>
+
+                  {/* Best For & Limitations */}
+                  <div className="grid sm:grid-cols-2 gap-4 p-8 pt-0">
+                    <div className="bg-green-500/5 border-l-4 border-green-500 rounded-r-lg p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <span className="font-heading font-bold text-xs uppercase tracking-wide text-green-700">
+                          {isSpanish ? "Ideal Para" : "Best For"}
+                        </span>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {isCCTV ? cctvBestFor : tech.bestFor}
+                      </p>
+                    </div>
+                    
+                    <div className="bg-amber-500/5 border-l-4 border-amber-500 rounded-r-lg p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <AlertCircle className="h-4 w-4 text-amber-600" />
+                        <span className="font-heading font-bold text-xs uppercase tracking-wide text-amber-700">
+                          {isSpanish ? "Limitaciones" : "Limitations"}
+                        </span>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {isCCTV ? cctvLimitations : tech.limitations}
                       </p>
                     </div>
                   </div>
-                  
-                  <p className="text-muted-foreground leading-relaxed mt-5 max-w-none">
-                    {tech.description}
-                  </p>
-                </div>
-
-                {/* Best For & Limitations */}
-                <div className="grid sm:grid-cols-2 gap-4 p-8 pt-0">
-                  <div className="bg-green-500/5 border-l-4 border-green-500 rounded-r-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                      <span className="font-heading font-bold text-xs uppercase tracking-wide text-green-700">
-                        {isSpanish ? "Ideal Para" : "Best For"}
-                      </span>
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {tech.bestFor}
-                    </p>
-                  </div>
-                  
-                  <div className="bg-amber-500/5 border-l-4 border-amber-500 rounded-r-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <AlertCircle className="h-4 w-4 text-amber-600" />
-                      <span className="font-heading font-bold text-xs uppercase tracking-wide text-amber-700">
-                        {isSpanish ? "Limitaciones" : "Limitations"}
-                      </span>
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {tech.limitations}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
