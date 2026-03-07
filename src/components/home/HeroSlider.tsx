@@ -272,7 +272,11 @@ const HeroSlider = () => {
   return (
     <section className="relative h-[550px] md:h-[650px] lg:h-[750px] overflow-hidden">
       {/* SEO H1 - visible to crawlers via prerendered HTML, visually hidden */}
-      <h1 className="sr-only">Canary Detect – Leak Detection Experts in Lanzarote &amp; Canary Islands</h1>
+      <h1 className="sr-only">
+        {isSpanish 
+          ? "Canary Detect: Servicios de Detección de Fugas Lanzarote" 
+          : "Canary Detect: Leak Detection Services Lanzarote"}
+      </h1>
       {/* Background Images with Carousel */}
       <AnimatePresence mode="wait">
         <motion.div

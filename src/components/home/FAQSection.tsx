@@ -138,8 +138,8 @@ const FAQSection = forwardRef<HTMLElement>((_, ref) => {
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {isSpanish
-                    ? "Sí, Canary Detect ofrece una prueba gratuita de confirmación de fugas para evaluar su sistema y comprobar si hay fugas antes de reservar una inspección completa. Esto le ayuda a saber si hay una fuga sin ningún compromiso."
-                    : "Yes, Canary Detect offers a free leak confirmation test to assess your system and check for leaks before booking a full survey. This helps you understand if a leak is present without any obligation."}
+                    ? "Sí, Canary Detect ofrece una prueba gratuita de confirmación de fugas para evaluar su sistema y comprobar si hay fugas antes de reservar una inspección completa. Esta prueba está diseñada para darle claridad y confianza antes de comprometerse con una inspección completa."
+                    : "Yes, Canary Detect offers a free leak confirmation test to assess your system and check for leaks before booking a full survey. This test is designed to give you clarity and confidence before committing to a full inspection."}
                 </p>
               </div>
               <div className="bg-muted/50 rounded-lg p-4 border border-border">

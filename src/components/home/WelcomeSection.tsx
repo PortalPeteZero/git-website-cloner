@@ -24,7 +24,16 @@ const WelcomeSection = () => {
     "Competitive pricing",
   ];
 
-  // Helper for language-aware routes
+  const techBullets = isSpanish ? [
+    { bold: "Tecnología de imagen térmica", text: " se utiliza para detectar anomalías de temperatura causadas por fugas de agua." },
+    { bold: "Sensores acústicos", text: " detectan el sonido distintivo del agua escapando de tuberías presurizadas." },
+    { bold: "Tecnología de gas trazador", text: " presuriza las tuberías con una mezcla segura de nitrógeno/hidrógeno para localizar fugas." },
+  ] : [
+    { bold: "Thermal imaging technology", text: " is used to detect temperature anomalies caused by leaking water." },
+    { bold: "Acoustic sensors", text: " detect the distinctive sound of water escaping from pressurized pipes." },
+    { bold: "Tracer gas technology", text: " pressurizes pipes with a safe nitrogen/hydrogen mix to locate leaks." },
+  ];
+
   const getRoute = (enPath: string, esPath: string) => isSpanish ? esPath : enPath;
 
   return (
@@ -50,48 +59,45 @@ const WelcomeSection = () => {
             </span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-2 text-canary-navy">
               {isSpanish 
-                ? "Servicios Profesionales de Detección de Fugas en Lanzarote"
-                : "Professional Leak Detection Services in Lanzarote"}
+                ? "Servicios de Detección de Fugas en Lanzarote"
+                : "Leak Detection Services in Lanzarote"}
             </h2>
             <p className="text-primary font-semibold italic mb-6">
               {isSpanish ? '"Los Cazafugas"' : '"The Leaky Finders"'}
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-6 max-w-none">
+
+            <p className="text-muted-foreground leading-relaxed mb-4 max-w-none">
               {isSpanish ? (
                 <>
-                  Canary Detect ofrece <Link to="/es/servicios" className="text-primary hover:underline">servicios profesionales de detección de fugas</Link> en toda Lanzarote.
-                  Nuestro equipo de expertos utiliza la <Link to="/es/tecnologia" className="text-primary hover:underline">última tecnología y equipos</Link> para localizar fugas de forma rápida 
-                  y precisa, ayudándole a ahorrar tiempo, dinero y prevenir más daños a su propiedad.
+                  Canary Detect ofrece <Link to="/es/servicios" className="text-primary hover:underline">servicios profesionales de detección de fugas</Link> en toda Lanzarote y las Islas Canarias, utilizando la última tecnología y un equipo de fontaneros totalmente cualificados para localizar fugas de forma rápida y precisa.
                 </>
               ) : (
                 <>
-                  Canary Detect provides professional <Link to="/services" className="text-primary hover:underline">leak detection services</Link> across Lanzarote.
-                  Our team of experts uses the <Link to="/technology" className="text-primary hover:underline">latest technology and equipment</Link> to locate leaks quickly 
-                  and accurately, helping you save time, money, and prevent further damage to your property.
+                  Canary Detect provides professional <Link to="/services" className="text-primary hover:underline">leak detection services</Link> across Lanzarote and the Canary Islands, using the latest technology and a team of fully qualified plumbers to quickly and accurately locate leaks.
                 </>
               )}
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-6 max-w-none">
+
+            <p className="text-muted-foreground leading-relaxed mb-4 max-w-none">
               {isSpanish ? (
                 <>
-                  Nuestros servicios están diseñados para propietarios, administradores de propiedades y empresas en Lanzarote e Islas Canarias que desean proteger sus propiedades del daño por agua y reparaciones costosas. La detección de fugas es esencial para prevenir daños a la propiedad, ahorrar dinero en reparaciones y facturas de agua, y garantizar la seguridad e integridad de su propiedad.
+                  Los Cazafugas ofrecen servicios profesionales de detección de fugas de agua y piscinas en toda Lanzarote, cubriendo todas las áreas de servicio incluyendo Playa Blanca, Puerto del Carmen, Costa Teguise y Arrecife. Nuestros servicios son ideales para propietarios, administradores de propiedades y empresas que buscan detección fiable de fugas en Lanzarote y las Islas Canarias. Atendemos tanto a clientes residenciales como comerciales en toda la zona, ofreciendo <Link to="/es/blog/deteccion-fugas-emergencia-reparacion-lanzarote" className="text-primary hover:underline">detección y reparación de fugas de emergencia en Lanzarote</Link> cuando surgen problemas urgentes.
                 </>
               ) : (
                 <>
-                  Our services are designed for homeowners, property managers, and businesses across Lanzarote and the Canary Islands who want to protect their properties from water damage and costly repairs. Leak detection is essential to prevent property damage, save money on repairs and water bills, and ensure the safety and integrity of your property.
+                  The Leaky Finders provide professional water and pool leak detection services across Lanzarote, covering all service areas including Playa Blanca, Puerto del Carmen, Costa Teguise, and Arrecife. Our services are ideal for homeowners, property managers, and businesses seeking reliable leak detection in Lanzarote and the Canary Islands. We serve both residential and commercial customers throughout the area, offering <Link to="/blog/emergency-leak-detection-repair-lanzarote" className="text-primary hover:underline">emergency leak detection and repair in Lanzarote</Link> when urgent issues arise.
                 </>
               )}
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8 max-w-none">
+
+            <p className="text-muted-foreground leading-relaxed mb-6 max-w-none">
               {isSpanish ? (
                 <>
-                  Ya sea que tenga una <Link to="/es/servicios/deteccion-fugas-piscinas" className="text-primary hover:underline">fuga de piscina</Link>, <Link to="/es/servicios/deteccion-fugas-agua" className="text-primary hover:underline">fuga de tubería de agua</Link>, o necesite <Link to="/es/servicios/deteccion-subterranea" className="text-primary hover:underline">detección de tuberías subterráneas</Link>, 
-                  tenemos la experiencia y el equipo para encontrar el problema y proporcionar soluciones de detección y reparación de fugas de emergencia.
+                  Nuestro equipo utiliza <Link to="/es/tecnologia" className="text-primary hover:underline">más de €80.000 en equipos especializados</Link> incluyendo imagen térmica, sensores acústicos y gas trazador para encontrar fugas de agua, fugas de piscinas y fugas en tuberías subterráneas con precisión centimétrica, protegiendo todo el sistema de fontanería de su propiedad. La detección temprana de fugas garantiza la seguridad de su propiedad y sus ocupantes al prevenir daños por agua y peligros relacionados. Canary Detect atiende toda Lanzarote con tiempos de respuesta rápidos.
                 </>
               ) : (
                 <>
-                  Whether you have a <Link to="/services/pool-leak-detection" className="text-primary hover:underline">swimming pool leak</Link>, <Link to="/services/water-leak-detection" className="text-primary hover:underline">water pipe leak</Link>, or need <Link to="/services/underground-detection" className="text-primary hover:underline">underground pipe detection</Link>, 
-                  we have the expertise and equipment to find the problem and provide emergency leak detection and repair solutions.
+                  Our team uses <Link to="/technology" className="text-primary hover:underline">€80,000+ of specialist equipment</Link> including thermal imaging, acoustic sensors and tracer gas to find water leaks, swimming pool leaks and underground pipe leaks with centimetre accuracy, protecting the entire plumbing system of your property. Early leak detection ensures the safety of your property and its occupants by preventing water damage and related hazards. Canary Detect serves all of Lanzarote with fast response times.
                 </>
               )}
             </p>
@@ -152,6 +158,61 @@ const WelcomeSection = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Summary section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-16 max-w-4xl mx-auto"
+        >
+          <div className="bg-muted/50 rounded-xl p-8 border border-border">
+            <h3 className="font-heading text-xl md:text-2xl font-bold mb-4 text-canary-navy">
+              {isSpanish 
+                ? "Resumen: Servicios de Detección de Fugas en Lanzarote y las Islas Canarias"
+                : "Summary: Leak Detection Services in Lanzarote and the Canary Islands"}
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              {isSpanish
+                ? "Canary Detect ofrece servicios profesionales de detección de fugas en toda Lanzarote y las Islas Canarias, utilizando la última tecnología y un equipo de fontaneros totalmente cualificados para localizar fugas de forma rápida y precisa. Servicios de emergencia, pruebas gratuitas de confirmación de fugas e informes detallados aprobados por seguros están disponibles."
+                : "Canary Detect provides professional leak detection services across Lanzarote and the Canary Islands, using the latest technology and a team of fully qualified plumbers to quickly and accurately locate leaks. Emergency services, free leak confirmation tests, and detailed insurance-approved reports are available."}
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Introduction to Our Services */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-12 max-w-4xl mx-auto"
+        >
+          <h3 className="font-heading text-xl md:text-2xl font-bold mb-4 text-canary-navy">
+            {isSpanish ? "Introducción a Nuestros Servicios" : "Introduction to Our Services"}
+          </h3>
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            {isSpanish
+              ? "En Canary Detect, nos especializamos en ofrecer servicios profesionales de detección de fugas adaptados a las necesidades de propietarios, administradores de propiedades y empresas en todas las Islas Canarias. Nuestro equipo de expertos aprovecha la última tecnología de vanguardia—incluyendo imagen térmica, sensores acústicos y tecnología de gas trazador—para realizar inspecciones de detección de fugas exhaustivas con una precisión inigualable."
+              : "At Canary Detect, we specialize in delivering professional leak detection services tailored to the needs of homeowners, property managers, and businesses throughout the Canary Islands. Our expert team leverages the latest cutting-edge technology—including thermal imaging, acoustic sensors, and tracer gas technology—to conduct comprehensive leak detection surveys with unrivalled accuracy."}
+          </p>
+          
+          <ul className="space-y-3 mb-6">
+            {techBullets.map((bullet, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">{bullet.bold}</strong>{bullet.text}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-muted-foreground leading-relaxed">
+            {isSpanish
+              ? "Entendemos lo crucial que es identificar las fugas de agua a tiempo, ya que esto no solo previene el desperdicio de agua sino que también protege su propiedad de daños y reparaciones costosas. Nuestros servicios están diseñados para darle tranquilidad, asegurando que las fugas ocultas se detecten con precisión centimétrica y se aborden de manera eficiente. Con nuestra tecnología avanzada y amplia experiencia, puede confiar en Canary Detect para proteger su propiedad y ofrecer resultados en los que puede confiar."
+              : "We understand how crucial it is to identify water leaks early, as this not only prevents wasted water but also protects your property from costly damage and repairs. Our services are designed to give you peace of mind, ensuring that hidden leaks are detected with centimetre accuracy and addressed efficiently. With our advanced technology and extensive experience, you can trust Canary Detect to safeguard your property and deliver results you can rely on."}
+          </p>
+        </motion.div>
       </div>
     </section>
   );

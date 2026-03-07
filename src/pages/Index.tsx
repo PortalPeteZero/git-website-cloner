@@ -13,10 +13,12 @@ import LoadingFallback from "@/components/LoadingFallback";
 
 // Lazy load below-the-fold components for faster initial render
 const ServicesGrid = lazy(() => import("@/components/home/ServicesGrid"));
+const PricingHomepageSection = lazy(() => import("@/components/home/PricingHomepageSection"));
 const TechnologySection = lazy(() => import("@/components/home/TechnologySection"));
 const HowItWorksSection = lazy(() => import("@/components/home/HowItWorksSection"));
 
 const CaseStudiesPreview = lazy(() => import("@/components/home/CaseStudiesPreview"));
+const HomepageSEOContent = lazy(() => import("@/components/home/HomepageSEOContent"));
 const FAQSection = lazy(() => import("@/components/home/FAQSection"));
 const ProblemFAQSection = lazy(() => import("@/components/home/ProblemFAQSection"));
 const GoogleReviewsHighlight = lazy(() => import("@/components/home/GoogleReviewsHighlight"));
@@ -30,8 +32,8 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead 
-        title={isSpanish ? "Canary Detect | Detección Fugas Agua Lanzarote" : "Canary Detect | Water & Pool Leak Detection Lanzarote"}
-        description={isSpanish ? "Detección experta de fugas en Lanzarote. Fugas de agua, fugas de piscinas, tuberías subterráneas. Respuesta rápida, tecnología avanzada." : "Expert leak detection in Lanzarote. Water leaks, pool leaks, underground pipes. Fast response, advanced technology."}
+        title={isSpanish ? "Canary Detect | Detección de Fugas Lanzarote e Islas Canarias" : "Canary Detect | Leak Detection Services Lanzarote"}
+        description={isSpanish ? "Servicios profesionales de detección de fugas en Lanzarote y las Islas Canarias. Fugas de agua, fugas de piscinas, tuberías subterráneas. Tecnología avanzada, respuesta rápida." : "Professional leak detection services across Lanzarote and the Canary Islands. Water leaks, pool leaks, underground pipes. Advanced technology, fast response, free quotes."}
         keywords={t('meta.home.keywords')}
         canonical={isSpanish ? "https://canary-detect.com/es" : "https://canary-detect.com"}
       />
@@ -56,6 +58,12 @@ const Index = () => {
           <ServicesGrid />
         </Suspense>
       </ErrorBoundary>
+
+      <ErrorBoundary>
+        <Suspense fallback={<LoadingFallback height="min-h-[400px]" />}>
+          <PricingHomepageSection />
+        </Suspense>
+      </ErrorBoundary>
       
       <ErrorBoundary>
         <Suspense fallback={<LoadingFallback height="min-h-[300px]" />}>
@@ -78,6 +86,12 @@ const Index = () => {
       <ErrorBoundary>
         <Suspense fallback={<LoadingFallback height="min-h-[300px]" />}>
           <CaseStudiesPreview />
+        </Suspense>
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+        <Suspense fallback={<LoadingFallback height="min-h-[400px]" />}>
+          <HomepageSEOContent />
         </Suspense>
       </ErrorBoundary>
       

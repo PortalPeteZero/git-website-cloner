@@ -63,8 +63,8 @@ const ServiceAreasHomepage = forwardRef<HTMLElement>((_, ref) => {
           </h2>
           <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
             {isSpanish
-              ? "Servimos a toda Lanzarote con tiempos de respuesta rápidos. Haga clic en su zona para información local."
-              : "We serve all of Lanzarote with fast response times. Click your area for local information."}
+              ? "Canary Detect atiende con orgullo todas las áreas de las Islas Canarias, incluyendo Lanzarote, Fuerteventura, Gran Canaria, Tenerife, La Palma, El Hierro y La Gomera. Nuestro equipo estratégicamente ubicado garantiza tiempos de respuesta rápidos y un servicio eficiente."
+              : "Canary Detect proudly serves all areas of the Canary Islands, including Lanzarote, Fuerteventura, Gran Canaria, Tenerife, La Palma, El Hierro, and La Gomera. Our strategically located team ensures rapid response times and efficient service for customers across the islands."}
           </p>
         </motion.div>
 

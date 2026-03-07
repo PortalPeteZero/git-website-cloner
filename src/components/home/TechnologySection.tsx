@@ -95,8 +95,8 @@ const TechnologySection = forwardRef<HTMLElement>((_, ref) => {
           </p>
           <p className="text-white/50 text-base mt-3">
             {isSpanish
-              ? "Canary Detect utiliza múltiples métodos para confirmar los resultados de sus investigaciones con precisión."
-              : "Canary Detect uses multiple methods to confirm the results of their investigations for accuracy."}
+              ? "No existe un método único que garantice el 100% de precisión en la detección de fugas, por eso Canary Detect confirma cada fuga usando al menos dos tecnologías independientes. El uso de múltiples métodos minimiza el trabajo de excavación costoso y ahorra tiempo y dinero a los propietarios."
+              : "There is no single method that guarantees 100% accuracy in leak detection, which is why Canary Detect confirms every leak using at least two independent technologies. The use of multiple detection methods minimizes costly excavation work and saves homeowners time and money."}
           </p>
         </motion.div>
 
