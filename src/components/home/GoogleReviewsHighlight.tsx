@@ -39,8 +39,8 @@ const GoogleReviewsHighlight = forwardRef<HTMLElement>((_, ref) => {
           </h2>
           <p className="text-muted-foreground">
             {isSpanish 
-              ? "No solo confíe en nuestra palabra - escuche a los propietarios de toda Lanzarote que han confiado en Canary Detect para sus necesidades de detección de fugas."
-              : "Don't just take our word for it - hear from property owners across Lanzarote who have trusted Canary Detect with their leak detection needs."}
+              ? "Nuestro compromiso con la entrega de servicios excepcionales de detección de fugas en las Islas Canarias se refleja en los comentarios que recibimos de nuestros valiosos clientes. Combinando experiencia inigualable con la última tecnología, proporcionamos resultados precisos y fiables."
+              : "Our commitment to delivering exceptional leak detection services across the Canary Islands is reflected in the feedback we receive from our valued clients. By combining unrivalled experience with cutting-edge technology, we consistently provide accurate, reliable results."}
           </p>
         </motion.div>
 

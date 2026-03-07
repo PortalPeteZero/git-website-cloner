@@ -87,8 +87,8 @@ const HowItWorksSection = forwardRef<HTMLElement>((_, ref) => {
           </h2>
           <p className="text-muted-foreground">
             {isSpanish 
-              ? "Desde su primera llamada hasta el problema resuelto - esto es lo que puede esperar cuando trabaja con Canary Detect."
-              : "From your first call to problem solved - here's what to expect when you work with Canary Detect."}
+              ? "En Canary Detect, nuestro proceso de detección y reparación está específicamente diseñado para ayudar a propietarios, arrendadores y comunidades a identificar y reparar fugas de agua ocultas de forma rápida y eficiente."
+              : "At Canary Detect, our detection and repair process is specifically designed to help property owners, landlords, and communities identify and fix hidden water leaks quickly and efficiently."}
           </p>
         </motion.div>
 
