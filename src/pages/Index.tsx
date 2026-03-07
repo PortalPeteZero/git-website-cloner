@@ -32,8 +32,8 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead 
-        title={isSpanish ? "Canary Detect | Detección de Fugas Lanzarote e Islas Canarias" : "Canary Detect | Leak Detection Services Lanzarote"}
-        description={isSpanish ? "Servicios profesionales de detección de fugas en Lanzarote y las Islas Canarias. Fugas de agua, fugas de piscinas, tuberías subterráneas. Tecnología avanzada, respuesta rápida." : "Professional leak detection services across Lanzarote and the Canary Islands. Water leaks, pool leaks, underground pipes. Advanced technology, fast response, free quotes."}
+        title={isSpanish ? "Servicios de Detección de Fugas Lanzarote | Canary Detect" : "Leak Detection Services Lanzarote | Canary Detect"}
+        description={isSpanish ? "Detección de fugas de agua, detección de fugas de piscinas, detección subterránea, inspección de tuberías. Servicios profesionales en toda Lanzarote." : "Water leak detection, pool leak detection, underground detection, pipe inspection. Professional services across Lanzarote."}
         keywords={t('meta.home.keywords')}
         canonical={isSpanish ? "https://canary-detect.com/es" : "https://canary-detect.com"}
       />
