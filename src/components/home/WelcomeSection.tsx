@@ -167,11 +167,11 @@ const WelcomeSection = () => {
           className="mt-16 max-w-4xl mx-auto"
         >
           <div className="bg-muted/50 rounded-xl p-8 border border-border">
-            <h3 className="font-heading text-xl md:text-2xl font-bold mb-4 text-canary-navy">
+            <h2 className="font-heading text-xl md:text-2xl font-bold mb-4 text-canary-navy">
               {isSpanish 
                 ? "Resumen: Servicios de Detección de Fugas en Lanzarote y las Islas Canarias"
                 : "Summary: Leak Detection Services in Lanzarote and the Canary Islands"}
-            </h3>
+            </h2>
             <p className="text-muted-foreground leading-relaxed">
               {isSpanish
                 ? "Canary Detect ofrece servicios profesionales de detección de fugas en toda Lanzarote y las Islas Canarias, utilizando la última tecnología y un equipo de fontaneros totalmente cualificados para localizar fugas de forma rápida y precisa. Servicios de emergencia, pruebas gratuitas de confirmación de fugas e informes detallados aprobados por seguros están disponibles."
