@@ -112,6 +112,10 @@ const App = () => (
               <Route path="/accurate-drain-pipe-detection" element={<Navigate to="/services/drain-detection" replace />} />
               <Route path="/accurate-drain-pipe-detection/" element={<Navigate to="/services/drain-detection" replace />} />
               
+              {/* Legacy about-us redirects */}
+              <Route path="/about-us" element={<Navigate to="/about" replace />} />
+              <Route path="/about-us/" element={<Navigate to="/about" replace />} />
+
               {/* Date archive redirects */}
               <Route path="/2023/04" element={<Navigate to="/blog" replace />} />
               <Route path="/2023/04/" element={<Navigate to="/blog" replace />} />

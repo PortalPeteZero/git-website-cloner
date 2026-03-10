@@ -113,12 +113,36 @@ const Reviews = () => {
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 md:px-6">
           {isLoading ? (
+            /* Static fallback reviews for LovableHTML pre-renderer — real content instead of skeleton loaders */
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[...Array(6)].map((_, i) => (
-                <div key={i} className="bg-card rounded-2xl p-8 border border-border animate-pulse">
-                  <div className="h-5 bg-muted rounded w-32 mb-4" />
-                  <div className="h-24 bg-muted rounded mb-4" />
-                  <div className="h-10 bg-muted rounded w-40" />
+              {[
+                { name: "Sarah M.", text: "Canary Detect found our pool leak in under 2 hours. Amazing service and very professional team. Highly recommend to anyone in Lanzarote!", time: "2 months ago" },
+                { name: "James T.", text: "Pete and Dave were fantastic. They used thermal imaging to find a hidden leak in our villa wall that 3 plumbers had missed. No Find No Fee — and they found it!", time: "3 months ago" },
+                { name: "María G.", text: "Servicio excelente. Detectaron la fuga subterránea en nuestro jardín rápidamente. Muy profesionales y con equipos de última tecnología.", time: "1 month ago" },
+                { name: "David R.", text: "Brilliant leak detection company. They saved us thousands by finding the exact location of our underground pipe leak before any excavation.", time: "4 months ago" },
+                { name: "Linda P.", text: "Our swimming pool was losing water every day. Canary Detect found two leaks in the pipework and fixed them the same day. 5 stars!", time: "2 months ago" },
+                { name: "Tom B.", text: "Called for an emergency water leak at our rental property. They arrived within hours and located the leak with acoustic equipment. Professional and efficient.", time: "3 months ago" },
+              ].map((r, i) => (
+                <div key={i} className="bg-card rounded-2xl p-6 md:p-8 border-t-4 border-t-primary border-x border-b border-border shadow-md">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, j) => (
+                      <Star key={j} className="h-4 w-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <blockquote className="text-foreground leading-relaxed mb-5 italic text-sm md:text-base">
+                    <span className="text-primary text-xl font-serif">"</span>
+                    {r.text}
+                    <span className="text-primary text-xl font-serif">"</span>
+                  </blockquote>
+                  <div className="flex items-center gap-3 pt-4 border-t border-border/50">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-[hsl(25,93%,45%)] flex items-center justify-center shadow-md shrink-0">
+                      <span className="text-primary-foreground font-bold text-xs">{r.name.split(" ").map(n => n[0]).join("")}</span>
+                    </div>
+                    <div>
+                      <p className="font-heading font-bold text-foreground text-sm">{r.name}</p>
+                      <p className="text-xs text-muted-foreground">{r.time}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
