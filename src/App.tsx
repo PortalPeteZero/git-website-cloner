@@ -121,6 +121,10 @@ const App = () => (
               <Route path="/2022/01/" element={<Navigate to="/blog" replace />} />
               <Route path="/2022/12" element={<Navigate to="/blog" replace />} />
               <Route path="/2022/12/" element={<Navigate to="/blog" replace />} />
+              <Route path="/2022/08" element={<Navigate to="/blog" replace />} />
+              <Route path="/2022/08/" element={<Navigate to="/blog" replace />} />
+              <Route path="/2023/03" element={<Navigate to="/blog" replace />} />
+              <Route path="/2023/03/" element={<Navigate to="/blog" replace />} />
               
               <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/contact" element={<Contact />} />
