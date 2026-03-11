@@ -1198,7 +1198,7 @@ Canary Detect proudly offers professional leak detection services throughout Lan
 
 ## Get Your Pool Inspected
 
-Stop losing water and money. Contact Canary Detect for [professional swimming pool leak detection across Lanzarote](https://www.canary-detect.com/). Our clients consistently share positive word about our reliable and effective leak detection services.
+Stop losing water and money. Contact Canary Detect for [professional swimming pool leak detection across Lanzarote](https://canary-detect.com/). Our clients consistently share positive word about our reliable and effective leak detection services.
 
 We serve pool owners in Playa Blanca, Puerto del Carmen, Costa Teguise, Yaiza, and across the island.
 
