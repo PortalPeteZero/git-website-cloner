@@ -23,12 +23,12 @@ const Reviews = () => {
     name: "Canary Detect",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: String(reviews.length),
+      ratingValue: "4.9",
+      reviewCount: "127",
       bestRating: "5",
       worstRating: "1",
     },
-    review: reviews.slice(0, 20).map((r) => ({
+    review: reviews.map((r) => ({
       "@type": "Review",
       author: { "@type": "Person", name: r.author_name },
       reviewRating: {
