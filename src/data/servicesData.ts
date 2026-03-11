@@ -192,7 +192,7 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       galleryImages: [pipeInspection2, pipeInspection3, drainDetection2, drainDetection3],
       seo: {
         title: "Detección Fugas Tuberías Agua Lanzarote | Canary Detect",
-        description: "Detección de fugas en tuberías de agua en Lanzarote. Cobre, PVC, polietileno e hierro galvanizado. Inspección CCTV, pruebas de presión y localización subterránea.",
+        description: "Detección de fugas en tuberías de agua en Lanzarote. Cobre, PVC, polietileno, hierro galvanizado. Inspección CCTV y pruebas de presión.",
         keywords: "fugas tuberías agua Lanzarote, fuga tubería cobre, fuga tubería PVC, reparación tuberías agua, inspección tuberías CCTV, prueba presión tuberías, fontanero fugas Lanzarote"
       },
       features: [
