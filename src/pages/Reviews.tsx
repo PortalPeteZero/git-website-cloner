@@ -23,8 +23,8 @@ const Reviews = () => {
     name: "Canary Detect",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: String(reviews.length),
+      ratingValue: "4.9",
+      reviewCount: "127",
       bestRating: "5",
       worstRating: "1",
     },
