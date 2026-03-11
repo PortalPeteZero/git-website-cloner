@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
+import SEOHead from "@/components/seo/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { getPlumbingServiceBySlug, plumbingServicesData } from "@/data/plumbingServicesData";
 import { Button } from "@/components/ui/button";
