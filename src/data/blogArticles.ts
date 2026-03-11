@@ -4715,7 +4715,7 @@ Así que, conéctate con Canary Detect y obtén tu [confirmación gratuita de fu
     category: "Sistemas de Agua",
     image: roSystemHeroImg,
     metaTitle: "Ósmosis Inversa y Factura de Agua Alta Lanzarote",
-    metaDescription: "¿Tu sistema de ósmosis inversa en Lanzarote está desperdiciando agua 24/7? Conoce las 3 señales de un sistema RO defectuoso y cómo solucionarlo con Canary Detect.",
+    metaDescription: "¿Tu sistema de ósmosis inversa en Lanzarote desperdicia agua 24/7? Conoce las 3 señales de un sistema RO defectuoso y cómo solucionarlo con Canary Detect.",
     keywords: "ósmosis inversa factura agua Lanzarote, factura agua alta Lanzarote, fuga sistema RO, desperdicio agua villa Lanzarote, contador agua girando, detección fugas Lanzarote",
     readTime: 5,
     content: `
