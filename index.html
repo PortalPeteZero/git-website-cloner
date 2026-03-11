@@ -5,26 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
-    <!-- Title, description, og:title, og:description, twitter:title, twitter:description
-         are all set dynamically per-page by React Helmet (react-helmet-async).
-         Static versions here would duplicate those tags in LovableHTML pre-rendered output. -->
+    <!-- These static tags are required as base targets for SEOHead.tsx, which uses
+         document.querySelector() to update them per-page via useEffect.
+         SEOHead cannot create tags — it can only update existing ones.
+         Pages using React Helmet directly (PlumbingServiceDetail) must NOT
+         duplicate these via Helmet — use SEOHead instead. -->
+    <title>Canary Detect | Leak Detection Lanzarote</title>
+    <meta name="description" content="Expert leak detection services in Lanzarote. Water leaks, pool leaks, underground pipes. Fast response across Lanzarote and the Canary Islands." />
     <meta name="keywords" content="leak detection Lanzarote, water leak Lanzarote, water leak detection Lanzarote, leak survey Lanzarote, find water leak Lanzarote, water leak detection Canary Islands, pool leak detection Lanzarote, leak repair Lanzarote, underground water leak detection, swimming pool leak detection, hidden water leak detection, Lanzarote water leak specialist" />
     <meta name="author" content="Canary Detect" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph / Facebook (placed early for social crawlers) -->
-    <!-- og:title, og:url, og:description are set per-page by React Helmet -->
+    <!-- Open Graph / Facebook -->
+    <!-- og:title, og:url, og:description are updated per-page by SEOHead.tsx -->
+    <meta property="og:title" content="Canary Detect | Leak Detection Lanzarote" />
+    <meta property="og:description" content="Expert leak detection services in Lanzarote. Water leaks, pool leaks, underground pipes. Fast response across Lanzarote and the Canary Islands." />
+    <meta property="og:url" content="https://canary-detect.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://canary-detect.com/og-image.jpg?v=2" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="en_ES" />
+    <meta property="og:locale" content="en_GB" />
     <meta property="og:locale:alternate" content="es_ES" />
     <meta property="og:site_name" content="Canary Detect" />
 
     <!-- Twitter -->
-    <!-- twitter:title, twitter:url, twitter:description are set per-page by React Helmet -->
+    <!-- twitter:title, twitter:url, twitter:description are updated per-page by SEOHead.tsx -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Canary Detect | Leak Detection Lanzarote" />
+    <meta name="twitter:description" content="Expert leak detection services in Lanzarote. Water leaks, pool leaks, underground pipes. Fast response across Lanzarote and the Canary Islands." />
+    <meta name="twitter:url" content="https://canary-detect.com/" />
     <meta name="twitter:image" content="https://canary-detect.com/og-image.jpg?v=2" />
 
     <!-- Geographic Meta Tags -->
