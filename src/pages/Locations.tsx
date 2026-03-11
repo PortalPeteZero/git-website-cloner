@@ -25,10 +25,10 @@ const Locations = () => {
     <Layout>
       <SEOHead
         title={isSpanish
-          ? "Detección Fugas Lanzarote | 15 Municipios | Canary Detect"
+          ? "Fugas de Agua Lanzarote | Los 15 Municipios | Canary Detect"
           : "Leak Detection Lanzarote | All Areas | Canary Detect"}
         description={isSpanish
-          ? "Detección de fugas en los 15 municipios de Lanzarote. Arrecife, Playa Blanca, Puerto del Carmen, Costa Teguise y más. Sin Encontrar, Sin Pagar."
+          ? "Cubrimos los 15 municipios de Lanzarote para fugas de agua y piscinas. Arrecife, Playa Blanca, Puerto del Carmen, Costa Teguise y más. Sin Encontrar, Sin Pagar."
           : "Leak detection across all 15 Lanzarote municipalities. Arrecife, Playa Blanca, Puerto del Carmen, Costa Teguise and more. No Find, No Fee."}
         canonical={canonicalUrl}
       />
