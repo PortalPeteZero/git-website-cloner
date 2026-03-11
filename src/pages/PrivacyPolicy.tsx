@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/seo/SEOHead";
@@ -7,6 +7,18 @@ import { Mail, Phone, MapPin, ExternalLink, ArrowRight } from "lucide-react";
 
 const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref) => {
   const { isSpanish } = useLanguage();
+
+  useEffect(() => {
+    const robotsMeta = document.querySelector('meta[name="robots"]');
+    if (robotsMeta) {
+      robotsMeta.setAttribute('content', 'noindex, follow');
+    }
+    return () => {
+      if (robotsMeta) {
+        robotsMeta.setAttribute('content', 'index, follow');
+      }
+    };
+  }, []);
 
   return (
     <Layout ref={ref}>
