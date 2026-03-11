@@ -387,7 +387,7 @@ export const getServicesData = (isSpanish: boolean): Record<string, ServiceData>
       seo: {
         title: "Hidden Water Leak Detection Lanzarote | No Find No Fee",
         description: "Water meter running? Professional hidden leak detection in Lanzarote. Thermal imaging, tracer gas, acoustic sensors. No Find, No Fee guarantee.",
-        keywords: "water leak detection Canary Islands, hidden water leak detection, water meter running leak, thermal imaging leaks, tracer gas detection, find leaks without damage, Lanzarote water leak specialist"
+        keywords: "water leak detection Lanzarote, water leak Lanzarote, find water leak Lanzarote, hidden water leak detection, water meter running leak, thermal imaging leaks, tracer gas detection, find leaks without damage, Lanzarote water leak specialist, water leak detection Canary Islands"
       },
       freeLeakSection: {
         enabled: true,
