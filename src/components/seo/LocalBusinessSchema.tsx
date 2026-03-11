@@ -173,14 +173,16 @@ const LocalBusinessSchema = ({ page = "home" }: LocalBusinessSchemaProps) => {
       "Inspecciones CCTV de Desagües",
       "Localización de Tuberías Subterráneas"
     ] : [
-      "Leak Detection",
-      "Water Leak Repair",
+      "Leak Detection Lanzarote",
+      "Water Leak Detection Lanzarote",
+      "Water Leak Lanzarote",
+      "Leak Survey Lanzarote",
       "Swimming Pool Leak Detection",
-      "Thermal Imaging",
+      "Thermal Imaging Leak Detection",
       "Acoustic Leak Detection",
       "Tracer Gas Detection",
       "CCTV Drain Surveys",
-      "Underground Pipe Location"
+      "Underground Pipe Location Lanzarote"
     ]
   };
 
