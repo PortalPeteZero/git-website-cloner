@@ -629,7 +629,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Paredes húmedas: causas y soluciones", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
           { title: "Imagen térmica para detección de fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
         ],
-        seo: { title: "Detección Fugas Haría | Valle Mil Palmeras Lanzarote", description: "Detección profesional de fugas en Haría, el verde valle del norte de Lanzarote. Arrieta, Punta Mujeres, Máguez, Órzola. Diagnóstico humedad vs fugas. +34 711 051 071", keywords: "detección fugas Haría, fugas agua Haría Lanzarote, fugas Arrieta, fontanero norte Lanzarote, humedad Haría" }
+        seo: { title: "Detección Fugas Haría | Valle Mil Palmeras Lanzarote", description: "Detección de fugas en Haría, el verde valle del norte de Lanzarote. Arrieta, Punta Mujeres, Órzola. Diagnóstico humedad vs fugas. +34 711 051 071", keywords: "detección fugas Haría, fugas agua Haría Lanzarote, fugas Arrieta, fontanero norte Lanzarote, humedad Haría" }
       }
     };
   }
