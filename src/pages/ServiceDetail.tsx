@@ -194,7 +194,7 @@ const ServiceDetail = () => {
             <div className="relative w-full h-full">
               {carouselImages.map((image, idx) => (
                 <img
-                  key={image.src}
+                  key={`${image.src}-${idx}`}
                   src={image.src}
                   alt={isSpanish ? image.alt.es : image.alt.en}
                   className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-in-out ${
