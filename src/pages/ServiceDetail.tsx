@@ -224,42 +224,27 @@ const ServiceDetail = () => {
             { label: isSpanish ? "Servicios" : "Services", href: getServicesBasePath(isSpanish) },
             { label: service.title },
           ]} />
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl"
-          >
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              className="flex items-center gap-4 mb-6"
-            >
-              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/30">
-                <Icon className="h-8 w-8 text-primary-foreground" />
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/30">
+                  <Icon className="h-8 w-8 text-primary-foreground" />
+                </div>
               </div>
-            </motion.div>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-canary-white mb-6 drop-shadow-lg">
-              {service.title}
-            </h1>
-            <p className="text-canary-white text-lg md:text-xl leading-relaxed drop-shadow-md max-w-xl">
-              {service.description}
-            </p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="mt-8 flex flex-wrap gap-4"
-            >
-              <Button size="lg" asChild className="shadow-lg">
-                <Link to={getContactPath(isSpanish)}>{uiText.cta.getQuote}</Link>
-              </Button>
-              <Button size="lg" variant="secondary" asChild className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy">
-                <a href="tel:+34711051071">{uiText.cta.callNow} +34 711 051 071</a>
-              </Button>
-            </motion.div>
-          </motion.div>
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-canary-white mb-6 drop-shadow-lg">
+                {service.title}
+              </h1>
+              <p className="text-canary-white text-lg md:text-xl leading-relaxed drop-shadow-md max-w-xl">
+                {service.description}
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button size="lg" asChild className="shadow-lg">
+                  <Link to={getContactPath(isSpanish)}>{uiText.cta.getQuote}</Link>
+                </Button>
+                <Button size="lg" variant="secondary" asChild className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy">
+                  <a href="tel:+34711051071">{uiText.cta.callNow} +34 711 051 071</a>
+                </Button>
+              </div>
+            </div>
         </div>
         
         {/* Carousel Indicators - For pages with hero carousel (not collage) */}
