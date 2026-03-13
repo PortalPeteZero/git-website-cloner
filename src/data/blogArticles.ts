@@ -1263,9 +1263,9 @@ If you suspect a leak in your pool or water system, don't let it cause you unnec
     content: `
 ## Precision • Speed • Results
 
-**The call:** A spinning water meter, no visible signs of a leak, and holiday guests arriving imminently. The customer needed answers — fast.
+**The call:** A spinning water meter, no visible signs of a leak, and holiday guests arriving imminently. The customer needed answers, fast.
 
-This case study shows how The Leaky Finders detected, located, repaired, and fully reinstated a hidden underground leak in just **one afternoon** — with minimal disruption to the property.
+This case study shows how The Leaky Finders detected, located, repaired, and fully reinstated a hidden underground leak in just **one afternoon**, with minimal disruption to the property.
 
 ---
 
@@ -1291,7 +1291,7 @@ Our advanced **CCTV camera head** can be precisely located from the surface with
 
 ![CCTV internal camera showing pipe crack](/assets/blog/emergency-leak-cctv.jpg)
 
-*Internal camera inspection at 4.39m depth reveals the crack in the pipe — documented evidence for insurance claims.*
+*Internal camera inspection at 4.39m depth reveals the crack in the pipe. Documented evidence for insurance claims.*
 
 **Location accuracy: centimetre precision**
 
@@ -1307,7 +1307,7 @@ Our targeted approach means lifting just **one tile** to access the leak. This m
 
 *Only what's necessary: a single tile lift provides access to the damaged pipe section below.*
 
-**Minimal disruption — only what's necessary**
+**Minimal disruption, only what is necessary**
 
 ---
 
@@ -1319,7 +1319,7 @@ Once the exact location is confirmed, we carefully excavate to expose the damage
 
 ![Excavation revealing active water leak](/assets/blog/emergency-leak-excavation.jpg)
 
-*Water actively flowing from the exposed pipe — visual confirmation of the leak we detected from the surface.*
+*Water actively flowing from the exposed pipe. Visual confirmation of the leak we detected from the surface.*
 
 **Controlled access to the damaged section**
 
@@ -1336,7 +1336,7 @@ The leak is exposed and actively flowing, confirming our detection was accurate.
   Your browser does not support the video tag.
 </video>
 
-*Video evidence of the active leak — essential documentation for your insurance submission.*
+*Video evidence of the active leak, essential documentation for your insurance submission.*
 
 **Visual evidence supports insurance claim submission**
 
@@ -1350,7 +1350,7 @@ A qualified plumber repairs the damaged pipe section to industry standards. Prof
 
 ![Repaired pipe with new fittings](/assets/blog/emergency-leak-pipe-repair.jpg)
 
-*New pipe sections and fittings installed to industry standards — a permanent solution.*
+*New pipe sections and fittings installed to industry standards, a permanent solution.*
 
 **Qualified repair meets insurance and regulatory standards**
 
@@ -1364,7 +1364,7 @@ The area is fully reinstated with tiles replaced and grouting completed. **You w
 
 ![Reinstated floor after leak repair](/assets/blog/emergency-leak-wet-floor.jpg)
 
-*Tiles replaced, grouting completed — the property restored to its original condition.*
+*Tiles replaced, grouting completed. The property restored to its original condition.*
 
 **Like we were never there.**
 
@@ -1398,7 +1398,79 @@ Most leak detection companies can find a leak. Few can offer the **complete serv
 
 ---
 
-## Got a Leak? Don't Wait.
+## What Is Emergency Leak Detection in Lanzarote?
+
+Emergency leak detection is the process of locating and repairing a water leak as quickly as possible when delay is not an option. In Lanzarote, emergency leak situations typically involve one of three scenarios: a water meter spinning with no visible cause and guests arriving imminently, a sudden drop in water pressure throughout a property, or visible water appearing beneath floor tiles or seeping through walls without an obvious source.
+
+Unlike a routine leak survey booked days in advance, an emergency call requires an immediate response and the ability to complete detection, repair, and reinstatement on the same visit where possible. That is what Canary Detect is set up to do.
+
+## When Should You Call for Emergency Leak Repair?
+
+Several situations warrant calling for emergency leak detection and repair rather than waiting for a standard appointment.
+
+### Spinning Water Meter with No Obvious Cause
+
+If you check your water meter with all taps and appliances switched off and the meter is still spinning or ticking, you have an active leak somewhere in your property's water system. The faster the meter moves, the more serious the leak. A fast-spinning meter indicates a pipe has failed and water is escaping continuously. Every hour of delay adds to the water loss, the water bill, and the potential for structural damage.
+
+### Water Appearing Through Floors or Walls
+
+Water visibly seeping through a tiled floor or appearing as a damp patch spreading across a wall indicates a pipe failure behind or beneath the surface. This type of leak typically means water has already been escaping for some time before it becomes visible. The longer it continues, the more water works into the surrounding structure.
+
+### Rental Property with Imminent Guests
+
+A leaking property with guests due to arrive is one of the most common emergency situations we handle. A spinning meter or suspected leak discovered on the morning of a changeover day requires same-day detection and repair to avoid cancellation and the consequent loss of rental income.
+
+### Sudden Loss of Pressure Across the Property
+
+If water pressure drops noticeably at all taps and showers simultaneously, this often indicates a major pipe failure somewhere on the supply line. The water is escaping faster than it can reach the outlets in the property.
+
+## How Emergency Leak Detection Works at Canary Detect
+
+Our emergency response follows the same process as a standard survey but compressed into the fastest possible timeframe. We arrive with the full range of detection equipment and the tools and materials to carry out a repair on the same visit in the majority of cases.
+
+**Pressure testing** confirms the presence and severity of the leak within minutes of arrival. This tells us which section of the property's pipework is affected and gives us a quantified rate of water loss.
+
+**Acoustic and tracer gas detection** then locates the precise position of the leak. On a buried underground pipe, tracer gas can pinpoint the leak to within ten centimetres without any excavation. On an internal pipe, acoustic sensors and thermal imaging locate the fault through floors and walls.
+
+**Minimal excavation** follows once the position is confirmed. For underground pipes, this typically means lifting a single tile or cutting a small access point in the surface directly above the leak. For internal pipe faults, access is made to the minimum area required.
+
+**Repair and reinstatement** completes the job. Our team carries a range of pipe fittings, repair couplings, and tile materials to reinstate the surface after repair on the same visit in most cases.
+
+## Why Speed Matters for Lanzarote Property Owners
+
+Water damage in Lanzarote properties accumulates faster than many owners realise. The volcanic soil beneath most properties across the island has low water absorption capacity, meaning water from a leaking pipe pools beneath the surface and spreads laterally. Over days or weeks, this saturates the substrate beneath floor tiles, weakens adhesive bonds, causes subsidence, and creates conditions for mould growth within wall structures.
+
+Properties that are unoccupied for periods also suffer from the lack of early detection. A leak that starts during the winter between rental seasons can cause significant structural damage before anyone notices. Emergency detection and repair on a Lanzarote property discovered to have an active leak before the season begins is always a sound investment compared with letting the damage continue.
+
+## Emergency Leak Detection Coverage Across Lanzarote
+
+We respond to emergency calls across the whole island including Puerto del Carmen, Playa Blanca, Costa Teguise, Arrecife, Puerto del Rosario, Tias, Yaiza, Teguise, and all urbanisations in between. Being based in Lanzarote means we can reach any part of the island quickly.
+
+## Frequently Asked Questions: Emergency Leak Repair Lanzarote
+
+### How quickly can you respond to an emergency leak call?
+
+In most cases, we can respond on the same day. We prioritise emergency calls and aim to be on-site within a few hours during normal working hours. For situations where water loss is severe, call us immediately and we will advise on interim steps such as isolating the water supply at the meter while we travel to you.
+
+### Can you complete the repair on the same day as detection?
+
+In the majority of cases, yes. When the leak is in an accessible location such as an underground supply pipe or a pipe beneath a tiled floor, detection, excavation, repair, and reinstatement can all be completed in one visit. More complex situations, such as leaks within reinforced concrete structures or leaks requiring specialist pipe lining, may require a follow-up visit.
+
+### Is your emergency service more expensive than a standard survey?
+
+We apply the same survey fee regardless of whether a job is booked in advance or as an emergency. The cost of the repair work is quoted separately on-site once the fault is located and assessed.
+
+### Will my insurance cover emergency leak detection and repair?
+
+Most buildings insurance policies in Spain cover sudden and unforeseen water damage. The key requirement for most insurers is a professional written report confirming the nature and cause of the leak before authorising repair. We provide this report as part of every survey, which means our documentation can be submitted to your insurer promptly.
+
+### What should I do while waiting for you to arrive?
+
+Turn off the water supply at the main isolation valve or street meter to stop the flow. Take photos or video of any visible water damage for your insurance records. Do not attempt to chip up tiles or break into walls yourself, as this can make the repair more complex and costly.
+
+---
+
+## Got a Leak? Don't Wait. Don't Wait.
 
 Hidden leaks cause **structural damage**, **mould**, and **sky-high water bills**. The longer you wait, the worse it gets.
 
