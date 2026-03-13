@@ -28,7 +28,7 @@ export const serviceFaqs: Record<string, ServiceFaqData> = {
       },
       {
         question: "What are the signs of a hidden water leak I can't see?",
-        answer: "The most reliable sign is your water meter spinning when all taps and appliances are off. Other indicators include: unexplained high water bills, damp or warm patches on floors, musty smells with no visible source, paint bubbling or wallpaper peeling, or hearing running water when nothing is in use."
+        answer: "The most reliable sign is your water meter spinning when all taps and appliances are off. Other indicators include: unexplained high water bills, damp or warm patches on floors, musty smells with no visible source, paint bubbling or wallpaper peeling, or hearing running water when nothing is in use. If you need to find a water leak in Lanzarote, Canary Detect can give you a confirmed answer quickly and without damage to your property."
       },
       {
         question: "How does thermal imaging find hidden leaks?",
