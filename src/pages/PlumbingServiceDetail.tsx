@@ -9,6 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import BreadcrumbNav from "@/components/ui/breadcrumb-nav";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 const PlumbingServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -263,6 +265,40 @@ const PlumbingServiceDetail = () => {
                   ))}
                 </div>
               </div>
+
+              {/* Rich content section - shown when richContent: true */}
+              {service.richContent && (isSpanish ? service.contentEs : service.content) && (
+                <div className="max-w-none">
+                  <ReactMarkdown
+                    rehypePlugins={[rehypeRaw]}
+                    components={{
+                      h1: ({ children }) => (
+                        <h1 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-0 mb-6">{children}</h1>
+                      ),
+                      h2: ({ children }) => (
+                        <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mt-10 mb-5 pb-3 border-b border-border">{children}</h2>
+                      ),
+                      h3: ({ children }) => (
+                        <h3 className="font-heading text-xl md:text-2xl font-bold text-foreground mt-8 mb-4">{children}</h3>
+                      ),
+                      p: ({ children }) => (
+                        <p className="text-muted-foreground leading-relaxed mb-5">{children}</p>
+                      ),
+                      strong: ({ children }) => (
+                        <strong className="text-foreground font-semibold">{children}</strong>
+                      ),
+                      ul: ({ children }) => (
+                        <ul className="my-4 pl-6 space-y-2 list-disc marker:text-primary">{children}</ul>
+                      ),
+                      li: ({ children }) => (
+                        <li className="text-muted-foreground leading-relaxed">{children}</li>
+                      ),
+                    }}
+                  >
+                    {isSpanish ? service.contentEs : service.content}
+                  </ReactMarkdown>
+                </div>
+              )}
             </div>
 
             {/* Sidebar - Shown after content on mobile */}
