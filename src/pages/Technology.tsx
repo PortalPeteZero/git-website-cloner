@@ -216,8 +216,8 @@ const Technology = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               {isSpanish
-                ? "Nuestra empresa ha construido una reputación de excelencia en detección y reparación de fugas, con más de 40 años de experiencia combinada y una tasa de éxito comprobada del 99%. Tratamos cada trabajo de detección de fugas con un enfoque profesional y dedicado, enfatizando un servicio cuidadoso y exhaustivo para garantizar la satisfacción del cliente y la precisión. Canary Detect ofrece una garantía sin riesgo con nuestra política 'Sin Encontrar, Sin Pagar'. Entendemos que cada propiedad es única y cada fuga presenta sus propios desafíos. Por eso utilizamos una combinación de métodos no invasivos—como dispositivos de escucha acústica e imagen térmica—para encontrar fugas sin daños innecesarios a su villa o local comercial. Nuestro enfoque significa menos conjeturas, mínima interrupción y soluciones más efectivas para los problemas de su sistema de agua."
-                : "Our company has built a reputation for excellence in leak detection and repair, with over 40 years of combined experience and a proven 99% success rate. We treat each leak detection job with a professional and dedicated approach, emphasizing careful and thorough service to ensure customer satisfaction and accuracy. Canary Detect offers a risk-free guarantee with a 'No Find, No Fee' policy. We understand that every property is unique, and every leak presents its own challenges. That's why we use a combination of non-invasive methods—such as acoustic listening devices and thermal imaging—to find leaks without unnecessary damage to your villa or business premises. Our approach means less guesswork, minimal disruption, and more effective solutions for your water system problems."}
+                ? "Nuestra empresa ha construido una reputación de excelencia en detección y reparación de fugas, con más de 40 años de experiencia combinada y una tasa de éxito comprobada del 99%. Tratamos cada trabajo de detección de fugas con un enfoque profesional y dedicado, enfatizando un servicio cuidadoso y exhaustivo para garantizar la satisfacción del cliente y la precisión. Canary Detect ofrece una garantía sin riesgo con nuestra política 'Sin Encontrar, Sin Pagar'. Entendemos que cada propiedad es única y cada fuga presenta sus propios desafíos. Por eso utilizamos una combinación de métodos no invasivos, como dispositivos de escucha acústica e imagen térmica, para encontrar fugas sin daños innecesarios a su villa o local comercial. Nuestro enfoque significa menos conjeturas, mínima interrupción y soluciones más efectivas para los problemas de su sistema de agua."
+                : "Our company has built a reputation for excellence in leak detection and repair, with over 40 years of combined experience and a proven 99% success rate. We treat each leak detection job with a professional and dedicated approach, emphasizing careful and thorough service to ensure customer satisfaction and accuracy. Canary Detect offers a risk-free guarantee with a 'No Find, No Fee' policy. We understand that every property is unique, and every leak presents its own challenges. That's why we use a combination of non-invasive methods, such as acoustic listening devices and thermal imaging, to find leaks without unnecessary damage to your villa or business premises. Our approach means less guesswork, minimal disruption, and more effective solutions for your water system problems."}
             </p>
 
             <h3 className="font-heading text-2xl font-bold mb-3">
@@ -235,7 +235,7 @@ const Technology = () => {
             <p className="text-muted-foreground leading-relaxed">
               {isSpanish
                 ? "Ya sea que esté lidiando con una piscina con fugas, grietas ocultas en su sistema de agua o aumentos inexplicables en su factura de agua, nuestros expertos están aquí para ayudar. Ofrecemos inspecciones gratuitas para evaluar su propiedad, proporcionar recomendaciones claras y trabajar con usted para encontrar la mejor solución, ahorrándole tiempo, dinero y estrés. Si tiene preguntas o quiere saber más sobre cómo podemos ayudarle, no dude en ponerse en contacto con nuestro amable equipo. Deje que Canary Detect llene los vacíos en la protección de su propiedad y asegure que su hogar o negocio se mantenga seguro, seco y sin preocupaciones."
-                : "Whether you're dealing with a leaky pool, hidden cracks in your water system, or unexplained increases in your water bill, our experts are here to help. We offer free surveys to assess your property, provide clear recommendations, and work with you to find the best solution—saving you time, money, and stress. If you have questions or want to learn more about how we can help, don't hesitate to get in touch with our friendly team. Let Canary Detect fill the gaps in your property's protection and ensure your home or business stays safe, dry, and worry-free."}
+                : "Whether you're dealing with a leaky pool, hidden cracks in your water system, or unexplained increases in your water bill, our experts are here to help. We offer free surveys to assess your property, provide clear recommendations, and work with you to find the best solution, saving you time, money, and stress. If you have questions or want to learn more about how we can help, don't hesitate to get in touch with our friendly team. Let Canary Detect fill the gaps in your property's protection and ensure your home or business stays safe, dry, and worry-free."}
             </p>
           </motion.div>
         </div>
@@ -255,8 +255,8 @@ const Technology = () => {
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
               {isSpanish
-                ? "Vivir en Lanzarote y las Islas Canarias significa disfrutar de un clima hermoso y propiedades impresionantes, pero también trae desafíos únicos en lo que respecta a fugas de agua. En Canary Detect, nuestro equipo de expertos—conocidos como Los Cazafugas—ha visto de primera mano cómo incluso una pequeña fuga puede convertirse rápidamente en un gran problema, generando altos costes de reparación y pérdida innecesaria de agua."
-                : "Living in Lanzarote and the Canary Islands means enjoying beautiful weather and stunning properties, but it also brings unique challenges when it comes to water leaks. At Canary Detect, our team of experts—known as The Leaky Finders—has seen firsthand how even a small leak can quickly turn into a big problem, leading to high repair costs and unnecessary water loss."}
+                ? "Vivir en Lanzarote y las Islas Canarias significa disfrutar de un clima hermoso y propiedades impresionantes, pero también trae desafíos únicos en lo que respecta a fugas de agua. En Canary Detect, nuestro equipo de expertos, conocidos como Los Cazafugas, que han visto de primera mano cómo incluso una pequeña fuga puede convertirse rápidamente en un gran problema, generando altos costes de reparación y pérdida innecesaria de agua."
+                : "Living in Lanzarote and the Canary Islands means enjoying beautiful weather and stunning properties, but it also brings unique challenges when it comes to water leaks. At Canary Detect, our team of experts, known as The Leaky Finders, has seen firsthand how even a small leak can quickly turn into a big problem, leading to high repair costs and unnecessary water loss."}
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               {isSpanish ? "Algunos de los problemas de fugas más comunes que encontramos incluyen:" : "Some of the most common leak problems we encounter include:"}
@@ -280,8 +280,8 @@ const Technology = () => {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {isSpanish
-                    ? "Ocultas bajo jardines, caminos de entrada o patios, estas fugas pueden pasar desapercibidas durante semanas o meses. A menudo resultan en manchas de humedad, hundimiento o aumentos inexplicables en el consumo de agua—problemas que pueden ser caros de arreglar si no se detectan a tiempo."
-                    : "Hidden beneath gardens, driveways, or patios, these leaks can go unnoticed for weeks or months. They often result in damp patches, subsidence, or unexplained increases in water usage—issues that can be expensive to fix if not caught early."}
+                    ? "Ocultas bajo jardines, caminos de entrada o patios, estas fugas pueden pasar desapercibidas durante semanas o meses. A menudo resultan en manchas de humedad, hundimiento o aumentos inexplicables en el consumo de agua, problemas que pueden ser caros de arreglar si no se detectan a tiempo."
+                    : "Hidden beneath gardens, driveways, or patios, these leaks can go unnoticed for weeks or months. They often result in damp patches, subsidence, or unexplained increases in water usage, issues that can be expensive to fix if not caught early."}
                 </p>
               </div>
 
@@ -310,8 +310,8 @@ const Technology = () => {
 
             <p className="text-muted-foreground leading-relaxed">
               {isSpanish
-                ? "Nuestros expertos en Canary Detect utilizan métodos avanzados de detección de fugas para encontrar y solucionar estos problemas rápidamente, minimizando las interrupciones y ahorrándole dinero. Al confiar en nuestro equipo experimentado, puede proteger su propiedad, evitar costes de reparación innecesarios y asegurar que su sistema de agua funcione correctamente. Si sospecha de una fuga o quiere verificar su propiedad en busca de problemas ocultos, póngase en contacto con Canary Detect—la empresa de detección de fugas de confianza en Lanzarote y las Islas Canarias."
-                : "Our experts at Canary Detect use advanced leak detection methods to find and fix these problems quickly, minimizing disruption and saving you money. By trusting our experienced team, you can protect your property, avoid unnecessary repair costs, and ensure your water system is running smoothly. If you suspect a leak or want to check your property for hidden issues, get in touch with Canary Detect—the trusted leak detection company in Lanzarote and the Canary Islands."}
+                ? "Nuestros expertos en Canary Detect utilizan métodos avanzados de detección de fugas para encontrar y solucionar estos problemas rápidamente, minimizando las interrupciones y ahorrándole dinero. Al confiar en nuestro equipo experimentado, puede proteger su propiedad, evitar costes de reparación innecesarios y asegurar que su sistema de agua funcione correctamente. Si sospecha de una fuga o quiere verificar su propiedad en busca de problemas ocultos, póngase en contacto con Canary Detect, la empresa de detección de fugas de confianza en Lanzarote y las Islas Canarias."
+                : "Our experts at Canary Detect use advanced leak detection methods to find and fix these problems quickly, minimizing disruption and saving you money. By trusting our experienced team, you can protect your property, avoid unnecessary repair costs, and ensure your water system is running smoothly. If you suspect a leak or want to check your property for hidden issues, get in touch with Canary Detect, the trusted leak detection company in Lanzarote and the Canary Islands."}
             </p>
           </motion.div>
         </div>
@@ -586,6 +586,161 @@ const Technology = () => {
 
       {/* All Services Grid - Internal Links */}
       <AllServicesGrid isSpanish={isSpanish} />
+
+      {!isSpanish && (
+        <section className="py-12 md:py-16 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+                Leak Detection Technology in Lanzarote: Why It Makes the Difference
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Finding a water leak in Lanzarote is rarely straightforward. Pipes run under concrete terraces, through tiled walls, and deep beneath gardens. Many are decades old and made from materials that behave differently under pressure. Without the right equipment, a leak investigation becomes guesswork, and guesswork means unnecessary destruction of floors, walls, and landscaping before the actual fault is even found. Specialist leak detection technology changes that entirely.
+              </p>
+
+              <h3 className="font-heading text-2xl font-bold mb-3">
+                The Right Technology for Every Situation
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                No single piece of equipment can find every type of leak. A thermal camera is highly effective at detecting a hot water pipe leaking inside a wall, but it cannot locate a buried supply pipe leaking under a concrete path. Tracer gas can pinpoint a leak three metres underground, but it will not show the internal condition of a corroded drain pipe. The reason Canary Detect carries over &euro;80,000 worth of equipment is that every situation demands a different approach, and the team needs the full toolkit to match the method to the problem.
+              </p>
+
+              <h3 className="font-heading text-2xl font-bold mb-3">
+                Ground-Penetrating Radar for Underground Pipe Mapping
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Ground-penetrating radar (GPR) sends electromagnetic pulses into the ground and interprets the reflections to build a subsurface picture. In Lanzarote, this is particularly useful for mapping the route of plastic and non-metallic pipes, which cannot be traced with a standard electromagnetic locator. Before any underground investigation begins, understanding where the pipes actually run is essential. Many properties here were built with no detailed as-built drawings, meaning the pipe routes are genuinely unknown. GPR gives our technicians a map before any excavation or detection work starts.
+              </p>
+
+              <h3 className="font-heading text-2xl font-bold mb-3">
+                Acoustic Correlators for Precise Pipe Leak Location
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                An acoustic correlator is a step beyond a standard geophone listening device. Two sensors are placed at different points along the pipe, and the correlator analyses the time difference in the leak noise arriving at each sensor. From this, it calculates the mathematical position of the leak along the pipe, typically to within a few centimetres, even when the pipe is buried under a metre of concrete. For longer pipe runs across gardens, driveways, and communal areas, correlation is the most reliable method available for achieving the kind of precision that keeps excavation work small and targeted.
+              </p>
+
+              <h3 className="font-heading text-2xl font-bold mb-3">
+                Tracer Gas Detection: Finding Leaks Without Excavation
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Tracer gas detection involves pressurising the suspected pipe with a safe mixture of nitrogen and hydrogen gas. This mixture is non-toxic, non-flammable, and lighter than air. Where a leak exists, the gas escapes through the same fault that water is escaping through and rises to the surface. A sensitive probe detects the gas at ground level, pinpointing the leak location without any excavation at all. This is our most commonly used method for buried pipe leaks across Lanzarote, particularly for the underground supply connections that run from the street meter to the property boundary.
+              </p>
+
+              <h3 className="font-heading text-2xl font-bold mb-3">
+                Thermal Imaging for Concealed Leaks in Walls and Floors
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Our thermal imaging cameras detect temperature differences as small as 0.1 degrees Celsius across a surface. A leaking hot water pipe behind a tiled wall will cool the tiles around the fault point in a characteristic pattern that is invisible to the human eye but clearly visible to the camera. Similarly, cold water leaking beneath a heated floor creates a cold patch that shows up immediately on the thermal image. Thermal imaging is fast, non-invasive, and provides visual evidence that can be photographed and included in insurance reports.
+              </p>
+
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 mt-10">
+                Why Lanzarote Properties Need Specialist Detection Technology
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Lanzarote presents a specific set of conditions that make leak detection more complex than on the mainland and make accurate technology more important.
+              </p>
+
+              <h3 className="font-heading text-2xl font-bold mb-3">
+                Desalinated Water and Pipe Deterioration
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                The water supply across the Canary Islands comes from desalination plants. Desalinated water has a different mineral profile to mainland European water, and over years it accelerates corrosion inside older metal pipes. Copper and galvanised iron installations that have been carrying desalinated water for twenty or thirty years are frequently in a much worse internal condition than their external appearance suggests. Leak detection technology helps assess this hidden deterioration, not just the active leak.
+              </p>
+
+              <h3 className="font-heading text-2xl font-bold mb-3">
+                Older Build Quality and Hidden Pipework
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Properties built in Lanzarote during the 1970s, 1980s, and 1990s were often constructed without detailed plumbing records. Pipes run in unexpected directions, at unexpected depths, through walls that were later tiled over or altered during renovation. Detection technology allows us to find where pipes actually are before any invasive work begins and to locate leaks within those pipes without reference to plans that often do not exist.
+              </p>
+
+              <h3 className="font-heading text-2xl font-bold mb-3">
+                Holiday Homes and Long-Term Vacancy
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                A significant proportion of Lanzarote properties are holiday homes or investment properties that may be unoccupied for months at a time. A slow underground pipe leak during a period of vacancy can result in saturated ground, damage to foundations, and subsidence that is not discovered until the owner returns. Our technology allows us to identify and quantify active leaks quickly, even in properties where the pipework has not been monitored for some time.
+              </p>
+
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 mt-10">
+                How We Combine Technologies on a Single Survey
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                On most surveys, we use at least two or three technologies together. A typical underground pipe investigation starts with pressure testing to confirm a leak exists and measure its severity. We then use electromagnetic or GPR pipe locating to trace the route of the pipe. Tracer gas or acoustic correlation then narrows the location to a precise point. Where appropriate, a thermal camera checks any above-ground sections. Each technology cross-checks the others, which is why our success rate is as high as it is. A single sensor reading can be ambiguous. Two or three readings from different technologies pointing to the same spot is confirmation.
+              </p>
+
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 mt-10">
+                Technology and Cost: Why Investing in Detection Saves Money
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                A professional leak detection survey using advanced technology costs a fraction of what unnecessary excavation costs. A contractor who opens up a terrace looking for a leak without prior detection work might lift twenty square metres of tiles, dig through concrete, and still not find the fault. A Canary Detect survey that uses tracer gas and acoustic correlation to pinpoint the leak to within ten centimetres means the repair contractor lifts one tile, digs one small hole, and fixes the pipe. The detection fee is recovered many times over in reduced repair costs, and the property suffers far less collateral damage in the process.
+              </p>
+
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 mt-10">
+                Frequently Asked Questions: Leak Detection Technology Lanzarote
+              </h2>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-heading text-xl font-bold mb-2">
+                    What detection technology does Canary Detect use?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We carry tracer gas detection equipment (GASENSE), acoustic geophones and correlators, infrared thermal imaging cameras, internal pipe microphones, ground-penetrating radar, electromagnetic pipe locators, and full CCTV camera systems for pipe inspection. Each tool is selected based on the specific conditions at your property.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold mb-2">
+                    Is leak detection technology safe to use around my family and pets?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Yes. The tracer gas we use is a non-toxic nitrogen and hydrogen mixture. Thermal cameras and acoustic sensors are entirely passive. Ground-penetrating radar uses very low-power electromagnetic pulses that are safe in all domestic environments. None of our detection methods require chemicals, high-voltage equipment, or any procedure that poses a risk to occupants.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold mb-2">
+                    How accurate is your leak detection equipment?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    In most situations, we can locate a leak to within ten centimetres using acoustic correlation combined with tracer gas. For leaks inside walls, thermal imaging typically narrows the fault area to within twenty to thirty centimetres. Our pipe microphone technology can achieve centimetre accuracy on accessible pipe runs.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold mb-2">
+                    Can your technology find leaks under reinforced concrete?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Yes. Tracer gas rises through concrete, tarmac, sand, soil, and most surface materials. Acoustic correlation works through concrete slabs as long as the pipe carries sufficient water pressure. These methods are specifically designed for situations where the pipe is inaccessible without excavation.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold mb-2">
+                    Do I need to be present during the survey?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Someone does need to provide access to the property and the water meter. Beyond that, you are welcome to observe the survey or leave our team to work independently. Many of our clients in Lanzarote are property owners who are not on the island at the time, and surveys are often arranged through property managers or keyholders.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold mb-2">
+                    What if your technology cannot find the leak?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Our No Find, No Fee policy applies. If we confirm that an active leak exists but cannot precisely locate it using our full range of equipment, you pay nothing for the survey. In practice, this has never happened, but the guarantee is real and unconditional.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold mb-2">
+                    How long does a leak detection survey take in Lanzarote?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Most residential surveys take between two and four hours. A straightforward pool leak test can be completed in under two hours. A complex underground investigation across a large property with multiple pipe zones may take a full day. We give you a realistic time estimate when you book, and we never charge extra if the survey takes longer than expected.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-10 md:py-12 bg-gradient-to-r from-primary to-[hsl(25,93%,45%)] section-stripes-orange">
