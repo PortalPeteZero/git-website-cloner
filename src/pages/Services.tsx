@@ -285,6 +285,153 @@ const Services = () => {
         </div>
       </section>
 
+      {/* English Content Section */}
+      {!isSpanish && (
+        <section className="py-12 md:py-16 bg-background section-noise">
+          <div className="container mx-auto px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-center">
+                Leak Detection Services in Lanzarote: What We Do and How We Help
+              </h2>
+
+              <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+                <p>
+                  Canary Detect is Lanzarote&apos;s specialist leak detection service, covering the whole island from Playa Blanca in the south to the northern villages. Our team locates water leaks, pool leaks, and underground pipe leaks using professional detection equipment, without unnecessary demolition or guesswork.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  Why Leak Detection Matters in Lanzarote
+                </h3>
+                <p>
+                  Water in the Canary Islands costs considerably more than on the Spanish mainland. Lanzarote&apos;s entire water supply is desalinated, making every litre lost to a leak a direct cost to the property owner. A slow hidden leak losing just one litre per hour wastes over 8,700 litres a year. Larger leaks can result in bills of hundreds or even thousands of euros before the source is found.
+                </p>
+                <p>
+                  Beyond water bills, undetected leaks cause structural damage, mould growth, and deterioration of walls, floors, and ceilings. The volcanic basalt rock used in much of Lanzarote&apos;s construction is extremely hard and expensive to excavate, so finding the exact leak location before any digging begins is not just convenient - it can save enormous amounts in unnecessary repair costs.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  Our Leak Detection Services
+                </h3>
+                <p>
+                  Canary Detect offers a complete range of leak detection and repair services across Lanzarote. Whether you need a water leak located behind a wall, a pool leak identified and pressure-tested, underground pipes traced before excavation, or a drain surveyed by CCTV camera, we have the right technology and experience for the job.
+                </p>
+                <p>
+                  All our leak detection services follow the same principle: locate the problem precisely using non-invasive technology before any repair work begins. This protects your property, minimises disruption, and ensures your repair contractor has a confirmed target rather than a guess.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  Detection Technology We Use
+                </h3>
+                <p>
+                  Canary Detect uses over &euro;80,000 in specialist leak detection equipment because finding invisible leaks requires the right tools. Our technology includes GASENSE tracer gas detection for buried pipe leaks, high-sensitivity acoustic geophones that listen for the sound of escaping water, infrared thermal imaging cameras that detect temperature changes behind walls and beneath floors, ground-penetrating radar for locating underground pipes and cables, and CCTV pipe cameras for internal inspection of drains and pipework from 25mm upwards.
+                </p>
+                <p>
+                  No single technology works in every situation. That is why we use multiple methods on every survey, confirming each leak position with at least two independent techniques before marking any location for repair. This multi-technology approach is what separates professional leak detection from a single-tool inspection.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  Properties and Clients We Work With
+                </h3>
+                <p>
+                  Our leak detection services in Lanzarote cover all property types. Private villa owners dealing with rising water bills or unexplained damp. Community presidents and administrators managing shared pipework in urbanisations and apartment complexes. Hotel and holiday complex managers with pool or plumbing leaks. Builders and construction teams needing utility surveys before groundwork begins. Property buyers wanting an independent survey before completing a purchase.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  Leak Detection Across All of Lanzarote
+                </h3>
+                <p>
+                  We cover every part of the island for leak detection surveys. Puerto del Carmen, Playa Blanca, Costa Teguise, Arrecife, Puerto Calero, Tías, Yaiza, and all inland villages and rural properties. If you are unsure whether we cover your area, contact us directly and we will confirm.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  The No Find, No Fee Guarantee
+                </h3>
+                <p>
+                  Every Canary Detect leak detection survey is backed by our No Find, No Fee guarantee. If we confirm that an active leak exists in your system but cannot locate it precisely, you pay nothing for the survey. We stand completely behind our equipment and our team. You only pay for results.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  Professional Reports for Insurance and Repairs
+                </h3>
+                <p>
+                  Every survey produces a full written report with thermal photographs, acoustic measurements, and confirmed leak coordinates. These reports are accepted by all major insurance companies operating in the Canary Islands for claims and repair authorisation. They are also invaluable when obtaining repair quotes, as each contractor receives a precise brief rather than an estimate.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  Common Questions About Our Services
+                </h3>
+                <p>
+                  <strong>Do you work on swimming pools?</strong> Yes. Pool leak detection is one of our most requested services. We locate leaks in pool shells, fittings, underground pipework, and plant room equipment using pressure testing, acoustic sensors, tracer gas, and CCTV.
+                </p>
+                <p>
+                  <strong>Can you find a leak without breaking walls?</strong> Yes. All our detection methods are non-invasive. We locate the leak first, then any opening work is targeted and minimal.
+                </p>
+                <p>
+                  <strong>How quickly can you respond?</strong> We offer 24/7 emergency leak detection across Lanzarote. For non-emergency surveys, we typically respond within 24 to 48 hours. Contact us to discuss your situation and we will confirm availability.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* English Location Coverage Section */}
+      {!isSpanish && (
+        <section className="py-12 md:py-16 bg-muted section-pattern">
+          <div className="container mx-auto px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center mb-10"
+            >
+              <span className="text-primary font-medium">Island-wide Coverage</span>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">
+                Leak Detection Services Across Lanzarote
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                We cover every area of the island. Wherever you are in Lanzarote, Canary Detect can reach you.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {[
+                { name: "Arrecife", link: "/locations/arrecife" },
+                { name: "Playa Blanca", link: "/locations/playa-blanca" },
+                { name: "Puerto del Carmen", link: "/locations/puerto-del-carmen" },
+                { name: "Costa Teguise", link: "/locations/costa-teguise" },
+                { name: "Yaiza", link: "/locations/yaiza" },
+                { name: "Tías", link: "/locations/tias" },
+                { name: "Teguise", link: "/locations/teguise" },
+                { name: "San Bartolomé", link: "/locations/san-bartolome" },
+                { name: "Haría", link: "/locations/haria" },
+                { name: "Tinajo", link: "/locations/tinajo" },
+              ].map((location, index) => (
+                <motion.div
+                  key={location.name}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.05, duration: 0.5 }}
+                >
+                  <Link
+                    to={location.link}
+                    className="flex items-center gap-2 p-4 bg-card rounded-lg border border-border hover:border-primary/30 hover:shadow-md transition-all text-center justify-center"
+                  >
+                    <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span className="text-sm font-medium">{location.name}</span>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Spanish-specific Content Section */}
       {isSpanish && (
         <section className="py-12 md:py-16 bg-background section-noise">
@@ -313,7 +460,7 @@ const Services = () => {
                 <p>
                   El agua en Canarias es significativamente más cara que en la península. La desalinización y el transporte 
                   de agua potable hacen que cada litro perdido tenga un impacto económico directo en su factura. Una fuga 
-                  pequeña de solo 1 litro por hora supone <strong>más de 8.700 litros perdidos al año</strong>—un gasto innecesario 
+                  pequeña de solo 1 litro por hora supone <strong>más de 8.700 litros perdidos al año</strong>, un gasto innecesario 
                   que puede alcanzar cientos de euros anuales.
                 </p>
                 <p>
