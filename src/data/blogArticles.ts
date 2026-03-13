@@ -101,7 +101,7 @@ export const blogArticlesEn: BlogArticle[] = [
     id: 1,
     slug: "master-your-lanzarote-water-system",
     title: "Master Your Lanzarote Water System: The Essential Guide for Residents",
-    excerpt: "From aljibes to pumps, understand how Lanzarote's unique water infrastructure works—and how to spot hidden leaks before they cost you. Plus: can you drink the water?",
+    excerpt: "From aljibes to pumps, understand how Lanzarote's unique water infrastructure works, and how to spot hidden leaks before they cost you. Plus: can you drink the water?",
     date: "2026-01-22",
     author: "Canary Detect",
     category: "Essential Guides",
@@ -352,6 +352,66 @@ Once your leak is repaired, prevent future problems with these tips:
 3. **Prompt repair** of small cracks or chips
 4. **Winter maintenance** to prevent freeze damage (rare but possible in Lanzarote's highlands)
 
+## Advanced Pool Leak Tests: What Professionals Use
+
+DIY tests like the bucket test are a good starting point, but they can only tell you whether a leak exists, not where it is. Professional pool leak detection uses specialised equipment to locate the exact source.
+
+### Pressure Testing Pool Plumbing Lines
+
+Pressure testing involves isolating individual sections of the pool's pipework and pressurising each section to a test pressure. A section that cannot hold pressure has a fault, and this process eliminates sections of pipework systematically until the faulty line is identified. This is the most reliable way to confirm whether a leak is in the plumbing rather than the shell.
+
+### Dye Testing Around Fittings and Cracks
+
+Professional dye testing uses a slow-release dye syringe that deposits a precise stream of dye near suspected fault points: skimmer surrounds, return fittings, main drain covers, light niches, and visible cracks in the shell. If the dye is drawn towards a fault, it flows visibly towards the leak point. This works best on calm water with the pump off.
+
+### Acoustic Detection for Underground Pool Pipes
+
+Pool plumbing runs underground, and a pressurised underground pipe leak creates a sound that acoustic equipment can detect from the surface. By placing acoustic sensors along the pipe route, our technicians can identify the section of pipe that is leaking and narrow it down to a precise location before any excavation begins.
+
+### Thermal Imaging for Pool Wall and Floor Leaks
+
+Where a pool shell crack is leaking, the water seeping through the crack creates a temperature anomaly on the outer surface that is visible to a thermal camera. This is particularly useful on fibreglass and rendered shells where cracks may be too fine to see visually but are actively leaking.
+
+## Common Pool Leak Locations in Lanzarote
+
+### Skimmer to Shell Joint
+
+The joint where the plastic skimmer body meets the concrete or fibreglass shell is one of the most common leak points on any pool. Thermal movement over years loosens the bond, and water escapes between the skimmer throat and the shell. This leak is often visible as a slow waterline drop that stops once the water level falls below the skimmer mouth.
+
+### Return Fittings and Eyeballs
+
+Return jet fittings pass through the pool wall and are sealed with a rubber gasket. Over time, these gaskets deteriorate and the fittings can work loose, allowing water to escape around the fitting rather than through it into the pool. Return fitting leaks are among the easiest to detect by dye testing.
+
+### Main Drain and Sump
+
+The main drain at the deepest point of the pool is surrounded by a seal that can deteriorate. Dye testing directly over the main drain cover reveals whether water is being drawn out through a compromised seal.
+
+### Underground Supply and Return Pipes
+
+A significant proportion of serious pool leaks occur not in the shell but in the underground pipework running between the pool and the pump room. These pipes are typically 25-50mm diameter PVC, and they can crack from ground movement, tree root intrusion, or UV degradation in exposed sections. Pressure testing isolates these lines and tracer gas or acoustic detection locates the fault.
+
+## Frequently Asked Questions: Pool Leak Testing Lanzarote
+
+### How long does a pool leak test take?
+
+A thorough professional pool leak test typically takes two to four hours. This includes pressure testing all plumbing lines, dye testing visible fittings and shell areas, and acoustic detection of any suspect underground pipe sections.
+
+### My pool only seems to lose water when the pump is running. What does that mean?
+
+If the pool level drops when the pump is running but holds steady when it is switched off, the leak is in the pressurised return side of the plumbing, the section between the pump and the return jets in the pool wall. This narrows the fault to a specific section of pipework.
+
+### My pool loses water overnight when the pump is off. Is that different?
+
+Yes. If the pool loses water only when the pump is off, the leak is in the suction side pipework between the pool and the pump. If it loses water both when the pump is on and off, the leak is in the shell or a fitting below the waterline.
+
+### How much water loss per week is actually a leak?
+
+Normal evaporation in Lanzarote accounts for around 2 to 4 centimetres per week during summer. If you are losing more than 5 centimetres per week in calm weather with no wind, and the bucket test confirms the pool is losing more than the bucket, you have a pool leak that needs professional attention.
+
+### Can pool leaks be repaired without draining the pool?
+
+Some can, and some cannot. Fitting leaks, skimmer joint repairs using underwater epoxy, and minor shell crack injections can often be carried out without draining. Structural crack repairs, resurfacing work, and underground pipe repairs require draining. We advise on the least disruptive approach for each specific fault.
+
 ## Get Professional Help Today
 
 If you've tried the bucket test and suspect a leak, don't wait. Water leaks waste money and can cause structural damage to your pool and surrounding areas.
@@ -514,7 +574,7 @@ Underground water leaks only get worse with time. If you've noticed any of these
     content: `
 ## The Spinning Meter Mystery
 
-You've turned off every tap, made sure the washing machine isn't running, and checked that no toilets are flushing – but your water meter dial keeps moving. This frustrating situation is a clear indicator that water is escaping somewhere in your system.
+You've turned off every tap, made sure the washing machine isn't running, and checked that no toilets are flushing, but your water meter dial keeps moving. This frustrating situation is a clear indicator that water is escaping somewhere in your system.
 
 Let's explore what this means and how to find the source.
 
@@ -534,7 +594,7 @@ If the numbers have changed, you have a leak. The amount of change indicates the
 
 - **Small movement**: Minor leak, but still needs attention
 - **Significant movement**: Major leak requiring urgent action
-- **Fast spinning**: Serious leak – consider shutting off main supply
+- **Fast spinning**: Serious leak, consider shutting off main supply
 
 ## Where Is the Water Going?
 
@@ -580,7 +640,7 @@ In Lanzarote, water is expensive. A leak that wastes just 1 litre per minute add
 - **43,800 litres per month**
 - **525,600 litres per year**
 
-That's not just wasted water – it's wasted money and potential property damage.
+That's not just wasted water, it's wasted money and potential property damage.
 
 ## When to Call Professionals
 
@@ -611,7 +671,7 @@ Our **No Find, No Fee guarantee** means you don't pay unless we find the leak.
 
 ## Stop the Spinning Today
 
-A spinning water meter is your property telling you something is wrong. Don't ignore it – the problem will only get worse and more expensive.
+A spinning water meter is your property telling you something is wrong. Don't ignore it, the problem will only get worse and more expensive.
 
 **Contact Canary Detect** for professional leak detection across Lanzarote. We serve Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise, and all areas of the island.
 
@@ -622,7 +682,7 @@ A spinning water meter is your property telling you something is wrong. Don't ig
     id: 5,
     slug: "damp-walls-causes-solutions",
     title: "Damp Walls in Lanzarote: Causes, Detection & Solutions",
-    excerpt: "Damp walls aren't just unsightly – they indicate water intrusion that needs addressing. Learn the common causes and how to fix them.",
+    excerpt: "Damp walls aren't just unsightly, they indicate water intrusion that needs addressing. Learn the common causes and how to fix them.",
     date: "2024-12-18",
     author: "Dave Poxon",
     category: "Tips & Advice",
@@ -772,7 +832,7 @@ We specialise in finding the hidden causes of damp walls:
 
 ## Get Your Damp Walls Investigated
 
-Don't guess at the cause of your damp walls – get professional diagnosis. What looks like condensation could be a hidden leak costing you money every day.
+Don't guess at the cause of your damp walls, get professional diagnosis. What looks like condensation could be a hidden leak costing you money every day.
 
 **Contact Canary Detect** for leak detection services across Lanzarote.
 
@@ -922,7 +982,7 @@ This multi-technology approach ensures we find leaks accurately and efficiently.
 
 If you suspect hidden leaks in your Lanzarote property, thermal imaging can reveal the truth without any damage.
 
-**Contact Canary Detect** – our **No Find, No Fee guarantee** ensures you only pay when we find your leak.
+**Contact Canary Detect**, our **No Find, No Fee guarantee** ensures you only pay when we find your leak.
 
 [Schedule your survey →](/contact)
     `
@@ -945,13 +1005,13 @@ If you suspect hidden leaks in your Lanzarote property, thermal imaging can reve
 
 ## Introduction to Pool Leaks
 
-Owning a pool in Lanzarote should be a pleasure, not a source of stress. However, hidden leaks can quickly turn your oasis into a costly headache, driving up water bills and causing damage to your property. At Canary Detect, also known as The Leaky Finders, we understand how disruptive leaks can be. That's why our team specializes in **leak detection in Lanzarote** designed to find and fix leaks fast—before they escalate into bigger problems. Using the latest equipment and technology, we detect even the most elusive leaks in pools and water systems, helping our clients save thousands of euros in potential repairs. With our expert service, you can relax knowing your pool is secure, your water bills are under control, and your property is protected.
+Owning a pool in Lanzarote should be a pleasure, not a source of stress. However, hidden leaks can quickly turn your oasis into a costly headache, driving up water bills and causing damage to your property. At Canary Detect, also known as The Leaky Finders, we understand how disruptive leaks can be. That's why our team specializes in **leak detection in Lanzarote** designed to find and fix leaks fast, before they escalate into bigger problems. Using the latest equipment and technology, we detect even the most elusive leaks in pools and water systems, helping our clients save thousands of euros in potential repairs. With our expert service, you can relax knowing your pool is secure, your water bills are under control, and your property is protected.
 
 **This guide is for pool owners in Lanzarote concerned about leaks and repair costs. We cover how leaks are detected, typical repair costs, and how to save money on pool maintenance.**
 
 ## Professional Leak Detection in Lanzarote: Non-Invasive, High-Tech Solutions
 
-Canary Detect provides professional leak detection services across Lanzarote. In Lanzarote, leak detection relies on a combination of non-invasive, high-tech methods adapted to the island's unique volcanic soil and rocky terrain. Local professionals like Canary Detect and Leakbusters use advanced, non-invasive technology to locate hidden leaks in swimming pools, domestic pipes, and underground utilities—minimizing disruption to your property and ensuring accurate results.
+Canary Detect provides professional leak detection services across Lanzarote. In Lanzarote, leak detection relies on a combination of non-invasive, high-tech methods adapted to the island's unique volcanic soil and rocky terrain. Local professionals like Canary Detect and Leakbusters use advanced, non-invasive technology to locate hidden leaks in swimming pools, domestic pipes, and underground utilities, minimizing disruption to your property and ensuring accurate results.
 
 **Summary:**\\
 Professional leak detection in Lanzarote uses non-invasive, high-tech methods specifically adapted to the island's volcanic soil and rocky terrain. These services are available for swimming pools, domestic pipes, and underground utilities, ensuring accurate leak location with minimal disruption to your property.
@@ -1224,7 +1284,7 @@ We guide you through the entire process, from initial detection to submitting yo
 
 Selecting the right leak detection and repair service in the Canary Islands is crucial for protecting your property and minimizing water loss. Canary Detect stands out thanks to our decades of combined expertise, state-of-the-art equipment, and commitment to customer satisfaction. Our team is trained to detect and fix leaks quickly, using proven methods that reduce the risk of further damage.
 
-We offer a transparent "No Find, No Fee" guarantee, so you only pay if we successfully locate a leak. Our fast response times and professional approach mean you won't be left waiting while water loss continues. Whether you own a villa, manage a property, or run a business, our tailored service ensures your needs are met efficiently. Trust Canary Detect to provide reliable leak detection, clear communication, and expert repairs—helping you save water, money, and stress.
+We offer a transparent "No Find, No Fee" guarantee, so you only pay if we successfully locate a leak. Our fast response times and professional approach mean you won't be left waiting while water loss continues. Whether you own a villa, manage a property, or run a business, our tailored service ensures your needs are met efficiently. Trust Canary Detect to provide reliable leak detection, clear communication, and expert repairs, helping you save water, money, and stress.
 
 ---
 
@@ -1232,7 +1292,7 @@ We offer a transparent "No Find, No Fee" guarantee, so you only pay if we succes
 
 Our reputation at Canary Detect is built on real results and satisfied clients throughout Lanzarote, Playa Blanca, and the wider Canary Islands. Homeowners and businesses alike have seen dramatic reductions in water bills and water loss after using our professional leak detection services. Our case studies highlight how we've helped clients detect and fix leaks that were causing hidden damage and unnecessary expenses.
 
-Clients consistently praise our expertise, professionalism, and the peace of mind they gain from our thorough approach. From complex leaks in large properties to quick fixes in family pools, our team has delivered solutions that protect property and save thousands of euros. Don't just take our word for it—our testimonials reflect the trust and satisfaction of those we've helped across the islands.
+Clients consistently praise our expertise, professionalism, and the peace of mind they gain from our thorough approach. From complex leaks in large properties to quick fixes in family pools, our team has delivered solutions that protect property and save thousands of euros. Don't just take our word for it, our testimonials reflect the trust and satisfaction of those we've helped across the islands.
 
 ---
 
@@ -1244,7 +1304,7 @@ Our team is committed to ensuring your peace of mind, tailoring our recommendati
 
 ## Final Considerations
 
-If you suspect a leak in your pool or water system, don't let it cause you unnecessary stress or financial loss. Contact Canary Detect, The Leaky Finders, for a professional leak detection service you can trust. Our experienced team will work with you to locate and fix hidden leaks, providing a detailed report and clear recommendations for repairs. With our expertise and advanced equipment, you can be confident that your property is in safe hands. Save thousands of euros in potential repairs and enjoy peace of mind—reach out to us today to schedule your leak detection service. Don't forget to sign up for our newsletter to receive expert tips on leak prevention and stay updated with our latest news and offers. Let Canary Detect help you protect your property and your wallet.
+If you suspect a leak in your pool or water system, don't let it cause you unnecessary stress or financial loss. Contact Canary Detect, The Leaky Finders, for a professional leak detection service you can trust. Our experienced team will work with you to locate and fix hidden leaks, providing a detailed report and clear recommendations for repairs. With our expertise and advanced equipment, you can be confident that your property is in safe hands. Save thousands of euros in potential repairs and enjoy peace of mind, reach out to us today to schedule your leak detection service. Don't forget to sign up for our newsletter to receive expert tips on leak prevention and stay updated with our latest news and offers. Let Canary Detect help you protect your property and your wallet.
     `
   },
   {
@@ -1497,7 +1557,7 @@ Hidden leaks cause **structural damage**, **mould**, and **sky-high water bills*
     content: `
 ## Is Your Lanzarote Pool Losing Water?
 
-Swimming pool ownership in Lanzarote comes with unique challenges. Between the intense sun, trade winds, and volcanic soil, pool maintenance requires constant attention. But how do you know if your pool is simply evaporating water—or if you have a genuine leak?
+Swimming pool ownership in Lanzarote comes with unique challenges. Between the intense sun, trade winds, and volcanic soil, pool maintenance requires constant attention. But how do you know if your pool is simply evaporating water, or if you have a genuine leak?
 
 After 10+ years detecting pool leaks across Lanzarote, we've identified the **7 most reliable warning signs** that indicate your pool has a leak.
 
@@ -1512,7 +1572,7 @@ But if you're losing **more than 5cm per week**, you almost certainly have a lea
 
 ### The Bucket Test
 
-Place a bucket on your pool step, fill it to match the pool water level, and mark both levels. Wait 24 hours. If the pool drops more than the bucket, you have a leak—not evaporation.
+Place a bucket on your pool step, fill it to match the pool water level, and mark both levels. Wait 24 hours. If the pool drops more than the bucket, you have a leak, not evaporation.
 
 ## 2. Constant Refilling from Aljibe or Mains
 
@@ -1570,7 +1630,7 @@ When air enters your plumbing system:
 - **Gurgling sounds** in pipes
 - **Fluctuating pressure** gauge readings
 
-Air bubbles often indicate a crack in the suction side of your plumbing—a common leak location.
+Air bubbles often indicate a crack in the suction side of your plumbing, a common leak location.
 
 ## 7. Pool Equipment Running Constantly
 
@@ -1671,7 +1731,7 @@ Before paying for a full survey, confirm you actually have a leak with our **Fre
 
 Water leaks in Lanzarote properties are often **invisible for months** before causing obvious damage. By the time you see damp patches or mould, significant damage may have already occurred behind walls and under floors.
 
-At Canary Detect, we find that **95% of leaks are hidden**—no visible drips, no obvious signs. This guide helps you spot the early warning signs before expensive damage occurs.
+At Canary Detect, we find that **95% of leaks are hidden**, no visible drips, no obvious signs. This guide helps you spot the early warning signs before expensive damage occurs.
 
 ## The 10 Warning Signs of a Hidden Water Leak
 
@@ -1732,7 +1792,7 @@ Temperature anomalies reveal hidden pipes:
 - **Cold patches** may indicate cold water escaping
 - **Tiles that feel different** temperatures
 
-Walk barefoot on tile floors—you'll notice temperature differences more easily.
+Walk barefoot on tile floors, you'll notice temperature differences more easily.
 
 ### 7. Sound of Running Water
 
@@ -1761,7 +1821,7 @@ Water damage causes structural movement:
 - **Foundation cracks** near plumbing routes
 - **Doors/windows sticking** that didn't before
 
-Lanzarote's volcanic soil amplifies this—wet soil swells and shifts.
+Lanzarote's volcanic soil amplifies this, wet soil swells and shifts.
 
 ### 10. Pooling Water Outside
 
@@ -1850,6 +1910,60 @@ Many homeowners spend weeks:
 
 ---
 
+## Why Lanzarote Villa Leaks Go Undetected for So Long
+
+Many homeowners in Lanzarote are surprised to learn that their hidden leak has been running for months or even years. Several factors specific to the island explain why.
+
+### Properties Left Unoccupied for Extended Periods
+
+A large proportion of Lanzarote properties are holiday homes or investment properties. Weeks or months can pass between visits, and a leak that begins during an empty period may not be discovered until significant damage has already occurred beneath floors, within walls, or under the garden.
+
+### Flat Roof Architecture and Drainage
+
+Lanzarote's characteristic flat-roof architecture concentrates rainwater and traps moisture in a way that pitched-roof properties do not. When flat roof waterproofing fails, water works slowly into the roof structure and eventually appears inside the property at a point well away from the original entry, making the source difficult to trace without specialist equipment.
+
+### Desalinated Water Supply and Pipe Damage
+
+The desalinated water supply used across Lanzarote has a different mineral profile to mainland European water. Over years, this accelerates internal corrosion in copper and galvanised iron pipes, causing small pinholes to form that lose very little water initially but worsen gradually. These slow leaks do not trigger obvious warning signs for months.
+
+## The Hidden Cost of Ignoring Leak Signs in Lanzarote
+
+In Lanzarote, water is one of the most expensive utilities on the island. Every cubic metre is desalinated before it reaches your property, which means even a small leak has a direct and measurable financial cost beyond the water bill itself. A pipe leaking at a modest rate of one litre per hour wastes over 8,000 litres per month. At Lanzarote water rates, this adds up quickly.
+
+Beyond the water cost, structural water damage in Lanzarote properties tends to progress faster than on the mainland. The volcanic soil composition means water spreads laterally beneath floor slabs rather than draining away, saturating the substrate and compromising tile adhesion across a wide area around the actual leak point.
+
+## What Happens During a Professional Leak Detection Survey
+
+When you call Canary Detect about a suspected leak in your villa or apartment, we carry out a structured survey designed to confirm the presence of a leak and locate it precisely without unnecessary damage.
+
+We start with a water meter test to confirm water is actively leaving the system. We then carry out pressure testing to measure the rate of loss and identify which section of the plumbing is affected. Depending on the location and type of pipe, we use acoustic sensors, tracer gas, thermal imaging, or internal CCTV to pinpoint the fault.
+
+The result is a written report that documents the leak location with photographs, the probable cause, and recommendations for repair. This report is accepted by all major insurers operating in the Canary Islands for insurance claims.
+
+## Frequently Asked Questions: Signs of Water Leak in Villa Lanzarote
+
+### I have damp patches on my wall but no visible drips. Do I have a leak?
+
+Yes, this is a common presentation. Damp patches on walls without visible dripping water typically indicate a slow pipe leak behind the surface. The water travels through the wall structure before appearing at the surface. A thermal imaging camera can locate the source without opening up the wall.
+
+### My water bill has gone up but I cannot see anything wrong. What should I do?
+
+Check your water meter with all taps and appliances off. If the meter is still moving, you have an active leak. If the meter is still, the increase may be due to a slow intermittent leak or a billing error. Even if the meter appears static, an increase in bills over several months warrants a professional leak survey.
+
+### How do I know if the damp on my flat roof terrace is a leak or just condensation?
+
+A damp patch that appears after rain and dries out within a day or two is likely surface water from inadequate drainage. A damp patch that persists regardless of weather and feels wet to the touch suggests a waterproofing failure. If you are unsure, a moisture survey using a damp meter can distinguish between condensation and an active water ingress.
+
+### Is it always a plumbing leak, or could the damp come from somewhere else?
+
+Not all damp patches are caused by plumbing leaks. Flat roof waterproofing failure, rising damp from soil contact, condensation inside insulated walls, and poorly sealed window and door frames are all common causes of damp in Lanzarote properties. Our survey establishes whether the moisture source is from the plumbing system or an external ingress source.
+
+### Can I get a report for my insurance company?
+
+Yes. Every Canary Detect survey produces a full written report including the leak location, photographs, cause assessment, and repair recommendations. This report is accepted by all major insurance companies operating in the Canary Islands.
+
+---
+
 ## Free Leak Confirmation
 
 Not sure if you have a leak? Our **Free Leak Confirmation Test** gives you a definitive answer before committing to a full survey.
@@ -1865,13 +1979,13 @@ Not sure if you have a leak? Our **Free Leak Confirmation Test** gives you a def
     id: 11,
     slug: "high-water-bills-lanzarote-causes",
     title: "What Causes High Water Bills in Lanzarote? 8 Reasons Your Bill Is Too High",
-    excerpt: "Shocked by your water bill? Discover the 8 common causes of high water bills in Lanzarote—from hidden leaks to faulty float valves.",
+    excerpt: "Shocked by your water bill? Discover the 8 common causes of high water bills in Lanzarote, from hidden leaks to faulty float valves.",
     date: "2026-02-01",
     author: "Canary Detect",
     category: "Water Saving",
     image: waterMeterImg,
     metaTitle: "High Water Bills Lanzarote | 8 Common Causes",
-    metaDescription: "Why is your water bill so high? Discover 8 causes of expensive water bills in Lanzarote—hidden leaks, faulty valves, and more.",
+    metaDescription: "Why is your water bill so high? Discover 8 causes of expensive water bills in Lanzarote, hidden leaks, faulty valves, and more.",
     keywords: "high water bills Lanzarote, expensive water bill causes, water bill too high, water meter spinning, leak causing high bill, reduce water bill Lanzarote",
     readTime: 9,
     content: `
@@ -1879,7 +1993,7 @@ Not sure if you have a leak? Our **Free Leak Confirmation Test** gives you a def
 
 Opening an unexpectedly high water bill is stressful. In Lanzarote, where water is precious and expensive, a spike in your bill demands immediate investigation.
 
-After 10+ years helping Lanzarote homeowners, we've identified the **8 most common causes** of high water bills—and what you can do about each one.
+After 10+ years helping Lanzarote homeowners, we've identified the **8 most common causes** of high water bills, and what you can do about each one.
 
 ## 1. Hidden Water Leaks (Most Common)
 
@@ -1987,7 +2101,7 @@ Household appliances can leak slowly:
 - **Water heaters** (pressure relief valves)
 - **Refrigerator ice makers** (water line)
 
-These often leak into hidden spaces—under floors or behind units.
+These often leak into hidden spaces, under floors or behind units.
 
 ## 7. Dripping Taps and Showers
 
@@ -1999,7 +2113,7 @@ Easy to ignore but costly over time:
 
 ### Quick Fix
 
-Replace tap washers or cartridges—usually a €5-20 repair that can save €50+ per year.
+Replace tap washers or cartridges, usually a €5-20 repair that can save €50+ per year.
 
 ## 8. Meter Reading Errors or Billing Issues
 
@@ -2057,11 +2171,45 @@ If you can't find the cause, you need specialist equipment:
 
 ### Monitor Your Bills
 
-Keep a record of monthly usage—you'll spot anomalies quickly.
+Keep a record of monthly usage, you'll spot anomalies quickly.
 
 ### Fix Small Issues Promptly
 
 Dripping taps and running toilets only get worse.
+
+---
+
+## How Much Does Water Cost in Lanzarote?
+
+Understanding the cost structure helps put a high bill in context. Water in Lanzarote is among the most expensive in Spain because all of it passes through desalination plants before reaching the distribution network. The price per cubic metre varies by municipality and consumption band, but most residential customers pay between two and four euros per cubic metre including the standing charge and tax. A property with a hidden leak losing 5,000 litres per month can easily generate an extra 20 to 40 euros per month in water charges on top of normal usage.
+
+For holiday rental properties with pools, a pool pipe leak or faulty aljibe float valve can run for weeks between visits, generating bills in the hundreds of euros before anyone notices. This is why routine meter checks between rental seasons are a sensible precaution for absentee owners.
+
+## Why High Water Bills in Lanzarote Are Often Underestimated
+
+One peculiarity of the Lanzarote water system is the aljibe. Many properties receive water from the mains supply into an underground storage tank, from which it is pumped into the property. When the aljibe is present, the mains water meter only moves when the aljibe is being filled, which may happen infrequently. This means that a leak inside the property after the aljibe, in the pressurised domestic system, will not show on the mains meter at all. The water is simply drawn down from the aljibe tank without triggering the meter. In these cases, high bills may not be immediately apparent, but the aljibe will empty faster than expected and the pump will run more frequently.
+
+## Frequently Asked Questions: High Water Bills Lanzarote
+
+### My bill has doubled but I have not changed my usage. What is most likely?
+
+A doubling of your water bill without a change in usage almost always indicates a hidden leak or a faulty float valve. The most common culprits in Lanzarote are hidden pipe leaks, aljibe float valve failure causing the mains to run continuously, or a swimming pool leak if the pool was recently opened for the season.
+
+### How do I know if my water meter is accurate?
+
+Request a meter check from your water company (INALSA or the municipal operator in your area). They will test the meter against a standard flow. Meter errors are less common than leaks as a cause of high bills, but they do occur, particularly in older meters.
+
+### Can a dripping tap really cause a significantly high bill?
+
+A single dripping tap wastes around 15 to 20 litres per day, which amounts to roughly 5,000 to 6,000 litres per year. At Lanzarote water rates, this costs around 10 to 20 euros per year, which is noticeable but not dramatic. Multiple dripping taps or a running toilet combined can create a more significant impact.
+
+### My neighbour has a similar property but a much lower water bill. Is there something wrong?
+
+Significantly higher bills than comparable neighbouring properties are a reliable indicator of a problem. The difference could be a hidden leak, a more frequent pool top-up cycle, or a faulty appliance. Comparing usage over multiple billing periods rather than a single bill gives a more reliable picture.
+
+### How quickly can a professional leak detection survey identify the cause of a high bill?
+
+In most cases, a professional leak survey can confirm the presence or absence of a hidden leak within two to three hours. Where a leak is confirmed, the same visit typically locates it precisely. We provide a written report at the end of the survey that documents the findings and serves as supporting evidence for insurance claims.
 
 ---
 
@@ -2103,7 +2251,7 @@ If you suspect a hidden leak is causing high bills, get certainty with our **Fre
 
 ## Introduction: Underground Pipes in Lanzarote's Volcanic Terrain
 
-Detecting underground pipes before any drilling, excavation, or renovation work is critical for property owners across Lanzarote. This guide explains how to detect underground pipes in Lanzarote's volcanic ground, covering the best methods and tools for accurate results. This article is intended for property owners, builders, and maintenance professionals in Lanzarote who need to locate underground pipes to prevent costly damage, ensure safety, and comply with local regulations. Whether you're building a swimming pool, installing garden irrigation, or simply renovating an older villa, knowing exactly where your buried utilities run can save you from expensive damage, wasted water, and dangerous accidents. On an island where construction often happens fast and plans from previous decades may be incomplete or missing entirely, taking the time to locate underground utilities properly is not optional—it's essential.
+Detecting underground pipes before any drilling, excavation, or renovation work is critical for property owners across Lanzarote. This guide explains how to detect underground pipes in Lanzarote's volcanic ground, covering the best methods and tools for accurate results. This article is intended for property owners, builders, and maintenance professionals in Lanzarote who need to locate underground pipes to prevent costly damage, ensure safety, and comply with local regulations. Whether you're building a swimming pool, installing garden irrigation, or simply renovating an older villa, knowing exactly where your buried utilities run can save you from expensive damage, wasted water, and dangerous accidents. On an island where construction often happens fast and plans from previous decades may be incomplete or missing entirely, taking the time to locate underground utilities properly is not optional, it's essential.
 
 In the US, calling 811 ensures utility companies will determine and mark the location of underground lines on your property for free before any digging. Always check for similar services in your local area to avoid costly or dangerous mistakes.
 
@@ -2111,7 +2259,7 @@ In the US, calling 811 ensures utility companies will determine and mark the loc
 
 Lanzarote presents unique challenges compared to mainland Spain. The ground beneath your property likely consists of porous lava rock, loose volcanic gravel called picón, dense basalt layers, and backfilled trenches from previous construction. These varying soil and rock conditions affect how different detection methods perform, meaning techniques that work perfectly in clay-based soils elsewhere may need significant adaptation here. The volcanic terrain can interfere with signals, create confusing reflections, and hide pipes at unexpected depths.
 
-Water on Lanzarote comes primarily via desalination plants and travels through long transport lines to reach properties across the island. This makes every litre valuable—and every undetected leak especially wasteful and expensive. When an underground water pipe develops a leak beneath volcanic rock, the water often disperses through porous material without visible surface signs, leading to enormous bills before the problem becomes apparent. Visual inspection can help determine the presence of underground pipes by revealing sunken lines in the dirt, unusual differences in vegetation growth, or damp spots.
+Water on Lanzarote comes primarily via desalination plants and travels through long transport lines to reach properties across the island. This makes every litre valuable, and every undetected leak especially wasteful and expensive. When an underground water pipe develops a leak beneath volcanic rock, the water often disperses through porous material without visible surface signs, leading to enormous bills before the problem becomes apparent. Visual inspection can help determine the presence of underground pipes by revealing sunken lines in the dirt, unusual differences in vegetation growth, or damp spots.
 
 ![A professional surveyor is using detection equipment to examine a volcanic terrain under bright sunlight, focusing on locating underground utilities such as metal and plastic pipes.](https://images.surferseo.art/1e6f2544-402d-4137-b300-03d642eef4ab.png)
 
@@ -2144,7 +2292,7 @@ At Canary Detect, we begin every job by clarifying the pipe type, approximate ag
 
 ## Step 2: Map and Mark the Site Before Using Equipment
 
-Before switching on any detection devices, a thorough site assessment and preliminary mapping saves considerable time and improves accuracy. This preparation stage requires no special tools—just careful observation and systematic documentation.
+Before switching on any detection devices, a thorough site assessment and preliminary mapping saves considerable time and improves accuracy. This preparation stage requires no special tools, just careful observation and systematic documentation.
 
 Start by walking your property and sketching a simple site map. Include:
 
@@ -2161,13 +2309,13 @@ Use clear markers on the ground to indicate suspected pipe routes. Spray paint, 
 
 ### Reading the Landscape for Clues About Pipe Routes
 
-On Lanzarote, many pipes follow property boundaries or run parallel to walls. Builders historically avoided cutting through hard volcanic rock whenever possible, so pipes often take the path of least resistance along existing excavations or softer ground. Observing where previous trenches were backfilled—visible as different coloured gravel or settling in picón surfaces—provides practical clues about buried pipe routes.
+On Lanzarote, many pipes follow property boundaries or run parallel to walls. Builders historically avoided cutting through hard volcanic rock whenever possible, so pipes often take the path of least resistance along existing excavations or softer ground. Observing where previous trenches were backfilled, visible as different coloured gravel or settling in picón surfaces, provides practical clues about buried pipe routes.
 
 Canary Detect technicians always combine desk study (reviewing plans, aerial photos, and construction records) with a physical walkthrough before activating any detection equipment. This approach prevents wasted scanning time and ensures we're looking in the most logical locations first.
 
 ## Safety Precautions for Pipe Detection in Volcanic Ground
 
-When it comes to locating underground pipes in Lanzarote's volcanic ground, safety must always come first. The unpredictable nature of volcanic soil—ranging from loose gravel to dense basalt and hidden lava tubes—means that every pipe detection project carries unique risks. Before any detection work begins, it's essential to thoroughly assess the ground for potential hazards such as unstable soil, concealed cavities, or areas where gas might accumulate. These conditions can pose serious threats not only to the pipe system but also to the safety of everyone on site.
+When it comes to locating underground pipes in Lanzarote's volcanic ground, safety must always come first. The unpredictable nature of volcanic soil, ranging from loose gravel to dense basalt and hidden lava tubes, means that every pipe detection project carries unique risks. Before any detection work begins, it's essential to thoroughly assess the ground for potential hazards such as unstable soil, concealed cavities, or areas where gas might accumulate. These conditions can pose serious threats not only to the pipe system but also to the safety of everyone on site.
 
 ### Personal Protective Equipment
 
@@ -2179,7 +2327,7 @@ Regular monitoring of both soil stability and air quality is another key safety 
 
 ## Acoustic and Water Leak Detection in Volcanic Soil
 
-Acoustic leak detection relies on listening for the sound waves created when water escaping under pressure vibrates through soil, pipes, and surrounding structures. High-sensitivity microphones in acoustic leak detectors can pick up vibrations or noises from escaping water or even a gas leak. This method is particularly effective when you know there's an active leak—perhaps indicated by an unexplained high water bill, a constantly running pump, or visible damp patches appearing where they shouldn't.
+Acoustic leak detection relies on listening for the sound waves created when water escaping under pressure vibrates through soil, pipes, and surrounding structures. High-sensitivity microphones in acoustic leak detectors can pick up vibrations or noises from escaping water or even a gas leak. This method is particularly effective when you know there's an active leak, perhaps indicated by an unexplained high water bill, a constantly running pump, or visible damp patches appearing where they shouldn't.
 
 ### Digital Correlators and Ground Microphones
 
@@ -2200,7 +2348,7 @@ Canary Detect routinely uses acoustic methods for villas with hidden leaks betwe
 
 ### How GPR Works
 
-Ground penetrating radar works by sending high-frequency radio pulses into the ground and analysing the reflections that bounce back from buried objects. When those pulses encounter a change in material—such as a pipe, void, or different soil layer—they reflect back to the surface where the receiver interprets them as a visual display.
+Ground penetrating radar works by sending high-frequency radio pulses into the ground and analysing the reflections that bounce back from buried objects. When those pulses encounter a change in material, such as a pipe, void, or different soil layer, they reflect back to the surface where the receiver interprets them as a visual display.
 
 ![A technician is operating ground-penetrating radar equipment on a tiled outdoor terrace to locate underground pipes, including metal and plastic pipes.](https://images.surferseo.art/5350281d-c7aa-48fa-8af8-37cacdb69f66.png)
 
@@ -2215,7 +2363,7 @@ Lanzarote's volcanic soils create variable conditions for GPR:
 * **Mixed backfill:** Creates complex returns that need experienced interpretation
 * **Reworked lava zones:** May produce strong reflections that can be confused with pipes
 
-Survey grids are laid out systematically across the target area, with the operator pushing or pulling the radar unit along parallel lines. On the screen, buried pipes appear as characteristic hyperbola shapes—curved patterns that indicate the location and approximate depth of an object below the surface.
+Survey grids are laid out systematically across the target area, with the operator pushing or pulling the radar unit along parallel lines. On the screen, buried pipes appear as characteristic hyperbola shapes, curved patterns that indicate the location and approximate depth of an object below the surface.
 
 ### Combining GPR with Other Methods
 
@@ -2237,7 +2385,7 @@ The critical limitation: electromagnetic conductivity methods only work on metal
 
 Many Lanzarote installations combine metal risers (visible sections entering buildings) with plastic underground sections. A common scenario involves a copper or steel pipe at the water meter transitioning to underground water lines made from polyethylene. In these cases, Canary Detect traces the metallic portion electromagnetically, then switches to GPR or acoustic methods to follow the plastic section beyond the transition point.
 
-Pipe locator equipment ranges from basic units suitable for straightforward metal tracing to sophisticated systems with GPS integration, 3D compass displays, and intelligent frequency scanning. Modern utility locators can distinguish between different buried lines running parallel to each other—essential in urbanisations where water, electric, and telecom services often share the same trench.
+Pipe locator equipment ranges from basic units suitable for straightforward metal tracing to sophisticated systems with GPS integration, 3D compass displays, and intelligent frequency scanning. Modern utility locators can distinguish between different buried lines running parallel to each other, essential in urbanisations where water, electric, and telecom services often share the same trench.
 
 ## Tracer Gas and Sondes for Non-Metallic Pipes
 
@@ -2245,7 +2393,7 @@ When electromagnetic methods can't help and GPR alone isn't providing sufficient
 
 ### How Tracer Gas Detection Works
 
-**Tracer gas detection** introduces a safe, non-toxic gas mixture (typically hydrogen and nitrogen, known as forming gas) into a drained pipe section. This gas, lighter than air, escapes from any leak points and migrates upward through soil, gravel, and even concrete. A sensitive surface detector—essentially a gas sniffer—sweeps across the area above, responding when it encounters gas escaping to the surface.
+**Tracer gas detection** introduces a safe, non-toxic gas mixture (typically hydrogen and nitrogen, known as forming gas) into a drained pipe section. This gas, lighter than air, escapes from any leak points and migrates upward through soil, gravel, and even concrete. A sensitive surface detector, essentially a gas sniffer, sweeps across the area above, responding when it encounters gas escaping to the surface.
 
 This method proves particularly effective when:
 
@@ -2256,7 +2404,7 @@ This method proves particularly effective when:
 
 ### Using Sonde Transmitters to Trace Pipe Routes
 
-**Sonde locating** works differently. Sondes, also known as transmitter probes, are small radio-frequency transmitters that can be pushed through non-conductive, empty pipes on a flexible rod, allowing a receiver to follow their signal from above. A small radio-frequency transmitter (the sonde) is inserted into an accessible point—such as a clean-out, inspection chamber, or depressurised pipe end—and pushed or pulled through the pipe using rods or flexible cables. Above ground, a receiver tracks the sonde's signal, allowing technicians to mark the pipe's direction, depth, and any bends along its route.
+**Sonde locating** works differently. Sondes, also known as transmitter probes, are small radio-frequency transmitters that can be pushed through non-conductive, empty pipes on a flexible rod, allowing a receiver to follow their signal from above. A small radio-frequency transmitter (the sonde) is inserted into an accessible point, such as a clean-out, inspection chamber, or depressurised pipe end, and pushed or pulled through the pipe using rods or flexible cables. Above ground, a receiver tracks the sonde's signal, allowing technicians to mark the pipe's direction, depth, and any bends along its route.
 
 Sonde methods excel for:
 
@@ -2289,7 +2437,7 @@ Practical applications include:
 * Identifying cold patches in soil or floors from leaking drinking water lines
 * Finding areas where water is saturating ground beneath surfaces
 
-Thermal imaging alone cannot map complete pipe routes through volcanic terrain—the rock and gravel simply don't conduct heat consistently enough to trace long runs. However, when combined with acoustic findings and GPR data, thermal cameras can confirm suspected leak locations and help narrow down target areas before any excavation begins.
+Thermal imaging alone cannot map complete pipe routes through volcanic terrain, the rock and gravel simply don't conduct heat consistently enough to trace long runs. However, when combined with acoustic findings and GPR data, thermal cameras can confirm suspected leak locations and help narrow down target areas before any excavation begins.
 
 At Canary Detect, thermal cameras serve mainly as complementary tools, particularly effective for indoor investigations and shaded exterior surfaces where temperature contrast is strongest.
 
@@ -2340,7 +2488,7 @@ Experienced professionals can determine the most effective detection method for 
 
 ### Why Professional Equipment and Expertise Matter
 
-Buying or renting advanced GPR and acoustic equipment for a single job is rarely economical. Beyond the equipment cost, the learning curve for operating these devices effectively on volcanic ground is substantial. Misinterpreting signals leads to unnecessary tile breaking, wrong trenches dug in expensive landscaping, or accidental damage to electrical, gas, or telecom lines—with associated safety risks and costly repairs.
+Buying or renting advanced GPR and acoustic equipment for a single job is rarely economical. Beyond the equipment cost, the learning curve for operating these devices effectively on volcanic ground is substantial. Misinterpreting signals leads to unnecessary tile breaking, wrong trenches dug in expensive landscaping, or accidental damage to electrical, gas, or telecom lines, with associated safety risks and costly repairs.
 
 Canary Detect brings local knowledge that general contractors typically lack. We understand typical installation depths on Lanzarote (often shallower than mainland Spain since frost protection isn't needed), recognise the construction patterns from different eras, and know the quirks of older urbanisation layouts dating from the 1970s through 2000s.
 
@@ -2352,7 +2500,7 @@ Successfully locating underground pipes in Lanzarote's volcanic terrain is a tas
 
 Accurate detection of underground water lines, gas lines, and other buried utilities not only protects your investment but also ensures the safety of everyone involved in construction or maintenance work. As technology advances, new devices and tools are making it easier to locate underground pipes with greater precision and less disruption to the surrounding ground. However, the expertise of experienced professionals remains invaluable, especially in complex environments like Lanzarote's volcanic soil.
 
-For property owners, the best next step is to consult with specialists who understand the local conditions and have access to the latest equipment for leak detection and pipe location. Staying informed about new methods and technologies will help you make the right choices for your property and avoid unnecessary risks. By prioritizing safety, using the right tools, and relying on professional guidance, you can ensure that your underground pipe detection projects are completed efficiently, safely, and with minimal impact—protecting your property from leaks, gas hazards, and unexpected repairs for years to come.
+For property owners, the best next step is to consult with specialists who understand the local conditions and have access to the latest equipment for leak detection and pipe location. Staying informed about new methods and technologies will help you make the right choices for your property and avoid unnecessary risks. By prioritizing safety, using the right tools, and relying on professional guidance, you can ensure that your underground pipe detection projects are completed efficiently, safely, and with minimal impact, protecting your property from leaks, gas hazards, and unexpected repairs for years to come.
 
 ## FAQ
 
@@ -2366,7 +2514,7 @@ Standard hobby metal detectors respond only to metallic materials, so they canno
 
 ### Does volcanic rock interfere with ground-penetrating radar?
 
-Certain dense or highly mineralised lava layers can reduce GPR penetration depth or produce strong reflections requiring expert interpretation. However, the reality varies greatly across Lanzarote. Many sites with dry, granular picón backfill actually provide excellent GPR conditions—better than heavy clay soils found elsewhere. The key factors are moisture content, mineral composition, and layer consistency rather than simply the presence of volcanic material. Experienced operators familiar with local geology adjust antenna frequencies, survey direction, and data processing to achieve usable results even in challenging areas.
+Certain dense or highly mineralised lava layers can reduce GPR penetration depth or produce strong reflections requiring expert interpretation. However, the reality varies greatly across Lanzarote. Many sites with dry, granular picón backfill actually provide excellent GPR conditions, better than heavy clay soils found elsewhere. The key factors are moisture content, mineral composition, and layer consistency rather than simply the presence of volcanic material. Experienced operators familiar with local geology adjust antenna frequencies, survey direction, and data processing to achieve usable results even in challenging areas.
 
 ### How long does a typical pipe detection survey take for a villa?
 
@@ -2374,7 +2522,7 @@ Realistic timeframes depend on property complexity. A straightforward villa with
 
 ### Is it possible to locate pipes under a tiled terrace without breaking tiles?
 
-In most cases, yes. GPR scanning, acoustic listening through surface contact, and sometimes tracer gas detection allow accurate locating and leak pinpointing under tiles, stamped concrete, or decorative stone without immediate demolition. Once the target location is narrowed to a small area, only a focused opening is typically needed—often just a few tiles rather than metres of terrace. This non-destructive approach minimises damage and repair costs significantly. It's precisely this capability that leads homeowners and hotels across Lanzarote to contact Canary Detect before allowing contractors to begin breaking floors based on guesswork.
+In most cases, yes. GPR scanning, acoustic listening through surface contact, and sometimes tracer gas detection allow accurate locating and leak pinpointing under tiles, stamped concrete, or decorative stone without immediate demolition. Once the target location is narrowed to a small area, only a focused opening is typically needed, often just a few tiles rather than metres of terrace. This non-destructive approach minimises damage and repair costs significantly. It's precisely this capability that leads homeowners and hotels across Lanzarote to contact Canary Detect before allowing contractors to begin breaking floors based on guesswork.
     `
   },
   {
@@ -2417,7 +2565,7 @@ Here's how it protects you:
 
 1. **24/7 Monitoring:** LeakGuard constantly tracks water flow, building a precise profile of your normal usage.
 
-2. **Instant Alerts:** The moment an unusual pattern emerges—like a continuous flow that indicates a leak—the system sends an instant alert to you and to our team.
+2. **Instant Alerts:** The moment an unusual pattern emerges, like a continuous flow that indicates a leak, the system sends an instant alert to you and to our team.
 
 3. **Rapid Response:** No more waiting 6-8 weeks for a surprise water bill. You'll know about a potential [water leak in your Lanzarote property](/services/water-leak-detection) within 24 hours, allowing for immediate action.
 
@@ -2433,11 +2581,11 @@ LeakGuard is the definitive solution, providing essential peace of mind, especia
 - **Property managers** overseeing multiple villas and apartments
 - **Hotel and resort operators** wanting to reduce water waste across their estate
 - **Absentee landlords** who need remote oversight of their rental properties
-- **Anyone with a [swimming pool](/services/pool-leak-detection)** — pools are one of the most common sources of hidden leaks
+- **Anyone with a [swimming pool](/services/pool-leak-detection)**, pools are one of the most common sources of hidden leaks
 
 ## The Power of The Leaky Finders, Supercharged
 
-When LeakGuard raises the alarm, it's backed by the full force of Canary Detect. Our team of experts, armed with over €80,000 of specialist equipment—from thermal imaging cameras to acoustic sensors—is ready to pinpoint the exact location of the leak. We don't just alert you to a problem; we provide the expertise to find and fix it with surgical precision.
+When LeakGuard raises the alarm, it's backed by the full force of Canary Detect. Our team of experts, armed with over €80,000 of specialist equipment, from thermal imaging cameras to acoustic sensors, is ready to pinpoint the exact location of the leak. We don't just alert you to a problem; we provide the expertise to find and fix it with surgical precision.
 
 ![LeakGuard ground box sunk flush with the surface so it can be hidden under gravel](/assets/blog/leakguard-ground-box.jpg)
 
@@ -2544,7 +2692,7 @@ So, get in touch with Canary Detect without hesitation. Before paying for a full
 
 Finding a leak in your villa is only half the battle; the second half is ensuring your insurance company covers the costs.
 
-![Rejected insurance claim alongside a simple plumber's invoice — not enough evidence](/assets/blog/insurance-rejected-claim.jpg)
+![Rejected insurance claim alongside a simple plumber's invoice, not enough evidence](/assets/blog/insurance-rejected-claim.jpg)
 
 Many homeowners in Lanzarote are surprised to find their claims rejected because they provided a simple plumber's invoice rather than a certified technical report. Have you experienced anything similar?
 
@@ -2566,7 +2714,7 @@ The report needs to detail the secondary damage. Insurance adjusters look for in
 
 ## 4. Digital Photographic Evidence
 
-![Thermal imaging comparison showing hidden moisture behind a wall — the kind of evidence insurers need](/assets/blog/insurance-thermal-evidence.jpg)
+![Thermal imaging comparison showing hidden moisture behind a wall, the kind of evidence insurers need](/assets/blog/insurance-thermal-evidence.jpg)
 
 A written description is rarely enough, and hence, your report must include high-resolution photos of the specific area, [thermal imaging](/services/damp-moisture-mapping) scans showing moisture patterns, or CCTV footage of internal pipe conditions.
 
@@ -2664,7 +2812,7 @@ export const blogArticlesEs: BlogArticle[] = [
     id: 1,
     slug: "domina-tu-sistema-de-agua-lanzarote",
     title: "Domina Tu Sistema de Agua en Lanzarote: La Guía Esencial para Residentes",
-    excerpt: "Desde aljibes hasta bombas, comprende cómo funciona la infraestructura de agua única de Lanzarote—y cómo detectar fugas ocultas antes de que te cuesten dinero. Además: ¿se puede beber el agua?",
+    excerpt: "Desde aljibes hasta bombas, comprende cómo funciona la infraestructura de agua única de Lanzarote, y cómo detectar fugas ocultas antes de que te cuesten dinero. Además: ¿se puede beber el agua?",
     date: "2026-01-22",
     author: "Canary Detect",
     category: "Guías Esenciales",
@@ -3077,7 +3225,7 @@ Las fugas de agua subterráneas solo empeoran con el tiempo. Si has notado algun
     content: `
 ## El Misterio del Contador que Gira
 
-Has cerrado todos los grifos, te has asegurado de que la lavadora no está funcionando, y has comprobado que ningún inodoro está descargando – pero el dial de tu contador de agua sigue moviéndose. Esta situación frustrante es un indicador claro de que el agua está escapando de algún lugar de tu sistema.
+Has cerrado todos los grifos, te has asegurado de que la lavadora no está funcionando, y has comprobado que ningún inodoro está descargando, pero el dial de tu contador de agua sigue moviéndose. Esta situación frustrante es un indicador claro de que el agua está escapando de algún lugar de tu sistema.
 
 Vamos a explorar qué significa esto y cómo encontrar la fuente.
 
@@ -3097,7 +3245,7 @@ Si los números han cambiado, tienes una fuga. La cantidad de cambio indica la g
 
 - **Movimiento pequeño**: Fuga menor, pero aún necesita atención
 - **Movimiento significativo**: Fuga mayor que requiere acción urgente
-- **Giro rápido**: Fuga seria – considera cerrar el suministro principal
+- **Giro rápido**: Fuga seria, considera cerrar el suministro principal
 
 ## ¿A Dónde Va el Agua?
 
@@ -3143,7 +3291,7 @@ En Lanzarote, el agua es cara. Una fuga que desperdicia solo 1 litro por minuto 
 - **43.800 litros al mes**
 - **525.600 litros al año**
 
-Eso no es solo agua desperdiciada – es dinero desperdiciado y potencial daño a la propiedad.
+Eso no es solo agua desperdiciada, es dinero desperdiciado y potencial daño a la propiedad.
 
 ## Cuándo Llamar a Profesionales
 
@@ -3174,7 +3322,7 @@ Nuestra **garantía Sin Encontrar, Sin Pagar** significa que no pagas a menos qu
 
 ## Detén el Giro Hoy
 
-Un contador de agua girando es tu propiedad diciéndote que algo está mal. No lo ignores – el problema solo empeorará y será más caro.
+Un contador de agua girando es tu propiedad diciéndote que algo está mal. No lo ignores, el problema solo empeorará y será más caro.
 
 **Contacta con Canary Detect** para detección profesional de fugas en toda Lanzarote. Servimos Arrecife, Puerto del Carmen, Playa Blanca, Costa Teguise y todas las áreas de la isla.
 
@@ -3185,7 +3333,7 @@ Un contador de agua girando es tu propiedad diciéndote que algo está mal. No l
     id: 5,
     slug: "paredes-humedas-causas-soluciones",
     title: "Paredes Húmedas en Lanzarote: Causas, Detección y Soluciones",
-    excerpt: "Las paredes húmedas no son solo antiestéticas – indican intrusión de agua que necesita ser tratada. Aprende las causas comunes y cómo solucionarlas.",
+    excerpt: "Las paredes húmedas no son solo antiestéticas, indican intrusión de agua que necesita ser tratada. Aprende las causas comunes y cómo solucionarlas.",
     date: "2024-12-18",
     author: "Dave Poxon",
     category: "Consejos",
@@ -3335,7 +3483,7 @@ Nos especializamos en encontrar las causas ocultas de las paredes húmedas:
 
 ## Haz que Investiguen tus Paredes Húmedas
 
-No adivines la causa de tus paredes húmedas – obtén un diagnóstico profesional. Lo que parece condensación podría ser una fuga oculta que te cuesta dinero cada día.
+No adivines la causa de tus paredes húmedas, obtén un diagnóstico profesional. Lo que parece condensación podría ser una fuga oculta que te cuesta dinero cada día.
 
 **Contacta con Canary Detect** para servicios de detección de fugas en toda Lanzarote.
 
@@ -3485,7 +3633,7 @@ Este enfoque multi-tecnológico asegura que encontremos fugas con precisión y e
 
 Si sospechas fugas ocultas en tu propiedad de Lanzarote, la imagen térmica puede revelar la verdad sin ningún daño.
 
-**Contacta con Canary Detect** – nuestra **garantía Sin Encontrar, Sin Pagar** asegura que solo pagas cuando encontramos tu fuga.
+**Contacta con Canary Detect**, nuestra **garantía Sin Encontrar, Sin Pagar** asegura que solo pagas cuando encontramos tu fuga.
 
 [Programa tu inspección →](/es/contacto)
     `
@@ -3675,9 +3823,9 @@ Servimos a propietarios de piscinas en Playa Blanca, Puerto del Carmen, Costa Te
     content: `
 ## Precisión • Rapidez • Resultados
 
-**La llamada:** Un contador de agua girando sin parar, ninguna señal visible de fuga, y huéspedes de vacaciones a punto de llegar. El cliente necesitaba respuestas — rápido.
+**La llamada:** Un contador de agua girando sin parar, ninguna señal visible de fuga, y huéspedes de vacaciones a punto de llegar. El cliente necesitaba respuestas, rápido.
 
-Este caso de éxito muestra cómo Los Cazafugas detectaron, localizaron, repararon y restauraron completamente una fuga subterránea oculta en solo **una tarde** — con mínima interrupción para la propiedad.
+Este caso de éxito muestra cómo Los Cazafugas detectaron, localizaron, repararon y restauraron completamente una fuga subterránea oculta en solo **una tarde**, con mínima interrupción para la propiedad.
 
 ---
 
@@ -3703,7 +3851,7 @@ Nuestra avanzada **cámara CCTV** puede localizarse con precisión desde la supe
 
 ![Cámara interna CCTV mostrando grieta en tubería](/assets/blog/emergency-leak-cctv.jpg)
 
-*Inspección con cámara interna a 4,39m de profundidad revela la grieta en la tubería — evidencia documentada para reclamaciones de seguro.*
+*Inspección con cámara interna a 4,39m de profundidad revela la grieta en la tubería, evidencia documentada para reclamaciones de seguro.*
 
 **Precisión de localización: exactitud centimétrica**
 
@@ -3719,7 +3867,7 @@ Nuestro enfoque específico significa levantar solo **una baldosa** para acceder
 
 *Solo lo necesario: levantar una sola baldosa proporciona acceso a la sección de tubería dañada.*
 
-**Interrupción mínima — solo lo necesario**
+**Interrupción mínima, solo lo necesario**
 
 ---
 
@@ -3731,7 +3879,7 @@ Una vez confirmada la ubicación exacta, excavamos cuidadosamente para exponer l
 
 ![Excavación revelando fuga de agua activa](/assets/blog/emergency-leak-excavation.jpg)
 
-*Agua fluyendo activamente de la tubería expuesta — confirmación visual de la fuga que detectamos desde la superficie.*
+*Agua fluyendo activamente de la tubería expuesta, confirmación visual de la fuga que detectamos desde la superficie.*
 
 **Acceso controlado a la sección dañada**
 
@@ -3748,7 +3896,7 @@ La fuga está expuesta y fluyendo activamente, confirmando que nuestra detecció
   Tu navegador no soporta el elemento de video.
 </video>
 
-*Evidencia en video de la fuga activa — documentación esencial para tu reclamación de seguro.*
+*Evidencia en video de la fuga activa, documentación esencial para tu reclamación de seguro.*
 
 **La evidencia visual apoya la presentación de reclamaciones de seguro**
 
@@ -3762,7 +3910,7 @@ Un fontanero cualificado repara la sección de tubería dañada según los está
 
 ![Tubería reparada con nuevos accesorios](/assets/blog/emergency-leak-pipe-repair.jpg)
 
-*Nuevas secciones de tubería y accesorios instalados según estándares de la industria — una solución permanente.*
+*Nuevas secciones de tubería y accesorios instalados según estándares de la industria, una solución permanente.*
 
 **La reparación cualificada cumple los estándares de seguro y regulatorios**
 
@@ -3776,7 +3924,7 @@ El área está completamente restaurada con baldosas reemplazadas y lechada comp
 
 ![Suelo restaurado después de reparación de fuga](/assets/blog/emergency-leak-wet-floor.jpg)
 
-*Baldosas reemplazadas, lechada completada — la propiedad restaurada a su condición original.*
+*Baldosas reemplazadas, lechada completada, la propiedad restaurada a su condición original.*
 
 **Como si nunca hubiéramos estado.**
 
@@ -3837,7 +3985,7 @@ Las fugas ocultas causan **daños estructurales**, **moho** y **facturas de agua
     content: `
 ## ¿Tu Piscina en Lanzarote Pierde Agua?
 
-Ser propietario de una piscina en Lanzarote conlleva desafíos únicos. Entre el sol intenso, los vientos alisios y el suelo volcánico, el mantenimiento de la piscina requiere atención constante. Pero, ¿cómo sabes si tu piscina simplemente evapora agua—o si tienes una fuga genuina?
+Ser propietario de una piscina en Lanzarote conlleva desafíos únicos. Entre el sol intenso, los vientos alisios y el suelo volcánico, el mantenimiento de la piscina requiere atención constante. Pero, ¿cómo sabes si tu piscina simplemente evapora agua, o si tienes una fuga genuina?
 
 Después de más de 10 años detectando fugas de piscinas en toda Lanzarote, hemos identificado las **7 señales de advertencia más fiables** que indican que tu piscina tiene una fuga.
 
@@ -3852,7 +4000,7 @@ Pero si pierdes **más de 5cm por semana**, casi seguro que tienes una fuga.
 
 ### La Prueba del Cubo
 
-Coloca un cubo en el escalón de tu piscina, llénalo hasta igualar el nivel del agua de la piscina y marca ambos niveles. Espera 24 horas. Si la piscina baja más que el cubo, tienes una fuga—no es evaporación.
+Coloca un cubo en el escalón de tu piscina, llénalo hasta igualar el nivel del agua de la piscina y marca ambos niveles. Espera 24 horas. Si la piscina baja más que el cubo, tienes una fuga, no es evaporación.
 
 ## 2. Rellenado Constante desde el Aljibe o Red
 
@@ -3910,7 +4058,7 @@ Cuando el aire entra en tu sistema de fontanería:
 - **Sonidos de gorgoteo** en las tuberías
 - Lecturas del **manómetro fluctuantes**
 
-Las burbujas de aire a menudo indican una grieta en el lado de succión de tu fontanería—una ubicación común de fugas.
+Las burbujas de aire a menudo indican una grieta en el lado de succión de tu fontanería, una ubicación común de fugas.
 
 ## 7. El Equipo de la Piscina Funciona Constantemente
 
@@ -4011,7 +4159,7 @@ Antes de pagar por un estudio completo, confirma que realmente tienes una fuga c
 
 Las fugas de agua en propiedades de Lanzarote son a menudo **invisibles durante meses** antes de causar daños obvios. Para cuando ves manchas de humedad o moho, ya puede haber ocurrido un daño significativo detrás de las paredes y bajo los suelos.
 
-En Canary Detect, encontramos que el **95% de las fugas están ocultas**—sin goteos visibles, sin señales obvias. Esta guía te ayuda a detectar las señales de advertencia tempranas antes de que ocurran daños costosos.
+En Canary Detect, encontramos que el **95% de las fugas están ocultas**, sin goteos visibles, sin señales obvias. Esta guía te ayuda a detectar las señales de advertencia tempranas antes de que ocurran daños costosos.
 
 ## Las 10 Señales de Advertencia de una Fuga de Agua Oculta
 
@@ -4072,7 +4220,7 @@ Las anomalías de temperatura revelan tuberías ocultas:
 - **Parches fríos** pueden indicar escape de agua fría
 - **Baldosas que se sienten a diferentes temperaturas**
 
-Camina descalzo por los suelos de baldosa—notarás las diferencias de temperatura más fácilmente.
+Camina descalzo por los suelos de baldosa, notarás las diferencias de temperatura más fácilmente.
 
 ### 7. Sonido de Agua Corriendo
 
@@ -4101,7 +4249,7 @@ El daño por agua causa movimiento estructural:
 - **Grietas en cimientos** cerca de rutas de fontanería
 - **Puertas/ventanas que se atascan** cuando antes no lo hacían
 
-El suelo volcánico de Lanzarote amplifica esto—el suelo mojado se hincha y se mueve.
+El suelo volcánico de Lanzarote amplifica esto, el suelo mojado se hincha y se mueve.
 
 ### 10. Agua Acumulada en el Exterior
 
@@ -4205,13 +4353,13 @@ El **95% de las fugas** no pueden encontrarse sin equipo especializado. La detec
     id: 11,
     slug: "facturas-agua-altas-lanzarote-causas",
     title: "¿Qué Causa las Facturas de Agua Altas en Lanzarote? 8 Razones Por Las Que Tu Factura Es Tan Alta",
-    excerpt: "¿Sorprendido por tu factura de agua? Descubre las 8 causas comunes de facturas de agua altas en Lanzarote—desde fugas ocultas hasta válvulas de flotador defectuosas.",
+    excerpt: "¿Sorprendido por tu factura de agua? Descubre las 8 causas comunes de facturas de agua altas en Lanzarote, desde fugas ocultas hasta válvulas de flotador defectuosas.",
     date: "2026-02-01",
     author: "Canary Detect",
     category: "Ahorro de Agua",
     image: waterMeterImg,
     metaTitle: "Facturas de Agua Altas Lanzarote | 8 Causas Comunes",
-    metaDescription: "¿Por qué es tan alta tu factura de agua? Descubre 8 causas de facturas de agua caras en Lanzarote—fugas ocultas, válvulas defectuosas y más.",
+    metaDescription: "¿Por qué es tan alta tu factura de agua? Descubre 8 causas de facturas de agua caras en Lanzarote, fugas ocultas, válvulas defectuosas y más.",
     keywords: "facturas agua altas Lanzarote, causas factura agua cara, factura agua demasiado alta, contador agua girando, fuga causando factura alta, reducir factura agua Lanzarote",
     readTime: 9,
     content: `
@@ -4219,7 +4367,7 @@ El **95% de las fugas** no pueden encontrarse sin equipo especializado. La detec
 
 Abrir una factura de agua inesperadamente alta es estresante. En Lanzarote, donde el agua es preciosa y cara, un pico en tu factura exige investigación inmediata.
 
-Después de más de 10 años ayudando a propietarios en Lanzarote, hemos identificado las **8 causas más comunes** de facturas de agua altas—y qué puedes hacer con cada una.
+Después de más de 10 años ayudando a propietarios en Lanzarote, hemos identificado las **8 causas más comunes** de facturas de agua altas, y qué puedes hacer con cada una.
 
 ## 1. Fugas de Agua Ocultas (Lo Más Común)
 
@@ -4327,7 +4475,7 @@ Los electrodomésticos del hogar pueden fugar lentamente:
 - **Calentadores de agua** (válvulas de alivio de presión)
 - **Fabricadores de hielo del frigorífico** (línea de agua)
 
-Estos a menudo fugan hacia espacios ocultos—bajo suelos o detrás de muebles.
+Estos a menudo fugan hacia espacios ocultos, bajo suelos o detrás de muebles.
 
 ## 7. Grifos y Duchas Goteando
 
@@ -4339,7 +4487,7 @@ Fácil de ignorar pero costoso con el tiempo:
 
 ### Solución Rápida
 
-Reemplaza las arandelas o cartuchos del grifo—normalmente una reparación de €5-20 que puede ahorrar €50+ al año.
+Reemplaza las arandelas o cartuchos del grifo, normalmente una reparación de €5-20 que puede ahorrar €50+ al año.
 
 ## 8. Errores de Lectura del Contador o Problemas de Facturación
 
@@ -4397,7 +4545,7 @@ Si no puedes encontrar la causa, necesitas equipo especializado:
 
 ### Monitoriza Tus Facturas
 
-Mantén un registro del uso mensual—detectarás anomalías rápidamente.
+Mantén un registro del uso mensual, detectarás anomalías rápidamente.
 
 ### Arregla Pequeños Problemas Rápidamente
 
@@ -4470,7 +4618,7 @@ En Lanzarote, muchas tuberías siguen los límites de la propiedad o corren para
 
 ## Precauciones de Seguridad para la Detección en Terreno Volcánico
 
-La naturaleza impredecible del suelo volcánico—desde grava suelta hasta basalto denso y tubos de lava ocultos—significa que cada proyecto de detección conlleva riesgos únicos. Es esencial evaluar el terreno para peligros potenciales como suelo inestable, cavidades ocultas o áreas donde el gas pueda acumularse.
+La naturaleza impredecible del suelo volcánico, desde grava suelta hasta basalto denso y tubos de lava ocultos, significa que cada proyecto de detección conlleva riesgos únicos. Es esencial evaluar el terreno para peligros potenciales como suelo inestable, cavidades ocultas o áreas donde el gas pueda acumularse.
 
 ## Detección Acústica y de Fugas de Agua en Suelo Volcánico
 
@@ -4603,7 +4751,7 @@ Así es como te protege:
 
 1. **Monitorización 24/7:** LeakGuard rastrea constantemente el flujo de agua, creando un perfil preciso de tu consumo normal.
 
-2. **Alertas Instantáneas:** En el momento en que surge un patrón inusual—como un flujo continuo que indica una fuga—el sistema envía una alerta instantánea a ti y a nuestro equipo.
+2. **Alertas Instantáneas:** En el momento en que surge un patrón inusual, como un flujo continuo que indica una fuga, el sistema envía una alerta instantánea a ti y a nuestro equipo.
 
 3. **Respuesta Rápida:** No más esperar 6-8 semanas para una factura sorpresa. Sabrás de una posible [fuga de agua en tu propiedad de Lanzarote](/es/servicios/deteccion-fugas-agua) en 24 horas, permitiendo una acción inmediata.
 
@@ -4619,11 +4767,11 @@ LeakGuard es la solución definitiva, proporcionando tranquilidad esencial, espe
 - **Administradores de propiedades** que supervisan múltiples villas y apartamentos
 - **Operadores de hoteles y resorts** que quieren reducir el desperdicio de agua en sus instalaciones
 - **Propietarios ausentes** que necesitan supervisión remota de sus propiedades de alquiler
-- **Cualquier persona con [piscina](/es/servicios/deteccion-fugas-piscinas)** — las piscinas son una de las fuentes más comunes de fugas ocultas
+- **Cualquier persona con [piscina](/es/servicios/deteccion-fugas-piscinas)**, las piscinas son una de las fuentes más comunes de fugas ocultas
 
 ## El Poder de Los Cazafugas, Potenciado
 
-Cuando LeakGuard da la alarma, cuenta con toda la fuerza de Canary Detect. Nuestro equipo de expertos, armado con más de 80.000€ en equipos especializados—desde cámaras de imagen térmica hasta sensores acústicos—está listo para localizar la ubicación exacta de la fuga. No solo te alertamos de un problema; proporcionamos la experiencia para encontrarlo y repararlo con precisión quirúrgica.
+Cuando LeakGuard da la alarma, cuenta con toda la fuerza de Canary Detect. Nuestro equipo de expertos, armado con más de 80.000€ en equipos especializados, desde cámaras de imagen térmica hasta sensores acústicos, está listo para localizar la ubicación exacta de la fuga. No solo te alertamos de un problema; proporcionamos la experiencia para encontrarlo y repararlo con precisión quirúrgica.
 
 ![Caja de LeakGuard empotrada en el suelo para ocultarla bajo la grava](/assets/blog/leakguard-ground-box.jpg)
 
@@ -4730,7 +4878,7 @@ Así que, póngase en contacto con Canary Detect sin dudarlo. Antes de pagar por
 
 Encontrar una fuga en tu villa es solo la mitad de la batalla; la segunda mitad es asegurarse de que tu compañía de seguros cubra los costes.
 
-![Reclamación de seguro rechazada junto a una simple factura de fontanero — no es evidencia suficiente](/assets/blog/insurance-rejected-claim.jpg)
+![Reclamación de seguro rechazada junto a una simple factura de fontanero, no es evidencia suficiente](/assets/blog/insurance-rejected-claim.jpg)
 
 Muchos propietarios en Lanzarote se sorprenden al ver sus reclamaciones rechazadas porque proporcionaron una simple factura de fontanero en lugar de un informe técnico certificado. ¿Te ha pasado algo similar?
 
@@ -4752,7 +4900,7 @@ El informe necesita detallar los daños secundarios. Los peritos de seguros busc
 
 ## 4. Evidencia Fotográfica Digital
 
-![Comparación de imagen térmica mostrando humedad oculta detrás de una pared — el tipo de evidencia que necesitan las aseguradoras](/assets/blog/insurance-thermal-evidence.jpg)
+![Comparación de imagen térmica mostrando humedad oculta detrás de una pared, el tipo de evidencia que necesitan las aseguradoras](/assets/blog/insurance-thermal-evidence.jpg)
 
 Una descripción escrita rara vez es suficiente, y por eso, tu informe debe incluir fotos de alta resolución del área específica, escaneos de [imagen térmica](/es/servicios/mapeo-humedad) que muestren patrones de humedad, o grabaciones CCTV de las condiciones internas de las tuberías.
 
