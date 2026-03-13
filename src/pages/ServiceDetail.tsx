@@ -191,20 +191,21 @@ const ServiceDetail = () => {
               </div>
             </div>
           ) : hasHeroCarousel && carouselImages.length > 0 ? (
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={currentSlide}
-                src={carouselImages[currentSlide].src}
-                alt={isSpanish ? carouselImages[currentSlide].alt.es : carouselImages[currentSlide].alt.en}
-                className="w-full h-full object-cover"
-                fetchPriority="high"
-                decoding="async"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              />
-            </AnimatePresence>
+            <div className="relative w-full h-full">
+              {carouselImages.map((image, idx) => (
+                <img
+                  key={image.src}
+                  src={image.src}
+                  alt={isSpanish ? image.alt.es : image.alt.en}
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-in-out ${
+                    idx === currentSlide ? "opacity-100" : "opacity-0"
+                  }`}
+                  fetchPriority={idx === 0 ? "high" : "auto"}
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                />
+              ))}
+            </div>
           ) : (
             <img 
               src={service.heroImage} 
