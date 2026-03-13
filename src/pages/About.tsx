@@ -294,8 +294,8 @@ const About = () => {
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8 max-w-none">
               {isSpanish
-                ? "En Canary Detect, creemos que las herramientas adecuadas marcan la diferencia en la detección de fugas. Por eso hemos invertido en la última tecnología de vanguardia, asegurando que nuestro equipo pueda detectar fugas con una precisión y eficiencia inigualables. Nuestro equipamiento especializado—valorado en más de €80.000—incluye:"
-                : "At Canary Detect, we believe that the right tools make all the difference when it comes to leak detection. That's why we've invested in the latest cutting-edge technology, ensuring our team can detect leaks with unrivalled accuracy and efficiency. Our specialist equipment—worth over €80,000—includes:"}
+                ? "En Canary Detect, creemos que las herramientas adecuadas marcan la diferencia en la detección de fugas. Por eso hemos invertido en la última tecnología de vanguardia, asegurando que nuestro equipo pueda detectar fugas con una precisión y eficiencia inigualables. Nuestro equipamiento especializado, valorado en más de €80.000, incluye:"
+                : "At Canary Detect, we believe that the right tools make all the difference when it comes to leak detection. That is why we have invested in the latest cutting-edge technology, ensuring our team can detect leaks with unrivalled accuracy and efficiency. Our specialist equipment, worth over €80,000, includes:"}
             </p>
 
             <div className="space-y-6">
@@ -519,6 +519,83 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* English FAQ Section */}
+      {!isSpanish && (
+        <section className="py-12 md:py-16 bg-background section-noise">
+          <div className="container mx-auto px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">
+                Choosing a Leak Detection Company in Lanzarote
+              </h2>
+
+              <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+                <p>
+                  Canary Detect is an established leak detection company based in Lanzarote, trading since 2014 as the operational name of Camello Blanco S.L. (CIF: B72431232). We are a registered Spanish limited company with a permanent presence on the island, not a mainland contractor flying in for jobs.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  What Sets a Professional Leak Detection Company Apart
+                </h3>
+                <p>
+                  Not all leak detection companies use the same level of equipment or methodology. A professional leak detection company should use multiple detection technologies on every survey, confirm leak positions with at least two independent methods before marking any location, provide a detailed written report with photographs and coordinates, and operate a genuine No Find, No Fee policy.
+                </p>
+                <p>
+                  Canary Detect meets all of these standards. We invest over &euro;80,000 in specialist detection equipment including GASENSE tracer gas systems, high-sensitivity acoustic geophones, infrared thermal imaging cameras, ground-penetrating radar, and CCTV pipe cameras. This level of investment is what separates a dedicated leak detection company from a general plumber with a basic acoustic device.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  Why Local Knowledge Matters for Leak Detection in Lanzarote
+                </h3>
+                <p>
+                  Lanzarote has specific challenges that mainland or international leak detection companies are not equipped to understand. The island uses desalinated water, which is more aggressive to pipework than typical mains water. Properties are built on volcanic basalt, which is extremely hard and expensive to excavate. Pipe documentation in older properties is often incomplete or absent. Community water systems in urbanisations are frequently complex and poorly maintained.
+                </p>
+                <p>
+                  A leak detection company with years of on-island experience understands these conditions and knows how to adapt detection methods accordingly. Canary Detect has worked across every area of Lanzarote since 2014, building up knowledge of the most common pipe types, failure modes, and property configurations found here.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  Company Credentials and Registration
+                </h3>
+                <p>
+                  Canary Detect operates as Camello Blanco S.L., a Spanish limited company registered in the Canary Islands. We are fully insured for our detection and repair operations and operate in full compliance with Spanish building and plumbing regulations. Our insurance-approved reports are accepted by all major insurers operating in the Canary Islands.
+                </p>
+
+                <h3 className="font-heading text-2xl font-bold text-foreground mt-8 mb-4">
+                  Frequently Asked Questions About Canary Detect
+                </h3>
+
+                <p>
+                  <strong>Is Canary Detect a registered company?</strong> Yes. We operate as Camello Blanco S.L. (CIF: B72431232), a registered Spanish limited company based in Lanzarote.
+                </p>
+                <p>
+                  <strong>How long has Canary Detect been operating in Lanzarote?</strong> Since 2014. We have over 10 years of experience detecting and repairing leaks across the island.
+                </p>
+                <p>
+                  <strong>Do you offer emergency leak detection?</strong> Yes. Canary Detect offers 24/7 emergency leak detection across Lanzarote. If you have an urgent situation, contact us at any time.
+                </p>
+                <p>
+                  <strong>What types of property do you work on?</strong> We work on all property types - private villas, holiday apartments, community complexes, hotels, commercial premises, and construction sites. Any property in Lanzarote with a leak detection or underground survey need.
+                </p>
+                <p>
+                  <strong>Do you carry out repairs as well as detection?</strong> Yes. Canary Detect offers a complete detection-to-repair service. Once we have confirmed and located a leak, our team can carry out the repair work directly, or provide a detailed report for your own contractor to work from.
+                </p>
+                <p>
+                  <strong>How do your reports work for insurance claims?</strong> Every survey produces a full written report including thermal photographs, acoustic measurements, confirmed leak coordinates, and recommended repair options. These reports are formatted for insurance company submission and are accepted by all major insurers operating in the Canary Islands.
+                </p>
+                <p>
+                  <strong>Do you speak English?</strong> Yes. Canary Detect is a bilingual company. Our team works in both English and Spanish, and all our reports can be produced in either language.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-10 md:py-12 bg-primary section-stripes-orange">
