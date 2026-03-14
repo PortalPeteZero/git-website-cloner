@@ -183,7 +183,7 @@ const HomepageSEOContent = forwardRef<HTMLElement>((_, ref) => {
                   : "If a leak is confirmed, we will provide a detailed report and recommend the next steps."}
               </li>
             </ol>
-            <Link to={getRoute("/free-leak-confirmation", "/es/confirmacion-fugas-gratis")} className="inline-flex items-center gap-1 text-primary font-semibold text-sm hover:gap-2 transition-all">
+            <Link to={getRoute("/services/free-leak-confirmation", "/es/servicios/confirmacion-fugas-gratis")} className="inline-flex items-center gap-1 text-primary font-semibold text-sm hover:gap-2 transition-all">
               {isSpanish ? "Más Información" : "Learn More"} →
             </Link>
           </div>
