@@ -1,4 +1,5 @@
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg?w=800";
+import poolHiddenLeaksHeroImg from "@/assets/blog/pool-hidden-leaks-hero.jpg?w=800";
 import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg?w=800";
 import poolLeakImg from "@/assets/services/pool-leak-detection.jpg?w=800";
 import drainDetectionImg from "@/assets/services/drain-detection.jpg?w=800";
