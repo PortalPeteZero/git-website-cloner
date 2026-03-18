@@ -258,6 +258,7 @@ const BlogArticle = () => {
   const readTime = isStatic ? staticArticle.readTime : (dbPost!.read_time || 5);
   const date = isStatic ? staticArticle.date : dbPost!.created_at;
   const image = isStatic ? staticArticle.image : (dbPost!.featured_image || waterLeakImg);
+  const imageAlt = isStatic ? (staticArticle.imageAlt || title) : title;
 
   const normalizedContent = normalizeMarkdown(content);
 
@@ -354,7 +355,7 @@ const BlogArticle = () => {
         <div className="absolute inset-0">
           <img 
             src={image} 
-            alt={title}
+            alt={imageAlt}
             className="w-full h-full object-cover" 
             fetchPriority="high" 
             decoding="async" 

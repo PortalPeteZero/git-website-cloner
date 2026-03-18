@@ -89,6 +89,7 @@ export interface BlogArticle {
   author: string;
   category: string;
   image: string;
+  imageAlt?: string;
   metaTitle: string;
   metaDescription: string;
   keywords: string;
@@ -2815,13 +2816,14 @@ Before paying for a full survey, confirm you actually have a leak with our [Free
     category: "Pool Care",
     image: poolHiddenLeaksHeroImg,
     metaTitle: "5 Hidden Pool Leak Spots in Lanzarote | Canary Detect",
-    metaDescription: "Is your Lanzarote pool losing water? Discover 5 hidden leak spots most owners miss, from light conduits to relief valves. Professional pool leak detection.",
-    keywords: "pool losing water Lanzarote, pool leak detection Lanzarote, hidden pool leak, swimming pool leak, pool light leak, skimmer leak, hydrostatic relief valve",
+    metaDescription: "Discover 5 hidden spots where your Lanzarote pool loses water. Expert leak detection Canary Islands — from light conduits to relief valves. No Find, No Fee.",
+    keywords: "leak detection Canary Islands, pool losing water Lanzarote, pool leak detection Lanzarote, hidden pool leak, swimming pool leak detection, pool light leak, skimmer leak, hydrostatic relief valve",
+    imageAlt: "Aerial view of a luxury swimming pool in Lanzarote with turquoise water surrounded by volcanic landscape, highlighting common hidden leak points",
     readTime: 8,
     content: `
-## Is Your Pool Water Level Dropping Faster Than Usual?
+## Is Your Pool Water Level Dropping? Leak Detection in the Canary Islands
 
-In Lanzarote's warm climate, a certain amount of evaporation is expected, especially due to the consistent trade winds. However, if the drop is significant, it could be a sign of a plumbing or structural issue.
+In Lanzarote's warm climate, a certain amount of evaporation is expected, especially due to the consistent trade winds. However, if the drop is significant, it could be a sign of a plumbing or structural issue requiring professional leak detection.
 
 How do you find out what the issue is, you wonder? Leveraging Canary Detect's [pool leak detection in Lanzarote](/services/pool-leak-detection) is one of the best ways to find out the root cause of your pool's water level dropping dramatically. We make sure to catch the problem before it leads to expensive water bills or damage to the foundation of your villa.
 
@@ -2899,7 +2901,7 @@ While a DIY bucket test can confirm a [pool losing water in Lanzarote](/blog/how
 
 Ignoring these signs can lead to **structural damage**, **higher water bills**, and **costly emergency repairs** down the line.
 
-## Professional Pool Leak Detection in Lanzarote
+## Professional Leak Detection in the Canary Islands
 
 We use over €80,000 of specialist equipment to find the exact source of a leak without needing to dig up your terrace.
 
