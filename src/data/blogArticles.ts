@@ -1,4 +1,5 @@
 import waterLeakImg from "@/assets/services/water-leak-detection.jpg?w=800";
+import poolHiddenLeaksHeroImg from "@/assets/blog/pool-hidden-leaks-hero.jpg?w=800";
 import pipeInspectionImg from "@/assets/services/pipe-inspection.jpg?w=800";
 import poolLeakImg from "@/assets/services/pool-leak-detection.jpg?w=800";
 import drainDetectionImg from "@/assets/services/drain-detection.jpg?w=800";
@@ -2812,7 +2813,7 @@ Before paying for a full survey, confirm you actually have a leak with our [Free
     date: "2026-03-18",
     author: "Canary Detect Team",
     category: "Pool Care",
-    image: poolLeakImg,
+    image: poolHiddenLeaksHeroImg,
     metaTitle: "5 Hidden Pool Leak Spots in Lanzarote | Canary Detect",
     metaDescription: "Is your Lanzarote pool losing water? Discover 5 hidden leak spots most owners miss, from light conduits to relief valves. Professional pool leak detection.",
     keywords: "pool losing water Lanzarote, pool leak detection Lanzarote, hidden pool leak, swimming pool leak, pool light leak, skimmer leak, hydrostatic relief valve",
