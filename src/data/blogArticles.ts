@@ -2803,6 +2803,80 @@ Before paying for a full survey, confirm you actually have a leak with our [Free
 
 [Contact us now →](/contact)
     `
+  },
+  {
+    id: 17,
+    slug: "hidden-spots-lanzarote-pool-losing-water",
+    title: "5 Hidden Spots Where Your Lanzarote Pool is Losing Water",
+    excerpt: "Discover the 5 most common hidden leak points in Lanzarote swimming pools, from light conduits to hydrostatic relief valves, and learn when to call for professional detection.",
+    date: "2026-03-18",
+    author: "Canary Detect Team",
+    category: "Pool Care",
+    image: poolLeakImg,
+    metaTitle: "5 Hidden Pool Leak Spots in Lanzarote | Canary Detect",
+    metaDescription: "Is your Lanzarote pool losing water? Discover 5 hidden leak spots most owners miss, from light conduits to relief valves. Professional pool leak detection.",
+    keywords: "pool losing water Lanzarote, pool leak detection Lanzarote, hidden pool leak, swimming pool leak, pool light leak, skimmer leak, hydrostatic relief valve",
+    readTime: 6,
+    content: `
+## Is Your Pool Water Level Dropping Faster Than Usual?
+
+In Lanzarote's warm climate, a certain amount of evaporation is expected, especially due to the consistent trade winds. However, if the drop is significant, it could be a sign of a plumbing or structural issue.
+
+How do you find out what the issue is, you wonder? Leveraging Canary Detect's [pool leak detection in Lanzarote](/services/pool-leak-detection) is one of the best ways to find out the root cause of your pool's water level dropping dramatically. We make sure to catch the problem before it leads to expensive water bills or damage to the foundation of your villa.
+
+Usually, owners look for visible cracks in the Gresite tiles. But we have noticed that the source of the problem is often hidden. Let us walk you through the 5 hidden spots where your pool might be losing water:
+
+## 1. Pool Light Conduits
+
+The pipe carrying the electrical cable from the light to the junction box is a major culprit. If the niche isn't sealed perfectly, water pulls into the conduit and disappears into the ground.
+
+## 2. Multiport Valve Waste Lines
+
+If the internal gasket in your pump room is worn, water can bypass the filter and head straight down the waste pipe without you ever seeing a puddle.
+
+## 3. Return Line Fittings
+
+These jets are under constant pressure. If the pipe behind the fitting has cracked due to ground movement, water leaks out every time the pump is running.
+
+## 4. The Skimmer Throat
+
+Because the plastic skimmer and concrete pool shell expand at different rates, the seal between them often fails, causing a silent leak.
+
+## 5. Hydrostatic Relief Valves
+
+Located at the bottom of the pool, these valves can get stuck open by a small piece of picón (lava grit), allowing water to drain out 24/7.
+
+## Signs You Need Professional Help
+
+While a DIY bucket test can confirm a [pool losing water in Lanzarote](/blog/how-to-check-for-pool-leaks-lanzarote), pinpointing the exact location requires more than a visual inspection.
+
+You should call for a survey if:
+
+- The water loss is consistent even when the pump is turned off.
+- Unexplained wet spots appear in the garden or around the pool deck.
+- You see constant air bubbles blowing out of the return jets.
+- Your [water meter is spinning](/blog/water-meter-running-when-taps-off) faster than usual.
+
+## Professional Pool Leak Detection in Lanzarote
+
+We use over €80,000 of specialist equipment to find the exact source of a leak without needing to dig up your terrace.
+
+Our non-invasive methods include:
+
+- **Pressure Testing:** To isolate plumbing lines and check for integrity.
+- **Acoustic Equipment:** High-sensitivity microphones that listen for escaping water deep underground.
+- **Tracer Gas:** A safe, inert gas is pumped into the pipes; it escapes through the leak and is detected at the surface by our sensors.
+
+## Get Professional Help Today
+
+Don't let a hidden leak damage your property. If you've noticed your pool level dropping, it's time to act.
+
+[Contact Canary Detect](/contact) for professional [swimming pool leak detection in Lanzarote](/services/pool-leak-detection).
+
+---
+
+*Our No Find, No Fee guarantee gives you total peace of mind. [Get in touch today →](/contact)*
+    `
   }
 ];
 
