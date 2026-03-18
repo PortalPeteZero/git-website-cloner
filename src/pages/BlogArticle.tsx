@@ -355,7 +355,7 @@ const BlogArticle = () => {
         <div className="absolute inset-0">
           <img 
             src={image} 
-            alt={title}
+            alt={imageAlt}
             className="w-full h-full object-cover" 
             fetchPriority="high" 
             decoding="async" 
