@@ -2901,7 +2901,7 @@ While a DIY bucket test can confirm a [pool losing water in Lanzarote](/blog/how
 
 Ignoring these signs can lead to **structural damage**, **higher water bills**, and **costly emergency repairs** down the line.
 
-## Professional Pool Leak Detection in Lanzarote
+## Professional Leak Detection in the Canary Islands
 
 We use over €80,000 of specialist equipment to find the exact source of a leak without needing to dig up your terrace.
 
