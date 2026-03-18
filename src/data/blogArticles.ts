@@ -2817,7 +2817,7 @@ Before paying for a full survey, confirm you actually have a leak with our [Free
     metaTitle: "5 Hidden Pool Leak Spots in Lanzarote | Canary Detect",
     metaDescription: "Is your Lanzarote pool losing water? Discover 5 hidden leak spots most owners miss, from light conduits to relief valves. Professional pool leak detection.",
     keywords: "pool losing water Lanzarote, pool leak detection Lanzarote, hidden pool leak, swimming pool leak, pool light leak, skimmer leak, hydrostatic relief valve",
-    readTime: 6,
+    readTime: 8,
     content: `
 ## Is Your Pool Water Level Dropping Faster Than Usual?
 
@@ -2825,48 +2825,97 @@ In Lanzarote's warm climate, a certain amount of evaporation is expected, especi
 
 How do you find out what the issue is, you wonder? Leveraging Canary Detect's [pool leak detection in Lanzarote](/services/pool-leak-detection) is one of the best ways to find out the root cause of your pool's water level dropping dramatically. We make sure to catch the problem before it leads to expensive water bills or damage to the foundation of your villa.
 
-Usually, owners look for visible cracks in the Gresite tiles. But we have noticed that the source of the problem is often hidden. Let us walk you through the 5 hidden spots where your pool might be losing water:
+Usually, owners look for visible cracks in the Gresite tiles. But we have noticed that the source of the problem is often hidden. Let us walk you through the **5 hidden spots** where your pool might be losing water.
 
 ## 1. Pool Light Conduits
 
 The pipe carrying the electrical cable from the light to the junction box is a major culprit. If the niche isn't sealed perfectly, water pulls into the conduit and disappears into the ground.
 
+**What to look for:**
+- **Water level stabilises** at exactly the light fitting height
+- **Damp patches** on the ground near the electrical junction box
+- **Corrosion or staining** around the light niche
+
+**Pro tip:** If your pool water level consistently drops to the same point and then stops, the light conduit is the first place we check.
+
 ## 2. Multiport Valve Waste Lines
 
 If the internal gasket in your pump room is worn, water can bypass the filter and head straight down the waste pipe without you ever seeing a puddle.
+
+**What to look for:**
+- **Water trickling** from the waste pipe when the system is on filter mode
+- **Reduced filtration performance** or cloudy water
+- **Damp ground** near the pump room drainage outlet
+
+This is one of the sneakiest leaks because the water disappears straight into the drainage system, leaving no visible evidence around the pool itself.
 
 ## 3. Return Line Fittings
 
 These jets are under constant pressure. If the pipe behind the fitting has cracked due to ground movement, water leaks out every time the pump is running.
 
+**What to look for:**
+- **Water loss only when the pump is running** (level stays stable when the system is off)
+- **Air bubbles** coming from the return jets
+- **Wet or eroded soil** behind the pool wall near the return fittings
+
+### Why Ground Movement Matters in Lanzarote
+
+Lanzarote's volcanic terrain means the ground beneath pools can shift over time. This puts stress on rigid pipe connections, making return line fittings particularly vulnerable.
+
 ## 4. The Skimmer Throat
 
 Because the plastic skimmer and concrete pool shell expand at different rates, the seal between them often fails, causing a silent leak.
+
+**What to look for:**
+- **Water level drops** to just below the skimmer opening and stabilises
+- **Visible gap or separation** between the skimmer faceplate and the pool wall
+- **Cracked or deteriorating sealant** around the skimmer box
+
+**Pro tip:** Try the [bucket test](/blog/how-to-check-for-pool-leaks-lanzarote) with the skimmer running and then plugged. If the loss rate changes, the skimmer area is likely involved.
 
 ## 5. Hydrostatic Relief Valves
 
 Located at the bottom of the pool, these valves can get stuck open by a small piece of picón (lava grit), allowing water to drain out 24/7.
 
+**What to look for:**
+- **Continuous water loss** that doesn't stabilise at any level
+- **Small debris or grit** visible around the main drain area
+- **Loss rate remains constant** whether the pump is on or off
+
+These valves are designed to relieve pressure from groundwater pushing up against the pool shell. When they fail, they create a direct path for pool water to escape into the ground.
+
 ## Signs You Need Professional Help
 
 While a DIY bucket test can confirm a [pool losing water in Lanzarote](/blog/how-to-check-for-pool-leaks-lanzarote), pinpointing the exact location requires more than a visual inspection.
 
-You should call for a survey if:
+**You should call for a professional survey if:**
 
-- The water loss is consistent even when the pump is turned off.
-- Unexplained wet spots appear in the garden or around the pool deck.
-- You see constant air bubbles blowing out of the return jets.
-- Your [water meter is spinning](/blog/water-meter-running-when-taps-off) faster than usual.
+- **Consistent water loss** even when the pump is turned off
+- **Unexplained wet spots** appearing in the garden or around the pool deck
+- **Constant air bubbles** blowing out of the return jets
+- **Your [water meter is spinning](/blog/water-meter-running-when-taps-off)** faster than usual
+- **Chemical balance** is difficult to maintain despite regular treatment
+- **Cracks or movement** in the pool deck or surrounding paving
+
+Ignoring these signs can lead to **structural damage**, **higher water bills**, and **costly emergency repairs** down the line.
 
 ## Professional Pool Leak Detection in Lanzarote
 
 We use over €80,000 of specialist equipment to find the exact source of a leak without needing to dig up your terrace.
 
-Our non-invasive methods include:
+### Our Non-Invasive Methods
 
-- **Pressure Testing:** To isolate plumbing lines and check for integrity.
-- **Acoustic Equipment:** High-sensitivity microphones that listen for escaping water deep underground.
-- **Tracer Gas:** A safe, inert gas is pumped into the pipes; it escapes through the leak and is detected at the surface by our sensors.
+- **Pressure Testing:** We isolate each plumbing line individually and test for pressure drops, quickly identifying which pipe is compromised.
+- **Acoustic Equipment:** High-sensitivity microphones that listen for escaping water deep underground, even through concrete and volcanic rock.
+- **Tracer Gas:** A safe, inert gas is pumped into the pipes; it escapes through the leak and is detected at the surface by our sensors — accurate to within centimetres.
+- **Dye Testing:** Non-toxic dye placed near suspected leak points reveals the exact path water is taking as it escapes.
+
+### Why Choose Canary Detect?
+
+- **No Find, No Fee guarantee** — you only pay if we locate the leak
+- **Non-invasive methods** — no unnecessary digging or damage to your property
+- **Island-wide coverage** — we serve the whole of Lanzarote
+- **Same-week availability** — fast response when you need it most
 
 ## Get Professional Help Today
 
