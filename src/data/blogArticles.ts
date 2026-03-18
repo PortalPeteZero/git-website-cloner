@@ -2815,8 +2815,9 @@ Before paying for a full survey, confirm you actually have a leak with our [Free
     category: "Pool Care",
     image: poolHiddenLeaksHeroImg,
     metaTitle: "5 Hidden Pool Leak Spots in Lanzarote | Canary Detect",
-    metaDescription: "Is your Lanzarote pool losing water? Discover 5 hidden leak spots most owners miss, from light conduits to relief valves. Professional pool leak detection.",
-    keywords: "pool losing water Lanzarote, pool leak detection Lanzarote, hidden pool leak, swimming pool leak, pool light leak, skimmer leak, hydrostatic relief valve",
+    metaDescription: "Discover 5 hidden spots where your Lanzarote pool loses water. Expert leak detection Canary Islands — from light conduits to relief valves. No Find, No Fee.",
+    keywords: "leak detection Canary Islands, pool losing water Lanzarote, pool leak detection Lanzarote, hidden pool leak, swimming pool leak detection, pool light leak, skimmer leak, hydrostatic relief valve",
+    imageAlt: "Aerial view of a luxury swimming pool in Lanzarote with turquoise water surrounded by volcanic landscape, highlighting common hidden leak points",
     readTime: 8,
     content: `
 ## Is Your Pool Water Level Dropping Faster Than Usual?
