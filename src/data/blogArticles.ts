@@ -89,6 +89,7 @@ export interface BlogArticle {
   author: string;
   category: string;
   image: string;
+  imageAlt?: string;
   metaTitle: string;
   metaDescription: string;
   keywords: string;
