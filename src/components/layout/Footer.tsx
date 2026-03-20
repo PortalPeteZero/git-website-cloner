@@ -120,9 +120,9 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
       {/* Main Footer */}
       <div className="py-12 relative z-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6">
-            {/* Logo & About - 3 cols */}
-            <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-6">
+            {/* Logo & About */}
+            <div>
               <div className="mb-5">
                 <img src={logo} alt={isSpanish ? "Canary Detect - Los Cazafugas" : "Canary Detect - The Leaky Finders"} className="h-12 w-auto" />
               </div>
@@ -157,7 +157,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             </div>
 
             {/* Quick Links - 2 cols */}
-            <div className="lg:col-span-2">
+            <div>
               <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
                 <span className="w-8 h-0.5 bg-primary"></span>
                 {isSpanish ? "Navegación" : "Navigation"}
@@ -178,7 +178,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             </div>
 
             {/* Services - 3 cols */}
-            <div className="lg:col-span-3">
+            <div>
               <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
                 <span className="w-8 h-0.5 bg-primary"></span>
                 {isSpanish ? "Servicios" : "Services"}
@@ -198,8 +198,36 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
               </ul>
             </div>
 
+            {/* Plumbing Services */}
+            <div>
+              <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-primary"></span>
+                {isSpanish ? "Fontanería" : "Plumbing"}
+              </h4>
+              <ul className="space-y-2.5">
+                {[
+                  { to: isSpanish ? "/es/servicios-fontaneria/reparaciones-generales" : "/plumbing-services/general-repairs", label: isSpanish ? "Reparaciones Generales" : "General Repairs" },
+                  { to: isSpanish ? "/es/servicios-fontaneria/servicios-calderas" : "/plumbing-services/boiler-services", label: isSpanish ? "Calderas y Calentadores" : "Boiler Services" },
+                  { to: isSpanish ? "/es/servicios-fontaneria/mejoras-sistema" : "/plumbing-services/system-upgrades", label: isSpanish ? "Mejoras del Sistema" : "System Upgrades" },
+                  { to: isSpanish ? "/es/servicios-fontaneria/mejoras-colectores" : "/plumbing-services/manifold-upgrades", label: isSpanish ? "Mejoras de Colectores" : "Manifold Upgrades" },
+                  { to: isSpanish ? "/es/servicios-fontaneria/fontaneria-piscinas" : "/plumbing-services/pool-plumbing", label: isSpanish ? "Fontanería de Piscinas" : "Pool Plumbing" },
+                  { to: isSpanish ? "/es/servicios-fontaneria/reparaciones-piscinas" : "/plumbing-services/pool-repairs", label: isSpanish ? "Reparaciones Piscinas" : "Pool Repairs" },
+                ].map(link => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="text-slate-400 hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group"
+                    >
+                      <span className="w-0 group-hover:w-2 h-0.5 bg-primary transition-all duration-300"></span>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* Service Areas - 2 cols */}
-            <div className="lg:col-span-2">
+            <div>
               <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
                 <span className="w-8 h-0.5 bg-primary"></span>
                 {isSpanish ? "Zonas" : "Areas"}
@@ -235,7 +263,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             </div>
 
             {/* Contact Info - 2 cols */}
-            <div className="lg:col-span-2">
+            <div>
               <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
                 <span className="w-8 h-0.5 bg-primary"></span>
                 {isSpanish ? "Contacto" : "Contact"}

@@ -5,6 +5,7 @@ import SEOHead from "@/components/seo/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 import { plumbingServicesData, getAllPlumbingServices } from "@/data/plumbingServicesData";
+import { fontaneroLocations } from "@/data/fontaneroLocationsData";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Shield, Wrench, Clock } from "lucide-react";
@@ -412,6 +413,29 @@ const PlumbingServices = () => {
               </Link>
             ))}
           </div>
+
+          {isSpanish && (
+            <>
+              <h3 className="text-lg font-bold text-center mt-8 mb-2">
+                Fontanero por Municipio
+              </h3>
+              <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-4 text-sm">
+                Servicios de fontanería locales en cada municipio de Lanzarote, con tiempos de respuesta garantizados.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
+                {Object.values(fontaneroLocations).map((loc) => (
+                  <Link
+                    key={loc.slug}
+                    to={`/es/fontanero/${loc.slug}`}
+                    className="flex items-center gap-2 p-2 bg-background rounded-lg border border-border hover:border-primary/30 transition-all text-sm group"
+                  >
+                    <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                    <span className="text-muted-foreground group-hover:text-foreground">Fontanero {loc.name}</span>
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </section>
 
