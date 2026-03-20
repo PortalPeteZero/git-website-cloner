@@ -178,7 +178,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             </div>
 
             {/* Services - 3 cols */}
-            <div className="lg:col-span-3">
+            <div>
               <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
                 <span className="w-8 h-0.5 bg-primary"></span>
                 {isSpanish ? "Servicios" : "Services"}
