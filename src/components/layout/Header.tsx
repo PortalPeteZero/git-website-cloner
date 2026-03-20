@@ -178,13 +178,24 @@ const Header = () => {
       }`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-4 py-1.5">
+            {/* Call Now CTA */}
+            <a href="tel:+34911985705">
+              <Button 
+                size="sm"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold gap-1.5 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-[0.97]"
+              >
+                <Phone className="h-3.5 w-3.5" />
+                {isSpanish ? "Llamar Ahora" : "Call Now"}
+              </Button>
+            </a>
+
             {/* Contact Button */}
             <Link to={getRoute("/contact", "/es/contacto")}>
               <Button 
                 size="sm"
+                variant="outline"
                 className="bg-canary-navy hover:bg-canary-navy/90 text-white font-bold gap-1.5 shadow-md hover:shadow-lg transition-all duration-300"
               >
-                <Phone className="h-3.5 w-3.5" />
                 {t('navigation.contact')}
               </Button>
             </Link>
