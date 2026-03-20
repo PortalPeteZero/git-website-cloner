@@ -107,7 +107,7 @@ const LocationPage = () => {
             <div className="mt-8 flex flex-wrap gap-4">
               <Button size="lg" asChild className="shadow-lg"><Link to={getContactPath(isSpanish)}>{uiText.cta.getQuote}</Link></Button>
               <Button size="lg" variant="secondary" className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy" asChild>
-                <a href="tel:+34711051071"><Phone className="h-4 w-4 mr-2" />{uiText.cta.callNow} +34 711 051 071</a>
+                <a href="tel:+34911985705"><Phone className="h-4 w-4 mr-2" />{uiText.cta.callNow} +34 911 98 57 05</a>
               </Button>
             </div>
           </motion.div>
@@ -257,12 +257,12 @@ const LocationPage = () => {
                 <h3 className="font-heading text-xl font-bold text-foreground mb-4">{uiText.sections.getQuoteIn(locationData.name)}</h3>
                 <p className="text-foreground/80 text-sm mb-6">{uiText.sections.quoteDescription(locationData.name)}</p>
                 <div className="space-y-4 mb-6">
-                  <div className="flex items-center gap-3"><Phone className="h-5 w-5 text-primary" /><a href="tel:+34711051071" className="hover:text-primary transition-colors">+34 711 051 071</a></div>
+                  <div className="flex items-center gap-3"><Phone className="h-5 w-5 text-primary" /><a href="tel:+34911985705" className="hover:text-primary transition-colors">+34 911 98 57 05</a></div>
                   <div className="flex items-center gap-3"><Clock className="h-5 w-5 text-primary" /><span className="text-sm">{uiText.sections.hours}</span></div>
                 </div>
                 <div className="space-y-3 mb-6">
                   <Button className="w-full" asChild><Link to={getContactPath(isSpanish)}>{uiText.cta.requestQuote}</Link></Button>
-                  <Button variant="outline" className="w-full" asChild><a href="tel:+34711051071">{uiText.cta.callNow}</a></Button>
+                  <Button variant="outline" className="w-full" asChild><a href="tel:+34911985705">{uiText.cta.callNow}</a></Button>
                 </div>
                 
                 {/* Related Articles - Internal links */}
@@ -330,7 +330,7 @@ const LocationPage = () => {
             <p className="text-primary-foreground/90 text-lg mb-8 max-w-xl mx-auto">{uiText.sections.ctaDescription}</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" asChild><Link to={getContactPath(isSpanish)}>{uiText.cta.getQuote}</Link></Button>
-              <Button size="lg" variant="secondary" className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy" asChild><a href="tel:+34711051071">{uiText.cta.callNow} +34 711 051 071</a></Button>
+              <Button size="lg" variant="secondary" className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy" asChild><a href="tel:+34911985705">{uiText.cta.callNow} +34 911 98 57 05</a></Button>
             </div>
           </motion.div>
         </div>

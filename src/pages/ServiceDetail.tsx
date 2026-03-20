@@ -242,7 +242,7 @@ const ServiceDetail = () => {
                   <Link to={getContactPath(isSpanish)}>{uiText.cta.getQuote}</Link>
                 </Button>
                 <Button size="lg" variant="secondary" asChild className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy">
-                  <a href="tel:+34711051071">{uiText.cta.callNow} +34 711 051 071</a>
+                  <a href="tel:+34911985705">{uiText.cta.callNow} +34 911 98 57 05</a>
                 </Button>
               </div>
             </div>
@@ -272,7 +272,7 @@ const ServiceDetail = () => {
       {service.freeLeakSection?.enabled && (
         <FreeLeakConfirmationSection
           title={service.title}
-          phone={"+34 711 051 071"}
+          phone={"+34 911 98 57 05"}
           email={"info@canary-detect.com"}
           includes={service.freeLeakSection.includes}
           importantNote={service.freeLeakSection.importantNote}
@@ -300,7 +300,7 @@ const ServiceDetail = () => {
                   <Link to={getContactPath(isSpanish)}>{uiText.cta.requestQuote}</Link>
                 </Button>
                 <Button variant="secondary" className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy whitespace-nowrap" size="lg" asChild>
-                  <a href="tel:+34711051071">{uiText.cta.callNow} +34 711 051 071</a>
+                  <a href="tel:+34911985705">{uiText.cta.callNow} +34 911 98 57 05</a>
                 </Button>
               </div>
             </div>

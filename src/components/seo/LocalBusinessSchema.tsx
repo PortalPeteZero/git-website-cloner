@@ -19,7 +19,7 @@ const LocalBusinessSchema = ({ page = "home" }: LocalBusinessSchemaProps) => {
       ? "Servicios profesionales de detección y reparación de fugas en Lanzarote. Especialistas en detección de fugas de agua, detección de fugas de piscinas, detección de tuberías subterráneas e inspecciones de desagües con más de €80.000 en equipos avanzados incluyendo imágenes térmicas, sensores acústicos y tecnología de gas trazador."
       : "Professional leak detection and repair services in Lanzarote. Specialists in water leak detection, swimming pool leak detection, underground pipe detection, and drain surveys using €80,000+ of advanced equipment including thermal imaging, acoustic sensors, and tracer gas technology.",
     url: isSpanish ? "https://canary-detect.com/es" : "https://canary-detect.com",
-    telephone: "+34711051071",
+    telephone: "+34911985705",
     email: "info@canary-detect.com",
     image: "https://canary-detect.com/og-image.jpg",
     logo: "https://canary-detect.com/icon-192.png",

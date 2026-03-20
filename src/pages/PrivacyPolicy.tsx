@@ -66,7 +66,7 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
                   <li><strong>NIF/CIF:</strong> B72431232</li>
                   <li><strong>Domicilio Social:</strong> C. las Maretas 12, 35580 Playa Blanca, Lanzarote, España</li>
                   <li><strong>Email:</strong> <a href="mailto:info@canary-detect.com" className="inline-flex items-center gap-1"><Mail className="h-4 w-4" />info@canary-detect.com</a></li>
-                  <li><strong>Teléfono:</strong> <a href="tel:+34711051071" className="inline-flex items-center gap-1"><Phone className="h-4 w-4" />+34 711 051 071</a></li>
+                  <li><strong>Teléfono:</strong> <a href="tel:+34911985705" className="inline-flex items-center gap-1"><Phone className="h-4 w-4" />+34 911 98 57 05</a></li>
                 </ul>
 
                 <h2>2. Qué Datos Personales Recopilamos</h2>
@@ -141,7 +141,7 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
                 <p>Si tiene alguna pregunta sobre esta Política de Privacidad, póngase en contacto con nosotros:</p>
                 <ul className="list-none pl-0 space-y-2 bg-muted/30 p-6 rounded-lg">
                   <li><strong>Por email:</strong> <a href="mailto:info@canary-detect.com" className="inline-flex items-center gap-1"><Mail className="h-4 w-4" />info@canary-detect.com</a></li>
-                  <li><strong>Por teléfono:</strong> <a href="tel:+34711051071" className="inline-flex items-center gap-1"><Phone className="h-4 w-4" />+34 711 051 071</a></li>
+                  <li><strong>Por teléfono:</strong> <a href="tel:+34911985705" className="inline-flex items-center gap-1"><Phone className="h-4 w-4" />+34 911 98 57 05</a></li>
                   <li><strong>Por correo postal:</strong> <span className="inline-flex items-center gap-1"><MapPin className="h-4 w-4" />C. las Maretas 12, 35580 Playa Blanca, Lanzarote, España</span></li>
                 </ul>
               </>
@@ -162,7 +162,7 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
                   <li><strong>NIF/CIF:</strong> B72431232</li>
                   <li><strong>Registered Address:</strong> C. las Maretas 12, 35580 Playa Blanca, Lanzarote, Spain</li>
                   <li><strong>Email:</strong> <a href="mailto:info@canary-detect.com" className="inline-flex items-center gap-1"><Mail className="h-4 w-4" />info@canary-detect.com</a></li>
-                  <li><strong>Phone:</strong> <a href="tel:+34711051071" className="inline-flex items-center gap-1"><Phone className="h-4 w-4" />+34 711 051 071</a></li>
+                  <li><strong>Phone:</strong> <a href="tel:+34911985705" className="inline-flex items-center gap-1"><Phone className="h-4 w-4" />+34 911 98 57 05</a></li>
                 </ul>
 
                 <h2>2. What Personal Data We Collect</h2>
@@ -237,7 +237,7 @@ const PrivacyPolicy = forwardRef<HTMLDivElement, Record<string, never>>((_, ref)
                 <p>If you have any questions about this Privacy Policy, please contact us:</p>
                 <ul className="list-none pl-0 space-y-2 bg-muted/30 p-6 rounded-lg">
                   <li><strong>By email:</strong> <a href="mailto:info@canary-detect.com" className="inline-flex items-center gap-1"><Mail className="h-4 w-4" />info@canary-detect.com</a></li>
-                  <li><strong>By phone:</strong> <a href="tel:+34711051071" className="inline-flex items-center gap-1"><Phone className="h-4 w-4" />+34 711 051 071</a></li>
+                  <li><strong>By phone:</strong> <a href="tel:+34911985705" className="inline-flex items-center gap-1"><Phone className="h-4 w-4" />+34 911 98 57 05</a></li>
                   <li><strong>By post:</strong> <span className="inline-flex items-center gap-1"><MapPin className="h-4 w-4" />C. las Maretas 12, 35580 Playa Blanca, Lanzarote, Spain</span></li>
                 </ul>
               </>

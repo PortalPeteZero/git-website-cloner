@@ -242,12 +242,12 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
               </h4>
               <ul className="space-y-4">
                 <li>
-                  <a href="tel:+34711051071" className="flex items-center gap-3 group">
+                  <a href="tel:+34911985705" className="flex items-center gap-3 group">
                     <div className="w-9 h-9 rounded-lg bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center transition-colors">
                       <Phone className="h-4 w-4 text-primary" />
                     </div>
                     <span className="text-slate-300 group-hover:text-white transition-colors text-sm font-medium">
-                      +34 711 051 071
+                      +34 911 98 57 05
                     </span>
                   </a>
                 </li>

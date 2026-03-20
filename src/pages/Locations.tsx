@@ -82,7 +82,7 @@ const Locations = () => {
                 </Link>
               </Button>
               <Button size="lg" variant="secondary" className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy" asChild>
-                <a href="tel:+34711051071"><Phone className="h-4 w-4 mr-2" />{isSpanish ? "Llamar Ahora" : "Call Now"} +34 711 051 071</a>
+                <a href="tel:+34911985705"><Phone className="h-4 w-4 mr-2" />{isSpanish ? "Llamar Ahora" : "Call Now"} +34 911 98 57 05</a>
               </Button>
             </div>
           </motion.div>
@@ -253,7 +253,7 @@ const Locations = () => {
                 <Link to={getContactPath(isSpanish)}>{isSpanish ? "Contactar" : "Contact Us"}</Link>
               </Button>
               <Button size="lg" variant="secondary" className="bg-white/20 text-white border border-white/40 hover:bg-white hover:text-canary-navy" asChild>
-                <a href="tel:+34711051071">{isSpanish ? "Llamar" : "Call"} +34 711 051 071</a>
+                <a href="tel:+34911985705">{isSpanish ? "Llamar" : "Call"} +34 911 98 57 05</a>
               </Button>
             </div>
           </motion.div>

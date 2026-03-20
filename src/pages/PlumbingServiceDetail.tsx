@@ -100,7 +100,7 @@ const PlumbingServiceDetail = () => {
         "postalCode": "35580",
         "addressCountry": "ES"
       },
-      "telephone": "+34711051071",
+      "telephone": "+34911985705",
       "email": "info@canary-detect.com"
     },
     "areaServed": {
@@ -168,7 +168,7 @@ const PlumbingServiceDetail = () => {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="secondary" className="bg-white text-black hover:bg-white/90 w-full sm:w-auto">
-                <a href="tel:+34711051071">
+                <a href="tel:+34911985705">
                   {content.callNow}
                 </a>
               </Button>
@@ -319,7 +319,7 @@ const PlumbingServiceDetail = () => {
                     </Link>
                   </Button>
                   <Button asChild variant="outline" className="w-full">
-                    <a href="tel:+34711051071">
+                    <a href="tel:+34911985705">
                       {content.callNow}
                     </a>
                   </Button>

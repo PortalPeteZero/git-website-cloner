@@ -178,13 +178,24 @@ const Header = () => {
       }`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-4 py-1.5">
+            {/* Call Now CTA */}
+            <a href="tel:+34911985705">
+              <Button 
+                size="sm"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold gap-1.5 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-[0.97]"
+              >
+                <Phone className="h-3.5 w-3.5" />
+                {isSpanish ? "Llamar Ahora" : "Call Now"}
+              </Button>
+            </a>
+
             {/* Contact Button */}
             <Link to={getRoute("/contact", "/es/contacto")}>
               <Button 
                 size="sm"
+                variant="outline"
                 className="bg-canary-navy hover:bg-canary-navy/90 text-white font-bold gap-1.5 shadow-md hover:shadow-lg transition-all duration-300"
               >
-                <Phone className="h-3.5 w-3.5" />
                 {t('navigation.contact')}
               </Button>
             </Link>
@@ -647,6 +658,20 @@ const Header = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col gap-3 px-2">
+                {/* Call Now - Primary CTA */}
+                <a 
+                  href="tel:+34911985705"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full"
+                >
+                  <Button 
+                    size="lg"
+                    className="w-full justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold gap-2 shadow-lg"
+                  >
+                    <Phone className="h-5 w-5" />
+                    {isSpanish ? "Llamar Ahora: 911 98 57 05" : "Call Now: 911 98 57 05"}
+                  </Button>
+                </a>
                 <Link 
                   to={getRoute("/contact", "/es/contacto")}
                   onClick={() => setMobileMenuOpen(false)}
@@ -654,9 +679,9 @@ const Header = () => {
                 >
                   <Button 
                     size="lg"
-                    className="w-full justify-center bg-primary hover:bg-primary/90 text-white font-bold gap-2"
+                    variant="outline"
+                    className="w-full justify-center font-bold gap-2"
                   >
-                    <Phone className="h-4 w-4" />
                     {t('navigation.contact')}
                   </Button>
                 </Link>
