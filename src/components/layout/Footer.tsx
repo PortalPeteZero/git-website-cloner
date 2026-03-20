@@ -120,9 +120,9 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
       {/* Main Footer */}
       <div className="py-12 relative z-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6">
-            {/* Logo & About - 3 cols */}
-            <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-6">
+            {/* Logo & About */}
+            <div>
               <div className="mb-5">
                 <img src={logo} alt={isSpanish ? "Canary Detect - Los Cazafugas" : "Canary Detect - The Leaky Finders"} className="h-12 w-auto" />
               </div>
