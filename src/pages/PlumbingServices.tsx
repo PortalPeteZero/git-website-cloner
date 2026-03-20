@@ -5,6 +5,7 @@ import SEOHead from "@/components/seo/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 import { plumbingServicesData, getAllPlumbingServices } from "@/data/plumbingServicesData";
+import { fontaneroLocations } from "@/data/fontaneroLocationsData";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Shield, Wrench, Clock } from "lucide-react";
