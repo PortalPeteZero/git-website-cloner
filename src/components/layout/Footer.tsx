@@ -27,6 +27,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
     { to: getRoute("/services/water-leak-detection", "/es/servicios/deteccion-fugas-agua"), label: isSpanish ? "Detección Fugas de Agua" : "Water Leak Detection" },
     { to: getRoute("/services/pool-leak-detection", "/es/servicios/deteccion-fugas-piscinas"), label: isSpanish ? "Detección Fugas Piscinas" : "Pool Leak Detection" },
     { to: getRoute("/services/underground-detection", "/es/servicios/deteccion-subterranea"), label: isSpanish ? "Detección Subterránea" : "Underground Detection" },
+    { to: getRoute("/services/water-pipe-leak-detection", "/es/servicios/deteccion-fugas-tuberias"), label: isSpanish ? "Detección Fugas Tuberías" : "Water Pipe Leak Detection" },
     { to: getRoute("/services/drain-detection", "/es/servicios/deteccion-desagues"), label: isSpanish ? "Inspección de Desagües" : "Drain & Pipe Surveys" },
     { to: getRoute("/services/leak-repair", "/es/servicios/reparacion-fugas"), label: isSpanish ? "Reparación de Fugas" : "Leak Repair" },
     { to: getRoute("/services/pool-leak-repair", "/es/servicios/reparacion-fugas-piscinas"), label: isSpanish ? "Reparación Fugas Piscinas" : "Pool Leak Repair" },
