@@ -185,7 +185,7 @@ const Header = () => {
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold gap-1.5 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-[0.97]"
               >
                 <Phone className="h-3.5 w-3.5" />
-                {isSpanish ? "Llamar Ahora" : "Call Now"}
+                {isSpanish ? "Llamar: 911 98 57 05" : "Call: 911 98 57 05"}
               </Button>
             </a>
 
