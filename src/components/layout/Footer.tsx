@@ -198,6 +198,34 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
               </ul>
             </div>
 
+            {/* Plumbing Services */}
+            <div className="lg:col-span-2">
+              <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-primary"></span>
+                {isSpanish ? "Fontanería" : "Plumbing"}
+              </h4>
+              <ul className="space-y-2.5">
+                {[
+                  { to: isSpanish ? "/es/servicios-fontaneria/reparaciones-generales" : "/plumbing-services/general-repairs", label: isSpanish ? "Reparaciones Generales" : "General Repairs" },
+                  { to: isSpanish ? "/es/servicios-fontaneria/servicios-calderas" : "/plumbing-services/boiler-services", label: isSpanish ? "Calderas y Calentadores" : "Boiler Services" },
+                  { to: isSpanish ? "/es/servicios-fontaneria/mejoras-sistema" : "/plumbing-services/system-upgrades", label: isSpanish ? "Mejoras del Sistema" : "System Upgrades" },
+                  { to: isSpanish ? "/es/servicios-fontaneria/mejoras-colectores" : "/plumbing-services/manifold-upgrades", label: isSpanish ? "Mejoras de Colectores" : "Manifold Upgrades" },
+                  { to: isSpanish ? "/es/servicios-fontaneria/fontaneria-piscinas" : "/plumbing-services/pool-plumbing", label: isSpanish ? "Fontanería de Piscinas" : "Pool Plumbing" },
+                  { to: isSpanish ? "/es/servicios-fontaneria/reparaciones-piscinas" : "/plumbing-services/pool-repairs", label: isSpanish ? "Reparaciones Piscinas" : "Pool Repairs" },
+                ].map(link => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="text-slate-400 hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group"
+                    >
+                      <span className="w-0 group-hover:w-2 h-0.5 bg-primary transition-all duration-300"></span>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* Service Areas - 2 cols */}
             <div className="lg:col-span-2">
               <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-5 flex items-center gap-2">
