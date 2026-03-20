@@ -294,7 +294,7 @@ const PrePurchaseSurvey = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="tel:+34711051071"
+                href="tel:+34911985705"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-bold text-base hover:bg-primary/90 transition-all shadow-lg shadow-primary/30"
               >
                 {isSpanish ? "Solicitar Presupuesto Gratis" : "Get a Free Quote"}
@@ -412,7 +412,7 @@ const PrePurchaseSurvey = () => {
               </div>
 
               <a
-                href="tel:+34711051071"
+                href="tel:+34911985705"
                 className="flex items-center justify-center gap-2 w-full px-6 py-4 rounded-2xl bg-primary text-white font-bold text-base hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
               >
                 <Phone className="w-5 h-5" />
@@ -621,7 +621,7 @@ const PrePurchaseSurvey = () => {
                   : "LeakGuard monitors your property's water system 24 hours a day, 7 days a week. If a leak is detected, it automatically shuts off the water supply, preventing the kind of catastrophic water damage that can cost tens of thousands of euros to repair."}
               </p>
               <a
-                href="tel:+34711051071"
+                href="tel:+34911985705"
                 className="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-primary text-white font-bold text-base hover:bg-primary/90 transition-all shadow-lg shadow-primary/30"
               >
                 {isSpanish ? "Preguntar sobre LeakGuard" : "Ask About LeakGuard"}
@@ -659,11 +659,11 @@ const PrePurchaseSurvey = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+34711051071"
+              href="tel:+34911985705"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-primary text-white font-bold text-base hover:bg-primary/90 transition-all shadow-lg shadow-primary/30"
             >
               <Phone className="w-5 h-5" />
-              {isSpanish ? "Llamar +34 711 051 071" : "Call +34 711 051 071"}
+              {isSpanish ? "Llamar +34 911 98 57 05" : "Call +34 911 98 57 05"}
             </a>
             <Link
               to={isSpanish ? "/es/contacto" : "/contact"}

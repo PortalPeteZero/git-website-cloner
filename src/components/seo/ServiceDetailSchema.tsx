@@ -29,7 +29,7 @@ const ServiceDetailSchema = ({
         "name": "Canary Detect",
         "legalName": "Camello Blanco S.L.",
         "alternateName": isSpanish ? "Los Cazafugas" : "The Leaky Finders",
-        "telephone": "+34 711 051 071",
+        "telephone": "+34 911 98 57 05",
         "email": "info@canary-detect.com",
         "address": {
           "@type": "PostalAddress",
@@ -52,7 +52,7 @@ const ServiceDetailSchema = ({
         "@type": "ServiceChannel",
         "servicePhone": {
           "@type": "ContactPoint",
-          "telephone": "+34 711 051 071",
+          "telephone": "+34 911 98 57 05",
           "contactType": isSpanish ? "servicio al cliente" : "customer service",
           "availableLanguage": ["English", "Spanish"]
         },

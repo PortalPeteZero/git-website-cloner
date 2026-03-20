@@ -22,7 +22,7 @@ const LocationLocalBusinessSchema = ({
     alternateName: isSpanish ? "Los Cazafugas" : "The Leaky Finders",
     description: locationDescription,
     url: canonicalUrl,
-    telephone: "+34711051071",
+    telephone: "+34911985705",
     email: "info@canary-detect.com",
     image: "https://canary-detect.com/og-image.jpg",
     logo: "https://canary-detect.com/favicon.png",

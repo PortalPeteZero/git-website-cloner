@@ -19,7 +19,7 @@ export const fontaneroLocations: Record<string, FontaneroLocation> = {
     name: "Arrecife",
     seo: {
       title: "Fontanero en Arrecife | Canary Detect",
-      description: "Fontanero profesional en Arrecife, Lanzarote. Reparaciones urgentes, calderas, detección de fugas y fontanería de piscinas. Garantía 2 años. 711 051 071.",
+      description: "Fontanero profesional en Arrecife, Lanzarote. Reparaciones urgentes, calderas, detección de fugas y fontanería de piscinas. Garantía 2 años. 911 98 57 05.",
     },
     h1: "Fontanero en Arrecife",
     intro:
@@ -40,14 +40,14 @@ export const fontaneroLocations: Record<string, FontaneroLocation> = {
     ],
     body:
       "Nuestro equipo de fontaneros cualificados conoce a fondo la infraestructura hídrica de Arrecife. Trabajamos tanto en el casco antiguo como en las urbanizaciones más modernas de Playa del Reducto y Maneje. Utilizamos cámaras CCTV para inspeccionar el estado interno de las tuberías antes de intervenir, lo que nos permite ofrecer soluciones precisas y minimizar las obras. Todos nuestros trabajos incluyen una garantía de 2 años en materiales y mano de obra. Respondemos a emergencias en menos de 2 horas dentro del municipio de Arrecife, asegurando que los problemas de agua no se conviertan en daños mayores para su propiedad.",
-    cta: "¿Necesita un fontanero urgente en Arrecife? Llámenos al 711 051 071 para una respuesta rápida.",
+    cta: "¿Necesita un fontanero urgente en Arrecife? Llámenos al 911 98 57 05 para una respuesta rápida.",
   },
   "playa-blanca": {
     slug: "playa-blanca",
     name: "Playa Blanca",
     seo: {
       title: "Fontanero en Playa Blanca | Canary Detect",
-      description: "Fontanero en Playa Blanca, Lanzarote. Piscinas, villas, reparaciones urgentes y calderas. Garantía 2 años. Llámenos: 711 051 071.",
+      description: "Fontanero en Playa Blanca, Lanzarote. Piscinas, villas, reparaciones urgentes y calderas. Garantía 2 años. Llámenos: 911 98 57 05.",
     },
     h1: "Fontanero en Playa Blanca",
     intro:
@@ -68,14 +68,14 @@ export const fontaneroLocations: Record<string, FontaneroLocation> = {
     ],
     body:
       "En Playa Blanca trabajamos habitualmente en urbanizaciones como Montaña Roja, Las Coloradas y Marina Rubicón. Entendemos las necesidades específicas de los propietarios de villas con piscina y los gestores de apartamentos turísticos. Nuestros fontaneros están formados en sistemas de depuración y tratamiento de agua para piscinas, lo que nos permite ofrecer un servicio completo sin necesidad de múltiples proveedores. Realizamos inspecciones preventivas trimestrales para propiedades de alquiler, evitando sorpresas costosas durante la temporada alta. Garantizamos respuesta en el mismo día para urgencias en todo el municipio de Yaiza.",
-    cta: "¿Problemas de fontanería en Playa Blanca? Contacte con nosotros: 711 051 071.",
+    cta: "¿Problemas de fontanería en Playa Blanca? Contacte con nosotros: 911 98 57 05.",
   },
   "puerto-del-carmen": {
     slug: "puerto-del-carmen",
     name: "Puerto del Carmen",
     seo: {
       title: "Fontanero Puerto del Carmen | Canary Detect",
-      description: "Fontanero en Puerto del Carmen, Lanzarote. Hoteles, apartamentos, piscinas comunitarias. Urgencias 24h. Garantía 2 años. 711 051 071.",
+      description: "Fontanero en Puerto del Carmen, Lanzarote. Hoteles, apartamentos, piscinas comunitarias. Urgencias 24h. Garantía 2 años. 911 98 57 05.",
     },
     h1: "Fontanero en Puerto del Carmen",
     intro:
@@ -96,14 +96,14 @@ export const fontaneroLocations: Record<string, FontaneroLocation> = {
     ],
     body:
       "Conocemos cada rincón de Puerto del Carmen, desde los complejos de Los Pocillos hasta las urbanizaciones de La Tiñosa. Nuestro equipo tiene amplia experiencia trabajando con comunidades de propietarios y administradores de fincas para resolver problemas de fontanería que afectan a múltiples viviendas. Utilizamos tecnología de detección no invasiva para localizar fugas sin necesidad de demoler paredes o suelos, lo que es especialmente importante en establecimientos turísticos que no pueden cerrar. Ofrecemos contratos de mantenimiento anuales para hoteles y complejos que garantizan revisiones periódicas y prioridad en urgencias.",
-    cta: "¿Fontanero en Puerto del Carmen? Llame ahora: 711 051 071.",
+    cta: "¿Fontanero en Puerto del Carmen? Llame ahora: 911 98 57 05.",
   },
   "costa-teguise": {
     slug: "costa-teguise",
     name: "Costa Teguise",
     seo: {
       title: "Fontanero en Costa Teguise | Canary Detect",
-      description: "Fontanero profesional Costa Teguise. Apartamentos, piscinas comunitarias, reparaciones urgentes. Garantía 2 años. 711 051 071.",
+      description: "Fontanero profesional Costa Teguise. Apartamentos, piscinas comunitarias, reparaciones urgentes. Garantía 2 años. 911 98 57 05.",
     },
     h1: "Fontanero en Costa Teguise",
     intro:
@@ -124,14 +124,14 @@ export const fontaneroLocations: Record<string, FontaneroLocation> = {
     ],
     body:
       "En Costa Teguise colaboramos regularmente con administradores de fincas y comunidades de propietarios para gestionar el mantenimiento de las instalaciones de agua. Realizamos auditorías de consumo que permiten identificar fugas ocultas comparando el volumen facturado con el uso real. Esta zona tiene una particularidad: muchos complejos comparten infraestructura de agua, lo que significa que una fuga puede afectar a múltiples propietarios. Nuestro enfoque es diagnosticar con precisión antes de actuar, utilizando cámaras de inspección y equipos de correlación acústica que nos permiten localizar el punto exacto del problema sin excavaciones innecesarias.",
-    cta: "¿Necesita un fontanero en Costa Teguise? Llame al 711 051 071.",
+    cta: "¿Necesita un fontanero en Costa Teguise? Llame al 911 98 57 05.",
   },
   yaiza: {
     slug: "yaiza",
     name: "Yaiza",
     seo: {
       title: "Fontanero en Yaiza | Canary Detect",
-      description: "Fontanero en Yaiza, Lanzarote. Villas, fincas rurales, aljibes y sistemas tradicionales. Garantía 2 años. Llame: 711 051 071.",
+      description: "Fontanero en Yaiza, Lanzarote. Villas, fincas rurales, aljibes y sistemas tradicionales. Garantía 2 años. Llame: 911 98 57 05.",
     },
     h1: "Fontanero en Yaiza",
     intro:
@@ -152,14 +152,14 @@ export const fontaneroLocations: Record<string, FontaneroLocation> = {
     ],
     body:
       "Yaiza presenta desafíos únicos de fontanería debido a su extensión geográfica y la diversidad de sus propiedades. Nuestro equipo tiene experiencia específica trabajando con aljibes tradicionales canarios, una característica común en las fincas de esta zona. Sabemos cómo reparar y impermeabilizar estas estructuras sin comprometer su integridad arquitectónica. Para las villas modernas dispersas por el municipio, ofrecemos instalaciones completas de grupos de presión, calentadores solares y sistemas de filtración. Cubrimos todo el municipio, desde Puerto Calero hasta Las Breñas, con tiempos de respuesta garantizados.",
-    cta: "¿Fontanero en el municipio de Yaiza? Contáctenos: 711 051 071.",
+    cta: "¿Fontanero en el municipio de Yaiza? Contáctenos: 911 98 57 05.",
   },
   tias: {
     slug: "tias",
     name: "Tías",
     seo: {
       title: "Fontanero en Tías | Canary Detect",
-      description: "Fontanero profesional en Tías, Lanzarote. Reparaciones, detección fugas, calderas. Zona Puerto del Carmen. Garantía 2 años. 711 051 071.",
+      description: "Fontanero profesional en Tías, Lanzarote. Reparaciones, detección fugas, calderas. Zona Puerto del Carmen. Garantía 2 años. 911 98 57 05.",
     },
     h1: "Fontanero en Tías",
     intro:
@@ -180,14 +180,14 @@ export const fontaneroLocations: Record<string, FontaneroLocation> = {
     ],
     body:
       "En Tías comprendemos la diferencia entre las necesidades del casco urbano y la zona costera. Las viviendas del pueblo, muchas de construcción tradicional, suelen tener tuberías de plomo o fibrocemento que deben sustituirse por razones de salud y eficiencia. Ofrecemos presupuestos detallados para renovaciones parciales o completas del sistema de fontanería. Para las propiedades más modernas, nos especializamos en optimizar el rendimiento de los sistemas existentes mediante reguladores de presión, válvulas antirretorno y aislamiento térmico de tuberías. Nuestro servicio cubre desde La Asomada hasta Mácher, con respuesta en el mismo día.",
-    cta: "¿Busca un fontanero en Tías? Llame ahora: 711 051 071.",
+    cta: "¿Busca un fontanero en Tías? Llame ahora: 911 98 57 05.",
   },
   teguise: {
     slug: "teguise",
     name: "Teguise",
     seo: {
       title: "Fontanero en Teguise | Canary Detect",
-      description: "Fontanero en Teguise, Lanzarote. Casas históricas, villas rurales, Costa Teguise. Sistemas tradicionales y modernos. 711 051 071.",
+      description: "Fontanero en Teguise, Lanzarote. Casas históricas, villas rurales, Costa Teguise. Sistemas tradicionales y modernos. 911 98 57 05.",
     },
     h1: "Fontanero en Teguise",
     intro:
@@ -208,14 +208,14 @@ export const fontaneroLocations: Record<string, FontaneroLocation> = {
     ],
     body:
       "El municipio de Teguise requiere un enfoque especial debido a la protección patrimonial de su casco histórico. Nuestros fontaneros están familiarizados con las normativas de intervención en edificios catalogados y saben cómo ocultar instalaciones modernas sin alterar la estética tradicional. En las zonas rurales como Guatiza, Nazaret y Los Valles, ofrecemos soluciones para propiedades aisladas que necesitan autonomía hídrica: depósitos elevados, bombas sumergibles y sistemas de presurización. También cubrimos Costa Teguise con servicios adaptados a las necesidades de sus complejos turísticos y residenciales.",
-    cta: "¿Necesita un fontanero en Teguise? Contacte con nosotros: 711 051 071.",
+    cta: "¿Necesita un fontanero en Teguise? Contacte con nosotros: 911 98 57 05.",
   },
   "san-bartolome": {
     slug: "san-bartolome",
     name: "San Bartolomé",
     seo: {
       title: "Fontanero San Bartolomé | Canary Detect",
-      description: "Fontanero en San Bartolomé, Lanzarote. Playa Honda, zona industrial, viviendas. Reparaciones urgentes. Garantía 2 años. 711 051 071.",
+      description: "Fontanero en San Bartolomé, Lanzarote. Playa Honda, zona industrial, viviendas. Reparaciones urgentes. Garantía 2 años. 911 98 57 05.",
     },
     h1: "Fontanero en San Bartolomé",
     intro:
@@ -236,14 +236,14 @@ export const fontaneroLocations: Record<string, FontaneroLocation> = {
     ],
     body:
       "San Bartolomé y Playa Honda son zonas donde trabajamos con frecuencia, tanto en viviendas particulares como en locales comerciales de la zona industrial. La proximidad del aeropuerto y la concentración de actividad económica hacen que los problemas de fontanería necesiten solución rápida para no interrumpir la actividad diaria. En Playa Honda ofrecemos servicios de renovación para comunidades de vecinos que quieren actualizar sus instalaciones con materiales modernos y eficientes. Para la zona industrial, disponemos de equipos capaces de trabajar con tuberías de gran diámetro y sistemas de presión comercial. Nuestro almacén de repuestos nos permite resolver la mayoría de averías en una sola visita.",
-    cta: "¿Fontanero en San Bartolomé o Playa Honda? Llame: 711 051 071.",
+    cta: "¿Fontanero en San Bartolomé o Playa Honda? Llame: 911 98 57 05.",
   },
   haria: {
     slug: "haria",
     name: "Haría",
     seo: {
       title: "Fontanero en Haría | Canary Detect",
-      description: "Fontanero en Haría, norte de Lanzarote. Casas rurales, aljibes, sistemas de agua tradicionales. Garantía 2 años. 711 051 071.",
+      description: "Fontanero en Haría, norte de Lanzarote. Casas rurales, aljibes, sistemas de agua tradicionales. Garantía 2 años. 911 98 57 05.",
     },
     h1: "Fontanero en Haría",
     intro:
@@ -264,14 +264,14 @@ export const fontaneroLocations: Record<string, FontaneroLocation> = {
     ],
     body:
       "El norte de Lanzarote tiene condiciones climáticas y geológicas distintas al resto de la isla: más humedad, más vegetación y un terreno volcánico más irregular. Nuestros fontaneros conocen estas particularidades y adaptan las soluciones a cada situación. Trabajamos habitualmente con propietarios de casas rurales en Haría y Máguez que buscan modernizar sus instalaciones sin perder el carácter tradicional de sus viviendas. En Arrieta y Punta Mujeres, donde la proximidad al mar acelera la corrosión, utilizamos materiales específicamente resistentes a ambientes salinos. También ofrecemos servicio de mantenimiento de aljibes, limpieza de depósitos y revisión de sistemas de bombeo para garantizar un suministro fiable todo el año.",
-    cta: "¿Necesita un fontanero en Haría o el norte de Lanzarote? Llame: 711 051 071.",
+    cta: "¿Necesita un fontanero en Haría o el norte de Lanzarote? Llame: 911 98 57 05.",
   },
   tinajo: {
     slug: "tinajo",
     name: "Tinajo",
     seo: {
       title: "Fontanero en Tinajo | Canary Detect",
-      description: "Fontanero en Tinajo, Lanzarote. Fincas agrícolas, La Santa, sistemas de riego y aljibes. Garantía 2 años. 711 051 071.",
+      description: "Fontanero en Tinajo, Lanzarote. Fincas agrícolas, La Santa, sistemas de riego y aljibes. Garantía 2 años. 911 98 57 05.",
     },
     h1: "Fontanero en Tinajo",
     intro:
@@ -292,7 +292,7 @@ export const fontaneroLocations: Record<string, FontaneroLocation> = {
     ],
     body:
       "Tinajo y sus alrededores requieren un fontanero que entienda las necesidades del mundo rural de Lanzarote. Muchas propiedades en esta zona no están conectadas a la red de saneamiento municipal y dependen de fosas sépticas que necesitan un diseño e instalación correctos. En La Santa trabajamos con propietarios de apartamentos y el complejo deportivo, donde la cercanía al mar exige materiales resistentes a la corrosión. Para las fincas agrícolas de la zona, ofrecemos diseño de sistemas de riego por goteo que maximizan la eficiencia del agua, un recurso especialmente valioso en Lanzarote. Nuestro conocimiento del terreno volcánico local nos permite instalar y reparar tuberías enterradas con la mínima alteración del suelo.",
-    cta: "¿Busca un fontanero en Tinajo o La Santa? Llame: 711 051 071.",
+    cta: "¿Busca un fontanero en Tinajo o La Santa? Llame: 911 98 57 05.",
   },
 };
 

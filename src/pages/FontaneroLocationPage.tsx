@@ -67,10 +67,10 @@ const FontaneroLocationPage = () => {
             {data.intro}
           </p>
           <div className="mt-8">
-            <a href="tel:+34711051071">
+            <a href="tel:+34911985705">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
                 <Phone className="h-5 w-5" />
-                711 051 071
+                911 98 57 05
               </Button>
             </a>
           </div>
@@ -154,10 +154,10 @@ const FontaneroLocationPage = () => {
           <p className="text-xl md:text-2xl font-bold text-primary-foreground mb-6">
             {data.cta}
           </p>
-          <a href="tel:+34711051071">
+          <a href="tel:+34911985705">
             <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary gap-2">
               <Phone className="h-5 w-5" />
-              Llamar ahora: 711 051 071
+              Llamar ahora: 911 98 57 05
             </Button>
           </a>
         </div>

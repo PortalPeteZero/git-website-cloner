@@ -88,7 +88,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Cómo funciona el sistema de agua en Lanzarote", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
         ],
-        seo: { title: "Detección Fugas Arrecife | Agua y Piscinas", description: "Detección profesional fugas Arrecife, capital Lanzarote. Agua, piscinas, tuberías subterráneas. Sin Encontrar, Sin Pagar. 24h. +34 711 051 071", keywords: "detección fugas Arrecife, fugas agua Arrecife, fugas piscina Arrecife, reparación fugas Arrecife, fontanero Arrecife Lanzarote, fugas ocultas Arrecife" }
+        seo: { title: "Detección Fugas Arrecife | Agua y Piscinas", description: "Detección profesional fugas Arrecife, capital Lanzarote. Agua, piscinas, tuberías subterráneas. Sin Encontrar, Sin Pagar. 24h. +34 911 98 57 05", keywords: "detección fugas Arrecife, fugas agua Arrecife, fugas piscina Arrecife, reparación fugas Arrecife, fontanero Arrecife Lanzarote, fugas ocultas Arrecife" }
       },
       "puerto-del-carmen": {
         name: "Puerto del Carmen",
@@ -132,7 +132,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Coste de reparación de fugas en piscinas", href: `${blogBasePath}/coste-reparacion-fugas-piscina-lanzarote` },
           { title: "Paredes húmedas: causas y soluciones", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Puerto del Carmen | Hoteles y Villas", description: "Detección profesional fugas Puerto del Carmen. Hoteles, villas, apartamentos turísticos. Piscinas, emergencias 24h. Sin Encontrar, Sin Pagar. 711 051 071", keywords: "detección fugas Puerto del Carmen, fugas agua Puerto del Carmen, fugas piscina Puerto del Carmen, fugas hotel Lanzarote, reparación urgente fugas" }
+        seo: { title: "Detección Fugas Puerto del Carmen | Hoteles y Villas", description: "Detección profesional fugas Puerto del Carmen. Hoteles, villas, apartamentos turísticos. Piscinas, emergencias 24h. Sin Encontrar, Sin Pagar. 911 98 57 05", keywords: "detección fugas Puerto del Carmen, fugas agua Puerto del Carmen, fugas piscina Puerto del Carmen, fugas hotel Lanzarote, reparación urgente fugas" }
       },
       "playa-blanca": {
         name: "Playa Blanca",
@@ -176,7 +176,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Imagen térmica para detección de fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
         ],
-        seo: { title: "Detección Fugas Playa Blanca | ¡Somos Locales!", description: "Expertos en detección de fugas en Playa Blanca. Villas, piscinas, fugas subterráneas. Respuesta inmediata. Sin Encontrar, Sin Pagar. +34 711 051 071", keywords: "detección fugas Playa Blanca, fugas agua Playa Blanca, fugas piscina Playa Blanca, fontanero Playa Blanca, reparación fugas Playa Blanca Lanzarote" }
+        seo: { title: "Detección Fugas Playa Blanca | ¡Somos Locales!", description: "Expertos en detección de fugas en Playa Blanca. Villas, piscinas, fugas subterráneas. Respuesta inmediata. Sin Encontrar, Sin Pagar. +34 911 98 57 05", keywords: "detección fugas Playa Blanca, fugas agua Playa Blanca, fugas piscina Playa Blanca, fontanero Playa Blanca, reparación fugas Playa Blanca Lanzarote" }
       },
       "costa-teguise": {
         name: "Costa Teguise",
@@ -220,7 +220,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "¿Contador de agua corriendo sin usar grifos?", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
           { title: "Paredes húmedas en apartamentos", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Costa Teguise | Apartamentos y Piscinas", description: "Detección profesional fugas Costa Teguise. Apartamentos, complejos turísticos, piscinas comunitarias. Sin Encontrar, Sin Pagar. +34 711 051 071", keywords: "detección fugas Costa Teguise, fugas agua Costa Teguise, fugas piscina Costa Teguise, fugas apartamentos Lanzarote, piscina comunitaria fuga" }
+        seo: { title: "Detección Fugas Costa Teguise | Apartamentos y Piscinas", description: "Detección profesional fugas Costa Teguise. Apartamentos, complejos turísticos, piscinas comunitarias. Sin Encontrar, Sin Pagar. +34 911 98 57 05", keywords: "detección fugas Costa Teguise, fugas agua Costa Teguise, fugas piscina Costa Teguise, fugas apartamentos Lanzarote, piscina comunitaria fuga" }
       },
       "yaiza": {
         name: "Yaiza",
@@ -264,7 +264,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea en fincas", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Imagen térmica para detección de fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
         ],
-        seo: { title: "Detección Fugas Yaiza | Villas, Fincas y Propiedades Rurales", description: "Detección profesional fugas municipio Yaiza. Villas, fincas rurales, viñedos La Geria. Expertos sistemas agua tradicionales. +34 711 051 071", keywords: "detección fugas Yaiza, fugas agua Yaiza, fugas piscina Yaiza, fugas villa Lanzarote, reparación fugas finca Yaiza, fugas aljibe" }
+        seo: { title: "Detección Fugas Yaiza | Villas, Fincas y Propiedades Rurales", description: "Detección profesional fugas municipio Yaiza. Villas, fincas rurales, viñedos La Geria. Expertos sistemas agua tradicionales. +34 911 98 57 05", keywords: "detección fugas Yaiza, fugas agua Yaiza, fugas piscina Yaiza, fugas villa Lanzarote, reparación fugas finca Yaiza, fugas aljibe" }
       },
       "tias": {
         name: "Tías",
@@ -285,7 +285,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Detectar fugas en piscinas", href: `${blogBasePath}/como-detectar-fugas-en-piscinas-lanzarote` },
           { title: "Paredes húmedas: diagnóstico", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Tías | Agua y Piscinas | Canary Detect", description: "Detección de fugas Tías. Agua, piscinas, desagües. Servicio en Tías y Puerto del Carmen. Sin Encontrar Sin Pagar. +34 711 051 071", keywords: "detección fugas Tías, fugas agua Tías, fugas piscina Tías, fontanero Tías Lanzarote, reparación fugas Tías" }
+        seo: { title: "Detección Fugas Tías | Agua y Piscinas | Canary Detect", description: "Detección de fugas Tías. Agua, piscinas, desagües. Servicio en Tías y Puerto del Carmen. Sin Encontrar Sin Pagar. +34 911 98 57 05", keywords: "detección fugas Tías, fugas agua Tías, fugas piscina Tías, fontanero Tías Lanzarote, reparación fugas Tías" }
       },
       "playa-honda": {
         name: "Playa Honda",
@@ -306,7 +306,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Sistema de agua en Lanzarote", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
         ],
-        seo: { title: "Detección Fugas Playa Honda | Canary Detect", description: "Detección de fugas Playa Honda. Apartamentos, casas, edificios comunitarios. Respuesta rápida. +34 711 051 071", keywords: "detección fugas Playa Honda, fugas agua Playa Honda, fugas piscina Playa Honda, fontanero Playa Honda, fugas apartamento Playa Honda" }
+        seo: { title: "Detección Fugas Playa Honda | Canary Detect", description: "Detección de fugas Playa Honda. Apartamentos, casas, edificios comunitarios. Respuesta rápida. +34 911 98 57 05", keywords: "detección fugas Playa Honda, fugas agua Playa Honda, fugas piscina Playa Honda, fontanero Playa Honda, fugas apartamento Playa Honda" }
       },
       "san-bartolome": {
         name: "San Bartolomé",
@@ -327,7 +327,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga en propiedades rurales", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Imagen térmica para edificios antiguos", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
         ],
-        seo: { title: "Detección Fugas San Bartolomé | Canary Detect", description: "Detección de fugas San Bartolomé. Casas de pueblo, fincas, propiedades rurales. Tuberías subterráneas. +34 711 051 071", keywords: "detección fugas San Bartolomé, fugas agua San Bartolomé, fugas subterráneas San Bartolomé, fugas rurales Lanzarote" }
+        seo: { title: "Detección Fugas San Bartolomé | Canary Detect", description: "Detección de fugas San Bartolomé. Casas de pueblo, fincas, propiedades rurales. Tuberías subterráneas. +34 911 98 57 05", keywords: "detección fugas San Bartolomé, fugas agua San Bartolomé, fugas subterráneas San Bartolomé, fugas rurales Lanzarote" }
       },
       "teguise": {
         name: "Teguise",
@@ -348,7 +348,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Sistema de agua tradicional en Lanzarote", href: `${blogBasePath}/domina-tu-sistema-de-agua-lanzarote` },
           { title: "Paredes húmedas en casas antiguas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Teguise | Históricas y Rurales", description: "Detección de fugas Teguise. Edificios históricos, fincas rurales, propiedades costeras. Métodos no invasivos. +34 711 051 071", keywords: "detección fugas Teguise, fugas agua Teguise, fugas edificios históricos Lanzarote, fugas rurales Teguise, Costa Teguise fugas" }
+        seo: { title: "Detección Fugas Teguise | Históricas y Rurales", description: "Detección de fugas Teguise. Edificios históricos, fincas rurales, propiedades costeras. Métodos no invasivos. +34 911 98 57 05", keywords: "detección fugas Teguise, fugas agua Teguise, fugas edificios históricos Lanzarote, fugas rurales Teguise, Costa Teguise fugas" }
       },
       "puerto-calero": {
         name: "Puerto Calero",
@@ -369,7 +369,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Coste reparación fugas piscina", href: `${blogBasePath}/coste-reparacion-fugas-piscina-lanzarote` },
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
         ],
-        seo: { title: "Detección Fugas Puerto Calero | Marina | Canary Detect", description: "Detección de fugas Puerto Calero. Villas de lujo marina, piscinas, spas. Servicio profesional discreto. +34 711 051 071", keywords: "detección fugas Puerto Calero, fugas agua Puerto Calero, fugas piscina marina Puerto Calero, fugas villa Lanzarote" }
+        seo: { title: "Detección Fugas Puerto Calero | Marina | Canary Detect", description: "Detección de fugas Puerto Calero. Villas de lujo marina, piscinas, spas. Servicio profesional discreto. +34 911 98 57 05", keywords: "detección fugas Puerto Calero, fugas agua Puerto Calero, fugas piscina marina Puerto Calero, fugas villa Lanzarote" }
       },
       "femes": {
         name: "Femés",
@@ -390,7 +390,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Paredes húmedas en casas antiguas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Femés | Propiedades Rurales | Canary Detect", description: "Detección de fugas Femés. Casas tradicionales, fincas, aljibes. Expertos locales. +34 711 051 071", keywords: "detección fugas Femés, fugas agua Femés Lanzarote, detección fugas finca, detección fugas rural Lanzarote" }
+        seo: { title: "Detección Fugas Femés | Propiedades Rurales | Canary Detect", description: "Detección de fugas Femés. Casas tradicionales, fincas, aljibes. Expertos locales. +34 911 98 57 05", keywords: "detección fugas Femés, fugas agua Femés Lanzarote, detección fugas finca, detección fugas rural Lanzarote" }
       },
       "las-brenas": {
         name: "Las Breñas",
@@ -411,7 +411,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Contador de agua corriendo sin usar grifos", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
         ],
-        seo: { title: "Detección Fugas Las Breñas | Sur Lanzarote | Canary Detect", description: "Detección de fugas Las Breñas. Casas de pueblo, fincas, sistemas de riego. +34 711 051 071", keywords: "detección fugas Las Breñas, fugas agua Las Breñas Lanzarote, detección fugas rural, fugas finca Las Breñas" }
+        seo: { title: "Detección Fugas Las Breñas | Sur Lanzarote | Canary Detect", description: "Detección de fugas Las Breñas. Casas de pueblo, fincas, sistemas de riego. +34 911 98 57 05", keywords: "detección fugas Las Breñas, fugas agua Las Breñas Lanzarote, detección fugas rural, fugas finca Las Breñas" }
       },
       "uga": {
         name: "Uga",
@@ -432,7 +432,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Imagen térmica para edificios antiguos", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
           { title: "Detección de fugas subterráneas", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
         ],
-        seo: { title: "Detección Fugas Uga | Región de La Geria | Canary Detect", description: "Detección de fugas Uga. Pueblo tradicional, fincas, bodegas. Especialistas zona vinícola. +34 711 051 071", keywords: "detección fugas Uga, fugas agua Uga Lanzarote, detección fugas bodega, detección fugas La Geria" }
+        seo: { title: "Detección Fugas Uga | Región de La Geria | Canary Detect", description: "Detección de fugas Uga. Pueblo tradicional, fincas, bodegas. Especialistas zona vinícola. +34 911 98 57 05", keywords: "detección fugas Uga, fugas agua Uga Lanzarote, detección fugas bodega, detección fugas La Geria" }
       },
       "tahiche": {
         name: "Tahiche",
@@ -476,7 +476,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Imagen térmica para fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
           { title: "Diagnóstico paredes húmedas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Tahiche | Centro Lanzarote | Canary Detect", description: "Detección de fugas Tahiche. Propiedades residenciales, villas, casas tradicionales. Centro Lanzarote. +34 711 051 071", keywords: "detección fugas Tahiche, fugas agua Tahiche Lanzarote, fugas villa Tahiche, fontanero Tahiche" }
+        seo: { title: "Detección Fugas Tahiche | Centro Lanzarote | Canary Detect", description: "Detección de fugas Tahiche. Propiedades residenciales, villas, casas tradicionales. Centro Lanzarote. +34 911 98 57 05", keywords: "detección fugas Tahiche, fugas agua Tahiche Lanzarote, fugas villa Tahiche, fontanero Tahiche" }
       },
       "guatiza": {
         name: "Guatiza",
@@ -497,7 +497,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Paredes húmedas en casas antiguas", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
         ],
-        seo: { title: "Detección Fugas Guatiza | Noreste Lanzarote | Canary Detect", description: "Detección de fugas Guatiza. Casas de pueblo, fincas de cactus, sistemas de riego. +34 711 051 071", keywords: "detección fugas Guatiza, fugas agua Guatiza Lanzarote, fugas finca cactus, fugas riego Guatiza" }
+        seo: { title: "Detección Fugas Guatiza | Noreste Lanzarote | Canary Detect", description: "Detección de fugas Guatiza. Casas de pueblo, fincas de cactus, sistemas de riego. +34 911 98 57 05", keywords: "detección fugas Guatiza, fugas agua Guatiza Lanzarote, fugas finca cactus, fugas riego Guatiza" }
       },
       "la-santa": {
         name: "La Santa",
@@ -541,7 +541,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Contador de agua corriendo", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
         ],
-        seo: { title: "Detección Fugas La Santa | Costa Lanzarote | Canary Detect", description: "Detección de fugas en La Santa, Lanzarote. Casas costeras, apartamentos, piscinas. Emergencias 24h. +34 711 051 071", keywords: "detección fugas La Santa, fugas agua La Santa Lanzarote, fugas piscina La Santa, fontanero La Santa" }
+        seo: { title: "Detección Fugas La Santa | Costa Lanzarote | Canary Detect", description: "Detección de fugas en La Santa, Lanzarote. Casas costeras, apartamentos, piscinas. Emergencias 24h. +34 911 98 57 05", keywords: "detección fugas La Santa, fugas agua La Santa Lanzarote, fugas piscina La Santa, fontanero La Santa" }
       },
       "tinajo": {
         name: "Tinajo",
@@ -585,7 +585,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Señales de fuga subterránea", href: `${blogBasePath}/senales-fuga-agua-subterranea` },
           { title: "Contador de agua corriendo sin usar grifos", href: `${blogBasePath}/contador-agua-girando-grifos-cerrados` },
         ],
-        seo: { title: "Detección Fugas Tinajo | Oeste Lanzarote | Canary Detect", description: "Detección profesional de fugas en Tinajo. Fincas agrícolas, aljibes, riego subterráneo. Expertos rurales. +34 711 051 071", keywords: "detección fugas Tinajo, fugas agua Tinajo Lanzarote, fugas riego finca, fontanero Tinajo, fugas aljibe" }
+        seo: { title: "Detección Fugas Tinajo | Oeste Lanzarote | Canary Detect", description: "Detección profesional de fugas en Tinajo. Fincas agrícolas, aljibes, riego subterráneo. Expertos rurales. +34 911 98 57 05", keywords: "detección fugas Tinajo, fugas agua Tinajo Lanzarote, fugas riego finca, fontanero Tinajo, fugas aljibe" }
       },
       "haria": {
         name: "Haría",
@@ -629,7 +629,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
           { title: "Paredes húmedas: causas y soluciones", href: `${blogBasePath}/paredes-humedas-causas-soluciones` },
           { title: "Imagen térmica para detección de fugas", href: `${blogBasePath}/imagen-termica-deteccion-fugas-explicada` },
         ],
-        seo: { title: "Detección Fugas Haría | Valle Mil Palmeras Lanzarote", description: "Detección de fugas en Haría, el verde valle del norte de Lanzarote. Arrieta, Punta Mujeres, Órzola. Diagnóstico humedad vs fugas. +34 711 051 071", keywords: "detección fugas Haría, fugas agua Haría Lanzarote, fugas Arrieta, fontanero norte Lanzarote, humedad Haría" }
+        seo: { title: "Detección Fugas Haría | Valle Mil Palmeras Lanzarote", description: "Detección de fugas en Haría, el verde valle del norte de Lanzarote. Arrieta, Punta Mujeres, Órzola. Diagnóstico humedad vs fugas. +34 911 98 57 05", keywords: "detección fugas Haría, fugas agua Haría Lanzarote, fugas Arrieta, fontanero norte Lanzarote, humedad Haría" }
       }
     };
   }
@@ -678,7 +678,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "How Lanzarote's water system works", href: `${blogBasePath}/master-your-lanzarote-water-system` },
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
       ],
-      seo: { title: "Leak Detection Arrecife | Water & Pool Experts Lanzarote", description: "Professional leak detection in Arrecife, Lanzarote's capital. Water leaks, pool leaks, underground pipes. No Find, No Fee. 24h. +34 711 051 071", keywords: "leak detection Arrecife, water leak detection Arrecife, pool leak detection Arrecife, leak repair Arrecife, plumber Arrecife Lanzarote, hidden water leak Arrecife" }
+      seo: { title: "Leak Detection Arrecife | Water & Pool Experts Lanzarote", description: "Professional leak detection in Arrecife, Lanzarote's capital. Water leaks, pool leaks, underground pipes. No Find, No Fee. 24h. +34 911 98 57 05", keywords: "leak detection Arrecife, water leak detection Arrecife, pool leak detection Arrecife, leak repair Arrecife, plumber Arrecife Lanzarote, hidden water leak Arrecife" }
     },
     "puerto-del-carmen": {
       name: "Puerto del Carmen",
@@ -722,7 +722,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Pool leak repair costs Lanzarote", href: `${blogBasePath}/swimming-pool-leak-repair-cost-lanzarote` },
         { title: "Damp walls: causes & solutions", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Puerto del Carmen | Hotels & Villas", description: "Professional leak detection in Puerto del Carmen. Hotels, villas, tourist apartments. Pool leaks and 24h emergencies. No Find, No Fee. +34 711 051 071", keywords: "leak detection Puerto del Carmen, water leak detection Puerto del Carmen, pool leak detection Puerto del Carmen, hotel leak detection Lanzarote, villa leak repair Puerto del Carmen" }
+      seo: { title: "Leak Detection Puerto del Carmen | Hotels & Villas", description: "Professional leak detection in Puerto del Carmen. Hotels, villas, tourist apartments. Pool leaks and 24h emergencies. No Find, No Fee. +34 911 98 57 05", keywords: "leak detection Puerto del Carmen, water leak detection Puerto del Carmen, pool leak detection Puerto del Carmen, hotel leak detection Lanzarote, villa leak repair Puerto del Carmen" }
     },
     "playa-blanca": {
       name: "Playa Blanca",
@@ -766,7 +766,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Thermal imaging for leak detection", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
       ],
-      seo: { title: "Leak Detection Playa Blanca | We're Local!", description: "Local leak detection experts in Playa Blanca. Luxury villas, pools, underground leaks. Immediate response. No Find, No Fee. +34 711 051 071", keywords: "leak detection Playa Blanca, water leak detection Playa Blanca, pool leak detection Playa Blanca, plumber Playa Blanca, leak repair Playa Blanca Lanzarote" }
+      seo: { title: "Leak Detection Playa Blanca | We're Local!", description: "Local leak detection experts in Playa Blanca. Luxury villas, pools, underground leaks. Immediate response. No Find, No Fee. +34 911 98 57 05", keywords: "leak detection Playa Blanca, water leak detection Playa Blanca, pool leak detection Playa Blanca, plumber Playa Blanca, leak repair Playa Blanca Lanzarote" }
     },
     "costa-teguise": {
       name: "Costa Teguise",
@@ -810,7 +810,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Water meter running with taps off?", href: `${blogBasePath}/water-meter-running-when-taps-off` },
         { title: "Damp walls in apartments", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Costa Teguise | Apartments & Pools", description: "Professional leak detection in Costa Teguise. Apartments, tourist complexes, community pools. Shared building experts. No Find, No Fee. +34 711 051 071", keywords: "leak detection Costa Teguise, water leak detection Costa Teguise, pool leak detection Costa Teguise, apartment leak detection Lanzarote, community pool leak Costa Teguise" }
+      seo: { title: "Leak Detection Costa Teguise | Apartments & Pools", description: "Professional leak detection in Costa Teguise. Apartments, tourist complexes, community pools. Shared building experts. No Find, No Fee. +34 911 98 57 05", keywords: "leak detection Costa Teguise, water leak detection Costa Teguise, pool leak detection Costa Teguise, apartment leak detection Lanzarote, community pool leak Costa Teguise" }
     },
     "yaiza": {
       name: "Yaiza",
@@ -854,7 +854,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Underground leak signs on fincas", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Thermal imaging for leak detection", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
       ],
-      seo: { title: "Leak Detection Yaiza | Villas, Fincas & Rural Properties", description: "Professional leak detection in Yaiza municipality. Luxury villas, rural fincas, La Geria vineyards. Traditional water system experts. +34 711 051 071", keywords: "leak detection Yaiza, water leak detection Yaiza, pool leak detection Yaiza, villa leak detection Lanzarote, finca leak repair Yaiza, aljibe leak" }
+      seo: { title: "Leak Detection Yaiza | Villas, Fincas & Rural Properties", description: "Professional leak detection in Yaiza municipality. Luxury villas, rural fincas, La Geria vineyards. Traditional water system experts. +34 911 98 57 05", keywords: "leak detection Yaiza, water leak detection Yaiza, pool leak detection Yaiza, villa leak detection Lanzarote, finca leak repair Yaiza, aljibe leak" }
     },
     "tias": {
       name: "Tías",
@@ -898,7 +898,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Pool leak detection guide", href: `${blogBasePath}/how-to-check-for-pool-leaks-lanzarote` },
         { title: "Damp walls diagnosis", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Tías | Water & Pool | Canary Detect", description: "Leak detection Tías. Water leaks, pool leaks, drain surveys. Serving Tías & Puerto del Carmen. Call +34 711 051 071", keywords: "leak detection Tías, water leak detection Tías, pool leak detection Tías, plumber Tías Lanzarote, leak repair Tías" }
+      seo: { title: "Leak Detection Tías | Water & Pool | Canary Detect", description: "Leak detection Tías. Water leaks, pool leaks, drain surveys. Serving Tías & Puerto del Carmen. Call +34 911 98 57 05", keywords: "leak detection Tías, water leak detection Tías, pool leak detection Tías, plumber Tías Lanzarote, leak repair Tías" }
     },
     "playa-honda": {
       name: "Playa Honda",
@@ -919,7 +919,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Lanzarote water system guide", href: `${blogBasePath}/master-your-lanzarote-water-system` },
       ],
-      seo: { title: "Leak Detection Playa Honda | Canary Detect", description: "Leak detection Playa Honda. Apartments, houses, community buildings. Fast response. Call +34 711 051 071", keywords: "leak detection Playa Honda, water leak detection Playa Honda, pool leak detection Playa Honda, plumber Playa Honda, apartment leak Playa Honda" }
+      seo: { title: "Leak Detection Playa Honda | Canary Detect", description: "Leak detection Playa Honda. Apartments, houses, community buildings. Fast response. Call +34 911 98 57 05", keywords: "leak detection Playa Honda, water leak detection Playa Honda, pool leak detection Playa Honda, plumber Playa Honda, apartment leak Playa Honda" }
     },
     "san-bartolome": {
       name: "San Bartolomé",
@@ -940,7 +940,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Underground leak signs on rural properties", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Thermal imaging for old buildings", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
       ],
-      seo: { title: "Leak Detection San Bartolomé | Canary Detect", description: "Leak detection San Bartolomé. Village houses, fincas, rural properties. Underground pipes. Call +34 711 051 071", keywords: "leak detection San Bartolomé, water leak detection San Bartolomé, underground leak San Bartolomé, rural leak Lanzarote" }
+      seo: { title: "Leak Detection San Bartolomé | Canary Detect", description: "Leak detection San Bartolomé. Village houses, fincas, rural properties. Underground pipes. Call +34 911 98 57 05", keywords: "leak detection San Bartolomé, water leak detection San Bartolomé, underground leak San Bartolomé, rural leak Lanzarote" }
     },
     "teguise": {
       name: "Teguise",
@@ -961,7 +961,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Traditional Lanzarote water systems", href: `${blogBasePath}/master-your-lanzarote-water-system` },
         { title: "Damp walls in old houses", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Teguise | Historic & Rural | Canary Detect", description: "Leak detection Teguise. Historic buildings, rural fincas, coastal properties. Non-invasive methods. Call +34 711 051 071", keywords: "leak detection Teguise, water leak detection Teguise, historic building leak Lanzarote, rural leak Teguise, Costa Teguise leak" }
+      seo: { title: "Leak Detection Teguise | Historic & Rural | Canary Detect", description: "Leak detection Teguise. Historic buildings, rural fincas, coastal properties. Non-invasive methods. Call +34 911 98 57 05", keywords: "leak detection Teguise, water leak detection Teguise, historic building leak Lanzarote, rural leak Teguise, Costa Teguise leak" }
     },
     "puerto-calero": {
       name: "Puerto Calero",
@@ -982,7 +982,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Pool leak repair costs", href: `${blogBasePath}/swimming-pool-leak-repair-cost-lanzarote` },
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
       ],
-      seo: { title: "Leak Detection Puerto Calero | Marina Villas | Canary Detect", description: "Leak detection Puerto Calero. Luxury marina villas, pools, spas. Professional discreet service. Call +34 711 051 071", keywords: "leak detection Puerto Calero, water leak Puerto Calero, pool leak Puerto Calero marina, villa leak Lanzarote" }
+      seo: { title: "Leak Detection Puerto Calero | Marina Villas | Canary Detect", description: "Leak detection Puerto Calero. Luxury marina villas, pools, spas. Professional discreet service. Call +34 911 98 57 05", keywords: "leak detection Puerto Calero, water leak Puerto Calero, pool leak Puerto Calero marina, villa leak Lanzarote" }
     },
     "femes": {
       name: "Femés",
@@ -1026,7 +1026,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Underground leak signs", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Damp walls in old houses", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Femés | Rural Properties | Canary Detect", description: "Leak detection Femés. Traditional village houses, fincas, aljibes. Local experts. Call +34 711 051 071", keywords: "leak detection Femés, water leak Femés Lanzarote, finca leak detection, rural leak detection Lanzarote" }
+      seo: { title: "Leak Detection Femés | Rural Properties | Canary Detect", description: "Leak detection Femés. Traditional village houses, fincas, aljibes. Local experts. Call +34 911 98 57 05", keywords: "leak detection Femés, water leak Femés Lanzarote, finca leak detection, rural leak detection Lanzarote" }
     },
     "las-brenas": {
       name: "Las Breñas",
@@ -1047,7 +1047,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Water meter running with taps off", href: `${blogBasePath}/water-meter-running-when-taps-off` },
       ],
-      seo: { title: "Leak Detection Las Breñas | South Lanzarote | Canary Detect", description: "Leak detection Las Breñas. Village houses, fincas, irrigation systems. Call +34 711 051 071", keywords: "leak detection Las Breñas, water leak Las Breñas Lanzarote, rural leak detection, finca leak Las Breñas" }
+      seo: { title: "Leak Detection Las Breñas | South Lanzarote | Canary Detect", description: "Leak detection Las Breñas. Village houses, fincas, irrigation systems. Call +34 911 98 57 05", keywords: "leak detection Las Breñas, water leak Las Breñas Lanzarote, rural leak detection, finca leak Las Breñas" }
     },
     "uga": {
       name: "Uga",
@@ -1068,7 +1068,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Thermal imaging for old buildings", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
         { title: "Underground leak detection", href: `${blogBasePath}/signs-of-underground-water-leak` },
       ],
-      seo: { title: "Leak Detection Uga | La Geria Wine Region | Canary Detect", description: "Leak detection Uga. Traditional village, fincas, bodegas. Wine country specialists. Call +34 711 051 071", keywords: "leak detection Uga, water leak Uga Lanzarote, bodega leak detection, La Geria leak detection" }
+      seo: { title: "Leak Detection Uga | La Geria Wine Region | Canary Detect", description: "Leak detection Uga. Traditional village, fincas, bodegas. Wine country specialists. Call +34 911 98 57 05", keywords: "leak detection Uga, water leak Uga Lanzarote, bodega leak detection, La Geria leak detection" }
     },
     "tahiche": {
       name: "Tahiche",
@@ -1112,7 +1112,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Thermal imaging for leaks", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
         { title: "Damp walls diagnosis", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Tahiche | Central Lanzarote | Canary Detect", description: "Leak detection Tahiche. Residential properties, villas, traditional houses. Central Lanzarote. Call +34 711 051 071", keywords: "leak detection Tahiche, water leak Tahiche Lanzarote, villa leak Tahiche, plumber Tahiche" }
+      seo: { title: "Leak Detection Tahiche | Central Lanzarote | Canary Detect", description: "Leak detection Tahiche. Residential properties, villas, traditional houses. Central Lanzarote. Call +34 911 98 57 05", keywords: "leak detection Tahiche, water leak Tahiche Lanzarote, villa leak Tahiche, plumber Tahiche" }
     },
     "guatiza": {
       name: "Guatiza",
@@ -1133,7 +1133,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Underground leak signs", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Damp walls in old houses", href: `${blogBasePath}/damp-walls-causes-solutions` },
       ],
-      seo: { title: "Leak Detection Guatiza | Northeast Lanzarote | Canary Detect", description: "Leak detection Guatiza. Village houses, cactus fincas, irrigation systems. Call +34 711 051 071", keywords: "leak detection Guatiza, water leak Guatiza Lanzarote, cactus finca leak, irrigation leak Guatiza" }
+      seo: { title: "Leak Detection Guatiza | Northeast Lanzarote | Canary Detect", description: "Leak detection Guatiza. Village houses, cactus fincas, irrigation systems. Call +34 911 98 57 05", keywords: "leak detection Guatiza, water leak Guatiza Lanzarote, cactus finca leak, irrigation leak Guatiza" }
     },
     "la-santa": {
       name: "La Santa",
@@ -1177,7 +1177,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Water meter running with taps off", href: `${blogBasePath}/water-meter-running-when-taps-off` },
       ],
-      seo: { title: "Leak Detection La Santa | Coastal Lanzarote | Canary Detect", description: "Leak detection La Santa, Lanzarote. Coastal houses, sports apartments, pools. 24h emergency. Call +34 711 051 071", keywords: "leak detection La Santa, water leak La Santa Lanzarote, pool leak La Santa, plumber La Santa" }
+      seo: { title: "Leak Detection La Santa | Coastal Lanzarote | Canary Detect", description: "Leak detection La Santa, Lanzarote. Coastal houses, sports apartments, pools. 24h emergency. Call +34 911 98 57 05", keywords: "leak detection La Santa, water leak La Santa Lanzarote, pool leak La Santa, plumber La Santa" }
     },
     "tinajo": {
       name: "Tinajo",
@@ -1221,7 +1221,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Signs of underground leak", href: `${blogBasePath}/signs-of-underground-water-leak` },
         { title: "Water meter running with taps off", href: `${blogBasePath}/water-meter-running-when-taps-off` },
       ],
-      seo: { title: "Leak Detection Tinajo | West Lanzarote | Canary Detect", description: "Leak detection Tinajo, Lanzarote. Agricultural fincas, aljibes, irrigation. Rural specialists. Call +34 711 051 071", keywords: "leak detection Tinajo, water leak Tinajo Lanzarote, irrigation finca leak, plumber Tinajo, aljibe leak" }
+      seo: { title: "Leak Detection Tinajo | West Lanzarote | Canary Detect", description: "Leak detection Tinajo, Lanzarote. Agricultural fincas, aljibes, irrigation. Rural specialists. Call +34 911 98 57 05", keywords: "leak detection Tinajo, water leak Tinajo Lanzarote, irrigation finca leak, plumber Tinajo, aljibe leak" }
     },
     "haria": {
       name: "Haría",
@@ -1265,7 +1265,7 @@ export const getLocationsData = (isSpanish: boolean): Record<string, LocationDat
         { title: "Damp walls: causes & solutions", href: `${blogBasePath}/damp-walls-causes-solutions` },
         { title: "Thermal imaging for leak detection", href: `${blogBasePath}/thermal-imaging-leak-detection-explained` },
       ],
-      seo: { title: "Leak Detection Haría | North Lanzarote | Canary Detect", description: "Leak detection Haría and north Lanzarote. Arrieta, Punta Mujeres, Órzola. Expert dampness diagnosis. Call 711 051 071", keywords: "leak detection Haría, water leak Haría Lanzarote, leak Arrieta, plumber north Lanzarote, dampness Haría" }
+      seo: { title: "Leak Detection Haría | North Lanzarote | Canary Detect", description: "Leak detection Haría and north Lanzarote. Arrieta, Punta Mujeres, Órzola. Expert dampness diagnosis. Call 911 98 57 05", keywords: "leak detection Haría, water leak Haría Lanzarote, leak Arrieta, plumber north Lanzarote, dampness Haría" }
     }
   };
 };

@@ -88,8 +88,8 @@ const PlumbingServices = () => {
       ? "https://canary-detect.com/es/servicios-fontaneria" 
       : "https://canary-detect.com/plumbing-services",
     metaDescription: isSpanish
-      ? "Fontanero profesional en Lanzarote. Reparaciones urgentes, calderas, fontanería de piscinas y mejoras de sistema. Garantía 2 años. Llámenos: +34 711 051 071."
-      : "Professional plumber in Lanzarote. Emergency repairs, boilers, pool plumbing and system upgrades. 2-Year Guarantee on all work. Call: +34 711 051 071.",
+      ? "Fontanero profesional en Lanzarote. Reparaciones urgentes, calderas, fontanería de piscinas y mejoras de sistema. Garantía 2 años. Llámenos: +34 911 98 57 05."
+      : "Professional plumber in Lanzarote. Emergency repairs, boilers, pool plumbing and system upgrades. 2-Year Guarantee on all work. Call: +34 911 98 57 05.",
     cta: isSpanish ? "Solicitar Presupuesto" : "Get a Quote",
     learnMore: isSpanish ? "Más Información" : "Learn More",
     guaranteeTitle: isSpanish ? "Garantía de 2 Años" : "2-Year Guarantee",
@@ -439,7 +439,7 @@ const PlumbingServices = () => {
               variant="outline"
               className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary w-full sm:w-auto"
             >
-              <a href="tel:+34711051071">
+              <a href="tel:+34911985705">
                 {isSpanish ? "Llamar Ahora" : "Call Now"}
               </a>
             </Button>
