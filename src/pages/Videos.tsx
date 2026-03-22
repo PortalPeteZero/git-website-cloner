@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 const videoItems = [
   {
     title: "How We Find Water Leaks Without Breaking Your Walls",
-    description: "See exactly how our non-invasive leak detection technology locates hidden water leaks beneath floors and behind walls — without any damage to your property.",
+    description: "See exactly how our non-invasive leak detection technology locates hidden water leaks beneath floors and behind walls, without any damage to your property.",
     slug: "how-we-find-water-leaks-without-breaking-walls",
     youtubeId: "PLACEHOLDER_ID",
     category: "Water Leak Detection",
@@ -20,7 +20,7 @@ const Videos = () => {
     <Layout>
       <SEOHead
         title="Leak Detection Videos | Canary Detect"
-        description="Watch our leak detection videos — real jobs, equipment guides and tips for property owners in Lanzarote. See how we find leaks without breaking walls."
+        description="Watch our leak detection videos: real jobs, equipment guides and tips for property owners in Lanzarote. See how we find leaks without breaking walls."
         canonical="https://canary-detect.com/videos"
       />
 
@@ -34,7 +34,7 @@ const Videos = () => {
             Watch Us Find Leaks
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
-            See our team in action — real leak detection jobs, equipment guides, and practical tips for property owners in Lanzarote.
+            See our team in action: real leak detection jobs, equipment guides, and practical tips for property owners in Lanzarote.
           </p>
         </div>
       </section>
