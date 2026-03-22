@@ -34,6 +34,7 @@ const MeetTheTeam = lazy(() => import("./pages/MeetTheTeam"));
 const Admin = lazy(() => import("./pages/Admin"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const Videos = lazy(() => import("./pages/Videos"));
+const HowWeFind = lazy(() => import("./pages/videos/HowWeFind"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const queryClient = new QueryClient();
 
