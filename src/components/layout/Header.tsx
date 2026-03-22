@@ -110,6 +110,16 @@ const Header = () => {
                 Blog
               </Link>
               <Link 
+                to="/videos" 
+                className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
+                  isActive("/videos")
+                    ? "text-primary" 
+                    : "text-white/90 hover:text-primary"
+                }`}
+              >
+                Videos
+              </Link>
+              <Link 
                 to={getRoute("/locations", "/es/ubicaciones")} 
                 className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
                   isActive("/locations") || isActive("/es/ubicaciones")
