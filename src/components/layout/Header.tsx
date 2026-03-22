@@ -110,6 +110,16 @@ const Header = () => {
                 Blog
               </Link>
               <Link 
+                to="/videos" 
+                className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
+                  isActive("/videos")
+                    ? "text-primary" 
+                    : "text-white/90 hover:text-primary"
+                }`}
+              >
+                Videos
+              </Link>
+              <Link 
                 to={getRoute("/locations", "/es/ubicaciones")} 
                 className={`px-3 py-1.5 font-medium text-sm transition-all duration-300 rounded-md ${
                   isActive("/locations") || isActive("/es/ubicaciones")
@@ -636,6 +646,13 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
+              </Link>
+              <Link 
+                to="/videos" 
+                className="px-4 py-3 text-foreground font-semibold hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Videos
               </Link>
               <Link 
                 to={getRoute("/locations", "/es/ubicaciones")} 

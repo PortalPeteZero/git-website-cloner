@@ -33,6 +33,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const MeetTheTeam = lazy(() => import("./pages/MeetTheTeam"));
 const Admin = lazy(() => import("./pages/Admin"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
+const Videos = lazy(() => import("./pages/Videos"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const queryClient = new QueryClient();
 
@@ -136,6 +137,7 @@ const App = () => (
               <Route path="/technology" element={<LazyRoute><Technology /></LazyRoute>} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogArticle />} />
+              <Route path="/videos" element={<LazyRoute><Videos /></LazyRoute>} />
               <Route path="/locations" element={<Locations />} />
               <Route path="/locations/:location" element={<LocationPage />} />
               <Route path="/meet-the-team" element={<LazyRoute><MeetTheTeam /></LazyRoute>} />
