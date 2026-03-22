@@ -34,6 +34,7 @@ const MeetTheTeam = lazy(() => import("./pages/MeetTheTeam"));
 const Admin = lazy(() => import("./pages/Admin"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const Videos = lazy(() => import("./pages/Videos"));
+const HowWeFind = lazy(() => import("./pages/videos/HowWeFind"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const queryClient = new QueryClient();
 
@@ -138,6 +139,7 @@ const App = () => (
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogArticle />} />
               <Route path="/videos" element={<LazyRoute><Videos /></LazyRoute>} />
+              <Route path="/videos/how-we-find-water-leaks-without-breaking-walls" element={<LazyRoute><HowWeFind /></LazyRoute>} />
               <Route path="/locations" element={<Locations />} />
               <Route path="/locations/:location" element={<LocationPage />} />
               <Route path="/meet-the-team" element={<LazyRoute><MeetTheTeam /></LazyRoute>} />
